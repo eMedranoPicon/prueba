@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+   <servlet>
+    <servlet-name>CreateEvent</servlet-name>
+    <servlet-class>sopra.ux.gae.ServletCreateEvent</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RemoveEvent</servlet-name>
+    <servlet-class>sopra.ux.gae.ServletRemoveEvent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoveEvent</servlet-name>
+    <url-pattern>/done</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateEvent</servlet-name>
+    <url-pattern>/new</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>EventApplication.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
