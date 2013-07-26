@@ -22,10 +22,16 @@ public class ServletCreateEvent extends HttpServlet {
     System.out.println("Creating new Event ");
     
     User user = (User) req.getAttribute("user");
+    
     if (user == null) {
       UserService userService = UserServiceFactory.getUserService();
       user = userService.getCurrentUser();
+      
     }
+    String host="anonimo";
+    //if (user.getUserId() != null) { 
+    	//host = user.getUserId();        
+      //}
 
     String title = checkNull(req.getParameter("title"));
     String description = checkNull(req.getParameter("description"));
@@ -47,7 +53,7 @@ public class ServletCreateEvent extends HttpServlet {
     String latitude = checkNull(req.getParameter("latitude"));
     List<String> address = Arrays.asList(street, zipcode, city, country, longitud, latitude);
 
-    Dao.INSTANCE.add(user.getUserId(), title, description, url, dateStart, dateEnd, audienceList, tagsList, address);
+    Dao.INSTANCE.add(host, title, description, url, dateStart, dateEnd, audienceList, tagsList, address);
     resp.sendRedirect("/EventApplication.jsp");
   }
 
