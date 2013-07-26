@@ -29,11 +29,10 @@
 		String url = userService.createLoginURL(request.getRequestURI());
 		String urlLinktext = "Login";
 		List<Event> events = new ArrayList<Event>();
-
+		events = dao.getEvents();
 		if (user != null) {
 			url = userService.createLogoutURL(request.getRequestURI());
-			urlLinktext = "Logout";
-			events = dao.getEvents(user.getUserId());
+			urlLinktext = "Logout";			
 		}
 	%>
 	<div style="width: 100%;">

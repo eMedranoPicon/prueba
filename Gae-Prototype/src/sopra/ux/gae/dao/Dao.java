@@ -40,11 +40,13 @@ public List<Event> listEvents() {
 }
 
   @SuppressWarnings("unchecked")
-public List<Event> getEvents(String host) {
+//public List<Event> getEvents(String host) {
+  public List<Event> getEvents() {
     EntityManager em = EMFService.get().createEntityManager();
-    Query q = em
+    /* Query q = em
         .createQuery("select t from Event t where t.host = :host");
-    q.setParameter("host", host);
+    q.setParameter("host", host);*/
+    Query q = em.createQuery("select t from Event t");
     List<Event> events = q.getResultList();
     return events;
   }
