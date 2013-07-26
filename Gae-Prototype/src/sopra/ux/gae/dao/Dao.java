@@ -5,14 +5,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
 import sopra.ux.gae.model.Event;
-//import sopra.ux.gae.model.People;
-//import sopra.ux.gae.model.Place;
-//import sopra.ux.gae.model.Tag;
 
 public enum Dao {
   INSTANCE;
 
-  public List<Event> listEvents() {
+  @SuppressWarnings("unchecked")
+public List<Event> listEvents() {
     EntityManager em = EMFService.get().createEntityManager();
     // Read the existing entries
     Query q = em.createQuery("select m from Event m");
@@ -32,7 +30,7 @@ public enum Dao {
   
   public void add(String host, String title, String description, String url,
 			String dateStart, String dateEnd, List<String> audience,
-			List<String> tags, String address) {
+			List<String> tags, List<String> address) {
   synchronized (this) {
     EntityManager em = EMFService.get().createEntityManager();
     Event event = new Event(host,title,description,url,dateStart,dateEnd,audience,tags,address);
@@ -41,7 +39,8 @@ public enum Dao {
   }
 }
 
-  public List<Event> getEvents(String host) {
+  @SuppressWarnings("unchecked")
+public List<Event> getEvents(String host) {
     EntityManager em = EMFService.get().createEntityManager();
     Query q = em
         .createQuery("select t from Event t where t.host = :host");

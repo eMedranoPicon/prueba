@@ -19,7 +19,6 @@ public class Event {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	//private People host;
 	private String host;
 	private String title;
 	private String description;
@@ -28,26 +27,13 @@ public class Event {
 	private String dateEnd;
 	private List<String> audience;
 	private List<String> tags;	
-	//private Place place;
-    private String address;
-	//private List<People> audience;
-	//private List<Tag> tags;	
+    private List<String> address; // format [street, zip code, city, country, latitude, longitud] 
     
     boolean finished;
-
-	/*public Event(String host, String summary, String description, String url,
-			List<People> audience, List<Tag> tags, Place place) {
-		this.host = host;
-		this.description = description;
-		this.url = url;
-		finished = false;
-	}*/
-    
-
 	
 	public Event(String host, String title, String description, String url,
 			String dateStart, String dateEnd, List<String> audience,
-			List<String> tags, String address) {
+			List<String> tags, List<String> address) {
 		super();
 		this.host = host;
 		this.title = title;
@@ -59,6 +45,46 @@ public class Event {
 		this.tags = tags;
 		this.address = address;
 		finished = false;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getHost() {
+		return host;
+	}
+
+	public void setHost(String host) {
+		this.host = host;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 
 	public String getDateStart() {
@@ -75,10 +101,6 @@ public class Event {
 
 	public void setDateEnd(String dateEnd) {
 		this.dateEnd = dateEnd;
-	}
-	
-	public void setHost(String host) {
-		this.host = host;
 	}
 
 	public List<String> getAudience() {
@@ -97,83 +119,13 @@ public class Event {
 		this.tags = tags;
 	}
 
-	public String getAddress() {
+	public List<String> getAddress() {
 		return address;
 	}
 
-	public void setAddress(String address) {
+	public void setAddress(List<String> address) {
 		this.address = address;
 	}
-
-	public String getHost() {
-		return host;
-	}	
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	/*public People getHost() {
-		return host;
-	}
-
-	public void setHost(People host) {
-		this.host = host;
-	}*/
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public String getUrl() {
-		return url;
-	}
-
-	public void setUrl(String url) {
-		this.url = url;
-	}
-
-	/*public String getDate() {
-		return date;
-	}
-
-	public void setDate(String date) {
-		this.date = date;
-	}*/
-
-	/*public List<People> getAudience() {
-		return audience;
-	}
-
-	public void setAudience(List<People> audience) {
-		this.audience = audience;
-	}
-
-	public List<Tag> getTags() {
-		return tags;
-	}
-
-	public void setTags(List<Tag> tags) {
-		this.tags = tags;
-	}
-
-	public Place getPlace() {
-		return place;
-	}
-
-	public void setPlace(Place place) {
-		this.place = place;
-	} */
-	
-	
 
 	public boolean isFinished() {
 		return finished;
@@ -183,12 +135,6 @@ public class Event {
 		this.finished = finished;
 	}
 
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
+	
 
 }
