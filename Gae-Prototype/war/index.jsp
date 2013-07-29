@@ -86,7 +86,7 @@
 		</table>
 	</div>
 	
-	<a style="display:<%=(user == null ? "none" : "block" )%>" href="/eventApplication.jsp">Nuevo Evento</a>	
+	<a style="display:<%=(user == null ? "none" : "block" )%>" href="/backend/eventApplication.jsp">Nuevo Evento</a>	
 	</div>
 
 
