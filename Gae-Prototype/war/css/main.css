@@ -59,10 +59,12 @@ form td {
 	height: 360px;
 }
 
+#map-canvas-front {
+	width: 960px;
+	height: 480px;
+}
+
 .mapWrapper {
-	position: relative;
-	float: right;
-	margin-top: -360px;
 }
 
 .main {
