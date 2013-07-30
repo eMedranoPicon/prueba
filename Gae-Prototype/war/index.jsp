@@ -31,11 +31,22 @@
 <link rel="stylesheet" type="text/css" href="css/main.css" />
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-<script
-	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&key=AIzaSyAtZxrypY61jER7FI4O25BEt2-nTxNX0UE">
-	</script>
-<script src="js/maps.js"></script>
-<script src="js/listMap.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+<script src="https://apis.google.com/js/client.js?onload=loadGapi"> 
+   { "client": {}, 
+     "googleapis.config": { 
+       root: "https://sopragroupux.appspot.com/_ah/api"       
+     } 
+   } 
+</script>   
+	<script
+	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true">
+	</script>	
+	
+	<script src="js/api.js"></script>
+	
+
 </head>
 <body>
 	
