@@ -1,3 +1,8 @@
+// Maps
+var geocoder;
+var map;
+var markersArray = [];
+
 var apiUrl = "https://sopragroupux.appspot.com/_ah/api/eventendpoint/v1/event";
 $.ajax({
 	url : apiUrl,
@@ -6,6 +11,17 @@ $.ajax({
 	type : "GET",
 	success : function(data) {
 		console.log(data);
+		for ( var j in data.items) {
+
+			for ( var i in data.items[j]) {
+				markersArray[i] = data.items[j].address;
+				console.log(markersArray[i].toString());
+				codeAddresses(markersArray[i].toString());
+				break;
+			}
+			console.log(j);
+		}
+
 	},
 	error : function(xhr, ajaxOptions, thrownError) {
 		console.error("Event list error: " + xhr.status);
@@ -25,13 +41,6 @@ function getEvents() {
 		showList(data);
 	});
 }
-
-// Maps
-
-var geocoder;
-var map;
-var markersArray = [];
-
 // plot initial point using geocode instead of coordinates (works just fine)
 function initialize() {
 	geocoder = new google.maps.Geocoder();
@@ -46,7 +55,6 @@ function initialize() {
 				position : results[0].geometry.location
 			});
 			markersArray.push(marker);
-
 		} else {
 			alert("Geocode was not successful for the following reason: "
 					+ status);
@@ -62,18 +70,8 @@ function initialize() {
 	};
 	map = new google.maps.Map(document.getElementById("map-canvas-front"),
 			myOptions);
-	plotMarkers();
 }
 
-var locationsArray = [ 'Sevilla', 'Barcelona', 'Madrid' ];
-
-function plotMarkers() {
-	for ( var i = 0; i < locationsArray.length; i++) {
-
-		codeAddresses(locationsArray[i]);
-
-	}
-}
 function codeAddresses(address) {
 	geocoder.geocode({
 		'address' : address
@@ -92,22 +90,3 @@ function codeAddresses(address) {
 	});
 }
 google.maps.event.addDomListener(window, 'load', initialize);
-
-// ///////////////////////////////////////BackEnd///////////////////////////////////////
-
-/*
- * Funcion base de Js . Google Maps
- * 
- * ver 0.1 - recoge los campos relativos a la direccion completa, busca en
- * google maps.
- * 
- * PENDIENTE: Pintar los eventos en el Mapa
- * 
- * var geocoder_back; var map_back; function initialize_back() { geocoder_back =
- * new google.maps.Geocoder(); var latlng = new google.maps.LatLng(40, -4); var
- * mapOptions = { zoom : 6, center : latlng, mapTypeId :
- * google.maps.MapTypeId.ROADMAP } console.log(mapOptions); map_back = new
- * google.maps.Map(document.getElementById('map-canvas'), mapOptions); }
- * 
- * google.maps.event.addDomListener(window, 'load', initialize_back);
- */
