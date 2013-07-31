@@ -11,13 +11,14 @@
 <%@page import="java.util.ArrayList"%>
 <html>
 <head>
-<title>Events</title>
-<link rel="stylesheet" type="text/css" href="css/main.css" />
+<title>Eventos</title>
+<link rel="stylesheet" type="text/css" href="../css/main.css" />
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 <script
 	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&key=AIzaSyAtZxrypY61jER7FI4O25BEt2-nTxNX0UE"></script>
-<script src="js/maps.js"></script>
+<script src="../js/maps.js"></script>
+<script src="../js/functions.js"></script>
 </head>
 <body>
 	<%
@@ -38,18 +39,19 @@
 	<div style="width: 100%;">
 		<div class="line"></div>
 		<div class="topLine">
-			<div style="float: left;" class="headline">Events</div>
+			<div style="float: left;" class="headline">Eventos</div>
 			<div style="float: right;">
 				<a href="<%=url%>"><%=urlLinktext%></a>
 				<%=(user == null ? "" : user.getNickname())%></div>
 		</div>
 	</div>
-
+    <% if(user == null) { %>
+    No puedes crear Eventos. Logueate <a href="<%=url%>"><%=urlLinktext%></a>
+   <% } else { %>
 	<div class="main">
-
-		<div class="headline">New Event</div>
+		<div class="headline">Nuevo Evento</div>
 		<div class="form">
-			<form action="/new" method="post" accept-charset="utf-8">
+			<form action="/new" method="post" accept-charset="utf-8" onkeypress="return noenter(event)">
 				<table>
 					<tr>
 						<td valign="top"><label for="title">Titulo Evento</label></td>
@@ -115,45 +117,9 @@
 		</div>
 	<div class="mapWrapper">
 		<div id="map-canvas"></div>
-	</div>	
-		
 	</div>
-	You have a total number of
-	<%=events.size()%>
-	Events.
-	<div>
-		<table>
-			<tr>
-				<th>Titulo</th>
-				<th>Hora Inicio</th>
-				<th>Hora Fin</th>
-				<th>Direccion Completa</th>
-				<th>Descripcion</th>
-				<th>URL</th>
-				<th>Asistentes</th>
-				<th>Etiquetas</th>
-			</tr>
-
-			<%
-				for (Event event : events) {
-			%>
-			<tr>
-				<td><%=event.getTitle()%></td>
-				<td><%=event.getDateStart()%></td>
-				<td><%=event.getDateEnd()%></td>
-				<td><%=event.getAddress()%></td>
-				<td><%=event.getDescription()%></td>
-				<td><%=event.getUrl()%></td>
-				<td><%=event.getAudience()%></td>
-				<td><%=event.getTags()%></td>
-			</tr>
-			<%
-				}
-			%>
-		</table>
+	<a href="/index.jsp">Volver home</a>	
+		<%}%>
 	</div>
-
-
-
 </body>
 </html>
