@@ -1,0 +1,20 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+// Core
+.btn 
+{
+  @include buttonBackground($btnBackground, $btnBackgroundHighlight, $white, none);
+
+  // Hover/focus state
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+
+}
