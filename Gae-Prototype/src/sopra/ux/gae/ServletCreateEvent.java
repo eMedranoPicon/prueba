@@ -54,7 +54,7 @@ public class ServletCreateEvent extends HttpServlet {
     List<String> address = Arrays.asList(street, zipcode, city, country, longitud, latitude);
 
     Dao.INSTANCE.add(host, title, description, url, dateStart, dateEnd, audienceList, tagsList, address);
-    resp.sendRedirect("/events-list.jsp");
+    resp.sendRedirect("/index.jsp");
   }
 
   private String checkNull(String s) {

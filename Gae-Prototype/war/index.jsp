@@ -74,7 +74,7 @@
           <!-- .nav, .navbar-search, .navbar-form, etc -->
           <ul class="nav">
             <li class="active divider-vertical"><a href="#">Home</a></li>
-            <li class="divider-vertical"><a href="/events-list.jsp" >Eventos</a></li>
+            <li class="divider-vertical"><a href="#" >Eventos</a></li>
             <li class="divider-vertical"><a href="#">Lugar&eacute;s de inter&eacute;s</a></li>
             <li class="divider-vertical"><a href="#">V&iacute;deos</a></li>
           </ul>
