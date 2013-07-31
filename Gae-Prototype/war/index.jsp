@@ -1,105 +1,166 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
-<%@ page import="java.util.List"%>
-<%@ page import="com.google.appengine.api.users.User"%>
-<%@ page import="com.google.appengine.api.users.UserService"%>
-<%@ page import="com.google.appengine.api.users.UserServiceFactory"%>
-<%@ page import="sopra.ux.gae.model.Event"%>
-<%@ page import="sopra.ux.gae.dao.Dao"%>
-<%@ page import="java.io.File"%>
-<%@page import="java.util.ArrayList"%>
 <%
-		Dao dao = Dao.INSTANCE;
-
-		UserService userService = UserServiceFactory.getUserService();
-		User user = userService.getCurrentUser();
-
-		String url = userService.createLoginURL(request.getRequestURI());
-		String urlLinktext = "Login";
-		List<Event> events = new ArrayList<Event>();
-		events = dao.getEvents();
-		if (user != null) {
-			url = userService.createLogoutURL(request.getRequestURI());
-			urlLinktext = "Logout";			
-		}	
-		
+   response.setHeader( "Pragma", "no-cache" );
+   response.setHeader( "Cache-Control", "no-cache" );
+   response.setDateHeader( "Expires", 0 );
 %>
 <!DOCTYPE html>
-
-<html>
+<html lang="es">
 <head>
-<title>Eventos</title>
-<link rel="stylesheet" type="text/css" href="css/main.css" />
-<meta charset="utf-8">
-<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
-<script src="https://apis.google.com/js/client.js?onload=loadGapi"> 
-   { "client": {}, 
-     "googleapis.config": { 
-       root: "https://sopragroupux.appspot.com/_ah/api"       
-     } 
-   } 
-</script>   
-	<script
-	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true">
-	</script>	
-	
-	<script src="js/api.js"></script>
-	
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta charset="utf-8">
+  <link rel="icon" href="img/favicon.ico" type="image/icon">
+  <title>BBVA in cloud</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- styles -->
+  <link href="css/main.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/lib/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Bloque de Librerias - libreriasjs -->
+  <jsp:include page="liberiasjs.jsp"/>
+  <!-- EO Bloque de Librerias - libreriasjs -->
+  
 </head>
+<!--  http://alefeuvre.github.io/foundation-grid-displayer/ -->
+<!-- <body data-grid-framework="bo" data-grid-color="blue" data-grid-opacity="0.5" data-grid-zindex="10" data-grid-nbcols="12">-->
 <body>
-	
-	<div style="width: 100%;">
-		<div class="line"></div>
-		<div class="topLine">
-			<div style="float: left;" class="headline">Eventos</div>
-			<div style="float: right;">
-				<a href="<%=url%>"><%=urlLinktext%></a>
-				<%=(user == null ? "" : user.getNickname())%></div>
-		</div>
-	</div>
 
-	<div class="main">		
-	<div class="mapWrapper">
-		<div id="map-canvas-front"></div>
-	</div>
-	<div>
-	Hay <%=events.size()%> Eventos
-		<table>
-			<tr>
-				<th>Titulo</th>
-				<th>Hora Inicio</th>
-				<th>Hora Fin</th>
-				<th>Direccion Completa</th>
-				<th>Descripcion</th>
-				<th>URL</th>
-				<th>Asistentes</th>
-				<th>Etiquetas</th>
-			</tr>
+<div class="container">
 
-			<%
-				for (Event event : events) {
-			%>
-			<tr>
-				<td><%=event.getTitle()%></td>
-				<td><%=event.getDateStart()%></td>
-				<td><%=event.getDateEnd()%></td>
-				<td><%=event.getAddress()%></td>
-				<td><%=event.getDescription()%></td>
-				<td><%=event.getUrl()%></td>
-				<td><%=event.getAudience()%></td>
-				<td><%=event.getTags()%></td>
-			</tr>
-			<%
-				}
-			%>
-		</table>
-	</div>
-	
-	<a style="display:<%=(user == null ? "none" : "block" )%>" href="/backend/eventApplication.jsp">Nuevo Evento</a>	
-	</div>
+  <!-- include header.html -->
+  <header class="header-page row-fluid hidden-print">
+    <a href="home.jsp">
+      <h1><span>BBVA in cloud</span></h1>
+    </a>
 
+    <h2>BBVA in Google Cloud</h2>
+
+    <div class="legendTop pull-right">
+      <ul class="languages">
+        <li><a href="#" class="lang-button">Ingl&eacute;s</a></li>
+        <li><a href="#" class="lang-button lang-current">Castellano</a></li>
+      </ul>
+      <br/>
+      <a class="btn btn-medium" href="#">Acceso administradores</a>
+    </div>
+  </header>
+  <!-- EO include header.html -->
+
+  <!-- include navbar.html -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+   
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+   
+        <!-- Be sure to leave the brand out there if you want it shown -->
+        <a class="brand visible-phone" href="#">BBVA in Google Cloud</a>
+
+        <!-- Everything you want hidden at 940px or less, place within here -->
+        <div class="nav-collapse collapse">
+          <!-- .nav, .navbar-search, .navbar-form, etc -->
+          <ul class="nav">
+            <li class="active divider-vertical"><a href="#">Home</a></li>
+            <li class="divider-vertical"><a href="#" >Eventos</a></li>
+            <li class="divider-vertical"><a href="#">Lugar&eacute;s de inter&eacute;s</a></li>
+            <li class="divider-vertical"><a href="#">V&iacute;deos</a></li>
+          </ul>
+          
+          <form class="navbar-search">
+            <input type="text" class="search-query" placeholder="Search">
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </nav>
+  <!-- EO include navbar.html -->
+
+  <!-- include carousel.html -->
+  <div id="myCarousel" class="carousel slide">
+
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+
+      <div class="active item">
+        <img src="img/carousel/slide-02d.jpg" alt="">
+        <div class="container">
+          <div class="carousel-caption">
+           <h1>Example headline.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/carousel/slide-01d.jpg" alt="">
+        <div class="container">
+          <div class="carousel-caption">
+           <h1>Another example headline.</h1>
+              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/carousel/slide-03d.jpg" alt="">
+      </div>
+
+    </div>
+
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+  </div>
+  <!-- EO include carousel.html -->
+  
+  <!-- include events-home.html -->
+  <section class="section-page">
+    <header class="header-section">
+      <h1>Eventos</h1>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+
+        <div class="span12">
+          <article>
+
+          </article>
+        </div>
+
+        <div class="span12">
+          <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=72o4s6adl0uhbebjssl4dpraeo%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=Europe%2FMadrid" style=" border-width:0 " width="100%" height="400px" frameborder="0" scrolling="no"></iframe>
+        </div> 
+
+      </div>
+    </div>
+  </section>
+  <!-- EO include events-home.html -->
+
+</div> <!-- EO Container Page -->
 
 </body>
 </html>
