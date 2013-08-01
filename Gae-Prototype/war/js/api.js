@@ -1,16 +1,8 @@
-// Maps - Variables globales
+// Maps
 var geocoder;
 var map;
 var markersArray = [];
-/**
- * Peticion Google EndPoints - https://developers.google.com/appengine/docs/java/endpoints/
- * 
- * Listado de Eventos
- * 
- * apiURL es la url del jSON que contiene todos los eventos.
- * dentro del 'for' se manipula los resultados para representar los eventos. 
- * 
- */
+
 var apiUrl = "https://sopragroupux.appspot.com/_ah/api/eventendpoint/v1/event";
 $.ajax({
 	url : apiUrl,
@@ -49,8 +41,6 @@ function getEvents() {
 		showList(data);
 	});
 }
-
-
 // plot initial point using geocode instead of coordinates (works just fine)
 function initialize() {
 	geocoder = new google.maps.Geocoder();
