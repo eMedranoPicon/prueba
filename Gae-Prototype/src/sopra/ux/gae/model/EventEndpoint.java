@@ -17,7 +17,7 @@ import com.google.api.server.spi.config.ApiNamespace;
 import com.google.api.server.spi.response.CollectionResponse;
 import com.google.appengine.api.datastore.Cursor;
 
-@Api(name = "eventendpoint", namespace = @ApiNamespace(ownerDomain = "ux.sopra", ownerName = "ux.sopra", packagePath = "gae.model"))
+@Api(name = "event", version="v3", namespace = @ApiNamespace(ownerDomain = "ux.sopra", ownerName = "ux.sopra", packagePath = "gae.model"))
 public class EventEndpoint {
 
 	/**

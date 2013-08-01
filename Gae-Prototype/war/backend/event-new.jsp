@@ -12,13 +12,30 @@
 <html>
 <head>
 <title>Eventos</title>
-<link rel="stylesheet" type="text/css" href="../css/main.css" />
-<meta charset="utf-8">
-<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-<script
-	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&key=AIzaSyAtZxrypY61jER7FI4O25BEt2-nTxNX0UE"></script>
-<script src="../js/maps.js"></script>
-<script src="../js/functions.js"></script>
+<!-- styles -->
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap-datetimepicker.min.css" />
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/lib/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Bloque de Librerias - libreriasjs -->
+  <jsp:include page="liberiasjs.jsp"/>
+  <!-- EO Bloque de Librerias - libreriasjs -->
+<script src="https://apis.google.com/js/client.js?onload=loadGapi"> 
+   { "client": {}, 
+     "googleapis.config": { 
+       root: "https://sopragroupux.appspot.com/_ah/api"       
+     } 
+   } 
+</script>   
+	<script
+	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true">
+	</script>	
+	
+	<script src="js/application.js"></script>
 </head>
 <body>
 	<%

@@ -47,6 +47,9 @@ public class Event {
 		finished = false;
 	}
 
+	public Event(){
+		
+	}
 	public Long getId() {
 		return id;
 	}
