@@ -25,7 +25,7 @@
   <![endif]-->
 
   <!-- Bloque de Librerias - libreriasjs -->
-  <jsp:include page="liberiasjs.jsp"/>
+  <jsp:include page="libreriasjs.jsp"/>
   <!-- EO Bloque de Librerias - libreriasjs -->
 
 </head>

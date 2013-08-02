@@ -1,7 +1,5 @@
 package sopra.ux.gae;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
@@ -18,11 +16,11 @@ public class Event {
 	private String title;
 	private String host;
 	private String description;
-	private Date dateStart;
-	private Date dateEnd;
-	private List audience = new ArrayList();
-	private List tags = new ArrayList();
-	private List address = new ArrayList();
+	private String dateStart; //timestamp
+	private String dateEnd; //timestamp
+	private List<String> audience; //separated by commas
+	private List<String> tags; //separated by commas
+	private List<String> address; //{street, zipcode, city,country, lat, long}
 	
 		
 	public Event() {
@@ -31,7 +29,7 @@ public class Event {
 	
 
 	public Event(String title, String host, String description,
-			Date dateStart, Date dateEnd, List audience, List tags, List address) {
+			String dateStart, String dateEnd, List<String> audience, List<String> tags, List<String> address) {
 		super();
 		this.title = title;
 		this.host = host;
@@ -77,47 +75,47 @@ public class Event {
 		this.description = description;
 	}
 
-	public Date getDateStart() {
+	public String getDateStart() {
 		return dateStart;
 	}
 
-	public void setDateStart(Date dateStart) {
+	public void setDateStart(String dateStart) {
 		this.dateStart = dateStart;
 	}
 
-	public Date getDateEnd() {
+	public String getDateEnd() {
 		return dateEnd;
 	}
 
-	public void setDateEnd(Date dateEnd) {
+	public void setDateEnd(String dateEnd) {
 		this.dateEnd = dateEnd;
 	}
-	public List getAudience() {
+	public List<String> getAudience() {
 		return audience;
 	}
 
 
-	public void setAudience(List audience) {
+	public void setAudience(List<String> audience) {
 		this.audience = audience;
 	}
 
 
-	public List getTags() {
+	public List<String> getTags() {
 		return tags;
 	}
 
 
-	public void setTags(List tags) {
+	public void setTags(List<String> tags) {
 		this.tags = tags;
 	}
 
 
-	public List getAddress() {
+	public List<String> getAddress() {
 		return address;
 	}
 
 
-	public void setAddress(List address) {
+	public void setAddress(List<String> address) {
 		this.address = address;
 	}
 

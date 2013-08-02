@@ -33,7 +33,7 @@
 <script src="https://apis.google.com/js/client.js?onload=loadGapi"> 
    { "client": {}, 
      "googleapis.config": { 
-       root: "https://sopraux-bbva.appspot.com/_ah/api"       
+       root: "https://sopragroupux.appspot.com/_ah/api"       
      } 
    } 
 </script>
@@ -41,7 +41,7 @@
 	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true">
 	</script>
 
-<script src="js/application.js"></script>
+<script src="/js/application.js"></script>
 </head>
 <body>
 	<%
@@ -72,7 +72,7 @@
 		} else {
 	%>
 	<div>
-		<div>Nuevo Evento</div>
+		<div>Nuevo Evento</div>		
 		<div>
 			<form action="/new" method="post" accept-charset="utf-8"
 				onkeypress="return noenter(event)">
@@ -137,6 +137,8 @@
 				</table>
 			</form>
 		</div>
+		<div class="btn" onclick="jEvenBuilder();" type="button">Nuevo Evento(Para Test)</div>
+		<div id="resultjs"></div>
 		<div class="mapWrapper">
 			<div id="map-canvas"></div>
 		</div>
@@ -145,5 +147,6 @@
 			}
 		%>
 	</div>
+	
 </body>
 </html>
