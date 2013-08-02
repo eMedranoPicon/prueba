@@ -18,11 +18,11 @@
 
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="js/lib/html5shiv.js"></script>
+    <script src="/js/lib/html5shiv.js"></script>
   <![endif]-->
 
   <!-- Bloque de Librerias - libreriasjs -->
-  <jsp:include page="liberiasjs.jsp"/>
+  <jsp:include page="/liberiasjs.jsp"/>
   <!-- EO Bloque de Librerias - libreriasjs -->
 <script src="https://apis.google.com/js/client.js?onload=loadGapi"> 
    { "client": {}, 
@@ -35,7 +35,7 @@
 	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true">
 	</script>	
 	
-	<script src="js/application.js"></script>
+	<script src="/js/application.js"></script>
 </head>
 <body>
 	<%

@@ -9,7 +9,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta charset="utf-8">
-  <link rel="icon" href="img/favicon.ico" type="image/icon">
+  <!--<link rel="icon" href="img/favicon.ico" type="image/icon">-->
   <title>BBVA in cloud</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
   <meta name="author" content="">
 
   <!-- styles -->
-  <link href="css/main.css" rel="stylesheet">
+  <link href="/css/main.css" rel="stylesheet">
 
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -27,7 +27,7 @@
   <!-- Bloque de Librerias - libreriasjs -->
   <jsp:include page="liberiasjs.jsp"/>
   <!-- EO Bloque de Librerias - libreriasjs -->
-  
+
 </head>
 <!--  http://alefeuvre.github.io/foundation-grid-displayer/ -->
 <!-- <body data-grid-framework="bo" data-grid-color="blue" data-grid-opacity="0.5" data-grid-zindex="10" data-grid-nbcols="12">-->
@@ -37,7 +37,7 @@
 
   <!-- include header.html -->
   <header class="header-page row-fluid hidden-print">
-    <a href="home.jsp">
+    <a href="index.jsp">
       <h1><span>BBVA in cloud</span></h1>
     </a>
 
@@ -58,14 +58,14 @@
   <nav class="navbar">
     <div class="navbar-inner">
       <div class="container">
-   
+
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-   
+
         <!-- Be sure to leave the brand out there if you want it shown -->
         <a class="brand visible-phone" href="#">BBVA in Google Cloud</a>
 
@@ -73,12 +73,12 @@
         <div class="nav-collapse collapse">
           <!-- .nav, .navbar-search, .navbar-form, etc -->
           <ul class="nav">
-            <li class="active divider-vertical"><a href="#">Home</a></li>
+            <li class="active divider-vertical"><a href="/index.jsp">Home</a></li>
             <li class="divider-vertical"><a href="/event-list.jsp" >Eventos</a></li>
             <li class="divider-vertical"><a href="#">Lugar&eacute;s de inter&eacute;s</a></li>
             <li class="divider-vertical"><a href="#">V&iacute;deos</a></li>
           </ul>
-          
+
           <form class="navbar-search">
             <input type="text" class="search-query" placeholder="Search">
           </form>
@@ -135,7 +135,7 @@
     <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
   </div>
   <!-- EO include carousel.html -->
-  
+
   <!-- include events-home.html -->
   <section class="section-page">
     <header class="header-section">
@@ -153,7 +153,7 @@
 
         <div class="span12">
           <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=72o4s6adl0uhbebjssl4dpraeo%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=Europe%2FMadrid" style=" border-width:0 " width="100%" height="400px" frameborder="0" scrolling="no"></iframe>
-        </div> 
+        </div>
 
       </div>
     </div>
