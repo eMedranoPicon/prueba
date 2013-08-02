@@ -1,10 +1,7 @@
-
-<!-- saved from url=(0200)https://raw.github.com/sopraux/valencia/48ceca78fe830302f8926875d897b501cb4e0c89/Bbva-gae/.settings/com.google.appengine.eclipse.core.prefs?login=msandoval-sopra&token=1f41eb1d4cb75566acdb5ad672d46455 -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script></head><body screen_capture_injected="true" cz-shortcut-listen="true"><pre style="word-wrap: break-word; white-space: pre-wrap;">eclipse.preferences.version=1
+eclipse.preferences.version=1
 filesCopiedToWebInfLib=appengine-api-1.0-sdk-1.8.2.jar|appengine-api-labs.jar|appengine-endpoints.jar|appengine-jsr107cache-1.8.2.jar|asm-4.0.jar|datanucleus-api-jdo-3.1.3.jar|datanucleus-api-jpa-3.1.3.jar|datanucleus-appengine-2.1.2.jar|datanucleus-core-3.1.3.jar|geronimo-jpa_2.0_spec-1.0.jar|jdo-api-3.0.1.jar|jsr107cache-1.1.jar|jta-1.1.jar
 gaeDatanucleusVersion=v2
 gaeDeployDialogSettings=
 gaeHrdEnabled=true
 googleCloudSqlEnabled=false
 localDevMySqlEnabled=true
-</pre><div id="window-resizer-tooltip"><a href="https://raw.github.com/sopraux/valencia/48ceca78fe830302f8926875d897b501cb4e0c89/Bbva-gae/.settings/com.google.appengine.eclipse.core.prefs?login=msandoval-sopra&token=1f41eb1d4cb75566acdb5ad672d46455#" title="Edit settings" style="background-image: url(chrome-extension://kkelicaakdanhinjdeammmilcgefonfh/images/icon_19.png);"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth"></span> x <span class="tooltipHeight" id="winHeight"></span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth"></span> x <span class="tooltipHeight" id="vpHeight"></span></div></body></html>
