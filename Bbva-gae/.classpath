@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER/appengine-java-sdk-1.8.2"/>
-	<classpathentry kind="output" path="war/WEB-INF/classes"/>
-</classpath>
+
+<!-- saved from url=(0161)https://raw.github.com/sopraux/valencia/48ceca78fe830302f8926875d897b501cb4e0c89/Bbva-gae/.classpath?login=msandoval-sopra&token=047f1297d2b31e15bd4bfc94bebf87d3 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script></head><body screen_capture_injected="true" cz-shortcut-listen="true"><pre style="word-wrap: break-word; white-space: pre-wrap;">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;classpath&gt;
+	&lt;classpathentry kind="src" path="src"/&gt;
+	&lt;classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/&gt;
+	&lt;classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER/appengine-java-sdk-1.8.2"/&gt;
+	&lt;classpathentry kind="output" path="war/WEB-INF/classes"/&gt;
+&lt;/classpath&gt;
+</pre><div id="window-resizer-tooltip"><a href="https://raw.github.com/sopraux/valencia/48ceca78fe830302f8926875d897b501cb4e0c89/Bbva-gae/.classpath?login=msandoval-sopra&token=047f1297d2b31e15bd4bfc94bebf87d3#" title="Edit settings" style="background-image: url(chrome-extension://kkelicaakdanhinjdeammmilcgefonfh/images/icon_19.png);"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth"></span> x <span class="tooltipHeight" id="winHeight"></span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth"></span> x <span class="tooltipHeight" id="vpHeight"></span></div></body></html>

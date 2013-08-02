@@ -1,44 +1,47 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<projectDescription>
-	<name>Bbva-gae</name>
-	<comment></comment>
-	<projects>
-	</projects>
-	<buildSpec>
-		<buildCommand>
-			<name>org.eclipse.wst.common.project.facet.core.builder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>org.eclipse.jdt.core.javabuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>com.google.gdt.eclipse.core.webAppProjectValidator</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>com.google.appengine.eclipse.core.gaeProjectChangeNotifier</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>com.google.appengine.eclipse.core.projectValidator</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>com.google.appengine.eclipse.core.enhancerbuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-	</buildSpec>
-	<natures>
-		<nature>org.eclipse.jdt.core.javanature</nature>
-		<nature>com.google.appengine.eclipse.core.gaeNature</nature>
-		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
-	</natures>
-</projectDescription>
+
+<!-- saved from url=(0159)https://raw.github.com/sopraux/valencia/48ceca78fe830302f8926875d897b501cb4e0c89/Bbva-gae/.project?login=msandoval-sopra&token=6992ca1edd285855c629d8d1f58cbb1a -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script></head><body screen_capture_injected="true" cz-shortcut-listen="true"><pre style="word-wrap: break-word; white-space: pre-wrap;">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;projectDescription&gt;
+	&lt;name&gt;Bbva-gae&lt;/name&gt;
+	&lt;comment&gt;&lt;/comment&gt;
+	&lt;projects&gt;
+	&lt;/projects&gt;
+	&lt;buildSpec&gt;
+		&lt;buildCommand&gt;
+			&lt;name&gt;org.eclipse.wst.common.project.facet.core.builder&lt;/name&gt;
+			&lt;arguments&gt;
+			&lt;/arguments&gt;
+		&lt;/buildCommand&gt;
+		&lt;buildCommand&gt;
+			&lt;name&gt;org.eclipse.jdt.core.javabuilder&lt;/name&gt;
+			&lt;arguments&gt;
+			&lt;/arguments&gt;
+		&lt;/buildCommand&gt;
+		&lt;buildCommand&gt;
+			&lt;name&gt;com.google.gdt.eclipse.core.webAppProjectValidator&lt;/name&gt;
+			&lt;arguments&gt;
+			&lt;/arguments&gt;
+		&lt;/buildCommand&gt;
+		&lt;buildCommand&gt;
+			&lt;name&gt;com.google.appengine.eclipse.core.gaeProjectChangeNotifier&lt;/name&gt;
+			&lt;arguments&gt;
+			&lt;/arguments&gt;
+		&lt;/buildCommand&gt;
+		&lt;buildCommand&gt;
+			&lt;name&gt;com.google.appengine.eclipse.core.projectValidator&lt;/name&gt;
+			&lt;arguments&gt;
+			&lt;/arguments&gt;
+		&lt;/buildCommand&gt;
+		&lt;buildCommand&gt;
+			&lt;name&gt;com.google.appengine.eclipse.core.enhancerbuilder&lt;/name&gt;
+			&lt;arguments&gt;
+			&lt;/arguments&gt;
+		&lt;/buildCommand&gt;
+	&lt;/buildSpec&gt;
+	&lt;natures&gt;
+		&lt;nature&gt;org.eclipse.jdt.core.javanature&lt;/nature&gt;
+		&lt;nature&gt;com.google.appengine.eclipse.core.gaeNature&lt;/nature&gt;
+		&lt;nature&gt;org.eclipse.wst.common.project.facet.core.nature&lt;/nature&gt;
+	&lt;/natures&gt;
+&lt;/projectDescription&gt;
+</pre><div id="window-resizer-tooltip" style="display: none;"><a href="https://raw.github.com/sopraux/valencia/48ceca78fe830302f8926875d897b501cb4e0c89/Bbva-gae/.project?login=msandoval-sopra&token=6992ca1edd285855c629d8d1f58cbb1a#" title="Edit settings" style="background-image: url(chrome-extension://kkelicaakdanhinjdeammmilcgefonfh/images/icon_19.png);"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1280</span> x <span class="tooltipHeight" id="winHeight">994</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1280</span> x <span class="tooltipHeight" id="vpHeight">866</span></div></body></html>

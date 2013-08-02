@@ -1,0 +1,5 @@
+Version Log
+
+0.1 -  Primera version del prototipo.
+0.11 -  Probando API Google Maps.
+0.2 - BBVA Rest-API: Operaciones basicas implementadas. Crear, Editar, Borrar, Listar Eventos
