@@ -9,6 +9,7 @@ import com.google.api.server.spi.response.CollectionResponse;
 import com.google.appengine.api.datastore.Cursor;
 import com.google.appengine.datanucleus.query.JDOCursorHelper;
 
+<<<<<<< HEAD:Bbva-gae/src/sopra/ux/gae/EventEndpoint.java
 import java.util.HashMap;
 import java.util.List;
 
@@ -20,6 +21,9 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 
 @Api(name = "evento", version="v2", namespace = @ApiNamespace(ownerDomain = "ux.sopra", ownerName = "ux.sopra", packagePath = "gae"))
+=======
+@Api(name = "event", version="v3", namespace = @ApiNamespace(ownerDomain = "ux.sopra", ownerName = "ux.sopra", packagePath = "gae.model"))
+>>>>>>> 15eda681ab126874f0dd0c99eead1e5ac50173b7:Gae-Prototype/src/sopra/ux/gae/model/EventEndpoint.java
 public class EventEndpoint {
 
 	/**
