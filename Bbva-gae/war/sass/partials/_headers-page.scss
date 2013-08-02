@@ -1,0 +1,64 @@
+//	.header-page
+
+.header-page
+{
+	@include clearfix();
+	margin-bottom: $margin-bottom-block-small;
+
+	h1 
+	{
+	  @include size(90px,156px);
+	  background-image  : url('../img/logo-bbva.png');
+	  background-repeat : no-repeat;
+	  white-space       : nowrap;
+	  float 			: left;
+	  margin 			: 0;
+
+	  span {
+	  	display: none;
+	  }
+
+	  img {
+	  	height: 100%;
+	  	max-width:inherit;
+	  }
+	}
+
+	h2 
+	{
+		float: left;
+		margin: 52px 0 0 0;
+		color: $blueDarker;
+	}
+
+	.legendTop 
+	{
+
+		@include clearfix();
+		margin: 10px 0;
+
+		.languages 
+		{
+			@include clearfix();
+			float: right;
+			margin-bottom: 21px;
+
+			li 
+			{
+				line-height: 20px;
+				float: left;
+				margin: 0 5px;
+				a 
+				{
+					text-decoration: none;
+					font-weight: bold;
+				}
+				
+				a.lang-current 
+				{
+					color: $linkColorHover;
+				}
+			}
+		}
+	}
+}
