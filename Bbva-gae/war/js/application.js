@@ -39,7 +39,7 @@ function getEvents() {
 function initialize() {
 	geocoder = new google.maps.Geocoder();
 	latlang = geocoder.geocode({
-		'address' : 'Valencia'
+		'address' : 'Segovia'
 	}, function(results, status) { // use latlang to enter city instead of
 		// coordinates
 		if (status == google.maps.GeocoderStatus.OK) {
@@ -95,17 +95,32 @@ function noenter(e) {
 
 /* Funcion de prueba para crear eventos*/
 function jEvenBuilder(){
-	var id = Math.floor(1001 + Math.random() * 1500);
-	var address = ["calle alcala, "+(id-1000), "","Madrid","Spain","",""];
-	var audience = ["miguel", "juan", "francisco", "luis", "jose", "maria", "ana"];
-	var tags  = ["etiqueta 1","etiqueta 2","etiqueta 3","etiqueta 4" ];
-	var title = "nuevo evento js"+id;
-	var host = "BBVA";
-	var dateStart = 1378065600+id;
-	var dateEnd = 1378065700+id;
-	var description = "Descripcion Evento"+id;		
+	
+	//var id = document.getElementById("idEvent");
+	
+	var id = Math.floor(1001 + Math.random()*2000);
+	
+	var street = document.getElementById("street").value;
+	var zipcode = document.getElementById("zipcode").value;
+	var city = document.getElementById("city").value;
+	var country = document.getElementById("country").value;
+	
+	var address = [street,zipcode,city,country];
+	
+	var audienceOne = document.getElementById("audience").value;
+	var audience = [audienceOne];
+	
+	var tagsOne = document.getElementById("tags").value;
+	var tags = [tagsOne];
+	
+	var title = document.getElementById("title").value;
+	var host = "dummy host"; // debería crear user.getUserid();
+	var dateStart = document.getElementById("dateStart").value;
+	var dateEnd = document.getElementById("dateEnd").value;
+	var description = document.getElementById("description").value;
 	var jEvent = [{"name":"address", "value": address}, {"name":"audience", "value": audience}, {"name":"tags", "value": tags},{"name":"title", "value": title},{"name":"host", "value": host},{"name":"address", "value": address},{"name":"dateStart", "value": dateStart},{"name":"dateEnd", "value": dateEnd},{"name":"description", "value": description},{"name":"id", "value": id}];	
-
+	//var jEvent = [{"name":"address", "value": address}, {"name":"audience", "value": audience}, {"name":"tags", "value": tags},{"name":"title", "value": title},{"name":"host", "value": host},{"name":"address", "value": address},{"name":"dateStart", "value": dateStart},{"name":"dateEnd", "value": dateEnd},{"name":"description", "value": description}];
+	
 	var options = {};
 	for (var i=0; i < jEvent.length; i++){
 	  var key = jEvent[i].name;
@@ -136,6 +151,8 @@ function saveEvent(jEvent){
 		success: function(){
 	          console.log("success");
 	           $("#resultjs").html('submitted successfully');
+	        // similar behavior as clicking on a link
+	        window.location.href = "/event-list.jsp";
 	      },
 		error : function(xhr, ajaxOptions, thrownError) {
 			console.error("Event list error: " + xhr.status);

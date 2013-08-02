@@ -72,11 +72,12 @@
 		} else {
 	%>
 	<div>
-		<div>Nuevo Evento</div>		
+		<div class="altaedicion">Nuevo Evento</div>
 		<div>
-			<form action="/new" method="post" accept-charset="utf-8"
+			<form method="post" accept-charset="utf-8"
 				onkeypress="return noenter(event)">
 				<table class="table table-striped">
+				<input type="hidden" name="idEvent" id="idEvent"/>
 					<tr>
 						<td><label for="title">Titulo Evento</label></td>
 						<td><input type="text" name="title" id="title" size="40" /></td>
@@ -91,7 +92,7 @@
 					</tr>
 					<tr>
 						<td><label for="address">Direccion</label></td>
-						<td><input type="text" name="address" id="address" size="40" /></td>
+						<td><input type="text" name="street" id="street" size="40" /></td>
 					</tr>
 					<tr>
 						<td><label for="zipcode">Codigo Postal</label></td>
@@ -128,25 +129,20 @@
 					<tr>
 						<td><label for="tags">Etiquetas(separadas por comas)</label></td>
 						<td><input type="text" name="tags" id="tags" size="40" /></td>
-					</tr>
-
-					<tr>
-						<td colspan="2" align="right"><input type="submit"
-							value="Crear" /></td>
-					</tr>
+					</tr>					
 				</table>
 			</form>
-		</div>
-		<div class="btn" onclick="jEvenBuilder();" type="button">Nuevo Evento(Para Test)</div>
+			<div class="btn" onclick="jEvenBuilder();" type="button">Guardar Evento</div>			
+		</div>		
 		<div id="resultjs"></div>
+		<a href="/event-list.jsp">Ver Eventos</a>
 		<div class="mapWrapper">
 			<div id="map-canvas"></div>
-		</div>
-		<a href="/index.jsp">Volver home</a>
+		</div>		
 		<%
 			}
 		%>
 	</div>
-	
+
 </body>
 </html>
