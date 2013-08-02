@@ -28,7 +28,7 @@
   <![endif]-->
 
 <!-- Bloque de Librerias - libreriasjs -->
-<jsp:include page="/libreriasjs.jsp" />
+<jsp:include page="/libraries-js.jsp" />
 <!-- EO Bloque de Librerias - libreriasjs -->
 <script src="https://apis.google.com/js/client.js?onload=loadGapi"> 
    { "client": {}, 
