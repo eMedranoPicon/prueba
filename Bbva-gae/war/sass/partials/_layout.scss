@@ -5,3 +5,20 @@
 	}
 
 }
+
+.eventList {
+	h1 {
+		font-size: $fontSizeLargest;
+	}
+
+	small {
+		margin-bottom:  10px;
+	}
+
+	.contentEventList {
+		img {
+			width:40%;
+			margin: 0px 10px 10px 0;
+		}
+	}
+}

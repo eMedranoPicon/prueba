@@ -36,104 +36,15 @@
 <div class="container">
 
   <!-- include header.html -->
-  <header class="header-page row-fluid hidden-print">
-    <a href="index.jsp">
-      <h1><span>BBVA in cloud</span></h1>
-    </a>
-
-    <h2>BBVA in Google Cloud</h2>
-
-    <div class="legendTop pull-right">
-      <ul class="languages">
-        <li><a href="#" class="lang-button">Ingl&eacute;s</a></li>
-        <li><a href="#" class="lang-button lang-current">Castellano</a></li>
-      </ul>
-      <br/>
-      <a class="btn btn-medium" href="#">Acceso administradores</a>
-    </div>
-  </header>
+  <jsp:include page="/content/common/header.html"/>
   <!-- EO include header.html -->
 
   <!-- include navbar.html -->
-  <nav class="navbar">
-    <div class="navbar-inner">
-      <div class="container">
-
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-
-        <!-- Be sure to leave the brand out there if you want it shown -->
-        <a class="brand visible-phone" href="#">BBVA in Google Cloud</a>
-
-        <!-- Everything you want hidden at 940px or less, place within here -->
-        <div class="nav-collapse collapse">
-          <!-- .nav, .navbar-search, .navbar-form, etc -->
-          <ul class="nav">
-            <li class="active divider-vertical"><a href="/index.jsp">Home</a></li>
-            <li class="divider-vertical"><a href="/event-list.jsp" >Eventos</a></li>
-            <li class="divider-vertical"><a href="#">Lugar&eacute;s de inter&eacute;s</a></li>
-            <li class="divider-vertical"><a href="#">V&iacute;deos</a></li>
-          </ul>
-
-          <form class="navbar-search">
-            <input type="text" class="search-query" placeholder="Search">
-          </form>
-
-        </div>
-
-      </div>
-    </div>
-  </nav>
+  <jsp:include page="/content/common/navbar.html"/>
   <!-- EO include navbar.html -->
 
   <!-- include carousel.html -->
-  <div id="myCarousel" class="carousel slide">
-
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Carousel items -->
-    <div class="carousel-inner">
-
-      <div class="active item">
-        <img src="img/carousel/slide-02d.jpg" alt="">
-        <div class="container">
-          <div class="carousel-caption">
-           <h1>Example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Learn more</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="img/carousel/slide-01d.jpg" alt="">
-        <div class="container">
-          <div class="carousel-caption">
-           <h1>Another example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="img/carousel/slide-03d.jpg" alt="">
-      </div>
-
-    </div>
-
-    <!-- Carousel nav -->
-    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-  </div>
+  <jsp:include page="/content/common/carousel.html"/>
   <!-- EO include carousel.html -->
 
   <!-- include events-home.html -->
@@ -146,9 +57,46 @@
       <div class="row-fluid">
 
         <div class="span12">
-          <article>
 
-          </article>
+           <div class="row-fluid">
+
+              <div class="span12">
+
+                <!-- include /content/events/events-list-home.html -->
+                <jsp:include page="/content/events/events-list-home.html"/>
+                <!-- EO include /content/events/events-list-home.html -->
+
+              </div>
+
+              <div class="span12">
+
+                <!-- include /content/events/events-list-home.html -->
+                <jsp:include page="/content/events/events-list-home.html"/>
+                <!-- EO include /content/events/events-list-home.html -->
+
+              </div>
+
+          </div>
+
+           <div class="row-fluid">
+              <div class="span12">
+
+                <!-- include /content/events/events-list-home.html -->
+                <jsp:include page="/content/events/events-list-home.html"/>
+                <!-- EO include /content/events/events-list-home.html -->
+
+              </div>
+
+              <div class="span12">
+
+                <!-- include /content/events/events-list-home.html -->
+                <jsp:include page="/content/events/events-list-home.html"/>
+                <!-- EO include /content/events/events-list-home.html -->
+
+              </div>
+
+           </div>
+
         </div>
 
         <div class="span12">
