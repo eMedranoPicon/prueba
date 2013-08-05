@@ -154,7 +154,8 @@ function saveEvent(jEvent){
 	          console.log("success");
 	           $("#resultjs").html('submitted successfully');
 	        // similar behavior as clicking on a link
-	        createEventCalendar(calendarToken,jEvent);
+	           	//Pendiente Integracion
+	           //createEventCalendar(calendarToken,jEvent);
 	        window.location.href = "/event-list.jsp";
 	        
 	      },
