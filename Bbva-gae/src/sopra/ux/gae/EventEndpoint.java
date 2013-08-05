@@ -19,7 +19,7 @@ import javax.persistence.EntityNotFoundException;
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 
-@Api(name = "evento", version="v4", description="BBVA-GAE Prototype API", namespace = @ApiNamespace(ownerDomain = "ux.sopra", ownerName = "ux.sopra", packagePath = "gae"))
+@Api(name = "evento", version="v5", description="BBVA-GAE Prototype API", namespace = @ApiNamespace(ownerDomain = "ux.sopra", ownerName = "ux.sopra", packagePath = "gae"))
 public class EventEndpoint {
 
 	/**

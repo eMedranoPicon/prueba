@@ -44,12 +44,12 @@
 <jsp:include page="/libraries-js.jsp" />
 
 <!-- EO Bloque de Librerias - libreriasjs -->
-<script src="https://apis.google.com/js/client.js?onload=loadGapi"> 
-   { "client": {}, 
-     "googleapis.config": { 
-       root: "https://sopragroupux.appspot.com/_ah/api"       
-     } 
-   } 
+<script src="https://apis.google.com/js/client.js"> 
+  // { "client": {}, 
+    // "googleapis.config": { 
+   //    root: "https://sopragroupux.appspot.com/_ah/api"       
+  //   } 
+//   } 
 </script>
 
 <script

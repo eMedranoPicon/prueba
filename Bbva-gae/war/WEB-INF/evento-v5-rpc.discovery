@@ -1,11 +1,11 @@
 {
- "kind": "discovery#restDescription",
- "etag": "\"nPbVolg1F8jpPe9kkErPtt8mpZE/jbHqpteDS-yUrjb-NI5KPnU6X80\"",
+ "kind": "discovery#rpcDescription",
+ "etag": "\"nPbVolg1F8jpPe9kkErPtt8mpZE/bgF_DqMy0zo2zrmDBJWHw4Bz1v4\"",
  "discoveryVersion": "v1",
- "id": "evento:v2",
+ "id": "evento:v5",
  "name": "evento",
- "version": "v2",
- "description": "This is an API",
+ "version": "v5",
+ "description": "BBVA-GAE Prototype API",
  "ownerDomain": "ux.sopra",
  "ownerName": "ux.sopra",
  "packagePath": "gae",
@@ -13,12 +13,10 @@
   "x16": "http://www.google.com/images/icons/product/search-16.gif",
   "x32": "http://www.google.com/images/icons/product/search-32.gif"
  },
- "protocol": "rest",
- "baseUrl": "https://sopraux-bbva.appspot.com/_ah/api/evento/v2/",
- "basePath": "/_ah/api/evento/v2/",
- "rootUrl": "https://sopraux-bbva.appspot.com/_ah/api/",
- "servicePath": "evento/v2/",
- "batchPath": "batch",
+ "protocol": "rpc",
+ "rootUrl": "https://sopragroupux.appspot.com/_ah/api/",
+ "rpcUrl": "https://sopragroupux.appspot.com/_ah/api/rpc",
+ "rpcPath": "/_ah/api/rpc",
  "parameters": {
   "alt": {
    "type": "string",
@@ -85,18 +83,22 @@
    "type": "object",
    "properties": {
     "address": {
-     "$ref": "List"
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
     },
     "audience": {
-     "$ref": "List"
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
     },
     "dateEnd": {
-     "type": "string",
-     "format": "date-time"
+     "type": "string"
     },
     "dateStart": {
-     "type": "string",
-     "format": "date-time"
+     "type": "string"
     },
     "description": {
      "type": "string"
@@ -109,99 +111,95 @@
      "format": "int64"
     },
     "tags": {
-     "$ref": "List"
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
     },
     "title": {
      "type": "string"
-    }
-   }
-  },
-  "List": {
-   "id": "List",
-   "type": "object",
-   "properties": {
-    "empty": {
-     "type": "boolean"
+    },
+    "urlEvent": {
+     "type": "string"
+    },
+    "urlImg": {
+     "type": "string"
     }
    }
   }
  },
  "methods": {
-  "getEvent": {
+  "evento.getEvent": {
    "id": "evento.getEvent",
-   "path": "event/{id}",
-   "httpMethod": "GET",
+   "allowGet": true,
    "parameters": {
     "id": {
      "type": "string",
      "required": true,
-     "format": "int64",
-     "location": "path"
+     "format": "int64"
     }
    },
    "parameterOrder": [
     "id"
    ],
-   "response": {
+   "returns": {
     "$ref": "Event"
    }
   },
-  "insertEvent": {
+  "evento.insertEvent": {
    "id": "evento.insertEvent",
-   "path": "event",
-   "httpMethod": "POST",
-   "request": {
-    "$ref": "Event",
-    "parameterName": "resource"
+   "parameters": {
+    "resource": {
+     "$ref": "Event"
+    }
    },
-   "response": {
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
     "$ref": "Event"
    }
   },
-  "listEvent": {
+  "evento.listEvent": {
    "id": "evento.listEvent",
-   "path": "event",
-   "httpMethod": "GET",
+   "allowGet": true,
    "parameters": {
     "cursor": {
-     "type": "string",
-     "location": "query"
+     "type": "string"
     },
     "limit": {
      "type": "integer",
-     "format": "int32",
-     "location": "query"
+     "format": "int32"
     }
    },
-   "response": {
+   "returns": {
     "$ref": "CollectionResponse_Event"
    }
   },
-  "removeEvent": {
+  "evento.removeEvent": {
    "id": "evento.removeEvent",
-   "path": "event/{id}",
-   "httpMethod": "DELETE",
    "parameters": {
     "id": {
      "type": "string",
      "required": true,
-     "format": "int64",
-     "location": "path"
+     "format": "int64"
     }
    },
    "parameterOrder": [
     "id"
    ]
   },
-  "updateEvent": {
+  "evento.updateEvent": {
    "id": "evento.updateEvent",
-   "path": "event",
-   "httpMethod": "PUT",
-   "request": {
-    "$ref": "Event",
-    "parameterName": "resource"
+   "parameters": {
+    "resource": {
+     "$ref": "Event"
+    }
    },
-   "response": {
+   "parameterOrder": [
+    "resource"
+   ],
+   "returns": {
     "$ref": "Event"
    }
   }

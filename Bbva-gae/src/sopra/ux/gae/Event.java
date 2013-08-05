@@ -14,31 +14,60 @@ public class Event {
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	private Long id;
 	private String title;
+	private String urlImg;
 	private String host;
+	private String urlEvent;
 	private String description;
 	private String dateStart; //timestamp
 	private String dateEnd; //timestamp
 	private List<String> audience; //separated by commas
 	private List<String> tags; //separated by commas
-	private List<String> address; //{street, zipcode, city,country, lat, long}
 	
-		
-	public Event() {
-		super();
-	}
+	private List<String> address; //{street, zipcode, city,country, lat, long}	
 	
-
-	public Event(String title, String host, String description,
-			String dateStart, String dateEnd, List<String> audience, List<String> tags, List<String> address) {
+	public Event(String title, String urlImg, String host, String urlEvent,
+			String description, String dateStart, String dateEnd,
+			List<String> audience, List<String> tags, List<String> address) {
 		super();
 		this.title = title;
+		this.urlImg = urlImg;
 		this.host = host;
+		this.urlEvent = urlEvent;
 		this.description = description;
 		this.dateStart = dateStart;
 		this.dateEnd = dateEnd;
 		this.audience = audience;
 		this.tags = tags;
 		this.address = address;
+	}
+
+		
+	public Event() {
+		super();
+	}
+
+
+
+	public String getUrlImg() {
+		return urlImg;
+	}
+
+
+
+	public void setUrlImg(String urlImg) {
+		this.urlImg = urlImg;
+	}
+
+
+
+	public String getUrlEvent() {
+		return urlEvent;
+	}
+
+
+
+	public void setUrlEvent(String urlEvent) {
+		this.urlEvent = urlEvent;
 	}
 
 

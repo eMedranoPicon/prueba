@@ -30,20 +30,30 @@
 <!-- Bloque de Librerias - libreriasjs -->
 <jsp:include page="/libraries-js.jsp" />
 <!-- EO Bloque de Librerias - libreriasjs -->
-<script src="https://apis.google.com/js/client.js?onload=loadGapi"> 
-   { "client": {}, 
-     "googleapis.config": { 
-       root: "https://sopragroupux.appspot.com/_ah/api"       
-     } 
-   } 
+<script src="https://apis.google.com/js/client.js">
+	
 </script>
 <script
 	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true">
-	</script>
+	
+</script>
 
 <script src="/js/application.js"></script>
+<script src="/js/calendar.js"></script>
+<script src="/js/lib/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#dateStart').datetimepicker({
+			language : 'es-ES'
+		});
+		$('#dateEnd').datetimepicker({
+			language : 'es-ES'
+		});
+	});
+</script>
 </head>
-<body>
+<body onload=auth();>
+
 	<%
 		UserService userService = UserServiceFactory.getUserService();
 		User user = userService.getCurrentUser();
@@ -55,6 +65,7 @@
 			urlLinktext = "Logout";
 		}
 	%>
+	<img alt="Logo" src="/img/logo-bbva.png">
 	<div>
 		<div>
 			<div style="float: left;" class="headline">Eventos</div>
@@ -77,18 +88,24 @@
 			<form method="post" accept-charset="utf-8"
 				onkeypress="return noenter(event)">
 				<table class="table table-striped">
-				<input type="hidden" name="idEvent" id="idEvent"/>
+					<input type="hidden" name="idEvent" id="idEvent" />
 					<tr>
 						<td><label for="title">Titulo Evento</label></td>
 						<td><input type="text" name="title" id="title" size="40" /></td>
 					</tr>
 					<tr>
 						<td><label for="dateStart">Hora de Inicio:</label></td>
-						<td><input type="text" name="dateStart" id="dateStart"
-							size="40" /></td>
+						<td><input id="dateStart" data-format="dd/MM/yyyy hh:mm:ss"
+							type="text"></input> <span class="add-on"> <i
+								data-time-icon="icon-time" data-date-icon="icon-calendar"> </i>
+						</span></td>
 					</tr>
-					<td><label for="dateEnd">Hora de fin:</label></td>
-					<td><input type="text" name="dateEnd" id="dateEnd" size="40" /></td>
+					<tr>
+						<td><label for="dateEnd">Hora de fin:</label></td>
+						<td><input id="dateEnd" data-format="dd/MM/yyyy hh:mm:ss"
+							type="text"></input> <span class="add-on"> <i
+								data-time-icon="icon-time" data-date-icon="icon-calendar"> </i>
+						</span></td>
 					</tr>
 					<tr>
 						<td><label for="address">Direccion</label></td>
@@ -118,7 +135,11 @@
 					</tr>
 					<tr>
 						<td><label for="url">URL Evento</label></td>
-						<td><input type="text" name="url" id="url" size="40" /></td>
+						<td><input type="text" name="url" id="urlEvent" size="40" /></td>
+					</tr>
+					<tr>
+						<td><label for="url">URL Imagen</label></td>
+						<td><input type="text" name="url" id="urlImg" size="40" /></td>
 					</tr>
 					<tr>
 						<td><label for="audience">Asistentes(separados por
@@ -129,16 +150,19 @@
 					<tr>
 						<td><label for="tags">Etiquetas(separadas por comas)</label></td>
 						<td><input type="text" name="tags" id="tags" size="40" /></td>
-					</tr>					
+					</tr>
 				</table>
 			</form>
-			<div class="btn" onclick="jEvenBuilder();" type="button">Guardar Evento</div>			
-		</div>		
+			<div class="btn" onclick="jEvenBuilder();" type="button">Guardar
+				Evento</div>
+			<div class="btn" onclick="auth();" type="button">Guardar en
+				Calendario</div>
+		</div>
 		<div id="resultjs"></div>
 		<a href="/event-list.jsp">Ver Eventos</a>
 		<div class="mapWrapper">
 			<div id="map-canvas"></div>
-		</div>		
+		</div>
 		<%
 			}
 		%>

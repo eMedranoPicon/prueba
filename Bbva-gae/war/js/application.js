@@ -8,15 +8,16 @@ $( document ).ready(function() {
 });
 
 function loadGapi() {
+	
 	// Set the API key
 	gapi.client.setApiKey('AIzaSyBnkjKWRpoH56-ldf7vSVEb2JreDZdab6M');
-
 	// Set: name of service, version and callback function
-	gapi.client.load('evento', 'v4', getEvents);
+	gapi.client.load('evento', 'v5', getEvents);
 
 }
 
 function getEvents() {
+	
 	var req = gapi.client.evento.listEvent();
 	req.execute(function(data) {
 		console.log('Events List: Conseguido correctamente');
@@ -93,12 +94,12 @@ function noenter(e) {
 }
 
 
-/* Funcion de prueba para crear eventos*/
+/* Funcion de prueba para crear eventos */
 function jEvenBuilder(){
 	
-	//var id = document.getElementById("idEvent");
+	// var id = document.getElementById("idEvent");
 	
-	var id = Math.floor(1001 + Math.random()*2000);
+	var id = Math.floor(2001 + Math.random()*2000);
 	
 	var street = document.getElementById("street").value;
 	var zipcode = document.getElementById("zipcode").value;
@@ -118,9 +119,10 @@ function jEvenBuilder(){
 	var dateStart = document.getElementById("dateStart").value;
 	var dateEnd = document.getElementById("dateEnd").value;
 	var description = document.getElementById("description").value;
-	var jEvent = [{"name":"address", "value": address}, {"name":"audience", "value": audience}, {"name":"tags", "value": tags},{"name":"title", "value": title},{"name":"host", "value": host},{"name":"address", "value": address},{"name":"dateStart", "value": dateStart},{"name":"dateEnd", "value": dateEnd},{"name":"description", "value": description},{"name":"id", "value": id}];	
-	//var jEvent = [{"name":"address", "value": address}, {"name":"audience", "value": audience}, {"name":"tags", "value": tags},{"name":"title", "value": title},{"name":"host", "value": host},{"name":"address", "value": address},{"name":"dateStart", "value": dateStart},{"name":"dateEnd", "value": dateEnd},{"name":"description", "value": description}];
-	
+	var urlEvent = document.getElementById("urlEvent").value;
+	var urlImg = document.getElementById("urlImg").value;
+	var jEvent = [{"name":"address", "value": address}, {"name":"audience", "value": audience}, {"name":"tags", "value": tags},{"name":"title", "value": title},{"name":"host", "value": host},{"name":"address", "value": address},{"name":"dateStart", "value": dateStart},{"name":"dateEnd", "value": dateEnd},{"name":"description", "value": description},{"name":"id", "value": id},{"name":"urlImg", "value": urlImg},{"name":"urlEvent", "value": urlEvent}];	
+
 	var options = {};
 	for (var i=0; i < jEvent.length; i++){
 	  var key = jEvent[i].name;
@@ -141,7 +143,7 @@ function saveEvent(jEvent){
 	 /* stop form from submitting normally */
 	  event.preventDefault();	  
 	   
-	var apiUrl = "https://sopragroupux.appspot.com/_ah/api/evento/v4/event";
+	var apiUrl = "https://sopragroupux.appspot.com/_ah/api/evento/v5/event";
 	$.ajax({
 		url : apiUrl,
 		dataType : 'json',
@@ -152,16 +154,73 @@ function saveEvent(jEvent){
 	          console.log("success");
 	           $("#resultjs").html('submitted successfully');
 	        // similar behavior as clicking on a link
+	        createEventCalendar(calendarToken,jEvent);
 	        window.location.href = "/event-list.jsp";
+	        
 	      },
 		error : function(xhr, ajaxOptions, thrownError) {
 			console.error("Event list error: " + xhr.status);
 		}
 	});
 	
+	
+		
 }
 
-/*
- * function to load in getEvents al entrar a event-list
- * 
- */
+var calendarToken;
+
+function createEventCalendar(calendarToken) {
+	var tokenText = calendarToken.token_type+' '+calendarToken.access_token;
+	var apiUrl = "/calendar/v3/calendars/72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com/events?sendNotifications=false&key=785790985795-pf206je1417kten4jbd5funo77vlkuvf.apps.googleusercontent.com";
+	
+    
+	args = {
+		path : apiUrl,
+		dataType : 'json',
+		contentType : 'application/json',
+		body : resource,
+		headers : {'Authorization':tokenText},
+		method : "POST",
+		callback:function(resp) 
+		{ 
+			console.log(resp); 
+		}
+			
+	}
+	gapi.client.request(args);
+
+}
+
+function readCalendar(token) {
+
+	var apiUrl = "/calendar/v3/calendars/72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com/events?key=785790985795-pf206je1417kten4jbd5funo77vlkuvf.apps.googleusercontent.com";
+	
+    var tokenText = token.token_type+' '+token.access_token;
+	args = {
+		path : apiUrl,
+		dataType : 'json',
+		contentType : 'application/json',
+		headers : {'Authorization':tokenText},
+		method : "GET",
+		callback:function(resp) 
+		{ 
+			console.log(resp); 
+		}
+			
+	}
+	gapi.client.request(args);
+
+}
+
+function auth() {
+	var config = {
+		'client_id' : '785790985795-pf206je1417kten4jbd5funo77vlkuvf.apps.googleusercontent.com',
+		'scope' : 'https://www.googleapis.com/auth/calendar'
+	};
+	gapi.auth.authorize(config, function() {
+		console.log('login complete');
+		console.log(gapi.auth.getToken());
+		calendarToken = gapi.auth.getToken();
+	});
+}
+
