@@ -7,8 +7,18 @@
 }
 
 .eventList {
+
+	padding: 10px;
+	border: 1px solid $borderGray;
+	margin-bottom: 20px;
+
+	@include clearfix();
 	h1 {
 		font-size: $fontSizeLargest;
+	}
+
+	p {
+		text-align: justify;
 	}
 
 	small {
