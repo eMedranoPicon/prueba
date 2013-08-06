@@ -58,7 +58,7 @@
         <td>
             <div class="group-buttons-table">
             <a class="btn btn-success btn-small" href="/backend/event-edit.jsp?id={{obj.id}}"><i class="icon-edit icon-white"></i> Editar</a>
-            <a class="btn btn-warning btn-small" href="javascript:deleteEvent('{{obj.id}}')"><i class="icon-trash icon-white"></i> Borrar</a>
+            <a class="btn btn-warning btn-small" ng-click="deleteEventRemote(obj.id,$index)"><i class="icon-trash icon-white"></i> Borrar</a>
         </div>
         </td>
     </tr>
