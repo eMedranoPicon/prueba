@@ -54,10 +54,12 @@
 		$(function()
 		{
 			$('#dateStart').datetimepicker({
-				language : 'es-ES'
+				language : 'es-ES',
+				pickSeconds: false
 			});
 			$('#dateEnd').datetimepicker({
-				language : 'es-ES'
+				language : 'es-ES',
+				pickSeconds: false
 			});
 		});
 	</script>
@@ -91,7 +93,10 @@
 
 			<div class="span9">
 				<form class="form-horizontal">
-
+					<!-- hiddden fields -->
+					<input type="hidden" id="idEvent">
+					<input type="hidden" id="host" value="<%=user.getEmail()%>">
+					<!-- End -->
 					<div class="control-group">
 						<label class="control-label" for="title">Titulo Evento</label>
 						<div class="controls">
@@ -102,7 +107,7 @@
 					<div class="control-group">
 						<label class="control-label" for="dateStart">Fecha y Hora de Inicio</label>
 						<div class="controls">
-					  		<input id="dateStart" data-format="dd/MM/yyyy hh:mm:ss" placeholder="dd/MM/yyyy hh:mm:ss"
+					  		<input id="dateStart" data-format="dd/MM/yyyy hh:mm" placeholder="dd/MM/yyyy hh:mm"
 								type="text"></input> <span class="add-on"> <i
 									data-time-icon="icon-time" data-date-icon="icon-calendar"> </i>
 							</span>
@@ -112,7 +117,7 @@
 					<div class="control-group">
 						<label class="control-label" for="dateEnd">Fecha y Hora de Fin</label>
 						<div class="controls">
-					  		<input id="dateEnd" data-format="dd/MM/yyyy hh:mm:ss" placeholder="dd/MM/yyyy hh:mm:ss"
+					  		<input id="dateEnd" data-format="dd/MM/yyyy hh:mm" placeholder="dd/MM/yyyy hh:mm"
 								type="text"></input> <span class="add-on"> <i
 									data-time-icon="icon-time" data-date-icon="icon-calendar"> </i>
 							</span>
@@ -157,7 +162,7 @@
 					<div class="control-group">
 						<label class="control-label" for="address">Dirección</label>
 						<div class="controls">
-							<input type="text" id="address" name="address" placeholder="">
+							<input type="text" id="street" name="street" placeholder="">
 						</div>
 					</div>
 
