@@ -89,7 +89,7 @@ function initialize() {
 			style : google.maps.NavigationControlStyle.SMALL
 		}
 	};
-	map = new google.maps.Map(document.getElementById("map-canvas-front"),
+	map = new google.maps.Map(document.getElementById("map-canvas"),
 			myOptions);
 }
 
@@ -103,7 +103,6 @@ function codeAddresses(address) {
 				map : map,
 				position : results[0].geometry.location
 			});
-			// markersArray.push(marker);
 		} else {
 			alert("Geocode was not successful for the following reason: "
 					+ status);
@@ -135,7 +134,8 @@ function jEvenBuilder() {
 	var country = document.getElementById("country").value;
 
 	var address = [ street, zipcode, city, country ];
-
+	var addressMaps = street + ', ' + zipcode + ', ' + city + ', ' + country;
+	
 	var audienceOne = document.getElementById("audience").value;
 	var audience = [ audienceOne ];
 
@@ -192,6 +192,8 @@ function jEvenBuilder() {
 
 	var jsonString = JSON.stringify(options);
 	console.log(jsonString);
+	codeAddresses(addressMaps);
+	console.log(addressMaps);
 	return saveEvent(jsonString);
 }
 
@@ -211,7 +213,6 @@ function saveEvent(jEvent, idEvent) {
 			console.log("success");
 			$("#resultjs").html('Evento creado correctamente.');
 			// similar behavior as clicking on a link
-			// Pendiente Integracion
 			createEventCalendar(calendarToken, idEvent);			
 
 		},
@@ -315,4 +316,45 @@ function ISODateString(stringDate) {
 	return d.getUTCFullYear() + '-' + pad(d.getUTCMonth() + 1) + '-'
 			+ pad(d.getUTCDate()) + 'T' + pad(d.getUTCHours()) + ':'
 			+ pad(d.getUTCMinutes()) + ':' + pad(d.getUTCSeconds()) + 'Z'
+}
+
+function previewMap(){
+	var street = document.getElementById("street").value;
+	var zipcode = document.getElementById("zipcode").value;
+	var city = document.getElementById("city").value;
+	var country = document.getElementById("country").value;
+
+	var address = street + ', ' + zipcode + ', ' + city + ', ' + country;
+	codeAddresses(address);
+	console.log(address);
+	
+}
+
+function deleteEvent(id) {
+	gapi.client.setApiKey('AIzaSyBnkjKWRpoH56-ldf7vSVEb2JreDZdab6M');
+	var apiUrl = "https://sopragroupux.appspot.com/_ah/api/evento/v5/event/"+id;
+	$.ajax({
+		url : apiUrl,
+		dataType : 'json',
+		contentType : 'application/json',
+		type : "DELETE",
+		success : function(data) {
+			console.log('Lista Eventos: Conseguido correctamente');
+			console.log(data);
+			for ( var j in data.items) {
+
+				for ( var i in data.items[j]) {
+					markersArray[i] = data.items[j].address;
+					console.log(markersArray[i].toString());
+					codeAddresses(markersArray[i].toString());
+					break;
+				}
+				console.log(j);
+			}
+
+		},
+		error : function(xhr, ajaxOptions, thrownError) {
+			console.error("Event list error: " + xhr.status);
+		}
+	});
 }

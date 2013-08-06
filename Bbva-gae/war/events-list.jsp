@@ -34,7 +34,7 @@
 
 </head>
 
-<body onload=auth();>
+<body>
 
 <div class="container">
 

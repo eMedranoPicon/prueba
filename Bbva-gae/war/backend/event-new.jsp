@@ -26,12 +26,9 @@
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap-datetimepicker.min.css" />
 
 	<style>
-		#map-canvas
-		{
+		#map-canvas		{
 			width: 100%;
-			height: 360px;
-		}
-
+			height: 360px;		}
 		.mapWrapper {
 
 		}
@@ -190,18 +187,19 @@
 					<div class="control-group">
 						<div class="controls">
 							<a class="btn btn-success btn-small" href="javascript:jEvenBuilder();">Guardar
-					Evento</a>
-							<a class="btn btn-success btn-small" href="javascript:codeAddress();">Ubicar en Google Maps</a>
+					Evento</a><div id="resultjs"></div>
+							<a class="btn btn-success btn-small" href="javascript:previewMap();">Ubicar en Google Maps</a>
 						</div>
 					</div>
 				</form>
 			</div>
 
-			<div class="span15">
-				<div id="resultjs"></div>
+			<div class="span15">				
 				<div class="mapWrapper">
 					<div id="map-canvas"></div>
 				</div>
+				 <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=72o4s6adl0uhbebjssl4dpraeo%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=Europe%2FMadrid" style=" border-width:0 " width="100%" height="400px" frameborder="0" scrolling="no"></iframe>
+				
 			</div>
 		<%
 			}
