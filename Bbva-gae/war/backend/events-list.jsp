@@ -38,7 +38,7 @@
   <script src="/src/controllers/EventDetailController.js"></script>
 
 </head>
-<body onload=auth();>
+<body>
 
 <div class="container">
 
