@@ -45,6 +45,7 @@
 	<script src="https://apis.google.com/js/client.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 	<script src="/js/application.js"></script>
+	<script src="/js/maps.js"></script>
 	<script src="/js/calendar.js"></script>
 	<script src="/js/lib/bootstrap-datetimepicker.min.js"></script>
 	<script type="text/javascript">
@@ -61,7 +62,7 @@
 		});
 	</script>
 </head>
-<body onload=auth();>
+<body onload=oneAuth();>
 
 <div class="container">
 
