@@ -1,4 +1,4 @@
-<!-- include navbar.html -->
+<!-- include navbar.jsp -->
 <nav class="navbar">
   <div class="navbar-inner">
     <div class="container">
@@ -18,7 +18,7 @@
         <!-- .nav, .navbar-search, .navbar-form, etc -->
         <ul class="nav">
           <li class="active divider-vertical"><a href="/index.jsp">Home</a></li>
-          <li class="divider-vertical"><a href="/event-list.jsp" >Eventos</a></li>
+          <li class="divider-vertical"><a href="/events-list.jsp" >Eventos</a></li>
           <li class="divider-vertical"><a href="#">Lugar&eacute;s de inter&eacute;s</a></li>
           <li class="divider-vertical"><a href="#">V&iacute;deos</a></li>
         </ul>
@@ -32,4 +32,4 @@
     </div>
   </div>
 </nav>
-<!-- EO include navbar.html -->
+<!-- EO include navbar.jsp -->

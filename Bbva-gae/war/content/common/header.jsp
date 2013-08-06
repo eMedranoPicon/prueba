@@ -1,4 +1,4 @@
-<!-- include header.html -->
+<!-- include header.jsp -->
 <header class="header-page row-fluid hidden-print">
   <a href="index.jsp">
     <h1><span>BBVA in cloud</span></h1>
@@ -15,4 +15,4 @@
     <a class="btn btn-medium" href="#">Acceso administradores</a>
   </div>
 </header>
-<!-- EO include header.html -->
+<!-- EO include header.jsp -->

@@ -1,0 +1,48 @@
+
+<form>
+<strong>Buscar</strong>
+
+Titulo: <input ng-model="query.titulo">
+
+
+<strong>Ordenar</strong>
+ <select ng-model="orderField">
+ 		<option value="title">Nombre del evento</option>
+        <option value="dateStart">Fecha de inicio</option>
+    </select>
+    <select ng-model="orderReverse">
+ 		<option value="false">Ascendente</option>
+        <option value="true">Descendente</option>
+    </select>
+
+</form>
+
+<table class="table table-striped">
+    <tr>
+        <th>Titulo</th>
+        <th>Fecha Inicio</th>
+        <th>Fecha Fin</th>
+        <th>Descripcion</th>
+        <th>URL del evento</th>
+        <th>Asistentes</th>
+        <th>Etiquetas</th>
+          <th>Acciones</th>
+    </tr>
+    <tr ng-repeat="obj in events | filter:query | orderBy:orderField:orderReverse">
+        <td>{{obj.title}}</td>
+        <td>{{obj.dateStart}}</td>
+        <td>{{obj.dateEnd}}</td>
+        <td>{{obj.description}}</td>
+        <td>{{obj.urlEvent}}</td>
+        <td>{{obj.audience}}</td>
+        <td>{{obj.title}}</td>
+        <td>
+            <div class="group-buttons-table">
+            <a class="btn btn-success btn-small" href="/backend/event-edit.jsp?id={{obj.id}}"><i class="icon-edit icon-white"></i> Editar</a>
+            <a class="btn btn-warning btn-small" href="#"><i class="icon-trash icon-white"></i> Borrar</a>
+        </div>
+        </td>
+    </tr>
+</table>
+
+

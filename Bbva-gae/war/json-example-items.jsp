@@ -35,13 +35,13 @@
 
 <div class="container">
 
-  <!-- include header.html -->
-  <jsp:include page="/content/common/header.html"/>
-  <!-- EO include header.html -->
+  <!-- include header.jsp -->
+  <jsp:include page="/content/common/header.jsp"/>
+  <!-- EO include header.jsp -->
 
-  <!-- include navbar.html -->
-  <jsp:include page="/content/common/navbar.html"/>
-  <!-- EO include navbar.html -->
+  <!-- include navbar.jsp -->
+  <jsp:include page="/content/common/navbar.jsp"/>
+  <!-- EO include navbar.jsp -->
 
   <!-- include events-home.html -->
   <section class="section-page">

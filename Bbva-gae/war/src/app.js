@@ -1,51 +1,31 @@
-/*angular.module('app', []).
-
-  //definimos las rutas de la 'app'
-  config(['$routeProvider', function($routes) {
-
-
-  $routes.
-      when('/libros', {
-		  templateUrl: 'src/views/libros-list.html',
-		  controller: LibrosListController
-		  }).
-
-	  //mediante dos puntos (:) definimos un parámetro
-      when('/libro/:libroId', {
-		  templateUrl: 'src/views/libro.html',
-		  controller: LibroDetailController
-		  }).
-
-	  //cualquier ruta no definida
-      otherwise({
-		  redirectTo: '/libros'});
-
-}]);
-*/
-
 var app = angular.module('app', []);
 
-  //definimos las rutas de la 'app'
-  app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
+//definimos las rutas de la 'app'
+app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider)
+{
+	$httpProvider.defaults.useXDomain = true;
+	delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
-
- $httpProvider.defaults.useXDomain = true;
-    delete $httpProvider.defaults.headers.common['X-Requested-With'];
-
-  $routeProvider.
-      when('/events', {
-		  templateUrl: 'src/views/events-list.html',
+	$routeProvider.
+	  when('/events', {
+		  templateUrl: '/src/views/events-list.html',
 		  controller: EventsListController
 		  }).
 
 	  //mediante dos puntos (:) definimos un parámetro
-      when('/event/:id', {
-		  templateUrl: 'src/views/event.html',
+	  when('/event/:id', {
+		  templateUrl: '/src/views/event.html',
 		  controller: EventDetailController
 		  }).
 
+	  //mediante dos puntos (:) definimos un parámetro
+	  when('/events-table-list', {
+		  templateUrl: '/src/views/events-list-table.html',
+		  controller: EventsListController
+		  }).
+
 	  //cualquier ruta no definida
-      otherwise({
+	  otherwise({
 		  redirectTo: '/events'});
 
 }]);

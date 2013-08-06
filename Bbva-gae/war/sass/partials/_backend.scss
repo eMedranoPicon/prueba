@@ -1,0 +1,58 @@
+.control-panel
+{
+	padding: 10px;
+	border: 1px solid $borderGray;
+	margin-bottom: 20px;
+	min-height: 220px;
+
+	@include clearfix();
+
+	h1 {
+		font-size: $fontSizeLargest;
+	}
+
+	p {
+		text-align: justify;
+	}
+
+	small {
+		margin-bottom:  10px;
+	}
+
+	.option-panel
+	{
+		.container-img
+		{
+			width: 39%;
+
+			img {
+				//width:40%;
+				margin: 0px 10px 10px 0;
+			}
+		}
+
+		.container-data
+		{
+			width: 59%;
+
+			ul.decorated-list,
+			ol.decorated-list
+			{
+				margin-top: 0px;
+
+				li
+				{
+					a{
+						line-height: 30px;
+					}
+				}
+			}
+
+
+		}
+	}
+}
+
+.group-buttons-table {
+	width: 140px;
+}

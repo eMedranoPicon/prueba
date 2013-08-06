@@ -184,7 +184,7 @@
 
 					<div class="control-group">
 						<div class="controls">
-							<a class="btn btn-success btn-small" href="javascript:jEvenBuilder();">Guardar
+							<a class="btn btn-success btn-small" href="javascript:jEvenBuilder();">Actualizar
 					Evento</a>
 							<a class="btn btn-success btn-small" href="javascript:codeAddress();">Ubicar en Google Maps</a>
 						</div>

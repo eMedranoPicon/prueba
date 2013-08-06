@@ -1,12 +1,14 @@
-.section-page {
-	.header-section {
+.section-page
+{
+	.header-section
+	{
 		border-bottom: 1px solid $borderGray;
 		margin-bottom: $margin-bottom-block;
 	}
-
 }
 
-.eventList {
+.eventList
+{
 
 	padding: 10px;
 	border: 1px solid $borderGray;
@@ -29,6 +31,23 @@
 		img {
 			width:40%;
 			margin: 0px 10px 10px 0;
+		}
+	}
+}
+
+ul.decorated-list,
+ol.decorated-list
+{
+	@include clearfix();
+	list-style-type: disc;
+	list-style-image: url(/img/bullet-square.png);
+	list-style-position: inside;
+	margin: 10px 0 10px 0;
+
+	li
+	{
+		a{
+			line-height: 20px;
 		}
 	}
 }
