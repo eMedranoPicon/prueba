@@ -10,8 +10,12 @@ https://sopragroupux.appspot.com/_ah/api/discovery/v1/apis/evento/v4/rest
 
 URL Peticiones AJAX.
 
-Listar Event 
+Listar Events
 	URL: https://sopragroupux.appspot.com/_ah/api/evento/v4/event
+	httpMethod: "GET"
+
+Listar Event
+	URL: https://sopragroupux.appspot.com/_ah/api/evento/v4/event/{id}
 	httpMethod: "GET"
 
 Insertar Evento
