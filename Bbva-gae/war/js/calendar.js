@@ -15,9 +15,9 @@ function createEventCalendar(calendarToken, idEvent) {
 	var description = document.getElementById("description").value;
 	var urlEvent = document.getElementById("urlEvent").value;
 
-	Date
+	String
 	dateStart = document.getElementById("dateStart").value;
-	Date
+	String
 	dateEnd = document.getElementById("dateEnd").value;
 
 	var dateStartFormatted = ISODateString(dateStart); // prints something like
@@ -49,9 +49,7 @@ function createEventCalendar(calendarToken, idEvent) {
 		callback : function(resp) {
 			console.log('Guardado en Google Calendar');
 			console.log(resp);
-			setTimeout(function() {
-				window.location.href = "/backend/events-list.jsp#/events-table-list";
-			}, 1000);		    
+			$('#confirmaEvento').modal('show');		    
 		}
 
 	}
@@ -81,4 +79,26 @@ function readCalendar(token) {
 	}
 	gapi.client.request(args);
 
+}
+
+/* use a function for the exact format desired... */
+function ISODateString(stringDate) {
+	var dateParts = stringDate.split("");
+	//troceandolo
+	var anno = dateParts.slice(6,10).join("");
+	var mes = dateParts.slice(3,5).join("");
+	mes = mes-1;
+	var dia = dateParts.slice(0,2).join("");
+	var hora = dateParts.slice(11,13).join("");
+	var minuto = dateParts.slice(14,16).join("");
+	//new Date(yyyy,mm,dd,hh,mm)
+	//dd/mm/yyyy hh:mm 
+	var d = new Date(anno,mes,dia,hora,minuto);
+	console.log(d);
+	function pad(n) {
+		return n < 10 ? '0' + n : n
+	}
+	return d.getUTCFullYear() + '-' + pad(d.getUTCMonth() + 1) + '-'
+			+ pad(d.getUTCDate()) + 'T' + pad(d.getUTCHours()) + ':'
+			+ pad(d.getUTCMinutes()) + ':' + pad(d.getUTCSeconds()) + 'Z'
 }
