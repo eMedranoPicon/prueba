@@ -49,9 +49,7 @@ function createEventCalendar(calendarToken, idEvent) {
 		callback : function(resp) {
 			console.log('Guardado en Google Calendar');
 			console.log(resp);
-			setTimeout(function() {
-				window.location.href = "/backend/events-list.jsp#/events-table-list";
-			}, 1000);		    
+			$('#confirmaEvento').modal('show');		    
 		}
 
 	}
