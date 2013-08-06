@@ -1,0 +1,5 @@
+function deleteEvent(id)
+{
+
+
+}

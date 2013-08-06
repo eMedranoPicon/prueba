@@ -132,6 +132,26 @@
 
       </div>
 
+      <div class="span8">
+
+        <article class="control-panel">
+          <h1>Utilidades</h1>
+          <div class="option-panel">
+            <div class="container-img pull-left">
+              <img src="/img/tools.jpg"  />
+            </div>
+            <div class="container-data pull-right">
+              <!--<p> Desde aquí podrás gestionar tus eventos:</p>-->
+              <ul class="decorated-list">
+                <li><a href="/backend/webservices.jsp">Ver estado de los <strong>web services</strong></a></li>
+                <li><a href="/index.jsp">Volver a <strong>BBVA in Google Cloud</strong></a></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
     </div>
 
   </div>

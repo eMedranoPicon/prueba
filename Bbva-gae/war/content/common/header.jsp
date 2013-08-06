@@ -12,7 +12,7 @@
       <li><a href="#" class="lang-button lang-current">Castellano</a></li>
     </ul>
     <br/>
-    <a class="btn btn-medium" href="#">Acceso administradores</a>
+    <a class="btn btn-medium" href="/backend/index.jsp" target="_blank">Acceso administradores</a>
   </div>
 </header>
 <!-- EO include header.jsp -->

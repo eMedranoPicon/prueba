@@ -1,4 +1,4 @@
-<!-- include navbar.jsp -->
+<!-- include backend-navbar.jsp -->
 <nav class="navbar">
   <div class="navbar-inner">
     <div class="container">
@@ -58,6 +58,14 @@
             </ul>
           </li>
 
+          <li class="divider-vertical dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Utilidades <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/backend/webservices.jsp">Ver <strong>web services</strong> disponibles</a></li>
+              <li><a href="/index.jsp" target="_blank">Volver a <strong>BBVA in Google Cloud</strong></a></li>
+            </ul>
+          </li>
+
         </ul>
 
       </div>
@@ -65,4 +73,4 @@
     </div>
   </div>
 </nav>
-<!-- EO include navbar.jsp -->
+<!-- EO include backend-navbar.jsp -->

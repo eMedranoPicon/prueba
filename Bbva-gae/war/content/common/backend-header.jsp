@@ -17,7 +17,7 @@
   }
 %>
 
-<!-- include header.jsp -->
+<!-- include backend-header.jsp -->
 <header class="header-page row-fluid hidden-print">
   <a href="index.jsp">
     <h1><span>BBVA in cloud</span></h1>
@@ -26,15 +26,10 @@
   <h2>BBVA in Google Cloud - Gestión del site</h2>
 
   <div class="legendTop pull-right">
-    <ul class="languages">
-      <li><a href="#" class="lang-button">Ingl&eacute;s</a></li>
-      <li><a href="#" class="lang-button lang-current">Castellano</a></li>
-    </ul>
-    <br/>
     <div style="float: right;">
       <%=(user == null ? "" : user.getNickname())%> |
       <a href="<%=url%>"><%=urlLinktext%></a>
     </div>
   </div>
 </header>
-<!-- EO include header.jsp -->
+<!-- EO include backend-header.jsp -->

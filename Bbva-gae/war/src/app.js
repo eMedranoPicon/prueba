@@ -18,7 +18,6 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 		  controller: EventDetailController
 		  }).
 
-	  //mediante dos puntos (:) definimos un parámetro
 	  when('/events-table-list', {
 		  templateUrl: '/src/views/events-list-table.html',
 		  controller: EventsListController
