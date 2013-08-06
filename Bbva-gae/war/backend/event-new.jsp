@@ -189,7 +189,7 @@
 						<div class="controls">
 							<a class="btn btn-success btn-small" href="javascript:jEvenBuilder();">Guardar
 					Evento</a><div id="resultjs"></div>
-							<a class="btn btn-success btn-small" href="javascript:previewMap();">Ubicar en Google Maps</a>
+							<a class="btn btn-success btn-small" href="javascript:previewMap();">Ubicar en Google Maps</a>							
 						</div>
 					</div>
 				</form>
