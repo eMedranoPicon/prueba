@@ -1,0 +1,443 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+<head>
+    <title>Sanitas seguros de salud</title>
+	<meta charset="UTF-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="support/SanitasMovil/css/normalize.css" rel="stylesheet" type="text/css">
+	<link href="support/SanitasMovil/css/main.css" media="screen" rel="stylesheet" type="text/css" />
+
+	<!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="support/SanitasMovil/js/lib/respond.min.js"></script>
+	<script src="support/SanitasMovil/js/lib/jquery.js"></script>
+	<script src="support/SanitasMovil/js/lib/jquery.easing.1.3.js"></script>
+	<script src="support/SanitasMovil/js/lib/jquery.royalslider.min.js"></script>
+	<script src="support/SanitasMovil/js/sanitas/dispositivo.js"></script>
+
+		<!--prepara imagenes para dispositivos, según dispositivo asignamos una u otra imagen, no obstante creemos que la página a bastante bien de peso y no creemos que sea necesario hacer esta funcionalidad, exportando bien la imagen no debería suponer un peso excesivo adiconal-->
+    <script type="text/javascript">
+    if (is_iphone) {
+    //Images Iphone;
+    	jQuery(document).ready(function() {
+    		$("#banner").html('<img src="support/SanitasMovil/images/banner.jpg" />');
+    		$("#contentImage1").html('<img src="support/SanitasMovil/images/img-seguros-detalle.jpg" />');
+    		$("#contentImage2").html('<img src="support/SanitasMovil/images/img-seguros-detalle.jpg" />');
+    		$("#contentImage3").html('<img src="support/SanitasMovil/images/img-seguros-detalle.jpg" />');
+    		$("#contentImage4").html('<img src="support/SanitasMovil/images/img-seguros-detalle.jpg" />');
+
+    	});}
+    else if (is_ipad) {
+    //Images ipad;
+    	jQuery(document).ready(function() {
+    		$("#banner").html('<img src="support/SanitasMovil/images/banner.jpg" />');
+    		$("#contentImage1").html('<img src="support/SanitasMovil/images/img-seguros-detalle.jpg" />');
+    		$("#contentImage2").html('<img src="support/SanitasMovil/images/img-seguros-detalle.jpg" />');
+    		$("#contentImage3").html('<img src="support/SanitasMovil/images/img-seguros-detalle.jpg" />');
+    		$("#contentImage4").html('<img src="support/SanitasMovil/images/img-seguros-detalle.jpg" />');
+
+    	});}
+    else if (is_android) {
+    //Images android;
+    	jQuery(document).ready(function() {
+    		$("#banner").html('<img src="support/SanitasMovil/images/banner.jpg" />');
+    		$("#contentImage1").html('<img src="support/SanitasMovil/images/img-seguros-detalle.jpg" />');
+    		$("#contentImage2").html('<img src="support/SanitasMovil/images/img-seguros-detalle.jpg" />');
+    		$("#contentImage3").html('<img src="support/SanitasMovil/images/img-seguros-detalle.jpg" />');
+    		$("#contentImage4").html('<img src="support/SanitasMovil/images/img-seguros-detalle.jpg" />');
+
+    	});}
+    else {
+    //Images web;
+    	jQuery(document).ready(function() {
+    		$("#banner").html('<img src="support/SanitasMovil/images/banner.jpg" />');
+    		$("#contentImage1").html('<img src="support/SanitasMovil/images/img-seguros-detalle.jpg" />');
+    		$("#contentImage2").html('<img src="support/SanitasMovil/images/img-seguros-detalle.jpg" />');
+    		$("#contentImage3").html('<img src="support/SanitasMovil/images/img-seguros-detalle.jpg" />');
+    		$("#contentImage4").html('<img src="support/SanitasMovil/images/img-seguros-detalle.jpg" />');
+
+    	});
+    }
+    </script>
+
+    <!--prepara imagenes para dispositivos-->
+    <!--prepara iconos svg-->
+    <script src="support/SanitasMovil/js/lib/modernizr.js"></script>
+    <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/rgbcolor.js"></script>
+    <script type="text/javascript" src="http://canvg.googlecode.com/svn/trunk/canvg.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function()
+    {
+       if (Modernizr.svg)
+       {
+     	 	//alert ("losoporta")
+    		$("#iconfb").html('<img src="support/SanitasMovil/images/icon-fb.svg" />');
+    		$("#icontw").html('<img src="support/SanitasMovil/images/icon-tw.svg" />');
+    		$("#icontube").html('<img src="support/SanitasMovil/images/icon-tube.svg" />');
+    		$("#iconapple").html('<img src="support/SanitasMovil/images/icon-apple.svg" />');
+    		$("#iconandroid").html('<img src="support/SanitasMovil/images/icon-android.svg" />');
+    	}else
+        {
+    	 	//alert ("nolosoporta")
+    		$("#iconfb").html('<img src="support/SanitasMovil/images/icon-fb.png" />');
+    		$("#icontw").html('<img src="support/SanitasMovil/images/icon-tw.png" />');
+    		$("#icontube").html('<img src="support/SanitasMovil/images/icon-tube.png" />');
+    		$("#iconapple").html('<img src="support/SanitasMovil/images/icon-apple.png" />');
+    		$("#iconandroid").html('<img src="support/SanitasMovil/images/icon-android.png" />');
+    		$('head').append('<link href="support/SanitasMovil/css/main-nosvg.css" media="screen" rel="stylesheet" type="text/css" />');
+    	}
+
+
+
+    });
+
+    (function($) {
+
+      // My micro jQuery templating engine
+      // Usage:
+      //
+      //    <section data-html="content"></section>
+      //
+      // Will load <content.html> into <section>
+
+      $(document).ready(function() {
+
+        // Load external contents
+        $("[data-html]").each(function() {
+          el = $(this);
+          var src = $(this).attr("data-html");
+          el.load(src);
+        });
+
+      });
+    })(jQuery);
+    </script>
+
+<!--prepara iconos svg-->
+</head>
+<body class="servicios">
+
+    <!-- Add your site or application content here -->
+	<!--header-->
+ 	<header>
+        <a href="http://sanitas.es"><img src="support/SanitasMovil/images/logotipo-sanitas.png"></a>
+        <h2>Sanitas Particulares</h2>
+        <div class="misanitas" onClick="javascript:document.location.href=''"><a>Mi Sanitas</a></div>
+        <div class="call" onClick="javascript:document.location.href='tel:902000000'"><a href="tel:902000000">Llámanos</a></div>
+    </header>
+    <!--header-->
+
+    <!--nav-->
+     <nav>
+		<ul>
+        	<li><img src="support/SanitasMovil/images/icon-seguros.svg"><a href="seguros-home.html" target="_top">Seguros de Salud</a><span class="dot"></span></li>
+        	<li><a href=""><img src="support/SanitasMovil/images/icon-dental.svg">Seguros Dentales</a><span class="dot"></span></li>
+        	<li><a href="servicios-salud-home.html" target="_top"><img src="support/SanitasMovil/images/icon-otros.svg">Otros Servicios de salud</a><span class="dot"></span></li>
+        	<li class="on"><a href=""><img src="support/SanitasMovil/images/icon-medicos.svg">Médicos y centros</a><span class="dot"></span></li>
+        	<li><a href=""><img src="support/SanitasMovil/images/icon-seguros.svg">Residencias de mayores</a><span class="dot"></span></li>
+        	<li><a href=""><img src="support/SanitasMovil/images/icon-seguros.svg">Residencias de mayores</a><span class="dot"></span></li>
+        </ul>
+        <div>
+            <h2>Médicos y Centros</h2>
+       	    <strong>Menu</strong>
+        </div>
+	</nav>
+    <!--nav-->
+
+    <!--section-->
+	<section class="nav full-width">
+
+        <div class="black-background"></div>
+
+        <!--left-->
+        <article>
+            <h1>Búsqueda médica</h1>
+            <!--elige-->
+            <ul class="tipo-seguro selector" style="display:block;">
+                <li class="opc1"><a onClick="showSeguro(this, '#recomendados')" class="button on"><span>Médicos y centros de salud</span></a></li>
+                <li class="opc1"><a onClick="showSeguro(this, '#todos')" class="button"><span>Clínicas dentales Milenium</span></a></li>
+            </ul>
+            <!--elige-->
+
+            <div class="clear"></div>
+
+            <!--tabs-->
+            <div class="box-grey  noborder nopadding">
+
+                <!--busqueda centros-->
+                <div class="tabs" id="recomendados">
+                    <ul>
+                        <li>
+                            <h2 class="on" onClick="showLayer(this, '#tab1')">Cuadro médico</h2>
+                            <!--tab1-->
+                            <div id="tab1" class="home-buscador tabs">
+                                <fieldset>
+                                    <form action="" method="get">
+                                        <ul>
+                                            <li><label>Indica <strong>dirección o código postal</strong></label><input name="" type="text"></li>
+                                            <li><label>Escoge una <strong>especialidad</strong></label><select name=""></select></li>
+                                        </ul>
+                                        <div>
+                                            <p><a href="" class="boton-white location">Usar mi ubicación actual</a></p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                                            <a class="button-destacado orange">Buscar<span></span></a>
+                                        </div>
+                                    </form>
+                                </fieldset>
+                            </div>
+                            <!--tab1-->
+                        </li>
+                        <li>
+                            <h2 onClick="showLayer(this, '#tab2')">Pruebas diagnósticas</h2>
+                            <!--tab2-->
+                            <div style="display:none;" id="tab2" class="home-buscador tabs">
+                                <fieldset>
+                                    <form action="" method="get">
+                                        <ul>
+                                            <li><label>Indica <strong>dirección o código postal</strong></label><input name="" type="text"></li>
+                                            <li><label>Escoge una <strong>especialidad</strong></label><select name=""></select></li>
+                                        </ul>
+                                        <div>
+                                            <p><a href="" class="boton-white location">Usar mi ubicación actual</a></p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                                            <a class="button-destacado orange">Buscar<span></span></a>
+                                        </div>
+                                    </form>
+                                </fieldset>
+                            </div>
+                            <!--tab2-->
+                        </li>
+                        <li>
+                            <h2 onClick="showLayer(this, '#tab3')">Urgencias</h2>
+                            <!--tab3-->
+                            <div style="display:none;" id="tab3" class="home-buscador  tabs">
+                                <fieldset>
+                                    <form action="" method="get">
+                                        <ul>
+        	                               <li><label>Indica <strong>dirección o código postal</strong></label><input name="" type="text"></li>
+        	                               <li><label>Escoge una <strong>especialidad</strong></label><select name=""></select></li>
+                                        </ul>
+                                        <div>
+                                            <p><a href="" class="boton-white location">Usar mi ubicación actual</a></p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                                            <a class="button-destacado orange">Buscar<span></span></a>
+                                        </div>
+                                    </form>
+                                </fieldset>
+                            </div>
+                            <!--tab3-->
+		                </li>
+                    </ul>
+                </div>
+                <!--busqueda centros-->
+
+                <!--busqueda dental-->
+                <div class="" id="todos" style="display:none;">
+                    <div class="tabs">
+                        <div class="home-buscador">
+                            <fieldset>
+                                <form action="" method="get">
+                                    <ul>
+                                        <li><label>Indica <strong>dirección o código postal</strong></label><input name="" type="text"></li>
+                                        <li><label>Escoge una <strong>especialidad</strong></label><select name=""></select></li>
+                                    </ul>
+                                    <div>
+                                        <p><a href="" class="boton-white location">Usar mi ubicación actual</a></p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                                        <a class="button-destacado orange">Buscar<span></span></a>
+                                    </div>
+                                </form>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <!--busqueda dental-->
+
+            </div>
+		    <!--tabs-->
+
+            <!--Caja todos-->
+            <hgroup class="todos centros">
+
+                <article>
+                    <!--destacados-->
+                    <div>
+                        <h2>Hospitales y Centros médicos Sanitas</h2>
+                        <ul>
+                        	<li onClick="javascript:document.location.href='http://www.sanitas.es'">
+                                <img src="support/SanitasMovil/images/img-seguros.png">
+                                Hospital Sanitas La Moraleja
+                                <span>Av. Francisco Pi y Margall, 81, 28050 Madrid</span>
+
+                                <!-- TIEMPO DE ESPERA -->
+                                <div class="includeExternal" data-html="entregables/includes/tiempoDeEspera.html"></div>
+                                <!-- EO TIEMPO DE ESPERA -->
+
+                            </li>
+                        	<li onClick="javascript:document.location.href='http://www.sanitas.es'"><img src="support/SanitasMovil/images/img-seguros.png">Hospital Sanitas La Zarzuela <span>Av. Francisco Pi y Margall, 81, 28050 Madrid</span></li>
+                        	<li onClick="javascript:document.location.href='http://www.sanitas.es'"><img src="support/SanitasMovil/images/img-seguros.png">Hospital CIMA <span>Av. Francisco Pi y Margall, 81, 28050 Madrid</span></li>
+                        	<li onClick="javascript:document.location.href='http://www.sanitas.es'"><img src="support/SanitasMovil/images/img-seguros.png">Centros Médicos Milenium <span></span></li>
+                        	<li onClick="javascript:document.location.href='http://www.sanitas.es'"><img src="support/SanitasMovil/images/img-seguros.png">Centros de Bienestar<span></span></li>
+                        </ul>
+                    </div>
+                    <!--destacados-->
+
+  	                <!--ultimos vistos-->
+                    <div class="box-white vistos">
+                        <h2>Últimos vistos</h2>
+                        <ul>
+                        	<li><h3><a href="">Centro médico Arcón</a></h3><p>Waldo Ferrer 10 Piso Bajo, 13400 Almaden<a href="tel:900 000 000" class="tel-centro">900 000 000</a></li>
+                        	<li><h3><a href="">Centro médico Arcón</a></h3><p>Waldo Ferrer 10 Piso Bajo, 13400 Almaden<a href="tel:900 000 000" class="tel-centro">900 000 000</a></li>
+                        	<li><h3><a href="">Centro médico Arcón</a></h3><p>Waldo Ferrer 10 Piso Bajo, 13400 Almaden<a href="tel:900 000 000" class="tel-centro">900 000 000</a></li>
+                        	<li><h3><a href="">Centro médico Arcón</a></h3><p>Waldo Ferrer 10 Piso Bajo, 13400 Almaden<a href="tel:900 000 000" class="tel-centro">900 000 000</a></li>
+                        	<li><h3><a href="">Centro médico Arcón</a></h3><p>Waldo Ferrer 10 Piso Bajo, 13400 Almaden<a href="tel:900 000 000" class="tel-centro">900 000 000</a></li>
+                        </ul>
+                    </div>
+                    <!--ultimos vistos-->
+                </article>
+
+                <aside>
+                <!--telefonos-->
+
+                    <!--uco-->
+                    <div class="box-white other">
+                        <h2>Otras unidades</h2>
+                        <ul>
+        	               <li><a class="boton-white">Unidad de Consejo y Cuidado Oncológico </a></li>
+                        </ul>
+                    </div>
+                    <!--uco-->
+
+                    <!--caja-->
+                    <div class="box-white other">
+                        <h2>Sanitas 24 horas</h2>
+                        <ul>
+                        	<li><a class="boton-white" href="">Asesoría Médica Sanitaria 24h<strong>902 000 000</strong></a></li>
+                        	<li><a class="boton-white" href="">Urgencias 24h<strong>902 000 000</strong></a></li>
+                        </ul>
+                    </div>
+                    <!--caja-->
+
+                    <!--telefonos-->
+
+                    <!--ultimos vistos-->
+                    <div class="box-white vistos">
+                        <h2>Últimos vistos</h2>
+                        <ul>
+                        	<li><h3><a href="">Centro médico Arcón</a></h3><p>Waldo Ferrer 10 Piso Bajo, 13400 Almaden<a href="tel:900 000 000" class="tel-centro">900 000 000</a></li>
+                        	<li><h3><a href="">Centro médico Arcón</a></h3><p>Waldo Ferrer 10 Piso Bajo, 13400 Almaden<a href="tel:900 000 000" class="tel-centro">900 000 000</a></li>
+                        	<li><h3><a href="">Centro médico Arcón</a></h3><p>Waldo Ferrer 10 Piso Bajo, 13400 Almaden<a href="tel:900 000 000" class="tel-centro">900 000 000</a></li>
+                        	<li><h3><a href="">Centro médico Arcón</a></h3><p>Waldo Ferrer 10 Piso Bajo, 13400 Almaden<a href="tel:900 000 000" class="tel-centro">900 000 000</a></li>
+                        	<li><h3><a href="">Centro médico Arcón</a></h3><p>Waldo Ferrer 10 Piso Bajo, 13400 Almaden<a href="tel:900 000 000" class="tel-centro">900 000 000</a></li>
+                        </ul>
+                    </div>
+                    <!--ultimos vistos-->
+
+                </aside>
+
+            </hgroup>
+            <!--Caja todos-->
+
+        </article>
+        <!--left-->
+
+    </section>
+    <!--section-->
+
+    <!--section otros enlaces -->
+    <section class="duda">
+
+        <!--article duda-->
+        <article>
+
+            <!--telefonos-->
+            <!--uco-->
+            <div class="box-white urgencias">
+                <h2>Otras unidades</h2>
+                <ul>
+                	<li><a class="boton-white">Unidad de Consejo y Cuidado Oncológico </a></li>
+                </ul>
+            </div>
+            <!--uco-->
+
+            <!--caja-->
+            <div class="box-white urgencias">
+                <h2>Sanitas 24 horas</h2>
+                <ul>
+                	<li><a class="boton-white" href="">Asesoría Médica Sanitaria 24h<strong>902 000 000</strong></a></li>
+                	<li><a class="boton-white" href="">Urgencias 24h<strong>902 000 000</strong></a></li>
+                </ul>
+            </div>
+            <!--caja-->
+            <!--telefonos-->
+
+            <!--duda-->
+            <section>
+                <h3>¿Tienes alguna duda?</h3>
+
+                <ul>
+                    <li><a href="" class="boton-grey">Llámanos al 902 000 000</a></li>
+                    <li><a href="" class="boton-grey">Envíanos un e-mail</a></li>
+                    <li><a href="" class="boton-grey">Visita nuestras oficinas</a></li>
+                </ul>
+            </section>
+            <!--duda-->
+
+            <!--otros enlaces-->
+            <aside>
+                <h2>Otros enlaces</h2>
+
+                <div>
+                    <ul>
+                    	<li><a href="" class="boton-white">Biblioteca de salud</a></li>
+                    	<li><a href="" class="boton-white">Sobre Sanitas</a></li>
+                    	<li><a href="" class="boton-white">Preguntas Frecuentes</a></li>
+                    	<li><a href="" class="boton-white">Contáctanos</a></li>
+
+                        <li class="social">
+            	            <h3>Síguenos</h3>
+                            <ul>
+                            	<li><a href="" id="iconfb">Facebook</a></li>
+                            	<li><a href="" id="icontw">Twitter</a></li>
+                            	<li><a href="" id="icontube">You tube</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="social">
+            	            <h3>Descargar nuestra APP</h3>
+                            <ul>
+                	           <li><a href="" id="iconandroid">Android</a></li>
+                	           <li><a href="" id="iconapple">iPhone</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <a href="http://www.sanitas.es" class="boton grey">Ir a la versión clásica de Sanitas.es</a>
+            </aside>
+
+            <!--otros enlaces-->
+
+        </article>
+        <!--article duda-->
+
+
+    </section>
+    <!--section otros enlaces-->
+
+    <footer>
+        <a href="">Aviso Legal</a> © 2013 Sanitas.es
+    </footer>
+
+    <script src="support/SanitasMovil/js/sanitas/main.js"></script>
+    <script src="support/SanitasMovil/js/sanitas/tabs.js"></script>
+
+</body>
+</html>
