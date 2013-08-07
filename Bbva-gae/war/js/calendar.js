@@ -1,5 +1,6 @@
-function createEventCalendar(calendarToken, idEvent) {
-	var tokenText = calendarToken.token_type + ' ' + calendarToken.access_token;
+function createEventCalendar(idEvent) {	
+	console.log(localStorage.getItem('calendarToken_local'));
+	var tokenText = localStorage.getItem('calendarToken_local');
 	var apiUrl = "/calendar/v3/calendars/72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com/events?sendNotifications=false&key=785790985795-pf206je1417kten4jbd5funo77vlkuvf.apps.googleusercontent.com";
 
 	var host = document.getElementById("host").value;

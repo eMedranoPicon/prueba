@@ -18,16 +18,16 @@ public class Event {
 	private String host;
 	private String urlEvent;
 	private String description;
-	private String dateStart; //timestamp
-	private String dateEnd; //timestamp
-	private List<String> audience; //separated by commas
-	private List<String> tags; //separated by commas
+	private String dateStart; 
+	private String dateEnd;
+	private String audience; //separated by commas
+	private String tags; //separated by commas
 	
 	private List<String> address; //{street, zipcode, city,country, lat, long}	
 	
 	public Event(String title, String urlImg, String host, String urlEvent,
 			String description, String dateStart, String dateEnd,
-			List<String> audience, List<String> tags, List<String> address) {
+			String audience, String tags, List<String> address) {
 		super();
 		this.title = title;
 		this.urlImg = urlImg;
@@ -119,22 +119,22 @@ public class Event {
 	public void setDateEnd(String dateEnd) {
 		this.dateEnd = dateEnd;
 	}
-	public List<String> getAudience() {
+	public String getAudience() {
 		return audience;
 	}
 
 
-	public void setAudience(List<String> audience) {
+	public void setAudience(String audience) {
 		this.audience = audience;
 	}
 
 
-	public List<String> getTags() {
+	public String getTags() {
 		return tags;
 	}
 
 
-	public void setTags(List<String> tags) {
+	public void setTags(String tags) {
 		this.tags = tags;
 	}
 

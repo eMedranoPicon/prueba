@@ -57,7 +57,6 @@
 
 <!-- Bloque de Librerias - libreriasjs -->
 <jsp:include page="/libraries-js.jsp" />
-<script src="https://apis.google.com/js/client.js"></script>
 <script
 	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 <script src="/js/application.js"></script>
@@ -76,7 +75,7 @@
 			pickSeconds : false
 		});		
 	});
-	oneAuth(); //carga de autenticacion
+	onlyOnce();
 </script>
 </head>
 <body>
