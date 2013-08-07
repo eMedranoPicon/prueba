@@ -1,7 +1,3 @@
-//Maps
-var geocoder;
-var map;
-var markersArray = [];
 // Token
 var calendarToken = null;
 var jEvent = [];
@@ -22,6 +18,7 @@ function oneAuth(){
 }
 
 function auth() {
+	
 	var config = {
 		'client_id' : '785790985795-pf206je1417kten4jbd5funo77vlkuvf.apps.googleusercontent.com',
 		'scope' : 'https://www.googleapis.com/auth/calendar'
@@ -31,23 +28,18 @@ function auth() {
 		console.log(gapi.auth.getToken());
 		calendarToken = gapi.auth.getToken();
 	});
+	gapi.client.setApiKey('AIzaSyBnkjKWRpoH56-ldf7vSVEb2JreDZdab6M');
 }
 
-$(document).ready(function() {
 
-});
+function loadGapi() {
 
-// function loadGapi() {
-//
-// // Set the API key
-// gapi.client.setApiKey('AIzaSyBnkjKWRpoH56-ldf7vSVEb2JreDZdab6M');
-// // Set: name of service, version and callback function
-// gapi.client.load('evento', 'v5', getEvents);
-//
-// }
+ // Set the API key
+//gapi.client.setApiKey('AIzaSyBnkjKWRpoH56-ldf7vSVEb2JreDZdab6M');
 
-function getEvents() {
-	gapi.client.setApiKey('AIzaSyBnkjKWRpoH56-ldf7vSVEb2JreDZdab6M');
+}
+
+function getEvents() {	
 	var apiUrl = "https://sopragroupux.appspot.com/_ah/api/evento/v5/event";
 	$.ajax({
 		url : apiUrl,
@@ -57,16 +49,7 @@ function getEvents() {
 		success : function(data) {
 			console.log('Lista Eventos: Conseguido correctamente');
 			console.log(data);
-			for ( var j in data.items) {
-
-				for ( var i in data.items[j]) {
-					markersArray[i] = data.items[j].address;
-					console.log(markersArray[i].toString());
-					codeAddresses(markersArray[i].toString());
-					break;
-				}
-				console.log(j);
-			}
+			//Haced lo que quieras con el loadEvent
 
 		},
 		error : function(xhr, ajaxOptions, thrownError) {
@@ -187,6 +170,16 @@ function saveEvent(jEvent, idEvent) {
 
 }
 
+function saveOrUpdate(){
+	
+	if (document.getElementById("idEvent").value == "") {
+		jEvenBuilder(); 
+	} else {
+		console.log('Requiere Objec Json and Id');
+	}
+	
+}
+
 
 function deleteEvent(id) {
 	gapi.client.setApiKey('AIzaSyBnkjKWRpoH56-ldf7vSVEb2JreDZdab6M');
@@ -205,3 +198,8 @@ function deleteEvent(id) {
 		}
 	});
 }
+
+/* Load al final*/
+$(document).ready(function() {
+	loadGapi();
+});

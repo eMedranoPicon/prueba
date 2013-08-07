@@ -57,8 +57,8 @@
               <ul class="decorated-list">
                 <li><a href="/backend/event-new.jsp">Dar de <strong>alta</strong> un evento</a></li>
                 <li><a href="/backend/events-list.jsp#/events-table-list"><strong>Listar/Editar/Borrar</strong> eventos</a></li>
-                <li><a href="#">Localizar eventos en Google <strong>Maps</strong></a></li>
-                <li><a href="#">Localizar eventos en Google <strong>Calendar</strong></a></li>
+                <li><a href="/backend/events-map.jsp">Localizar eventos en Google <strong>Maps</strong></a></li>
+                <li><a href="/backend/events-calendar.jsp"">Localizar eventos en Google <strong>Calendar</strong></a></li>
               </ul>
             </div>
           </div>
