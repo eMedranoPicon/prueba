@@ -9700,6 +9700,76 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   font-size: 14.04px;
 }
 
+/* line 8, ../sass/vendor-custom/bst.2.3.2/_forms.scss */
+fieldset {
+  border-bottom: 1px solid #dbdcdf;
+  margin-bottom: 14px;
+}
+
+/* line 14, ../sass/vendor-custom/bst.2.3.2/_forms.scss */
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 14px;
+  font-size: 15.6px;
+  line-height: 18.2px;
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid #dbdcdf;
+}
+
+/* line 32, ../sass/vendor-custom/bst.2.3.2/_forms.scss */
+.form-horizontal .control-group {
+  margin-bottom: 14px;
+  *zoom: 1;
+}
+/* line 15, ../sass/vendor/bst.2.3.2/_mixins.scss */
+.form-horizontal .control-group:before, .form-horizontal .control-group:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 22, ../sass/vendor/bst.2.3.2/_mixins.scss */
+.form-horizontal .control-group:after {
+  clear: both;
+}
+/* line 37, ../sass/vendor-custom/bst.2.3.2/_forms.scss */
+.form-horizontal .control-label {
+  float: left;
+  width: 140px;
+  padding-top: 5px;
+  text-align: right;
+}
+/* line 44, ../sass/vendor-custom/bst.2.3.2/_forms.scss */
+.form-horizontal .controls {
+  *display: inline-block;
+  *padding-left: 20px;
+  margin-left: 160px;
+  *margin-left: 0;
+}
+/* line 51, ../sass/vendor-custom/bst.2.3.2/_forms.scss */
+.form-horizontal .controls:first-child {
+  *padding-left: 180px;
+}
+/* line 56, ../sass/vendor-custom/bst.2.3.2/_forms.scss */
+.form-horizontal .help-block {
+  margin-bottom: 0;
+}
+/* line 66, ../sass/vendor-custom/bst.2.3.2/_forms.scss */
+.form-horizontal input + .help-block,
+.form-horizontal select + .help-block,
+.form-horizontal textarea + .help-block,
+.form-horizontal .uneditable-input + .help-block,
+.form-horizontal .input-prepend + .help-block,
+.form-horizontal .input-append + .help-block {
+  margin-top: 7px;
+}
+/* line 71, ../sass/vendor-custom/bst.2.3.2/_forms.scss */
+.form-horizontal .form-actions {
+  padding-left: 160px;
+}
+
 @media (max-width: 768px) {
   /* line 13, ../sass/vendor-custom/bst.2.3.2/_responsive-navbar.scss */
   .nav-collapse .nav > .divider-vertical {
@@ -9715,12 +9785,21 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
     padding-left: 20px;
   }
 }
-/* line 2, ../sass/partials/_base.scss */
+/* line 3, ../sass/partials/_base.scss */
 h1,
-h2 {
+h2,
+h3 {
   font-family: "BBVA Web Light";
   font-weight: normal;
   color: #0078d2;
+}
+
+/* line 12, ../sass/partials/_base.scss */
+h1.headerPage,
+h2.headerPage,
+h3.headerPage {
+  border-bottom: 1px solid #dbdcdf;
+  margin-bottom: 30px;
 }
 
 /* line 4, ../sass/partials/_headers-page.scss */

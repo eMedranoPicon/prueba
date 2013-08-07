@@ -20,17 +20,11 @@
   <script src="/js/lib/html5shiv.js"></script>
   <![endif]-->
 
-  <!-- Bloque de Librerias - libreriasjs -->
-  <jsp:include page="libraries-js.jsp"/>
-  <!-- EO Bloque de Librerias - libreriasjs -->
+  <jsp:include page="/libraries-js.jsp"/>
 
   <script src="https://apis.google.com/js/client.js"></script>
 
-  <script src="/src/lib/angular.min.js"></script>
-
-  <script src="src/app.js"></script>
-  <script src="src/controllers/EventsListController.js"></script>
-  <script src="src/controllers/EventDetailController.js"></script>
+  <jsp:include page="/libraries-angular.jsp"/>
 
 </head>
 

@@ -1,9 +1,12 @@
 //Maps
 // plot initial point using geocode instead of coordinates (works just fine)
+
+flagEvent = true;
+
 function initialize() {
 	geocoder = new google.maps.Geocoder();
 	latlang = geocoder.geocode({
-		'address' : 'Segovia'
+		'address' : 'Madrid'
 	}, function(results, status) { // use latlang to enter city instead of
 		// coordinates
 		if (status == google.maps.GeocoderStatus.OK) {
@@ -14,6 +17,7 @@ function initialize() {
 			});
 			markersArray.push(marker);
 		} else {
+			flagEvent = true;
 			alert("Geocode was not successful for the following reason: "
 					+ status);
 		}
@@ -41,13 +45,14 @@ function codeAddresses(address) {
 				position : results[0].geometry.location
 			});
 		} else {
-			alert("Geocode was not successful for the following reason: "
-					+ status);
+			flagEvent = true;
+			alert("Geocode was not successful for the following reason: " + status);
 		}
 	});
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
 
 
 function previewMap(){
@@ -57,7 +62,12 @@ function previewMap(){
 	var country = document.getElementById("country").value;
 
 	var address = street + ', ' + zipcode + ', ' + city + ', ' + country;
-	codeAddresses(address);
-	console.log(address);
-	
+
+	if (flagEvent)
+	{
+		codeAddresses(address);
+		console.log(address);
+		flagEvent = false;
+	}
+
 }

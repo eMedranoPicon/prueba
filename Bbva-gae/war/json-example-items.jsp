@@ -24,9 +24,39 @@
     <script src="js/lib/html5shiv.js"></script>
   <![endif]-->
 
-  <!-- Bloque de Librerias - libreriasjs -->
-  <jsp:include page="libraries-js.jsp"/>
-  <!-- EO Bloque de Librerias - libreriasjs -->
+
+<script src="/js/lib/jquery-1.10.2.min.js"></script>
+
+<!--
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+-->
+
+<script src="/js/lib/bootstrap/bootstrap.min.js"></script>
+<!--
+<script src="/js/lib/bootstrap/bootstrap-collapse.js"></script>
+<script src="/js/lib/bootstrap/bootstrap-carousel.js"></script>-->
+
+<!--libreria - DatePicker.jsp-->
+<script src="/js/lib/bootstrap-datetimepicker.min.js"></script>
+
+<script src="/js/application.js"></script>
+
+<!-- json -->
+
+<script src="/js/lib/json/json2.js"></script>
+<script src="/js/lib/json/jsonpath-0.8.0.js"></script>
+<!-- eo json -->
+
+
+
+<!--
+<script src="/js/lib/json/json2.js"></script>
+<script src="/js/lib/json/json.js"></script>
+<script src="/js/lib/json/json_parse.js"></script>
+<script src="/js/lib/json/json_parse_state.js"></script>
+<script src="/js/lib/json/cycle.js"></script>
+<script src="/js/lib/json/jsonpath-0.8.0.js"></script>
+-->
 
 </head>
 <!--  http://alefeuvre.github.io/foundation-grid-displayer/ -->
@@ -81,7 +111,7 @@
 $( document ).ready(function() {
 
 var returnedJSON;
-var url="https://sopragroupux.appspot.com/_ah/api/evento/v4/event";
+var url="https://sopragroupux.appspot.com/_ah/api/evento/v5/event";
 
 
 newpostReq(url, function(jsonString)
@@ -99,7 +129,7 @@ $("#jsontext3").text("parsedJSON"+parsedJSON);
  /*out += jsonPath(parsedJSON, "$.items[*].id") + "\n\n";
   out += jsonPath(parsedJSON, "$.items[0]") + "\n\n";
   out += jsonPath(parsedJSON, "$.items[-1:]") + "\n\n";*/
-  out += jsonPath(parsedJSON, "$.items[?(@.id==2721)].id").toString() + "\n\n";
+  out += jsonPath(parsedJSON, "$.items[?(@.id==3880)].title").toString() + "\n\n";
 
 
  $("#jsontext").text("OUT"+out);

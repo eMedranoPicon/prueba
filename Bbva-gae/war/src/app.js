@@ -8,19 +8,25 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 
 	$routeProvider.
 	  when('/events', {
-		  templateUrl: '/src/views/events-list.html',
+		  templateUrl: '/src/views/events/events-list.html',
 		  controller: EventsListController
 		  }).
 
 	  //mediante dos puntos (:) definimos un parámetro
 	  when('/event/:id', {
-		  templateUrl: '/src/views/event.html',
+		  templateUrl: '/src/views/events/event.html',
 		  controller: EventDetailController
 		  }).
 
 	  when('/events-table-list', {
-		  templateUrl: '/src/views/events-list-table.html',
+		  templateUrl: '/src/views/events/events-list-table.html',
 		  controller: EventsListController
+		  }).
+
+	  //mediante dos puntos (:) definimos un parámetro
+	  when('/event-edit/:id', {
+		  templateUrl: '/src/views/events/event-form.html',
+		  controller: EventEditController
 		  }).
 
 	  //cualquier ruta no definida
@@ -28,6 +34,25 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 		  redirectTo: '/events'});
 
 }]);
+
+app.filter('getById', function()
+{
+
+ 	return function(input, id)
+ 	{
+    	var i=0, len=input.length;
+    	for (; i<len; i++)
+    	{
+      		if (+input[i].id == +id)
+      		{
+        		return input[i];
+      		}
+    	}
+    	return null;
+  	}
+});
+
+
 
 /*
   var app = angular.module('angular-auth-demo', ['http-auth-interceptor']);

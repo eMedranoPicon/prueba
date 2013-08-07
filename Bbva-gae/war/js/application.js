@@ -9,16 +9,16 @@ var jEventCalendar;
 
 /*
  * comprobamos que tengamos token, si lo tenemos, no lo volvemos a pedir.
- * 
+ *
  * */
 function oneAuth(){
-	
+
 	if(calendarToken == null){
 		auth();
 	} else {
 		return;
 	}
-	
+
 }
 
 function auth() {
@@ -33,9 +33,11 @@ function auth() {
 	});
 }
 
+/*
 $(document).ready(function() {
 
 });
+*/
 
 // function loadGapi() {
 //
@@ -99,7 +101,7 @@ function jEvenBuilder() {
 
 	var address = [ street, zipcode, city, country ];
 	var addressMaps = street + ', ' + zipcode + ', ' + city + ', ' + country;
-	
+
 	var audienceOne = document.getElementById("audience").value;
 	var audience = [ audienceOne ];
 
@@ -177,7 +179,7 @@ function saveEvent(jEvent, idEvent) {
 			console.log("success");
 			$("#resultjs").html('Evento creado correctamente.');
 			// similar behavior as clicking on a link
-			createEventCalendar(calendarToken, idEvent);			
+			createEventCalendar(calendarToken, idEvent);
 
 		},
 		error : function(xhr, ajaxOptions, thrownError) {

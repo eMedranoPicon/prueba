@@ -1,31 +1,39 @@
 /**
-* LibrosListController
-* Controlador del listado de libros
+* EventsListController
+* Controlador del listado de Eventos
 */
 
-  if (!Array.prototype.indexOf) {
-	Array.prototype.indexOf = function(obj, start) {
-	     for (var i = (start || 0), j = this.length; i < j; i++) {
-	         if (this[i] === obj) { return i; }
+if (!Array.prototype.indexOf)
+{
+	Array.prototype.indexOf = function(obj, start)
+	{
+	    for (var i = (start || 0), j = this.length; i < j; i++)
+	    {
+	        if (this[i] === obj)
+	        	{
+	        		return i;
+	        	}
 	     }
 	     return -1;
 	};
-     }
+}
 
+function EventsListController($scope, $http)
+{
+	$http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
+	{
+		$scope.events = data.items;
+  	});
 
-function EventsListController($scope, $http) {
-  $http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data) {
-	$scope.events = data.items;
-  });
+  	//defines una variable
+  	//$scope.var1 = "EventsListController variable definida desde el controlador";
 
-  //defines una variable
-  //$scope.var1 = "EventsListController variable definida desde el controlador";
+  	//selecciona el desplegable y ordena automaticamente, variable definida en la vista con ng-model
+  	$scope.orderField = "title";
+  	$scope.orderReverse = "true";
 
-  //selecciona el desplegable y ordena automaticamente, variable definida en la vista con ng-model
-  $scope.orderField = "title";
-  $scope.orderReverse = "true";
-
-  $scope.destroyEvent = function(index) {
+  	$scope.destroyEvent = function(index)
+  	{
         // only work with your model, no scope manipulation or DOM...
         // remove the item from the model
         //alert('destroyEvente');
@@ -51,7 +59,9 @@ function EventsListController($scope, $http) {
 			alert("Refresh table. User already deleted.");
 			//$scope.deleteModalShown = false;
 		});
-	}
+	};
 
 
 }
+
+
