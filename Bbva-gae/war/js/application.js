@@ -3,44 +3,42 @@ var calendarToken;
 var jEvent = [];
 var jEventCalendar;
 
-
 /*
  * comprobamos que tengamos token, si lo tenemos, no lo volvemos a pedir.
  * 
- * */
-function onlyOnce(){
+ */
+function onlyOnce() {
 	var unavez = localStorage.getItem('calendarToken_local');
-	if (unavez==null){
+	if (unavez == null) {
 		auth();
-	} else{
+	} else {
 		return;
 	}
 }
 
-function auth() {	
+function auth() {
 	var config = {
 		'client_id' : '785790985795-pf206je1417kten4jbd5funo77vlkuvf.apps.googleusercontent.com',
 		'scope' : 'https://www.googleapis.com/auth/calendar'
 	};
 	gapi.auth.authorize(config, function(data) {
-		console.log('login complete');	
+		console.log('login complete');
 		var tokenText = data.token_type + ' ' + data.access_token;
-		localStorage.setItem('calendarToken_local',tokenText);
+		localStorage.setItem('calendarToken_local', tokenText);
 		onlyOnce = 'dentro';
 	});
-	gapi.client.setApiKey('AIzaSyBXuLdZ43wnWNuBltblkukaj97WDfArpfE');	
-    
-}
+	gapi.client.setApiKey('AIzaSyBXuLdZ43wnWNuBltblkukaj97WDfArpfE');
 
+}
 
 function loadGapi() {
 
- // Set the API key
-gapi.client.setApiKey('AIzaSyBXuLdZ43wnWNuBltblkukaj97WDfArpfE');
+	// Set the API key
+	gapi.client.setApiKey('AIzaSyBXuLdZ43wnWNuBltblkukaj97WDfArpfE');
 
 }
 
-function getEvents() {	
+function getEvents() {
 	var apiUrl = "https://sopragroupux.appspot.com/_ah/api/evento/v5/event";
 	$.ajax({
 		url : apiUrl,
@@ -50,7 +48,7 @@ function getEvents() {
 		success : function(data) {
 			console.log('Lista Eventos: Conseguido correctamente');
 			console.log(data);
-			//Haced lo que quieras con el loadEvent
+			// Haced lo que quieras con el loadEvent
 
 		},
 		error : function(xhr, ajaxOptions, thrownError) {
@@ -58,7 +56,6 @@ function getEvents() {
 		}
 	});
 }
-
 
 function noenter(e) {
 	e = e || window.event;
@@ -69,11 +66,11 @@ function noenter(e) {
 /* Funcion de prueba para crear eventos */
 function jEvenBuilder() {
 
-	if (document.getElementById("idEvent").value == "") {
-		var idEvent = Math.floor(2001 + Math.random() * 2000);
-	} else {
-		var idEvent = document.getElementById("idEvent").value;
-	}
+	// if (document.getElementById("idEvent").value == "") {
+	// var idEvent = Math.floor(2001 + Math.random() * 2000);
+	// } else {
+	var idEvent = document.getElementById("idEvent").value;
+	// }
 	var host = document.getElementById("host").value;
 
 	var street = document.getElementById("street").value;
@@ -83,7 +80,7 @@ function jEvenBuilder() {
 
 	var address = [ street, zipcode, city, country ];
 	var addressMaps = street + ', ' + zipcode + ', ' + city + ', ' + country;
-	
+
 	var audience = document.getElementById("audience").value;
 
 	var tags = document.getElementById("tags").value;
@@ -119,9 +116,6 @@ function jEvenBuilder() {
 		"name" : "description",
 		"value" : description
 	}, {
-		"name" : "id",
-		"value" : idEvent
-	}, {
 		"name" : "urlImg",
 		"value" : urlImg
 	}, {
@@ -146,8 +140,8 @@ function jEvenBuilder() {
 /*
  * Function to save event. Requires jSON object
  */
-function saveEvent(jEvent, idEvent) {
-	
+function saveEvent(jEvent) {
+
 	var apiUrl = "https://sopragroupux.appspot.com/_ah/api/evento/v5/event";
 	$.ajax({
 		url : apiUrl,
@@ -158,7 +152,8 @@ function saveEvent(jEvent, idEvent) {
 		success : function() {
 			console.log("success");
 			// similar behavior as clicking on a link
-			createEventCalendar(idEvent);	
+			var idCalendar = Math.floor(2001 + Math.random() * 2000);
+			createEventCalendar(idCalendar);
 
 		},
 		error : function(xhr, ajaxOptions, thrownError) {
@@ -170,14 +165,14 @@ function saveEvent(jEvent, idEvent) {
 /*
  * Comprobacio si es guardado o update
  */
-function saveOrUpdate(){
-	
+function saveOrUpdate() {
+
 	if (document.getElementById("idEvent").value == "") {
-		jEvenBuilder(); 
+		jEvenBuilder();
 	} else {
 		console.log('Requiere Objec Json and Id');
 	}
-	
+
 }
 
 /**
@@ -185,14 +180,15 @@ function saveOrUpdate(){
  */
 function deleteEvent_notused(id) {
 	gapi.client.setApiKey('AIzaSyBXuLdZ43wnWNuBltblkukaj97WDfArpfE');
-	var apiUrl = "https://sopragroupux.appspot.com/_ah/api/evento/v5/event/"+id;
+	var apiUrl = "https://sopragroupux.appspot.com/_ah/api/evento/v5/event/"
+			+ id;
 	$.ajax({
 		url : apiUrl,
 		dataType : 'json',
 		contentType : 'application/json',
 		type : "DELETE",
 		success : function(data) {
-			console.log('Evento Borrado con id:'+id);
+			console.log('Evento Borrado con id:' + id);
 			console.log(data);
 		},
 		error : function(xhr, ajaxOptions, thrownError) {
@@ -201,7 +197,7 @@ function deleteEvent_notused(id) {
 	});
 }
 
-/* Load al final*/
+/* Load al final */
 $(document).ready(function() {
-	//loadGapi();
+	// loadGapi();
 });
