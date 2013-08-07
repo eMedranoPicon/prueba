@@ -1,5 +1,6 @@
-function createEventCalendar(calendarToken, idEvent) {
-	var tokenText = calendarToken.token_type + ' ' + calendarToken.access_token;
+function createEventCalendar(idEvent) {	
+	console.log(localStorage.getItem('calendarToken_local'));
+	var tokenText = localStorage.getItem('calendarToken_local');
 	var apiUrl = "/calendar/v3/calendars/72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com/events?sendNotifications=false&key=785790985795-pf206je1417kten4jbd5funo77vlkuvf.apps.googleusercontent.com";
 
 	var host = document.getElementById("host").value;
@@ -87,7 +88,7 @@ function ISODateString(stringDate) {
 	//troceandolo
 	var anno = dateParts.slice(6,10).join("");
 	var mes = dateParts.slice(3,5).join("");
-	mes = mes-1;
+	mes = mes-1; //meses son numberos 0-11
 	var dia = dateParts.slice(0,2).join("");
 	var hora = dateParts.slice(11,13).join("");
 	var minuto = dateParts.slice(14,16).join("");

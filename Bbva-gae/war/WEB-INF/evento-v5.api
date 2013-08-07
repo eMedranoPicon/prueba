@@ -155,16 +155,10 @@
             "type" : "string"
           },
           "audience" : {
-            "type" : "array",
-            "items" : {
-              "type" : "string"
-            }
+            "type" : "string"
           },
           "tags" : {
-            "type" : "array",
-            "items" : {
-              "type" : "string"
-            }
+            "type" : "string"
           },
           "address" : {
             "type" : "array",

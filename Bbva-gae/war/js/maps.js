@@ -1,12 +1,13 @@
 //Maps
+var geocoder;
+var map;
+var markersArray = [];
+
 // plot initial point using geocode instead of coordinates (works just fine)
-
-flagEvent = true;
-
 function initialize() {
 	geocoder = new google.maps.Geocoder();
 	latlang = geocoder.geocode({
-		'address' : 'Madrid'
+		'address' : 'Segovia'
 	}, function(results, status) { // use latlang to enter city instead of
 		// coordinates
 		if (status == google.maps.GeocoderStatus.OK) {
@@ -17,7 +18,6 @@ function initialize() {
 			});
 			markersArray.push(marker);
 		} else {
-			flagEvent = true;
 			alert("Geocode was not successful for the following reason: "
 					+ status);
 		}
@@ -25,14 +25,22 @@ function initialize() {
 	var myOptions = {
 		center : latlang,
 		zoom : 6,
-		mapTypeId : google.maps.MapTypeId.ROADMAP,
+	    mapTypeId: google.maps.MapTypeId.ROADMAP,
 		navigationControlOptions : {
 			style : google.maps.NavigationControlStyle.SMALL
 		}
 	};
-	map = new google.maps.Map(document.getElementById("map-canvas"),
-			myOptions);
+	map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);		
 }
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+//this is our gem
+google.maps.event.addDomListener(window, "resize", function() {
+    var center = map.getCenter();
+    google.maps.event.trigger(map, "resize");
+    map.setCenter(center); 
+});
 
 function codeAddresses(address) {
 	geocoder.geocode({
@@ -45,29 +53,50 @@ function codeAddresses(address) {
 				position : results[0].geometry.location
 			});
 		} else {
-			flagEvent = true;
-			alert("Geocode was not successful for the following reason: " + status);
+			alert("Geocode was not successful for the following reason: "
+					+ status);
 		}
 	});
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
 
 
-
-function previewMap(){
+function previewMap() {
 	var street = document.getElementById("street").value;
 	var zipcode = document.getElementById("zipcode").value;
 	var city = document.getElementById("city").value;
 	var country = document.getElementById("country").value;
 
 	var address = street + ', ' + zipcode + ', ' + city + ', ' + country;
+	codeAddresses(address);
+	console.log(address);
 
-	if (flagEvent)
-	{
-		codeAddresses(address);
-		console.log(address);
-		flagEvent = false;
-	}
+}
 
+function mapEvents() {
+	var apiUrl = "https://sopragroupux.appspot.com/_ah/api/evento/v5/event";
+	$.ajax({
+		url : apiUrl,
+		dataType : 'json',
+		contentType : 'application/json',
+		type : "GET",
+		success : function(data) {
+			console.log('Lista Eventos: Conseguido correctamente');
+			console.log(data);
+			for ( var j in data.items) {
+
+				for ( var i in data.items[j]) {
+					markersArray[i] = data.items[j].address;
+					console.log(markersArray[i].toString());
+					codeAddresses(markersArray[i].toString());
+					break;
+				}
+				console.log(j);
+			}
+
+		},
+		error : function(xhr, ajaxOptions, thrownError) {
+			console.error("Event list error: " + xhr.status);
+		}
+	});
 }
