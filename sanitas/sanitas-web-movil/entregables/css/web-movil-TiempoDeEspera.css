@@ -1,18 +1,42 @@
+/* line 2, ../sass/_tiempoDeEspera.scss */
+span.arrow-grey {
+  right: 0px;
+}
 @media screen and (max-width: 480px) {
-  /* line 3, ../sass/_tiempoDeEspera.scss */
+  /* line 2, ../sass/_tiempoDeEspera.scss */
+  span.arrow-grey {
+    margin-right: 0 !important;
+    top: 18%;
+  }
+}
+
+/* line 14, ../sass/_tiempoDeEspera.scss */
+hgroup.todos.centros.listado article li div div.tiempoDeEspera {
+  width: 90%;
+}
+@media screen and (max-width: 480px) {
+  /* line 14, ../sass/_tiempoDeEspera.scss */
   hgroup.todos.centros.listado article li div div.tiempoDeEspera {
-    width: 85%;
+    width: 90%;
     font-size: 10px;
+  }
+  /* line 21, ../sass/_tiempoDeEspera.scss */
+  hgroup.todos.centros.listado article li div div.tiempoDeEspera span.tiempoDeEspera-data {
+    font-size: 10px;
+  }
+  /* line 26, ../sass/_tiempoDeEspera.scss */
+  hgroup.todos.centros.listado article li div div.tiempoDeEspera span:nth-last-child(2) {
+    width: 100px;
   }
 }
 @media screen and (max-width: 768px) and (min-width: 480px) {
-  /* line 3, ../sass/_tiempoDeEspera.scss */
+  /* line 14, ../sass/_tiempoDeEspera.scss */
   hgroup.todos.centros.listado article li div div.tiempoDeEspera {
     width: 99%;
   }
 }
 
-/* line 17, ../sass/_tiempoDeEspera.scss */
+/* line 40, ../sass/_tiempoDeEspera.scss */
 .todos article ul li div.tiempoDeEspera {
   position: relative;
   -webkit-box-shadow: none;
@@ -21,70 +45,82 @@
   margin: 5px 0 0 0;
   padding: 0;
   border: none;
-  width: 90%;
+  width: 50%;
 }
 @media screen and (max-width: 480px) {
-  /* line 17, ../sass/_tiempoDeEspera.scss */
+  /* line 40, ../sass/_tiempoDeEspera.scss */
   .todos article ul li div.tiempoDeEspera {
     width: 60%;
-  }
-}
-/* line 32, ../sass/_tiempoDeEspera.scss */
-.todos article ul li div.tiempoDeEspera p {
-  *zoom: 1;
-  margin: 5px 0 0 0px;
-}
-/* line 8, ../sass/_mixins.scss */
-.todos article ul li div.tiempoDeEspera p:before, .todos article ul li div.tiempoDeEspera p:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-/* line 15, ../sass/_mixins.scss */
-.todos article ul li div.tiempoDeEspera p:after {
-  clear: both;
-}
-/* line 37, ../sass/_tiempoDeEspera.scss */
-.todos article ul li div.tiempoDeEspera p span:nth-last-child(1) {
-  display: block;
-  float: left;
-}
-/* line 43, ../sass/_tiempoDeEspera.scss */
-.todos article ul li div.tiempoDeEspera p span:nth-last-child(2) {
-  display: block;
-  width: 110px;
-  float: left;
-}
-@media screen and (max-width: 480px) {
-  /* line 43, ../sass/_tiempoDeEspera.scss */
-  .todos article ul li div.tiempoDeEspera p span:nth-last-child(2) {
-    width: 89px;
   }
 }
 
 /* line 57, ../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data {
   margin-top: 5px;
+  font-size: 12px;
 }
-@media screen and (max-width: 480px) {
-  /* line 57, ../sass/_tiempoDeEspera.scss */
-  div.tiempoDeEspera span.tiempoDeEspera-data {
-    font-size: 10px;
-  }
-  /* line 66, ../sass/_tiempoDeEspera.scss */
-  div.tiempoDeEspera span.tiempoDeEspera-data p,
-  div.tiempoDeEspera span.tiempoDeEspera-data span,
-  div.tiempoDeEspera span.tiempoDeEspera-data strong {
-    font-size: inherit;
-  }
+/* line 62, ../sass/_tiempoDeEspera.scss */
+div.tiempoDeEspera span.tiempoDeEspera-data p {
+  *zoom: 1;
+  margin: 0px 0 0 0px;
+  font-size: inherit;
+}
+/* line 8, ../sass/_mixins.scss */
+div.tiempoDeEspera span.tiempoDeEspera-data p:before, div.tiempoDeEspera span.tiempoDeEspera-data p:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 15, ../sass/_mixins.scss */
+div.tiempoDeEspera span.tiempoDeEspera-data p:after {
+  clear: both;
+}
+/* line 68, ../sass/_tiempoDeEspera.scss */
+div.tiempoDeEspera span.tiempoDeEspera-data p span:nth-last-child(1) {
+  display: block;
+  float: left;
+}
+/* line 74, ../sass/_tiempoDeEspera.scss */
+div.tiempoDeEspera span.tiempoDeEspera-data p span:nth-last-child(2) {
+  display: block;
+  width: 110px;
+  float: left;
+}
+/* line 82, ../sass/_tiempoDeEspera.scss */
+div.tiempoDeEspera span.tiempoDeEspera-data p:nth-last-child(1) {
+  margin-top: 5px;
+}
+/* line 86, ../sass/_tiempoDeEspera.scss */
+div.tiempoDeEspera span.tiempoDeEspera-data span {
+  font-size: inherit;
+  color: #5078be;
+}
+/* line 91, ../sass/_tiempoDeEspera.scss */
+div.tiempoDeEspera span.tiempoDeEspera-data strong.header {
+  display: inline-block;
+  line-height: 26px;
+  vertical-align: top;
+  color: #50b3ec;
+  font-size: inherit;
+}
+/* line 100, ../sass/_tiempoDeEspera.scss */
+div.tiempoDeEspera span.tiempoDeEspera-data i.icon-espera {
+  background: url('../images/espera.png?1375967300');
+  -webkit-background-size: 25px 25px;
+  -moz-background-size: 25px 25px;
+  -o-background-size: 25px 25px;
+  background-size: 25px 25px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
 }
 
-/* line 73, ../sass/_tiempoDeEspera.scss */
+/* line 110, ../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
   margin-bottom: 10px;
 }
 
-/* line 78, ../sass/_tiempoDeEspera.scss */
+/* line 115, ../sass/_tiempoDeEspera.scss */
 .todos article ul li .wraper-buttons {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -96,11 +132,11 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
   border: none;
 }
 
-/* line 88, ../sass/_tiempoDeEspera.scss */
+/* line 125, ../sass/_tiempoDeEspera.scss */
 .wraper-buttons {
   height: inherit;
 }
-/* line 92, ../sass/_tiempoDeEspera.scss */
+/* line 129, ../sass/_tiempoDeEspera.scss */
 .wraper-buttons a.buttonLight {
   -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
@@ -119,7 +155,7 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
   background: -o-linear-gradient(top, #5299cf, #1e7dc1);
   background: linear-gradient(top, #5299cf, #1e7dc1);
 }
-/* line 106, ../sass/_tiempoDeEspera.scss */
+/* line 143, ../sass/_tiempoDeEspera.scss */
 .wraper-buttons a.buttonLight:hover {
   text-decoration: none;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #5299cf), color-stop(100%, #5299cf));
@@ -128,7 +164,7 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
   background: -o-linear-gradient(top, #5299cf, #5299cf);
   background: linear-gradient(top, #5299cf, #5299cf);
 }
-/* line 112, ../sass/_tiempoDeEspera.scss */
+/* line 149, ../sass/_tiempoDeEspera.scss */
 .wraper-buttons a.little {
   width: 50px;
 }

@@ -7,6 +7,13 @@ $blue 		: 	#5299CF;
 
 $white 		:	#fff;
 
+$textcolor-blue2		:	#5078BE;
+$textcolor-blue			:	#177abe;
+$textcolor-blueLight	:	#5299CF;
+$textcolor-blueLighter	:	#50B3EC;
+
+
+
 
 $boxLittle	: 50px;
 
@@ -14,3 +21,6 @@ $boxLittle	: 50px;
 
 //http://compass-style.org/reference/compass/css3/images/
 @import "compass/css3/images";
+
+//http://compass-style.org/reference/compass/css3/background_size/
+@import "compass/css3/background-size"
