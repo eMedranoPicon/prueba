@@ -1,19 +1,53 @@
 
-.todos article ul li div.tiempoDeEspera  {
+.todos article ul li div.tiempoDeEspera
+{
 	position: relative;
 	@include single-box-shadow(none);
 	margin: 5px 0 0 0;
 	padding: 0;
-	/*border: none;*/
+	border: none;
+	max-width: 225px;
 
-	p  {
-		//&:nth-last-child(span)
+	p
+	{
+		@include clearfix();
+		margin: 5px 0 0 0px;
+
+		span:nth-last-child(1)
+		{
+			display: block;
+			float: left;
+		}
+
+		span:nth-last-child(2)
+		{
+			display: block;
+			width: 110px;
+			float: left;
+		}
 	}
+
+	@media screen and (max-width: 480px)
+	{
+		width: 60%;
+	}
+
 }
 
-.todos article ul li div.wraper-buttons {
+div.tiempoDeEspera span.tiempoDeEspera-data {
+	margin-top: 5px;
+}
+
+div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2)
+{
+	margin-bottom: 10px;
+}
+
+.todos article ul li .wraper-buttons
+{
 	@include single-box-shadow(none);
 	width: auto;
+	height: inherit;
 	margin: 0 0 10px 0;
 	padding: 0;
 	border: none;
@@ -21,6 +55,8 @@
 
 .wraper-buttons
 {
+	height: inherit;
+
 	a.buttonLight
 	{
 		@include single-box-shadow(rgba(0, 0, 0, 0.3),0px,3px,3px);
@@ -32,13 +68,18 @@
 		font-size: 12px;
 		font-weight: normal;
 		font-family: 'GothamLightRegular';
-		@include background(linear-gradient(top, $blue, darken($blue ,11)));
+
+		//@include background(linear-gradient(top, $blue, darken($blue ,11)));
+		@include background(linear-gradient(top, $blue, $blue3));
 
 		&:hover
 		{
 			text-decoration: none;
 			@include background(linear-gradient(top, $blue, $blue));
 		}
+	}
 
+	a.little {
+		width: $boxLittle;
 	}
 }

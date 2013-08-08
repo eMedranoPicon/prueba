@@ -1,8 +1,18 @@
 
-$blue 	: 	#5299CF;
-$white 	:	#fff;
-
-@import "compass/css3/box-shadow";
-
-//http://compass-style.org/reference/compass/css3/images/
-@import "compass/css3/images";
+// Clearfix
+// --------
+// For clearing floats like a boss h5bp.com/q
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
