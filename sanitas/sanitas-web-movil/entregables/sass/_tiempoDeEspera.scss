@@ -26,12 +26,12 @@ dl.dl-tiempoDeEspera
 	dt,
 	dd {
 		display: inline-block;
-		margin-top: 9px;
 		color: $textcolor-blue;
 	}
 
-	dt{
+	dt {
 		width: 120px;
+		margin-top: 9px;
 	}
 
 	dd{
@@ -102,6 +102,17 @@ div.tiempoDeEspera
 		margin-top: 5px;
 		font-size:  $fontSize;
 
+		dl
+		{
+			@extend dl.dl-tiempoDeEspera;
+			margin-left: 30px;
+
+			dt:first-child
+			{
+				margin-top: 0px;
+			}
+		}
+
 		p
 		{
 			@include clearfix();
@@ -134,7 +145,7 @@ div.tiempoDeEspera
 
 		strong.header {
 			display: block;
-			line-height: 26px;
+			line-height: 23px;
 			vertical-align: top;
 			color: $textcolor-blueLighter;
 			font-size: inherit;
@@ -184,6 +195,11 @@ div.tiempoDeEspera
 
 		p {
 			width: 60%;
+
+			@media screen and (max-width: 480px)
+			{
+				width: 93%;
+			}
 		}
 
 		>p
@@ -206,6 +222,16 @@ div.tiempoDeEspera
 			@include clearfix();
 			width: 300px;
 			min-height: 60px;
+
+			@media screen and (max-width: 480px)
+			{
+				width:250px;
+
+				dt,
+				dd {
+					font-size: $fontSize;
+				}
+			}
 		}
 	}
 
