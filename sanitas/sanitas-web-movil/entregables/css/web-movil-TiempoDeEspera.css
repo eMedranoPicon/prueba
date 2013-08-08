@@ -135,7 +135,7 @@ div.tiempoDeEspera span.tiempoDeEspera-data span {
 }
 /* line 135, ../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data strong.header {
-  display: inline-block;
+  display: block;
   line-height: 26px;
   vertical-align: top;
   color: #50b3ec;
@@ -143,7 +143,7 @@ div.tiempoDeEspera span.tiempoDeEspera-data strong.header {
 }
 /* line 144, ../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data i.icon-espera {
-  background: url('../images/espera.png?1375972290');
+  background: url('../images/espera.png?1375983164');
   -webkit-background-size: 25px 25px;
   -moz-background-size: 25px 25px;
   -o-background-size: 25px 25px;
@@ -199,7 +199,7 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
 /* line 199, ../sass/_tiempoDeEspera.scss */
 .box-tiempoDeEspera .container-tiempoDeEspera dl {
   padding-left: 65px;
-  background: url('../images/espera.png?1375972290');
+  background: url('../images/espera.png?1375983164');
   background-repeat: no-repeat;
   *zoom: 1;
   width: 300px;
