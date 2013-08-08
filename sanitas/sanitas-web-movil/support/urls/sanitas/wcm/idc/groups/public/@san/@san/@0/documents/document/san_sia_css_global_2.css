@@ -1,0 +1,7798 @@
+@charset "utf-8";
+					/* CSS Document */
+
+@font-face {
+    font-family: 'GothamLightRegular';
+    src: url('gotham-light-webfont.eot');
+    src: url('gotham-light-webfontd41d.eot?#iefix') format('embedded-opentype'),
+         url('gotham-light-webfont-woff.woff') format('woff'),
+         url('gotham-light-webfont-ttf.ttf') format('truetype'),
+         url('gotham-light-webfont-svg.svg#GothamLightRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}					
+:focus {
+	outline: 0;
+		}
+html{ font-size: 125%; }
+splash	{border:1px solid #999; display:block; clear:both; color:#000; padding:1em; margin:0.1em; font-size:1.6em; margin-top:0.5em; margin-bottom:0.5em;}
+
+form	{padding:0px; margin:0px;}
+body	{
+		margin:0px;
+		font-size:0.6em;
+		font-family:Arial, Helvetica, sans-serif;
+	
+		}
+
+
+    
+p		{
+	/*	line-height:1.2em;*/
+		
+		}
+/**/
+h1		{
+		margin:0px;
+		padding:0px;
+		font-size:0.9em;
+		color:#CCC;
+		font-weight:normal;
+		text-align:center;
+		float:left;
+		position:absolute;
+		border:0px solid #F00;
+		width:87em;
+		top:42px;
+		}
+
+ul.linksCabecera	{border:1px solid #CCC; float:right; display:block; height:1.6em; margin:0px; padding:0px; padding-left:.5em; margin-top:.8em; font-weight:bold; font-size:1.2em;}		
+ul.linksCabecera	li{display:block; float:left; padding-right:10px; background:url(separacionPie.gif) no-repeat 4px right; padding-top:.4em; font-size:.8em; color:#666;}
+ul.linksCabecera	li.finBot{background:none;}
+ul.linksCabecera a {color:#009ddb;}
+ul.linksCabecera a:hover {color:#8bdafa;}
+
+.siguenos{clear:both;
+					display:block;
+					text-align:center;
+					color:Gray;
+					padding:2px;
+          font-size:17px;
+          font-weight:bold;
+          padding-top:0.5em;
+}
+
+
+
+/*buscador*/
+.buscador {width:18em;
+					display:inline-block;
+					float:right;
+					padding-right:5px;
+					border:0px solid #F00;
+					position:absolute;
+					right:-4px;
+					top:0px;
+					/z-index:10000;
+				}
+        
+.lupa			{display:inline-block;
+					background:url(lupa.gif) no-repeat;
+					width:27px;
+					height:24px;
+					border:#F00 0px solid;
+					float:right;
+					margin-right:0px;
+          		cursor:pointer;
+					}
+        
+.lupa button {background:none;
+              border:1px solid #F00;
+              display:inline-block;
+              float:right;
+              width:25px;
+              background:url(lupa.gif)no-repeat -1px -1px;
+              }
+            
+
+.lupa a			{background:url(lupa.gif);
+					width:27px;
+					height:24px;
+					border:#F00 0px solid;
+					display:block;
+					
+					}
+.buscaDiv		{padding-top:5px;
+					display:inline-block;
+					border:#FF0000 solid 0px;
+					background:url(fondoFormImgNew2.gif) 2px 0px no-repeat;
+					width:192px;
+					height:29px;
+					float:right;
+					}
+.campoBuscador	{
+					height:20px;
+					border:0px #F00 solid;
+					padding-left:0px;
+					margin-left:18px;
+					color:#676767;
+					padding-top:0px;
+					width:139px;
+					background:none;
+					vertical-align:middle;
+					line-height:1.8em;
+					float:left;
+					}
+.buscadorArea	{float:left;
+					width:159px;border:#F00 0px solid;
+					}
+/*buscador*/
+/*botones Cabecera*/
+.botones		{width:100%;}
+.botones a{
+					position:relative;
+					font-size:1em;
+					text-decoration:none;
+					color:#FFF;
+					display:inline-block;
+					width:15.29em;
+					text-align:center;
+					padding:0px;
+					top:0px;
+					padding-top:13px;
+					font-weight:200;
+					height:27px;
+					font-weight:bold;
+					border-top:0px solid #F00;
+					border-bottom:0px solid #F00;
+					border:0px solid #F00;
+					top:-5px;
+					padding-left:3px;
+					line-height:28px;
+					/*background:url() 5px 0px no-repeat;*/
+
+	}
+.botones a:hover	{
+					/*background:url() 5px 0px no-repeat;*/
+					
+					z-index:20;
+					}
+/*botones Cabecera*/
+					
+.botones div.pestanaActivaNew 	{
+					display:block;
+					width:18em;
+					height:35px;
+					position:absolute;
+					left:9.5em;
+					z-index:1;
+					top:-28px;
+					background:none;
+					
+					border:0px solid #F00;
+					}
+.botones div.pestanainActivaNew  	{
+					display:block;
+					width:18em;
+					height:35px;
+					position:absolute;
+					left:26em;
+					top:-28px;
+					z-index:0;
+					background:none;		
+					border:0px solid #F00;
+					
+					}					
+			
+
+
+/**/
+.phone		{
+			display:block;
+			height:20px;
+			padding-top:10px;
+			padding-left:1.3em;
+			color:#666666;
+			text-align:right;
+			padding-right:1.3em;
+
+
+			} 
+input.botLlamada	{
+			display:inline-block;
+			width:30px;
+			height:22px;
+			border:0px solid #F00;
+			float:right;
+			margin-top:2px;
+			margin-right:0.5em;
+			}
+      
+.bloqueTel	{display:block; width:100%; height:2.2em;}					
+
+a.botLlamada {
+			background:url(botTel.gif) top;
+			}
+a.botLlamada:hover {
+			background:url(botTel.gif) bottom;
+			}
+      
+input.botLlamada {
+    background: url("botTel.gif") repeat scroll center top transparent;
+    width: 33px !important;
+}
+input.botLlamada:hover {
+    background: url("botTel.gif") repeat scroll center bottom transparent;
+    cursor: pointer;
+}
+    
+
+
+
+
+
+
+.cajaContentDere input.campoTel {
+			width:55px;
+			padding-left:2px;
+			}
+/*path*/
+.path		{
+				color:#b2b2b2;
+				background:#f1f1f1;
+				display:block;
+				font-family: Arial, verdana, trebuchet;
+				font-size:1.2em;
+				padding-left:10px;
+				padding-top:3px;
+				overflow:visible;
+                                height: 20px;
+				/* PRU */ line-height:1.3em;
+				}
+.path     a{
+                               color:#b2b2b2;
+                               text-decoration:none;
+                               white-space:nowrap;
+                               padding-right:1em;
+                               display:inline-block;
+                               /* PRU */ background:url(iconGo.gif) no-repeat right 4px;                                       
+ 
+                               }
+.path     a:hover{
+                               color:#CCC;
+                               }
+.path ul                {
+                margin:0px;
+                padding:0px;
+                float:left;
+				/* PRU  width: 712px;*/
+                }                             
+.path li  {
+                display:inline;
+				/* PRU */font-size: 0.77em; 
+                } 
+.path span.noFlecha	{background:none;}
+.path li.noFlecha	{background:none;}
+
+/*PRU.seccionPath	{
+		font-size:1.1em;
+		}*/
+.seccionPathOn	a{
+		font-size:1.1em;
+		color:#00ade5;
+		}
+.seccionPathOn	a:hover{
+		font-size:1.1em;
+		color:#8ccce7;
+		}
+
+/*path*/
+/*seguros medicos*/
+.cuerpo			{/*width:945px;*/
+				width:78.5em;
+				border:0px solid #FF0000;
+				position:relative;
+				margin:auto;
+					}
+.cuerpoDere		{display:block;
+				float:right;
+				width:64em;
+				border:0px solid #F00;
+					} 
+.content		{display:block;
+				float:left;
+				width:46.3em;
+				border:0px solid #F00;
+				padding-top:5px;
+				padding-left:2px;
+				color:#333333;
+				font-size:1.0em;
+				*overflow:visible !important;
+					}
+.content h2.white	{color:#fff;}
+.contentdistribudoraSeguros	{display:block;
+					float:left;width:99%;
+					border:0px solid #F00;
+					padding-top:5px;
+					padding-left:2px;
+					color:#333333;
+					font-size:1.0em;
+					}
+.content strong {color:#333333;
+					}
+.content strong.green{color:#009a49;
+					display:block;
+					padding-top:8px;
+					}
+.content	b{padding-top:10px}
+.content a			{color:#009ee0;text-decoration: none;
+                
+					}
+.content a:hover	{color:#87c9e5;text-decoration:none;
+					}
+.content a strong {color:#0099ff;
+					}
+/*.content span		{display:block;
+					padding-top:8px;
+					}*/
+.content li			{}
+.content h2			{color:#00adef;
+					font-size:1.8em;
+					display:block;
+					padding-top:0px;
+					padding-bottom:10px;
+					margin-top:0px;
+					margin-bottom:0px;
+          float:left;
+          /*Comentado por peticin, hayq que vigilar casos especiales de h2 pegados a bordes*/
+          /*text-indent:10px;*/
+          clear:both;
+          width:85%;
+					}
+          
+.content h3			{color:#00aeef;
+					display:block;
+					margin-top:10px;
+					padding-top:0px;
+					margin-bottom:0px;
+					padding-bottom:0px;
+					}
+.content h3.grey			{color:#666;
+
+					}
+.textoContent		{padding:7px;
+          padding-top:0px;
+					border:#FF0000 0px solid;
+					margin:auto;
+          margin-top:0px;
+          clear:both;
+					}
+.block				{display:block;
+					}
+
+.dereContent	{width:207px;
+					padding:3px;
+					padding-left:0px;
+					display:block;
+					float:right;
+					border:0px #0F6 solid;
+					overflow:visible;
+					}
+.cajaDere		{display:block;
+					width:210px;
+					background:url(cajaTop.gif) no-repeat;
+					border:#fff 1px solid;
+					
+					} 
+
+.cajaBottom				{display:block;
+					height:11px;
+					width:210px;
+					background:url(cajaBottom.gif) no-repeat;
+					}
+.cajaContentDere		{background:url(fondoCajaDere.gif) repeat-y;
+					width:210px;
+					margin-top:10px;
+					border:#000 0px solid;
+					}
+.cajaContentDere span	{padding-left:5px;
+					padding-right:5px;
+					display:block;
+					}
+.cajaContentDere  ul	{padding:0em;
+					margin:0em;
+					padding-left:15px;
+					}
+.cajaContentDere  li	{
+					font-size:0.9em;
+					line-height:1.5em;
+					list-style:none;
+					}
+.cajaContentDere  a		{
+					display:block;
+					padding-left:0px;
+					}
+
+.cajaContentDere input{
+					width:50px;
+					font-size:1em;
+					margin-top:3px;
+					}
+.cajaContentDere select{
+					width:77px;
+					font-size:1em;
+					margin-top:3px;
+					}
+          
+.cajaContentDere h2 {padding-top:0.2em;
+					padding-bottom:0.6em;
+					padding-left:24px;
+					padding-right:0.3em;
+					}
+          
+.alineaDere	{		float:right;
+					padding-right:5px;
+					}
+.botAzulDereSpan	{
+					height:2.9em;
+					clear:both;
+					border:#F00 0px solid;
+					display:block;
+					width:190px;
+					text-align:right;
+					padding-top:0.4em;
+					padding-bottom:0.4em;
+          margin:auto;
+					}
+.empresaMisanitas	{
+					float:right;
+					font-size:0.7em;
+					padding-top:3px;
+					}
+.titCaja			{
+					margin:auto;
+					width:100%;
+					display:block;
+					border:#039 0px solid;
+					text-align:left;
+					font-size:1.1em;
+          text-indent: 35px;
+					}
+.titCajatitSanitas	{
+					margin:auto;
+					width:100%;
+					display:block;
+					border:#039 0px solid;
+					text-align:center;
+					font-size:1.1em;
+					text-align:left;
+					width:100px;
+					border:#F00 0px solid;
+					margin-left:40px;
+					}
+
+.titCajaPresupuesta	{
+					margin-left:0.5em;
+					background:url(img_iconpresuboton.gif) no-repeat;
+					display:block;
+					border:#F00 0 solid;
+					height:1.80em;
+					font-family: Arial, verdana, trebuchet;
+					color:#666;font-size:1.2em;
+					text-indent:20px;
+					}
+.titCajamiSanitas	{
+					margin-left:0.5em;
+					background:url(iconMisanitasBotonera.gif) no-repeat;
+					display:block;
+					border:#F00 0 solid;
+					height:1.80em;
+					font-family: Arial, verdana, trebuchet;
+					color:#666;font-size:1.2em;
+					text-indent:20px;
+					}
+.titCajaLlamada			{
+					margin-left:0.5em;
+					background:url(iconllamada.gif) no-repeat;
+					display:block;
+					border:#F00 0 solid;
+					font-family: Arial, verdana, trebuchet;
+					color:#666;font-size:1.2em;
+					padding-left:34px;
+
+					}	
+h2.titCajaLlamada			{
+					margin:0em;
+					background:url(iconllamada.gif) 8px 0px no-repeat;
+					display:block;
+					border:#F00 0px solid;
+					font-family: Arial, verdana, trebuchet;
+					color:#666;
+					font-size:1em;
+					font-weight:normal;			
+					margin:auto;
+					text-indent:1em;
+          min-height:1em;
+					}		
+          
+h2.titCajaInfo		{
+					margin:0em;
+					background:url(ICONO-INFO.png) 8px 0px no-repeat;
+					display:block;
+					border:#F00 0px solid;
+					font-family: Arial, verdana, trebuchet;
+					color:#666;
+					font-size:1em;
+					font-weight:normal;			
+					margin:auto;
+					text-indent:1em;
+          min-height:1em;
+					}	
+
+h2.titCajaSolicitaCita		{
+	background: url(ICON_CITA.png) no-repeat scroll 8px 0 transparent;
+    border: 0 solid #FF0000;
+    color: #666666;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+	padding-top: 6px;
+    min-height: 1em;
+    text-indent: 2em;
+					}
+#h4solicitaCita	{
+background-color: #FFFFFF;
+border-top: 1px solid #C1C7CC;
+color: #333333;
+display: block;
+font-size: 11px;
+font-style: normal;
+font-weight: normal;
+margin: 0 10px 12px;
+padding: 6px;
+width: 170px;
+}
+
+#h4solicitaCita p {
+	margin-bottom: 0;
+    margin-top: 0;
+}	    
+					
+h2.titCajaDuda		{
+					margin:0em;
+					margin-left:0.5em;
+					background:url(iconDuda.gif) no-repeat;
+					display:block;
+					border:#F00 0 solid;
+          min-height:1em;
+					font-family: Arial, verdana, trebuchet;
+					color:#666;
+
+					font-size:1em;
+					font-weight:normal;
+
+
+					}
+
+h2.titCajaEspecialistaEmpresa		{
+					margin:0em;
+					margin-left:0.5em;
+					background:url(iconEspecialistaEmpresa.gif) no-repeat;
+					display:block;
+					border:#F00 0 solid;
+          min-height:1em;
+					font-family: Arial, verdana, trebuchet;
+					color:#666;font-size:1em;
+
+					font-weight:normal;
+
+					}	
+
+.telefonistas		{
+					background:url(telefonistas.gif) repeat;
+					display:block;
+					width:196px;
+					height:39px;
+					margin-left:3px;
+					}
+.cajaDereText		{
+					font-size:0.9em;
+					}
+.center				{
+					text-align:center;
+					}
+.Links ul			{}
+.Links li			{border-bottom:1px solid #7eb3d5;
+					width:90%;
+					list-style:none;
+          
+					text-decoration:none;
+					display:block;
+					padding-left:10px;
+					background:url(iconListCajasBullet.gif) -4px 2px no-repeat;
+					display:block;
+					padding-top:0.3em;
+					padding-bottom:0.3em;
+					}
+.Links 	a			{
+					color:#666;
+					text-decoration:none;
+					display:block;
+					display:block;
+					}
+          
+.Links 	a:hover			{
+					color:#999;
+					}
+
+.linksCajaPresupuesta ul		{padding-left:10px;
+					}
+.linksCajaPresupuesta li		{display:block;
+					border-bottom:0px solid #7eb3d5;
+					margin-left:5px;
+					padding-top:0.25em;
+					padding-bottom:0.25em;
+					width:90%;
+					}
+.linksCajaPresupuesta a         {
+					text-decoration:none;
+					display:block;
+					padding-left:10px;
+					}
+.linksCajaPresupuesta a:hover	{}
+
+
+.bannerAbajoEmpresasSoluciones		{
+					padding-left:20px;
+					padding-top:75px;
+					width:505px;
+					color:#FFF;
+					border:0px solid #F00;
+					display:block;
+					}
+.bannerAbajoEmpresasSoluciones div h2	{
+					color:#FFF;
+					width:250px;
+					font-size:1.6em;
+					padding-top:8px;
+
+					}		
+.bannerAbajoEmpresasSoluciones div	{
+					display:block;
+					width:250px;
+					float:left;
+					}			
+.bannerAbajoEmpresasSoluciones	ul{
+					float:left;
+					width:125px;
+					border:0px solid #F00;
+					margin:0px;
+					padding:0px; 
+					list-style:none;
+					padding-top:10px;
+					}
+.bannerAbajoEmpresasSoluciones	a	{
+					color:#FFF;
+					text-decoration:none;
+					
+					}	
+.bannerAbajoEmpresasSoluciones	li a {
+					background:url(iconListCajasBlue.gif) no-repeat 110px 0px;
+					margin-right:20px;
+					padding-right:20px;
+					display:block;
+					width:115px;
+					border:0px solid #F00;
+					}	
+.distribuidoraEmpresasSoluciones   ul	{
+					float:left;
+					width:120px;
+					display:block;
+					border:0px solid #F00;
+					margin:0px;
+					padding:0px;
+					
+					}
+.distribuidoraEmpresasSoluciones	li a {
+					background:url(iconListCajasBlue.gif) no-repeat 110px 0px;
+					margin-right:20px;
+					padding-right:20px;
+					display:block;
+					width:100px;
+					border:0px solid #F00;
+					color:#FFF;
+					}	
+.cajaServiciosSalud   ul	{
+					float:left;
+					width:120px;
+					display:block;
+					border:0px solid #F00;
+					margin:0px;
+					padding:0px;
+					
+					}
+.cajaServiciosSalud	li a {
+					background:url(iconListCajasBlue.gif) no-repeat 105px 0px;
+					margin-right:20px;
+					padding-right:20px;
+					display:block;
+					width:110px;
+					border:0px solid #F00;
+					color:#FFF;
+					}						
+.bannerAbajo		{
+					padding-left:20px;
+					padding-top:10px;
+					width:300px;
+          position: relative;
+          //bottom:120px;
+          margin-top:-120px;
+					}
+.bannerAbajo2		{
+					padding-left:20px;
+					padding-top:10px;
+					width:300px;
+          position: relative;
+          //bottom:120px;
+          margin-top:-140px;
+					}          
+.bannerAbajo	ul	{
+					margin:0px;
+					padding:0px;
+					padding-top:6px;
+					padding-left:0px;
+					margin-left:0px;
+					border:0px solid #F00;
+					}
+.bannerAbajo2	ul	{
+					margin:0px;
+					padding:0px;
+					padding-top:6px;
+					padding-left:0px;
+					margin-left:0px;
+					border:0px solid #F00;
+					}
+.bannerAbajo	li	{
+					color:#00aeef;
+					list-style:none;
+					padding-left:15px;
+					margin-left:0px;
+					border:0px solid #F00;
+					background:url(iconListCajas.gif) 0px 2px no-repeat;
+					}
+.bannerAbajo2	li	{
+					color:#00aeef;
+					list-style:none;
+					padding-left:15px;
+					margin-left:0px;
+					border:0px solid #F00;
+					/*background:url(iconListCajas.gif) 0px 2px no-repeat;*/
+					}          
+.cajaSegurosMedicos	{
+					display:inline-block;
+					width:25.1em;
+          /*Ya no tiene que ser fijo ya que la parte de abajo */
+					/*height:21.2em;*/
+					float:left;
+					font-size:0.9em;
+					margin-right:2px;
+          margin-bottom:5px;
+          overflow:hidden;
+					
+					
+					}
+          
+h2.SegurosMedicosTextoTit
+          {cursor:pointer;}
+
+.cajaSegurosMedicosNew	{
+					display:inline-block;
+					width:25.1em;
+					height:21.2em;
+					float:left;
+					font-size:0.9em;
+					margin-right:2px;
+					overflow:auto;
+					
+					}					
+.cajaServiciosSalud	{
+					display:inline-block;
+					width:25.1em;
+					float:left;
+					font-size:0.9em;
+					margin-right:2px;
+					margin-bottom: 5px;
+					border:#F00 0px solid;
+					
+					}
+					
+.distribuidoraEmpresasSoluciones	{
+					display:inline-block;
+					width:25.1em;
+					height:25.3em;
+					float:left;
+					font-size:0.9em;
+					margin-right:2px;
+					
+					position:relative;
+					
+					}					
+
+.bannerFraseDestaca	{
+					margin:auto;
+					border:0px solid #F00;
+					width:525px;
+					display:block;
+					clear:both;
+					background:url(bannerFraseDestaca.gif);
+					font-size:0.9em;
+					border:0px #F00 solid;
+					padding:10px;
+					padding-bottom:1.4em;
+					}
+.bannerFraseDestaca	 h2	{
+					color:#709d2b;
+					}
+	
+.bannerFraseDestacaBottom	{
+					margin:auto;
+					background:url(bannerFraseDestaca.gif) bottom;
+					height:8px;
+					display:block;
+					width:545px;
+					border:#F00 0px solid;
+					}
+.bannerPromoHomeSeguros	{
+					border:0px solid #F00;
+					width:545px;
+					min-height:11em;
+					display:block;
+					clear:both;
+					margin-top:10px;
+					font-size:0.9em;
+					*height:132px;
+					}
+					
+.bannerPromoHomeSegurosNew	{
+					width:550px;
+					min-height:11em;
+					display:block;
+					clear:both;
+					background:url(bannerPromo.jpg) no-repeat #fff;
+					font-size:0.9em;
+					border:0px solid #F00;
+					}
+										
+.bannerPromoHomeSeguros .LinkTit	{
+					width:300px;
+					padding-left:20px;
+					padding-top:20px;
+					}
+
+
+
+.bannerdistribuidoraEmpresasSoluciones	{
+					border:0px solid #F00;
+					width:50.2em;
+					height:150px;
+					display:block;
+					clear:both;
+					background:url(distribuidoraesolabajo.jpg) no-repeat #00aeef;
+					font-size:0.9em;
+					}					
+.bannerPromoHomeSeguros .cajaSegurosMedicosLinkAbajoBanner{
+					width:300px;
+					padding-left:0px;
+					padding-top:0px;
+
+					border:0px solid #F00;
+					}
+.cajaSegurosMedicos div	{padding-top:0px;
+					padding-left:8px;
+					color:#FFF;
+          position:relative;
+          background-attachment: scroll;
+          background-repeat:no-repeat;
+          background-color: transparent;
+          background-repeat:no-repeat;
+          background-image: url("bannersegurobottomcorto.png");
+          background-position: center bottom;
+          height:7em;
+          
+					/*bottom:115px;*/
+					}
+
+/*.cajaSegurosMedicosDoble div{
+          bottom:120px;
+}*/
+.cajaSegurosMedicos {
+          overflow:hidden;
+}
+
+.bannersegurosMedicosNewbottom h2{
+          text-indent:0px;
+}
+
+.cajaSegurosMedicos	ul	{margin:0px;
+					padding:0px;
+					padding-top:5px;
+					}
+.cajaSegurosMedicos	li	{list-style:none;
+					}
+/**/	
+
+.cajaSegurosMedicosNew div	{padding-top:0px;
+					padding-left:8px;
+					color:#FFF;
+					}
+.cajaSegurosMedicosNew	ul	{margin:0px;
+					padding:0px;
+					padding-top:5px;
+					}
+.cajaSegurosMedicosNew	li	{list-style:none;
+					}
+
+
+
+	/**/				
+					
+.distribuidoraEmpresasSoluciones div	{padding-top:0px;
+					padding-left:8px;
+					color:#FFF;
+					}
+.distribuidoraEmpresasSoluciones	ul	{margin:0px;
+					padding:0px;
+					padding-top:5px;
+					}
+.distribuidoraEmpresasSoluciones	li	{list-style:none;
+					}
+.cajaServiciosSalud div	{padding-top:0px;
+					padding-left:8px;
+					color:#FFF;
+          background-attachment: scroll;
+          background-color: transparent;
+          background-image: url("bannersegurobottomcorto.png");
+          background-position: center bottom;
+          background-repeat: no-repeat;
+          /*display:inline-block;*/
+          height:9.5em;
+					}
+.cajaServiciosSalud	ul	{margin:0px;
+					padding:0px;
+					padding-top:0.2em;
+					}
+.cajaServiciosSalud	li	{list-style:none;
+					}					
+/**/					
+.cajaServicios div	{padding-top:0px;
+					padding-left:8px;
+					color:#FFF;
+					}
+.cajaServicios	ul	{margin:0px;
+					padding:0px;
+					padding-top:5px;
+					}
+.cajaServicios	li	{list-style:none;
+					}		
+					
+/**/					
+.bannerAbajo a.cajaSegurosMedicosLinkAbajoBanner	{display:block;
+					color:#00aeef;
+					line-height:1.3em;
+					padding-top:2px;
+					border:#F00 0px solid;
+					font-size:1.2em;
+					}
+.bannerAbajo2 a.cajaSegurosMedicosLinkAbajoBanner	{display:block;
+					color:#00aeef;
+					line-height:1.3em;
+					padding-top:2px;
+					border:#F00 0px solid;
+					font-size:1.2em;
+					}
+.bannerAbajo2 a.cajaSegurosMedicosLinkAbajoBanner:hover	{color:#155577;
+
+					}					
+.bannerAbajo a.cajaSegurosMedicosLinkAbajoBanner:hover	{color:#155577;
+
+					}
+a.cajaSegurosMedicosLinkAbajo	{display:block;
+					color:#fff;
+					line-height:1.1em;
+					padding-top:2px;
+					width:242px;
+					border:#F00 0px solid;
+					background:url(iconListCajasBlue.gif) right 2px no-repeat ;
+					padding-right:8px;
+					}
+a.cajaSegurosMedicosLinkAbajo:hover{color:#d4f3ff;
+					}
+.linkscajaSegurosMedicos	{position:absolute;
+						bottom:10px;
+						left:0px;
+						height:70px;
+						overflow:auto;
+						}
+.cajaSegurosMedicos1	{
+					background:url(PREPRO_028170.jpg) no-repeat #00aeef;
+					}
+.cajaSegurosMedicos2	{background:url(PREPRO_028171.jpg) no-repeat #00aeef;
+					}
+.cajaSegurosMedicos3	{background:url(PREPRO_024198.jpg) no-repeat #00aeef;
+					}
+.cajaSegurosMedicos4	{background:url(PREPRO_024202.jpg) no-repeat #00aeef;
+					}
+.cajaServiciosSalud1	{background:url(cajaServiciosSalud1.jpg) no-repeat #00aeef;
+					}
+.cajaServiciosSalud2	{background:url(cajaServiciosSalud2.jpg) no-repeat #00aeef;
+					}
+.cajaServiciosSalud3	{background:url(cajaServiciosSalud3.jpg) no-repeat #00aeef;
+					}
+.cajaServiciosSalud4	{background:url(cajaServiciosSalud4.jpg) no-repeat #00aeef;
+					}
+.cajaDistribuidoraEmpresas1	{background:url(distribuidorasegurosmedicos1.jpg) no-repeat #00aeef;
+					}
+.cajaDistribuidoraEmpresas2	{background:url(distribuidorasegurosmedicos1.jpg) no-repeat #00aeef;
+					}				
+.distribuidoraEmpresasSoluciones1	{background:url(distribuidorasegurosmedicos1.jpg) no-repeat #00aeef;
+
+		}
+.distribuidoraEmpresasSoluciones2	{background:url(prepro_014986.jpg) no-repeat #00aeef;
+
+		}		
+.overFlowDistribuidoraEmpresas {overflow:auto; border:0px solid #F00; height:250px;}
+
+.paddingBottom3		{display:block;
+					padding-bottom:3px;
+					}
+
+.paddingBottom9 {
+	PADDING-BOTTOM: 9px; DISPLAY: block
+}
+
+.SegurosMedicosTextoTit	{display:block;
+					font-size:1.4em;
+					font-weight:bold;
+					
+					}
+h2.SegurosMedicosTextoTit	{display:block;
+					font-size:1.4em;
+					font-weight:bold;
+					color:#FFF;
+					border:0px solid #F00;
+          margin-bottom: 0em;
+          /*Comentado par anuevo estilo de cajas*/
+          /*margin-top: 0.2em;*/
+          padding: 0.4em 0em 0em;
+          text-indent:0px;
+					}					
+.SegurosMedicosTextoTitAbajoBanner{display:block;
+					font-size:1.8em;
+					font-weight:bold;
+					width:300px;
+					}
+h3.SegurosMedicosTextoTitAbajoBanner{display:block;
+					font-size:1.8em;
+					font-weight:bold;
+					width:400px;
+					padding:0px;
+					margin:0px;
+					margin-top:0em;
+					*margin-top:130px
+					}					
+.SegurosMedicosTextoTitAbajoBannerNew{display:block;
+					font-size:1.8em;
+					font-weight:bold;
+					width:17em;
+					border:1px solid #F00;
+					}					
+					
+a.areaClicar			{display:block;
+					width:255px;
+					height:160px;
+					border:0px solid #F00;
+					background:none;
+          position:relative;
+          bottom:100px;
+					}
+a.areaClicardistribuidoraEmpresasSoluciones			{
+					display:block;
+					width:255px;
+					height:135px;
+					border:0px solid #F00;
+					background:none;
+					}					
+a.areaClicarServiciosSalud	{display:block;
+					width:255px;
+					height:123px;
+					border:0px solid #F00;
+					background:none;
+					}
+a.areaClicarDistribuidoraEmpresas	{display:block;
+					width:255px;
+					height:140px;
+					border:0px solid #F00;
+					background:none;
+					}					
+					
+.distribuidoraEmpresa a.LinkTit{border:0px solid #F00; height:25px;}				
+					
+a.LinkTit				{display:block;
+					color:#fff;
+					padding-left:0em;
+					text-decoration:none;
+					letter-spacing:0em;
+					line-height:1.3em;
+					padding-top:3px;
+					border:0px solid #F00;
+					}
+a.LinkTit:hover			{color:#d4f3ff;
+					}
+a.LinkTitBannerAbajo				{display:block;
+					color:#00aeef;
+					padding-left:0em;
+					text-decoration:none;
+					letter-spacing:0em;
+					line-height:1.3em;
+					padding-top:0px;
+					}
+a.LinkTitBannerAbajo:hover			{color:#155577;
+					}
+.botoneraIzquierda {display:block;
+					float:left;
+					background:url(cajaBotoneraLeftTop.gif) no-repeat 0px 7px;
+					width:14.3em;
+					padding-top:10px;
+					border:#F00 0px solid;
+					
+					}
+.contentBotoneraLeft	{background:url(fondoBotoneraLeftTop.gif) repeat-y;
+					width:157px;
+					padding:6px;
+					padding-top:0px;
+					padding-bottom:0px;
+					
+					
+					}
+.cajaBotoneraLeftBottom	{background:url(cajaBotoneraLeftBottom.gif) no-repeat;
+					width:169px;
+					height:6px;
+					border:#F00 0px solid;
+					margin-top:-3px;
+					}
+.nodecoration			{text-decoration:none;
+					}
+
+/**/	
+.seccionActiva	{
+					display:block;
+					width:159px;
+					padding-left:0px;
+					margin:0em;
+					margin-top:0px;
+					margin-bottom:2px;
+					}
+          
+ul.seccionActiva	{margin:0px; padding:0px; border:#F00 0px solid; margin-bottom:3px;}
+ul.subseccionActiva	{margin:0px; padding:0px; border:#F00 0px solid; margin-bottom:3px;}
+ul.seccionActivaON	{margin:0px; padding:0px; border:#F00 0px solid; margin-bottom:3px;}
+ul.seccionActiva li	{list-style:none;}
+ul.subseccionActiva	li{list-style:none;}
+ul.seccionActivaON	li{list-style:none;}
+
+.seccionActiva h2		{
+						padding:0em;
+						margin:0em;
+						font-size:1em;
+						padding:0px;
+						padding-top:0.7em;
+						
+						}	
+						
+
+.botSeccionActivaTop{
+					background:url(botSeccionActivaTop.gif) no-repeat;
+					display:block;
+					width:159px;
+					
+					}
+.botSeccionActivaTop a	{color:#FFF;
+					text-decoration:none;
+					font:1.2em  Arial;
+					text-align:center;
+					display:block;
+					}
+.botSeccionActivaBottom{background:url(botSeccionActivaBottom.gif) no-repeat bottom;
+					display:block;
+					height:0.95em;
+					width:159px;
+					border:#FF0000 0px solid;
+					overflow:hidden;
+					
+					}
+/**/
+/**/	
+.seccionActivaON			{
+					display:block;
+					width:159px;
+					padding-left:0px;
+					margin:0em;
+					margin-top:0px;
+          margin-bottom:2px; 
+					}
+
+
+.botSeccionActivaTopON		{background:url(botSeccionActivaTop2.gif) no-repeat;
+					display:block;
+					width:159px;line-height:28px;
+					padding-top:4px;
+
+					}
+
+										
+.botSeccionActivaTopON a	{color:#FFF;
+
+
+    padding-bottom: 3px;
+    padding-left: 2px;
+    padding-top: 3px;
+					text-decoration:none;font:1em/0.9em Arial;
+					text-align:center;
+
+					display:block;
+
+
+
+
+					}
+
+.botSeccionActivaTopON  ul li a {
+        font-size:1em;
+        text-align:left;
+        } 
+
+.subbotSeccionActivaTop  ul li a {
+        font-size:1em;
+        text-align:left;
+        width: 140px;
+        } 
+
+.botSeccionActivaBottomON	{background:url(botSeccionActivaBottom2.gif) no-repeat bottom;
+					display:block;
+					height:0.75em;
+					width:159px;
+					border:#FF0000 0px solid;
+					overflow:hidden;
+					}
+          
+.subbotSeccionActivaTop a	{color:#FFF;
+					text-decoration:none;font:1em  Arial;
+					text-align:center;
+					display:block;
+					padding-top:8px;
+					padding-bottom:0px;
+					color:#8996a0;
+					line-height:0.9em;
+					width:155px;
+					text-align:center;
+					padding-left:2px;
+	
+					}
+.subbotSeccionActivaTop a:hover{color:#7ebbdc;
+					}
+/**/
+.subsSubs	{font-size:0.9em;
+			letter-spacing:0em;
+			background:#fff;
+			padding:0px;
+					}
+/*.subsSubs	a	{color:#16b3ee;
+					text-decoration:none;
+					display:block;
+					background:url(iconListCajas.gif) -7px -1px no-repeat;
+					padding:0px;
+					padding-left:8px;
+					line-height:1.6em;
+					}
+*/
+
+.subsSubs	a:hover	{
+					color:#155577;
+					}
+.subsSubs	ul	{margin:0px; padding:0px; border:#F00 0px solid; padding-left:0px; background:#fff;}
+ul.subsSubs	img		{border:0px;}	
+.subsSubs	li	{list-style:none;
+					}
+ul.subsSubs	li		{margin:0px; padding:0px; border:#F00 0px solid; text-align:left; line-height:1.6em; text-align:left;}
+
+
+/**/
+.subsSubsSubs	{padding:0.8em;font-size:0.9em;
+					letter-spacing:0em;
+					line-height:1.5em;
+					padding-top:0.4em;
+					padding-bottom:0.4em;
+					}
+.subsSubsSubs	a	{color:#009ee0;
+					text-decoration:none;
+					display:block;
+					background:url(iconListCajasSub.gif) -7px -1px no-repeat;
+					padding:0px;
+					padding-left:8px;
+					}
+.subsSubsSubs	a:hover	{font-weight:normal;
+					color:#155577;
+					}
+ul.subsSubsSubs		{padding-left:3px;
+					margin-left:3px;
+					/*padding-top:5px;*/
+					margin-top:0px;
+					margin-bottom:0px;
+					}
+.subsSubsSubs	li	{list-style:none;
+					line-height:1.3em;
+					}
+.subsSubs li {
+          display:block;
+          width:100%;
+}
+/**/
+
+
+.subseccionActiva	{background:url(fondoSeccionsubActiva.gif) repeat-y;
+					display:block;
+					width:159px;
+					padding-left:0px;
+					margin-top:0px;
+					margin-bottom:3px;
+					}
+.subseccionActiva h3.subbotSeccionActivaTop	{
+						padding:0em;
+						margin:0em;
+						font-weight:normal;
+						font-size:1em;
+						}						
+.subbotSeccionActivaTop{background:url(subbotSeccionActivaTop.gif) no-repeat;
+
+					display:block;
+					width:159px;line-height:28px;
+					padding-top:4px;
+					}
+					
+.seccionActivaON h3.botSeccionActivaTopON	{
+						padding:0em;
+						margin:0em;
+						font-weight:normal;
+						font-size:0.9em;
+						color:#063;
+						padding-top:0.3em;
+						}						
+					
+.subbotSeccionActivaBottom{background:url(subbotSeccionActivaBottom.gif) no-repeat top #FFF;
+					display:block;
+					width:159px;
+					height:10px;
+          padding-bottom:0.2em; 
+          overflow:hidden; 
+					}
+.seccionActivaON .botSeccionActivaTopON{padding-top:0.5em;}  
+/*seguros medicos*/
+
+a.botVerde 	{display:inline-block;
+					width:90px;
+					height:19px;
+					background:url(botVerde.gif) top;
+					text-align:center;
+					font-family:Arial, Verdana, Geneva, sans-serif;
+					color:#FFF;
+					text-decoration:none;
+					font-size:0.9em;
+					padding-top:5px;
+					}
+a.botVerde:hover	{color:#fff;
+					background:url(botVerde.gif) bottom;
+					}
+a.botVerdeBig 	{display:inline-block;
+					width:134px;
+					height:24px;
+					background:url(botVerdeBig.gif) top no-repeat;
+					text-align:center;
+					font-family:Arial, Verdana, Geneva, sans-serif;
+					color:#FFF;
+					text-decoration:none;
+					font-size:1em;
+					padding-top:9px;
+					}
+a.botVerdeBig:hover	{color:#fff;
+					background:url(botVerdeBig.gif) bottom no-repeat;
+					}
+					
+a.botVerdeBig2 	{display:inline-block;
+					width:194px;
+					height:24px;
+					background:url(botVerdeBig2.gif) top no-repeat;
+					text-align:center;
+					font-family:Arial, Verdana, Geneva, sans-serif;
+					color:#FFF;
+					text-decoration:none;
+					font-size:1em;
+					padding-top:9px;
+					border:0px solid #F00;
+					}
+a.botVerdeBig2:hover	{color:#fff;
+					background:url(botVerdeBig2.gif) bottom no-repeat;
+					}					
+
+a.botAzul		{display:inline-block;
+					width:90px;
+					height:19px;
+					background:url(botAzul.gif) top;
+					text-align:center;
+					font-family:Arial, Verdana, Geneva, sans-serif;
+					color:#FFF;
+					text-decoration:none;
+					font-size:0.9em;
+					padding-top:5px;
+					}
+a.botAzul:hover	{color:#fff;
+					background:url(botAzul.gif) bottom;
+					}
+a.botAzulBig 	{display:inline-block;
+					width:134px;
+					height:24px;
+					background:url(botAzulBig.gif.gif) top no-repeat;
+					text-align:center;
+					font-family:Arial, Verdana, Geneva, sans-serif;
+					color:#FFF;
+					text-decoration:none;
+					font-size:1em;
+					padding-top:9px;
+					}
+a.botAzulBig:hover	{color:#fff;
+					background:url(botAzulBig.gif.gif) bottom no-repeat;
+					}
+
+
+/**/
+
+
+.botonesEmpresas div.pestanaActivaNew 	{
+					display:block;
+					width:18em;
+					height:35px;
+					position:absolute;
+					left:9.5em;
+					z-index:1;
+					top:-33px;
+					background:none;
+					
+					}
+.botonesEmpresas div.pestanainActivaNew  	{
+					display:block;
+					width:18em;
+					height:35px;
+					position:absolute;
+					left:26em;
+					top:-33px;
+					z-index:0;
+					background:none;		
+					border:0px solid #F00;
+					
+					}
+
+/**/
+.pestanaActiva 	{
+	display:block;
+					width:205px;
+					height:25px;
+					position:absolute;
+					left: 19px;
+					top: 45px;
+					z-index:5;
+					background:url(pestanaActiva.gif) top;
+					}
+	
+.pestanainActiva 	{
+	display:block;
+					width:205px;
+					height:25px;
+					background:url(pestanaActiva.gif) bottom;
+					position:absolute;
+					left: 217px;
+					top: 45px;
+					z-index:4;
+					}
+.pestanaActiva 	 a	{color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-weight: normal;
+					font-style: normal;
+					text-decoration:none;
+					padding-left:45px;
+					height:20px;
+					border:#F00 0px solid;
+					display:block;
+					padding-top:5px;
+					}
+.pestanainActiva a 	{
+	color:#fff;
+					font-family: Arial, verdana, trebuchet;
+					text-decoration:none;
+					padding-left:35px;
+					height:20px;
+					border:#F00 0px solid;
+					display:block;
+					padding-top:5px;
+					background:url(pestanaActiva.gif) bottom;
+					}
+.pestanainActiva a:hover{
+	background-position:top;
+					color:#fff;
+					}
+/*Empresas*/
+.miSanitasEmpresas		{
+	background:url(miSanitas.gif);
+					display:inline-block;
+					width:22px;
+					height:22px;
+					float:left;
+					left:25px;
+					position:relative;
+					margin-top:-3px;
+					border:#F00 0px solid;
+					}
+.pestanainActivaEmpresas 	{
+	display:block;
+					width:205px;
+					height:25px;
+					position:absolute;
+					left: 19px;
+					top: 46px;
+					z-index:3;
+					background:url(pestanaActiva.gif) top;
+					}
+	
+.pestanaActivaEmpresas 	{
+	display:block;
+					width:205px;
+					height:25px;
+					background:url(pestanaActiva.gif) top;
+					position:absolute;
+					left: 217px;
+					top: 47px;
+					z-index:4;
+					}
+.pestanaActivaEmpresas 	 a	{color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-weight: normal;
+					font-style: normal;
+					
+					text-decoration:none;
+					padding-left:33px;
+					height:20px;
+					border:#F00 0px solid;
+					display:block;
+					padding-top:7px;
+					}
+.pestanainActivaEmpresas a 	{
+	color:#fff;
+					font-family: Arial, verdana, trebuchet;
+					
+					text-decoration:none;
+					padding-left:42px;
+					height:17px;
+					border:#F00 0px solid;
+					display:block;
+					padding-top:7px;
+					background:url(pestanaActiva.gif) bottom;
+					}
+.pestanainActivaEmpresas a:hover{
+	background-position:top;
+					color:#fff;
+					}
+.botonesEmpresas {
+					background:url(barraCabecera.gif) repeat-x;
+					/*height:40px;*/
+					font-family: Arial, verdana, trebuchet;
+					z-index: 100;
+					border-top:1px solid #fff;
+					clear:both;
+					position:relative;
+					border:#F00 0px solid;
+					display:inline-block;
+					width:78.5em;
+					}
+.botonesEmpresas div	{
+				display:inline-block;
+				background:url(separacion.gif) no-repeat right 5px;
+				height:3.3em;
+				border:#F00 0px solid;
+				float:left;
+				
+		}					
+.botonesEmpresas div.finBot	{
+				display:inline-block;
+				background:none;
+				height:40px;
+				border:#F00 0px solid;
+				float:left;
+		}					
+.botonesEmpresas ul{padding:0px;
+					margin:0px;
+          border:0px solid #F00;
+					display:inline;
+          
+					}
+.botonesEmpresas li{display:inline;
+          border:0px solid #F00;
+					
+					}
+.botonesEmpresas a{
+					position:relative;
+					font-size:1em;
+					text-decoration:none;
+					color:#FFF;
+					display:inline-block;
+					width:13em;
+					text-align:center;
+					padding:0px;
+					padding-top:13px;
+					font-weight:500;
+					height:27px;
+					font-weight:bold;
+					border:0px solid #F00;
+					/*background:url(separacion.gif) no-repeat right 5px;
+					*/
+	}
+.botonesEmpresas a:hover	{
+	text-decoration:underline;
+	color:#FFFFFF;
+					}
+a.onEmpresas	{
+	
+	color:#003b84;
+					}						
+.camposFormGestiona				{
+				clear:both;
+					display:inline-block;
+					padding-top:15px;
+					overflow:hidden;
+					}
+          
+.camposFormGestiona	div			{float:left;
+					padding-right:4px;
+					padding-top:3px;
+					}
+.camposFormGestiona input		{width:85px;
+					height:15px;
+					font-size:0.95em;
+					}
+          
+.camposFormGestiona select		{width:85px;
+					height:21px;
+					font-size:0.95em;
+					margin-top:0px;
+					}
+.carro				{
+					visibility:hidden;
+					}
+          
+div input.passGestiona	{
+          width:85px;
+					height:15px;
+					font-size:0.9em;
+					margin-right:15px;
+					}
+
+.filacamposFormGestiona	{border:0px solid #F00;
+					margin:auto;
+					border:0px solid #F00;
+					}
+          
+.filacamposFormGestiona label.errorIcon{
+  margin-top:6px;
+  margin-left:12px;
+}
+
+
+/*Empresas*/
+.contenedor	{}
+.contenidoMaqueta	{margin:auto;
+					/*width:945px;*/
+			width:78.5em;
+			position:relative;
+					}
+.noseve		{display:none;
+					}
+
+.camposText	{
+
+					border:#F00 0px solid;
+					font-family:Arial, Verdana, Geneva, sans-serif;
+					font-size:0.9em;
+					margin:auto;
+					margin-top:21px;
+					overflow:hidden;
+					padding-top:2px;
+					padding-bottom:2px;
+					display:inline-block;
+					height:40px;
+					width:290px;
+					text-align:center;
+}
+.camposText div	{
+					border:#F00 0px solid;
+					display:inline-block;
+					padding-left:0px;
+					padding-top:3px; /padding-top:6px;
+          padding-top:6px \0/;
+          
+					}
+.camposText input{width:120px;
+					font-size:0.9em;
+					margin-top:3px;
+					padding:3px;
+					/*margin:3px;*/
+					
+					}
+.etiqueta_prov{
+          margin-left: 22px;
+          margin-right: 5px;
+          width: 119px;
+          
+					}
+.etiqueta_esp{
+          margin-right: 5px;
+          width: 150px;
+          
+					}     
+.etiqueta_sexo{
+          margin-left: 22px;
+		  margin-right: 5px;
+		  width: 22px;
+          
+					}
+.etiqueta_cod_postal{
+        margin-left: 3px;
+        margin-right: 2px;
+          
+					} 	
+.etiqueta_edad{
+          margin-left: 21px;
+		  margin-right: 3px;
+          
+					} 					
+.camposText select{font-size:0.9em;
+					margin-top:3px;
+					padding:3px;
+					width:11em;
+					}
+.largo{
+          width: 200px;					
+					}   					
+
+.centrado {
+	    text-align: center;
+}					
+
+.boton_incluir{
+	background: url('PREPRO_017569.jpg') no-repeat scroll left top transparent;
+    border: medium none;
+    color: #77AA38;
+    cursor: pointer;
+    float: left;
+    font-size: 0.9em;
+    font-weight: bold;
+    height: 28px;
+    margin-left: 5px;
+    padding-left: 26px;
+    padding-right: 5px;
+    padding-top: 0;
+    text-align: right;
+    width:  11em;
+
+}
+/*Esta clase es para la caja de la home*/
+.boton_incluir_CajaPresupuesta{
+
+	background: url('PREPRO_017569.jpg') no-repeat scroll left top transparent;
+    border: medium none;
+    color: #77AA38;
+    cursor: pointer;
+    margin-bottom:5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    height: 28px;
+    margin-left: 5px;
+    padding-left: 24px;
+    padding-right: 5px;
+    padding-top: 0;
+    text-align: right;
+    width:  11em;
+
+
+}
+
+.detallenoScroll	{font-family:Arial, Geneva, sans-serif;
+					font-size:0.8em;
+					}
+
+.detalle	{font-family:Arial, Geneva, sans-serif;
+					font-size:0.8em;
+				
+					padding-top:5px;
+					text-align:left;
+					}
+.detalle ul	{padding-top:0px;
+					margin-top:0px;
+					padding-left:14px;
+					margin-left:0px;
+					margin-bottom:0px;
+					
+					}
+.detalle li			{margin:0px;}	
+
+ul.gestionaEmpresa		{height:3.55em; border:0px solid #F00;}				
+.listadoFlecha	{list-style:url(iconListCajas.gif)}
+.iconListCajas	{display:block;
+					background:url(iconListCajas.gif) -2px -2px no-repeat;
+					padding-left:15px;
+					}	
+.detalle li	{letter-spacing:0em;
+					padding:0px;
+					margin-left:0px;
+					}
+
+.cajaHospitales ul	{margin-top:3px;
+					line-height:0.9em;
+					border:#006 0px solid;
+					display:block;
+					padding:0px;
+					margin-right:0px;
+					margin-left:20px;
+					padding-top: 16px;list-style:url(iconListCajas.gif);
+					}
+
+.caja1 ul	{
+					margin-top:10px;
+					line-height:1.2em;
+					border:#006 0px solid;
+					display:block;
+					padding:0px;
+					margin:0px;
+					margin-right:0px;
+					margin-left:20px;
+					list-style:url(iconListCajas.gif);
+					
+					}
+.caja2 ul	{		
+					margin-top:10px;
+					line-height:1.2em;
+					padding:0px;
+					margin:0px;
+					margin-right:0px;
+					margin-left:20px;
+					margin-left:20px;
+					list-style:url(iconListCajas.gif);
+					}
+.caja3 ul			{
+					margin-top:10px;
+					line-height:1.2em;			
+					padding:0px;
+					margin:0px;
+					margin-right:0px;
+					margin-left:20px;
+					margin-left:20px;
+					list-style:url(iconListCajas.gif);
+					}
+.capaBotonCajaForm	{
+					clear:both;
+					text-align:center;
+					padding-top:5px;
+					padding-bottom:5px;
+					}
+.user		{background:url(prepro_014996.gif) 0px 16px no-repeat;
+					padding-left:5px;
+					}
+
+.slides		{width:945px;
+					display:block;
+					position:relative;
+					z-index:15;
+					height:267px;
+					margin:auto;
+					}
+
+.slide		{width:942px;
+					height:267px;
+					display:block;
+					position:relative;
+					top:0px;
+					left:0px;z-index:1;
+					margin:auto;
+					
+
+
+
+					}
+.controles	{
+	z-index:2;
+					position:absolute;
+					width:98px;
+					height:17px;
+					background:#e74c90;
+					
+					
+						background : transparent url(fondo-trans.png) 50% 50%;
+					left: 826px;
+					top: 340px;
+					padding-top:8px;
+					
+					
+					
+					
+					
+					}
+
+
+/*carrusel*/
+
+
+
+/*carrusel*/	
+.normal			{display:block;
+					font-size:1.5em;
+					font-weight:normal;
+					/*height:25px;*/
+					display:block;
+					}
+.destaca	{font-weight:bold;
+					font-size:1.9em;
+					display:block;
+					}	
+.normalTexto	{font-variant:normal;
+					font-size:1.2em;
+					display:block;
+					padding-bottom:15px;
+					font-weight:bold;
+					}
+.areaTextContent ul	{margin-left:0px;
+					padding-left:0px;
+					}
+.areaTextContenttres	ul{margin-left:0px;
+					padding-left:0px;
+					}
+.areaTextContentdos	ul{margin-left:0px;
+					padding-left:0px;
+					}
+.areaTextContenttres	li{list-style:none;
+					}
+.areaTextContentdos	li{list-style:none;
+					}
+a.normalTextolink {color:#fff;
+					background:url(prepro_015013.gif) right no-repeat;
+					padding-right:20px;
+					text-decoration:underline;
+					}
+a.normalTextolink:hover{color:#f67fb3;
+					}
+.uno		{}
+.separaBot		{display:inline-block;
+					width:4px;
+					height:20px;
+					background:url(separacion.gif) no-repeat center top;
+					border:0px solid #F00;
+					}
+
+/*botonera*/
+.separacion	{
+					background:url(separacionBots.gif) 0px 5px no-repeat;
+					display:inline-block;
+					width:3px;
+					height:34px;
+					border:#F00 0px solid;
+					}
+.botones {
+					background:url(barraCabecera.gif) repeat-x;
+					/*height:40px;*/
+					font-family: Arial, verdana, trebuchet;
+					
+					border-top:1px solid #fff;
+					clear:both;
+					position:relative;
+					border:#F00 0px solid;
+					display:inline-block;
+							
+					
+					
+					
+					
+					}
+.botones ul{
+					padding:0px;
+					margin:0px;
+					border:0px solid #F00;
+					display:inline;
+					}
+.botones li{
+					display:inline;
+					border:0px solid #F00;
+          z-index:2000;
+					}
+.botones div	{
+				display:inline-block;
+        background:url(separacion.gif) no-repeat right 5px;
+				height:3.3em;
+			/*	border:#F00 0px solid;
+				border-right:1px solid #CCC;*/
+				float:left;
+				
+				
+		}					
+.botones div.finBot	{
+				display:inline-block;
+				background:none;
+				height:40px;
+				border:#F00 0px solid;
+				float:left;
+				width:15.9em;
+		}		
+
+
+a.hoverPestana	{background:url(pestanaActiva.gif) bottom no-repeat;
+					width:20em;
+					height:25px;
+					display:block;
+					border:0px solid #F00;
+					padding:0px;
+					margin-left:4px;
+					margin-top:8px;
+					line-height:25px;
+					text-indent:18px;
+					color:#374282;
+					font-weight:normal;
+					}
+a.hoverPestana:hover	{background:url(pestanaActiva.gif) top no-repeat;
+					border:0px solid #F00;padding:0px;
+					color:#fff;
+					}
+a.hoverPestanaON	{background:url(pestanaActiva.gif) top no-repeat;
+					width:20em;
+					height:25px;
+					display:block;
+					border:0px solid #F00;
+					padding:0px;
+					margin-left:4px;
+					margin-top:8px;
+					line-height:25px;
+					text-indent:18px;
+					color:#fff;
+					font-weight:normal;
+					}
+a.hoverPestanaON:hover	{background:url(pestanaActiva.gif) top no-repeat;
+					border:0px solid #F00;padding:0px;
+					color:#fff;
+					}
+
+a.botBig:hover	{background:url(botOnBig.gif) no-repeat;
+					}
+a.bigon	{
+	background:url(botOnBig.gif) no-repeat;
+					color:#003b84;
+					}
+a.on	{
+	/*background:url(botOn.gif) no-repeat;*/
+	
+	background:#f4f4f4;
+					width:180px;
+					color:#00aeef;
+					top:0px;
+					line-height:18px;
+							
+			}
+		
+/*botonera*/
+.clear		{height:5px;
+					display:block;
+					border:#F00 0px solid;
+					clear:both;
+					width:100%;
+					} 
+.clear20	{height:20px;
+					display:block;
+					border:#F00 0px solid;
+					clear:both;
+					}
+.clear10	{height:10px;
+					display:block;
+					border:#F00 0px solid;
+					clear:both;
+					}
+                                        
+
+.cleardoble		{height:15px;
+					display:block;
+					border:#F00 0px solid;
+					} 
+.pieNews	{background:url(barraNews.gif) no-repeat;
+					height:35px;
+					clear:both;
+					margin-top:10px;
+					display:block;
+					border:#F00 0px solid;
+					margin-bottom:20px;
+					}
+
+.pieNewsNew	{
+	width:145px;
+					float:left;
+					clear:none;
+					margin-right:3px;
+					display:block;
+					height:60px;
+					padding-top:5px;
+					background:url(barraNews.gif) no-repeat;
+					margin-top:10px;
+					margin-bottom:20px;
+					}
+.pieNewsNewpaddingTop3	{
+	width:12em;
+					float:left;
+					clear:none;
+					margin-right:3px;
+					display:block;
+					height:49px;
+					background:url(barraNews.gif) no-repeat;
+					margin-top:10px;
+					margin-bottom:20px;
+					padding-top:7px;
+					}	
+	
+.pieNewsNewmargin	{
+				width:12em;
+					float:left;
+					clear:none;
+					margin-right:3px;
+					display:block;
+					height:50px;
+					padding-top:5px;
+					background:url(barraNews.gif) no-repeat;
+					margin-top:10px;
+					margin-bottom:20px;
+					margin-left:2px;
+					}	
+.pieNewsNewControles	{
+	padding-top:5px;
+	height:50px;
+					background:url(barraNews.gif) no-repeat;
+					margin-top:10px;
+					margin-bottom:20px;
+					position:relative;
+					width:640px;
+					float:left;
+					clear:none;
+					margin-right:3px;
+					display:block;
+					}
+.pieNewsContent	{display:block;
+					background:url(prepro_015039.gif) 15px 0px;
+					width:928px;
+					height:35px;
+					color:#FFF;
+					padding-left:14px;
+					padding-top:5px;
+					}
+.pieNewsContent	span	{display:inline-block;
+					float:left;
+					padding-top:5px;
+					padding-left:3px;
+					padding-right:3px;
+					}
+/*.pie			{font-family:Arial, Verdana, Geneva, sans-serif;
+					float: left;
+          font-size: 0.9em;          
+					text-align:center;
+					color:#00aeef;
+					clear:both;
+					padding-top:0px;
+					}
+  */
+  /* CON FOOTER */
+.pie			{font-family:Arial, Verdana, Geneva, sans-serif;
+					float: left;
+          font-size: 0.87em;
+          margin-left: -38px;
+          /float: none;
+					color:#00aeef;
+					clear:both;
+					padding-top:0px;
+					}
+
+  /*-------*/
+.pie ul			{padding-top:0px;
+					padding-bottom:0px;
+					}
+.pie li {display:inline;
+					list-style:none;
+					}
+
+.bloqueNew		{clear:both;
+					display:block;
+					text-align:center;
+					color:#fff;
+					padding:2px;
+					}
+.bloqueNewIcons		{clear:both;
+					display:block;
+					text-align:center;
+					color:#fff;
+					clear:both;
+					display:block;
+					text-align:center;
+					color:#fff;
+					padding:2px;
+					}
+
+.pie a.noSeparacion			{color:#00aeef;
+					background:none;
+					padding-right:0em;
+					padding-left:0.5em;
+					}
+.pie a			{color:#00aeef;
+					background:url(separacionPie.gif) no-repeat -2px;
+					padding-right:0em;
+					padding-left:0.5em;
+          text-decoration: none;
+					}
+
+.pie strong	{color:#00aeef;
+					background:url(separacionPie.gif) no-repeat -2px;
+					padding-right:0em;
+					padding-left:0.5em;         
+           font-weight: normal;
+					}
+
+.pie a:hover	{color:#7fd9fa;
+					}
+.icons			{display:inline-block;
+					margin-top:-3px;
+					height:25px;
+					border:0px solid #F00;
+					}
+.newsletter		{width:400px;
+					}	
+a.botNewsletter	{background:url(prepro_014978.gif) no-repeat;
+					display:inline-block;
+					width:83px;
+					height:22px;
+					font-weight:bold;
+					width:83px;
+					height:22px;
+					color:#000;
+					text-decoration:none;
+					font-size:0.9em;
+					text-align:center;
+					padding-top:5px;
+					padding-right:5px;
+					margin-left:10px;
+					margin-top:2px;
+					}	
+.caja	{
+	display:inline-block;
+					float:left;
+					background:url(fondoCaja.gif) no-repeat;
+					width:314px;
+					font-family: Arial, verdana, trebuchet;
+					
+					color:#666;
+					border:0px solid #F00;
+					margin:auto;
+					}
+.cajaBottomHome	{border:0px solid #F00;
+					height:10px;
+					background:url(fondoCaja.gif) 0px bottom;
+					}
+          /*
+.caja h2	{
+				  margin:auto;
+					width:100%;
+					display:block;
+					border:#039 0px solid;
+					text-align:left;
+					font-size:1.1em;
+					color:#009a49;
+					font-weight:normal;
+					margin-top:0px;
+					margin-bottom:0px;
+					}*/
+.caja h2	{
+					display:block;
+					border:#039 0px solid;
+					text-align:right;
+					font-size:1.1em;
+					color:#009a49;
+					font-weight:normal;
+					margin-top:0px;
+					margin-bottom:0px;
+					border:0px solid #F00;
+					float:left;
+					}
+          
+.caja .titCajaEspecialistas h2{
+          margin-bottom:10px;
+					}
+
+.blue	{color:#007ac5;
+					}
+li.blue a	{color:#007ac5;
+					}					
+.blueinline	{color:#007ac5;
+					font-weight:normal;
+					}
+.blue80		{color:#007ac5;
+					width:80px;
+					}
+.grey80		{color:#666;
+					width:80px;
+					margin-right:2px;
+					margin-left:2px;
+					}
+          
+.siguiente{
+  margin-left:5px;
+  *margin-left:0px;
+}
+
+.textoGris{
+  color:#666;
+}
+
+.paddingTop	{display:block;
+					padding-top:10px;
+					}
+.paddingTopBlue	{display:block;
+					padding-top:3px;
+					color:#007ac5;
+					}
+
+a.white		{color:#FFF;
+					text-decoration:none;
+					}
+a.white:hover		{color:#f3f3f3;
+					text-decoration:none;
+					}
+a.blue:hover	{color:#09F;
+					}
+a.green:hover	{color:#477908;
+					}
+a.grey	{color:#51626f;
+					text-decoration:underline;
+					}
+a.grey:hover	{color:#d2d2d2;
+					}
+
+.green	{color:#78aa37;
+					}
+.grey	{color:#666;
+					}
+				
+.presupuesta	{background:url(iconPresupuesta.gif) no-repeat;
+					margin:10px;
+					padding-left:0px;
+					font-size:1.2em;
+					padding-top:5px;
+					text-align:center;
+					}
+.encuentra	{
+					background:url(iconEncuentra.gif) no-repeat;
+					margin:10px;
+					padding-left:0px;
+					font-size:1.2em;
+					padding-top:5px;
+					text-align:center;
+					}
+.misanitas	{
+					background:url(iconMisanitas.gif) no-repeat;
+					margin:10px;
+					padding-left:0px;
+					font-size:1.2em;
+					padding-top:5px;
+					text-align:center;
+					}
+.cajasAbajo	{display:block;
+					padding-top:5px;
+					position:relative;
+					z-index:20;
+					clear:both;
+					margin:auto;
+					border:0px solid #F00;
+					/*width:79em;*/
+					width:950px;
+					
+					}
+					
+
+/*idiomas*/
+.idiomas		{text-align:right;
+					padding-right:10px;
+					padding-top:10px;
+					clear:both;
+					height:19px;
+					}
+.idiomas a		{color:#1f73b9;
+					text-decoration:none;
+					font-size:0.9em;
+					font-weight:bold;
+					}
+.catala		{background:url(bandCatala.gif);
+					width:19px;
+					height:19px;
+					display:inline-block;
+					float:right;
+					}
+.eng		{background:url(bandEng.gif);
+					width:19px;
+					height:19px;
+					display:inline-block;
+					float:right;
+					}
+/*idiomas*/
+
+.pestanas		{width:500px;
+					display:inline-block;
+					float:left;
+					position:relative;
+					}
+.cabecera	{background:url(fondoCabecera.gif) bottom repeat-x #FFF;
+					height:89px;
+					width:100%;
+					}
+.logo		{display:inline-block;
+					width:147px;
+					height:69px;
+					background:url(logoSanitas.gif);
+					float:left;
+					padding-top:20px;
+					}
+.textoHablamos	{background:url(textoHablamos.gif);
+					display:block;
+					width:193px;
+					height:19px;
+					}
+.marginTop5	{margin-top:5px;
+					}
+.empresaMisaniutas	{float:right;
+					font-family:Arial, Verdana, Geneva, sans-serif;
+					font-size:0.9em;
+					padding-top:5px;
+					}
+.miSanitas		{
+	background:url(miSanitas.gif);
+					display:inline-block;
+					width:22px;
+					height:22px;
+					float:left;
+					left:30px;
+					position:relative;
+					/*margin-top:-3px;*/
+					border:#F00 0px solid;
+					}
+.line		{background:url(lineaSeparacionDerecha.gif) no-repeat;
+					display:block;
+					width:189px;
+					height:4px;
+					padding:0px;
+					margin:0px;
+					margin-left:10px;
+					}
+.line50		{margin-left:50px;
+					}
+/*Nuevos estilos MapaSeo*/
+
+
+
+
+/*bloqueSeo*/
+.pieSeo	{border:0px solid #F00;
+					display:block;
+					clear:both;
+                }
+
+.pieSeo div.clear10 {
+    height:5px;
+}
+
+.bloqueSeo					{background:url(fondoSeo.jpg) bottom;
+					padding:3px;
+					clear:both;
+					} 
+.bloqueSeo strong			{font-size:1.4em;
+					padding:0em;
+					margin:0em;
+					font-weight:bold;
+					display:block;
+					color:#666666;
+					padding-bottom:0.2em;
+					font-family: Arial, verdana, trebuchet;
+					}
+
+.contenBloques				{border:1px solid  #E9E9E9;
+					display:inline-block;
+					padding-bottom:4px;
+					clear:both;
+					width:943px;
+					}
+.contenBloques span			{display:block;
+					clear:both;
+					color:#70ac36;
+					font-size:1.2em;
+					padding-left:19px;
+					margin-top:8px;
+					} 
+.bloque						{border:#F00 0px solid;
+					display:inline-block;
+					top:0px;
+					vertical-align:top;
+					width:24%;
+					float:left;
+					}
+ul.bloqueHorizontal			{border:#F00 0px solid;
+					display:inline-block;
+					top:0px;
+					vertical-align:top;
+					width:100%;
+					float:left;
+					border:#F00 0px solid;
+					margin-top:5px;
+					}
+ul.bloqueHorizontal li		{ float:left;
+					margin-right:5px;
+					display:block;
+					background:none;
+					padding-bottom:10px;
+					list-style:none;
+					}
+ul.bloqueHorizontal ul li	{margin-right:5px;
+					display:block;
+					border:#F00 0px solid;
+					float:none;
+					background:none;
+					list-style:none;
+					}
+
+.contenBloques ul			{padding-left:0px;
+					margin-left:0px;
+					}
+.contenBloques ul li		{ width:200px;
+					font-size:1.1em;
+					padding:0em;
+					margin:0em;
+					font-weight:bold;
+					display:block;
+					color:#00aeef;
+					border-bottom:0px solid #CCC;
+					padding:0.3em;
+					padding-left:20px;
+					font-family: Arial, verdana, trebuchet;
+					}
+.contenBloques ul li ul 	{padding-left:0px;
+					margin-left:-5px;
+					}
+.contenBloques ul li ul li	{width:200px;
+					font-size:0.8em;
+					padding:0em;
+					margin:0em;
+					font-weight:bold;
+					display:block;
+					color:#999;
+					border-bottom:0px solid #CCC;
+					padding:0.2em;
+					padding-left:0px;
+					font-family: Arial, verdana, trebuchet;
+					}
+
+.bloque	a			{color:#999;
+					}
+.bloque	a:hover		{color:#666;
+					}
+a.linkSub			{background:url(list-Seo.jpg) 0px 0px no-repeat;
+					padding-left:12px;
+					color:#666;
+					font-weight:normal;
+					}
+a.linkSub:hover		{color:#999;
+					}
+a.linkPpal			{color:#00aeef;
+					float:left;
+					display:block;
+					border:0px solid #F00;
+					width:200px;
+					border:#F00 0px solid;
+					padding-bottom:8px;
+					}
+a.linkPpal:hover	{color:#4bbae4;
+					}
+.bloqueSeo	a	{color:#666;
+					text-decoration:none;
+					}
+.bloqueSeo	a:hover	{color:#333;
+					}
+/*bloqueSeo*/
+/*Carrusel*/
+.carrusel{
+	position:absolute;
+					top:248px;
+					right:143px;
+					width:20px;
+					height:20px;
+					border:#F00 0px solid;
+					z-index:60;
+					}
+.botPause	{position: absolute;
+					top: 2px;
+					left: 10px;
+					z-index:40;
+					display:block;
+					cursor:pointer;
+					}
+.botNext	{
+	width:7px;
+					height:13px;
+					position: absolute;
+					top: 2px;
+					left: 20px;
+					z-index:40;
+					display:block;
+					}
+.botNext a:hover {
+	top: -13px;
+					position: absolute;
+					}
+.botPrev	{
+	width:7px;
+					height:13px;
+					position: absolute;
+					top: 2px;
+					left: 0px;
+					z-index:40;
+					display:block;
+					}
+.botPrev a:hover	{
+	top: -13px;
+					position: absolute;
+					}
+#leftControl {
+  top:50px;
+					left:50px;
+					background:transparent url(flechaBack.gif) no-repeat 0 0;
+					}
+#rightControl {
+  top:50px;
+					right:-100px;
+					background:transparent url(flechaGo.gif) no-repeat 0 0;
+					}
+
+#slideshow #slidesContainer {
+	margin:0px auto;
+					width:500px;
+					left:20px;
+					height:163px;
+					overflow:auto;
+					/* allow scrollbar */
+	position:relative;
+					border:#000 1px solid;
+					margin-left:30px;
+					}
+
+#slideshow { margin: 0px;
+					display: inline;
+					}
+#nav { width: 120px;
+					height: 18px;
+					margin: 0px;
+					padding-top: 5px;
+					padding-left:30px;
+					display: inline;
+					position: absolute;
+					top: 244px;
+					left: 780px;
+					z-index:20;
+					/*
+					background:#e74c90;
+					background : transparent url(fondo-trans.png) 50% 50%;					
+					*/
+					}
+#nav li { width: 0px;
+					float: left;
+					margin: 8px;
+					list-style: none;
+					display: inline;
+					}
+#nav a { width: 0px;
+					padding: 0px;
+					display: inline;
+					display: inline;
+					}
+#nav a.activeSlide {display: inline;
+					}
+#nav a:focus { outline: none;
+					display: inline;
+					}
+#nav img { border: none;
+					display: inline;
+					padding-left:5px;
+					z-index:10;
+					display:inline-block;
+					}
+
+
+#navHospitales {background:#e2664b;
+					width: 120px;
+					height: 18px;
+					margin: 0px;
+					padding-top: 5px;
+					padding-left:30px;
+					display: inline;
+					position: absolute;
+					top: 244px;
+					left: 780px;
+					z-index:20;
+					}
+#navHospitales li { width: 0px;
+					float: left;
+					margin: 8px;
+					list-style: none;
+					display: inline;
+					}
+#navHospitales a { width: 0px;
+					padding: 0px;
+					display: inline;
+					display: inline;
+					}
+#navHospitales a.activeSlide {display: inline;
+					}
+#navHospitales a:focus { outline: none;
+					display: inline;
+					}
+#navHospitales img { border: none;
+					display: inline;
+					padding-left:5px;
+					}
+
+
+/*Carrusel*/
+/*Carrusel News*/
+
+h2.tagsCarrusel {height:0px; overflow:hidden; display:block; padding:0px; margin:0px;} 
+
+.promosNews	{width:520px;
+					height:41px;
+					display:block;
+					border:0px solid #F00;
+					overflow:hidden;
+					padding-left:0px;
+					padding-right:0px;
+					margin:auto;border:#acdef8 1px solid;
+					background:#f6f6f6;
+					top:1px;
+					position:relative;
+					}
+.promo	{width:200px;
+					display:inline-block;
+					float:left;
+					display:inline;
+					height:41px;
+					border:#F00 0px solid;
+					}
+.imgPromo	{float:left;
+					}
+.textoPromo	{color:#007de3;
+					font-weight:bold;
+					font-size:0.9em;
+					height:41px;
+					display:table-cell;
+					vertical-align:middle;
+					padding-left:5px;
+					padding-right:5px;
+					}
+.textoPromo	a	{color:#007de3;
+					}
+.textoPromo	a:hover	{color:#3699e9;
+					}
+.controlesNews	{position:absolute;
+					top:0px;
+					left:0px;
+					}
+.flechaBackNews	{
+	position:absolute;
+					left: 8px;
+					top: 9px;
+					border:0px;
+					cursor:pointer;
+					}
+.flechaGoNews	{
+	position:absolute;
+					left: 630px;
+					top: 9px;
+					border:0px;
+					cursor:pointer;
+					}
+.bupa{
+	font-family: Arial, verdana, trebuchet;
+					
+					}
+.font15	{font-size:1em;
+					}	
+.font17	{font-size:1.0em;
+					}	
+
+.font17Telefono	{clear:both;
+					display:block;
+					text-align:center;
+					color:#fff;
+					padding:0px;
+					font-size:1.3em;
+					}
+
+html>body .ajusteInput {
+				top:0px;
+				position:relative;	
+				}
+.ajusteInput {
+				top:-6px;
+				position:relative;	
+				}
+		
+
+
+.contenBloquesNube		{ border:1px solid  #E9E9E9;
+					padding-bottom:4px;
+					clear:both;
+					width:943px;
+					}
+.nube		{margin-top:10px;
+					padding-bottom:10px;
+					border:#F00 0px solid;
+					clear:both;
+					padding:10px;
+					}
+.nube	a	{color:#00aeef;
+					border:0px solid #FF0000;
+					} 
+.nube a:hover	{color:#48c6f6;
+					}
+.nube	ul	{margin:0px;
+					padding:0px;
+					border:0px solid #F00;
+					display:inline-block;
+					}
+.nube	li	{display:inline;
+					border:0px solid #F00;
+					}
+li.size1	a{font-size:1.2em;
+					padding-left:9px;
+					border:0px solid #FF0000;
+					}
+li.size2	a{font-size:1em;
+					padding-left:9px;
+					border:0px solid #FF0000;
+					}
+li.size3	a{font-size:0.8em;
+					padding-left:9px;
+					background:none;
+					border:0px solid #FF0000;
+					}
+
+span.img-rollover{ width: 15px;
+					height: 13px;
+					overflow: hidden;
+					display:inline-block;
+					position: relative;
+					}
+span.img-rollover a:hover{ top: -13px;
+					position: relative;
+					}
+
+span.img-rollover2{ width: 15px;
+					height: 15px;
+					overflow: hidden;
+					display:inline-block;
+					position: absolute;
+					}
+span.img-rollover2 a:hover{ top: -13px;
+					position: absolute;
+					}
+
+.img-rollover3{ width: 15px;
+					height: 15px;
+					overflow: hidden;
+					display: inline-block;
+					position: relative;
+					}
+.img-rollover3 a:hover{ top: -13px;
+					position: relative;
+					}
+       
+/*hospitales*/
+.titGreen		{color:#50b848;
+					font-size:1.2em;
+					display:block;
+					padding-bottom:5px;
+					padding-left:16px;
+					}
+.hospital		{background:url(iconHopitales.jpg) no-repeat;
+					height:2.5em;
+					float:left;
+					padding-left:70px;
+					line-height:65px;
+					}
+
+.fondoCajaFondoLinks	{
+  }
+.fondoCajaFondoLinks ul {padding:0px;
+					margin:0px;
+					padding-left:30px;
+					padding-right:30px;
+					}
+.fondoCajaFondoLinks li	{color:#50b848;
+					padding-bottom:3px;
+          list-style-type:inherit;
+					}
+.fondoCajaFondoLinks	a {color:#00aeef;
+					}
+.fondoCajaFondoLinks	a:hover {color:#618c9d;
+					}					
+.fondoCajaTopLinks	{background:url(fondoHospitalesLinksTop.jpg) bottom left no-repeat;
+					display:block;
+					width:43.5em;
+					height:10px;
+					}
+.fondoCajaBottomLinks	{background:url(fondoHospitalesLinksBottom.jpg) top left no-repeat;
+					display:block;
+					width:43.5em;
+					height:10px;
+					}
+.fondoCajaFondoLinks	{background:url(fondoHospitalesLinksFondo.jpg) repeat-y;
+					display:block;
+					width:520px;
+					border:0px solid #F00;
+					}
+.cajaLinksDistribuidora	{clear:both;
+					}
+
+.textHospital	{display:block;
+					}
+.fichaHospital	{clear:both;
+					display:inline-block;
+					border:0px solid #F00;
+					}
+.fichaHospitalLeft	{float:left;
+					}
+.textoHospitalDistribuidora	h2{color:#00aeef;
+					font-size:1.4em;
+					padding-top:6px;
+					
+					}
+.textoHospitalDistribuidora	{color:#8e908f;
+					float:left;
+					background:url(fondoDistribuidoraHospital.jpg) repeat-x;
+					width:25.4em;
+					height:14em;
+					padding:10px;
+					padding-top:0px;
+					position:relative;
+					overflow:auto;
+					}
+.bottomFichaHospital	{
+	position:relative;
+					bottom:0em;
+					left:0px;
+					width: 252px;
+					}
+.bottomFichaHospitalDistribuidora	{
+	position:relative;
+					bottom:0em;
+					left:0px;
+					width: 25.4em;
+					}					
+.bottomFichaHospitalDistribuidora	ul{margin:0px;
+					padding:0px;
+					padding-top:3em;
+					
+					}
+.bottomFichaHospitalDistribuidora	li{list-style:none;
+					margin:0px;
+					padding:0px;					
+					
+					
+					}
+.bottomFichaHospitalDistribuidora a {color:#005195;
+					font-size:1.2em;
+					text-decoration:none;
+					display:block;
+					clear:both;
+					height:16px;
+					background:url(iconListCajasBlue.gif) left no-repeat;
+					text-indent:15px;
+					}
+.bottomFichaHospital a:hover{color:#0a67b5;
+					}
+.bottomFichaHospital	ul{margin:0px;
+					padding:0px;
+					}
+.bottomFichaHospital	li{list-style:none;
+					margin:0px;
+					padding:0px;
+					}
+.bottomFichaHospital a {color:#005195;
+					font-size:1.2em;
+					text-decoration:none;
+					display:block;
+					clear:both;
+					height:16px;
+					}
+.bottomFichaHospital a:hover{color:#0a67b5;
+					}
+
+.rightHospital	{background:url(rightFichaDistribuidora.jpg) no-repeat left;
+					display:block;
+					width:16px;
+					height:177px;
+					border:0px solid #F00;
+					float:right;
+					}
+.imgHospitalDistribuidora	{float:left;
+					width:179px;
+					height:177px;
+					display:block;
+					}
+
+
+.fichaSoluciones	{clear:both;
+					display:inline-block;
+					border:0px solid #F00;
+					}
+.fichaSolucionesLeft	{float:left;
+					}
+
+          
+.textoSolucionesDistribuidora	h3{color:#00aeef;
+                  padding-top:15px;
+                  margin:0px;
+                  font-size:1.5em;
+                  } 
+.textoSolucionesDistribuidora   h4{padding:0px;
+                               margin:0px;
+                               padding-bottom:5px;
+                               font-size:1.1em;
+                               color:#666;
+                             } 
+
+.textoSolucionesDistribuidora	{color:#8e908f;
+					float:left;
+					background:url(prepro_014995.jpg) repeat-x;
+					width:27.2em;
+					*width:26.2em;
+					height:11em;
+					padding:10px;
+					padding-top:0px;
+					position:relative;
+					overflow:hidden;
+					}
+.textoSolucionesDistribuidora ul	{margin:0px;
+					padding:0px;
+					margin-top:5px;
+          width:339px;
+					} 
+
+.textoSolucionesDistribuidora li	{float:left;
+					width:12.8em;
+					border:0px solid #F00;
+					padding-left:9px;
+					list-style:none;
+					background:url(BULLET_CYAN.png) no-repeat scroll 0 6px transparent;
+          margin-top:2px;
+          /*url(iconListCajas.gif) no-repeat left -2px;*/
+					}
+.textoSolucionesDistribuidora a{}
+
+.bottomFichaSoluciones	{
+	position:absolute;
+					bottom:20px;
+					left:10px;
+					width: 300px;
+					}
+.bottomFichaSoluciones	ul{margin:0px;
+					padding:0px;
+					}
+.bottomFichaSoluciones	li{list-style:none;
+					margin:0px;
+					padding:0px;
+					}
+.bottomFichaSoluciones a {color:#005195;
+					font-size:1.2em;
+					text-decoration:none;
+					display:block;
+					clear:both;
+					height:16px;
+					}
+.bottomFichaSoluciones a:hover{color:#0a67b5;
+					}
+
+.rightSoluciones	{background:url(../digitalmedia/rightFichaDistribuidoraSolucio.jpg) no-repeat;
+					display:block;
+					width:0px;
+					height:140px;
+					border:0px solid #F00;
+					float:right;
+					}
+.imgSolucionesDistribuidora	{float:left;
+					width:178px;
+					display:block;
+					}
+
+
+.camposTextHospitales	{width:200px;
+					border:#F00 0px solid;
+					margin-left:5px;
+					font-family:Arial, Verdana, Geneva, sans-serif;
+					font-size:0.9em;
+					text-align:center;
+					}
+.camposTextHospitales div	{display:inline;
+					padding-left:0px;
+					padding-top:10px;
+					color:#00aeef;
+					}
+
+h2.titCajaCita	{	margin:0px;
+					margin-left:0.5em;
+					background:url(iconCitaBotonera.gif) no-repeat;
+					display:block;
+					border:#F00 0 solid;
+
+					font-family: Arial, verdana, trebuchet;
+					color:#666;font-size:1.2em;
+
+					font-size:1em;
+					font-weight:normal;
+					}
+
+.fotoHospital	{z-index:1;
+					position:relative;
+					border:0px solid #F00;
+					background:#CCC;
+					width:549px;
+					height:auto;
+					margin:auto;
+					}
+
+.menuHospital	{
+	z-index:2;
+					position:absolute;
+					border:0px #F00 solid;
+					left: 33px;
+					bottom: 2px;
+					width:16.5em;
+					height:100px;
+					overflow:auto;
+					
+					}
+.menuHospital ul{padding:0px;
+					margin:0px;
+					}
+.menuHospital li{list-style:none;
+					padding-bottom:2px;
+					padding-top:2px;
+					border-bottom:#FFF 1px solid;
+					background:url(flechaMenuHospital.gif) 190px 5px no-repeat;
+					}
+.menuHospital a{color:#FFF;
+					text-decoration:none;
+					display:block;
+					}
+.menuHospital a:hover{color:#b9ecff;
+					}
+
+.linksCajaCitaBlue	a	{display:inline;
+					color:#00aeef;
+					font-weight:bold;
+					float:none;
+					border:#F00 0px solid;
+					}
+.linksCajaCitaBlue	a:hover	{display:inline;
+					color:#155577;
+					font-weight:bold;
+					float:none;
+					border:#F00 0px solid;
+					}					
+ul.linksCajaCitaBlue		{padding-left:6px;
+					border:#F00 0px solid;
+					display:block;
+					padding:0px;
+					margin:0px;
+					margin-left:12px;
+					padding-top:6px;
+					}
+.linksCajaCitaBlue li		{display:block;
+					color:#999;
+					font-weight:bold;
+					clear:both;
+					background:url(iconListCajas.gif) -5px top no-repeat;
+					border:#F00 0px solid;
+					padding-left:10px;
+					list-style:none;
+					width:175px;
+					font-size:0.9em;
+					padding-bottom:4px;
+					}
+
+.linksCajaCita		{}
+.linksCajaCita	a	{display:inline;
+					color:#999;
+					font-weight:bold;
+					float:none;
+					border:#F00 0px solid;
+					}
+.linksCajaCita	a:hover	{color:#acacac;
+					}
+
+ul.linksCajaCita		{padding-left:6px;
+					border:#F00 0px solid;
+					display:block;
+					padding:0px;
+					margin:0px;
+					margin-left:4px;
+					padding-top:6px;
+					}
+.linksCajaCita li		{display:block;
+					color:#999;
+					font-weight:bold;
+					clear:both;
+					border:#F00 0px solid;
+					padding-left:10px;
+					list-style:none;
+					width:190px;
+					font-size:0.9em;
+					/*background:url(iconListCajasBulletGrey.gif) -4px 0px no-repeat;*/
+					}
+.Maps			{padding-left:8px;
+					}
+.Maps a			{margin-top:3px;
+					display:block;
+					}
+.video	{display:block;
+					padding-left:10px;
+					margin:auto;
+					border:0px solid #F00;
+					float:left;
+					text-align:center;
+					}
+.video span		{display:block;
+					}
+.video	a:hover{color:#155577;}					
+.cajaVideos		{padding-top:5px;
+					}
+.cajaVideosTop	{background:url(topCajaVideos.gif) no-repeat bottom;
+					width:342px;
+					height:8px;
+					display:block;
+					}
+.cajaVideosBottom{background:url(bottomCajaVideos.gif) no-repeat top;
+					width:342px;
+					height:8px;
+					display:block;
+					}
+.contentVideos	{background:url(fondoVideosContent.gif);
+					width:342px;
+					display:inline-block;
+					}
+
+
+
+.titCajaVideos	{margin-left:0.5em;
+					background:url(iconVideosBotonera.gif) no-repeat;
+					display:block;
+					border:#F00 0 solid;
+					height:1.80em;
+					font-family: Arial, verdana, trebuchet;
+					color:#666;font-size:1.2em;
+					text-indent:25px;
+          margin-bottom:0px;
+          margin-top:0px;
+          padding-top:3px;
+					}
+          
+h2.titCajaUrgencias	{
+					margin:0em;
+					margin-left:0.5em;
+					background:url(iconUrgenciasBotonera.gif) no-repeat;
+					display:block;
+					border:#F00 0 solid;
+					height:1.80em;
+					font-family: Arial, verdana, trebuchet;
+					color:#666;
+					font-size:1.2em;
+					text-indent:24px;
+					padding-top:2px;
+					font-weight:normal;
+					}
+h2.titCajaEspecialidades	{
+					margin:0em;
+					margin-left:0.5em;
+					background:url(iconEspecialidadesBotonera.gif) no-repeat;
+					display:block;
+					border:#F00 0 solid;
+					height:1.80em;
+					font-family: Arial, verdana, trebuchet;
+					color:#666;
+					font-size:1.2em;
+					text-indent:23px;
+					padding-top:2px;
+					font-weight:normal;
+					
+					}
+h2.titCajaEspecialidad	{
+					margin:0em;
+					margin-left:0.5em;
+					background:url(SON079962.png) no-repeat;
+					display:block;
+					border:#F00 0 solid;
+					height:1.80em;
+					font-family: Arial, verdana, trebuchet;
+					color:#666;
+					font-size:1.2em;
+					text-indent:23px;
+					padding-top:2px;
+					font-weight:normal;
+					
+					}
+.cajaBannersVideos	{
+					float:left;
+					width:344px;
+					border:0px solid #F00;
+					}
+.cajasDereHospitales {float:right;
+					display:block;
+					padding-top:3px;
+					}
+a.more		{color:#00aeef;
+					text-decoration:none;
+					display:block;
+					text-align:right;
+					padding-right:6px;
+					}
+a.more:hover		{color:#09F;
+					}
+
+.cajaDereHospitales		{display:block;
+					width:210px;
+					background:url(cajaTop.gif) no-repeat;
+					border:#fff 1px solid;float:left;
+					display:inline-block;
+					
+					} 
+.contentCajasHospitales	{border:#F00 0px solid;
+					clear:both;
+					display:inline-block;
+					width:770px;
+					
+					}
+.cajaContentHomeHospitales	{background:url(fondoCajaDere.gif) repeat-y;
+					width:17.5em;
+					width:210px;
+					margin-top:10px;
+					border:#000 0px solid;
+					height:15.3em;
+
+					}
+.cajaContentHomeHospitales img {padding-left:15px;}
+/*hospitales*/
+/*hospitales ampliada*/
+.iconsCompartir .Cuidados	{float:right;
+					margin-top:8px;
+					margin-right:5px;
+					}
+.iconsCompartirAsesor	{float:right;
+					margin-top:8px;
+					margin-right:5px;
+					}					
+.iconsCompartir		{float:right;
+					margin-top:10px;
+					margin-right:5px;
+					}
+.iconsCompartir img{float:left;
+					}
+.iconsCompartirDistribuidora  {float:right;
+					margin-right: 15px;
+          padding-bottom:0.2em;
+          margin-top: -30px;
+					}
+/*multi*/
+.textoContentMulti	{width:550px;
+					overflow:hidden;
+					}
+
+.iconsCompartirDistribuidoraMulti  {float:right;
+					margin-right:15px;
+          padding-bottom:0.2em;
+          margin-bottom: -30px;
+ 
+					}
+
+.cajaCoberturas			{display:inline-block;
+					border:1px solid #999;
+					margin-top:4px;
+					padding-bottom:8px;
+					background:url(degradadoCaja.jpg) bottom repeat-x;
+					}
+.cajaCoberturas h3		{color:#3896ed;margin:0px;
+					padding:0px;
+					padding-left:5px;
+					padding-top:5px;
+					}
+.textoContentMulti		{padding-top:3px;
+					border:#FF0000 0px solid;
+					margin:auto;
+					}
+
+
+
+/*Cambios realizados imagen no esta de fondo*/
+.cajaMulti		{
+					width:545px;
+					height:148px;
+					display:block;
+					position:relative;
+					padding-left:5px;
+					padding-top:10px;
+					overflow:hidden;
+					z-index:10;
+	
+					}
+.cajaMultiVacia		{
+					width:545px;
+					height:25px;
+					display:block;
+					position:relative;
+					padding-left:5px;
+					padding-top:10px;
+					overflow:hidden;
+					z-index:10;
+	
+					}
+.fondoMulti {
+		z-index:-2;
+		margin-top:-10px;
+		
+	}
+.cajaMulti	ul	{margin:0px;
+					padding:0px;
+					padding-top:35px;
+					}
+
+.cajaMulti	h2	{ position:relative;
+					bottom:150px;
+					left:10px;
+
+					}
+/*Comentado por que da problemas con los estilos del editor fck con el ttulo, el subtitulo ha cambiado de estilo*/
+/*.cajaMulti span	{ position:relative;
+					bottom:150px;
+					left:10px;
+
+
+
+					}*/
+/*Este subtitulo nuevo se aplica al subtitulo de la cabecera, ya que ha dejado de ser un span y ahora es un div con esta clase*/
+.subtituloCajaMulti {
+					bottom:150px;
+					left:10px;
+          position:relative;
+}
+
+.acajaMulti	li	{display:inline;
+					}
+/**/					
+
+.content ul.menu	{margin:auto;
+					padding:0px;
+					border:0px solid #F00;
+					margin-left:10px;
+					margin-right:30px;
+					margin-top:-30px;
+					clear:both; 
+					display:inline-block;
+					z-index:20;
+					position:relative;
+					/*background:#fff;*/
+					} 
+.content .menu{margin:0 auto; padding:0;display:block;}
+.content .menu li{padding:0; margin:0; list-style:none; display:inline;}
+.content .menu li a{float:left; padding-left:15px; display:block; color:rgb(255,255,255); text-decoration:none; font:12px Verdana, Arial, Helvetica, sans-serif; cursor:pointer; background:url("topMenuImages.png") 0px -30px no-repeat; outline:none;}
+.content .menu li a span{ float:left; display:block; padding-right:15px; background:url("topMenuImages.png") 100% -30px no-repeat; padding-top:9px;  padding-bottom:7px;}
+.content .menu li a:hover{background-position:0px -60px; color:rgb(255,255,255);}
+.content .menu li a:hover span{background-position:100% -60px;}
+.content .menu li a.active, .menu li a.active:hover{line-height:30px; font:12px Verdana, Arial, Helvetica, sans-serif; background:url("topMenuImages.png") 0px -90px no-repeat; color:rgb(255,255,255);}
+.content .menu li a.active span, .menu li a.active:hover span{background:url("topMenuImages.png") 100% -90px no-repeat;}
+
+/**/					
+					
+.acajaMulti	a	{display:inline-block;
+					width:92px;
+					height:22px;
+					background:url(prepro_014973.png) bottom;
+					text-align:center;
+					text-decoration:none;
+					padding-top:8px;
+					color:#666;
+					}
+
+.acajaMulti	a:hover	{background-position:top;
+					color:#666;
+					font-weight:bold;
+					}
+
+.acajaMulti span	{color:#FFF;
+					font-size:1.2em;
+					width:250px;
+					display:block;
+					}
+.filaCobertura	{display:inline-block;
+					border:#F00 0px solid;
+					width:410px;
+					}
+.filaCoberturaMulti	{display:inline-block;
+					border:#F00 0px solid;
+					width:545px;
+					}
+.cobertura	{display:block;
+					float:left;
+					width:190px;
+					height:17px;
+					border-bottom:#3896ed 1px dotted;
+					margin-right:10px;
+					padding-top:1em;
+					margin-left:4px;
+					}
+
+.coberturaMulti {
+    border-bottom: 1px dotted #3896ED;
+    display: block;
+    float: left;
+    margin-left: 4px;
+    margin-right: 0;
+    width: 156px;
+    height:2.5em;
+    padding-top:0.5em;
+}     
+
+          
+.calculaCuota	{padding-top:10px;
+					padding-bottom:10px;
+					}
+.calculaCuota	span{font-size:1.3em;
+					font-weight:bold;
+					color:#005abb;
+					margin-right:5px; 
+					}
+.calculaCuota	input	{width:70px;
+					padding-left:4px;
+					margin-right:4px;
+					}
+.calculaCuotaMulti	{padding-top:10px;
+					padding-bottom:10px;
+					border:0px solid #F00;
+					display:inline-block;
+					border:1px #CCC solid;
+					padding:4px;
+					clear:both;
+          width:538px;
+					}
+.calculaCuotaMulti	span{font-size:1.3em;
+					font-weight:bold;
+					color:#005abb;
+					margin-right:5px;
+					}
+.calculaCuotaMulti	input	{width:70px;
+					/*padding-left:4px;*/
+					margin-right:4px;
+					}
+.checkNO		{background:url(iconCheckNo.gif) left 10px no-repeat;
+					}
+.check		{ left 10px no-repeat;}
+
+.checkNODistribuidoras	{background:url(iconCheckNo.gif) left 0px no-repeat;
+					}
+.checkDistribuidoras		{ left 0px no-repeat;
+					}
+.botsAbajoMulti 	{display:inline-block;
+					border:0px solid #F00;
+					width:550px;
+					border-top:#CCC 1px solid;
+					text-align:center;
+					padding-top:5px;
+					}
+.botsAbajoMulti	 div	{float:left;
+					width:32%;
+					display:block;
+					height:65px;
+					vertical-align:middle;
+					margin-top:10px;
+					margin-bottom:10px;
+					padding-left:5px;
+					padding-top:20px;
+					}
+.bordeRight		{border-right:#ccc 1px solid;
+					}
+a.linkSolicitar		{color:#00aeef;
+					text-decoration:none;
+					display:block;
+					padding:8px;
+					text-align:left;
+					background:url(iconListCajasBlue.gif) no-repeat left 9px;
+					padding-left:15px;
+					}
+.solicitar	{display:block;
+					width:90px;
+					}
+.cajaPrecioMulti	{
+					float:right;
+					padding-top:14px;
+					margin-left:20px;
+					}
+.cajaPrecioMulti span	{font-size:0.8em;
+						color:#999;
+						display:block;
+						padding-left:3px;
+						}					
+		
+.camposMultiPrecio			{width:295px; padding-left:4px;}					
+.camposMultiPrecio select	{width:70px; font-size:0.9em;}
+.camposMultiPrecio input 	{width:31px; font-size:0.9em;}
+.camposMultiPrecio input.boton_incluir {width:13em;}
+.contenedorCuotaMulti		{
+							float:right;
+							border:#F00 0px solid;
+							width:545px;
+							display:block;
+	
+							}					
+.precioCobertura	{border-left:#3896ed 1px dotted;
+					float:right;
+					margin-top:34px;
+					font-size:3.6em;
+					padding-top:7px;
+					padding-left:6px;
+					color:#3896ed;
+					padding-right:16px;
+					position:relative;
+					} 
+.precioCoberturaMulti	{border-left:#3896ed 1px dotted;
+					float:right;
+					font-size:3.6em;
+					margin-top:8px;
+					padding-top:7px;
+					padding-left:6px;
+					color:#3896ed;
+					padding-right:0px;
+					position:relative;
+          letter-spacing: -2px;
+          height:2em;
+					} 
+          
+.precioCoberturaDesde	{
+          position:absolute;
+					font-size:11px;
+					/*left: 12px;*/
+          letter-spacing: 1px;
+					top: 1px;
+					}
+.precioCoberturaMes		{
+          position:absolute;
+					font-size:0.3em;
+					top: 56px;
+          letter-spacing: 1px;
+          /*right: -5px;*/
+					}
+.precioCoberturaDesdeDistribuidoraSeguros	{
+          font-size: 11px;
+          left: 10px;
+          position: absolute;
+          top: -5px;
+					}
+.precioCoberturaMesDistribuidoraSeguros	{
+          font-size: 11px;
+          position: absolute;
+          right: -21px;
+          top: 30px;
+          width: 45px !important;
+					}
+          
+.precioCoberturaMesDistribuidoraSeguros sub{
+          position: relative;
+          top:-2px;
+          float:right;
+}
+a.botON	{background-position:bottom;
+					}
+
+/*Para seguro Dental (Caja dos precios)*/
+.contenedorCuotaMultiDental {
+float:left;
+border:#F00 0px solid;
+width:268px;
+display:block;
+text-align:center;
+} 
+.precioCoberturaDental {border-left:#3896ed 0px dotted;
+float:right;
+font-size:3.6em;
+margin-top:8px;
+padding-top:7px;
+padding-left:6px;
+color:#3896ed;
+padding-right:0px;
+position:relative;
+          letter-spacing: -2px;
+          height:2em;
+} 
+.lineaDerecha {border-right:#3896ed 1px dotted;} 
+.contentDental				{
+							position:relative;
+							border:0px solid #F00;
+							display:inline-block;
+							padding-left:1em;
+							}		
+
+/**/
+.fondoCajaTopDistribuidoras	a {color:#00aeef;
+					}
+.fondoCajaTopDistribuidoras	{background:url(fondoDistribuidoraLinksTop.jpg) bottom left no-repeat;
+					display:block;
+					width:744px;
+					height:10px;
+					border:0px solid #F00;
+					}
+.fondoCajaBottomDistribuidoras	{background:url(fondoDistribuidoraLinksBottom.jpg) top left no-repeat;
+					display:block;
+					width:744px;
+					height:10px;
+					}
+.fondoCajaFondoDistribuidoras	{background:url(fondoDistribuidoraLinksFondo.jpg);
+					display:inline-block;
+					width:744px;
+					}
+
+
+.fichaDistribuidoraSeguros	{display:inline-block;
+					border:0px solid #F00;
+					clear:both;
+					}
+.fotoDistribuidoraSeguros	{float:left;
+					width:178px;
+					height:182px;
+					}
+.textoDistribuidoraSeguros	{float:left;
+					background:url(fondoDistribuidoraSeguros.jpg) repeat-x;
+					height:182px;
+					display:block;
+					width:46em;
+					overflow:hidden;
+					
+					}
+.textoDistribuidoraSegurostxt	{color:#8e908f;
+					float:left;
+					width:22em;
+					padding:0px;
+					padding-top:0px;
+					position:relative;
+					border:0px solid #F00;
+					height:165px;
+					
+					}
+.textoDistribuidoraSegurostxt p	{line-height:1em;}					
+
+.cuadroCoberturasSeguros	{float:right;
+					position:relative;
+					border-left:1px dotted #005abb;
+					margin-top:8px;
+					padding-left:8px;
+					height:13em;
+					overflow:hidden;
+					width:22.6em;
+					}
+.cuadroCoberturasSeguros ul	{margin:0px;
+					padding:0px;
+					float:left;
+					width:140px;
+					border:0px #F00 solid;
+					}
+.cuadroCoberturasSeguros li	{margin:0px;
+					padding:0px;
+					float:left;
+					width:140px;
+					border:0px #F00 solid;
+					list-style:none;
+					border-bottom:1px dotted #8c8c8c;
+					/*text-indent:20px;*/
+					}
+
+.cuadroCoberturasSeguros ul li img{
+          float:left;
+}
+
+.precioCoberturaSegurosContent	{float:left;
+					width:110px;
+					position:relative;
+					margin-top:-5px;
+					}
+.precioCoberturaSeguros		{border-left:#3896ed 1px dotted;
+					float:right;
+					font-size:3em;
+					padding-left:6px;
+					color:#3896ed;
+					padding-right:4px;
+					position:relative;
+					border:0px #F00 solid} 
+.rightCajaDistribuidores	{width:14px;
+					height:182px;
+					background:url(rightCajaDistribuidores.jpg);
+					float:right;
+					}
+.paddindLeft				{padding-left:12px;
+					}
+
+.paddindLeft	.botAzul			{margin-left:17px;
+					}
+.paddindLeft	.botVerde			{margin-left:17px;
+					}
+.fondoCajaFondoDistribuidorasTop	{
+				display:inline-block;
+				background:url(fondoDistribuidoraLinksFondo.jpg);
+				width:744px;
+				overflow:auto;
+				padding-bottom:5px;
+				
+					}
+.textosTopDisribuidoraLeft	{float:left;
+					display:block;
+					width:400px;
+					padding-left:25px;
+					padding-top:0px;
+					background:url(iconDistribuidora.gif) no-repeat 5px 20px;
+					}
+.textosTopDisribuidoraLeft h2	{color:#009cde;
+					padding-left:80px;
+					padding-top:0px;
+					font-size:1.5em;
+					}
+.textosTopDisribuidoraLeft h3	{color:#8996a0;
+					padding-left:80px;
+					font-size:1.3em;
+					}
+          
+ h2.textosTopDisribuidoraLeft a	{color:#009cde;
+					padding-left:80px;
+					padding-top:0px;
+					font-size:1.5em;
+					}
+h3.textosTopDisribuidoraLeft a	{color:#8996a0;
+					padding-left:80px;
+					font-size:1.3em;
+					}         
+.textosTopDisribuidoraLeft a	{color:#16b3ee;
+					text-decoration:none;
+					display:block;
+					background:url(iconListCajas.gif) -7px -1px no-repeat;
+					padding-left:8px;
+					margin-top:20px;
+					}
+.textosTopDisribuidoraLeft a:hover	{color:#09F;
+					}
+.textosTopDisribuidoraRight	{float:right;
+					display:block;
+					width:295px;
+					border-left:1px dotted #999;					
+					overflow:hidden;
+					}
+
+.fondoCajaFondoDistribuidoras	ul	{margin:0px;
+					padding:0px;
+					display:inline-block;
+					padding-left:35px;
+					}
+.fondoCajaFondoDistribuidoras	li	{list-style:none;
+					float:left;
+					width:225px;
+					padding-right:5px;
+					font-size:0.9em;
+					}
+.fondoCajaFondoDistribuidoras	h2	{color:#009cde;
+					padding:0px;
+					margin:0px;
+					padding-left:35px;
+					padding-bottom:10px;
+					}
+.fondoCajaFondoDistribuidoras	strong{display:block;
+					color:#009cde;
+					}
+.fondoCajaFondoDistribuidoras	strong a{display:block;
+					color:#009cde;
+					}
+.fondoCajaFondoDistribuidoras	{display:block;
+					color:#8996a0;
+					}
+
+ul.LinksDistribuidoras 			{
+					
+					border:0px solid #F00;
+					margin-top:0px;
+					padding-top:0px;
+					position:relative;
+					top:0px;
+					}
+.LinksDistribuidoras li			{
+					border-bottom:1px solid #7eb3d5;
+					margin-left:0px;
+					width:200px;
+					list-style:none;
+					}
+.LinksDistribuidoras 	a			{color:#666;
+					text-decoration:none;
+					display:block;
+					padding-left:10px;
+					background:url(iconListCajasBullet.gif) -4px 2px no-repeat;
+					display:block;
+					padding-top:0.3em;
+					padding-bottom:0.3em;
+					}
+.LinksDistribuidoras 	a:hover			{color:#999;
+					}
+
+/*hospitales Seo*/
+.detalleHospitalSeo	{font-family:Arial, Geneva, sans-serif;
+					font-size:0.8em;
+					}
+.detalleHospitalSeo li	{letter-spacing:0em;
+					padding:0px;
+					}
+
+.especialistas	{background:url(iconEspecialistas.gif) no-repeat;
+					margin:10px;
+					padding-left:0px;
+					font-size:1.2em;
+					padding-top:5px;
+					border:#F00 0px solid;
+					}
+.planes			{background:url(iconPlanes.gif) no-repeat;
+					margin:10px;
+					padding-left:0px;
+					font-size:1.2em;
+					padding-top:5px;
+					border:#F00 0px solid;
+					}
+.gestiona	{background:url(iconGestiona.gif) no-repeat;
+					margin:10px;
+					padding-left:0px;
+					font-size:1.2em;
+					padding-top:5px;
+					border:#F00 0px solid;
+					}
+
+.titCajaHospitales			{margin:auto;
+					width:80%;
+					display:block;
+					border:#039 0px solid;
+					text-align:center;
+					font-size:1.1em;
+					color:#009a49;
+          padding-left: 1em;
+					}
+          
+h2.titCajaHospitales{text-align:right;
+                    border-left:20px;
+                    }
+
+
+.hospitalSeo	{background:url(iconHospitalSeo.png) no-repeat;
+					margin:10px;
+					padding-left:0px;
+					font-size:1.2em;
+					padding-top:5px;
+					border:#F00 0px solid;
+					}
+.centrosSeo	{background:url(iconCentroSeo.gif) no-repeat;
+					margin:10px;
+					padding-left:0px;
+					font-size:1.2em;
+					padding-top:5px;
+					border:#F00 0px solid;
+					}
+.bluepaddingTop16 {color:#007ac5;
+					padding-top:16px;
+          text-decoration: none;
+					}
+.marginLeft80  {margin-left:80px;
+					}
+
+.soluciones		{background:url(prepro_015016.jpg) no-repeat;
+					height:76px;
+					float:left;
+					padding-left:70px;
+					line-height:65px;
+					position:relative;
+					}
+  .EmpresaSoluciones		{background:url(prepro_015006.jpg) no-repeat;
+					height:76px;
+					float:left;
+					padding-left:70px;
+					line-height:65px;
+					position:relative;
+					}					
+h1.soluciones 	{display:block;
+					border:1px solid #F00;
+					}
+.textoSubtit	{ border:0px solid #F00;
+					height:10px;
+					float:left;
+					position:absolute;
+					top:45px;
+					left:72px;
+					line-height:10px;
+					width:400px;
+					color:#8996a0;
+					font-size:14px;
+					}	
+					
+.textoSubtit	b{font-weight:normal;}		
+/*Cuidados*/
+.cajaCuidados		{background:url(prepro_014984.jpg) no-repeat;
+						width:545px;
+					height:148px;
+					display:block;
+					position:relative;
+					padding-left:5px;
+					padding-top:10px;
+					overflow:auto;
+					z-index:10;
+
+					}
+.cajaCuidados	ul	{margin:0px;
+					padding:0px;
+					padding-top:50px;
+					}
+.cajaCuidados	li	{display:inline;
+					}
+.cajaCuidados	a	{display:inline-block;
+					width:92px;
+					height:22px;
+					background:url(prepro_014973.png) bottom;
+					text-align:center;
+					text-decoration:none;
+					padding-top:8px;
+					color:#666;
+					}
+.cajaCuidados	a:hover	{background-position:top;
+					color:#666;
+					font-weight:bold;
+					}
+.cajaCuidados h2	{color:#7bad36;
+					}
+.cajaCuidados span	{color:#949494;
+					font-size:1.2em;
+					width:230px;
+					display:block;
+					}
+a.multiBig		{background:url(prepro_014976.gif) bottom;
+					width:192px;
+					}
+a.botON			{background-position:top;
+					}
+
+/*Cuidados*/
+/*distribuidoraEmpresas*/
+.cajaDistribuidoraEmpresa	{position:relative;
+					bottom:0px;
+					border:0px solid #F00;
+					}	
+.distribuidoraEmpresa		{position:relative;
+					border:#F00 0px solid;
+					height:220px;
+					}
+/*Asesor*/
+.Asesor			{
+    width:58em;  
+    border:0px solid #F00;
+    display: block;
+    float: left;
+    padding-left: 2px;
+    padding-top: 5px;
+}
+
+.Asesor h3		{color:#999;}
+.Asesor	 p		{}
+.asesor			{
+				padding-bottom:2.3em;/padding-bottom: 1em;
+				border-bottom:1px solid #00ADEF;
+				padding-top:1em; /padding-top:0em;
+				}
+.asesor strong	{font-weight:bold;
+				display:block;
+				padding-bottom:1em;
+				padding-left:2em;
+				padding-top:0.3em;}
+.asesor span	{display:block;
+				margin:0px;
+				padding:0px;
+				padding-left:2em;}
+.asesor span.num		{
+						 padding-left:0em;
+						display:block;
+						border:0px solid #F00;
+						width:1.8em;
+						height:1.8em;
+						float:left;
+						background:url(circuloNum.gif) no-repeat;
+						color:#FFF;
+						text-align:center;
+						padding-top:3px;
+						}
+.asesor span select.selectBig	{
+	
+	width:54em;
+	margin-left:0.7em;
+	}
+.asesor span select.selectMedium	{
+	
+	width:18em;
+	margin-left:0.8em;
+	}		
+.asesor span select.selectSmall	{
+	
+	width:10em;
+	margin-left:0.8em;
+	}		
+.asesor .asegurado span label{display:inline-block; padding-left:7px;}	
+.asesor ul{display:inline; margin:0px; padding:0px;}	
+.asesor li{list-style:none;}						
+.asesor span input	{
+	border:1px solid #999;
+	font-size:1em;
+	}
+.asesor span input.medium	{
+	
+	width:8em;
+	margin-left:0.4em;
+	
+	}	
+.asesor span input.small	{
+	
+	width:3em;
+	margin-left:0.4em;
+	
+	}		
+.asesor	input.radio{border:0px;}
+.asegurado	{margin-left:-5px; display:inline-block;}
+.asegurado	b{color:#009cde; display:block; padding-left:28px; border:#F00 0px solid;}	
+.asegurado	b.opcion{padding-left:8px;}
+.asegurado span{display:inline-block;}
+.asesor .asegurado span input.small	{}
+.textCenter	{text-align:center;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Estilos propios
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sinborde {border:0px;}
+
+.imgCarruselPeq {border:0px; height:41px;}
+
+.fotoEspecialidades{padding-left:15px;padding-top:15px;padding-right-15px;}
+
+.linksCajaCitaAzul{display:block;
+            margin-top:0px;
+            padding-left:10px;
+						color:#00aeef;
+						font-weight:bold;
+            margin-left:4px;
+						clear:both;
+            float:none;
+            border:#F00 0px solid;
+						background:url(iconListCajas.gif) -5px top no-repeat;
+						border:#F00 0px solid; 
+						list-style:none; width:190px;
+						font-size:0.9em;
+            text-decoration: underline; }
+
+
+
+.linksCajaCitaGris {
+border:#F00 0px solid;
+display:block; 
+margin-left:4px; 
+color:#999;
+font-weight:bold;
+clear:both;
+padding-left:10px;
+width:190px;
+font-size:0.9em;
+background:url(iconListCajasBulletGrey.gif) -4px 0px no-repeat;}         
+
+.saberMas{color:#00aeef; text-decoration:none; display:block; text-align:right; padding-right:6px;}
+
+.textoHospitalDistribuidorah2 {
+          color:#00aeef;
+					font-size:1.4em;
+					padding-top:6px;
+					float:left;
+					background:url(fondoDistribuidoraHospital.jpg) repeat-x;
+					width:307px;
+					height:177px;
+					padding:10px;
+					position:relative;
+					overflow:auto;
+					}
+          
+.textoHospitalDistribuidora h3{color:#00aeef;
+                  padding-top:15px;
+                  margin:0px;
+                  font-size:1.5em;
+                  }   
+  
+.titGreen2		{color:#50b848;
+					font-size:1.4em;
+					display:block;
+          font-weight:bold;
+					padding-bottom:5px;
+					padding-left:16px;
+					}
+
+.destacadoCajaAntigua {
+ background-image: url("bg_esq_destacado.gif");
+-moz-background-clip: border;
+-moz-background-origin: padding;
+-moz-background-size: auto auto;
+background-attachment: scroll;
+background-color: transparent;
+background-position: left top;
+background-repeat: no-repeat;
+border-bottom-color: #B0C0D6;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-right-color: #B0C0D6;
+border-right-style: solid;
+border-right-width: 1px;
+border-right-color-ltr-source: physical;
+border-right-color-rtl-source: physical;
+border-right-color-value: #B0C0D6;
+border-right-style-ltr-source: physical;
+border-right-style-rtl-source: physical;
+border-right-style-value: solid;
+border-right-width-ltr-source: physical;
+border-right-width-rtl-source: physical;
+border-right-width-value: 1px;
+margin-bottom: 14px;
+margin-left: 0;
+margin-right: 0;
+margin-top: 3px;
+overflow-x: hidden;
+overflow-y: hidden;
+padding-top: 1pt;
+padding-left: 10pt;
+position: relative;
+}		
+
+.fotoarribaderecha{
+position:relative;
+float:right;
+margin-top: 0px;
+border-top: 0px;
+}
+
+input.boxButton {background:url(botVerdeBig.gif) no-repeat scroll 0 0 transparent;
+				border:medium none;
+				color:#FFFFFF;
+				display:inline-block;
+				font-family:Arial,Verdana,Geneva,sans-serif;
+				font-size:1em;
+				height:33px;
+				text-align:center;
+				text-decoration:none;
+				width:134px;
+        cursor:pointer;
+        }
+        
+/*Esta clase es para la caja de la home*/
+.boxButtonPresupuesta{
+        background:url("botVerdeBig.gif") no-repeat scroll 0 0 transparent;
+				border:medium none;
+				color:#FFFFFF;
+				display:inline-block;
+				font-family:Arial,Verdana,Geneva,sans-serif;
+				font-size:1em;
+				height:33px;
+				text-align:center;
+				text-decoration:none;
+				width:134px;
+        cursor:pointer;
+        float:right;
+}
+
+input.boxButton:hover{background:url(botVerdeBig.gif) no-repeat scroll 0 bottom transparent;
+				border:medium none;
+				color:#FFFFFF;
+				display:inline-block;
+				font-family:Arial,Verdana,Geneva,sans-serif;
+				font-size:1em;
+				height:33px;
+				
+				text-align:center;
+				text-decoration:none;
+				width:134px;}
+        
+.lupab {
+          display:inline-block no-repeat;
+          background:url(lupa.gif);
+					width:27px;
+					height:24px;
+					border:#F00 0px solid;
+					display:block;
+          float:right;
+					margin-right:0px;
+					}
+          
+.botones .botonOn {
+  /*background:url(botOnBig.gif) no-repeat;
+  color:#003b84;*/
+  background:#126891;
+					width:180px;
+					color:#FFFFFF;
+					top:0px;
+					line-height:18px;
+}
+
+          
+.botonesEmpresas .botonOn {
+  /*background:url(botOnEmpresas.gif) no-repeat;
+  color:#003b84;*/
+   background:#126891;
+					width:162px;
+					color:#FFFFFF;
+					top:0px;
+					line-height:18px;
+}
+
+.buscador2 span.buscadorurl {
+color:#77AA38;
+font-size:14px;
+margin-bottom:5px;
+margin-top:5px;
+}
+
+.buscador2 a {
+color:#00ADEF;
+font-size:17px;
+font-weight:bold;
+}
+
+.buscador2 span.buscadordesc {
+font-size:14px;
+font-weight:normal;
+}
+.segundoNivel{
+margin-left:10px;
+margin-top:6px;}
+
+/*Clases nuevas para bloques con segundo nivel en mapa seo*/
+.ultimoElemMapaSeo{
+    position: relative;
+    }/*left: 562px;188px*/
+
+.bloqueSeoDosNiveles a {
+					font-weight: bold;
+					list-style:none outside none;
+					}
+					
+.bloqueSeoDosNiveles .linkPpal {
+					font-weight: bold;
+					list-style:none outside none;
+					padding-left: 1.7em;	
+					font-size:1.1em;
+					width:100%;
+					}	
+
+.bloqueSeoDosNiveles ul a {
+					font-weight: normal;
+					}
+					
+.bloqueSeoDosNiveles ul {border:#F00 0px solid;
+					display:inline-block;
+					top:0px;
+					vertical-align:top;
+					float:left;
+					border:#F00 0px solid;
+					margin-top:5px;
+					
+					
+					}
+
+.bloqueSeoDosNiveles li { 
+					float:left;
+					display:block;
+					background:none;
+					}
+					
+.bloqueSeoDosNiveles ul li	{
+					display:inline;
+					border:#F00 0px solid;
+					float:left;
+					background:none;
+					list-style:none;
+					font-family:Arial,verdana,trebuchet;
+					font-size:0.9em;
+					}
+          
+a.linkSubSub			{background:url(list-Seo.jpg) 0px 0px no-repeat;
+					padding-left:12px;
+					color:#666;
+					font-weight:normal;
+					font-size:1.2em;
+					margin: 2em;
+					}
+					
+a.linkSubSub:hover		{color:#999;
+
+					}
+          
+/*FIN Clases nuevas cambios en la maqueta 28 de diciembre*/ 
+
+.bannersegurosMedicosNew	{
+					border:1px solid #fff;
+					width:50.2em;
+					display:block;
+					clear:both;
+					/*background:url(bannersegurosMedicosNew.jpg);*/
+					font-size:0.9em;
+					clear:both;
+         /* height: 210px;*/
+					}
+
+
+
+.bannersegurosMedicosNewbottom{
+					border:0px solid #ff0000;
+					display:inline-block;
+					width:50.2em;
+					background:url(bannersegurosMedicosNewbottom.png) no-repeat bottom;
+					padding-bottom:10px;
+					clear:both;
+          /*position:relative;
+          top:-190px;*/
+				
+					}
+.bannersegurosMedicosNewbottom h2{color:#FFF;}
+.bannersegurosMedicosNewbottom div	{
+					display:block;
+					width:250px;
+					float:left;
+					color:#FFF;
+					padding:6px;
+					}			
+.bannersegurosMedicosNewbottom	ul{
+					float:left;
+					width:125px;
+					border:0px solid #F00;
+					margin:0px;
+					padding:0px; 
+					list-style:none;
+					padding-top:10px;
+					}
+.bannersegurosMedicosNewbottom	a	{
+					color:#FFF;
+					text-decoration:none;
+					
+					}	
+.bannersegurosMedicosNewbottom	li a {
+					background:url(images/iconListCajasBlue.gif) no-repeat 112px 0px;
+					margin-right:20px;
+					padding-right:20px;
+					display:block;
+					width:115px;
+					border:0px solid #F00;
+					}				
+a.areaClicarbannersegurosMedicosNew	{
+				display:block;
+				width:546px;
+				height:142px;
+        position:relative;
+        bottom:150px;
+	
+		
+	}				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul.seccionActivaON	li	{ padding-top:8px; text-align:center; line-height:2em;}			
+ul.seccionActivaON	ul li	{padding-top:0px;text-align:left}         
+          
+ul.subseccionActiva	li	a{padding-top:6px; text-align:center;}	
+ul.subseccionActiva	ul li a{text-align:left; padding-top:0px;}	          
+
+a.subon			{color:#8ccce7;font-weight:bold;
+					}
+a.subon:hover	{color:#8ccce7;
+font-weight:bold;}
+ul.seccionActivaON	li	{padding-top:0px; text-align:center}			
+ul.seccionActivaON	ul li	{padding-top:0px;text-align:left; border:#F00 0px solid;}			
+
+ul.subseccionActiva	li	ul {padding-top:0px; text-align:center; margin:0px; padding:0px; border:#F00 0px solid; padding-left:0px; overflow:hidden;}			
+ul.subseccionActiva	li	ul ul{padding-top:0px; text-align:center; margin:0px; padding:0px; border:#F00 0px solid; padding-left:0px; overflow:hidden;}	
+
+/*imgCarrusel*/	
+img  {border:0px;}
+ /*subssubs*/
+.subsSubs	a:hover	{
+					color:#155577;
+          text-decoration:underline;
+					}
+ul.subsSubs			{margin:0px; padding:0px; border:#F00 0px solid; padding-left:8px; background:#fff;}
+ul.subsSubs	img		{border:0px;}	
+ul.subsSubs	li		{margin:0px; padding:0px; border:#F00 0px solid; text-align:left; line-height:1.6em; text-align:left;}         
+ul.subsSubs	li a.subon		{color:#155577;font-weight:bold;}
+
+
+/*FIN Clases nuevas para bloques con segundo nivel en mapa seo*/
+
+.v-list h3 {
+color:#538900;
+font-size:1.3em;
+font-weight:bold;
+margin:-6px 0 6px;
+padding:0;
+}
+
+.v-list ul li a{
+color:#0099FF;
+text-decoration:none;
+font-size:1.2em;
+font-weight:bold;
+padding:0;
+text-align:left;
+margin:0;
+}
+.v-list ul {
+
+padding:0;
+text-align:left;
+margin:0;
+
+}
+
+a.linkSeo			{background:url(list-Seo.jpg) 0px 0px no-repeat;
+					padding-left:12px;
+					color:#666;
+					font-weight:normal;
+          font-size:0.8em;
+					}
+a.linkSeo:hover		{color:#999;
+
+}
+
+.tresflechas ul li {
+background:url(bullet_04.gif) no-repeat scroll 11px 0 transparent;
+border-right:1px solid #D8D8D8;
+display:block;
+float:left;
+height:60px;
+padding:0 20px 0 30px;
+width:100px;
+
+}
+
+ul.tresflechas li {
+background:url(bullet_04.gif) no-repeat scroll 11px 0 transparent;
+border-right:1px solid #D8D8D8;
+display:block;
+float:left;
+height:60px;
+padding:0 20px 0 30px;
+width:100px;
+
+}
+.modulopromo_01 {
+border:1px solid #538900;
+height:80px;
+padding:11px 105px 11px 11px;
+position:relative;
+width:140px;
+}
+.izq {
+float:left;
+}
+.der {
+float:right;
+}
+.modulopromo_01 p a {
+background:url(ang_05hor.gif) no-repeat scroll 0 3px transparent;
+padding-left:14px;
+font-size:1em;
+}
+.modulopromo_01 ul  {
+text-decoration:none;
+}
+
+.modulopromo_01 a {
+color:#0099FF;
+position:relative;
+top:-1px;
+
+}
+.modulopromo_01 .esquina {
+background:url(bgd_modulopromo_01.gif) no-repeat scroll 0 0 transparent;
+display:block;
+height:10px;
+left:-1px;
+position:absolute;
+top:-1px;
+width:10px;
+}
+.modulopromo_01 img {
+position:absolute;
+right:0;
+top:0;
+border:0 none;
+margin:0;
+padding:0;
+}
+
+.collapseHeader {
+  font-size:1.1em;
+
+}
+
+.collapseHeader h3		{
+        color:#3896ed;margin:0px;
+        padding:0px;
+        padding-left:5px;
+        padding-top:-5px;
+        display: inline;
+        }
+a img {
+  border:0;
+}
+
+h2.titCajaBanner		{
+					margin:0em;
+					margin-left:0.5em;
+					display:block;
+					border:#F00 0 solid;
+					height:1.80em;
+					font-family: Arial, verdana, trebuchet;
+					color:#666;font-size:1.2em;
+					text-indent:24px;
+					font-size:1em;
+					font-weight:normal;			
+					padding-left:5px;
+					}	
+
+.grey160		{color:#666;
+					width:160px;
+					margin-right:2px;
+					margin-left:2px;
+					}
+          
+.camposTextAncho	{
+
+					border:#F00 0px solid;
+					font-family:Arial, Verdana, Geneva, sans-serif;
+					font-size:0.9em;
+					margin:auto;
+					margin-top:21px;
+					overflow:auto;
+					padding-top:2px;
+					padding-bottom:2px;
+					display:inline-block;
+					height:50px;
+					width:500px;
+          float:right;
+				
+
+					}
+.camposTextAncho div	{
+					border:#F00 0px solid;
+					display:inline-block;
+					padding-left:0px;
+					padding-top:5px;
+
+					}
+.camposTextAncho input{width:160px;
+					font-size:0.9em;
+					margin-top:3px;
+					padding:3px;
+					margin:3px;
+					
+					}
+.camposTextAncho	label{
+  font-size:1.4em;
+  font-weight:bold;
+}
+.modulo_01 {
+    -moz-background-clip: border;
+    -moz-background-origin: padding;
+    -moz-background-size: auto auto;
+    background-attachment: scroll;
+    background-color: transparent;
+   
+    background-position: left top;
+    background-repeat: no-repeat;
+    margin-bottom: 14px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-top: 1pt;
+    position: relative;
+}
+
+.modulo_01 .sinfondo {
+  -moz-background-clip: border;
+  -moz-background-origin: padding;
+  -moz-background-size: auto auto;
+  background-attachment: scroll;
+  background-color: transparent;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.modulo_01 .sinfondo img {
+  display: block;
+  float: right;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.modulo_01 .contenido {
+  padding-bottom: 11px;
+  padding-left: 11px;
+  padding-right: 11px;
+  padding-top: 11px;
+  position: relative;
+}
+
+.tresflechas .ultimo {
+    border-right:none;
+}
+.tresflechas .elemento{
+    border-right: 1px solid #D8D8D8;
+}
+
+.flechas {
+padding: 0;
+}
+
+.subseccionActiva a{
+						padding-bottom:2px;
+						}
+/*PARA EL TITULO DE DEISTRIBUIDORA DE SEGUROS DE PARTICULARES*/
+.textoContent h2			{color:#00adef;
+					font-size:1.8em;
+					display:block;
+					padding-top:0px;
+					padding-bottom:10px;
+					margin-top:0px;
+					margin-bottom:0px;
+          /*comentado por peticin, hay que vigilar casos particulares de h2 peggados a bordes*/
+          /*text-indent:10px;*/
+          clear:both;
+					}
+
+.textoContent .textoHospitalDistribuidora h2			{color:#00adef;
+					font-size:1.8em;
+					display:block;
+					padding-top:0px;
+					padding-bottom:0px;
+					margin-top:5px;
+					margin-bottom:0px;
+          clear:both;
+          float:none;
+          text-indent:0px;
+					}
+          
+.content h2 {
+          clear:both;
+          float:none;
+          width:85%;
+}
+
+.planentrenamiento {
+    display: block !important;
+    float: left !important;
+    margin-bottom: 6px !important;
+    margin-right: 10px !important;
+    text-align: left !important;
+    width: 200px !important;
+}
+.planentrenamiento select {
+    left: 29px;
+    position: relative;
+}
+
+.textoDistribuidoraSegurostxt	h2{font-size:1.3em;
+					margin-top:8px;
+          text-indent:0px;
+					}
+
+h2.titCajaDudaDisribuidora		{
+					margin:0px;
+					margin-left:40px;
+					background:url(iconDuda.gif) 0px 10px no-repeat;
+					display:block;
+					border:#F00 0 solid;
+					height:1.80em;
+					font-family: Arial, verdana, trebuchet;
+					color:#666;font-size:1.2em;
+					text-indent:25px;
+					padding-top:12px;
+					font-weight:normal;
+          min-height:1em;
+					}
+
+.titCajaEspecialistas		{
+					margin:0em;
+					margin-left:0.5em;
+					background:url(iconEspecialistaEmpresa.gif) no-repeat;
+					display:block;
+					border:#F00 0 solid;
+
+					font-family: Arial, verdana, trebuchet;
+					color:#666;font-size:1em;
+
+					font-weight:normal;
+          text-indent:25px;
+					}	
+
+/*.textoSolucionesDistribuidora	h2{color:#00aeef;
+					padding-top:15px;
+					margin:0px;
+					font-size:1.5em;
+					
+					} */
+          
+.textoSolucionesDistribuidora	h2{color:#00aeef;
+					padding-top:15px;
+					margin:0px;
+					font-size:1.5em;
+					}
+          
+.textoContent .textoHospitalDistribuidora h2{
+          color:#00aeef;
+					padding-top:15px;
+					margin:0px;
+					font-size:1.5em;
+					}
+          
+hr {
+        color: #ffffff; background-color: #ffffff; 
+        border: 1px dotted #7B797B; 
+        border-style: none none dotted ; 
+        margin-right: 10px;
+}
+
+.alineaDerecha{float:right;}
+.alineaIzquierda	{float:left;}
+
+.centerHIE8{
+  margin-left:13px \0/;
+}
+
+.green207 {color:#78aa37;
+					width:175px;
+					}
+p.avisoForm {
+    color: #999999;
+    font-size: 0.909em;
+}
+
+.formulario01 form label {
+    display: block;
+    float: left;
+    margin: 0 5px 0 0;
+    text-align: right;
+    width: 140px;
+}
+
+.formulario01 form textarea {
+    height: 70px;
+    width: 264px;
+	background-color: #FFFFFF;
+    border: 1px solid #ADACB1;
+}
+
+.formulario01 form span {
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.formulario01 form input {
+    margin-right: 4px;
+   /* width: auto;*/
+}
+
+.formulario01 form input.btazul {
+background:url("botVerdeBig.gif") no-repeat scroll 0 0 transparent;
+				border:medium none;
+				color:#FFFFFF;
+				display:inline-block;
+				font-family:Arial,Verdana,Geneva,sans-serif;
+				font-size:1em;
+				height:33px;
+				text-align:center;
+				text-decoration:none;
+				width:134px;
+        cursor:pointer;
+	}
+  
+  .formulario01 form input.btazul:hover {
+background:url("botVerdeBig.gif") no-repeat scroll 0 bottom transparent;
+				border:medium none;
+				color:#FFFFFF;
+				display:inline-block;
+				font-family:Arial,Verdana,Geneva,sans-serif;
+				font-size:1em;
+				height:33px;
+				
+				text-align:center;
+				text-decoration:none;
+				width:134px;
+	}
+  
+  .buscador_oficinas ul li {
+    display: block;
+    float: left;
+    margin: 40px 10px 0 0;
+    width: 157px;
+	}
+.buscador_oficinas ul li.ultimo {
+    margin: 40px 0 0;
+}
+
+.resultados ul.resul_sup li, .resultados ul.resul_datos li {
+    display: block;
+    float: left;
+    margin: 0 14px 2px;
+    width: 133px;
+}
+
+.separador_puntos2 {
+    background: url("../../../../../../../../../../img/site_general/css/gfx/bg_seppuntos2.gif") repeat-x scroll 0 0 transparent;
+    clear: both;
+    font-size: 1px;
+    height: 3px;
+    margin-bottom: 11px;
+}	
+
+.buscador_oficinas ul li select {
+    width: 160px;
+	}
+	
+	
+.resultados ul.resul_sup {
+    color: #7F7F7F;
+    font-size: 1.2em;
+    padding-top: 22px;
+}	
+
+.formularioSeguros{
+      margin-top:5px;
+}
+
+.formularioSeguros .cajaFormularioIzquierda{
+      float:left;
+      width: 13em;
+}
+
+.formularioSeguros .cajaFormularioDerecha{
+      margin:0px;
+      float:right;
+}
+
+.formularioSeguros .cajaFormularioDerecha .boxButton{
+      margin:0px;
+      float:right;
+}
+
+.formularioMiSanitas{
+      margin-top:5px;
+}
+
+.formularioMiSanitas .cajaFormularioIzquierda{
+      float:left;
+}
+
+.formularioMiSanitas .cajaFormularioDerecha{
+      margin:0px;
+      float:right;
+      position:relative;
+      right:5em;
+}
+
+.formularioMiSanitas .cajaFormularioDerecha .boxButton{
+      margin:0px;
+      float:right;
+}
+
+.check img{
+  margin:0px;
+  padding:0px;
+  float:left;
+}
+
+.checkNo img{
+  margin:0px;
+  padding:0px;
+  float:left;
+}
+
+sup{
+  font-size: 0.5em;
+}
+
+.form_general fieldset {
+    margin: 0 0 5px;
+}
+.form_general .indentado {
+    margin-left: 35px;
+}
+.form_general .row {
+    clear: both;
+    display: block;
+    height: 100%;
+    margin: 0 0 4px;
+}
+.form_general .row .col1 {
+    display: block;
+    float: left;
+    margin-bottom: 6px;
+    margin-right: 10px;
+    text-align: right;
+    width: 200px;
+}
+.form_general .row .col2 {
+    display: block;
+    float: left;
+    margin-bottom: 6px;
+    text-align: left;
+}
+.form_general .row2 {
+    margin: 6px 0;
+}
+
+/* tabla sanitas mundi */
+.texto02 table { margin-top:10px}
+.texto02 table td { padding:10px 10px 10px 4px; border-bottom:1px solid #e7e6e6}
+.texto02 table tr.dest { background:#f9f9f0}
+.texto02 table td.dcha { text-align:right;  float: none;}
+.texto02 table td span { font-size:1.1em; display: inline; padding-top: 0px}
+.texto02 table td p { font-size:0.8em; color:#b6b6b6; padding-left:32px}
+.texto02 table td.izda01 { padding-left:20px}
+.texto02 table td img { padding-left:23px}
+.texto02 table td.ultimo { border-bottom:0px}
+.texto02 table td.dcha_ultimo { text-align:right; border-bottom:0px}
+.tbullet_01 {
+    background: url("../../../../../../../../../../img/site_sanitas/css/gfx/bullet_01.gif") no-repeat scroll 20px 8px transparent;
+    padding-left: 30px;
+}
+.texto02 .titular4 {font-size:15px; color:#538900; margin-bottom:7px; font-weight:bold}
+.texto02 .titular6 {font-size:19px; color:#a3a3a3; margin-bottom:7px}
+
+div.modulo_error img.senal, div.modulo_exito img.senal {
+    float: left;
+    position: relative;
+}
+
+div.modulo_error .texto {
+    padding-left: 47px;
+    padding-top: 5px;
+}
+
+/*Clases para la caja de mi sanitas de la portada de particulares*/
+.anchoCajaMiSanitas {width: 18em !important;margin-left:2em;}
+
+/*Clases para la zona de dos columnas de mi sanitas*/
+.texto_a_izquierda {
+  float: left;
+  margin-right: 62px;
+  width: 200px;
+}
+
+.texto_a_derecha {
+  float: left;
+  margin-right: 10px;
+  width: 250px;
+}
+
+.sliderHidden{
+  display: none;
+}
+
+.slider{
+  display: inline;
+}
+
+/*Lista horizontal de videos*/
+
+.listavideo {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	}
+
+.listavideo li {
+	float:left;}
+  
+div.altoAuto {
+  height:auto;
+}
+
+/*banner imagenes con texto rico dentro*/
+.bannerDereImgTxt {
+    display: block;
+    padding-left: 8px;
+    position: relative;
+    *position:static;
+    width: 200px;
+}
+
+.bannerDereImgTxt span	{
+	position:absolute;
+	top:0.8em;
+	left:0.6em;
+	width:6em;
+	padding:0.6em;
+}
+
+.arribaIzq{
+	position:absolute;
+	top:0.4em;
+	left:0.4em;
+	width:6em;
+	padding:0.6em;
+}
+
+.arribaDcha{
+	position:absolute;
+	top:0.4em;
+	right:0.3em;
+	width:6em;
+	padding:0.6em;
+}
+
+.abajoIzq{
+	position:absolute;
+	bottom:0.4em;
+	left:0.4em;
+	width:6em;
+	padding:0.6em;
+}
+
+.abajoDcha{
+	position:absolute;
+	bottom: 0.4em;
+	right:0.4em;
+	width:6em;
+	padding:0.6em;
+}
+
+.fondoAzul{
+  background-color:#069;
+  top:0.4em;
+	right:0.3em;
+}
+
+.fondoGris{
+  background-color:ActiveBorder;
+  top:0.4em;
+	left:0.4em;
+}
+
+
+.bannerDereImgTxt a{
+	text-decoration:none;   
+	/*font-size:1.2em;*/
+	font-weight:800;
+	display:block;
+	color:#fff;
+}
+
+.letraGrande{
+  font-size:1.4em;
+}
+.letraNormal{
+  font-size:1.2em;
+}
+.letraPequeï¿½a{
+
+  font-size:1em;
+}
+
+.bannerDereImgTxt a:hover {
+
+}
+.bupaSilver	{color:#B1B3B4;}
+.fondoBupaSilver	{background:#069;}
+
+/* fin de banner imagenes con texto rico dentro*/
+
+/*banner Hospitales*/
+.bannerHomeHospitales	{position:relative; display:block; width:342px; height: 75px;}
+.bannerHomeHospitales span	{
+	position:absolute;
+	top:0.8em;
+	left:0.6em;
+	width:9em;
+	padding:0.6em;
+}
+.bannerHomeHospitales a{
+	text-decoration:none;
+	font-size:1.2em;
+	font-weight:800;
+	display:block;
+	color:#fff;
+}
+.bannerHomeHospitales a:hover {
+
+}
+.bupaSilver	{color:#B1B3B4;}
+.fondoBupaSilver	{background:#069;}
+/*banner Hospitales*/
+
+.novisibility {
+  visibility:hidden;
+  height:0px;
+}
+      
+/*Estilos para seguro dental*/                                                      
+.boloDental        {display:inline-block; width:441px; height:220px; color:#579ce0; margin:auto; position:relative;} 
+.boloDental        img        {position:absolute; top:0px; left:0px; width:227px; height:220px; border:0px solid #F00; z-index:1;} 
+.boloDental        span {font-size:1.7em; padding-top:2.7em; display:block; text-align:center; width:221px;color:#579ce0; z-index:2; border:#F00 0px solid; position:relative; float:left;} 
+.boloDental        span strong{font-size:2.2em; display:block; color:#579ce0; } 
+.boloDental span.compensa  {display:block; 
+                             width:8em; 
+                             height:3.5em; 
+                             font-size:2em; 
+                             float:right; 
+                             border-left:1px solid #00aeef; 
+                             border-right:1px solid #00aeef; 
+                             font-weight:bold; 
+                             text-align:center; 
+                             margin-top:2em; 
+                             padding-top:0.5em; 
+                             padding-bottom:1em; 
+                             }
+ 
+/**/
+.tabla	span{color:#666; padding-top:0.5em; padding-bottom:1em; display:inline-block;}
+.celda0	{background:#dddddc; color:#838383; text-align:center;}
+.celda1	{background:#9dcff0; color:#fff; text-align:center; width:33%; height:2em;}
+.celda2	{background:#67b5e8; color:#fff; text-align:center; width:33%;}
+.celda3	{background:#569bdf; color:#fff; text-align:center; width:33%;}
+.celda0Total {background:#dddddc; color:#404040; text-align:center; font-size:1.4em; font-weight:bold;}	
+.celda1Total {background:#9dcff0; color:#fff; text-align:center; width:33%; font-size:1.4em; font-weight:bold;}	
+.celda2Total {background:#67b5e8; color:#fff; text-align:center; width:33%; font-size:1.4em; font-weight:bold;}	
+.celda3Total {background:#569bdf; color:#fff; text-align:center; width:33%; font-size:1.4em; font-weight:bold; height:3em;}
+.celda3Total span	{ border:2px solid #FFF; padding:0.5em; padding-left:2em; padding-right:2em; color:#fff;}	
+/**/
+ /*Fin Estilos para seguro dental */
+ 
+ /**ESTILO PARA CARRUSEL SIN JAVASCRIPT*/
+ .fondoPoints {position:absolute; bottom:0px; top:243px;right:14px; width:150px; height:23px; border:#F00 solid 0px; background:#e74c90; z-index:19;}
+ /*****/
+ ul.flechasTextoRico {
+	PADDING-LEFT: 0px
+}
+
+/**Estilos para la BUSQUEDA DE IMAGENES*/
+.cuerpoDerecha{
+              float:left;
+							border:#F00 0px solid;
+							width:500px;
+							display:block;
+}
+
+.cuerpoIzquierda{
+							float:right;
+							border:#F00 0px solid;
+							width:500px;
+							display:block;
+							}		
+ 
+ 
+ /***ESTILOS PARA BUSQUEDA DE IMAGENES***/
+img.imagenBusqueda {
+   max-height:150px;
+   max-width:400px;
+ }
+
+table.tablaBusqueda  {
+   min-width:1024px;
+ }
+
+table.tablaBusqueda td {
+   border:1px solid;
+ }
+ 
+ /**/
+ .botones div.capaMenu	{
+	position:absolute;
+	
+	top:40px;
+	bottom:0px;
+	z-index:2000;
+	
+	height:207px;
+	border:#F00 0px solid;
+	padding:0em;
+	
+	display:inline-block;	
+	background:url(fondoMenu1.png) right -2px no-repeat;
+	padding-right:10px;
+
+	}	
+		 				
+/**/ 
+
+
+
+  /*ESTILOS de los listado de dentro de los desplegables*/
+  
+
+.botones div.capaMenu ul		{margin:0px; padding:0px; display:inline-block; width:auto; border:0px solid #F00; margin:auto;}	 
+.botones div.capaMenu ul li		{
+  display:inline-block; 
+  float:left; 
+  background:url(fondoLiMenu.gif) repeat-y #fff; 
+  width:150px; 
+  height:12em; 
+  margin-right:0px;
+  font-size:.8em; 
+  border:0px solid #ccc; 
+  cursor:pointer;}	 
+.botones div.capaMenu ul li a	{padding:0px; margin:0px; text-align:left; color:#666; line-height:10px; padding:1em; width:80%;}	
+.botones div.capaMenu ul li a:hover{background:none;color:#009DDB;}	
+.botones div.capaMenu	strong	{display:block; border:0px solid #F00; padding-bottom:10px; font-weight:normal; padding-top:10px; width:97%; height: 2em; color:#FFFFFF}
+.botones div.capaMenu h4{
+			color:#009ddb;
+			z-index:2000;
+			margin-top:-2px;
+      margin-bottom: 8px;
+      margin-left:5px;
+			padding:0px;
+			padding-bottom:.5em;
+			padding-top:.5em;
+      line-height: 12px;
+      height: 1em;
+      font-size: 1.3em;
+      cursor:pointer;
+      font-weight: normal;
+			/*padding-left:.7em;*/
+			}	
+
+			
+						
+.capaMenu h4{
+			font-weight:normal;
+			font-size:1.3em;
+			}	
+			
+/**/			
+.botones div.capaMenu.menu01{
+	
+	left: 10px;
+	
+	display:none;	
+	width: 500px;
+	}	
+
+
+.botones div.capaMenu.menu02{
+	
+	left: 125px;
+	
+	display:none;
+}
+	
+.botones div.capaMenu.menu03{
+
+	left: 185px;
+	
+	display:none;
+	
+	}	
+.botones div.capaMenu.menu04{
+
+	right: 125px;
+	
+	display:none;	
+	}	
+.botones div.capaMenu.menu05{
+	background:url(fondoMenu1-2.png) no-repeat centered;
+	right: 0px;
+	
+	display:none;
+	/*width:200px;*/	
+	border:0px solid #999;
+	
+	}	
+  
+  /*Clases para el menu desplegable de la parte de empresas*/
+  
+.botonesEmpresas div.capaMenu	{
+	position:absolute;
+	
+	top:40px;
+	bottom:0px;
+	z-index:2000;
+	
+	height:207px;
+	border:#F00 0px solid;
+	padding:0em;
+	
+	display:inline-block;	
+	background:url(fondoMenu1.png) right -2px no-repeat;
+	padding-right:10px;
+
+	}	
+		 				
+/**/ 
+.botonesEmpresas div.capaMenu ul		{margin:0px; padding:0px; display:inline-block; width:auto; border:0px solid #F00; margin:auto;}	 
+.botonesEmpresas div.capaMenu ul li		{display:inline-block; float:left; background:url(fondoLiMenu.gif) repeat-y #fff; width:150px; height:12em; margin-right:0px;font-size:.8em; border:0px solid #ccc; cursor:pointer;}	 
+.botonesEmpresas div.capaMenu ul li a	
+{padding:0px; margin:0px; text-align:left; color:#666; line-height:10px; padding:1em; width:80%;top:0px;}	
+.botonesEmpresas div.capaMenu ul li a:hover{background:none;color:#009DDB; /text-decoration: none;}	
+.botonesEmpresas div.capaMenu	strong	{display:block; border:0px solid #F00; padding-bottom:10px; font-weight:normal; padding-top:10px; width:97%; height: 2em; color:#FFFFFF}
+.botonesEmpresas div.capaMenu h4{font-weight:normal;
+			color:#009ddb;
+			z-index:2000;
+			margin-top:2px;
+      margin-bottom:8px;
+			padding:0px;
+			padding-bottom:.5em;
+			padding-top:.1em;
+			padding-left:0em;
+      margin-left:5px;
+      line-height: 12px;
+      height: 1em;
+      font-size: 1.3em;
+      font-weight: normal;
+			}	
+
+			
+						
+
+			
+/**/			
+.botonesEmpresas div.capaMenu.menu01{
+	
+	left: 10px;
+	
+	display:none;	
+	width: 500px;
+	}	
+
+
+.botonesEmpresas div.capaMenu.menu02{
+	
+	left: 125px;
+	
+	display:none;
+}
+	
+.botonesEmpresas div.capaMenu.menu03{
+
+	left: 185px;
+	
+	display:none;
+	
+	}	
+.botonesEmpresas div.capaMenu.menu04{
+
+	right: 125px;
+	
+	display:none;	
+	}	
+.botonesEmpresas div.capaMenu.menu05{
+	background:url(fondoMenu1-2.png) no-repeat;
+	right: 0px;
+	
+	display:none;
+	/*width:200px;*/	
+	border:0px solid #999;
+	
+	}	
+.botonesEmpresas div.capaMenu.menu06{
+	background:url(fondoMenu1-2.png) no-repeat centered;
+	right: 0px;
+	
+	display:none;
+	/*width:200px;*/	
+	border:0px solid #999;
+	
+	}	
+  
+    /*ESTILOS de los listado de dentro de los desplegables*/
+div.capaMenu ul.pestana_bullet   {padding:0em;
+     margin-left:19px;
+     font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:0.95em; color: #666666;
+     float:left;
+     }
+div.capaMenu ul.pestana_bullet li.pestana_bullet    {
+    font-size:1.2em;
+    line-height:1.2em;
+    list-style-type: inherit;          
+    background: none;
+    border: 0 solid #CCCCCC;
+    cursor: pointer;
+    display: list-item;
+  /*  float: left;*/
+    margin-right: 0;
+    width: 130px;
+    height: auto;
+    list-style-type: disc;
+     }
+div.capaMenu ul.pestana_bullet li.pestana_bullet:hover{
+    text-decoration: underline;
+    background:none;
+    color:#009DDB;
+}
+div.capaMenu ul li a.enlaceSubMenu {
+    font-size:0.95em;
+    line-height:1em;     
+    background: none;
+    border: 0 solid #CCCCCC;
+    cursor: pointer;
+    float: left;
+    margin-right: 0;
+    width: 130px;
+    height: auto;
+    margin:0px;
+    padding:0px;
+    top:0px;
+}
+div.capaMenu ul li.pestana_bullet a.enlaceSubMenu {
+    float: right;
+    width: 130px;
+}
+
+div.capaMenu ul li h4 a.enlaceSubMenu {
+    color: #009DDB;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    height: 1em;
+    line-height: 12px;
+    margin-bottom: 10px;
+    margin-top: -6px;
+    padding: 0.5em 0;
+    z-index: 2000;
+    top:0px;
+    margin-left:5px;
+}
+
+  /*------------------------*/
+	/*
+.botones div.capaMenu.menu05 ul		{width:90%; padding-top:0px;}
+.botones div.capaMenu.menu05 ul li{background:none;
+	height:auto;
+	width:auto; 
+	float:none;
+	border:#F00 0px solid;
+	padding-bottom:0px;
+	margin-bottom:0px;	
+	display:inline-block;
+	
+	
+	}	
+.botones div.capaMenu.menu05 ul.linksFormulario li a.linear	{display:inline; float:left; border:0px solid #F00; width:auto; padding:7px; }
+.botones div.capaMenu.menu05 ul.linksFormulario li a.linear:hover	{color:#00aeef;}
+
+.botones div.capaMenu.menu05 ul.linksFormulario li span 	{display:inline; float:left; border:0px solid #F00; width:auto; padding:0px; padding-bottom:15px;}
+
+.botones div.capaMenu.menu05 ul li input{
+	display:block;
+	border:0px;
+	width: 200px;
+
+}	
+
+.botones div.capaMenu.menu05 ul li a					{display:inline-block; height:auto; float:left; }		
+.botones div.capaMenu.menu05 ul.linksFormulario		{background:#FFF; padding:.8em; display:inline-block; border:0px #F00 solid}
+.botones div.capaMenu.menu05 ul.linksFormulario	li		{
+	display:inline;
+	padding:0px;
+	margin:0px;
+	border:0px solid #F00;
+	float:left;
+	font-size:11px;
+	clear: both;
+	width:190px;
+}
+.botones div.capaMenu.menu05 ul.linksFormulario	li a	{padding:0px; margin:0px;	border:0px solid #F00; height:auto; float:left;}
+.botones div.capaMenu.menu05 ul.linksFormulario	li.listadoFlecha	{}
+ .botones div.capaMenu.menu05 ul.linksFormulario	li a.linear	{background:url(iconListCajasSub.gif) -6px 4px no-repeat; padding-left:.8em; margin:0px; border:0px solid #F00;}
+ */
+/**/				
+						
+a.todos				{background:url(botMenu.gif) top no-repeat; display:block; width:83px; height:23px; padding:0px; margin:0px; font-size:.8em; font-weight:normal; line-height:22px; float:right; margin-top:13px;  margin-right:0px; color:#009BDB; clear:both; border:0px solid #F00;}
+a.todos:hover		{background:url(botMenu.gif) bottom no-repeat; color:#009BDB;}
+
+a.accesoMenu {background:url(botMenu.gif) top no-repeat; display:block; width:83px; height:23px; padding:0px; margin:0px; font-size:.8em; font-weight:normal; line-height:22px; float:right; margin-top:13px;  margin-right:0px;}
+a.accesoMenu :hover	{background:url(botMenu.gif) bottom no-repeat; display:block; width:83px; height:23px; color:#FFF;}
+
+.pieCarrusel		{clear:both; display:inline-block; border:0px solid #F00; width:100%; padding-top:1em; position:relative; margin-bottom: -15px;}
+
+.carruselAbajo		{
+  left:155px; 
+  position:relative; 
+  border:1px solid #92B254; 
+  margin-left:-9px; 
+  padding-left:10px;   
+  padding-right:10px; 
+  z-index:0; 
+  width:770px; 
+  left:155px; 
+  position:absolute; 
+  top:12px;
+  }
+  
+.carruselAbajo	ul {padding:0px; margin:0px; padding-right:.9em; display:block; border:#F00 0px solid;}
+.carruselAbajo	ul li	{display:block; float:left; padding:0px; margin:0px; padding-left:4px;}
+.flechasCarrusel {
+  position:absolute; 
+  top:0px; 
+  width:830px; 
+  border:0px solid #000; 
+  position:absolute; 
+  left:-30px;}
+/*.carruselAbajo	ul li img {border:#F00 1px solid;  width:15.7em; height:11.1em; border:0px;}*/
+.carruselAbajo	ul li a.capaTexto{display:block;}
+.carruselAbajo img.flechaLEFT	{
+  float:left; 
+  border:0px; 
+  padding-top:3.4em; 
+  padding-left:.0em; 
+  padding-right:.0em; 
+  cursor: pointer;
+  margin-left:8px;
+  }
+.carruselAbajo img.flechaRIGHT	{
+  border:0px; 
+  padding-top:3.4em; 
+  padding-left:.0em; 
+  padding-right:1em; 
+  float:right; 
+  position:absolute; 
+  right:-28px; 
+  cursor: pointer;}
+
+.capaTexto			{
+/*background:url(fondoCapaTextoSlide.png); */
+  background: url("../digitalmedia/fondoCapaTextoSlide.png");
+     border: 0 solid #009DDB;
+    color: #FFFFFF;
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    height: 8.5em;
+    padding: 0;
+    white-space: normal}
+.capaTexto a		{  
+    color: #084066;
+    text-decoration: none;}
+.capaTexto a:hover		{color:#004970; }
+
+.linksCarrInferior{
+    border: 1px solid #B1B1B1;
+    display: block;
+    height: 85px;
+    padding-top: 35px;
+  
+    width: 185px;
+    font-family:'GothamLightRegular';
+    text-align:center;
+}
+
+.redes			{background:url(fondoRedes.gif) no-repeat; display:block; float:left; width:10em; height:11em; border:0px solid #F00; text-align:center; z-index:60; border:0px solid #000; padding-left:0px; margin-left:0px; width:120px; display:inline-block; float:left;}
+.redes h2		{margin:0px; padding:0px; padding-top:.3em}
+.redes ul 		{margin:0px; padding:0px; padding-top:.6em; margin:auto; display:inline-block; text-align:center; border:0px solid #030;padding-left:2em;}	
+.redes ul li	{display:block; float:left; padding-right:6px; padding-bottom:6px;}
+.redes	a		{cursor:pointer;}
+
+.botones	{z-index:100}
+.slides		{z-index:0}
+.pie		{border:#F00 0px solid; margin-top:2em;}
+
+.pieSeo			{background:url(fondoPie.gif) -19px top ; border:0px solid #F00; display:inline-block; width:100%;}
+/*.pieSeo	 ul.noBorde	{border:0px;}
+
+
+.pieSeo	 ul		{font-size:.97em; margin:4px; padding:3px; margin-top:0em; padding-top:0em; float:left; width:170px; border-right:0px solid #999;padding-left:6px; border:0px solid #F00;}
+
+
+
+.pieSeo	 ul li 	{padding-left:0px; padding-bottom:.8em;}
+.pieSeo	 ul li a{color:#2b9ce8;}
+.pieSeo	 ul li a:hover{color:#65ccf1;}
+*/
+/*
+.pieSeo	 ul li ul { padding-top:0.8em; float:none;  border-left:0px solid #999; width:95%;}
+.pieSeo	 ul li ul li{background:url(list-Seo.jpg) 0px 3px no-repeat; padding-left:6px; padding-bottom:0em;}
+.pieSeo	ul li ul li a		{color:#999;}
+.pieSeo	ul li ul li a:hover		{color:#666;}*/
+.pieSeo	h2 		{margin:0px;
+      color:#2B9CE8;
+      padding:0px;
+      padding-bottom:.8em;
+      padding-top:.1em;
+      
+     
+      display:block;
+      
+}
+.pieSeo	h2 a{color:#2b9ce8; margin:0px; padding:0px; font-size:.6em; padding-left:1em; padding-top:1em; text-decoration:none; display:block; font-weight:normal;}
+.pieSeo	h2 a:hover {color:#65ccf1;}
+
+
+
+
+.restoLinks		{clear:both; width:100%; border:0px solid #F00;}/*background:url(fondoPie.gif) -19px top;*/
+/*.restoLinks h2	{clear:both; width:100%; background:url(fondoPie.gif) -19px top;}*/
+
+
+.topLinks		{clear:both; width:100%; background:url(fondoPie.gif) -19px bottom; height:20px;}
+.Nube			{background:url(fondoPieNube.gif) -19px top }
+.Nube ul		{width:98%; border:1px #F00 solid;}
+.Nube ul li		{display:inline;}			
+.Nube ul.nubeTags		{border:0px solid #F00; width:900px; display:block;}
+.Nube ul.nubeTags a{color:#2B9CE8;}
+.Nube ul.nubeTags a:hover{color:#65CCF1;}
+.Nube h2			{background:url(iconNube.gif) 10px 10px no-repeat; display:block; border:0px solid #F00; padding-left:30px;}
+
+.finPie				{display:block; clear:both; background:url(fondoPie.gif) bottom no-repeat; width:100%; height:20px; }
+.finPie	span		{cursor:pointer; margin-left:15px; padding-top:0px; color:#00aeef; display:none; float:right; padding-right:10px; text-decoration:underline;}
+.finPie a			{float:right; color:#2b9ce8; display:block; position:relative; bottom:-0px; right:10px;}
+.finPie a:hover		{color:#5ccaf0;}
+
+.topPie				{display:block; clear:both; background:url(fondoPie.gif) top no-repeat; width:100%; height:50px; }
+
+
+h3.bot				{font-weight:bold; font-size:12px; color:#fff; margin:0px;} 	
+/*a h3.bot:hover		{color:#009ddb; background:url(iconDespliega.gif) 30px 10px no-repeat;}*/
+h3.bot a				{} 
+.lihov{height:123px;
+      overflow: hidden; 
+      float: left; 
+      width: 189px; 
+      }
+
+
+
+
+.botones div.capaMenu li a{color:#666; border:0px solid #F00;}
+.botones div.capaMenu li a:hover{color:#666; border:0px solid #F00;}
+#sliderinferior{
+	visibility:hidden;
+	margin-left:140px;
+	margin-left:0px;
+ 	padding:0px;	
+}
+/**/
+.imgHomeCentros	{position:absolute; top:0px; left:0px; z-index:0;}
+
+.imgHomeCentrosCajas {position:absolute; top:0px; left:0px; z-index:0; height:50px;}
+.cajasForm	{
+	position:relative;
+	display:inline-block;
+	z-index:2;
+	padding-top:8.7em;
+	color:#FFF;
+}
+.cajaForm{float:left; display:block; background:#00aeef; width:20em; margin-left:10px; padding:8px;}
+
+.cajaForm span{display:block;}
+.cajaForm h2{font-family: 'GothamLightRegular'; font-size:1.5em; color:#FFF; font-weight:normal;}
+.cajaForm ul{
+  padding:0px;
+  margin:0px; 
+  padding-top:33px;
+  padding-top /*\**/:35px; 
+  *padding-top:33px;
+}
+.cajaForm ul li{display:inline;}
+
+.cajaForm ul li input	{margin-bottom:5px; color:#999; height:15px;}
+.cajaForm ul li select	{margin-bottom:5px; color:black; height:20px;}
+.cajaForm ul li select.documento{width:60px;}
+.cajaForm ul li input.numDocumento{width:140px;}
+.cajaForm ul li input.numTarjeta{width:203px;}
+.cajaForm ul li select.producto{width:207px;}
+.cajaForm ul li select.provincia{width:217px; margin-bottom:8px;}
+.cajaForm ul li select.especialidad{width:217px;}
+.cajaForm ul.noCliente{padding:8px; padding-top:38px; padding-left:10px; position:relative;}
+.absolute	{position:absolute; right:1px; bottom:-30px;}
+.Redondeada	{background:url(fondoCajaBlue.png) no-repeat;}
+a.newGuides		{background:url(botWhite.gif) top no-repeat; display:block; width:134px; height:32px; margin:6px; padding:0px; float:right; text-align:center; line-height:33px; margin-top:-0px; margin-right:8px; }
+a.newGuides:hover		{background:url(botWhite.gif) bottom no-repeat; color:#0085ba;}
+/*a.newGuides		{background:url() no-repeat; display:block; width:125px; height:24px; margin:6px; padding:4px; float:right;}*/
+
+button.newGuides		{background:url(botWhite.gif) top no-repeat; display:block; width:134px; height:32px; margin:6px; padding:0px; float:right; text-align:center; line-height:33px; margin-top:-0px; margin-right:8px; border:0px;color:#00b6ff; font-size:1em; cursor:pointer;}
+
+.PDFIcon			{background:url(iconPDF.gif) 5px 0px no-repeat; padding-left:30px; color:#666;}
+.PDFIcon	a		{display:inline; color:#00aeef;}
+
+.FraseMedicos		{
+	display:block;
+	color:#FFF;
+	background:#00aeef;
+	z-index:3000;
+	position:absolute;
+	top:30px;
+	left:12px;
+	padding:1.2em;
+	font-family: 'GothamLightRegular';
+	font-size:1.5em;
+}
+
+li.blue a	{color:#999;
+					}	
+li.blue a:hover	{color:#CCC;
+					}			
+					
+.botones div.pestanainActivaNew  h2{font-weight:normal; font-size:1em;}
+.botones div.pestanaActivaNew  h2{font-weight:normal; font-size:1em;}								
+#totalcarr{
+	visibility:hidden;
+}
+h2	{}
+.botMenu1 a:hover{background:url(iconDespliega.gif)  30px 23px no-repeat;}
+.botMenu2 a:hover{background:url(iconDespliega.gif)  0px 23px no-repeat;}
+.botMenu3 a:hover{background:url(iconDespliega.gif)  30px 23px no-repeat;}
+.botMenu4 a:hover{background:url(iconDespliega.gif)  25px 23px no-repeat;}
+.botMenu5 a:hover{background:none;}
+
+.botMenuNoDes a:hover{
+  color:#FFFFFF;
+}
+
+.botNoactivo a:hover{
+  background:inherit;
+  }
+.menuActivo h3 a{display:block; border:0px solid #F00;}
+
+
+.pieSeo 		{background:url(fondoPieNube.gif) -19px 0px;}
+
+
+.pieSeo.Cuadros 		{background:url(fondoPieNubeLinear.gif) -19px 300px;}
+.pieSeo.Cuadros ul 		{width:96%; border:#F00 0px solid; margin-left:12px; padding-top:14px;}
+.pieSeo.Cuadros ul  li		{width:295px; border:#F00 0px solid; display:inline-block; float:left; margin-left:0px; height:8px; padding-bottom:9px;}
+.pieSeo.Cuadros ul li a{color:#2B9CE8;}
+.pieSeo.Cuadros ul li a:hover{color:#65CCF1;}
+
+.botSeccionActivaTopON a	{color:#FFF;
+
+
+    padding-bottom: 3px;
+    padding-left: 2px;
+    padding-top: 3px;
+	text-decoration:none;font:1em/0.9em Arial;
+	text-align:center;
+	display:block;
+	}
+
+.subsSubs	a	{color:#16b3ee;
+					text-decoration:none;
+					display:block;
+					background:url(iconListCajas.gif) -7px -1px no-repeat;
+					padding:0px;
+					padding-left:8px;
+					padding-bottom:2px;
+
+					line-height:1.6em;
+					}
+ul.subsSubs {padding-bottom:2px;}		
+ul.subsSubsSubs	{padding-bottom:4px;}		
+
+h2.topCaja 	{clear:both; width:100%; background:url(fondoPie.gif) -19px top; height:22px; border:0px solid #F00; display:block; font-size:1.8em}
+.pieSeo.Cuadros ul.restoDesplegados	{margin-top:-5px; padding-top:0px;}
+
+.tabs		{display:inline-block; background:url(fondoTabs.gif) 5px 30px no-repeat; width:46em; margin-top:5px; z-index:10;}
+.tabs select	{margin-bottom:5px; color:#999; height:20px; width:250px; margin-left:0px;}
+.tabs ul		{padding-top:20px; padding-left:40px; margin-left:0px;}
+.tabs ul li.bot		{float:right; margin-top:-35px; border:0px #F00 solid; margin-right:30px;}
+.tabs ul li.radioButtom {float:left; display:block; padding-bottom:20px; font-size:12px; padding-right:10px;}
+.tabs ul li.campo 	 {top:-5px; position:relative;}
+
+.tabs ul li.campo input {width:300px; border:#CCC 1px solid; height:20px;}
+
+
+
+
+
+.tabs ul li.obligatorioSelect {color:#009ddb; font-size:.9em;background:url(asterisco.gif) 0px 0px no-repeat;}
+.tabs ul li.obligatorio {color:#009ddb; font-size:.9em;background:url(asterisco.gif) 0px 2px no-repeat; padding-left:10px;}
+.tabs ul li.texto		{color:#999; padding:5px; clear:both; display:block; width:96%; padding-bottom:15px;}
+
+.BusquedaTabs		{background:url(botFlecha.gif) no-repeat; width:484px; height:34px; display:block; margin:auto; line-height:35px; text-indent:35px; cursor:pointer; padding-bottom:5px;}
+.Contenidooculto			{width:100%; margin:auto; padding:0px; margin-bottom:0px;}
+.Contenidooculto ul  {padding-top:0px;}	
+
+.finTab					{display:inline-block; background:url(fondoTabs.gif) bottom no-repeat; width:46em; height:20px;}
+
+ul.tabsBots			{margin:0px; padding:0px; padding-left:5px;  z-index:0; margin-left:0px;}
+ul.tabsBots	li		{display:block; float:left; text-align:center; font-size:12px; border:0px solid #F00; height:32px; overflow:hidden;}
+ul.tabsBots	li a.on			{ background:url(fondoTab.gif) no-repeat; display:block; width:132px; height:32px; border:0px solid #F00; color:#009dda;}
+ul.tabsBots	li a			{ background:url(fondoTab.gif) 0px 32px; display:block; width:132px; height:32px; border:0px solid #F00; line-height:40px; color:#999;}
+
+ul.tabsBots	li a:hover		{ background:url(fondoTab.gif); display:block; width:132px; height:32px; border:0px solid #F00; color:#009dda;}
+.obligatorio		{background:url(asterisco.gif) -5px no-repeat; display:inline-block; margin-left:10px;}
+
+
+.contenidoTab			{padding-top:10px;}
+
+.flotaIzquierda			{float:left; display:block;}
+.flotaDerecha		{float:right; display:block;}
+
+.marginTop25		{margin-top:25px;}
+
+.resultado			{background:url(cajaResultados.gif)  0px top no-repeat; display:block; width:545px; margin:auto; margin-top:0px; border:0px solid #F00;}
+.resultadoBottom	{background:url(cajaResultados.gif)  0px bottom no-repeat; display:block; width:545px; height:.7em; border:0px solid #F00; clear:both;}
+
+.contentResultado	{padding:10px; font-size:1.1em; display:inline-block; width:97%; clear:both; position:relative;}
+.contentResultado h3{width:70%; display:block; padding:0px;margin:0px; border:0px solid #F00; font-size:1em;}
+.contentResultado ul{padding:0px; margin:0px; float:left;}
+.contentResultado ul li.hospitalResultados{color:#01afee;}
+.contentResultado strong	{font-weight:bold; color:#747579;}
+.contentResultado ul li.normal{color:#666; font-size:.9em}
+.contentResultado ul li.tel{padding-top:10px; color:#666;}
+
+.contentResultado ul.links	{display:block; border:0px solid #F00; position:absolute; bottom:0px; right:10px;}
+.contentResultado ul.links.centrosMedicos	{display:block; border:0px solid #F00; padding-bottom:0px;}
+
+.contentResultado ul.links li	{display:block; border:0px solid #F00; margin-left:0px; margin:0px; padding:0px; float:left; white-space:nowrap;}
+.contentResultado ul.links li.cita	{padding-left:5px;}
+.contentResultado ul.links li.cita a		{background:url(botCita.gif) 0px 0px no-repeat; display:block; width:75px; height:19px; text-align:center; color:#FFF; font-size:.8em; border:#F00 0px solid;}
+.contentResultado ul.links li.cita a:hover	{background:url(botCita.gif) bottom no-repeat;border:#F00 0px solid;}
+
+.contentResultado ul.links li.mapa		{}
+.contentResultado ul.links li.mapa a	{ font-size:.8em; padding-right:5px; display:block; border-right:1px solid #999;}
+.contentResultado ul.links li.mapa a:hover	{}
+
+.contentResultado ul.estrellas	{float:right; margin-top:0px; border:0px solid #F00; padding-left:0px; }
+.contentResultado ul.estrellas li	{display:block; float:left; color:#999; display:block; line-height:20px;}
+
+.contentResultado ul.estrellas	a{display:block; float:left; width:18px; height:18px; background:url(estrella.gif) right no-repeat;} 
+.contentResultado ul.estrellas	a:hover{ background:url(estrella.gif) left no-repeat} 
+
+.contentResultadoRight	{float:right; border:0px solid #0FF; position:relative; width:150px; display:inline-block; heihgt:100%;}
+
+
+h2.listado		{padding-top:10px;}
+.controlesListado	{display:inline-block; width:98%; border:0px #F00 solid; clear:both; height:40px; padding-top:10px; padding-left:5px;}
+.controlesListado ul	{margin:0px; padding:0px;}
+.controlesListado ul.resultadosControl	{float:left; border:0px #F00 solid; display:block;}
+.controlesListado ul.resultadosControl strong	{font-size:2em; font-weight:bold;}
+.controlesListado ul.resultadosControl	li{display:inline-block; float:left; border:0px solid #F00;padding-right:5px;}
+.controlesListado ul.resultadosControl	li.valorados a	{color:#009ddb; text-decoration:underline; display:inline-block; border-left:1px solid #009ddb; padding-left:5px; float:left; margin-top:11px; }
+.numListado li a{color:#666; display:block; line-height:20px; border:0px #F00 solid; height:19px; float:left; padding-right:2px; padding-left:2px;}
+
+.controlesListado ul.numListado		{float:right; border:0px #F00 solid; display:block; padding-top:8px;}
+.controlesListado ul.numListado	li{display:inline-block; float:left;}
+
+.controlesListado ul.numListado	li.num	a img		{border:0px; padding-top:6px; padding-right:0px; padding-left:0px; }
+.controlesListado ul.numListado	li.num	a	{display:block; height:19px; float:left; background:url(botsNum.gif) right;text-align:center; line-height:20px; padding-right:0px; padding-left:0px;}
+.controlesListado ul.numListado	li.num	a:hover	{background:url(botsNum.gif) left; }
+.contentResultadoLeft	{width:350px;float:left; display:inline-block;}
+.contentResultadoLeft h3 a	{text-decoration:underline;}	
+div.linksScroll		{padding:0px; margin:0px; padding-left:15px;}
+
+div.linksScroll ul		{height:100px; width:95%; padding:0px; margin:0px; overflow:auto; }
+div.linksScroll ul li	{border-bottom:1px solid #c5dcec; display:block; }
+div.linksScroll ul li a	{text-decoration:none; }
+
+a.Grey		{color:#555;}
+a.Grey:hover		{color:#666;}
+
+.resultadoDestacado			{background:url(cajaResultadosDestacados.gif)  0px top no-repeat; display:block; width:545px; margin:auto; margin-top:0px; border:0px solid #F00;}
+.resultadoDestacado .resultadoBottom	{background:url(cajaResultadosDestacados.gif)  0px bottom no-repeat; display:block; width:545px; height:.5em; border:0px solid #F00; clear:both;}
+h2.txtResultado		{font-size:1.2em; font-weight:bold; color:#0c3b60; padding-top:10px; border:0px solid #CCC; padding:4px; width:96%; margin-left:6px; margin-top:8px; margin-bottom:8px;}
+
+span.distancia	{float:right; margin-top:0px; border:0px solid #F00; padding-left:0px;/*background:url(iconDistancia.gif) 0px 5px no-repeat;*/ padding-left:30px; color:#019bd9; display:block; }
+
+li.bot input.boxButton {
+		float:right;
+		margin-right:0px;
+
+		}
+        
+.cajaDescarga	{display:inline-block; background:url(fondoCajaDescarga.gif) 5px 0px no-repeat; width:96%; margin-top:5px; z-index:10; clear:both; border:0px solid 
+#F00; height:auto; padding:10px; padding-top:0px;}
+.cajaDescarga .cajaForm{float:left; display:block; background:none; width:100%; margin-left:10px; padding:0px; clear:both; height:auto;}
+.cajaDescarga .cajaForm ul	{margin:0px; padding:0px; width:530px; border:0px solid #006; display:inline-block;} 
+.cajaDescarga .cajaForm li	{display:inline-block; border:0px solid #F00; float:left;} 
+.cajaDescarga .cajaForm li.numTarjeta	{display:block; float:none; clear:both;}
+.cajaDescarga .cajaForm li.numDocumento	{padding-left:5px; padding-top:2px;}
+.cajaDescarga .cajaForm li.bot	{float:right; padding-right:10px;}
+.cajaDescarga .cajaForm h3			{color:#00325d; display:block; padding-left:2px; padding-top:5px; padding-bottom:5px; font-size:1.1em;}
+
+.contentResultado.PDFS			{ line-height:25px;}
+.contentResultado.PDFS span		{float:left;}
+.contentResultado.PDFS a		{text-decoration:underline; float:right; display:block; background:url(iconPDFResultados.gif) no-repeat right; padding-right:25px;}
+
+.camposOpciones		{clear:both; display:block; border:0px solid #F00; padding-left:40px; padding-right:40px;}
+.camposOpciones		ul	{margin:0px; padding:0px;}
+.camposOpciones		h3	{margin:0px; padding:0px; padding-bottom:10px; color:#00325d; font-size:1.1em; padding-top:8px;}
+
+.capaMenu .camposCapaMenu		{background:none; margin:auto; padding-left:0px; padding-right:0px; border:0px;}
+.capaMenu .inicioCapaMenu		{height:207px; background:url(fondoMenu1.png) 0px -2px no-repeat; display: block; width:10px; border:0px solid #096; top:0px; left:-10px; position:absolute;}
+
+
+
+/*clases para la lista de especialidades de la portada*/
+
+.pieSeo .ulEspecialidades{
+
+  width:100%
+
+}
+
+.pieSeo .liEspecialidades{
+
+  float:left;
+  width:200px;
+  color:#999999;
+  padding: 0.3em 0.3em 0.3em 20px;
+  margin:0px;
+}
+.pieSeo .aEspecialidades{
+  color:#999999;
+  background:url(list-Seo.jpg) 0px 0px no-repeat;
+					padding-left:12px;
+				
+					font-weight:normal;
+          font-size:0.8em;
+}
+/*clases pie de seo*/
+
+.pieSeo	 ul.noBorde	{border:0px;}
+.pieSeo	 ul		{font-size:.97em; margin:4px; padding:3px; margin-top:0em; padding-top:0em; float:left; width:170px; border-right:0px solid #999;padding-left:6px; border:0px solid #F00;}
+/**/
+.nivelUno{
+  padding-bottom:.8em;
+  padding-left:8px;
+}
+.nivelUno a{
+  color:#2B9CE8;
+    
+  }
+.nivelUno a:hover{
+  color:#65CCF1;
+
+}
+
+.nivelDos{
+  color:#999999;
+  border-left: 0 solid #999999;
+  float:none;
+  
+  width:95%;
+  background:url(list-Seo.jpg) 0px no-repeat;
+  font-size:.97em; margin-left:10px; margin-right:4px; padding-top:3px; padding-bottom: 3px; margin-top:0em; width:170px; border-right:0px solid #999;padding-left:8px; border:0px solid #F00;
+}
+
+.nivelDos a{
+  color:#999999;
+  margin-left: 5px;
+}
+.nivelDos a:hover{
+color:#666666;
+}
+
+.nivelTres{
+
+  border-left: 0 solid #999999;
+  float:none;
+
+  width:95%;
+  background:url(list-Seo.jpg) 0px no-repeat;
+  font-size:.97em; margin-left:25px; margin-right:4px; padding:0px; margin-top:0em; width:170px; border-right:0px solid #999;padding-left:8px; border:0px solid #F00;
+}
+.nivelTres a{
+color:#999999;
+}
+.nivelTres a:hover{
+color:#666666;
+}
+
+.nivelCero{
+
+ margin-left:12px;
+width:295px; 
+border:#F00 0px solid; 
+
+display:inline-block; 
+float:left; height:8px; 
+padding-bottom:9px;
+
+}
+.nivelCero a{
+color:#2B9CE8;
+}
+.nivelCero a:hover{
+color:#65CCF1;
+}
+
+.pieSeo ul.listaTresColum{
+
+width:295px;
+}
+
+/* Nuevas clases para las cajas de los seguros*/
+
+.apendice{
+  font-size:smaller;
+  float:right;
+}
+.contenedorTitulo {
+    background: url("sub_fondo.gif") no-repeat scroll center bottom transparent;
+    color: #3896ED;
+    font-size: 1.3em;
+    font-weight: bold;
+    height: 2em;
+    margin-right: 5px;
+    text-align: center;
+}
+
+
+.cajaPrecioMul	{
+					position:relative;
+          margin-top:60px;
+
+					padding-top:14px;
+					margin-left:35px;
+          float:left;
+					}
+.cajaPrecioMul span	{font-size:0.8em;
+						color:#999;
+						display:block;
+						padding-left:3px;
+						}
+
+.camposMultiPrec			{width:340px; padding-left:4px; float:right; position: relative; padding-top:20px;}					
+.camposMultiPrec select	{width:100px; font-size:0.9em;}
+.camposMultiPrec input 	{font-size:0.9em; width: 40px;}
+.camposMultiPrec input.boton_incluir {width:13em;}
+
+.precioCoberturaMul	{
+					font-size:3.6em;
+					margin-left:30px;
+					padding-top:7px;
+					padding-left:6px;
+					color:#3896ed;
+					padding-right:0px;
+					position:absolute;
+					letter-spacing: -2px;
+					} 
+
+.precioCoberMes		{
+          position:absolute;
+			font-size:0.3em;
+			top: 56px;
+          letter-spacing: 1px;
+          margin-top:-30px;
+          margin-left:100px;
+					}
+
+.formularioSeguros .cajaFormularioIzq{
+      float:left;
+      width: 17em;
+      margin-top:10px;
+
+}
+ 
+.calculaCuotaMul{padding-top:10px;
+					padding-bottom:10px;
+					border:0px solid #F00;
+					display:inline-block;
+					width:540px;
+					border:1px #CCC solid;
+					padding:4px;
+					clear:both;
+					}
+.calculaCuotaMul	span{font-size:1.3em;
+					font-weight:bold;
+					color:#005abb;
+					margin-right:5px;
+					}
+.calculaCuotaMul	input	{width:40px;
+					/*padding-left:4px;*/
+					margin-right:4px;
+					}
+.formularioSeguros .cajaFormularioDerecha .boxButto{
+      margin:0px;
+      float:right;
+     
+}
+input.boxButto {background:url(botVerdeBig.gif) no-repeat scroll 0 0 transparent;
+				border:medium none;
+				color:#FFFFFF;
+				display:inline-block;
+				font-family:Arial,Verdana,Geneva,sans-serif;
+				font-size:1em;
+				height:33px;
+				text-align:center;
+				text-decoration:none;
+				width:134px;
+        cursor:pointer;
+        }
+        
+/*Estilos para la nueva ficha de producto*/
+.precioCoberturaProducto {border:#3896ed 0px dotted;
+float:left;
+font-size:3.3em;
+margin-top:8px;
+padding-top:7px;
+margin-left:25px;
+color:#3896ed;
+position:relative;
+          letter-spacing: -2px;
+          height:2em;
+} 
+.calculaCuotaMulti h2{font-size:16px; padding:0px; margin:0px;}
+.calculaCuotaMulti ul{padding:0px; margin:0px;}
+.calculaCuotaMulti li	{display:block; float:left; padding-right:3px;}
+.calculaCuotaMulti li	select{width:130px; height:22px; padding-top:0px; margin-top:0px;}
+.camposResultadosProducto 			{display:block; float:right; width:390px; border:0px solid #0C0; padding-top:5px; background:url(sub_fondo.gif) -15px 16px no-repeat}
+.camposResultadosProducto ul		{padding:0px; margin:0px; width:100%; padding-top:10px;}
+.camposResultadosProducto ul li.edad 	input{width:109px; height:18px; border:1px solid #999;}
+.camposResultadosProducto ul li.CP	input{width:109px; height:18px; border:1px solid #999;}
+.camposResultadosProducto ul li.bot	input{margin-top:-5px; position:relative;}
+.camposResultadosProducto ul li.incluir	input	{border:0px solid #030; width:125px; background:url(PREPRO_017569-2.jpg) no-repeat left 0px;}
+.precioCoberturaProducto span.peque{font-size:11px; display:block; clear:both; font-weight:normal; letter-spacing:normal; color:#333;}
+.precioCoberturaMesProducto {
+	POSITION: absolute; LETTER-SPACING: 1px; FONT-SIZE: 0.3em; TOP: 34px; RIGHT: -22px
+}
+.precioCoberturaProductoDesde {
+	POSITION: absolute; LETTER-SPACING: 1px; FONT-SIZE: 11px; TOP: 1px; LEFT: 5px
+}
+.contentProducto				{
+							position:relative;
+							border:0px solid #F00;
+							display:inline-block;
+							padding-left:1em;
+	
+	
+							}	
+              
+                /*banner telï¿½fono*/							
+							
+
+.cajaContentDere	{background:url(fondoCajaDere.gif) repeat-y;
+					width:210px;
+					margin-top:10px;
+					border:#000 0px solid;
+					}
+
+.cajaContentDere span	{padding-left:5px;
+					padding-right:5px;
+					display:block;
+					}
+	.textos_telefono	{
+					font-size:1.10em;
+					display:block;
+					padding-top:4px; padding-bottom:2px;
+					color:#24417c;
+					float:left;
+					margin-top: 12px;
+					margin-left:3px;
+					width:196px;
+
+					} 				
+					
+.fondotelefono	{background:url(fondotelefonos.jpg) no-repeat;
+					width:210px;
+					height: 94px;
+					margin-top:10px;
+					border:#000 0px solid;
+					}
+.fondotelefono span	{padding-left:5px;
+					padding-right:5px;
+					display:block;
+					}
+					
+
+					
+.num_telefono	{
+					font-size:1.50em;
+					padding-top:4px;
+					color:#214ca4;
+					margin-left:3px;
+					float:left;
+				
+
+
+					}
+/*Estas dos clases son para la botonera izquierda de sobre sanitas*/
+a.subonMS			{font-weight:bold;
+					}
+a.subonMS:hover	{color:#8ccce7;
+font-weight:bold;}
+/*---*/
+
+/*Clases para incidencia de enviar a un amigo*/
+.MsgBoxSeguros{
+  z-index: 90000;
+}
+.botonEnviar2{
+  background:url(botVerdeBig.gif) no-repeat scroll 0 0 transparent;
+  border:medium none;
+  color:#FFFFFF;
+  display:inline-block;
+  font-family:Arial,Verdana,Geneva,sans-serif;
+  height:33px;
+  text-align:center;
+  text-decoration:none;
+  width:134px;
+  cursor:pointer;
+  }
+.botonEnviar2:hover{
+  background:url(botVerdeBig.gif) no-repeat scroll 0 bottom transparent;
+  border:medium none;
+  color:#FFFFFF;
+  display:inline-block;
+  font-family:Arial,Verdana,Geneva,sans-serif;
+  height:33px;  
+  text-align:center;
+  text-decoration:none;
+  width:134px;
+
+}
+
+/*-- Clase para el estilo de las imagenes de la derecha del footer--*/
+.imagenIDIS{
+    width: 110px;
+    float: right; 
+    margin-right: 1px;  
+    margin-top: 1em;
+    /margin-top: -5em;
+}
+
+.imagenIDIS ul{
+  padding-left: 0px;
+}
+
+.imagenIDIS ul li{
+  display: block;  
+  float: right;
+  margin-right: 10px;
+}
+
+/* Clase para los iconos compartir */
+.MsgBoxSeguros2{
+
+  display: block;
+  position: absolute;
+  border: 1px solid #CCCCCC;
+  background: none repeat scroll 0 0 White;
+  width: 225px;
+  right: 220px;
+  z-index: 3000;
+  margin-top:20px;
+
+}
+
+/* Clase para los checks a OK */
+.errorIcon {
+    background: url("iconError.gif") no-repeat scroll 0 0 transparent;
+    border: 0 solid #000000;
+    clear: none;
+    display: block;
+    float: right;
+    height: 22px;
+    margin-right: 0;
+    width: 22px;
+}
+
+/* Clase para los checks a OK */
+.okIcon {
+    background: url("iconOK.gif") no-repeat scroll 0 0 transparent;
+    border: 0 solid #000000;
+    clear: none;
+    display: block;
+    float: right;
+    height: 22px;
+    margin-right: 0;
+    width: 22px;
+}
+
+input.boxButton2 {background: url(botVerdeBig.gif) top;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial,Verdana,Geneva,sans-serif;
+    font-size: 1.5em;
+    height: 33px;
+    margin-right: 20px;
+    margin-top: 0px;
+    text-align: center;
+    text-decoration: none;
+    width: 134px;
+}
+
+/*Mutualidades*/
+ 
+ .pestanaActivaMutualidades 	{
+	display:block;
+					width:150px;
+					height:25px;
+					position:absolute;
+					left: 42.5em;
+					top: -28px;
+					z-index:5;
+					background:url(pestanaActiva.gif) top;
+					}
+          
+.pestanaActivaMutualidades{
+  /top: -20px;
+}
+	
+.pestanainActivaMutualidades 	{
+	display:block;
+					width:150px;
+					height:25px;
+					background:url(pestanaActiva.gif) bottom;
+					position:absolute;
+					left: 42.5em;
+					top: -28px;
+					z-index:-1;
+					}
+    
+.pestanainActivaMutualidades{
+  /top: -20px;
+}
+
+.pestanaActivaMutualidades 	 a	{color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-weight: normal;
+					font-style: normal;
+					text-decoration:none;
+					height:25px;
+					display:block;
+					}
+.pestanaActivaMutualidades 	 a:hover	{color:#FFF;
+        display: block;
+        font-weight: normal;
+        line-height: 25px;
+        padding: 0;
+        text-indent: 18px;
+					}   
+          
+.botonesEmpresas div.pestanainActivaMutualidades  	{
+					display:block;
+					width:18em;
+					height:35px;
+					position:absolute;
+					left:42.5em;
+					top:-33px;
+					z-index:-1;
+					background:none;		
+					border:0px solid #F00;
+					
+					}
+        
+.MsgBoxSeguros2 form ul li span.errorIcon{
+  /margin-top: -25px;
+}
+
+.MsgBoxSeguros2 form ul li span.okIcon{
+  /margin-top: -25px;
+}
+
+
+ 
+/* Estilos integraciÃ³n portal de clientes */
+.botones div.capaMenu.menu05 {
+	right: 5px;
+}
+
+#tit_misanitas {
+	font-size: 2em;
+}
+
+div.contenedorLoginMenu {
+	background-color: #FFF;
+	background-image: none;
+	width: 100%;
+	height: 114px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+	div.contenedorLoginMenu div.colizda,
+	div.contenedorLoginMenu div.coldcha {
+		float: left;
+		height: 114px;
+		background-image: none;
+		overflow: hidden;
+     
+	}
+	
+	/* contenido menu desplegado mi sanitas */
+	div.contenedorLoginMenu div.colizda {
+		width: 318px;
+		border-right: 1px solid #D4D4D4;
+		/*background-color: #ECECEC;*/
+	}
+  
+  div.contenedorLoginMenu div.coldcha {
+    /height: 120px;
+    height: 120px\0/;
+  }
+	
+		div.capaMenu div.contenedorLoginMenu div.colizda h4 {
+			color: #009DDB;
+    		font-size: 1em;
+    		font-weight: normal;
+			padding: 0;
+			margin: 5px 10px 10px 10px;
+			float: left;
+		}
+		div.capaMenu div.contenedorLoginMenu div.colizda ul.pestana_bullet {
+			color: #666;
+			width: 298px;
+			font-size: 0.7em;
+			margin: 0 10px 10px 10px;
+			float: left;
+		}
+		
+			div.capaMenu div.contenedorLoginMenu div.colizda ul.pestana_bullet li.pestana_bullet {
+				width: 278px;
+				padding: 0;
+				font-weight: bold;
+				margin: 0 10px;
+				list-style-position: outside;
+			}
+			
+				p#parrafo_menu05:hover {
+					color: #3D9BDE;
+				}
+					
+	
+	div.contenedorLoginMenu div.coldcha {
+		width: 281px;
+		width: 275px\0/;
+		/width: 275px;
+    /margin-top:-15px;
+    margin-top:-15px\0/;
+		/*background-color: #DBDBDB;*/
+		border: none;
+	}
+	
+		.botones div.capaMenu div.contenedorLoginMenu div.coldcha div {
+			background: none;
+			border: none;
+					margin-top: -20px\0/;
+		/margin-top: -20px;
+		}
+		
+		div.capaMenu div.contenedorLoginMenu form {
+			margin: 10px;
+		}
+		
+			div.capaMenu div.contenedorLoginMenu form fieldset {
+				margin: 0;
+				padding: 0;
+				border: 0;
+			}
+			
+				div.capaMenu div.contenedorLoginMenu form fieldset legend {
+					color: #009DDB;
+					font-size: 1em;
+					font-weight: normal;
+					padding: 0;
+					margin: 5px 10px 10px 10px;
+					float: left;
+				}
+		
+			div.capaMenu div.contenedorLoginMenu form div.formrow {
+				margin: 0 0 5px 0;
+				padding: 0;
+				height: auto;
+				float: left;
+				background: none;
+			}
+			
+		
+			div.capaMenu div.contenedorLoginMenu form label,
+			div.capaMenu div.contenedorLoginMenu form input,
+			div.capaMenu div.contenedorLoginMenu form button {
+				float: left;
+			}
+			
+			div.capaMenu div.contenedorLoginMenu form label {
+				width: 65px;
+				text-align: right;
+				font-size: 0.9em;
+				font-color: #000;
+				display: block;
+			}
+			
+			div.capaMenu div.contenedorLoginMenu form input {
+				margin: 0 5px;
+				font-size: 0.9em;
+				border: 1px solid #D7D7D7;
+			}
+			
+			div.capaMenu div.contenedorLoginMenu form button ,
+			div.capaMenu div.contenedorLoginMenu form input[type="submit"] {
+				background-color: #FFF;
+				color: #009DDB;
+    			font-size: 0.9em;
+				border: 1px solid #D7D7D7;
+				border-radius: 5px;
+				cursor: pointer;
+				
+			}
+			
+			div.capaMenu div.contenedorLoginMenu form input[type="checkbox"] {
+				border:0;
+				border-style:none;
+			}
+			
+			.botonesEmpresas div.capaMenu div.contenedorLoginMenu div.coldcha a {
+				font-size: 0.9em;
+				font-weight: normal;
+				color: #009DDB;
+				float: right;
+				height: auto;
+				padding: 0;
+				width: auto;
+				position: inherit;
+				top: auto;
+				line-height: 1em;
+			}
+      
+      .botones div.capaMenu div.contenedorLoginMenu div.coldcha a {
+				font-size: 0.9em;
+				font-weight: normal;
+				color: #009DDB;
+				float: right;
+				height: auto;
+				padding: 0;
+				width: auto;
+				position: inherit;
+				top: auto;
+				line-height: 1em;
+			}
+      
+      /* Fin integracion con portal de socios */
+      
+      /* Iconos error y ok*/
+      
+      .form_general div.col2 span.okIcon{
+        position: absolute;
+        float: right;
+        margin-left: 158px;
+        margin-top: -23px;
+      }
+      
+      .form_general div.col2 span.errorIcon{
+        position: absolute;
+        float: right;
+        margin-left: 158px;
+        margin-top: -23px;    
+      }
+      
+      
+      .form_general div.col2 span.okIcon{
+        /position: absolute;
+        /margin-top: -4px;
+        /margin-left: 0px;
+      }
+      
+      .form_general div.col2 span.errorIcon{
+        /position: absolute;      
+        /margin-top: -4px;
+        /margin-left: 0px;
+      }
+      
+      /* Select de provincia en los formularios de planes preventivos*/
+      
+      .form_general div.col2 select{
+        width:145px;
+        *width: 155px;
+        /width: 155px;
+      }
+      
+/*Estilos del aspa de enviar a un amigo*/
+
+div.MsgBoxSeguros2 form a img {
+    position: absolute;
+    right: 0px;
+    margin-top: -10px;
+    /margin-top: 0px;
+}
+
+
+div.MsgBox form a img {
+    position: absolute;
+    right: 0px;
+}
+/*Error icon en Milenium*/
+
+div.cajaFormMillenium div form ul li label.errorIcon {
+    position: absolute;
+    margin-left: 110px;
+    margin-top: -22px;
+}
+
+/*Candado en pestana de mutualidades*/
+div.botones ul li div.finBot h3 a span.miSanitas {
+    margin-top: 5px;
+    left: 45px;
+}
+
+/*Lista de formulario tengo seguro*/
+ul.ulLinksNuevos li{
+    background: url("iconListCajas.gif") no-repeat scroll -7px -1px transparent;
+    padding-left:10px;
+}
+
+/* estilos para centros de bienestar */
+.homeBienestar {
+    position: relative;
+}
+.homeBienestar img.Portada	{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:1;
+	
+	
+	}
+.homeBienestar.Green .introBienestar {
+    color: #FFFFFF;    
+    /*margin=left:=38.2em;*/
+}
+
+.homeBienestar.Green div {
+    background: none repeat scroll 0 0 #677F03;
+}
+
+.homeBienestar.Green h2 {
+    color: #FFFFFF;
+    padding: 0;
+}
+
+.homeBienestar .introBienestar {
+    font-size: 14px;
+    top: 15px;
+    width: 322px;
+}
+
+.homeBienestar div {
+    margin-left: 15px;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.homeBienestar .contentCentroBienestar {
+    margin-top: 40px;
+    width: 500px;
+    z-index: 2;
+}
+
+.homeBienestar .contentCentroBienestar ul {
+    background: none repeat scroll 0 0 #FFFFFF;
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+    width: 96%;
+}
+
+.homeBienestar .contentCentroBienestar ul li {
+    border: 0 solid #000000;
+    display: block;
+    float: left;
+    padding-bottom: 10px;
+    width: 49%;
+}
+
+.homeBienestar .contentCentroBienestar img {
+    float: left;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+.homeBienestar .contentCentroBienestar ul li div {
+    background: none repeat scroll 0 0 transparent;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 160px;
+}
+
+.homeBienestar .contentCentroBienestar h3 {
+    font-size: 14px;
+    margin-top: 0;
+    padding-bottom: 5px;
+    padding-top: 0;
+    position: relative;
+}
+
+.homeBienestar .contentCentroBienestar span {
+    display: block;
+    padding-bottom: 15px;
+}
+
+.homeBienestar .contentCentroBienestar a {
+    display: block;
+    text-decoration: underline;
+}
+
+/*Estilos tarjeta cuidate*/
+.homeBienestar .introcuidateazul {
+    background: none repeat scroll 0 0 #0079C8;
+    font-size: 14px;
+    top: 15px;
+    width: 322px;    
+	color: #FFFFFF!important;
+}
+.blueazulback {
+	    background: none repeat scroll 0 0 #0079C8!important;
+}
+.homeBienestar .introcuidateazul h2 { 
+	color: #FFFFFF!important;
+}
+
+.botoncorporativoazulcuidate {
+    background: url("BOTONCORPORATIVOAZUL.gif") no-repeat scroll right 4px transparent;
+    border: 0 none;
+    color: #FFFFFF !important;
+    cursor: pointer;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    height: 32px;
+    padding-left: 22px;
+    padding-right: 27px;
+    padding-top: 12px;
+    text-decoration: none !important;
+    text-transform: uppercase;
+}
+.botoncorporativoazulcuidate a {
+position: relative;
+margin-top: 4px;
+}
+.height400cuidate {
+height: 400px!important;	
+}
+
+
+/* Estilos de la imagen captcha formulario enviar a un amigo imagenCaptcha */
+.imagenCaptcha{
+  margin-top:10px;
+  width:150px;
+}
+
+/*Estilo para plantilla de textos legales*/
+
+.cuerpo_legal {      border: 0 solid #FF0000;
+                     margin: 20px auto auto 41px;
+                     position: relative;
+                     width: 71.5em;
+              }
+
+/*Estilos para formulario del banner Otros servicios de salud*/
+
+input.boxButtonAzul_1 {
+       
+    background: url("BOTONCORPORATIVOAZUL.gif") repeat scroll center top transparent;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial,Verdana,Geneva,sans-serif;
+    font-size: 1.4em;
+    height: auto;
+    margin-left: 5px;
+    margin-top: 0;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    font-weight:bold;
+    
+}
+
+.FormBannerDerecha{margin-left:0px; width:100%;}
+
+.FormularioBanner { margin-top: 5px; margin-bottom:10px; margin-left:4px; width:98%;}
+.ancho_texto { float: left;
+               width: 30%;}
+.ancho_texto2 { float: left;
+               width: 63%;}
+.FormularioBanner h2 {font-size: 12px; margin-left: 5px;padding-left: 0; text-align: center;}
+.FormularioBanner h3 {font-size:12px; margin-bottom:19px; margin-left:6px;}
+.inputFormulario{margin-top: -3px !important;width: 116px !important; margin-left:-7px;}
+
+#selectHoras{margin-top: 3px; width:84%; margin-left:11px;}
+#grupo{width:20px}
+#politicaPrivacidad{width:15px;}
+#boxButtonEnviar{margin-left:109px;}
+#telefonoLLamame{margin-top: -3px;width: 69px;}
+#label_campo_tfn{margin-left: 6px;}
+
+/*identificadores para el banner de solicita cita*/
+#selectHorasCita{margin-top: 3px; width:84%; margin-left:11px;}
+#grupoCita{width:20px}
+#politicaPrivacidadCita{width:15px;}
+
+
+/* Clase para los checks a OK */
+.errorIconBannerForm {
+    background: url("iconError.gif") no-repeat scroll 0 0 transparent;
+    border: 0 solid #000000;
+    clear: none;
+    display: block;
+    float: right;
+    height: 22px;
+    margin-left: 28px;
+    margin-right: 0;
+    margin-top: -21px;
+    width: 22px;
+    padding: 0 !important;
+}
+
+/* Clase para los checks a OK */
+.okIconBannerForm {
+    background: url("iconOK.gif") no-repeat scroll 0 0 transparent;
+    border: 0 solid #000000;
+    clear: none;
+    display: block;
+    float: right;
+    height: 22px;
+    margin-left: 28px;
+    margin-right: 0;
+    margin-top: -21px;
+    width: 22px;
+    padding: 0 !important;
+}
+
+.mensajeErrorPeque {
+    background: url("iconWarningPeque.gif") no-repeat scroll 8px 1px #FFFFFF;
+    border: 1px solid #DD0000;
+    clear: both;
+    color: #FF0000;
+    display: block;
+    font-size: 0.9em;
+    margin: 15px auto 0;
+    padding: 5px 5px 5px 45px;
+    width: 70%;
+    margin-bottom:10px;
+}
+
+/*estilo para el enlace del menu superior de mi sanitas*/
+#enlaceColizda{
+    display: inline;
+    padding: 0;
+    text-align: left;
+}
+
+/*estilo para imagen manual en caja de empresas*/
+.pdfManual{float:right; margin-top:-38px;}
+
+/*nuevos estilos para hacer mas pequena la cabecera cuando no tiene la propertie textoDesplegable*/
+#capaSinText{
+  height: 182px;
+}
+#sinText{
+  height: 182px;
+}
+#stSinText{
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+/* estilo para la nube de tags y cajas inferiores*/
+.pieSeo	h2 span{color:#2b9ce8; margin:0px; padding:0px; font-size:.6em; padding-left:1em; 
+  padding-top:1em; text-decoration:none; display:block; font-weight:normal;
+  cursor: default;}
+.pieSeo	h2 a p{color:#2b9ce8; margin:0px; padding:0px; font-size:1em; padding-left:0px; 
+  padding-top:.2em; text-decoration:none; display:block; font-weight:normal;
+  cursor: default;}
+.pieSeo	h2 span:hover {color:#65ccf1;}
+
+.homeBienestar.Rosa div {
+    background: none repeat scroll 0 0 #B91F68;
+}
+.homeBienestar.Verde div {
+    background: none repeat scroll 0 0 #007a3d;
+}
+.homeBienestar.Gris div {
+    background: none repeat scroll 0 0 grey;
+}
+.testbotoncorporativoazulcuidate{
+background: url("BOTONCORPORATIVOAZUL.gif") no-repeat scroll right 4px transparent;
+padding: 9px 27px 9px 9px;
+color: #FFFFFF;
+}
+
+/**************************************************/
+
+/* estilos test geneticos */
+.homeBienestar.Rosa div {
+    background: none repeat scroll 0 0 #B91F68;
+}
+
+.homeBienestar.Verde div {
+    background: none repeat scroll 0 0 #007a3d;
+}
+
+.homeBienestar.Gris div {
+    background: none repeat scroll 0 0 grey;
+}
+
+
+
+#introTest{
+  color:#FFFFFF;
+}
+#introTest h2{
+  color:#FFFFFF;
+}
+#listaTest{
+  background:none;
+}
+#listaTest div{
+  width: 210px;
+}
+#listaTest div a{
+  color:#FFFFFF;
+}
+#listaTest li{
+  background: url(SON099436.png) no-repeat scroll 0 3px transparent;
+  padding-left: 14px;
+  width: 47%;
+}
+/**************************************************/
+
+/* estilo para la nube de tags*/
+.pieSeo	h2 span{color:#2b9ce8; margin:0px; padding:0px; font-size:.6em; padding-left:1em; 
+  padding-top:1em; text-decoration:none; display:block; font-weight:normal;
+  cursor: default;}
+.pieSeo	h2 span:hover {color:#65ccf1;}
+
+
+/*********************************************************************************/
+
+/*estilos de la home de MUFACE*/
+ .botonesMUFACE{
+    width: 233px;
+    background:url("SEN100820.png") no-repeat scroll -00px -0px transparent;
+    
+	
+  
+	color:#fff;
+	text-transform:uppercase;
+	height:38px;
+	font-size:16px;
+  font-weight: bold;
+	margin:0px;
+	padding:0px;
+	margin-top:5px;
+  text-align:left;
+  
+  padding-bottom: 5px;
+  padding-left:4px;
+  padding-left:6px \0/;
+	border:0px;
+  border-bottom: 0px;
+	cursor: pointer;
+  }
+  
+  ul.LinksBotonesMuface li{
+  display:block;
+  float:left;
+  padding-left:25px;
+  }
+  
+  ul.LinksBotonesMuface{
+    left:130px;
+    position: absolute;
+  }
+  
+  .breadCrumbIzq{
+    float:left;
+  }
+  
+  .breadCrumbDer{
+    float:right;
+  }
+  /*Pop up recordar*/
+  #overlay{
+	display:none;
+  }
+  
+
+
+.inputDiaMes{
+    width: 25px !important;
+}
+
+.inputAnyo{
+    width: 38px !important;
+}
+
+.datosFechaCodigo{
+  margin-top: 0 !important; 
+}
+
+.labelFecha{
+  font-size: 12px;
+  padding-top: 38px !important;
+  padding-left: 42px;
+  text-align: left;
+  /margin-left: 7px !important;
+  /margin-top: -32px !important;
+}
+
+#codPostal{
+  width: 80px !important;
+}
+
+.CP #codPostal{
+  width: 55px !important;
+}
+#formulario1 ul .CP #codPostal, #formulario2 ul .CP #codPostal{
+  width: 85px !important;
+}
+
+.bot #botCalcular{
+  margin-top: 10px !important;
+  /margin-left: -380px !important;
+  /margin-top: 30px !important;
+}
+
+#formulario2 ul{
+  margin-left: 20px !important;
+}
+
+.cajaIdioma{position: absolute; top:15px; left:0px; width:200px;}
+.cajaIdiomaSelect{float: left;}
+.cajaIdiomaImg{position: relative; float: right;}
+
+/*Multidioma Banderas*/
+.idioma {display:block;clear:both;border-bottom:1px solid #F1F1F1;margin:0 0 5px 0; text-align:right;}
+.idioma a {display:inline-block;padding:3px 5px 3px 28px;background-color:#F1F1F1; background-position:5px 50%; background-repeat:no-repeat; border-radius:5px 5px 0 0;font:bold 11px Arial, Helvetica, sans-serif;color:#0055B1; text-decoration:none;}
+.idioma a span {padding-right:14px; background:transparent url(SAN_SIA_IMG_FLAGARROW.gif) right 50% no-repeat;}
+.idioma a:hover { background-color:#0055B1;color:#FFF;}
+.idioma a.en {background-image:url(SAN_SIA_IMG_FLAGENGLISH.gif);}
+.idioma a.es {background-image:url(SAN_SIA_IMG_BANDERACASTELLANO.gif);}
+
+.nombreUsuario{
+    padding:0;margin-bottom:0;margin-top:35px;font-size:18px;
+}
+
+.contentTelProgramaCB {
+    background-color: #678004;
+    height: 51px;
+}
+.contentProgramaCB {
+    background: none repeat scroll 0 0 #678004;
+}
+
+.contentTelProgramaCB p {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding-top: 3%;
+}
+
+#listaTest div a {
+    color: #FFFFFF;
+}
+.content .contentProgramaCB a {
+    display: block;
+    text-decoration: underline;
+    color: white;
+}
+
+#listaPrograma {
+    background: none repeat scroll 0 0 transparent;
+}
+.content .contentProgramaCB ul {
+    background: none repeat scroll 0 0 #FFFFFF;
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+    width: 96%;
+}
+
+#listaPrograma li {
+    padding-left: 14px;
+    width: 47%;
+}
+.content .contentProgramaCB ul li {
+    border: 0 solid #000000;
+    display: block;
+    float: left;
+    padding-bottom: 10px;
+    width: 49%;
+}
+
+#listaPrograma div {
+    width: 210px;
+}
+.content .contentProgramaCB ul li div {
+    background: none repeat scroll 0 0 transparent;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 160px;
+}
+.contentCentroBienestar-abajo {
+    margin-top: 16px;
+    width: 500px;
+    z-index: 3;
+	background-color: #677f03;
+	height: 44px;
+	padding: 0;
+}
+
+.boton_blanco{
+  float: right; 
+  color: #0079c8; 
+  font-size:14px; 
+  background: url(SAN_SIA_IMG_BOTON_BLANCO.jpg) transparent top left no-repeat;
+  margin: 6px 0 0 0; 
+  width: 140px;  
+  height: 27px; 
+  line-height: 79%;
+  TEXT-DECORATION: NONE;
+  font-weight:bold; 
+  text-align:center; 
+}
+/*Formularios CITA-INFO*/
+@charset "utf-8";
+/* CSS Document */
+
+.form-ssalud {
+    margin: 0 0 0 6px;
+    padding: 0;
+}
+
+.cajaContentDere-ssalud {
+    background-image:none;
+    border: 0 solid #fff;
+    margin-top: 10px;
+    width: 210px;
+	background-color:#F9F9F9;
+}
+.cajaContentDere-ssalud h2 {
+    padding: 0.5em 0.3em 0.6em 24px;
+}
+
+.cajaDere-ssalud {
+    border: 1px solid #89969F;
+    display: block;
+    width: 210px;
+	background-image:none;background-color:#F9F9F9;
+	margin:0;
+}
+
+h2.titularCajaInfo {
+    background: url(ICONO-INFO.png) no-repeat scroll 8px 0 transparent;
+    border: 0 solid #FF0000;
+    color: #666666;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+    min-height: 1em;
+    text-indent: 2em;
+}
+
+h2.titularCajaInfo2 {
+    background: url(ICON_CITA.png) no-repeat scroll 8px 0 transparent;
+    border: 0 solid #FF0000;
+    color: #666666;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+    min-height: 1em;
+    text-indent: 2em;
+}
+
+
+h2.titularCajaInfo3 {
+    background: url(ICON_CONTRA.png) no-repeat scroll 8px 0 transparent;
+    border: 0 solid #FF0000;
+    color: #666666;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+    min-height: 1em;
+    text-indent: 2em;
+}
+
+.cajaBottom2 {
+    background-image:none;
+    display: block;
+    height: 11px;
+    width: 210px;
+}
+
+.FormularioBanner-ssalud h3 {
+    font-size: 12px;
+}
+
+.FormularioBanner-ssalud h4 {
+    font-size: 11px; color:#333; font-style:normal; font-weight:normal; display:block; border-top: 1px solid #C1C7CC;
+	background-color:#FFF; width: 170px; margin: 0 10px 12px 10px; padding: 6px;
+	 
+}
+
+.FormularioBanner-ssalud {
+    margin-bottom: 10px;
+    margin-left: 4px;
+    margin-top: 5px;
+    width: 98%;
+}
+
+.FormularioBanner-ssalud2 {
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-top: 5px;
+    width: 98%;
+}
+
+#selectHoras-ssalud {
+    margin-left: 0;
+    margin-top: 3px;
+    width: 180px;
+}
+.cajaContentDere select {
+    font-size: 1em;
+   
+}
+
+.ancho_texto2 {
+    float: left;
+    width: 63%;
+}
+
+
+
+.ancho-texto-ssalud {
+    float: left;
+    width: 100%;
+}
+
+.bupapest {clear:both;width:100%;display: block; clear:both;height:14px;padding-left:0 !important;-webkit-padding-start:0;
+    *margin-left: -0.5px;
+    *margin-top: 15px;
+    *margin-bottom: 12.5px;
+}
+.bupapest li {float:left;width:47%;margin-right:3%; text-align:center}
+.bupapest li a {display:block;padding:5px;background-color:#93C6E2;color:#FFFFFF;border:1px solid #89969F; text-decoration:none;font-weight:bold}
+.bupapest li a,.bupapest li a:visited{color:#FFFFFF}
+.bupapest li a.active {background-color: #F9F9F9;border-bottom:1px solid #F9F9F9;color:#126891;}
+.ocultar {display:none;}
+
+/* botones */
+
+.button {display:inline-block;width:auto;border:none; text-align:left;padding:8px 30px 8px 13px;line-height:33px; font:bold 14px Arial, Helvetica, sans-serif; color:#009add !important; background-color:#FCFCFC; background-image:url(F-BOTON.png); background-position: right 0; background-repeat: no-repeat; text-transform:uppercase;cursor:pointer; text-decoration:none !important;box-shadow:0px 1px 2px #424242;-moz-box-shadow:0px 1px 2px #424242;}
+.button.azul {color:#FFF !important; background-color:#009fe4 !important; background-image:url(F-BOTON-COLOR.png) !important;}
+.button:hover,.button:focus{background-position:right -100px; }
+
+.button.ancho {width:100%;}
+
