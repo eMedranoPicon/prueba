@@ -163,13 +163,11 @@ div.tiempoDeEspera
 *
 */
 
-
-
 .box-tiempoDeEspera
 {
 	background: $blueBox !important;
-	padding: 5px 25px 25px 25px !important;
-	width: 93.5% !important;
+	padding: 0 !important;
+	width: 98% !important;
 	@include single-box-shadow(rgba(0, 0, 0, 0.3),0px,3px,3px);
 	border: 0;
 	display: inline-block;
@@ -177,10 +175,12 @@ div.tiempoDeEspera
 
 	.container-tiempoDeEspera
 	{
-		width: 97% !important;
-		background-color: $white;
-		margin: 0 !important;
-		padding: 10px 15px;
+		background-color: #FFF;
+		margin: 0 3% 3% 3% !important;
+		padding: 10px 2% !important;
+		display: block !important;
+		float: none !important;
+		width: 90% !important;
 
 		p {
 			width: 60%;
@@ -213,6 +213,7 @@ div.tiempoDeEspera
 		color: $textcolor-blueh2;
 		font-size: $fontSizeLarge;
 		text-transform: uppercase;
-		padding: 2px 0 5px 0;
+		padding: 8px 0 8px 0;
+		text-indent: 3%;
 	}
 }
