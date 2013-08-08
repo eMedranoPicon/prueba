@@ -1,4 +1,12 @@
 
+.pull-right {
+	float: right !important;
+}
+
+.pull-left {
+	float: left !important;
+}
+
 span.arrow-grey {
 	right: 0px;
 
@@ -7,146 +15,204 @@ span.arrow-grey {
 		margin-right: 0 !important;
 		top: 18%;
 	}
-
 }
 
-hgroup.todos.centros.listado article li div	div.tiempoDeEspera
+dl.dl-tiempoDeEspera
 {
-	@media screen and (max-width: 480px)
-	{
-		width: 90%;
-		font-size: 10px;
+	display: inline-block;
+	margin: 0 0 10px 0;
+	width:245px;
 
-		span.tiempoDeEspera-data
+	dt,
+	dd {
+		display: inline-block;
+		margin-top: 9px;
+		color: $textcolor-blue;
+	}
+
+	dt{
+		width: 120px;
+	}
+
+	dd{
+		margin-left: 0px;
+	}
+}
+
+/*
+*
+*	div.tiempoDeEspera
+*
+*/
+
+hgroup.todos.centros.listado article li div
+{
+	div.tiempoDeEspera
+	{
+		@media screen and (max-width: 480px)
 		{
+			width: 90%;
 			font-size: 10px;
+
+			span.tiempoDeEspera-data
+			{
+				font-size: $fontSizeSmall;
+			}
+
+			span:nth-last-child(2)
+			{
+				width: 100px;
+			}
 		}
 
-		span:nth-last-child(2)
+		@media screen and (max-width: 768px) and (min-width: 480px)
 		{
-			width: 100px;
+			width: 99%;
 		}
-	}
 
-	@media screen and (max-width: 768px) and (min-width: 480px)
-	{
-		width: 99%;
+		width: 90%;
 	}
-
-	width: 90%;
 }
 
-.todos article ul li div.tiempoDeEspera
+.todos article ul li
 {
-	position: relative;
-	@include single-box-shadow(none);
-	margin: 5px 0 0 0;
-	padding: 0;
-	border: none;
-	//max-width: 225px;
-	width: 50%;
-
-	@media screen and (max-width: 480px)
+	div.tiempoDeEspera
 	{
-		width: 60%;
+		position: relative;
+		@include single-box-shadow(none);
+		margin: 5px 0 0 0;
+		padding: 0;
+		border: none;
+		//max-width: 225px;
+		width: 50%;
+
+		@media screen and (max-width: 480px)
+		{
+			width: 60%;
+		}
+
 	}
 
 }
 
-div.tiempoDeEspera span.tiempoDeEspera-data
+div.tiempoDeEspera
 {
-	margin-top: 5px;
-	font-size: 12px;
-
-	p
-	{
-		@include clearfix();
-		margin: 0px 0 0 0px;
-		font-size: inherit;
-
-		span:nth-last-child(1)
-		{
-			display: block;
-			float: left;
-		}
-
-		span:nth-last-child(2)
-		{
-			display: block;
-			width: 110px;
-			float: left;
-		}
-	}
-
-	p:nth-last-child(1)
+	span.tiempoDeEspera-data
 	{
 		margin-top: 5px;
-	}
+		font-size:  $fontSize;
 
-	span {
-		font-size: inherit;
-		color: $textcolor-blue2;
-	}
-
-	strong.header {
-		display: inline-block;
-		line-height: 26px;
-		vertical-align: top;
-		color: $textcolor-blueLighter;
-		font-size: inherit;
-	}
-
-	i.icon-espera
-	{
-		@include background(image-url("espera.png"));
-		@include background-size(25px 25px);
-		display: inline-block;
-		width: 25px;
-		height: 25px;
-	}
-}
-
-div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2)
-{
-	margin-bottom: 10px;
-}
-
-.todos article ul li .wraper-buttons
-{
-	@include single-box-shadow(none);
-	width: auto;
-	height: inherit;
-	margin: 0 0 10px 0;
-	padding: 0;
-	border: none;
-}
-
-.wraper-buttons
-{
-	height: inherit;
-
-	a.buttonLight
-	{
-		@include single-box-shadow(rgba(0, 0, 0, 0.3),0px,3px,3px);
-		display: block;
-		background-color: $blue;
-		color: $white;
-		line-height: 20px;
-		padding: 0 10px;
-		font-size: 12px;
-		font-weight: normal;
-		font-family: 'GothamLightRegular';
-
-		@include background(linear-gradient(top, $blue, $blue3));
-
-		&:hover
+		p
 		{
-			text-decoration: none;
-			@include background(linear-gradient(top, $blue, $blue));
+			@include clearfix();
+			margin: 0px 0 0 0px;
+			font-size: inherit;
+
+			span:nth-last-child(1)
+			{
+				display: block;
+				float: left;
+			}
+
+			span:nth-last-child(2)
+			{
+				display: block;
+				width: 110px;
+				float: left;
+			}
+		}
+
+		p:nth-last-child(1)
+		{
+			margin-top: 5px;
+		}
+
+		span {
+			font-size: inherit;
+			color: $textcolor-blue2;
+		}
+
+		strong.header {
+			display: inline-block;
+			line-height: 26px;
+			vertical-align: top;
+			color: $textcolor-blueLighter;
+			font-size: inherit;
+		}
+
+		i.icon-espera
+		{
+			@include background(image-url("espera.png"));
+			@include background-size(25px 25px);
+			display: inline-block;
+			width: 25px;
+			height: 25px;
 		}
 	}
 
-	a.little {
-		width: $boxLittle;
+	span.tiempoDeEspera-data > p:nth-of-type(2)
+	{
+		margin-bottom: 10px;
+	}
+
+}
+
+/*
+*
+*	.box-tiempoDeEspera
+*
+*/
+
+
+
+.box-tiempoDeEspera
+{
+	background: $blueBox !important;
+	padding: 5px 25px 25px 25px !important;
+	width: 93.5% !important;
+	@include single-box-shadow(rgba(0, 0, 0, 0.3),0px,3px,3px);
+	border: 0;
+	display: inline-block;
+	position: relative;
+
+	.container-tiempoDeEspera
+	{
+		width: 97% !important;
+		background-color: $white;
+		margin: 0 !important;
+		padding: 10px 15px;
+
+		p {
+			width: 60%;
+		}
+
+		>p
+		{
+			margin-top: 0px;
+		}
+
+		span.arrow.right {
+			display: inline-block;
+			float: right;
+		}
+
+		dl {
+
+			@extend dl.dl-tiempoDeEspera;
+
+			padding-left: 65px;
+			@include background(image-url("espera.png"));
+			background-repeat: no-repeat;
+			@include clearfix();
+			width: 300px;
+			min-height: 60px;
+		}
+	}
+
+	h2 {
+		color: $textcolor-blueh2;
+		font-size: $fontSizeLarge;
+		text-transform: uppercase;
+		padding: 2px 0 5px 0;
 	}
 }

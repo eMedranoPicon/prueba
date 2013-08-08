@@ -6,176 +6,210 @@
 <html>
 <!--<![endif]-->
 <head>
-<title>Sanitas seguros de salud</title>
-		<meta charset="UTF-8">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link href="support/SanitasMovil/css/normalize.css" rel="stylesheet" type="text/css">
-		<link href="support/SanitasMovil/css/main.css" media="screen" rel="stylesheet" type="text/css" />
+    <title>Sanitas seguros de salud</title>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="support/SanitasMovil/css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="support/SanitasMovil/css/main.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <!-- TIEMPO DE ESPERA -->
+    <link href="entregables/css/web-movil-TiempoDeEspera.css" media="screen" rel="stylesheet" type="text/css" />
+     <!-- EO TIEMPO DE ESPERA -->
+
 
 		<!--[if lt IE 9]>
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-    	<script src="support/SanitasMovil/js/lib/respond.min.js"></script>
- 		<script src="support/SanitasMovil/js/lib/jquery.js"></script>
-    	<script src="support/SanitasMovil/js/sanitas/dispositivo.js"></script>
- 		<script src="support/SanitasMovil/js/lib/modernizr.js"></script>
+     <script src="support/SanitasMovil/js/lib/respond.min.js"></script>
+     <script src="support/SanitasMovil/js/lib/jquery.js"></script>
+     <script src="support/SanitasMovil/js/sanitas/dispositivo.js"></script>
+     <script src="support/SanitasMovil/js/lib/modernizr.js"></script>
 
 
-  		<!--prepara imagenes para dispositivos, según dispositivo asignamos una u otra imagen, no obstante creemos que la página a bastante bien de peso y no creemos que sea necesario hacer esta funcionalidad, exportando bien la imagen no debería suponer un peso excesivo adiconal-->
-        <script type="text/javascript">
-if (is_iphone) {
+     <!--prepara imagenes para dispositivos, según dispositivo asignamos una u otra imagen, no obstante creemos que la página a bastante bien de peso y no creemos que sea necesario hacer esta funcionalidad, exportando bien la imagen no debería suponer un peso excesivo adiconal-->
+     <script type="text/javascript">
+     if (is_iphone) {
 //Images Iphone;
-	jQuery(document).ready(function() {
-		$("#banner").html('<img src="support/SanitasMovil/images/banner.jpg" />');
-		$("#contentImage1").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
-		$("#contentImage2").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
-		$("#contentImage3").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
-		$("#contentImage4").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
+jQuery(document).ready(function() {
+  $("#banner").html('<img src="support/SanitasMovil/images/banner.jpg" />');
+  $("#contentImage1").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
+  $("#contentImage2").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
+  $("#contentImage3").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
+  $("#contentImage4").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
 
-	});}
+});}
 else if (is_ipad) {
 //Images ipad;
-	jQuery(document).ready(function() {
-		$("#banner").html('<img src="support/SanitasMovil/images/banner.jpg" />');
-		$("#contentImage1").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
-		$("#contentImage2").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
-		$("#contentImage3").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
-		$("#contentImage4").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
+jQuery(document).ready(function() {
+  $("#banner").html('<img src="support/SanitasMovil/images/banner.jpg" />');
+  $("#contentImage1").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
+  $("#contentImage2").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
+  $("#contentImage3").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
+  $("#contentImage4").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
 
-	});}
+});}
 else if (is_android) {
 //Images android;
-	jQuery(document).ready(function() {
-		$("#banner").html('<img src="support/SanitasMovil/images/banner.jpg" />');
-		$("#contentImage1").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
-		$("#contentImage2").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
-		$("#contentImage3").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
-		$("#contentImage4").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
+jQuery(document).ready(function() {
+  $("#banner").html('<img src="support/SanitasMovil/images/banner.jpg" />');
+  $("#contentImage1").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
+  $("#contentImage2").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
+  $("#contentImage3").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
+  $("#contentImage4").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
 
-	});}
+});}
 else {
 //Images web;
-	jQuery(document).ready(function() {
-		$("#banner").html('<img src="support/SanitasMovil/images/banner.jpg" />');
-		$("#contentImage1").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
-		$("#contentImage2").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
-		$("#contentImage3").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
-		$("#contentImage4").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
+jQuery(document).ready(function() {
+  $("#banner").html('<img src="support/SanitasMovil/images/banner.jpg" />');
+  $("#contentImage1").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
+  $("#contentImage2").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
+  $("#contentImage3").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
+  $("#contentImage4").html('<img src="support/SanitasMovil/images/imgHospital.jpg" />');
 
-	});
+});
 }
 </script>
 
-	<!--prepara imagenes para dispositivos-->
+<!--prepara imagenes para dispositivos-->
 
 
 
-	<!--prepara imagenes svg-->
- <script type="text/javascript">
+<!--prepara imagenes svg-->
+<script type="text/javascript">
 $(document).ready(function() {
 
 
    if (Modernizr.svg) {
  	 	//alert ("losoporta")
-		$("#iconfb").html('<img src="support/SanitasMovil/images/icon-fb.svg" />');
-		$("#icontw").html('<img src="support/SanitasMovil/images/icon-tw.svg" />');
-		$("#icontube").html('<img src="support/SanitasMovil/images/icon-tube.svg" />');
-		$("#iconapple").html('<img src="support/SanitasMovil/images/icon-apple.svg" />');
-		$("#iconandroid").html('<img src="support/SanitasMovil/images/icon-android.svg" />');
+      $("#iconfb").html('<img src="support/SanitasMovil/images/icon-fb.svg" />');
+      $("#icontw").html('<img src="support/SanitasMovil/images/icon-tw.svg" />');
+      $("#icontube").html('<img src="support/SanitasMovil/images/icon-tube.svg" />');
+      $("#iconapple").html('<img src="support/SanitasMovil/images/icon-apple.svg" />');
+      $("#iconandroid").html('<img src="support/SanitasMovil/images/icon-android.svg" />');
 
-		$("#cajaHospitales").prepend('<img src="support/SanitasMovil/images/icon-hospital.svg" class="icon" />');
-		$("#cajaEspecialidades").prepend('<img src="support/SanitasMovil/images/icon-especialidades.svg" class="icon" />');
-		$("#cajaEquipo").prepend('<img src="support/SanitasMovil/images/icon-equipo.svg" class="icon" />');
-		$("#cajaServicios").prepend('<img src="support/SanitasMovil/images/icon-servicios.svg" class="icon" />');
-		$("#cajaUrgencias").prepend('<img src="support/SanitasMovil/images/icon-urgencias.svg" class="icon" />');
+      $("#cajaHospitales").prepend('<img src="support/SanitasMovil/images/icon-hospital.svg" class="icon" />');
+      $("#cajaEspecialidades").prepend('<img src="support/SanitasMovil/images/icon-especialidades.svg" class="icon" />');
+      $("#cajaEquipo").prepend('<img src="support/SanitasMovil/images/icon-equipo.svg" class="icon" />');
+      $("#cajaServicios").prepend('<img src="support/SanitasMovil/images/icon-servicios.svg" class="icon" />');
+      $("#cajaUrgencias").prepend('<img src="support/SanitasMovil/images/icon-urgencias.svg" class="icon" />');
 
-	}else{
+  }else{
 	 	//alert ("nolosoporta")
-		$("#iconfb").html('<img src="support/SanitasMovil/images/icon-fb.png" />');
-		$("#icontw").html('<img src="support/SanitasMovil/images/icon-tw.png" />');
-		$("#icontube").html('<img src="support/SanitasMovil/images/icon-tube.png" />');
-		$("#iconapple").html('<img src="support/SanitasMovil/images/icon-apple.png" />');
-		$("#iconandroid").html('<img src="support/SanitasMovil/images/icon-android.png" />');
-		$('head').append('<link href="support/SanitasMovil/css/main-nosvg.css" media="screen" rel="stylesheet" type="text/css" />');
+      $("#iconfb").html('<img src="support/SanitasMovil/images/icon-fb.png" />');
+      $("#icontw").html('<img src="support/SanitasMovil/images/icon-tw.png" />');
+      $("#icontube").html('<img src="support/SanitasMovil/images/icon-tube.png" />');
+      $("#iconapple").html('<img src="support/SanitasMovil/images/icon-apple.png" />');
+      $("#iconandroid").html('<img src="support/SanitasMovil/images/icon-android.png" />');
+      $('head').append('<link href="support/SanitasMovil/css/main-nosvg.css" media="screen" rel="stylesheet" type="text/css" />');
 
-		$("#cajaHospitales").prepend('<img src="support/SanitasMovil/images/icon-hospital.png" class="icon" />');
-		$("#cajaEspecialidades").prepend('<img src="support/SanitasMovil/images/icon-especialidades.png" class="icon" />');
-		$("#cajaEquipo").prepend('<img src="support/SanitasMovil/images/icon-equipo.png" class="icon" />');
-		$("#cajaServicios").prepend('<img src="support/SanitasMovil/images/icon-servicios.png" class="icon" />');
-		$("#cajaUrgencias").prepend('<img src="support/SanitasMovil/images/icon-urgencias.png" class="icon" />');
+      $("#cajaHospitales").prepend('<img src="support/SanitasMovil/images/icon-hospital.png" class="icon" />');
+      $("#cajaEspecialidades").prepend('<img src="support/SanitasMovil/images/icon-especialidades.png" class="icon" />');
+      $("#cajaEquipo").prepend('<img src="support/SanitasMovil/images/icon-equipo.png" class="icon" />');
+      $("#cajaServicios").prepend('<img src="support/SanitasMovil/images/icon-servicios.png" class="icon" />');
+      $("#cajaUrgencias").prepend('<img src="support/SanitasMovil/images/icon-urgencias.png" class="icon" />');
 
-	}
+  }
 
 });
+
+ // TIEMPO DE ESPERA
+    (function($) {
+
+      // My micro jQuery templating engine
+      // Usage:
+      //
+      //    <section data-html="content"></section>
+      //
+      // Will load <content.html> into <section>
+
+      $(document).ready(function() {
+
+        // Load external contents
+        $("[data-html]").each(function() {
+          el = $(this);
+          var src = $(this).attr("data-html");
+          el.load(src);
+        });
+
+      });
+    })(jQuery);
+    // EO TIEMPO DE ESPERA
+
 </script>
 
-	<!--prepara imagenes svg-->
+<!--prepara imagenes svg-->
 
 
+<style type="text/css" media="screen">
+    .altoFijoHospitales {
+        min-height: 120px;
+    }
+</style>
 
- </head>
-    <body>
+</head>
+<body>
 
-        <!-- Add your site or application content here -->
+    <!-- Add your site or application content here -->
     <!--header-->
-            <header>
-            <a href="http://sanitas.es"><img src="support/SanitasMovil/images/logotipo-sanitas.png"></a>
-            <h2>Sanitas Particulares</h2>
-            <div class="misanitas" onClick="javascript:document.location.href=''"><a>Mi Sanitas</a></div>
-            <div class="call" onClick="javascript:document.location.href='tel:902000000'"><a href="tel:902000000">Llámanos</a></div>
+    <header>
+        <a href="http://sanitas.es"><img src="support/SanitasMovil/images/logotipo-sanitas.png"></a>
+        <h2>Sanitas Particulares</h2>
+        <div class="misanitas" onClick="javascript:document.location.href=''"><a>Mi Sanitas</a></div>
+        <div class="call" onClick="javascript:document.location.href='tel:902000000'"><a href="tel:902000000">Llámanos</a></div>
 
 
-            </header>
-         <!--header-->
-     <!--nav-->
+    </header>
+    <!--header-->
+    <!--nav-->
 
-  	 	<nav>
-			<ul>
-            	<li class="on"><img src="support/SanitasMovil/images/icon-seguros.svg"><span class="textoLink">Seguros de Salud</span><span class="dot"></span></li>
-            	<li><img src="support/SanitasMovil/images/icon-dental.svg"><span class="textoLink">Seguros Dentales</span><span class="dot"></span></li>
-            	<li><img src="support/SanitasMovil/images/icon-otros.svg"><span class="textoLink">Otros Servicios de salud</span><span class="dot"></span></li>
-            	<li><img src="support/SanitasMovil/images/icon-medicos.svg"><span class="textoLink">Médicos y centros</span><span class="dot"></span></li>
-            	<li><img src="support/SanitasMovil/images/icon-seguros.svg"><span class="textoLink">Residencias de mayores</span><span class="dot"></span></li>
-            	<li><img src="support/SanitasMovil/images/icon-seguros.svg"><span class="textoLink">Residencias de mayores</span><span class="dot"></span></li>
-              </ul>
-             <div>
-             <h2>Seguros Sanitas</h2>
-           	<strong>Menu</strong>
-            </div>
-		</nav>
+    <nav>
+       <ul>
+         <li class="on"><img src="support/SanitasMovil/images/icon-seguros.svg"><span class="textoLink">Seguros de Salud</span><span class="dot"></span></li>
+         <li><img src="support/SanitasMovil/images/icon-dental.svg"><span class="textoLink">Seguros Dentales</span><span class="dot"></span></li>
+         <li><img src="support/SanitasMovil/images/icon-otros.svg"><span class="textoLink">Otros Servicios de salud</span><span class="dot"></span></li>
+         <li><img src="support/SanitasMovil/images/icon-medicos.svg"><span class="textoLink">Médicos y centros</span><span class="dot"></span></li>
+         <li><img src="support/SanitasMovil/images/icon-seguros.svg"><span class="textoLink">Residencias de mayores</span><span class="dot"></span></li>
+         <li><img src="support/SanitasMovil/images/icon-seguros.svg"><span class="textoLink">Residencias de mayores</span><span class="dot"></span></li>
+     </ul>
+     <div>
+         <h2>Seguros Sanitas</h2>
+         <strong>Menu</strong>
+     </div>
+ </nav>
 
-     <!--nav-->
-
-
-        <!--section-->
-		<section class="nav full-width">
-		<div class="black-background"></div>
-        <!--left-->
-        <article class="hospitales">
+ <!--nav-->
 
 
-		<a class="button-destacado white back"><span></span>Búsqueda</a>
-        <h1>Hospital Sanitas La Moraleja </h1>
+ <!--section-->
+ <section class="nav full-width">
+  <div class="black-background"></div>
+  <!--left-->
+  <article class="hospitales">
 
 
-
-		<!--imagen cabecera-->
-		<div class="contentBanner small">
+      <a class="button-destacado white back"><span></span>Búsqueda</a>
+      <h1>Hospital Sanitas La Moraleja </h1>
 
 
 
-				<div id="contentImage1"></div>
+      <!--imagen cabecera-->
+      <div class="contentBanner small">
 
 
 
-        </div>
-		<!--imagen cabecera-->
-
-        <!--centro-->
+        <div id="contentImage1"></div>
 
 
-        <div class="box-grey noborder imgMap">
+
+    </div>
+    <!--imagen cabecera-->
+
+    <!--centro-->
+
+
+    <div class="box-grey noborder imgMap">
 
 
 
@@ -183,200 +217,204 @@ $(document).ready(function() {
         <div class="contenido">
 
 
-		<h3>Hospital Sanitas La Moraleja</h3>
-        <ul>
-        	<li>Av Francisco Pi y Margall, 81</li>
-            <li>28050 - Madrid (Madrid)</li>
-        </ul>
-        <div class="wrapperButtons">
-        <a class="button-destacado white phone hospital">910000000</a>
-        <a class="button-destacado blue pedircita">Pedir cita online <span></span></a>
+          <h3>Hospital Sanitas La Moraleja</h3>
+          <ul>
+             <li>Av Francisco Pi y Margall, 81</li>
+             <li>28050 - Madrid (Madrid)</li>
+         </ul>
+         <div class="wrapperButtons">
+            <a class="button-destacado white phone hospital">910000000</a>
+            <a class="button-destacado blue pedircita">Pedir cita online <span></span></a>
         </div>
 
 
 
 
-        </div>
+    </div>
 
-		<img src="support/SanitasMovil/images/mapaGoogle.png">
+    <img src="support/SanitasMovil/images/mapaGoogle.png">
 
-        </div>
-		<!--centro-->
-
-
-		<!--Servicios hospital-->
-
-    	<div class="wrapper boxes">
+</div>
+<!--centro-->
 
 
-        <!--Caja encuentra medico-->
+<!--Servicios hospital-->
 
-        <div class="box-white shadow noborder altoFijoHospitales"  onClick="javascript:document.location.href=''" id="cajaHospitales">
+<div class="wrapper boxes">
+
+      <!-- TIEMPO DE ESPERA -->
+    <span class="includeExternal" data-html="entregables/includes/tiempoDeEspera-box.html"></span>
+    <!-- EO TIEMPO DE ESPERA -->
+
+
+    <!--Caja encuentra medico-->
+
+    <div class="box-white shadow noborder altoFijoHospitales"  onClick="javascript:document.location.href=''" id="cajaHospitales">
 
         <h2>Sobre el hospital</h2>
         <p>Concebido para proporcionarte la mejor atención: cuenta con 14.800 m2 en área quirúrgica, 90 habitaciones individuales con baño completo, 48 consultas y urgencias 24h.</p>
-		<span class="arrow right"></span>
+        <span class="arrow right"></span>
 
-        </div>
+    </div>
 
-        <!--Caja encuentra medico-->
-        <!--Caja encuentra medico-->
+    <!--Caja encuentra medico-->
+    <!--Caja encuentra medico-->
 
-        <div class="box-white shadow noborder altoFijoHospitales"  onClick="javascript:document.location.href=''" id="cajaEspecialidades">
+    <div class="box-white shadow noborder altoFijoHospitales"  onClick="javascript:document.location.href=''" id="cajaEspecialidades">
 
         <h2>Especialidades médicas</h2>
         <p>En Sanitas tenemos todas las especialidades médicas que requieres para tu tranquilidad.</p>
-		<span class="arrow right"></span>
+        <span class="arrow right"></span>
 
-        </div>
+    </div>
 
-        <!--Caja encuentra medico-->
-        <!--Caja encuentra medico-->
+    <!--Caja encuentra medico-->
+    <!--Caja encuentra medico-->
 
-        <div class="box-white shadow noborder altoFijoHospitales"  onClick="javascript:document.location.href=''" id="cajaEquipo">
+    <div class="box-white shadow noborder altoFijoHospitales"  onClick="javascript:document.location.href=''" id="cajaEquipo">
 
         <h2>Equipo médico</h2>
         <p>Sanitas posee una plantilla de profesionales reconocidos en el medio y dispuestos a trabajar por tí.</p>
-		<span class="arrow right"></span>
+        <span class="arrow right"></span>
 
-        </div>
+    </div>
 
-        <!--Caja encuentra medico-->
-        <!--Caja encuentra medico-->
+    <!--Caja encuentra medico-->
+    <!--Caja encuentra medico-->
 
-        <div class="box-white shadow noborder altoFijoHospitales"  onClick="javascript:document.location.href=''" id="cajaServicios">
+    <div class="box-white shadow noborder altoFijoHospitales"  onClick="javascript:document.location.href=''" id="cajaServicios">
 
         <h2>Unidades especiales</h2>
         <p>Te presentamos la lista de las unidades especiales del Hospital Sanitas La Moraleja.</p>
-		<span class="arrow right"></span>
+        <span class="arrow right"></span>
 
-        </div>
+    </div>
 
-        <!--Caja encuentra medico-->
-        <!--Caja encuentra medico-->
+    <!--Caja encuentra medico-->
+    <!--Caja encuentra medico-->
 
-        <div class="box-white shadow noborder altoFijoHospitales"  onClick="javascript:document.location.href=''" id="cajaUrgencias">
+    <div class="box-white shadow noborder altoFijoHospitales"  onClick="javascript:document.location.href=''" id="cajaUrgencias">
 
         <h2>Servicios</h2>
         <p>A continuación, se detallan algunos de los servicios disponibles en el Hospital Sanitas La Moraleja.</p>
-		<span class="arrow right"></span>
+        <span class="arrow right"></span>
 
-        </div>
+    </div>
 
-        <!--Caja encuentra medico-->
-        <!--Caja encuentra medico-->
+    <!--Caja encuentra medico-->
+    <!--Caja encuentra medico-->
 
-        <div class="box-white shadow noborder blue2Hospitales  altoFijoHospitales">
+    <div class="box-white shadow noborder blue2Hospitales  altoFijoHospitales">
 
         <h2>Pedir Cita</h2>
         <div>
-		Queremos ponértelo fácil, puedes pedir cita con tu médico como más te convenga:
-        <ul>
-        	<li>On line: puedes realizar la petición de cita desde el Área de Clientes, registrándote previamente.</li>
-        	<li>On line: puedes realizar la petición de cita desde el Área de Clientes, registrándote previamente.</li>
-        	<li>On line: puedes realizar la petición de cita desde el Área de Clientes, registrándote previamente.</li>
+          Queremos ponértelo fácil, puedes pedir cita con tu médico como más te convenga:
+          <ul>
+             <li>On line: puedes realizar la petición de cita desde el Área de Clientes, registrándote previamente.</li>
+             <li>On line: puedes realizar la petición de cita desde el Área de Clientes, registrándote previamente.</li>
+             <li>On line: puedes realizar la petición de cita desde el Área de Clientes, registrándote previamente.</li>
 
-        </ul>
-        </div>
+         </ul>
+     </div>
 
-        </div>
+ </div>
 
-        <!--Caja encuentra medico-->
-
-
-		</div>
-
-		<!--Servicios hospital-->
-
-        <div class="box-grey shadow noborder enlaces">
-
-        <h2>Más información sobre el hospital Sanitas la Moraleja en la web de Sanitas.es</h2>
-
-		<ul>
-        	<li class="link out"><a href=""><span></span>Urgencias</a></li>
-        	<li class="link out"><a href=""><span></span>Excelencia Europea</a></li>
-        	<li class="link out"><a href=""><span></span>Calidad, Medio Ambiente y Accesibilidad</a></li>
-        	<li class="link out"><a href=""><span></span>Noticias</a></li>
+ <!--Caja encuentra medico-->
 
 
-        </ul>
+</div>
+
+<!--Servicios hospital-->
+
+<div class="box-grey shadow noborder enlaces">
+
+    <h2>Más información sobre el hospital Sanitas la Moraleja en la web de Sanitas.es</h2>
+
+    <ul>
+     <li class="link out"><a href=""><span></span>Urgencias</a></li>
+     <li class="link out"><a href=""><span></span>Excelencia Europea</a></li>
+     <li class="link out"><a href=""><span></span>Calidad, Medio Ambiente y Accesibilidad</a></li>
+     <li class="link out"><a href=""><span></span>Noticias</a></li>
+
+
+ </ul>
 
 
 
-        </div>
-
-
+</div>
 
 
 
 
-        </article>
-        <!--left-->
 
-        </section>
-        <!--section-->
+
+</article>
+<!--left-->
+
+</section>
+<!--section-->
         <!--section otros enlaces--->
 
 
 		<section class="duda ajustado">
 
 
-        <!--article duda-->
-        <article>
+            <!--article duda-->
+            <article>
 
-        <!--duda-->
-        <section>
-		<h3>¿Tienes alguna duda?</h3>
+                <!--duda-->
+                <section>
+                  <h3>¿Tienes alguna duda?</h3>
 
-        <ul>
-        	<li><a href="" class="boton-grey">Llámanos al 902 000 000</a></li>
-			<li><a href="" class="boton-grey">Envíanos un e-mail</a></li>
-			<li><a href="" class="boton-grey">Visita nuestras oficinas</a></li>
-       </ul>
-
-
-
-		</section>
-        <!--duda-->
-        <!--otros enlaces-->
-        <aside>
-
-        <h2>Otros enlaces</h2>
-
-        <div>
-        <ul>
-        	<li><a href="" class="boton-white">Biblioteca de salud</a></li>
-        	<li><a href="" class="boton-white">Sobre Sanitas</a></li>
-        	<li><a href="" class="boton-white">Preguntas Frecuentes</a></li>
-        	<li><a href="" class="boton-white">Contáctanos</a></li>
-            <li class="social">
-            	<h3>Síguenos</h3>
-                <ul>
-                	<li><a href="" id="iconfb">Facebook</a></li>
-                	<li><a href="" id="icontw">Twitter</a></li>
-                	<li><a href="" id="icontube">You tube</a></li>
-
-                </ul>
-            </li>
-            <li class="social">
-            	<h3>Descargar nuestra APP</h3>
-                <ul>
-                	<li><a href="" id="iconandroid">Android</a></li>
-                	<li><a href="" id="iconapple">iPhone</a></li>
-
-                </ul>
-            </li> </ul>
-        </div>        <a href="http://www.sanitas.es" class="boton grey">Ir a la versión clásica de Sanitas.es</a>
-</aside>
-
-        <!--otros enlaces-->
-
-        </article>
-        <!--article duda-->
+                  <ul>
+                     <li><a href="" class="boton-grey">Llámanos al 902 000 000</a></li>
+                     <li><a href="" class="boton-grey">Envíanos un e-mail</a></li>
+                     <li><a href="" class="boton-grey">Visita nuestras oficinas</a></li>
+                 </ul>
 
 
-        </section>
-        <!--section otros enlaces--->
+
+             </section>
+             <!--duda-->
+             <!--otros enlaces-->
+             <aside>
+
+                <h2>Otros enlaces</h2>
+
+                <div>
+                    <ul>
+                     <li><a href="" class="boton-white">Biblioteca de salud</a></li>
+                     <li><a href="" class="boton-white">Sobre Sanitas</a></li>
+                     <li><a href="" class="boton-white">Preguntas Frecuentes</a></li>
+                     <li><a href="" class="boton-white">Contáctanos</a></li>
+                     <li class="social">
+                         <h3>Síguenos</h3>
+                         <ul>
+                             <li><a href="" id="iconfb">Facebook</a></li>
+                             <li><a href="" id="icontw">Twitter</a></li>
+                             <li><a href="" id="icontube">You tube</a></li>
+
+                         </ul>
+                     </li>
+                     <li class="social">
+                         <h3>Descargar nuestra APP</h3>
+                         <ul>
+                             <li><a href="" id="iconandroid">Android</a></li>
+                             <li><a href="" id="iconapple">iPhone</a></li>
+
+                         </ul>
+                     </li> </ul>
+                 </div>        <a href="http://www.sanitas.es" class="boton grey">Ir a la versión clásica de Sanitas.es</a>
+             </aside>
+
+             <!--otros enlaces-->
+
+         </article>
+         <!--article duda-->
+
+
+     </section>
+        <!--section otros enlaces -->
 
 
 
@@ -391,17 +429,17 @@ $(document).ready(function() {
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-            var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+        var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
             g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
             s.parentNode.insertBefore(g,s)}(document,"script"));
         </script>
 
 
- 		<script src="support/SanitasMovil/js/sanitas/main.js"></script>
+        <script src="support/SanitasMovil/js/sanitas/main.js"></script>
 
 
 
 
     </body>
-</html>
+    </html>
