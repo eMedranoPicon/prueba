@@ -15,7 +15,9 @@
                 </title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="robots" content="all"/><meta content="Centros m&eacute;dicos del cuadro m&eacute;dico de Sanitas en la provincia de Madrid " name="description"/>
-        
+        <!-- TIEMPO DE ESPERA -->
+    <link href="entregables/css/web-TiempoDeEspera.css" media="screen" rel="stylesheet" type="text/css" />
+     <!-- EO TIEMPO DE ESPERA -->
 
         
         
@@ -72,7 +74,7 @@
 <link rel="alternate" media="only screen and (max-width: 1280px)" href="http://m.sanitas.es/sanitas/seguros/es/particulares/medicosycentros/cuadro-medico-sanitas/busqueda-guia-medica/index.html"></link>
       	
 
-           <link rel="stylesheet" type="text/css" media="screen" href="support/Sanitascss/kampile/k_button.css"  /> 
+           <link rel="stylesheet" type="text/css" media="screen" href="support/Sanitas/css/kampile/k_button.css"  /> 
 <script src="support/Sanitas/stats/urchin.js" type="text/javascript"></script>
 <script type="text/javascript">try { _uacct = "UA-10491464-1";
 _userv = 2; urchinTracker(); } catch(err) {} </script>
@@ -180,7 +182,29 @@ s.channel="Cuadro Médico Sanitas";
 <a class="hoverPestana" href="http://www.sanitas.es/sanitas/seguros/es/empresas/index.html" target='_self' title="Pymes y Grandes Empresas">Pymes y Grandes Empresas</a></div></li><li><div class="pestanainActivaMutualidades"><a class="hoverPestana" href="http://www.sanitas.es/sanitas/seguros/es/mutualidades/seguros-medicos/index.html" target='_self' title="Mutualidades">Mutualidades</a></div></li></ul></div>
 	                <script type="text/javascript">
 	                    hovermenus();
-	                    adjust();              
+	                    adjust();           
+                      // TIEMPO DE ESPERA
+    (function($) {
+
+      // My micro jQuery templating engine
+      // Usage:
+      //
+      //    <section data-html="content"></section>
+      //
+      // Will load <content.html> into <section>
+
+      $(document).ready(function() {
+
+        // Load external contents
+        $("[data-html]").each(function() {
+          el = $(this);
+          var src = $(this).attr("data-html");
+          el.load(src);
+        });
+
+      });
+    })(jQuery);
+    // EO TIEMPO DE ESPERA
 	                </script>
 	                <script type="text/javascript" language="javascript">
 function guardaActualiza(){
@@ -978,9 +1002,8 @@ function guardaActualiza(){
       
 
  <div id="listaDirecciones"></div>
-<!-- Si tenemos el parametro de resultados es que se lleva a cabo la busqueda -->
-
-    <input type="hidden" id="provOculta" value="Madrid">
+   <!-- Si tenemos el parametro de resultados es que se lleva a cabo la busqueda --> 
+   <input type="hidden" id="provOculta" value="Madrid">
     
     <div id="lscentros">	
       
@@ -1049,6 +1072,9 @@ function guardaActualiza(){
                   <li class="normal">Avd Francisco Pí Y Margall 81 - 28050 <br/> <strong class="Grey"><a id="localidad2" href="http://www.sanitas.es/sanitas/seguros/es/particulares/medicosycentros/cuadro-medico-sanitas/busqueda-guia-medica/cuadro-medico/madrid/madrid/e/s">Madrid</a></strong>&nbsp;&nbsp;&nbsp;<strong class="Grey">(Madrid)</strong></li>  
                   
                   </ul>
+                  <!-- TIEMPO DE ESPERA -->
+                   <span class="includeExternal" data-html="entregables/includes/tiempoDeEspera.html"></span>
+                  <!-- EO TIEMPO DE ESPERA -->
               
                     
                   
@@ -2760,7 +2786,7 @@ function guardaActualiza(){
 	        </div><!--end contenedor-->
 	        
 	
-	        <div id='k_close_button' class='k_float kc_bottom_sl kc_right'></div><div><a href="https://www.kampyle.com/feedback_form/ff-feedback-form.php?site_code=5457528&amp;lang=es&amp;form_id=56817" target='kampyleWindow' id='kampylink' class='k_float k_bottom k_right' onclick="javascript:k_button.open_ff('site_code=5457528&lang=es&form_id=56817');return false;"><img src="../../../../../../../../../../../img/kampile/img/es-blue-corner-low-right.gif" alt="  Abre en nueva ventana : Tu opinión"/></a></div><script src="../../../../../../../../../../../js/kampile/k_button.js" type="text/javascript"></script><script type="text/javascript">
+	        <div id='k_close_button' class='k_float kc_bottom_sl kc_right'></div><div><a href="https://www.kampyle.com/feedback_form/ff-feedback-form.php?site_code=5457528&amp;lang=es&amp;form_id=56817" target='kampyleWindow' id='kampylink' class='k_float k_bottom k_right' onclick="javascript:k_button.open_ff('site_code=5457528&lang=es&form_id=56817');return false;"><img src="support/Sanitas/img/kampile/img/es-blue-corner-low-right.gif" alt="  Abre en nueva ventana : Tu opinión"/></a></div><script src="support/Sanitas/js/kampile/k_button.js" type="text/javascript"></script><script type="text/javascript">
            <!--
            /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! *************/
            var s_code=s.t();if(s_code)document.write(s_code)  //--></script><script type="text/javascript"> 
