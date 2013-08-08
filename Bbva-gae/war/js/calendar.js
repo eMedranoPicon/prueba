@@ -1,7 +1,11 @@
-function createEventCalendar(idEvent) {	
-	console.log(localStorage.getItem('calendarToken_local'));
+
+function createEventCalendar() {
+	// recogemos variables de localstorage
 	var tokenText = localStorage.getItem('calendarToken_local');
-	var apiUrl = "/calendar/v3/calendars/72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com/events?sendNotifications=false&key=785790985795-pf206je1417kten4jbd5funo77vlkuvf.apps.googleusercontent.com";
+	var idCalendar = localStorage.getItem('calendarId');
+
+	// /var apiUrl =
+	// "/calendar/v3/calendars/72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com/events?sendNotifications=false&key=785790985795-pf206je1417kten4jbd5funo77vlkuvf.apps.googleusercontent.com";
 
 	var host = document.getElementById("host").value;
 
@@ -21,8 +25,7 @@ function createEventCalendar(idEvent) {
 	String
 	dateEnd = document.getElementById("dateEnd").value;
 
-	var dateStartFormatted = ISODateString(dateStart); // prints something like
-														// 2009-09-28T19:03:12Z
+	var dateStartFormatted = ISODateString(dateStart); 
 	var dateEndFormatted = ISODateString(dateEnd);
 
 	jEventCalendar = {
@@ -33,29 +36,29 @@ function createEventCalendar(idEvent) {
 		},
 		"end" : {
 			"dateTime" : dateEndFormatted
-		},
-		"id" : idEvent,
-		"htmlLink" : urlEvent
+		}
+	// "id" : idCalendar,
+	// "htmlLink" : urlEvent
 	};
 
-	args = {
-		path : apiUrl,
-		dataType : 'json',
-		contentType : 'application/json',
-		body : jEventCalendar,
-		headers : {
-			'Authorization' : tokenText
-		},
-		method : "POST",
-		callback : function(resp) {
-			console.log('Guardado en Google Calendar');
-			console.log(resp);
-			$('#confirmaEvento').modal('show');		    
-		}
+	/*
+	 * args = { path : apiUrl, dataType : 'json', contentType :
+	 * 'application/json', body : jEventCalendar, headers : { 'Authorization' :
+	 * tokenText }, method : "POST", callback : function(resp) {
+	 * console.log('Guardado en Google Calendar'); console.log(resp); }
+	 *  }
+	 */// gapi.client.request(args);
 
-	}
+	var request = gapi.client.calendar.events.insert({
+		'calendarId' : '72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com',
+		'resource' : jEventCalendar
+	});
+	request.execute(function(resp) {
+		console.log('Guardado en Google Calendar');
+		console.log(resp);
+	});
 
-	gapi.client.request(args);
+	
 
 }
 
@@ -72,9 +75,9 @@ function readCalendar(token) {
 			'Authorization' : tokenText
 		},
 		method : "GET",
-		callback : function(resp) {			
+		callback : function(resp) {
 			console.log(resp);
-			
+
 		}
 
 	}
@@ -85,16 +88,16 @@ function readCalendar(token) {
 /* use a function for the exact format desired... */
 function ISODateString(stringDate) {
 	var dateParts = stringDate.split("");
-	//troceandolo
-	var anno = dateParts.slice(6,10).join("");
-	var mes = dateParts.slice(3,5).join("");
-	mes = mes-1; //meses son numberos 0-11
-	var dia = dateParts.slice(0,2).join("");
-	var hora = dateParts.slice(11,13).join("");
-	var minuto = dateParts.slice(14,16).join("");
-	//new Date(yyyy,mm,dd,hh,mm)
-	//dd/mm/yyyy hh:mm 
-	var d = new Date(anno,mes,dia,hora,minuto);
+	// troceandolo
+	var anno = dateParts.slice(6, 10).join("");
+	var mes = dateParts.slice(3, 5).join("");
+	mes = mes - 1; // meses son numberos 0-11
+	var dia = dateParts.slice(0, 2).join("");
+	var hora = dateParts.slice(11, 13).join("");
+	var minuto = dateParts.slice(14, 16).join("");
+	// new Date(yyyy,mm,dd,hh,mm)
+	// dd/mm/yyyy hh:mm
+	var d = new Date(anno, mes, dia, hora, minuto);
 	console.log(d);
 	function pad(n) {
 		return n < 10 ? '0' + n : n
