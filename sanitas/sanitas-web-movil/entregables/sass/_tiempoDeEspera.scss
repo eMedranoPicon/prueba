@@ -226,6 +226,17 @@ div.tiempoDeEspera
 			@media screen and (max-width: 480px)
 			{
 				width:250px;
+				@include background-size(25px 25px);
+				padding-left: 30px;
+				min-height: 35px;
+
+				dt {
+					width: 110px;
+				}
+
+				dt:first-child {
+					margin-top: 0px;
+				}
 
 				dt,
 				dd {
