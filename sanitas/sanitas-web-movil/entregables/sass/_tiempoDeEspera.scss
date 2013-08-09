@@ -22,16 +22,19 @@ dl.dl-tiempoDeEspera
 	display: inline-block;
 	margin: 0 0 10px 0;
 	width:245px;
+	@include clearfix();
 
 	dt,
 	dd {
 		display: inline-block;
 		color: $textColor-blue;
+		//line-height: 14px;
+		margin-top: 9px;
 	}
 
 	dt {
 		width: 120px;
-		margin-top: 9px;
+
 	}
 
 	dd{
@@ -41,7 +44,7 @@ dl.dl-tiempoDeEspera
 
 dl.dl-tiempoDeEspera.iconTime
 {
-	width:310px;
+	width:100%;
 
 	dt {
 		padding-left: 20px;
@@ -53,6 +56,10 @@ dl.dl-tiempoDeEspera.iconTime
 		span {
 			display: none;
 		}
+	}
+
+	dd {
+		width: 70%;
 	}
 }
 
@@ -125,7 +132,8 @@ div.tiempoDeEspera
 			@extend dl.dl-tiempoDeEspera;
 			margin-left: 30px;
 
-			dt:first-child
+			dt:first-child,
+			dd:first-child
 			{
 				margin-top: 0px;
 			}
@@ -289,8 +297,8 @@ div.tiempoDeEspera
 	p {
 		margin: 15px;
 		padding-right: 0;
-		font-family: 'GothamMediumRegular';
 		color: $blueDark2;
+		text-align: center;
 	}
 }
 
@@ -306,8 +314,10 @@ div.tiempoDeEspera
 
 		dt,dd
 		{
-			font-family: 'GothamMediumRegular';
+			//font-family: 'GothamMediumRegular';
 			color: $textColor;
+			margin-top: 9px;
+			//width: 50%;
 		}
 	}
 

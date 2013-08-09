@@ -25,30 +25,41 @@ dl.dl-tiempoDeEspera, div.tiempoDeEspera span.tiempoDeEspera-data dl, .box-tiemp
   display: inline-block;
   margin: 0 0 10px 0;
   width: 245px;
+  *zoom: 1;
 }
-/* line 27, ../sass/_tiempoDeEspera.scss */
+/* line 8, ../sass/_mixins.scss */
+dl.dl-tiempoDeEspera:before, div.tiempoDeEspera span.tiempoDeEspera-data dl:before, .box-tiempoDeEspera .container-tiempoDeEspera dl:before, dl.dl-tiempoDeEspera:after, div.tiempoDeEspera span.tiempoDeEspera-data dl:after, .box-tiempoDeEspera .container-tiempoDeEspera dl:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 15, ../sass/_mixins.scss */
+dl.dl-tiempoDeEspera:after, div.tiempoDeEspera span.tiempoDeEspera-data dl:after, .box-tiempoDeEspera .container-tiempoDeEspera dl:after {
+  clear: both;
+}
+/* line 28, ../sass/_tiempoDeEspera.scss */
 dl.dl-tiempoDeEspera dt, div.tiempoDeEspera span.tiempoDeEspera-data dl dt, .box-tiempoDeEspera .container-tiempoDeEspera dl dt,
 dl.dl-tiempoDeEspera dd,
 div.tiempoDeEspera span.tiempoDeEspera-data dl dd,
 .box-tiempoDeEspera .container-tiempoDeEspera dl dd {
   display: inline-block;
   color: #177abe;
-}
-/* line 32, ../sass/_tiempoDeEspera.scss */
-dl.dl-tiempoDeEspera dt, div.tiempoDeEspera span.tiempoDeEspera-data dl dt, .box-tiempoDeEspera .container-tiempoDeEspera dl dt {
-  width: 120px;
   margin-top: 9px;
 }
-/* line 37, ../sass/_tiempoDeEspera.scss */
+/* line 35, ../sass/_tiempoDeEspera.scss */
+dl.dl-tiempoDeEspera dt, div.tiempoDeEspera span.tiempoDeEspera-data dl dt, .box-tiempoDeEspera .container-tiempoDeEspera dl dt {
+  width: 120px;
+}
+/* line 40, ../sass/_tiempoDeEspera.scss */
 dl.dl-tiempoDeEspera dd, div.tiempoDeEspera span.tiempoDeEspera-data dl dd, .box-tiempoDeEspera .container-tiempoDeEspera dl dd {
   margin-left: 0px;
 }
 
-/* line 43, ../sass/_tiempoDeEspera.scss */
-dl.dl-tiempoDeEspera.iconTime, div.tiempoDeEspera span.tiempoDeEspera-data dl.iconTime, .box-tiempoDeEspera .container-tiempoDeEspera dl.iconTime, .tiempoDeEspera-detalle dl {
-  width: 310px;
-}
 /* line 46, ../sass/_tiempoDeEspera.scss */
+dl.dl-tiempoDeEspera.iconTime, div.tiempoDeEspera span.tiempoDeEspera-data dl.iconTime, .box-tiempoDeEspera .container-tiempoDeEspera dl.iconTime, .tiempoDeEspera-detalle dl {
+  width: 100%;
+}
+/* line 49, ../sass/_tiempoDeEspera.scss */
 dl.dl-tiempoDeEspera.iconTime dt, div.tiempoDeEspera span.tiempoDeEspera-data dl.iconTime dt, .box-tiempoDeEspera .container-tiempoDeEspera dl.iconTime dt, .tiempoDeEspera-detalle dl dt {
   padding-left: 20px;
   background: url('../images/reloj-azul.png?1376041342');
@@ -59,9 +70,13 @@ dl.dl-tiempoDeEspera.iconTime dt, div.tiempoDeEspera span.tiempoDeEspera-data dl
   background-repeat: no-repeat;
   width: 140px;
 }
-/* line 53, ../sass/_tiempoDeEspera.scss */
+/* line 56, ../sass/_tiempoDeEspera.scss */
 dl.dl-tiempoDeEspera.iconTime dt span, div.tiempoDeEspera span.tiempoDeEspera-data dl.iconTime dt span, .box-tiempoDeEspera .container-tiempoDeEspera dl.iconTime dt span, .tiempoDeEspera-detalle dl dt span {
   display: none;
+}
+/* line 61, ../sass/_tiempoDeEspera.scss */
+dl.dl-tiempoDeEspera.iconTime dd, div.tiempoDeEspera span.tiempoDeEspera-data dl.iconTime dd, .box-tiempoDeEspera .container-tiempoDeEspera dl.iconTime dd, .tiempoDeEspera-detalle dl dd {
+  width: 70%;
 }
 
 /*
@@ -69,33 +84,33 @@ dl.dl-tiempoDeEspera.iconTime dt span, div.tiempoDeEspera span.tiempoDeEspera-da
 *	div.tiempoDeEspera
 *
 */
-/* line 68, ../sass/_tiempoDeEspera.scss */
+/* line 75, ../sass/_tiempoDeEspera.scss */
 hgroup.todos.centros.listado article li div div.tiempoDeEspera {
   width: 90%;
 }
 @media screen and (max-width: 480px) {
-  /* line 68, ../sass/_tiempoDeEspera.scss */
+  /* line 75, ../sass/_tiempoDeEspera.scss */
   hgroup.todos.centros.listado article li div div.tiempoDeEspera {
     width: 90%;
     font-size: 10px;
   }
-  /* line 77, ../sass/_tiempoDeEspera.scss */
+  /* line 84, ../sass/_tiempoDeEspera.scss */
   hgroup.todos.centros.listado article li div div.tiempoDeEspera span.tiempoDeEspera-data {
     font-size: 10px;
   }
-  /* line 82, ../sass/_tiempoDeEspera.scss */
+  /* line 89, ../sass/_tiempoDeEspera.scss */
   hgroup.todos.centros.listado article li div div.tiempoDeEspera span:nth-last-child(2) {
     width: 100px;
   }
 }
 @media screen and (max-width: 768px) and (min-width: 480px) {
-  /* line 68, ../sass/_tiempoDeEspera.scss */
+  /* line 75, ../sass/_tiempoDeEspera.scss */
   hgroup.todos.centros.listado article li div div.tiempoDeEspera {
     width: 99%;
   }
 }
 
-/* line 99, ../sass/_tiempoDeEspera.scss */
+/* line 106, ../sass/_tiempoDeEspera.scss */
 .todos article ul li div.tiempoDeEspera {
   position: relative;
   -webkit-box-shadow: none;
@@ -107,26 +122,27 @@ hgroup.todos.centros.listado article li div div.tiempoDeEspera {
   width: 50%;
 }
 @media screen and (max-width: 480px) {
-  /* line 99, ../sass/_tiempoDeEspera.scss */
+  /* line 106, ../sass/_tiempoDeEspera.scss */
   .todos article ul li div.tiempoDeEspera {
     width: 60%;
   }
 }
 
-/* line 119, ../sass/_tiempoDeEspera.scss */
+/* line 126, ../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data {
   margin-top: 5px;
   font-size: 12px;
 }
-/* line 124, ../sass/_tiempoDeEspera.scss */
+/* line 131, ../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data dl {
   margin-left: 30px;
 }
-/* line 129, ../sass/_tiempoDeEspera.scss */
-div.tiempoDeEspera span.tiempoDeEspera-data dl dt:first-child {
+/* line 137, ../sass/_tiempoDeEspera.scss */
+div.tiempoDeEspera span.tiempoDeEspera-data dl dt:first-child,
+div.tiempoDeEspera span.tiempoDeEspera-data dl dd:first-child {
   margin-top: 0px;
 }
-/* line 135, ../sass/_tiempoDeEspera.scss */
+/* line 143, ../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data p {
   *zoom: 1;
   margin: 0px 0 0 0px;
@@ -142,27 +158,27 @@ div.tiempoDeEspera span.tiempoDeEspera-data p:before, div.tiempoDeEspera span.ti
 div.tiempoDeEspera span.tiempoDeEspera-data p:after {
   clear: both;
 }
-/* line 141, ../sass/_tiempoDeEspera.scss */
+/* line 149, ../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data p span:nth-last-child(1) {
   display: block;
   float: left;
 }
-/* line 147, ../sass/_tiempoDeEspera.scss */
+/* line 155, ../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data p span:nth-last-child(2) {
   display: block;
   width: 110px;
   float: left;
 }
-/* line 155, ../sass/_tiempoDeEspera.scss */
+/* line 163, ../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data p:nth-last-child(1) {
   margin-top: 5px;
 }
-/* line 159, ../sass/_tiempoDeEspera.scss */
+/* line 167, ../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data span {
   font-size: inherit;
   color: #5078be;
 }
-/* line 164, ../sass/_tiempoDeEspera.scss */
+/* line 172, ../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data strong.header {
   display: block;
   line-height: 23px;
@@ -170,7 +186,7 @@ div.tiempoDeEspera span.tiempoDeEspera-data strong.header {
   color: #50b3ec;
   font-size: inherit;
 }
-/* line 173, ../sass/_tiempoDeEspera.scss */
+/* line 181, ../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data i.icon-espera {
   background: url('../images/espera.png?1375983164');
   -webkit-background-size: 25px 25px;
@@ -181,7 +197,7 @@ div.tiempoDeEspera span.tiempoDeEspera-data i.icon-espera {
   width: 25px;
   height: 25px;
 }
-/* line 183, ../sass/_tiempoDeEspera.scss */
+/* line 191, ../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
   margin-bottom: 10px;
 }
@@ -191,7 +207,7 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
 *	.box-tiempoDeEspera
 *
 */
-/* line 196, ../sass/_tiempoDeEspera.scss */
+/* line 204, ../sass/_tiempoDeEspera.scss */
 .box-tiempoDeEspera {
   background: #a8cce6 !important;
   padding: 0 !important;
@@ -203,7 +219,7 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
   display: inline-block;
   position: relative;
 }
-/* line 206, ../sass/_tiempoDeEspera.scss */
+/* line 214, ../sass/_tiempoDeEspera.scss */
 .box-tiempoDeEspera .container-tiempoDeEspera {
   background-color: #FFF;
   margin: 0 3% 3% 3% !important;
@@ -212,26 +228,26 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
   float: none !important;
   width: 90% !important;
 }
-/* line 214, ../sass/_tiempoDeEspera.scss */
+/* line 222, ../sass/_tiempoDeEspera.scss */
 .box-tiempoDeEspera .container-tiempoDeEspera p {
   width: 60%;
 }
 @media screen and (max-width: 480px) {
-  /* line 214, ../sass/_tiempoDeEspera.scss */
+  /* line 222, ../sass/_tiempoDeEspera.scss */
   .box-tiempoDeEspera .container-tiempoDeEspera p {
     width: 93%;
   }
 }
-/* line 224, ../sass/_tiempoDeEspera.scss */
+/* line 232, ../sass/_tiempoDeEspera.scss */
 .box-tiempoDeEspera .container-tiempoDeEspera > p {
   margin-top: 0px;
 }
-/* line 228, ../sass/_tiempoDeEspera.scss */
+/* line 236, ../sass/_tiempoDeEspera.scss */
 .box-tiempoDeEspera .container-tiempoDeEspera span.arrow.right {
   display: inline-block;
   float: right;
 }
-/* line 233, ../sass/_tiempoDeEspera.scss */
+/* line 241, ../sass/_tiempoDeEspera.scss */
 .box-tiempoDeEspera .container-tiempoDeEspera dl {
   padding-left: 65px;
   background: url('../images/espera.png?1375983164');
@@ -251,7 +267,7 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
   clear: both;
 }
 @media screen and (max-width: 480px) {
-  /* line 233, ../sass/_tiempoDeEspera.scss */
+  /* line 241, ../sass/_tiempoDeEspera.scss */
   .box-tiempoDeEspera .container-tiempoDeEspera dl {
     width: 250px;
     -webkit-background-size: 25px 25px;
@@ -261,21 +277,21 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
     padding-left: 30px;
     min-height: 35px;
   }
-  /* line 251, ../sass/_tiempoDeEspera.scss */
+  /* line 259, ../sass/_tiempoDeEspera.scss */
   .box-tiempoDeEspera .container-tiempoDeEspera dl dt {
     width: 110px;
   }
-  /* line 255, ../sass/_tiempoDeEspera.scss */
+  /* line 263, ../sass/_tiempoDeEspera.scss */
   .box-tiempoDeEspera .container-tiempoDeEspera dl dt:first-child {
     margin-top: 0px;
   }
-  /* line 260, ../sass/_tiempoDeEspera.scss */
+  /* line 268, ../sass/_tiempoDeEspera.scss */
   .box-tiempoDeEspera .container-tiempoDeEspera dl dt,
   .box-tiempoDeEspera .container-tiempoDeEspera dl dd {
     font-size: 12px;
   }
 }
-/* line 267, ../sass/_tiempoDeEspera.scss */
+/* line 275, ../sass/_tiempoDeEspera.scss */
 .box-tiempoDeEspera h2 {
   color: #255072;
   font-size: 14px;
@@ -289,39 +305,39 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
 *	.tiempoDeEspera-detalle
 *
 */
-/* line 283, ../sass/_tiempoDeEspera.scss */
+/* line 291, ../sass/_tiempoDeEspera.scss */
 .box-advice {
   margin: 2% 10%;
   width: 78%;
   border: 1px solid black;
   background-color: white;
 }
-/* line 289, ../sass/_tiempoDeEspera.scss */
+/* line 297, ../sass/_tiempoDeEspera.scss */
 .box-advice p {
   margin: 15px;
   padding-right: 0;
-  font-family: 'GothamMediumRegular';
   color: #104c71;
+  text-align: center;
 }
 
-/* line 297, ../sass/_tiempoDeEspera.scss */
+/* line 305, ../sass/_tiempoDeEspera.scss */
 .container-article {
   margin-left: 15px;
 }
 
-/* line 308, ../sass/_tiempoDeEspera.scss */
+/* line 316, ../sass/_tiempoDeEspera.scss */
 .tiempoDeEspera-detalle dl dt, .tiempoDeEspera-detalle dl dd {
-  font-family: 'GothamMediumRegular';
   color: #636363;
+  margin-top: 9px;
 }
-/* line 314, ../sass/_tiempoDeEspera.scss */
+/* line 324, ../sass/_tiempoDeEspera.scss */
 .tiempoDeEspera-detalle h2 {
   font-family: 'GothamMediumRegular';
   text-transform: none;
   font-size: 13px;
   margin-bottom: 10px;
 }
-/* line 322, ../sass/_tiempoDeEspera.scss */
+/* line 332, ../sass/_tiempoDeEspera.scss */
 .tiempoDeEspera-detalle .container-images {
   width: 98%;
   margin: 0;
@@ -338,25 +354,25 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
 .tiempoDeEspera-detalle .container-images:after {
   clear: both;
 }
-/* line 328, ../sass/_tiempoDeEspera.scss */
+/* line 338, ../sass/_tiempoDeEspera.scss */
 .tiempoDeEspera-detalle .container-images img {
   display: inline-block;
 }
-/* line 333, ../sass/_tiempoDeEspera.scss */
+/* line 343, ../sass/_tiempoDeEspera.scss */
 .tiempoDeEspera-detalle .container-images img:nth-last-child(2) {
   width: 100%;
   max-width: 300px;
 }
-/* line 339, ../sass/_tiempoDeEspera.scss */
+/* line 349, ../sass/_tiempoDeEspera.scss */
 .tiempoDeEspera-detalle .container-images img:nth-last-child(1) {
   width: 100%;
   max-width: 300px;
 }
-/* line 346, ../sass/_tiempoDeEspera.scss */
+/* line 356, ../sass/_tiempoDeEspera.scss */
 .tiempoDeEspera-detalle .grafico-afluencia {
   margin-top: 15px;
 }
-/* line 348, ../sass/_tiempoDeEspera.scss */
+/* line 358, ../sass/_tiempoDeEspera.scss */
 .tiempoDeEspera-detalle .grafico-afluencia .grafico {
   width: 90%;
 }
