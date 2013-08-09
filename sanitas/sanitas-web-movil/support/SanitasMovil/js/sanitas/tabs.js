@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 	// Colocar menu
 	if(numTabs<4) {
-		$('head').prepend('<link href="/sanitas/sanitas-web-movil/support/SanitasMovil/css/tabs.css" media="screen" rel="stylesheet" type="text/css" />');
+		$('head').prepend('<link href="support/SanitasMovil/css/tabs.css" media="screen" rel="stylesheet" type="text/css" />');
 		$('.tabs h2').addClass("min");
 
 	} else{
