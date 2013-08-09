@@ -1,85 +1,225 @@
 
-.todos article ul li div.tiempoDeEspera
+.pull-right {
+	float: right !important;
+}
+
+.pull-left {
+	float: left !important;
+}
+
+
+
+dl.dl-tiempoDeEspera
 {
-	position: relative;
-	@include single-box-shadow(none);
-	margin: 5px 0 0 0;
-	padding: 0;
-	border: none;
-	max-width: 225px;
+	display: inline-block;	
+	width:225px;
+	margin:0px;
 
-	p
+	dt,
+	dd {
+		display: inline-block;
+		color: $textcolor-grey;
+		line-height: 12px;
+	}
+
+	dt {
+		width: 120px;
+	}
+
+	dd{
+		margin-left: 0px;
+	}
+}
+
+/*
+*
+*	div.tiempoDeEspera
+*
+*/
+
+
+div.tiempoDeEspera
+{
+	margin:0px;
+	padding:0px;	
+	span.tiempoDeEspera-data
 	{
-		@include clearfix();
-		margin: 5px 0 0 0px;
+		font-size:  $fontSize;
+		display: inline-block;
+		background-color:$grey;
+		padding: 0px 0px 5px 0px;	
+		margin-top: 1px; // pixel-perfection
+		vertical-align: top;
+		width: 293px; //ancho fijo. diseño
 
-		span:nth-last-child(1)
+		dl
+		{
+			@extend dl.dl-tiempoDeEspera;
+			margin-left: 10px;
+			color: $textcolor-grey;	
+
+			dt:first-child
+			{
+				margin-top: 0px;
+			}
+		}
+
+		p
+		{
+			@include clearfix();
+			margin: 0px 0 0 0px;
+			font-size: inherit;
+
+			span:nth-last-child(1)
+			{
+				display: block;
+				float: left;
+			}
+
+			span:nth-last-child(2)
+			{
+				display: block;
+				width: 110px;
+				float: left;
+			}
+		}
+
+		p:nth-last-child(1)
+		{
+			margin-top: 0px;
+		}
+
+		span {
+			font-size: inherit;
+			color: $textcolor-blue2;
+		}
+
+		strong.header 
 		{
 			display: block;
-			float: left;
+			line-height: 15px;
+			vertical-align: top;
+			color: $textcolor-blueTitle;	
+			font-size: inherit;
+			padding: 5px 10px;					
 		}
+		i.icon-espera
+			{
+			@include background(image-url("espera.png"));
+			@include background-size(25px 25px);
+			display: inline-block;
+			padding: 10px 0px 0px 1px;
+			width: 25px;
+			height: 25px;
+			background-repeat:no-repeat;
+			background-position: center;
+			}	
 
-		span:nth-last-child(2)
+		
+		a{
+		text-decoration:underline;		
+		}
+		
+	}
+
+	
+	span.tiempoDeEspera-image{
+		display: inline-block;
+		padding:0px 8px 0px 10px;
+		vertical-align: top;
+		i.icon-espera-web
 		{
-			display: block;
-			width: 110px;
-			float: left;
-		}
+			@include background(image-url("espera-2.png"));
+			@include background-size(60px 60px);
+			display: inline-block;
+			width: 60px;
+			height: 60px;
+			background-repeat:no-repeat;
+		}		
+	
+	}
+	span.tiempoDeEspera-data > p:nth-of-type(2)
+	{
+		margin-bottom: 10px;
 	}
 
-	@media screen and (max-width: 480px)
+	////Styles especialidades
+	span.tiempoDeEspera-data-especialidades
 	{
-		width: 60%;
+		@extend span.tiempoDeEspera-data;
+		width: 440px !important; //ancho fijo. diseño
+	}
+	
+	span.tiempoDeEspera-image-especialidades
+	{
+		@extend span.tiempoDeEspera-image;
+		padding:0px 8px 0px 0px !important;//width: 440px !important; //ancho fijo. diseño
 	}
 
-}
-
-div.tiempoDeEspera span.tiempoDeEspera-data {
-	margin-top: 5px;
-}
-
-div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2)
-{
-	margin-bottom: 10px;
-}
-
-.todos article ul li .wraper-buttons
-{
-	@include single-box-shadow(none);
-	width: auto;
-	height: inherit;
-	margin: 0 0 10px 0;
-	padding: 0;
-	border: none;
-}
-
-.wraper-buttons
-{
-	height: inherit;
-
-	a.buttonLight
+	//Styles Hospitales
+	span.tiempoDeEspera-image-unhospital
 	{
-		@include single-box-shadow(rgba(0, 0, 0, 0.3),0px,3px,3px);
-		display: block;
-		background-color: $blue;
-		color: $white;
-		line-height: 20px;
-		padding: 0 10px;
-		font-size: 12px;
-		font-weight: normal;
-		font-family: 'GothamLightRegular';
-
-		//@include background(linear-gradient(top, $blue, darken($blue ,11)));
-		@include background(linear-gradient(top, $blue, $blue3));
-
-		&:hover
+		@extend span.tiempoDeEspera-image;
+		width: 60px !important;
+		i.icon-espera-40
 		{
-			text-decoration: none;
-			@include background(linear-gradient(top, $blue, $blue));
+			@include background(image-url("espera-2.png"));
+			@include background-size(40px 40px);
+			display: inline-block;
+			padding: 10px 0px 0px 1px;
+			width: 40px;
+			height: 40px;
+			background-repeat:no-repeat;
+			background-position: center;
+		}
+		a{
+			color: $textcolor-blueUnder !important;
+			float:left;		
 		}
 	}
 
-	a.little {
-		width: $boxLittle;
-	}
+
+
 }
+
+.cajasDestacadas {
+	@include clearfix();
+	width: 423px ;
+	display:inline-block !important;
+	border:0px !important;	
+	div.cajaDereHospitales {
+		display:inline-block !important;
+		border:0px !important;
+	}
+
+
+}
+.cajasDereHospitales {
+	display:inline-block !important;
+	border:0px !important;
+}
+.includeExternal{
+	@include clearfix();
+}
+.dobleAnchoEspera{
+	width: 408px !important;
+	border-radius: 6px;
+	border: #89969F 1px solid;
+	margin: 5px 0px;
+	padding: 5px;
+}
+//Styles Hospitales
+	span.tiempoDeEspera-data-hospitales
+	{
+		@extend span.tiempoDeEspera-data;
+		width: 293px !important; //ancho fijo. diseño
+		margin-top: 10px !important;
+		strong.header 
+		{
+			display: inline-block !important;	
+			padding: 10px 10px 0px 0px !important;			
+		}
+		a{
+			color: $textcolor-blueUnder !important;		
+		}
+	}

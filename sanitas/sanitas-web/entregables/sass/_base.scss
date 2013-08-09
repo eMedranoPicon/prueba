@@ -1,16 +1,35 @@
 
 
-$blueDark 	: 	#063a61;
-$blue3		:	#1e7dc1;
-$blue2 		: 	#1d3c54;
-$blue 		: 	#5299CF;
+$blueDark 	            : 	#063a61;
+$blue3		            :	#1e7dc1;
+$blue2 		            : 	#1d3c54;
+$blue 		            : 	#5299CF;
+$blueBox 		        : 	#A8CCE6;
 
-$white 		:	#fff;
+$white 		            :	#fff;
+$grey					:	#E6E6E6;
 
+$textcolor-blueh2		:	#255072;
+$textcolor-blue2		:	#5078BE;
+$textcolor-blue			:	#177abe;
+$textcolor-blueLight	:	#5299CF;
+$textcolor-blueLighter	:	#50B3EC;
+$textcolor-blueTitle	:   #155577;
+$textcolor-grey			:	#666;
 
-$boxLittle	: 50px;
+$textcolor-blueUnder	:   #007ac5;
+
+$boxLittle	            :   50px;
+
+$fontSizeLarge			:	14px;
+$fontSize 				:	12px;
+$fontSizeSmall 			:	10px;
+
 
 @import "compass/css3/box-shadow";
 
 //http://compass-style.org/reference/compass/css3/images/
 @import "compass/css3/images";
+
+//http://compass-style.org/reference/compass/css3/background_size/
+@import "compass/css3/background-size"
