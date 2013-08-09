@@ -22,20 +22,44 @@ dl.dl-tiempoDeEspera
 	display: inline-block;
 	margin: 0 0 10px 0;
 	width:245px;
+	@include clearfix();
 
 	dt,
 	dd {
 		display: inline-block;
-		color: $textcolor-blue;
+		color: $textColor-blue;
+		//line-height: 14px;
+		margin-top: 9px;
 	}
 
 	dt {
 		width: 120px;
-		margin-top: 9px;
+
 	}
 
 	dd{
 		margin-left: 0px;
+	}
+}
+
+dl.dl-tiempoDeEspera.iconTime
+{
+	width:100%;
+
+	dt {
+		padding-left: 20px;
+		@include background(image-url("reloj-azul.png"));
+		@include background-size(14px 14px);
+		background-repeat: no-repeat;
+		width: 140px;
+
+		span {
+			display: none;
+		}
+	}
+
+	dd {
+		width: 70%;
 	}
 }
 
@@ -49,6 +73,8 @@ hgroup.todos.centros.listado article li div
 {
 	div.tiempoDeEspera
 	{
+		width: 90%;
+
 		@media screen and (max-width: 480px)
 		{
 			width: 90%;
@@ -70,7 +96,7 @@ hgroup.todos.centros.listado article li div
 			width: 99%;
 		}
 
-		width: 90%;
+
 	}
 }
 
@@ -90,7 +116,6 @@ hgroup.todos.centros.listado article li div
 		{
 			width: 60%;
 		}
-
 	}
 
 }
@@ -107,7 +132,8 @@ div.tiempoDeEspera
 			@extend dl.dl-tiempoDeEspera;
 			margin-left: 30px;
 
-			dt:first-child
+			dt:first-child,
+			dd:first-child
 			{
 				margin-top: 0px;
 			}
@@ -140,14 +166,14 @@ div.tiempoDeEspera
 
 		span {
 			font-size: inherit;
-			color: $textcolor-blue2;
+			color: $textColor-blue2;
 		}
 
 		strong.header {
 			display: block;
 			line-height: 23px;
 			vertical-align: top;
-			color: $textcolor-blueLighter;
+			color: $textColor-blueLighter;
 			font-size: inherit;
 		}
 
@@ -247,10 +273,91 @@ div.tiempoDeEspera
 	}
 
 	h2 {
-		color: $textcolor-blueh2;
+		color: $textColor-blueh2;
 		font-size: $fontSizeLarge;
 		text-transform: uppercase;
 		padding: 8px 0 8px 0;
 		text-indent: 3%;
 	}
+}
+
+/*
+*
+*	.tiempoDeEspera-detalle
+*
+*/
+
+.box-advice
+{
+	margin: 2% 10%;
+	width: 78%;
+	border: 1px solid $black;
+	background-color: $white;
+
+	p {
+		margin: 15px;
+		padding-right: 0;
+		color: $blueDark2;
+		text-align: center;
+	}
+}
+
+.container-article {
+	margin-left: 15px;
+}
+
+.tiempoDeEspera-detalle
+{
+
+	dl {
+		@extend dl.dl-tiempoDeEspera.iconTime;
+
+		dt,dd
+		{
+			//font-family: 'GothamMediumRegular';
+			color: $textColor;
+			margin-top: 9px;
+			//width: 50%;
+		}
+	}
+
+	h2 {
+		font-family: 'GothamMediumRegular';
+		text-transform: none;
+		font-size: $fontSize+1;
+		margin-bottom: 10px;
+	}
+
+	.container-images
+	{
+		width: 98%;
+		margin: 0;
+		padding: 0;
+		@include clearfix();
+
+		img {
+			display: inline-block;
+		}
+
+		img:nth-last-child(2)
+		{
+			width: 100%;
+			max-width: 300px
+		}
+
+		img:nth-last-child(1)
+		{
+			width: 100%;
+			max-width: 300px
+		}
+	}
+
+	.grafico-afluencia
+	{
+		margin-top: 15px;
+		.grafico {
+			width: 90%;
+		}
+	}
+
 }
