@@ -335,4 +335,39 @@ div.borderExtra
 
 }
 
+.imgBox{
+	@include clearfix();	
+}
+span.tiempoDeEspera-image-vermas{
+		display: inline-block;
+		margin-top: -40px;
+		i.icon-espera-vermas
+		{
+			@include background(image-url("espera-2.jpg"));
+			@include background-size(60px 60px);
+			display: inline-block;
+			width: 60px;
+			height: 60px;
+			background-repeat:no-repeat;
+			border: white 3px solid;
+
+		}			
+	
+	}
+//Styles Hospitales
+	span.tiempoDeEspera-data-vermas
+	{
+		@extend span.tiempoDeEspera-data;	
+		width: 100% !important;
+		background-color:white !important;
+		font-style:normal;	
+		
+
+		dl.dl-tiempoDeEspera
+		{
+			width:300px !important;
+			margin:0px;
+		}
+	}
+
 	
