@@ -51,6 +51,7 @@ div.tiempoDeEspera
 		margin-top: 1px; // pixel-perfection
 		vertical-align: top;
 		width: 293px; //ancho fijo. diseño
+		font-style:normal;			
 
 		dl
 		{
@@ -170,11 +171,27 @@ div.tiempoDeEspera
 			width: 40px;
 			height: 40px;
 			background-repeat:no-repeat;
-			background-position: center;
+			background-position:50% 50%;
 		}
-		a{
-			color: $textcolor-blueUnder !important;
-			float:left;		
+		span
+		{
+			width: 58px;
+			display: inherit;
+			a{
+				color: $textcolor-blueUnder !important;
+				font-size: $fontSizeUrl;
+				font-weight:  bold;
+
+			}
+			i.icon-flecha-a
+			{
+				@include background(image-url("iconListCajas.gif"));			
+				@include background-size(8px 8px);
+				display: inline-block;			
+				width: 8px;
+				height: 8px;			
+				background-repeat:no-repeat;		
+			}
 		}
 	}
 
@@ -205,8 +222,8 @@ div.tiempoDeEspera
 	width: 408px !important;
 	border-radius: 6px;
 	border: #89969F 1px solid;
-	margin: 5px 0px;
-	padding: 5px;
+	margin: 3px 0px 3px 0px;
+	padding: 5px 5px 3px 5px;
 }
 //Styles Hospitales
 	span.tiempoDeEspera-data-hospitales
@@ -223,3 +240,99 @@ div.tiempoDeEspera
 			color: $textcolor-blueUnder !important;		
 		}
 	}
+
+
+	//Styles Hospitales
+	span.tiempoDeEspera-data-unhospital
+	{
+		@extend span.tiempoDeEspera-data;	
+		padding: 0px 0px 4px 0px !important;
+		margin: 6px 0px 11px 0px !important;
+
+		
+		strong.header 
+		{
+			display: inline-block !important;	
+			padding: 0px 10px !important;			
+		}
+	}
+
+	//Styles Hospitales
+	span.tiempoDeEspera-data-unhospital-2
+	{
+		@extend span.tiempoDeEspera-data;	
+		padding: 10px 10px 11px 10px !important;
+		margin: 6px 0px 6px 0px !important;
+		font-style:normal;
+		
+		strong.header 
+		{
+			display: inline-block !important;	
+			padding: 0px 10px 5px 10px !important;			
+		}
+	}
+
+	//Styles Hospitales
+	span.tiempoDeEspera-image-unhospital-2
+	{
+		@extend span.tiempoDeEspera-image;
+		width: 60px !important;
+		font-style:normal;
+		i.icon-espera-60
+		{
+			@include background(image-url("espera-2.png"));
+			@include background-size(60px 60px);
+			display: inline-block;
+			padding: 10px 0px 0px 1px;
+			width: 60px;
+			height: 60px;			
+			background-repeat:no-repeat;
+			background-position:50% 50%;
+		}
+		span
+		{
+			width: 60px;
+			display: inherit;
+			margin-top: 55px;
+			font-style:normal;						
+			a{
+				color: $textcolor-blueUnder !important;
+				font-size: $fontSizeUrl;
+				font-weight:  bold;
+
+			}
+			i.icon-flecha-a
+			{
+				@include background(image-url("iconListCajas.gif"));			
+				@include background-size(8px 8px);
+				display: inline-block;			
+				width: 8px;
+				height: 8px;			
+				background-repeat:no-repeat;		
+			}
+		}
+	}
+
+
+
+//borderExtra
+div.borderExtra
+{
+		border-radius: 5px;
+		border: #89969F 1px solid;
+		padding: 10px 10px 5px 10px;
+
+		div.bannerHomeHospitales
+		{
+			a
+			{
+			 img 
+			 {
+			 	width: 95% !important;
+			 }
+			}
+		}
+
+}
+
+	
