@@ -1,0 +1,194 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+body {
+	-webkit-user-select:none;
+    -webkit-text-size-adjust:none;
+}
+
+#wrapper {
+	width:100%;
+	height:200px;
+	float:left;
+	position:relative;	/* On older OS versions "position" and "z-index" must be defined, */
+	z-index:1;			/* it seems that recent webkit is less picky and works anyway. */
+	overflow:hidden;
+	
+}
+
+#scroller {
+	width:400%;
+	height:100%;
+	float:left;
+	padding:0;
+}
+
+#scroller ul {
+	list-style:none;
+	display:block;
+	float:left;
+	width:100%;
+	height:100%;
+	padding:0;
+	margin:0;
+	text-align:left;
+}
+
+#scroller li {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	box-sizing:border-box;
+	display:block; float:left;
+	
+		width:25%;	
+		position:relative;
+}
+#scroller li div{
+	width:100%;	
+	position:relative;
+	z-index:1;
+	}
+#scroller li div.slide{
+	width:50%;	
+	z-index:2;
+	position:absolute;
+	top:80px;
+	left:20px;
+	padding:20px;
+	}	
+#scroller li div.slide h2{
+	font-size:18px;	
+		}		
+	
+#scroller li img{
+	width:100%;	
+	}
+#nav {
+   float: right;
+    margin-top: -40px;
+    position: relative;
+    z-index: 30000;
+}
+#nav ul{
+	margin-right:35px;
+	}
+#prev, #next {
+	float:left;
+	font-weight:bold;
+	font-size:14px;
+	padding:5px 0;
+	width:80px;
+	display:none;
+}
+
+#next {
+	float:right;
+	text-align:right;
+}
+
+#indicator, #indicator > li {
+	display:block; float:left;
+	list-style:none;
+	padding:0; margin:0;
+}
+
+#indicator {
+	padding:12px 0 0 30px;
+}
+
+#indicator > li {
+	text-indent:-9999em;
+	width:20px; height:20px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-o-border-radius:50%;
+	border-radius:50%;
+	background:#6EA2C6;
+	overflow:hidden;
+	margin-right:4px;
+	border: 1px solid #FFFFFF;
+}
+
+#indicator > li.active {
+	background:#1779BE;
+	
+}
+
+#indicator > li:last-child {
+	margin:0;
+}
+
+#pauseScroll	{
+	width:20px;
+	height:20px;
+	text-indent:-3000px;
+	position:absolute;
+	bottom:2px;
+	right:10px;
+	z-index:1000;
+	border:0;
+	background:url(../images/sprite.svg) -50px -292px;
+	
+	}
+
+@media screen and (max-width : 320px) {
+#scroller li div.slide{
+	width:80%!important;
+	left:2.5%!important;	
+	top:20px!important;
+}	
+
+#wrapper {
+	width:100%;
+	height:150px;
+	float:left;
+	position:relative;	/* On older OS versions "position" and "z-index" must be defined, */
+	z-index:1;			/* it seems that recent webkit is less picky and works anyway. */
+	overflow:hidden;
+	
+}
+	
+#scroller li div.slide{
+	bottom:10px!important;
+	
+	}	
+	
+	}
+
+@media screen and (max-width : 480px) {
+#scroller li div.slide{
+	width:60%;	
+	z-index:2;
+	position:absolute;
+	top:0px!important;
+	left:20px;
+	padding:10px;
+	height:50px;
+	
+}	
+#scroller li div.slide h2{
+	font-size:14px;	
+		}	
+#wrapper {
+	width:100%;
+	height:150px;
+	float:left;
+	position:relative;	/* On older OS versions "position" and "z-index" must be defined, */
+	z-index:1;			/* it seems that recent webkit is less picky and works anyway. */
+	overflow:hidden;
+	
+}	
+#scroller li div.slide{
+	bottom:10px!important;
+	}		
+	
+}
+
+@media only screen and (min-width: 768px) { 
+
+}	
+@media only screen and (min-width: 1024px) {	
+
+}	

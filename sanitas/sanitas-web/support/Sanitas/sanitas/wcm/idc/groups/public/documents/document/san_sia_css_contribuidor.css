@@ -1,0 +1,1241 @@
+.default_style
+{
+	color: red;
+}
+
+
+
+.imgcen {
+
+display:block;
+margin:10px auto;
+padding-top:10px;
+text-align:center;
+}
+
+.contenidotexto {padding:0 11px 11px 11px}
+
+.flechas2	{list-style:url(iconListCajas.gif)}
+
+
+/*------------------------------CSS WEB ANTIGUA--------------------------------*/
+h4 {
+color:#538900;
+font-size:15px;
+font-weight:bold;
+margin: 0px;
+}
+h2 {font-size:27px;}
+
+.separador_puntos { background:url(bg_seppuntos.gif) repeat-x; height:3px; clear:both; margin-bottom:17px; font-size:1px} 
+.separador_puntos2 { background:url(bg_seppuntos2.gif) repeat-x; height:3px; clear:both; margin-bottom:11px; font-size:1px}
+.izda { width:350px; float:left; padding:5px 0 0 0}
+.dcha {width:230px; float:right;padding:5px 4px 0 0}
+.mini {margin:11px 0;padding-left:5px;}
+ul.mini li {padding-left:10px; background:url(bullet_cuatro.gif) 0 3px no-repeat; margin-bottom:2px}
+ul li {list-style-type:none}
+ul.flechas li {
+background:url(ang_05hor.gif) no-repeat scroll 0 3px transparent;
+margin-bottom:2px;
+padding-left:10px;
+}
+/*sin foto a 2 columnas*/
+/*.mod_sinfoto03 {margin:0; padding:8px 11px 11px 11px}*/
+.mod_sinfoto03 .izq { width:230px; margin-right:19px; float:left}
+.mod_sinfoto03 .dch,.mod_sinfoto03 .dcha {width:236px; float:left; }
+.mod_sinfoto03 .izq h4 {font-size:15px; color:#538900; margin-bottom:9px}
+.mod_sinfoto03 .izq ul {margin-top:6px}
+.mod_sinfoto03 .izq li {padding-left:14px; background:url(ang_05hor.gif) no-repeat 0 3px; margin-bottom:2px}
+.mod_sinfoto03 .izq li a{color:#0099ff}
+.mod_sinfoto03 .izq li.ultimo  { margin-bottom:0}
+.mod_sinfoto03_dcha {width:230px; float:left; }
+.mod_sinfoto03 .dch h4,.mod_sinfoto03 .dcha h4 {font-size:15px; color:#538900; margin-bottom:9px; font-weight:bold}
+.mod_sinfoto03 .dch ul,.mod_sinfoto03 .dcha ul {margin-top:6px; margin-bottom:19px}
+
+.mod_sinfoto03 .dch li {padding-left:14px; background:url(ang_05hor.gif) no-repeat 0 3px; margin-bottom:10px}
+/* OSCAR PARCHE */
+.mod_sinfoto03 .dcha li {padding-left:14px; background:url(ang_05hor.gif) no-repeat 0 3px; margin-bottom:2px}
+
+.mod_sinfoto03 .dch li a,.mod_sinfoto03 .dcha li a {color:#0099ff}
+.mod_sinfoto03 p {margin-top:6px; margin-bottom:19px}
+.mod_sinfoto03 a span {background:url(sep.gif) no-repeat top right; padding-right:5px; height:11px}
+
+/*modulo central sin foto*/
+.mod_sinfoto, .mod_sinfoto_especialidades  {padding:11px} 
+.mod_sinfoto h4, .mod_sinfoto_especialidades h4 {font-size:15px; color:#538900; margin-bottom:15px; font-weight:bold}  
+.mod_sinfoto h5, .mod_sinfoto_especialidades h5 {font-size:12px; color:#000; font-weight:bold; margin-bottom:0px}
+.mod_sinfoto p a, .mod_sinfoto_especialidades p a {float:right; background:url(bullet_04.gif) 0px 0px no-repeat; padding:0 0 17px 20px;font-size:15px; color:#0099ff}
+.mod_sinfoto ul {margin-bottom:18px}
+.mod_sinfoto li {margin-bottom:10px}
+.mod_sinfoto_especialidades ul {margin-bottom:0px}
+.mod_sinfoto_especialidades li {margin-bottom:0px}
+
+.mod_sinfoto .izq {width:263px; float:left; margin-bottom:15px} 
+.mod_sinfoto .dch {width:242px; float:left; margin-bottom:15px} 
+
+/*.mod_sinfoto02  {padding:11px} */
+.mod_sinfoto02 h4 {font-size:15px; color:#538900; margin-bottom:15px; font-weight:bold}  
+.mod_sinfoto02 h5 {font-size:12px; color:#000; font-weight:bold; margin-bottom:0px}
+.mod_sinfoto02 span a {float:right; background:url(bullet_05.gif) 0px 0px no-repeat; padding-left:20px; margin-bottom:6px; font-size:15px; color:#0099ff;}
+.mod_sinfoto02 ul {margin-bottom:10px}
+.mod_sinfoto02 ul li {padding-left:14px; background:url(bullet_cuatro.gif) 0 3px no-repeat}
+.mod_sinfoto02 ul li a {color:#0099ff}
+.mod_sinfoto02 p {padding-bottom:14px}
+.mod_sinfoto02 p.ultimo {padding-bottom:3px}
+.mod_sinfoto02 ul.flechas {margin-top:5px;}
+.mod_sinfoto02 ul.flechas li {padding-left:12px; background:url(ang_05hor.gif) 0 3px no-repeat; margin-bottom:2px}
+
+.modulo_foto_grande {position:relative; padding-left:11px; padding-top:11px; padding-bottom:11px; overflow:hidden} 
+.mod_seguros, .mod_seguros3 {margin:0;/* padding:11px 11px 11px 11px*/}
+.mod_seguros_izda { width:200px; margin-right:62px; float:left}
+/* NUEVO OSCAR */
+.mod_seguros_izda h4 {margin-bottom:7px}
+.mod_seguros_dcha h4 {margin-bottom:7px}
+.mod_seguros_izda p { margin-bottom:12px} 
+.mod_seguros_izda p.ultimo {margin-bottom:7px}
+.mod_seguros_dcha p { margin-bottom:12px} 
+.mod_seguros_dcha p.ultimo {margin-bottom:7px}
+.mod_seguros_izda h4, .mod_seguros3_izda h4 {font-size:15px; color:#538900; margin-bottom:7px; font-weight:bold}
+.mod_seguros_izda h5, .mod_seguros3_izda h5 {font-size:12px; color:#666; margin-bottom:3px; font-weight:bold}
+.mod_seguros_izda ul, .mod_seguros3_izda ul {}
+.mod_seguros_izda li {padding-left:14px; background:url(ang_05hor.gif) 0 3px no-repeat; margin-bottom:2px}
+.mod_seguros_izda li a{color:#0099FF}
+.mod_seguros_izda li.ultimo, .mod_seguros3_izda li.ultimo  { margin-bottom:0}
+.mod_seguros_dcha {width:250px; float:left; margin-right:10px}
+.mod_seguros_dcha h4, .mod_seguros3_dcha h4 {font-size:15px; color:#538900; margin-bottom:7px; font-weight:bold}
+.mod_seguros_dcha h5, .mod_seguros3_dcha h5 {font-size:12px; color:#666; margin-bottom:3px; font-weight:bold}
+.mod_seguros_dcha ul, .mod_seguros3_dcha ul {}
+.mod_seguros_dcha li {padding-left:14px; background:url(ang_05hor.gif) 0 3px no-repeat; margin-bottom:10px}
+.mod_seguros_dcha li a, .mod_seguros3_dcha li a{color:#0099ff}
+.modulo_gris {
+background:url() no-repeat scroll left top transparent;
+margin:0 0 14px;
+padding:12px 0 8px 10px;
+}
+.flecha_enlace_izda {
+background:url(bullet_04.gif) no-repeat scroll 0 0 transparent;
+font-size:15px;
+padding:0 0 17px 20px;
+text-decoration:none;
+}
+.modulo_foto_grande ul.bullet01 li {
+background:url(bullet_cuatro.gif) no-repeat scroll 0 3px transparent;
+padding-left:14px;
+}
+ul.bullet01 li {
+background:url(bullet_cuatro.gif) no-repeat scroll 0 3px transparent;
+margin-bottom:15px;
+padding-left:14px;
+}
+.imgder {
+float:right;
+margin:10px 0 10px 10px;
+}
+
+.flecha_enlace_dcha a {
+background:url("bullet_04.gif") no-repeat scroll 0 0 transparent;
+float:right;
+font-size:15px;
+margin-bottom:6px;
+padding-left:20px;
+}
+.flecha_enlace_dcha a {
+color:#0099FF;
+}
+h3.titular3 {
+color:#666666;
+font-size:25px;
+margin:10px 0 14px;
+}
+.texto_destacado_articulo {
+background:url("bullet_04.gif") no-repeat scroll 0 0 transparent;
+color:#666666;
+font-size:17px;
+margin:25px 0;
+padding:0 0 0 20px;
+}
+.texto_destacado_articulo span {
+padding:0px;
+}
+span.nota{
+color:#999999;
+font-size:0.95em;
+font-weight:normal;
+margin:0 0 0 4px;
+}
+
+.paginacion {
+background:none;
+float:right;
+display:block;
+font-size:0.9em;
+margin-bottom:2em;
+}
+
+.paginacion ul li {
+  display:inline;
+  list-style-type:none;
+}
+
+.nota02 {
+  color: #999999;
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+.mod_seguros2_izda {
+  float: left;
+  margin-right: 62px;
+  width: 200px;
+}
+
+.mod_seguros2_dcha {
+  float: left;
+  margin-right: 10px;
+  width: 250px;
+}
+
+h5 {
+    font-size: 1.0em;
+    font-weight: normal;
+    padding: 0 0 0px;
+    margin: 0px;
+}
+h5 a {
+    font-size: 1.0em;
+    font-weight:bold;
+    padding: 0 0 0px;
+    margin: 0px;
+}
+
+td {border:0px none;
+}
+
+th {border:0px none;
+}
+
+table {border:0px none;
+}
+
+.rightSoluciones	{padding-left: 14px! important;
+			*padding-left: 21px! important;
+					}
+          
+
+
+a.normalTextolink {color:#fff;
+					background:url(PREPRO_015013.gif) right no-repeat;
+					padding-right:20px;
+					text-decoration:underline;
+					}
+a.normalTextolink:hover{
+          color:#fff;
+          text-decoration:underline;
+					}          
+
+
+
+/*------- CARRUSEL  ----*/
+
+.texto_slide_1 {
+  top:50px;
+  left:200px;
+  background:#e74c90;
+  filter:alpha(opacity=80);
+  moz-opacity:.80;
+  opacity: 0.8;
+  position:absolute;
+}
+
+.texto_slide_2 {
+  top:50px;
+  left:450px;
+  background:#e74c90;
+  filter:alpha(opacity=80);
+  moz-opacity:.80;
+  opacity: 0.8;
+  position:absolute;
+}
+
+
+.areaTextContentEmpresas	{
+		            position:absolute;
+					width:410px;
+					height:auto;
+					background:#e2694e;
+					background : transparent url(fondo-trans-red.png) 50% 50%;
+					left: 500px;
+					top: 52px;
+					color:#FFF;
+					margin:0.55em;
+					padding:0.4em;
+					font-size:1.3em;
+					overflow:auto;
+					}
+.areaTextContentdosEmpresas{
+	                position:absolute;
+					width:410px;
+					height:auto;
+					background:#e2694e;
+					background : transparent url(fondo-trans-red.png) 50% 50%;
+					left: 29px;
+					top: 52px;
+					color:#FFF;
+					margin:0.55em;
+					padding:0.4em;
+					font-size:1.3em;
+					overflow:auto;
+					}
+.areaTextContenttresEmpresas{
+	                position:absolute;
+					width:410px;
+					height:auto;
+					background:#e2694e;
+					background : transparent url(fondo-trans-red.png) 50% 50%;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					color:#FFF;
+					margin:0.55em;
+					padding:0.4em;
+					font-size:1.3em;
+					overflow:auto;
+					}	
+.areaTextContentcuatroEmpresas{
+	                position:absolute;
+					width:410px;
+					height:auto;
+					background:#e2694e;
+					background : transparent url(fondo-trans-red.png) 50% 50%;
+					left: 500px;
+					top: 42px;
+					color:#FFF;
+					color:#FFF;
+					margin:0.55em;
+					padding:0.4em;
+					font-size:1.3em;
+					overflow:hidden;
+					}
+
+.areaTextContent {
+					padding:10px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+                    overflow:hidden;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					height:20px;
+					}
+.areaTextContent	ul{
+					padding:0px;
+					margin:0px;
+					}
+.areaTextContent	li{
+					padding:0px;
+					margin:0px;
+					list-style:none;
+					color:#FFF;
+					font-size:0.75em;
+					font-weight:bold;
+					font-variant:normal;
+					}
+.areaTextContent a{  display:inline;
+					text-decoration:none;
+					}
+.areaTextContentdos a{display:inline;
+					text-decoration:none;
+          
+					}
+.areaTextContenttres a{display:inline;
+					text-decoration:none;
+					}
+
+.areaTextContentdos{
+                  overflow:hidden;
+	               position:absolute;
+					width:410px;
+					height:auto;
+					background:#e74c90;
+                     background : transparent url(fondo-trans.png) 50% 50%;
+					left: 500px;
+					top: 50px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:1px 10px;
+					}
+
+.areaTextContentdosHospitales{
+	                position:absolute;
+					width:410px;
+					height:auto;
+					background:#e74c90;
+					background : transparent url(fondo-trans.png) 50% 50%;
+					left: 29px;
+					top: 52px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;	
+					display:block;
+					font-variant:normal;
+                    overflow:hidden;
+					font-size:1.5em;
+					padding:10px;
+
+					}
+
+.areaTextContenttresHospitales{
+	                position:absolute;
+					width:410px;
+				    height:auto;
+					background:#e74c90;
+					background: transparent url(fondo-trans.png) 50% 50%;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+                    display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                    overflow:hidden;
+					}	
+.areaTextContenttres{
+
+	                position:absolute;
+					width:410px;
+				    height:auto;
+					background:#e74c90;
+                    background : transparent url(fondo-trans.png) 50% 50%;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                    overflow:hidden;
+					}				
+					
+					
+					
+.areaTextContentCuatro{
+	                position:absolute;
+					width:410px;
+					height:auto;
+					background:#e74c90;
+					background : transparent url(fondo-trans.png) 50% 50%;
+					left: 500px;
+					top: 50px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;				
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                    overflow:hidden;
+					}						
+.areaTextContentdos	ul{ padding-top:0px;
+					margin-top:0px;
+					}
+.areaTextContentdos	li{
+	                list-style-image:none;
+					color:#FFF;
+					font-size:0.75em;
+					font-weight:bold;
+					font-variant:normal;
+					}
+.areaTextContenttres	ul{ padding-top:0px;
+					margin-top:0px;
+					}
+.areaTextContenttres	li{
+	list-style-image:none;
+					color:#FFF;
+					font-size:0.75em;
+					font-weight:bold;
+					font-variant:normal;
+					}	
+.areaTextContentCuatro	ul{ padding-top:0px;
+					margin-top:0px;
+					}
+.areaTextContentCuatro	li{
+	list-style-image:none;
+					color:#FFF;
+					font-size:0.75em;
+					font-weight:bold;
+					font-variant:normal;
+
+
+
+
+					}						
+
+.areaTextContentdosHospitales	ul{ padding-top:0px;
+					margin-top:0px;
+					}
+.areaTextContentdosHospitales	li{
+	list-style-image:none;
+					color:#FFF;
+					font-size:0.75em;
+					font-weight:bold;
+					font-variant:normal;
+					}
+.areaTextContentdosEmpresas	ul{ padding-top:0px;
+					margin-top:0px;
+					}
+.areaTextContentdosEmpresas	li{
+	list-style-image:none;
+					color:#FFF;
+					font-size:0.75em;
+					font-weight:bold;
+					font-variant:normal;
+					}	
+.areaTextContenttresHospitales	ul{ padding-top:0px;
+					margin-top:0px;
+					}
+.areaTextContenttresHospitales	li{
+	list-style-image:none;
+					color:#FFF;
+					font-size:0.75em;
+					font-weight:bold;
+					font-variant:normal;
+					}	
+.areaTextContenttresEmpresas	ul{ padding-top:0px;
+
+					margin-top:0px;
+
+
+					}
+.areaTextContenttresEmpresas	li{
+
+	list-style-image:none;
+					color:#FFF;
+					font-size:0.75em;
+					font-weight:bold;
+					font-variant:normal;
+					}	
+
+.uno .areaEmpresas	{
+	position:absolute;
+					width:420px;
+					height:160px;
+					background:#e74c90;
+					
+					
+						background : transparent url(fondo-trans.png) 50% 50%;
+					left: 510px;
+					top: 72px;
+
+					}
+.uno .areaTextHospitales	{
+
+					position:absolute;
+					width:420px;
+					height:160px;
+					background:#e74c90;
+					background : transparent url(fondo-trans.png) 50% 50%;
+					left: 510px;
+					top: 72px;
+                    overflow:auto;
+
+					}
+.uno .areaText	{
+
+					position:absolute;
+					width:420px;
+					height:160px;
+					overflow:auto;
+					background : transparent url(fondo-trans.png) 50% 50%;
+					left: 10px;
+					top: 72px;	
+					}
+
+.areaText	{        overflow:hidden;
+					}
+
+
+
+
+.red	{
+	                   background:#e2694e;
+					   background : transparent url(fondo-trans-red.png) 50% 50%;
+					}
+
+.areaTextEmpresas	{
+
+	                position:absolute;
+					width:420px;
+					height:160px;
+					background:#e2694e;
+					overflow:hidden;
+			        background : transparent url(fondo-trans-red.png) 50% 50%;
+					left: 510px;
+					top: 72px;
+					}
+
+.areaTextContentdosEmpresas{
+	                position:absolute;
+					width:410px;
+					height:auto;
+					background:#e2694e;
+				    background : transparent url(fondo-trans-red.png) 50% 50%;
+					left: 29px;
+					top: 52px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					overflow:hidden;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+
+					}
+.areaTextContenttresEmpresas{
+	                position:absolute;
+					width:410px;
+					height:auto;
+					background:#e2694e;
+					background : transparent url(fondo-trans-red.png) 50% 50%;
+                    left: 29px;
+					top: 42px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					overflow:hidden;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+
+					}	
+
+
+
+
+
+
+
+
+/* CARRUSEL jade derecho */
+
+.carruseljadedcha {
+    background: none repeat scroll 50% 50% #008193;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1.5em;
+    font-style: normal;
+    font-variant: normal;
+    height: auto;
+    left: 528px;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    width: 385px;
+}
+
+.carruseljadeizda{
+	                position:absolute;
+					width: 385px;
+					height: auto;
+					background:#008193 none repeat scroll 50% 50%;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					color:#FFF;
+					margin:0.55em;
+					padding:0.4em;
+					font-size:1.3em;
+					overflow:auto;
+				
+					}
+.carruseljadeizdatrans{
+	                position:absolute;
+					width: 385px;
+					height:auto;
+					background:#008193;
+					background : transparent url(fondo-trans-jade.png) 50% 50%;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					color:#FFF;
+					margin:0.55em;
+					padding:0.4em;
+					font-size:1.3em;
+					overflow:auto;
+				
+					}					
+
+/*------- CARRUSEL  módulo fondo marino alineado a la izquierda ----*/					
+.carruselnavyizda{
+	                position:absolute;
+					width: 385px;
+					height: auto;
+					background:#00335b none repeat scroll 50% 50%;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					color:#FFF;
+					margin:0.55em;
+					padding:0.4em;
+					font-size:1.3em;
+					overflow:auto;
+				
+					}
+					
+/* CARRUSEL AZUL MARINO DERECHO */
+
+.areaTextContentCuatroWellbeing {
+    background: none repeat scroll 50% 50% #00335b;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1.5em;
+    font-style: normal;
+    font-variant: normal;
+    height: auto;
+    left: 528px;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    width: 384px;
+}					
+					
+ /*------- CARRUSEL  módulo fondo verde alineado a la izquierda ----*/					
+.carrusel_verde_izda{
+
+	                position:absolute;
+					width:410px;
+				    height:auto;
+					background:#007a3d;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                    overflow:hidden;
+					}
+.carrusel_verde_izda2{
+
+	                position:absolute;
+					width:400px;
+				    height:auto;
+					background:#007a3d;
+					left: 29px;
+					top: 29px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                    overflow:hidden;
+					}
+.carrusel_verde_dcha {
+    position: absolute;
+	background: #007a3d;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1.5em;
+    font-style: normal;
+    font-variant: normal;
+    height: auto;
+    left: 528px;
+    overflow: hidden;
+    padding: 10px;
+    top: 50px;
+    width: 410px;
+}
+					
+.carrusel_naranja_izda{
+
+	                position:absolute;
+					width:410px;
+				    height:auto;
+					background:#ef8900;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                    overflow:hidden;
+					}
+					
+.carrusel_naranja_dcha {
+    position: absolute;
+	background: #ef8900;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1.5em;
+    font-style: normal;
+    font-variant: normal;
+    height: auto;
+    left: 528px;
+    overflow: hidden;
+    padding: 10px;
+    top: 50px;
+    width: 410px;
+}					
+					
+
+					
+.carrusel_bronce_izda{
+
+	                position:absolute;
+					width:410px;
+				    height:auto;
+					background-color:#c09b5b;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                    overflow:hidden;
+					}
+					
+.carrusel_bronce_dcha {
+    position: absolute;
+	background-color: #c09b5b;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1.5em;
+    font-style: normal;
+    font-variant: normal;
+    height: auto;
+    left: 528px;
+    overflow: hidden;
+    padding: 10px;
+    top: 50px;
+    width: 410px;
+}
+
+					
+.carrusel_morado_izda{
+
+	                position:absolute;
+					width:410px;
+				    height:auto;
+					background-color:#68217a;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                    overflow:hidden;
+					}
+.carrusel_morado_izda_peq{
+
+	                position:absolute;
+					width:360px;
+				    height:auto;
+					background-color:#68217a;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                    overflow:hidden;
+					}
+.carrusel_morado_dcha {
+    position: absolute;
+	background-color: #68217a;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1.5em;
+    font-style: normal;
+    font-variant: normal;
+    height: auto;
+    left: 528px;
+    overflow: hidden;
+    padding: 10px;
+    top: 50px;
+    width: 410px;
+}					
+					
+					
+					
+					
+.carrusel_lima_izda{
+
+	                position:absolute;
+					width:410px;
+				    height:auto;
+					background-color:#678004;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                    overflow:hidden;
+					}
+
+.carrusel_lima_dcha {
+    position: absolute;
+	background-color: #678004;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1.5em;
+    font-style: normal;
+    font-variant: normal;
+    height: auto;
+    left: 500px;
+    overflow: hidden;
+    padding: 10px;
+    top: 50px;
+    width: 410px;
+}
+
+
+
+
+
+
+
+/* cyanes con distintas medididas */
+.carrusel_azul_izda{
+
+	                position:absolute;
+					width:410px;
+				    height:auto;
+					background-color:#0079C8;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                    overflow:hidden;
+					}
+					
+.carrusel_azul_izda_p{
+
+	                position:absolute;
+					width:380px;
+				    height:auto;
+					background-color:#0079C8;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                    overflow:hidden;
+					}
+
+
+.carrusel_azul_dcha_p {
+    position: absolute;
+	background-color: #0079C8;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1.5em;
+    font-style: normal;
+    font-variant: normal;
+    height: auto;
+    left: 528px;
+    overflow: hidden;
+    padding: 10px;
+    top: 50px;
+    width: 380px;
+}
+
+.carrusel_azul_dcha {
+    position: absolute;
+	background-color: #0079C8;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1.5em;
+    font-style: normal;
+    font-variant: normal;
+    height: auto;
+    left: 528px;
+    overflow: hidden;
+    padding: 10px;
+    top: 50px;
+    width: 410px;
+}
+	
+
+.carrusel_azul_dcha_milenium {
+    background: none repeat scroll 0 0 #0079C8;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1.5em;
+    font-style: normal;
+    font-variant: normal;
+    height: auto;
+    left: 404px;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    top: 95px;
+    width: 410px;
+}
+
+
+
+
+.carrusel_violet_izda{
+
+	                position:absolute;
+					width:430px;
+				    height:auto;
+					background-color:#a4219b;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                    overflow:hidden;
+					}
+.carrusel_violet_dcha {
+    position: absolute;
+	background-color: #a4219b;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1.5em;
+    font-style: normal;
+    font-variant: normal;
+    height: auto;
+    left: 528px;
+    overflow: hidden;
+    padding: 10px;
+    top: 50px;
+    width: 430px;
+}
+
+
+.carrusel_granate_izda{
+
+	                position:absolute;
+				    height:auto;
+					background-color:#70193d;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                    overflow:hidden;
+					width:410px;
+					}
+					
+					
+.carrusel_granate_dcha {
+    position: absolute;
+	background-color: #70193d;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1.5em;
+    font-style: normal;
+    font-variant: normal;
+    height: auto;
+    left: 528px;
+    overflow: hidden;
+    padding: 10px;
+    top: 50px;
+    width: 410px;
+}
+
+
+/* igual que el granate pero con el ancho más grande de 430px */
+
+.carrusel_burgundy_izda{
+
+	                position:absolute;
+					height:auto;
+					background-color:#942151;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                    overflow:hidden;width:430px;
+					}
+.carrusel_burgundy_dcha {
+    position: absolute;
+	background-color: #942151;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1.5em;
+    font-style: normal;
+    font-variant: normal;
+    height: auto;
+    left: 528px;
+    overflow: hidden;
+    padding: 10px;
+    top: 50px;
+    width: 430px;
+}
+
+
+
+
+
+
+
+.carrusel_fucsia_izda{
+
+	                position:absolute;
+				    height:auto;
+					background-color:#e60e68;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                    overflow:hidden;
+					width:420px;
+					}
+.carrusel_fucsia_dcha {
+    position: absolute;
+	background-color: #e60e68; 
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1.5em;
+    font-style: normal;
+    font-variant: normal;
+    height: auto;
+    left: 528px;
+    overflow: hidden;
+    padding: 10px;
+    top: 50px;
+    width: 420px;
+}
+
+.carrusel_darkgreen_izda{
+
+	                position:absolute;
+					height:auto;
+					background-color:#18542c;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                    overflow:hidden;width:420px;
+					}
+.carrusel_darkgreen_dcha {
+    position: absolute;
+	background-color: #18542c;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1.5em;
+    font-style: normal;
+    font-variant: normal;
+    height: auto;
+    left: 528px;
+    overflow: hidden;
+    padding: 10px;
+    top: 50px;
+    width: 420px;
+}
+
+
+.carrusel_grey_izda{
+
+	                                position:absolute;
+					height:auto;
+					background-color:#6c6e71;
+					left: 29px;
+					top: 42px;
+					color:#FFF;
+					font-family: Arial, verdana, trebuchet;
+					font-style: normal;
+					display:block;
+					font-variant:normal;
+					font-size:1.5em;
+					padding:10px;
+                                        overflow:hidden;width:420px;
+					}
+.carrusel_grey_dcha {
+    position: absolute;
+    background-color: #6c6e71;
+    color: #FFFFFF;
+    display: block;
+    font-family: Arial,verdana,trebuchet;
+    font-size: 1.5em;
+    font-style: normal;
+    font-variant: normal;
+    height: auto;
+    left: 528px;
+    overflow: hidden;
+    padding: 10px;
+    top: 50px;
+    width: 420px;
+}

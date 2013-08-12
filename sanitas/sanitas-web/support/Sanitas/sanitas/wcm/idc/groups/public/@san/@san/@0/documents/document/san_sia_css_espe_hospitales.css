@@ -1,0 +1,123 @@
+/*Especialidades Medicas Hospitales*/
+.cajaFoto h2 {padding:0px; margin:0px; list-style:none;font-weight:normal; border:0px; line-height:1.2em;}
+.cajaFoto h3 {padding:0px; margin:0px; list-style:none;font-weight:normal; border:0px; line-height:1.2em;}
+.fotoEspecialidades		{width:520px; height:305px; border:0px solid #ccc;
+margin-bottom:50px;
+position:relative;
+z-index:1;
+display:block;
+border:0px solid #030;
+
+}
+.fotoEspecialidades	img{position:absolute; top:0px; left:10px;width:535px;}
+.fotoEspecialidades img.iconBocadillo		{position:absolute; top:232px; left:20px; width:50px; height:50px; display:block;}
+
+.fotoUnidades	{width:696px; height:305px; border:0px solid #ccc;
+margin-bottom:20px;
+position:relative;
+z-index:1;
+
+}
+.fotoUnidades img	{position:absolute; top:0px; left:0px;}
+
+.cajaFoto				{background:#009ee0; padding:15px; width:270px; margin-left:0px; margin-top:0px; top:-7px; position:relative;}
+.cajaFoto	 select		{width:265px; height:64px; color:#333; height:22px}
+.cajaFoto	h2		{color:#fff;font-family: 'GothamLightRegular';  padding-top:0px; font-size:18px;}
+.cajaFoto	h3		{color:#fff;font-family: 'GothamLightRegular'; border-bottom:1px solid #FFF; padding-bottom:5px;}
+.cajaFoto	span	{color:#FFF; display:block; padding-top:5px; padding-bottom:5px;}	
+
+.CuerpoSecDerecha{
+  width:400px;
+  margin-top: 10px;
+}
+.CuerpoMiDerecha{
+  width:400px;
+}
+
+.contentEspe{
+  width:506px;
+  height:auto;
+}
+
+.porLetra				{
+	width:506px; border:0px solid #ccc;
+background-color:#f8f8f8;
+
+
+margin-bottom:50px;
+position:relative;	
+padding:20px;	
+display:inline-block;
+margin-top:-112px;
+z-index:0;
+	
+	}
+  
+.porLetra div	{      
+    border: 0 solid #000000;
+    float: left;
+    min-height: 120px;
+    padding-left: 5px;
+    padding-right: 90px;
+    width: 31%;
+}
+.porLetra strong	{display:block; border-bottom:1px solid #000; color:#009bdb; font-weight:bold; padding-top:10px;}
+.porLetra ul	{padding-top:5px; width:150px;margin-left:-35px; *margin-left:5px;}
+.porLetra a	{color:#333; text-decoration:none;}
+.porLetra a:hover	{color:#ccc; text-decoration:none; cursor: pointer;}
+ul.tabsBotsCrecen li div.active	span.finCaja{background:url(../images/cajaPestanas.gif) bottom; display:block; width:647px; height:20px; clear:both; margin-left:-20px; margin-bottom:-20px;}
+ul.tabsBotsCrecen li div.active	span.finCaja.margin{margin-top:15px;}
+span.finCaja{background:url(../images/fondoCajaContent.jpg) bottom; display:block; width:auto; height:20px; clear:both; border:0px solid #060; margin-top:-55px;margin-bottom: 27px;margin-left:-2px;}
+.porLetra{background:url(PREPRO_086171.png) 3px 0px no-repeat;}
+span.finCaja{display:block; background:url(../images/fondoTabs.gif) bottom no-repeat; width:46em; height:10px; margin-top:-50px;}
+span.finCajaComo{    
+    background:url(../images/fondoCajaContent.jpg) bottom; 
+    display:block;
+    height: 20px;
+    margin-top: -55px;
+    position: relative;
+    width: 700px;
+    margin-bottom: 10px;}
+.EspecialidadContent			{
+	width:509px; border:0px solid #ccc;
+background:url(PREPRO_086171.png) 3px 0px no-repeat;
+margin-bottom:50px;
+position:relative;	
+padding:20px;	
+display:inline-block;
+margin-top:-112px;
+z-index:0;
+	
+	}
+.EspecialidadContent div	{float:left; width:31%; padding-right:7px;  padding-left:5px; border:0px solid #000;}
+.EspecialidadContent strong	{display:block; border-bottom:1px solid #000; color:#009bdb; font-weight:bold; padding-top:10px;}
+.EspecialidadContent ul	{padding-top:5px; color: #333;}	
+.EspecialidadContent h2	{font-size:1em;}
+.EspecialidadContent h3	{font-size:1.2em; color:#021e63; border-bottom:1px solid #000;}
+.EspecialidadContent .contentEspecialidad	{width:100%; display:block; padding-top:10px}
+.EspecialidadContent .contentEspecialidad .Subespecialidades	{width:40%;}
+.EspecialidadContent .contentEspecialidad .Subespecialidades	strong{font-weight:bold; border:0px; color:#333; margin-bottom: 8px;}
+.EspecialidadContent .contentEspecialidad .Subespecialidades li.tel	{display:block; border:0px solid #000;}
+.EspecialidadContent .contentEspecialidad .equipo	{width:55%;}
+.EspecialidadContent .contentEspecialidad .equipo	strong{font-weight:bold; border:0px; color:#333;}
+.EspecialidadContent .contentEspecialidad .equipo	li{background:none;white-space:nowrap; border:#000 0px solid; padding:2px; width:100%; border:0px solid #030; position:relative;}
+
+
+.EspecialidadContent .contentEspecialidad .equipo span				{ width:75px; height:17px; border:#060 0px solid; right:0px; position:absolute;}
+.EspecialidadContent .contentEspecialidad .equipo span.cita a		{background:url(../images/botCita.gif) 0px 0px no-repeat; display:block; width:75px; height:17px; text-align:center; color:#FFF; font-size:.8em; border:#F00 0px solid;text-decoration:none;}
+.EspecialidadContent .contentEspecialidad .equipo span.cita a:hover	{background:url(../images/botCita.gif) 0px -19px no-repeat;border:#F00 0px solid; color:#fff; width:75px; height:17px;}
+.pedirCita{
+    background: url(BOTCITA-2.gif) no-repeat scroll 0 0 transparent;
+    border: 0 solid #FF0000;
+    color: #FFFFFF;
+    display: block;
+    font-size: 0.8em;
+    height: 17px;
+    text-align: center;
+    text-decoration: none;
+    width: 75px;
+    margin-bottom: 12px;
+     margin-top: 18px;
+}
+.pedirCita:hover	{background:url(BOTCITA-2.gif) 0px -19px no-repeat;border:#F00 0px solid; color:#fff; width:75px; height:17px;}
+
