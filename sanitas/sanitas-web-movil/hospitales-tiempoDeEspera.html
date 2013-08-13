@@ -87,6 +87,31 @@
     $('head').append('<link href="support/SanitasMovil/css/main-nosvg.css" media="screen" rel="stylesheet" type="text/css" />');
     }
     });
+
+// TIEMPO DE ESPERA
+    (function($) {
+
+      // My micro jQuery templating engine
+      // Usage:
+      //
+      //    <section data-html="content"></section>
+      //
+      // Will load <content.html> into <section>
+
+      $(document).ready(function() {
+
+        // Load external contents
+        $("[data-html]").each(function() {
+          el = $(this);
+          var src = $(this).attr("data-html");
+          el.load(src);
+        });
+
+      });
+    })(jQuery);
+    // EO TIEMPO DE ESPERA
+
+
     </script>
     <!--prepara iconos svg-->
   </head>
@@ -125,119 +150,9 @@
     <div class="black-background"></div>
     <!--left-->
 
-    <article class="tiempoDeEspera-detalle">
-
-      <a class="button-destacado white back "><span></span>Hospital la Zarzuela</a>
-
-      <h1>TIEMPO DE ESPERA EN URGENCIAS</h1>
-
-      <!--Caja -->
-      <div class="box-grey noborder shadow">
-
-        <div class="box-white">
-
-            <div class="box-advice">
-              <p>
-                <strong>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nulla magna, imperdiet nec molestie vitae, tristique quis mauris. ollicitudin eu malesuada non, porttitor ut est.
-                </strong>
-              </p>
-            </div>
-
-            <article class="tiempoDeEspera-urgencias">
-              <h2>Tiempo de espera en urgencias</h2>
-
-              <div class="container-article">
-
-                <dl class="dl-tiempoDeEspera iconTime">
-                  <dt>Medicina General</dt>
-                  <dd>De 15 a 30 minutos</dd>
-                  <dt>Pediatría</dt>
-                  <dd>Más de 30 minutos</dd>
-                  <dt>Ginecología</dt>
-                  <dd>Más de 30 minutos</dd>
-                  <dt>Traumatología</dt>
-                  <dd>Más de 30 minutos</dd>
-                </dl>
-
-                <div class="container-images">
-                  <div class="content-image">
-                    <img src="entregables/images/Medico_Mujer2.jpg" alt="" />
-                  </div>
-                  <div class="content-image">
-                    <img src="entregables/images/apunte.jpg" alt="" />
-                  </div>
-                </div>
-
-              </div>
-
-            </article>
-
-            <article class="tiempoDeEspera-urgencias">
-              <h2>Franjas horarias con menor afluencia de pacientes</h2>
-
-              <div class="container-article">
-
-                <dl class="dl-tiempoDeEspera iconTime">
-                  <dt>Medicina General</dt>
-                  <dd>De 16:00 a 17:00 h </dd>
-                  <dt><span>Medicina General</span></dt>
-                  <dd>De 22:00 a 23:00 h</dd>
-                  <dt><span>Medicina General</span></dt>
-                  <dd>De 02:00 a 04:00 h</dd>
-                  <dt>Pediatría</dt>
-                  <dd>De 16:00 a 17:00 h</dd>
-                  <dt>Ginecología</dt>
-                  <dd>De 16:00 a 17:00 h</dd>
-                  <dt>Otro</dt>
-                  <dd>De 16:00 a 17:00 h</dd>
-                </dl>
-
-                <div class="grafico-afluencia">
-
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nulla magna, imperdiet nec molestie vitae, tristique quis mauris. Nullam convallis magna ipsum, eu rhoncus ante
-                  </p>
-
-                  <form>
-
-                    <label for="especialidad">
-                      Selecciona la especialidad
-                    </label>
-
-                    <select id="especialidad">
-                      <option>Medicina General</option>
-                      <option>Pediatría</option>
-                      <option>Ginecología</option>
-                      <option>Traumatología</option>
-                      <option>Otro</option>
-                    </select>
-
-                    <label>
-                      Selecciona día
-                    </label>
-
-                  </form>
-
-                  <div id="grafico" class="container-article grafico">
-
-                    <img src="entregables/images/grafico.jpg" alt="" />
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </article>
-
-        </div>
-
-
-
-      </div>
-      <!--Caja -->
-
-    </article>
+    <!-- TIEMPO DE ESPERA -->
+    <span class="includeExternal" data-html="entregables/includes/tiempoDeEspera-detalle.html"></span>
+    <!-- EO TIEMPO DE ESPERA -->
 
     <!--left-->
   </section>
