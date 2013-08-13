@@ -87,13 +87,13 @@
   </div>
   <div></div>
   <!-- Legacy code END-->
+  <div class="chartContent">
   <!-- TIEMPO DE ESPERA -->
   <p>Los tiempos de espera aproximados son los siguientes</p>
-  <div class="tiempoDeEspera"> 
    <span class="tiempoDeEspera-data-vermas">
-      <dl class="dl-tiempoDeEspera">
+      <dl class="dl-tiempoDeEspera-chart">
         <dt>Medicina General</dt>
-        <dd>De 15 a 30 minutos</dd>
+        <dd>De 15 a 30 minutos</dd>        
         <dt>Pediatría</dt>
         <dd>Más de 30 minutos</dd>
         <dt>Ginecología</dt>
@@ -102,7 +102,6 @@
         <dd>De 20 a 40 minutos</dd>
       </dl>
     </span>
-  </div>
   <!-- EO TIEMPO DE ESPERA -->
   <p>
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -112,9 +111,43 @@
     <img src="entregables/images/apunte.jpg">
   </div>
   <span class="tiempoDeEspera-image-vermas">
-  <i class="icon-espera-vermas"></i>   
-  </span>
-  <span class="tiempoDeEspera-data-vermas">
-        MINIMICE SU ESPERA COSULTANDO LAS HORAS CON MENOR AFLUENCIA DE PACIENTES
-  </span>
+  <i class="icon-espera-vermas"></i>
+  </span>  
+  <p class="positionhack">
+  MINIMICE SU ESPERA COSULTANDO LAS HORAS CON MENOR AFLUENCIA DE PACIENTES
+  </p>
+  <hr>
+  <h3>FRANJAS HORARIAS DE MENOR AFLUENCIA DE PACIENTES</h3>
+   <span class="tiempoDeEspera-data-vermas">
+      <dl class="dl-tiempoDeEspera-chart">
+        <dt>Medicina General</dt>
+        <dd>De 22:00 a 24:00  De 06:00 a 08:00 <br> De 06:00 a 08:00 </dd>
+        <dt>Pediatría</dt>
+        <dd>Más de 30 minutos</dd>
+        <dt>Ginecología</dt>
+        <dd>De 20 a 45 minutos</dd>
+        <dt>Traumatología</dt>
+        <dd>De 20 a 40 minutos</dd>
+      </dl>
+    </span>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
+  <div class="filterchart">
+  <span>Selecciona Especialidad</span>
+  <select class="selectpicker">
+    <option>Especialidad</option>
+    <option>Medicina General</option>
+    <option>Pediatría</option>
+    <option>Ginecología</option>
+    <option>Traumatología</option>
+  </select>
+</div>
+<div class="filterchart">
+  <span>Selecciona día</span> 
+  <i class="icon-calendar"></i>
+</div>
+<canvas id="chartSanitas" width="550" height="400"></canvas>
+</div>
+
 </div>

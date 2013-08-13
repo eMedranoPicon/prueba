@@ -12,7 +12,7 @@
 dl.dl-tiempoDeEspera
 {
 	display: inline-block;	
-	width:225px;
+	width:230px;
 	margin:0px;
 
 	dt,
@@ -149,6 +149,19 @@ div.tiempoDeEspera
 	{
 		@extend span.tiempoDeEspera-data;
 		width: 440px !important; //ancho fijo. diseño
+
+		dl.dl-tiempoDeEspera-especialidades
+		{
+			@extend span.tiempoDeEspera-data;
+			width:240px !important;
+			
+		}
+		span.link-vermas{
+			a{
+			vertical-align: bottom;
+			}
+		}
+
 	}
 	
 	span.tiempoDeEspera-image-especialidades
@@ -180,7 +193,7 @@ div.tiempoDeEspera
 			a{
 				color: $textcolor-blueUnder !important;
 				font-size: $fontSizeUrl;
-				font-weight:  bold;
+				font-weight:  bold;				
 
 			}
 			i.icon-flecha-a
@@ -201,7 +214,7 @@ div.tiempoDeEspera
 
 .cajasDestacadas {
 	@include clearfix();
-	width: 423px ;
+	width: 423px !important;
 	display:inline-block !important;
 	border:0px !important;	
 	div.cajaDereHospitales {
@@ -314,7 +327,6 @@ div.tiempoDeEspera
 	}
 
 
-
 //borderExtra
 div.borderExtra
 {
@@ -334,20 +346,27 @@ div.borderExtra
 		}
 
 }
-
+.chartContent{
 .imgBox{
-	@include clearfix();	
+	@include clearfix();
+	margin:auto;
+	img {
+		height: 200px;
+	}	
+}
+h3{
+	color: $textcolor-green !important;
 }
 span.tiempoDeEspera-image-vermas{
 		display: inline-block;
-		margin-top: -40px;
+		margin-top: -30px;
 		i.icon-espera-vermas
 		{
 			@include background(image-url("espera-2.jpg"));
-			@include background-size(60px 60px);
+			@include background-size(70px 70px);
 			display: inline-block;
-			width: 60px;
-			height: 60px;
+			width: 70px;
+			height: 70px;
 			background-repeat:no-repeat;
 			border: white 3px solid;
 
@@ -361,13 +380,67 @@ span.tiempoDeEspera-image-vermas{
 		width: 100% !important;
 		background-color:white !important;
 		font-style:normal;	
-		
 
-		dl.dl-tiempoDeEspera
+
+		dl.dl-tiempoDeEspera-chart 
 		{
-			width:300px !important;
-			margin:0px;
+	    overflow: hidden;
+	    line-height: 14px;
+	    font-size: $fontSizeLarge;	
+		width:500px !important;
+		margin: 0px;
+		padding: 0px;
+
+			dd:nth-of-type(n+2) {
+			    margin-top: 10px;
+			}
+			dt, dd {
+			    margin: 4px;
+			    padding: 4px;
+			}
+			dt {
+			    float: left;
+			    clear: left;
+			    width: 150px;
+				color: $greydark;    
+			}
+			dd {
+			    overflow: hidden;
+			    color: $black;
+			    width: 300px;
+			}
 		}
 	}
+	i.icon-calendar
+		{
+			@include background(image-url("calendar.png"));
+			@include background-size(32px 32x);
+			display: inline-block;
+			width: 32px;
+			height: 32px;
+			padding-left:40px;
+			background-repeat:no-repeat;
+		}
+	
+	.positionhack{
+		color: $textcolor-blueUnder;
+		font-weight: bold;
+		margin-top: -33px;
+		margin-left: 78px;
+		font-size: $fontSizeLarge;
+	}
+
+	.filterchart{
+		clear:both;
+		text-align: center;
+		span {
+			text-align: right;
+			width: 200px;
+			padding-right: 25px;
+		}
+
+	}	
+
+}
 
 	

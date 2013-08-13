@@ -15,6 +15,9 @@
    <!-- TIEMPO DE ESPERA -->
 <link href="entregables/css/web-TiempoDeEspera.css" media="screen"
   rel="stylesheet" type="text/css" />
+  <!--[if lte IE 8]>
+    <script src="entregables/js/chart/excanvas.js"></script>
+  <![endif]-->
 <!-- EO TIEMPO DE ESPERA -->
 <script type="text/javascript"
   src="support/Sanitas/sanitas/wcm/idc/groups/public/documents/document/san_sia_scr_jquery-1.4.2.min.js"></script>
@@ -975,6 +978,7 @@
   </div>
   <script src="support/Sanitas/js/kampile/k_button.js"
     type="text/javascript"></script>
+    <!--  TIEMPO DE ESPERA-->
      <script type="text/javascript">
         (function($) {
 
@@ -996,8 +1000,14 @@
 
           });
         })(jQuery);
-        // EO TIEMPO DE ESPERA
       </script>
+
+       <!--  EO TIEMPO DE ESPERA-->
+       <!--  Chart -->
+       <script src="entregables/js/chart/Chart.js"></script>
+       <script src="entregables/js/chart/Chart-data.js"></script>
+       <!--  EO Chart -->
+
   <script type="text/javascript">
   <!--
     /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! *************/
