@@ -360,4 +360,27 @@ div.tiempoDeEspera
 		}
 	}
 
+	i.icon-calendar
+		{
+			@include background(image-url("calendar.png"));
+			@include background-size(32px 32x);
+			display: inline-block;
+			width: 32px;
+			height: 32px;
+			padding-left:33px;
+			background-repeat:no-repeat;
+		}
+
+	.filterchart{
+		clear:both;
+		text-align: center;
+		padding: 5px 10px;
+		label {
+			text-align: right;
+			width: 200px;
+			padding-right: 25px;
+		}
+
+	}	
+
 }
