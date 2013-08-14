@@ -21,7 +21,8 @@ dl.dl-tiempoDeEspera
 {
 	display: inline-block;
 	margin: 0 0 10px 0;
-	width:245px;
+	//width:245px;
+	width: 90%;
 	@include clearfix();
 
 	dt,
@@ -29,16 +30,36 @@ dl.dl-tiempoDeEspera
 		display: inline-block;
 		color: $textColor-blue;
 		//line-height: 14px;
-		margin-top: 9px;
+
 	}
 
 	dt {
 		width: 120px;
+		margin-top: 9px;
+	}
 
+	@media screen and (max-width: 480px)
+	{
+		dt:empty {
+			margin-top: 0px;
+			display: none;
+		}
 	}
 
 	dd{
 		margin-left: 0px;
+	}
+
+	dd {
+		width: 70%;
+
+		@media screen and (max-width: 480px)
+		{
+			margin-top: 9px;
+			padding-left: 20px;
+
+
+		}
 	}
 }
 
@@ -60,6 +81,11 @@ dl.dl-tiempoDeEspera.iconTime
 
 	dd {
 		width: 70%;
+
+		@media screen and (max-width: 480px)
+		{
+			padding-left: 40px;
+		}
 	}
 }
 
@@ -109,12 +135,21 @@ hgroup.todos.centros.listado article li div
 		margin: 5px 0 0 0;
 		padding: 0;
 		border: none;
-		//max-width: 225px;
-		width: 50%;
+		width: 60%;
 
-		@media screen and (max-width: 480px)
+		/*@media screen and (max-width: 480px)
 		{
 			width: 60%;
+		}*/
+
+		dl
+		{
+			@extend dl.dl-tiempoDeEspera;
+			width: 100%;
+
+			dd{
+				width: 65%;
+			}
 		}
 	}
 
@@ -136,6 +171,10 @@ div.tiempoDeEspera
 			dd:first-child
 			{
 				margin-top: 0px;
+			}
+
+			dd{
+				width: 60%;
 			}
 		}
 
@@ -246,7 +285,7 @@ div.tiempoDeEspera
 			@include background(image-url("espera.png"));
 			background-repeat: no-repeat;
 			@include clearfix();
-			width: 300px;
+			width: 75%;
 			min-height: 60px;
 
 			@media screen and (max-width: 480px)
@@ -381,6 +420,6 @@ div.tiempoDeEspera
 			padding-right: 25px;
 		}
 
-	}	
+	}
 
 }
