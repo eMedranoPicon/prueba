@@ -58,6 +58,7 @@ dl.dl-tiempoDeEspera
 	}
 
 	dd {
+		
 		width: 70%;
 
 		@media screen and (max-width: 480px)
@@ -156,6 +157,7 @@ hgroup.todos.centros.listado article li div
 
 			dd{
 				width: 65%;
+				min-width: 120px;
 			}
 		}
 	}
@@ -221,6 +223,7 @@ div.tiempoDeEspera
 			vertical-align: top;
 			color: $textColor-blueLighter;
 			font-size: inherit;
+			min-width: 210px;
 		}
 
 		i.icon-espera
