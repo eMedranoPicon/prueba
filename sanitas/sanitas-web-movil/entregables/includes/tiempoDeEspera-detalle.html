@@ -72,9 +72,32 @@
 		          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nulla magna, imperdiet nec molestie vitae, tristique quis mauris. Nullam convallis magna ipsum, eu rhoncus ante
 		          </p>
 
-		          <div id="grafico" class="container-article grafico">
-		            <img src="entregables/images/grafico.jpg" alt="" />
-		          </div>
+		           <form>
+                    <div class="filterchart">
+                    <label for="especialidad">
+                      Selecciona la especialidad
+                    </label>
+
+                    <select id="especialidad">
+                      <option>Medicina General</option>
+                      <option>Pediatría</option>
+                      <option>Ginecología</option>
+                      <option>Traumatología</option>
+                      <option>Otro</option>
+                    </select>
+                  </div>
+                    <div class="filterchart">
+                    <label>
+                      Selecciona día
+                    </label>
+                    <i class="icon-calendar"></i>
+                  </div>
+                  </form>
+
+		         <div id="grafico" class="container-article grafico">
+                    <canvas id="chartSanitas" width="500" height="400"></canvas>
+                    <!--img src="entregables/images/grafico.jpg" alt="" /-->
+                 </div>
 
 		        </div>
 
