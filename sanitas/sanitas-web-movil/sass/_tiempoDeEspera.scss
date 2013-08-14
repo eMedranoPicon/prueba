@@ -241,6 +241,10 @@ div.tiempoDeEspera
 		margin-bottom: 10px;
 	}
 
+	@media screen and (max-width: 480px)
+	{
+	 padding-left: 10px !important;
+	}
 }
 
 /*
@@ -406,7 +410,7 @@ div.tiempoDeEspera
 		img:nth-last-child(1)
 		{
 			width: 100%;
-			max-width: 300px
+			max-width: 300px;
 		}
 	}
 
