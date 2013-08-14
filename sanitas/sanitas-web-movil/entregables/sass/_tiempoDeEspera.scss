@@ -23,6 +23,7 @@ dl.dl-tiempoDeEspera
 	margin: 0 0 10px 0;
 	//width:245px;
 	width: 90%;
+	max-width:700px;
 	@include clearfix();
 
 	dt,
@@ -308,6 +309,15 @@ div.tiempoDeEspera
 					font-size: $fontSize;
 				}
 			}
+		
+		}
+
+	 	@media screen and (min-width: 767px)
+		{
+		@include background-image(image-url("medicos.jpg"));
+		background-color: white;
+		background-repeat: no-repeat;
+		background-position-x: right;
 		}
 	}
 
