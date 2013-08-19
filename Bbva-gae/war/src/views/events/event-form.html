@@ -9,7 +9,7 @@
 </div>-->
 
 
-<form class="form-horizontal">
+<form class="form-horizontal" id="edit-form">
     <!-- hiddden fields -->
     <input type="hidden" id="idEvent">
     <input type="hidden" id="host" value="<%=user.getEmail()%>">
@@ -17,7 +17,7 @@
     <div class="control-group">
         <label class="control-label" for="title">Titulo Evento</label>
         <div class="controls">
-            <input type="text" id="title" name="title" value="{{events.title}}" >
+            <input type="text" id="title" name="title" value="{{events.title}}" required />
         </div>
     </div>
 
@@ -121,8 +121,9 @@
     <div class="control-group">
         <div class="controls">
 <a class="btn btn-success btn-small" href="#" ng-click="showJson()">showjson</a>
-            <a class="btn btn-success btn-small" href="#" ng-click="upDateEvent()">Guardar
+            <a class="btn btn-success btn-small" href="#" ng-click="upDateEvent()">Actualizar
     Evento</a>
+    <button type="submit" class="btn btn-primary ">Guardar Evento</button>
         </div>
     </div>
 </form>
