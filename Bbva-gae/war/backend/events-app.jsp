@@ -40,17 +40,17 @@
 <script src="/js/calendar.js"></script>
 
 <script type="text/javascript">
-$(function()
-{
-  $('#dateStart').datetimepicker({
-    language : 'es-ES',
-    pickSeconds: false
+  $(function()
+  {
+    $('#dateStart').datetimepicker({
+      language : 'es-ES',
+      pickSeconds: false
+    });
+    $('#dateEnd').datetimepicker({
+      language : 'es-ES',
+      pickSeconds: false
+    });
   });
-  $('#dateEnd').datetimepicker({
-    language : 'es-ES',
-    pickSeconds: false
-  });
-});
 </script>
 
   <jsp:include page="/libraries-angular.jsp"/>

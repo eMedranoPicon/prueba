@@ -44,12 +44,9 @@ function EventEditController($scope, $http, $routeParams)
 
     $scope.iniMap = function()
     {
-
         console.log('iniMap  ini en inimap');
-        //previewMap();
-        //var $scope.json = angular.toJson($scope.event);
 
-        google.maps.event.addDomListener(window, 'load', initialize);
+        initialize();
 
         //this is our gem
         google.maps.event.addDomListener(window, "resize", function()

@@ -7,6 +7,7 @@ var locationPage = window.location;
 // plot initial point using geocode instead of coordinates (works just fine)
 function initialize() {
 
+	console.log('initialize  maps')
 	geocoder = new google.maps.Geocoder();
 	latlang = geocoder.geocode({
 		'address' : 'Madrid'
