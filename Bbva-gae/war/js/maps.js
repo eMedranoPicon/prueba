@@ -2,9 +2,11 @@
 var geocoder;
 var map;
 var markersArray = [];
+var locationPage = window.location;
 
 // plot initial point using geocode instead of coordinates (works just fine)
 function initialize() {
+
 	geocoder = new google.maps.Geocoder();
 	latlang = geocoder.geocode({
 		'address' : 'Madrid'
@@ -30,17 +32,16 @@ function initialize() {
 			style : google.maps.NavigationControlStyle.SMALL
 		}
 	};
-	map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);		
+	map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+if (locationPage.toString().match("/event-edit/")!=null)
+{
 
-//this is our gem
-google.maps.event.addDomListener(window, "resize", function() {
-    var center = map.getCenter();
-    google.maps.event.trigger(map, "resize");
-    map.setCenter(center); 
-});
+}
+
+
+
 
 function codeAddresses(address) {
 	geocoder.geocode({
@@ -85,7 +86,7 @@ function mapEvents() {
 			console.log('Lista Eventos: Conseguido correctamente');
 			console.log(data);
 			for ( var j in data.items) {
-				
+
 				for ( var i in data.items[j]) {
 					markersArray[i] = data.items[j].address;
 					console.log(markersArray[i].toString());
@@ -146,7 +147,7 @@ function getLatLong(address){
               localStorage.setItem('maps_latitude', results[0].geometry.location.mb);	
               //long  
               localStorage.setItem('maps_longitude', results[0].geometry.location.nb);
-              //complete address  
+              //complete address
               localStorage.setItem('maps_completeaddress', results[0].formatted_address);
               
               map.setCenter(results[0].geometry.location);
@@ -155,9 +156,9 @@ function getLatLong(address){
   				map : map,
   				position : results[0].geometry.location
   			  });
-              
+
               console.log('Saved in localstorage');
-              
+
             } else {
               alert("Geocode was not successful for the following reason: " + status);
             }
