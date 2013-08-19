@@ -35,7 +35,7 @@ function EventEditController($scope, $http, $routeParams)
 
 	$scope.showJson = function() {
 		alert('showJson');
-        var $scope.json = angular.toJson($scope.event);
+       //var $scope.json = angular.toJson($scope.event);
 
     };
 
@@ -63,7 +63,7 @@ function EventEditController($scope, $http, $routeParams)
 
             alert('error:'+status);
         });*/
-    };
+    }
 
  /*   $scope.copyMaster = function(event)
   	{

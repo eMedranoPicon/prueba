@@ -47,15 +47,14 @@ function EventsListController($scope, $http)
 		$http["delete"]('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/' + idEvent).success(function(data, status)
 		{
 			//$scope.status = status;
-			alert(idEvent);
+			//	alert(idEvent);
 			//alert(index);
-			alert($scope.events.indexOf(idEvent));
+			//alert($scope.events.indexOf(idEvent));
 			$scope.events.splice($scope.events.indexOf(idEvent), 1);
-
 			//$scope.events.splice(index, 1)
-
-
-		}).error(function(data, status) {
+		}).
+		error(function(data, status)
+		{
 			alert("Refresh table. User already deleted.");
 			//$scope.deleteModalShown = false;
 		});

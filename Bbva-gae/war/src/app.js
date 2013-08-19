@@ -24,7 +24,7 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 		  }).
 
 	  //mediante dos puntos (:) definimos un parámetro
-	  when('/event-edit/:id', {
+	 when('/event-edit/:id', {
 		  templateUrl: '/src/views/events/event-form.html',
 		  controller: EventEditController
 		  }).

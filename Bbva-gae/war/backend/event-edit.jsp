@@ -67,7 +67,7 @@
 	<jsp:include page="/libraries-angular.jsp"/>
 
 </head>
-<body onload=oneAuth();>
+<body>
 
 <div class="container">
 
