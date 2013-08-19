@@ -6,7 +6,7 @@ var locationPage = window.location;
 
 // plot initial point using geocode instead of coordinates (works just fine)
 function initialize() {
-	alert('map ini');
+
 	geocoder = new google.maps.Geocoder();
 	latlang = geocoder.geocode({
 		'address' : 'Madrid'
@@ -37,16 +37,11 @@ function initialize() {
 
 if (locationPage.toString().match("/event-edit/")!=null)
 {
-	google.maps.event.addDomListener(window, 'load', initialize);
+
 }
 
 
-//this is our gem
-google.maps.event.addDomListener(window, "resize", function() {
-    var center = map.getCenter();
-    google.maps.event.trigger(map, "resize");
-    map.setCenter(center);
-});
+
 
 function codeAddresses(address) {
 	geocoder.geocode({

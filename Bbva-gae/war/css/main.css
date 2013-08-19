@@ -9976,6 +9976,13 @@ ol.decorated-list li a {
   line-height: 20px;
 }
 
+/* line 57, ../sass/partials/_layout.scss */
+#map-canvas {
+  width: 100%;
+  height: 360px;
+  margin-bottom: 20px;
+}
+
 /* line 2, ../sass/partials/_backend.scss */
 .control-panel {
   padding: 10px;

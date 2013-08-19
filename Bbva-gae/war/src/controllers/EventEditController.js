@@ -28,14 +28,36 @@ function EventEditController($scope, $http, $routeParams)
 		$scope.dateEndEdit = $scope.events[indexData].dateEnd;
 		*/
 
+
+
   	}).error(function(data, status) {
 		alert("Try again later");
 		//$scope.deleteModalShown = false;
 	});
 
-	$scope.showJson = function() {
+	$scope.showJson = function()
+    {
 		alert('showJson');
        //var $scope.json = angular.toJson($scope.event);
+
+    };
+
+    $scope.iniMap = function()
+    {
+
+        console.log('iniMap  ini en inimap');
+        //previewMap();
+        //var $scope.json = angular.toJson($scope.event);
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+        //this is our gem
+        google.maps.event.addDomListener(window, "resize", function()
+        {
+            var center = map.getCenter();
+            google.maps.event.trigger(map, "resize");
+            map.setCenter(center);
+        });
 
     };
 
