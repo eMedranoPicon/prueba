@@ -70,11 +70,36 @@ function jEvenBuilder() {
 		var description = document.getElementById("description").value;
 		var urlEvent = document.getElementById("urlEvent").value;
 		var urlImg = document.getElementById("urlImg").value;
-		//address details
-		var completeAddress = localStorage.getItem('maps_completeaddress');		
+		
+		//address details		
+		
+		var street = localStorage.getItem('maps_stname')+' '+localStorage.getItem('maps_stnumber');
+		if (street == 'undefined') {
+			street="";
+		}
+		console.log(street);
+		var zipcode = localStorage.getItem('maps_zipcode');
+		if (zipcode == 'undefined') {
+			zipcode="";
+		}
+		console.log(zipcode);
+		var city = localStorage.getItem('maps_city');
+		if (city == 'undefined') {
+			city="";
+		}
+		console.log(city);
+		var country = localStorage.getItem('maps_country');
+		if (country == 'undefined') {
+			country="";
+		}
+		console.log(country);
+		
+		var completeAddress = localStorage.getItem('maps_completeaddress');
 		var lat = localStorage.getItem('maps_latitude');
 		var long = localStorage.getItem('maps_longitude');		
-		var address = [completeAddress,lat,long];
+		
+		//formatted.
+		var address = [street, zipcode, city, country, completeAddress, lat, long];
 		
 		jEvent = [ {
 			"name" : "audience",
