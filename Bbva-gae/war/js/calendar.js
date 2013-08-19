@@ -4,9 +4,6 @@ function createEventCalendar() {
 	var tokenText = localStorage.getItem('calendarToken_local');
 	var idCalendar = localStorage.getItem('calendarId');
 
-	// /var apiUrl =
-	// "/calendar/v3/calendars/72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com/events?sendNotifications=false&key=785790985795-pf206je1417kten4jbd5funo77vlkuvf.apps.googleusercontent.com";
-
 	var host = document.getElementById("host").value;
 
 	var street = document.getElementById("street").value;
@@ -37,17 +34,9 @@ function createEventCalendar() {
 		"end" : {
 			"dateTime" : dateEndFormatted
 		}
-	// "id" : idCalendar,
+	// "id" : idCalendar,  // Conexion
 	// "htmlLink" : urlEvent
 	};
-
-	/*
-	 * args = { path : apiUrl, dataType : 'json', contentType :
-	 * 'application/json', body : jEventCalendar, headers : { 'Authorization' :
-	 * tokenText }, method : "POST", callback : function(resp) {
-	 * console.log('Guardado en Google Calendar'); console.log(resp); }
-	 *  }
-	 */// gapi.client.request(args);
 
 	var request = gapi.client.calendar.events.insert({
 		'calendarId' : '72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com',

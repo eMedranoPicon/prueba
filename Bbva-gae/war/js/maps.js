@@ -7,7 +7,7 @@ var markersArray = [];
 function initialize() {
 	geocoder = new google.maps.Geocoder();
 	latlang = geocoder.geocode({
-		'address' : 'Segovia'
+		'address' : 'Madrid'
 	}, function(results, status) { // use latlang to enter city instead of
 		// coordinates
 		if (status == google.maps.GeocoderStatus.OK) {
@@ -48,6 +48,7 @@ function codeAddresses(address) {
 	}, function(results, status) {
 		if (status == google.maps.GeocoderStatus.OK) {
 			map.setCenter(results[0].geometry.location);
+			marker.setMap(null);
 			marker = new google.maps.Marker({
 				map : map,
 				position : results[0].geometry.location
@@ -68,8 +69,8 @@ function previewMap() {
 	var country = document.getElementById("country").value;
 
 	var address = street + ', ' + zipcode + ', ' + city + ', ' + country;
-	codeAddresses(address);
-	console.log(address);
+	var result = getLatLong(address);
+	console.log(result);
 
 }
 
@@ -84,7 +85,7 @@ function mapEvents() {
 			console.log('Lista Eventos: Conseguido correctamente');
 			console.log(data);
 			for ( var j in data.items) {
-
+				
 				for ( var i in data.items[j]) {
 					markersArray[i] = data.items[j].address;
 					console.log(markersArray[i].toString());
@@ -99,4 +100,31 @@ function mapEvents() {
 			console.error("Event list error: " + xhr.status);
 		}
 	});
+}
+
+function getLatLong(address){
+
+    geocoder.geocode({'address':address},function(results, status){
+            if (status == google.maps.GeocoderStatus.OK) {
+               //lat  
+              localStorage.setItem('maps_latitude', results[0].geometry.location.mb);	
+              //long  
+              localStorage.setItem('maps_longitude', results[0].geometry.location.nb);
+              //complete address  
+              localStorage.setItem('maps_completeaddress', results[0].formatted_address);
+              map.setCenter(results[0].geometry.location);
+              marker.setMap(null);
+              marker = new google.maps.Marker({
+  				map : map,
+  				position : results[0].geometry.location
+  			  });
+              
+              console.log('Saved in localstorage');
+              
+            } else {
+              alert("Geocode was not successful for the following reason: " + status);
+            }
+
+     });
+
 }

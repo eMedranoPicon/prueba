@@ -3,13 +3,6 @@ var calendarToken;
 var jEvent = [];
 var jEventCalendar;
 
-/*
- * comprobamos que tengamos token, si lo tenemos, no lo volvemos a pedir.
- * 
- */
-function onlyOnce() {
-	//
-}
 
 function auth() {
 	var config = {
@@ -27,7 +20,6 @@ function auth() {
 }
 
 function loadGapi() {
-
 	// Set the API key
 	gapi.client.setApiKey('AIzaSyBXuLdZ43wnWNuBltblkukaj97WDfArpfE');
 
@@ -59,77 +51,75 @@ function noenter(e) {
 }
 
 /* Funcion de prueba para crear eventos */
-function jEvenBuilder() {
+function jEvenBuilder() {	
+	// AddressDetails -  Point location a retrieve lat and long.
+	previewMap();	
+	//timeout to wait for response
+	setTimeout(function() {			
+		var idEvent = document.getElementById("idEvent").value;
+		
+		var host = document.getElementById("host").value;
+		
+		var audience = document.getElementById("audience").value;
 
-	// if (document.getElementById("idEvent").value == "") {
-	// var idEvent = Math.floor(2001 + Math.random() * 2000);
-	// } else {
-	var idEvent = document.getElementById("idEvent").value;
-	// }
-	var host = document.getElementById("host").value;
+		var tags = document.getElementById("tags").value;
 
-	var street = document.getElementById("street").value;
-	var zipcode = document.getElementById("zipcode").value;
-	var city = document.getElementById("city").value;
-	var country = document.getElementById("country").value;
+		var title = document.getElementById("title").value;
+		var dateStart = document.getElementById("dateStart").value;
+		var dateEnd = document.getElementById("dateEnd").value;
+		var description = document.getElementById("description").value;
+		var urlEvent = document.getElementById("urlEvent").value;
+		var urlImg = document.getElementById("urlImg").value;
+		//address details
+		var completeAddress = localStorage.getItem('maps_completeaddress');		
+		var lat = localStorage.getItem('maps_latitude');
+		var long = localStorage.getItem('maps_longitude');		
+		var address = [completeAddress,lat,long];
+		
+		jEvent = [ {
+			"name" : "audience",
+			"value" : audience
+		}, {
+			"name" : "tags",
+			"value" : tags
+		}, {
+			"name" : "title",
+			"value" : title
+		}, {
+			"name" : "host",
+			"value" : host
+		}, {
+			"name" : "address",
+			"value" : address
+		}, {
+			"name" : "dateStart",
+			"value" : dateStart
+		}, {
+			"name" : "dateEnd",
+			"value" : dateEnd
+		}, {
+			"name" : "description",
+			"value" : description
+		}, {
+			"name" : "urlImg",
+			"value" : urlImg
+		}, {
+			"name" : "urlEvent",
+			"value" : urlEvent
+		} ];
 
-	var address = [ street, zipcode, city, country ];
-	var addressMaps = street + ', ' + zipcode + ', ' + city + ', ' + country;
-
-	var audience = document.getElementById("audience").value;
-
-	var tags = document.getElementById("tags").value;
-
-	var title = document.getElementById("title").value;
-	var dateStart = document.getElementById("dateStart").value;
-	var dateEnd = document.getElementById("dateEnd").value;
-	var description = document.getElementById("description").value;
-	var urlEvent = document.getElementById("urlEvent").value;
-	var urlImg = document.getElementById("urlImg").value;
-	jEvent = [ {
-		"name" : "audience",
-		"value" : audience
-	}, {
-		"name" : "tags",
-		"value" : tags
-	}, {
-		"name" : "title",
-		"value" : title
-	}, {
-		"name" : "host",
-		"value" : host
-	}, {
-		"name" : "address",
-		"value" : address
-	}, {
-		"name" : "dateStart",
-		"value" : dateStart
-	}, {
-		"name" : "dateEnd",
-		"value" : dateEnd
-	}, {
-		"name" : "description",
-		"value" : description
-	}, {
-		"name" : "urlImg",
-		"value" : urlImg
-	}, {
-		"name" : "urlEvent",
-		"value" : urlEvent
-	} ];
-
-	var options = {};
-	for ( var i = 0; i < jEvent.length; i++) {
-		var key = jEvent[i].name;
-		var val = jEvent[i].value;
-		options[key] = val;
-	}
-
-	var jsonString = JSON.stringify(options);
-	console.log(jsonString);
-	codeAddresses(addressMaps);
-	console.log(addressMaps);
-	return saveEvent(jsonString);
+		var options = {};
+		for ( var i = 0; i < jEvent.length; i++) {
+			var key = jEvent[i].name;
+			var val = jEvent[i].value;
+			options[key] = val;
+		}	
+		
+		var jsonString = JSON.stringify(options);
+		console.log(jsonString);			
+		return saveEvent(jsonString);
+	}, 500);
+	
 }
 
 /*
@@ -203,5 +193,5 @@ function deleteEvent_notused(id) {
 
 /* Load al final */
 $(document).ready(function() {
-	// loadGapi();
+	//
 });
