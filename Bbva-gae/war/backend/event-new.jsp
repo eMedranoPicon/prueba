@@ -59,14 +59,15 @@ urlLinktext = "Logout";
 				$(function() {
 					$('#dateStart').datetimepicker({
 						language : 'es-ES',
-						pickSeconds : false
+						pickSeconds : false,
+						startDate: new Date()
 					});
 					$('#dateEnd').datetimepicker({
 						language : 'es-ES',
-						pickSeconds : false
+						pickSeconds : false,
+						startDate: new Date()
 							});
 				});
-				onlyOnce();
 			</script>
 
 			<script src="/js/backend.js"></script>
