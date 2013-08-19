@@ -2,7 +2,7 @@
 <!--
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="/js/lib/jquery-1.10.2.min.js" type="text/javascript"></script>
 
 <script src="/js/lib/bootstrap/bootstrap.min.js"></script>
 <!--
@@ -21,6 +21,10 @@
 <script src="/js/lib/json/jsonpath-0.8.0.js"></script>
 
 <!-- eo json -->
+
+<!-- Validate plugin -->
+<script src="/js/lib/jquery.validate.min.js"></script>
+<script src="/js/localization/messages_es.js"></script>
 
 
 

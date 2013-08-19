@@ -9574,6 +9574,24 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   white-space: normal;
 }
 
+/* New styles below */
+/* line 3, ../sass/modules/_forms.scss */
+label.valid {
+  width: 24px;
+  height: 24px;
+  background: url(../img/valid.png) center center no-repeat;
+  display: inline-block;
+  text-indent: -9999px;
+}
+
+/* line 11, ../sass/modules/_forms.scss */
+label.error {
+  font-weight: bold;
+  color: red;
+  padding: 2px 8px;
+  margin-top: 2px;
+}
+
 /* Carousel base class */
 /* line 6, ../sass/vendor-custom/bst.2.3.2/_carousel.scss */
 .carousel {
