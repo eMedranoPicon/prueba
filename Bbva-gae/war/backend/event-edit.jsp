@@ -64,7 +64,7 @@
 		});
 	</script>
 
-	<script src="/js/backend.js"></script>
+
 
 	<jsp:include page="/libraries-angular.jsp"/>
 
@@ -98,6 +98,9 @@
 			%>
 
 			<div class="row-fluid">
+
+
+
 				<div class="span9">
 					<div ng-view></div>
 				</div>

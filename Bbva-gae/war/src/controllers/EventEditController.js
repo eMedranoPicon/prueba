@@ -48,7 +48,7 @@ function EventEditController($scope, $http, $routeParams)
         dt = dt+"&action=fetch";
         console.log($(elem).serialize());*/
 
-/*
+
         $http({
             method: 'PUT',
             url: 'https://sopragroupux.appspot.com/_ah/api/evento/v5/event',
@@ -59,10 +59,11 @@ function EventEditController($scope, $http, $routeParams)
         }).success(function(data, status) {
             alert('guardado');
             console.log(data); // Show result from server in our <pre></pre> element
+
         }).error(function(data, status) {
 
             alert('error:'+status);
-        });*/
+        });
     }
 
  /*   $scope.copyMaster = function(event)

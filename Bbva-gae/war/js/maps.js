@@ -2,9 +2,11 @@
 var geocoder;
 var map;
 var markersArray = [];
+var locationPage = window.location;
 
 // plot initial point using geocode instead of coordinates (works just fine)
 function initialize() {
+	alert('map ini');
 	geocoder = new google.maps.Geocoder();
 	latlang = geocoder.geocode({
 		'address' : 'Madrid'
@@ -30,16 +32,20 @@ function initialize() {
 			style : google.maps.NavigationControlStyle.SMALL
 		}
 	};
-	map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);		
+	map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+if (locationPage.toString().match("/event-edit/")!=null)
+{
+	google.maps.event.addDomListener(window, 'load', initialize);
+}
+
 
 //this is our gem
 google.maps.event.addDomListener(window, "resize", function() {
     var center = map.getCenter();
     google.maps.event.trigger(map, "resize");
-    map.setCenter(center); 
+    map.setCenter(center);
 });
 
 function codeAddresses(address) {
@@ -85,7 +91,7 @@ function mapEvents() {
 			console.log('Lista Eventos: Conseguido correctamente');
 			console.log(data);
 			for ( var j in data.items) {
-				
+
 				for ( var i in data.items[j]) {
 					markersArray[i] = data.items[j].address;
 					console.log(markersArray[i].toString());
@@ -106,11 +112,11 @@ function getLatLong(address){
 
     geocoder.geocode({'address':address},function(results, status){
             if (status == google.maps.GeocoderStatus.OK) {
-               //lat  
-              localStorage.setItem('maps_latitude', results[0].geometry.location.mb);	
-              //long  
+               //lat
+              localStorage.setItem('maps_latitude', results[0].geometry.location.mb);
+              //long
               localStorage.setItem('maps_longitude', results[0].geometry.location.nb);
-              //complete address  
+              //complete address
               localStorage.setItem('maps_completeaddress', results[0].formatted_address);
               map.setCenter(results[0].geometry.location);
               marker.setMap(null);
@@ -118,9 +124,9 @@ function getLatLong(address){
   				map : map,
   				position : results[0].geometry.location
   			  });
-              
+
               console.log('Saved in localstorage');
-              
+
             } else {
               alert("Geocode was not successful for the following reason: " + status);
             }

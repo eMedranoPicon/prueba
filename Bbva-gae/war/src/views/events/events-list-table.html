@@ -32,35 +32,39 @@
     </div>
 </div>
 
-<table class="table table-striped">
-    <tr>
-        <th>Título</th>
-        <th>Fecha Inicio</th>
-        <th>Fecha Fin</th>
-        <th>Descripcion</th>
-        <th>URL del evento</th>
-        <th>Asistentes</th>
-        <th>Tags</th>
-        <th>Dirección del evento</th>
-        <th>Id interno</th>
-        <th>Acciones</th>
-    </tr>
-    <tr ng-repeat="obj in events | filter:query | orderBy:orderField:orderReverse">
-        <td>{{obj.title}}</td>
-        <td>{{obj.dateStart}}</td>
-        <td>{{obj.dateEnd}}</td>
-        <td class="wrapword">{{obj.description}}</td>
-        <td class="wrapword"><a href="{{obj.urlEvent}}" target="_blank">{{obj.urlEvent}}</a></td>
-        <td>{{obj.audience}}</td>
-        <td>{{obj.tags}}</td>
-        <td>{{obj.address}}</td>
-        <td>{{obj.id}}</td>
-        <td>
-            <div class="group-buttons-table">
-                <a class="btn btn-success btn-small" href="/backend/event-edit.jsp#/event-edit/{{obj.id}}"><i class="icon-edit icon-white"></i> Editar</a>
-                <a class="btn btn-warning btn-small" ng-click="deleteEventRemote(obj.id,$index)"><i class="icon-trash icon-white"></i> Borrar</a>
+<div class="row-fluid">
+    <div class="span24">
+        <table class="table table-striped">
+            <tr>
+                <th>Título</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Fin</th>
+                <th>Descripcion</th>
+                <th>URL del evento</th>
+                <th>Asistentes</th>
+                <th>Tags</th>
+                <th>Dirección del evento</th>
+                <th>Id interno</th>
+                <th>Acciones</th>
+            </tr>
+            <tr ng-repeat="obj in events | filter:query | orderBy:orderField:orderReverse">
+                <td>{{obj.title}}</td>
+                <td>{{obj.dateStart}}</td>
+                <td>{{obj.dateEnd}}</td>
+                <td class="wrapword">{{obj.description}}</td>
+                <td class="wrapword"><a href="{{obj.urlEvent}}" target="_blank">{{obj.urlEvent}}</a></td>
+                <td>{{obj.audience}}</td>
+                <td>{{obj.tags}}</td>
+                <td>{{obj.address}}</td>
+                <td>{{obj.id}}</td>
+                <td>
+                    <div class="group-buttons-table">
+                        <a class="btn btn-success btn-small" href="#/event-edit/{{obj.id}}"><i class="icon-edit icon-white"></i> Editar</a>
+                        <a class="btn btn-warning btn-small" ng-click="deleteEventRemote(obj.id,$index)"><i class="icon-trash icon-white"></i> Borrar</a>
 
-            </div>
-        </td>
-    </tr>
-</table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

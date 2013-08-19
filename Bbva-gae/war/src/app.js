@@ -7,6 +7,8 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 	delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
 	$routeProvider.
+
+/*
 	  when('/events', {
 		  templateUrl: '/src/views/events/events-list.html',
 		  controller: EventsListController
@@ -23,15 +25,28 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 		  controller: EventsListController
 		  }).
 
-	  //mediante dos puntos (:) definimos un parámetro
+	 //mediante dos puntos (:) definimos un parámetro
+	 when('/event-edit/', {
+		  redirectTo: '/events'
+		  }).
+*/
+	 //mediante dos puntos (:) definimos un parámetro
 	 when('/event-edit/:id', {
-		  templateUrl: '/src/views/events/event-form.html',
+		  templateUrl: '/src/views/events/event-edit-layout.html',
 		  controller: EventEditController
 		  }).
 
+
 	  //cualquier ruta no definida
 	  otherwise({
-		  redirectTo: '/events'});
+		   templateUrl: '/src/views/events/events-list-table.html',
+		  controller: EventsListController
+
+		});
+
+	 /*  otherwise({
+		  redirectTo: '/events'});*/
+
 
 }]);
 
