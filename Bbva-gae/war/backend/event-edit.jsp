@@ -64,6 +64,8 @@
 		});
 	</script>
 
+	<script src="/js/backend.js"></script>
+
 	<jsp:include page="/libraries-angular.jsp"/>
 
 </head>
