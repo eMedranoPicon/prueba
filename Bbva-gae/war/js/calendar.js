@@ -6,12 +6,8 @@ function createEventCalendar() {
 
 	var host = document.getElementById("host").value;
 
-	var street = document.getElementById("street").value;
-	var zipcode = document.getElementById("zipcode").value;
-	var city = document.getElementById("city").value;
-	var country = document.getElementById("country").value;
-
-	var address = street + ', ' + zipcode + ', ' + city + ', ' + country;
+	//address details	
+	var address = localStorage.getItem('maps_completeaddress');
 
 	var title = document.getElementById("title").value;
 	var description = document.getElementById("description").value;
