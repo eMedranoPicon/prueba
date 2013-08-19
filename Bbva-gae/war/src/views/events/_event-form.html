@@ -11,7 +11,7 @@
 
 <form class="form-horizontal" id="edit-form" data-ng-init="iniMap()">
     <!-- hiddden fields -->
-    <input type="hidden" id="idEvent">
+    <input type="hidden" id="idEvent" value="{{events.id}}">
     <input type="hidden" id="host" value="<%=user.getEmail()%>">
     <!-- End -->
     <div class="control-group">
@@ -121,7 +121,7 @@
     <div class="control-group">
         <div class="controls">
 <a class="btn btn-success btn-small" href="#" ng-click="showJson()">showjson</a>
-            <a class="btn btn-success btn-small" href="#" ng-click="upDateEvent()">Actualizar
+            <a class="btn btn-success btn-small" href="#" ng-click="upDateEvent(events.id)">Actualizar
     Evento</a>
     <button type="submit" class="btn btn-primary ">Guardar Evento</button>
         </div>

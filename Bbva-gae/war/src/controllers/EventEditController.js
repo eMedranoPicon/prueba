@@ -27,9 +27,6 @@ function EventEditController($scope, $http, $routeParams)
 		$scope.dateStartEdit = $scope.events[indexData].dateStart;
 		$scope.dateEndEdit = $scope.events[indexData].dateEnd;
 		*/
-
-
-
   	}).error(function(data, status) {
 		alert("Try again later");
 		//$scope.deleteModalShown = false;
@@ -58,7 +55,7 @@ function EventEditController($scope, $http, $routeParams)
 
     };
 
-  	$scope.upDateEvent = function(event)
+  	$scope.upDateEvent = function(idEvent)
   	{
         /*var elem = angular.element($element);
         var dt = $(elem).serialize();
@@ -67,7 +64,7 @@ function EventEditController($scope, $http, $routeParams)
         dt = dt+"&action=fetch";
         console.log($(elem).serialize());*/
 
-
+        console.log (idEvent);
         $http({
             method: 'PUT',
             url: 'https://sopragroupux.appspot.com/_ah/api/evento/v5/event',
