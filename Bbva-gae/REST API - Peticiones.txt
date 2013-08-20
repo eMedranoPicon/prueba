@@ -27,7 +27,7 @@ Eliminar Evento
 	data: {id} del elemento a eliminar
 
 Actualizar Evento
-	URL: https://sopragroupux.appspot.com/_ah/api/evento/v5/event/{id}
+	URL: https://sopragroupux.appspot.com/_ah/api/evento/v5/event
 	httpMethod: "PUT"
 	data: jSON de la estructura de Event.
 

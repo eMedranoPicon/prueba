@@ -3,10 +3,13 @@
 * Controlador de edicion de Eventos
 */
 
-function myIndexOf(arr,o) {
+function myIndexOf(arr,o)
+{
 
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i].id == o.id) {
+    for (var i = 0; i < arr.length; i++)
+    {
+        if (arr[i].id == o.id)
+        {
             return i;
         }
     }
@@ -16,22 +19,23 @@ function myIndexOf(arr,o) {
 
 function EventEditController($scope, $http, $routeParams)
 {
-	$http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/'+$routeParams.id).success(function(data)
+
+/*	$http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/'+$routeParams.id).success(function(data)
 	{
 		$scope.events = data;
 
-		/*
-		buscar un elemento dentro de un array
-		var indexData = myIndexOf($scope.events,{id:$routeParams.id});
-		$scope.titleEdit = $scope.events[indexData].title;
-		$scope.dateStartEdit = $scope.events[indexData].dateStart;
-		$scope.dateEndEdit = $scope.events[indexData].dateEnd;
-		*/
-  	}).error(function(data, status) {
+		//buscar un elemento dentro de un array
+		//var indexData = myIndexOf($scope.events,{id:$routeParams.id});
+		//$scope.titleEdit = $scope.events[indexData].title;
+		//$scope.dateStartEdit = $scope.events[indexData].dateStart;
+		//$scope.dateEndEdit = $scope.events[indexData].dateEnd;
+
+  	}).error(function(data, status)
+    {
 		alert("Try again later");
 		//$scope.deleteModalShown = false;
 	});
-
+*/
 	$scope.showJson = function()
     {
 		alert('showJson');
@@ -65,19 +69,21 @@ function EventEditController($scope, $http, $routeParams)
         console.log($(elem).serialize());*/
 
         console.log (idEvent);
-        $http({
+        $http(
+        {
             method: 'PUT',
             url: 'https://sopragroupux.appspot.com/_ah/api/evento/v5/event',
             data: $scope.events,
             dataType : 'json',
 			contentType : 'application/json',
             headers: {'Content-Type': 'application/json'}
-        }).success(function(data, status) {
+        }).success(function(data, status)
+        {
             alert('guardado');
             console.log(data); // Show result from server in our <pre></pre> element
 
-        }).error(function(data, status) {
-
+        }).error(function(data, status)
+        {
             alert('error:'+status);
         });
     }

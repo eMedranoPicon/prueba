@@ -32,28 +32,28 @@
   <!-- Bloque de Librerias - libreriasjs -->
   <jsp:include page="/libraries-js.jsp" />
 
-<script src="https://apis.google.com/js/client.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
-
-
-<script src="/js/maps.js"></script>
-<script src="/js/calendar.js"></script>
-
-<script type="text/javascript">
-  $(function()
-  {
-    $('#dateStart').datetimepicker({
-      language : 'es-ES',
-      pickSeconds: false
-    });
-    $('#dateEnd').datetimepicker({
-      language : 'es-ES',
-      pickSeconds: false
-    });
-  });
-</script>
-
   <jsp:include page="/libraries-angular.jsp"/>
+
+  <script src="https://apis.google.com/js/client.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+
+
+  <script src="/js/maps.js"></script>
+  <script src="/js/calendar.js"></script>
+
+  <script type="text/javascript">
+    $(function()
+    {
+      $('#dateStart').datetimepicker({
+        language : 'es-ES',
+        pickSeconds: false
+      });
+      $('#dateEnd').datetimepicker({
+        language : 'es-ES',
+        pickSeconds: false
+      });
+    });
+  </script>
 
 </head>
 <body>
@@ -75,14 +75,7 @@
    		<h1>Listado de eventos</h1>
   	</header>
 
-    <div class="container-fluid">
-      <div class="row-fluid">
-
-
-          <div ng-view></div>
-
-      </div>
-		</div>
+    <div ng-view></div>
 
 	</section>
 
