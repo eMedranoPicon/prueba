@@ -20,10 +20,10 @@ if (!Array.prototype.indexOf)
 
 function EventsListController($scope, $http)
 {
-	$http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
+	/*$http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
 	{
 		$scope.events = data.items;
-  	});
+  	});*/
 
   	//defines una variable
   	//$scope.var1 = "EventsListController variable definida desde el controlador";
