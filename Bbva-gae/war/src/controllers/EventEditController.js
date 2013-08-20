@@ -42,8 +42,8 @@ function EventEditController($scope, $http, $routeParams)
 
     $scope.iniMap = function(o)
     {
-    	console.log(o);
-    	console.log($scope);
+    	//console.log(o);
+    	//console.log($scope);
     	//previewMap();
     };
 

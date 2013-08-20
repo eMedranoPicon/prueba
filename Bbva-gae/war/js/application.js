@@ -32,6 +32,11 @@ function loadGapi() {
 }
 
 function getEvents() {
+	gapi.client.evento.listEvent.execute(function(resp) {	
+		console.log('cargado desde gapi');
+		console.log(resp);
+	});
+	
 	var apiUrl = "https://sopragroupux.appspot.com/_ah/api/evento/v5/event";
 	$.ajax({
 		url : apiUrl,
