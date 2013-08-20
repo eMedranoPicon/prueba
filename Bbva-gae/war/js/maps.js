@@ -2,30 +2,42 @@
 var geocoder;
 var map;
 var markersArray = [];
+var markersArrayLat = [];
+var markersArrayLong = [];
+var markersArrayAdress = [];
 
 // plot initial point using geocode instead of coordinates (works just fine)
-
-function initialize() 
-{
-		  // Handler for .ready() called.
-		console.log('initialize  maps');
-		
-	    var mapOptions = {
-	      center: new google.maps.LatLng(40.397, -3.644),
-	      zoom: 8,
-	      mapTypeId: google.maps.MapTypeId.ROADMAP
-	    };
-	    var map = new google.maps.Map(document.getElementById("map-canvas"),
-	        mapOptions);
+function initialize() {
+	geocoder = new google.maps.Geocoder();
+	latlang = geocoder.geocode({
+		'address' : 'Madrid'
+	}, function(results, status) { // use latlang to enter city instead of
+		// coordinates
+		if (status == google.maps.GeocoderStatus.OK) {
+			map.setCenter(results[0].geometry.location);
+			marker = new google.maps.Marker({
+				map : map,
+				position : results[0].geometry.location
+			});
+			//markersArray.push(marker);
+		} else {
+			console.log("Geocode was not successful for the following reason: "
+					+ status);
+		}
+	});
+	var myOptions = {
+		center : latlang,
+		zoom : 6,
+	    mapTypeId: google.maps.MapTypeId.ROADMAP,
+		navigationControlOptions : {
+			style : google.maps.NavigationControlStyle.SMALL
+		}
+	};
+	map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);		
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
-	 
+google.maps.event.addDomListener(window, 'load', initialize); 
 	
-
-
-
-
 function codeAddresses(address) {
 	geocoder.geocode({
 		'address' : address
@@ -46,7 +58,7 @@ function codeAddresses(address) {
 
 
 
-function previewMap() {
+function previewMap() {	
 	var street = document.getElementById("street").value;
 	var zipcode = document.getElementById("zipcode").value;
 	var city = document.getElementById("city").value;
@@ -71,17 +83,44 @@ function mapEvents() {
 			for ( var j in data.items) {
 
 				for ( var i in data.items[j]) {
-					markersArray[i] = data.items[j].address;
-					console.log(markersArray[i].toString());
-					codeAddresses(markersArray[i].toString());
+					markersArrayLat[i] = data.items[j].address[5];
+					markersArrayLong[i] = data.items[j].address[6];
+					markersArrayAdress[i] = data.items[j].address[4];
+					var myLatlng = new google.maps.LatLng(markersArrayLat[i],markersArrayLong[i]);
+					console.log(markersArrayLat[i]+', '+markersArrayLong[i]);
+					map.setCenter(myLatlng);					
+					marker = new google.maps.Marker({
+						map : map,
+						title: markersArrayAdress[i],
+						position : myLatlng
+					});
+					//codeAddresses(markersArray[i].toString());
 					break;
 				}
-				console.log(j);
+				//console.log(j);
 			}
 
 		},
 		error : function(xhr, ajaxOptions, thrownError) {
 			console.error("Event list error: " + xhr.status);
+		}
+	});
+}
+
+function lat(address) {
+	geocoder.geocode({
+		'address' : address
+	}, function(results, status) {
+		if (status == google.maps.GeocoderStatus.OK) {
+			map.setCenter(results[0].geometry.location);
+			marker.setMap(null);
+			marker = new google.maps.Marker({
+				map : map,
+				position : results[0].geometry.location
+			});
+		} else {
+			alert("Geocode was not successful for the following reason: "
+					+ status);
 		}
 	});
 }
@@ -161,3 +200,13 @@ function cleanAddress(){
 	localStorage.setItem('maps_centro',"");
 	
 }
+
+/* Load al final */
+$(document).ready(function() {
+	
+});
+
+$(window).bind("load", function() {
+	  // previewMap();
+	});
+

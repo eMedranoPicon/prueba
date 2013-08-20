@@ -45,13 +45,13 @@ function EventEditController($scope, $http, $routeParams)
 
         initialize();
 
-        //this is our gem
+        /*this is our gem
         google.maps.event.addDomListener(window, "resize", function()
         {
             var center = map.getCenter();
             google.maps.event.trigger(map, "resize");
             map.setCenter(center);
-        });
+        });*/
 
     };
 
