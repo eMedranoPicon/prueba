@@ -32,28 +32,28 @@
   <!-- Bloque de Librerias - libreriasjs -->
   <jsp:include page="/libraries-js.jsp" />
 
-  <jsp:include page="/libraries-angular.jsp"/>
-
-  <script src="https://apis.google.com/js/client.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+<script src="https://apis.google.com/js/client.js?onload=auth""></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 
 
-  <script src="/js/maps.js"></script>
-  <script src="/js/calendar.js"></script>
+<script src="/js/maps.js"></script>
+<script src="/js/calendar.js"></script>
 
-  <script type="text/javascript">
-    $(function()
-    {
-      $('#dateStart').datetimepicker({
-        language : 'es-ES',
-        pickSeconds: false
-      });
-      $('#dateEnd').datetimepicker({
-        language : 'es-ES',
-        pickSeconds: false
-      });
+<script type="text/javascript">
+  $(function()
+  {
+    $('#dateStart').datetimepicker({
+      language : 'es-ES',
+      pickSeconds: false
     });
-  </script>
+    $('#dateEnd').datetimepicker({
+      language : 'es-ES',
+      pickSeconds: false
+    });
+  });
+</script>
+
+  <jsp:include page="/libraries-angular.jsp"/>
 
 </head>
 <body>
@@ -75,7 +75,14 @@
    		<h1>Listado de eventos</h1>
   	</header>
 
-    <div ng-view></div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+
+
+          <div ng-view></div>
+
+      </div>
+		</div>
 
 	</section>
 

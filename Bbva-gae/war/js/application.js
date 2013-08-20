@@ -16,6 +16,12 @@ function auth() {
 		localStorage.setItem('calendarToken_local', tokenText_auto);		
 	});
 	gapi.client.setApiKey('AIzaSyBXuLdZ43wnWNuBltblkukaj97WDfArpfE');
+	console.log('intentando cargar api');
+	var ROOT = 'https://sopragroupux.appspot.com/_ah/api';
+	gapi.client.load('evento', 'v5', function() {
+	  console.log('cargada api');
+	}, ROOT);
+	
 
 }
 
@@ -159,20 +165,13 @@ function saveEvent(jEvent) {
 		contentType : 'application/json',
 		data : jEvent,
 		type : "POST",
-		success : function(data) {
+		success : function(data) {				
+			
+			$('#confirmaEvento').modal('show');					
+			//creacion event en calendar en background.
 			console.log("success -> creating calendar in the background");
-			//autorizando la peticion
-			auth();			
-			$('#confirmaEvento').modal('show');
-			//creacion evento background
-			localStorage.setItem('calendarId', data.id);
-			//esperando respuesta token
-			setTimeout(function() {
-				gapi.client.load('calendar', 'v3',createEventCalendar);
-			}, 700);
-			
-					
-			
+			localStorage.setItem('calendarId', data.id);			
+			gapi.client.load('calendar', 'v3',createEventCalendar);
 
 		},
 		error : function(xhr, ajaxOptions, thrownError) {
@@ -218,5 +217,8 @@ function deleteEvent_notused(id) {
 
 /* Load al final */
 $(document).ready(function() {
-	//
+	//autorizando la peticion
+	//setTimeout(function() {
+		//auth();
+	//}, 1500);	
 });

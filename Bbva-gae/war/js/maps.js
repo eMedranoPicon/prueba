@@ -2,14 +2,14 @@
 var geocoder;
 var map;
 var markersArray = [];
-var locationPage = window.location;
+var markersArrayLat = [];
+var markersArrayLong = [];
+var markersArrayAdress = [];
 
 // plot initial point using geocode instead of coordinates (works just fine)
 function initialize() {
-
-	console.log('initialize  maps')
 	geocoder = new google.maps.Geocoder();
-	latlang = geocoder.geocode({
+	/*latlang = geocoder.geocode({
 		'address' : 'Madrid'
 	}, function(results, status) { // use latlang to enter city instead of
 		// coordinates
@@ -19,14 +19,15 @@ function initialize() {
 				map : map,
 				position : results[0].geometry.location
 			});
-			markersArray.push(marker);
+			//markersArray.push(marker);
 		} else {
-			alert("Geocode was not successful for the following reason: "
+			console.log("Geocode was not successful for the following reason: "
 					+ status);
 		}
-	});
+	});*/
+	var myLatlngIni = new google.maps.LatLng(localStorage.getItem('maps_latitude'),localStorage.getItem('maps_longitude'));
 	var myOptions = {
-		center : latlang,
+		center : myLatlngIni,
 		zoom : 6,
 	    mapTypeId: google.maps.MapTypeId.ROADMAP,
 		navigationControlOptions : {
@@ -34,16 +35,14 @@ function initialize() {
 		}
 	};
 	map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+	marker = new google.maps.Marker({
+		map : map,
+		position : myLatlngIni
+	});
 }
 
-if (locationPage.toString().match("/event-edit/")!=null)
-{
-
-}
-
-
-
-
+google.maps.event.addDomListener(window, 'load', initialize); 
+	
 function codeAddresses(address) {
 	geocoder.geocode({
 		'address' : address
@@ -64,7 +63,8 @@ function codeAddresses(address) {
 
 
 
-function previewMap() {
+function previewMap() {	
+	console.log('entrado preview');
 	var street = document.getElementById("street").value;
 	var zipcode = document.getElementById("zipcode").value;
 	var city = document.getElementById("city").value;
@@ -89,17 +89,44 @@ function mapEvents() {
 			for ( var j in data.items) {
 
 				for ( var i in data.items[j]) {
-					markersArray[i] = data.items[j].address;
-					console.log(markersArray[i].toString());
-					codeAddresses(markersArray[i].toString());
+					markersArrayLat[i] = data.items[j].address[5];
+					markersArrayLong[i] = data.items[j].address[6];
+					markersArrayAdress[i] = data.items[j].address[4];
+					var myLatlng = new google.maps.LatLng(markersArrayLat[i],markersArrayLong[i]);
+					console.log(markersArrayLat[i]+', '+markersArrayLong[i]);
+					map.setCenter(myLatlng);					
+					marker = new google.maps.Marker({
+						map : map,
+						title: markersArrayAdress[i],
+						position : myLatlng
+					});
+					//codeAddresses(markersArray[i].toString());
 					break;
 				}
-				console.log(j);
+				//console.log(j);
 			}
 
 		},
 		error : function(xhr, ajaxOptions, thrownError) {
 			console.error("Event list error: " + xhr.status);
+		}
+	});
+}
+
+function lat(address) {
+	geocoder.geocode({
+		'address' : address
+	}, function(results, status) {
+		if (status == google.maps.GeocoderStatus.OK) {
+			map.setCenter(results[0].geometry.location);
+			marker.setMap(null);
+			marker = new google.maps.Marker({
+				map : map,
+				position : results[0].geometry.location
+			});
+		} else {
+			alert("Geocode was not successful for the following reason: "
+					+ status);
 		}
 	});
 }
@@ -150,6 +177,8 @@ function getLatLong(address){
               localStorage.setItem('maps_longitude', results[0].geometry.location.nb);
               //complete address
               localStorage.setItem('maps_completeaddress', results[0].formatted_address);
+              //centerMap
+              localStorage.setItem('maps_centro', results[0].formatted_address);
               
               map.setCenter(results[0].geometry.location);
               marker.setMap(null);
@@ -174,5 +203,16 @@ function cleanAddress(){
 	localStorage.setItem('maps_city',"");
 	localStorage.setItem('maps_country',"");
 	localStorage.setItem('maps_zipcode',"");
+	localStorage.setItem('maps_centro',"");
 	
 }
+
+/* Load al final */
+$(document).ready(function() {	});
+
+
+$(window).bind("load", function() {	
+	//funciona
+	previewMap();
+});
+
