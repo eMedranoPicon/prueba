@@ -37,22 +37,14 @@ function EventEditController($scope, $http, $routeParams)
 		alert('showJson');
        //var $scope.json = angular.toJson($scope.event);
 
-    };
+    };    
+    
 
-    $scope.iniMap = function()
+    $scope.iniMap = function(o)
     {
-        console.log('iniMap  ini en inimap');
-
-        initialize();
-
-        /*this is our gem
-        google.maps.event.addDomListener(window, "resize", function()
-        {
-            var center = map.getCenter();
-            google.maps.event.trigger(map, "resize");
-            map.setCenter(center);
-        });*/
-
+    	console.log(o);
+    	console.log($scope);
+    	//previewMap();
     };
 
   	$scope.upDateEvent = function(idEvent)

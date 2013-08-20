@@ -16,6 +16,12 @@ function auth() {
 		localStorage.setItem('calendarToken_local', tokenText_auto);		
 	});
 	gapi.client.setApiKey('AIzaSyBXuLdZ43wnWNuBltblkukaj97WDfArpfE');
+	console.log('intentando cargar api');
+	var ROOT = 'https://sopragroupux.appspot.com/_ah/api';
+	gapi.client.load('evento', 'v5', function() {
+	  console.log('cargada api');
+	}, ROOT);
+	
 
 }
 
@@ -212,5 +218,7 @@ function deleteEvent_notused(id) {
 /* Load al final */
 $(document).ready(function() {
 	//autorizando la peticion
-	auth();
+	//setTimeout(function() {
+		//auth();
+	//}, 1500);	
 });
