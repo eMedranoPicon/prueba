@@ -67,9 +67,6 @@
 	height: 480px;
 }
 </style>
-<script type="text/javascript">
-	mapEvents();
-</script>
 </head>
 <body>
 
