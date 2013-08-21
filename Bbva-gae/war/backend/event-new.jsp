@@ -54,22 +54,6 @@ urlLinktext = "Logout";
 			<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 			<script src="/js/maps.js"></script>
 			<script src="/js/calendar.js"></script>
-
-			<script type="text/javascript">
-				$(function() {
-					$('#dateStart').datetimepicker({
-						language : 'es-ES',
-						pickSeconds : false,
-						startDate: new Date()
-					});
-					$('#dateEnd').datetimepicker({
-						language : 'es-ES',
-						pickSeconds : false,
-						startDate: new Date()
-							});
-				});
-			</script>
-
 			<script src="/js/backend.js"></script>
 
 		</head>
@@ -233,4 +217,19 @@ urlLinktext = "Logout";
 				</div>
 			</div>
 		</body>
+		
+			<script type="text/javascript">
+				$(function() {
+					$('#dateStart').datetimepicker({
+						language : 'es-ES',
+						pickSeconds : false,
+						startDate: new Date()
+					});
+					$('#dateEnd').datetimepicker({
+						language : 'es-ES',
+						pickSeconds : false,
+						startDate: new Date()
+							});
+				});
+			</script>
 	</html>
