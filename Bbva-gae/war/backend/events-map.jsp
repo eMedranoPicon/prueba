@@ -67,6 +67,10 @@
 	height: 480px;
 }
 </style>
+<script type="text/javascript">
+	//temporal
+	mapEvents();
+</script>
 </head>
 <body>
 
