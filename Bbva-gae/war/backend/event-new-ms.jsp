@@ -50,25 +50,11 @@ urlLinktext = "Logout";
 			<![endif]-->
 			<!-- Bloque de Librerias - libreriasjs -->
 			<jsp:include page="/libraries-js.jsp" />
-
 			<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+			<script src="https://apis.google.com/js/client.js?onload=auth"></script>
+			
 			<script src="/js/maps.js"></script>
 			<script src="/js/calendar.js"></script>
-
-			<script type="text/javascript">
-				$(function() {
-					$('#dateStart').datetimepicker({
-						language : 'es-ES',
-						pickSeconds : false
-					});
-					$('#dateEnd').datetimepicker({
-						language : 'es-ES',
-						pickSeconds : false
-							});
-				});
-				onlyOnce();
-			</script>
-
 			<script src="/js/backend.js"></script>
 
 		</head>
@@ -115,9 +101,9 @@ urlLinktext = "Logout";
 
 								<div class="control-group">
 									<label class="control-label" for="dateEnd">Fecha y Hora
-									de Fin</label>
+									de Fin*</label>
 									<div class="controls">
-										<input id="dateEnd" data-format="dd/MM/yyyy hh:mm" placeholder="dd/MM/yyyy hh:mm" type="text"  />
+										<input id="dateEnd" data-format="dd/MM/yyyy hh:mm" placeholder="dd/MM/yyyy hh:mm" type="text"  required/>
 										<span class="add-on"> <i data-time-icon="icon-time" data-date-icon="icon-calendar"> </i>
 										</span>
 									</div>
@@ -227,9 +213,31 @@ urlLinktext = "Logout";
 					<p>El evento ha sido creado correctamente.</p>
 				</div>
 				<div class="modal-footer">
-					<a href="/backend/events-list.jsp#/events-table-list"
+					<a href="/backend/events-app.jsp#/events-table-list"
 					class="btn btn-primary">Aceptar</a>
 				</div>
 			</div>
 		</body>
+		
+			<script type="text/javascript">
+				$(function() {
+					console.log('carga datepicker');
+					$('#dateStart').datetimepicker({
+						language : 'es-ES',
+						pickSeconds : false,
+						startDate: new Date()
+					});
+					$('#dateEnd').datetimepicker({
+						language : 'es-ES',
+						pickSeconds : false,
+						startDate: new Date()
+							});
+					//Fecha de Finalizacion Obligatoria para poder crear evento en google calendar
+					$('#dateEnd').click( function(){
+						if ($('#dateEnd').val()=='') {
+						$('#dateEnd').val($('#dateStart').val());
+						}
+					});
+				});
+			</script>
 	</html>
