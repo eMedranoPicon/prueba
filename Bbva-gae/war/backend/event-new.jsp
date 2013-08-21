@@ -50,8 +50,9 @@ urlLinktext = "Logout";
 			<![endif]-->
 			<!-- Bloque de Librerias - libreriasjs -->
 			<jsp:include page="/libraries-js.jsp" />
-
 			<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+			<script src="https://apis.google.com/js/client.js?onload=auth"></script>
+			
 			<script src="/js/maps.js"></script>
 			<script src="/js/calendar.js"></script>
 			<script src="/js/backend.js"></script>
@@ -212,7 +213,7 @@ urlLinktext = "Logout";
 					<p>El evento ha sido creado correctamente.</p>
 				</div>
 				<div class="modal-footer">
-					<a href="/backend/events-list.jsp#/events-table-list"
+					<a href="/backend/events-app.jsp#/events-table-list"
 					class="btn btn-primary">Aceptar</a>
 				</div>
 			</div>
@@ -220,6 +221,7 @@ urlLinktext = "Logout";
 		
 			<script type="text/javascript">
 				$(function() {
+					console.log('carga datepicker');
 					$('#dateStart').datetimepicker({
 						language : 'es-ES',
 						pickSeconds : false,
@@ -229,6 +231,9 @@ urlLinktext = "Logout";
 						language : 'es-ES',
 						pickSeconds : false,
 						startDate: new Date()
+							});
+					$('#dateEnd').click( function(){
+						$('#dateEnd').val($('#dateStart').val());
 							});
 				});
 			</script>
