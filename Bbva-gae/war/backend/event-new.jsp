@@ -101,9 +101,9 @@ urlLinktext = "Logout";
 
 								<div class="control-group">
 									<label class="control-label" for="dateEnd">Fecha y Hora
-									de Fin</label>
+									de Fin*</label>
 									<div class="controls">
-										<input id="dateEnd" data-format="dd/MM/yyyy hh:mm" placeholder="dd/MM/yyyy hh:mm" type="text"  />
+										<input id="dateEnd" data-format="dd/MM/yyyy hh:mm" placeholder="dd/MM/yyyy hh:mm" type="text"  required/>
 										<span class="add-on"> <i data-time-icon="icon-time" data-date-icon="icon-calendar"> </i>
 										</span>
 									</div>
@@ -232,9 +232,12 @@ urlLinktext = "Logout";
 						pickSeconds : false,
 						startDate: new Date()
 							});
+					//Fecha de Finalizacion Obligatoria para poder crear evento en google calendar
 					$('#dateEnd').click( function(){
+						if ($('#dateEnd').val()=='') {
 						$('#dateEnd').val($('#dateStart').val());
-							});
+						}
+					});
 				});
 			</script>
 	</html>
