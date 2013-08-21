@@ -9,22 +9,6 @@ var markersArrayAdress = [];
 // plot initial point using geocode instead of coordinates (works just fine)
 function initialize() {
 	geocoder = new google.maps.Geocoder();
-	/*latlang = geocoder.geocode({
-		'address' : 'Madrid'
-	}, function(results, status) { // use latlang to enter city instead of
-		// coordinates
-		if (status == google.maps.GeocoderStatus.OK) {
-			map.setCenter(results[0].geometry.location);
-			marker = new google.maps.Marker({
-				map : map,
-				position : results[0].geometry.location
-			});
-			//markersArray.push(marker);
-		} else {
-			console.log("Geocode was not successful for the following reason: "
-					+ status);
-		}
-	});*/
 	var myLatlngIni = new google.maps.LatLng(localStorage.getItem('maps_latitude'),localStorage.getItem('maps_longitude'));
 	var myOptions = {
 		center : myLatlngIni,
@@ -76,7 +60,8 @@ function previewMap() {
 
 }
 
-function mapEvents() {
+function mapEvents() {	
+
 	var apiUrl = "https://sopragroupux.appspot.com/_ah/api/evento/v5/event";
 	$.ajax({
 		url : apiUrl,
@@ -94,13 +79,13 @@ function mapEvents() {
 					markersArrayAdress[i] = data.items[j].address[4];
 					var myLatlng = new google.maps.LatLng(markersArrayLat[i],markersArrayLong[i]);
 					console.log(markersArrayLat[i]+', '+markersArrayLong[i]);
-					map.setCenter(myLatlng);					
+										
 					marker = new google.maps.Marker({
 						map : map,
 						title: markersArrayAdress[i],
 						position : myLatlng
-					});
-					//codeAddresses(markersArray[i].toString());
+					});					
+					map.setCenter(myLatlng);
 					break;
 				}
 				//console.log(j);
@@ -208,11 +193,13 @@ function cleanAddress(){
 }
 
 /* Load al final */
-$(document).ready(function() {	});
+$(document).ready(function() {	
+	auth();
+});
 
 
 $(window).bind("load", function() {	
 	//funciona
-	previewMap();
+	//previewMap();
 });
 

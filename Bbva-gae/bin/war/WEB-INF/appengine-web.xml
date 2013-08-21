@@ -2,6 +2,12 @@
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
   <application>sopragroupux</application>
   <version>1</version>
+  <!--Other settings here...-->
+  <instance-class>F2</instance-class>
+  <automatic-scaling>
+    <max-idle-instances>500</max-idle-instances>
+    <min-pending-latency>50ms</min-pending-latency>
+  </automatic-scaling>
 
   <!--
     Allows App Engine to send multiple requests to one instance in parallel:
