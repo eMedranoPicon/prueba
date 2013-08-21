@@ -20,7 +20,8 @@ function myIndexOf(arr,o)
 function EventEditController($scope, $http, $routeParams)
 {
 
-/*	$http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/'+$routeParams.id).success(function(data)
+    /*
+    $http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/'+$routeParams.id).success(function(data)
 	{
 		$scope.events = data;
 
@@ -35,22 +36,45 @@ function EventEditController($scope, $http, $routeParams)
 		alert("Try again later");
 		//$scope.deleteModalShown = false;
 	});
-*/
+    */
+
+
+        gapi.client.load('evento', 'v5', function()
+        {
+            console.log('cargada api en edicontroller');
+             console.log('$routeParams.id:'+$routeParams.id);
+            $scope.is_backend_ready = true;
+            $scope.getEvent($routeParams.id);
+        }, 'https://sopragroupux.appspot.com/_ah/api');
+
+
+    $scope.getEvent = function($idEvent)
+    {
+         console.log('getEvent: '+$idEvent);
+        gapi.client.evento.getEvent($idEvent).execute(function(resp)
+        {
+            $scope.events = resp.items;
+            $scope.$apply();
+        });
+    };
+
+
+
 	$scope.showJson = function()
     {
 		alert('showJson');
        //var $scope.json = angular.toJson($scope.event);
 
-    };    
-    
+    };
 
+/*
     $scope.iniMap = function(o)
     {
     	console.log(o);
     	console.log($scope);
     	//previewMap();
     };
-
+*/
   	$scope.upDateEvent = function(idEvent)
   	{
         /*var elem = angular.element($element);

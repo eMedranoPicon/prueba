@@ -2,7 +2,7 @@
 <!--
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 -->
-<script src="/js/lib/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="/js/lib/jquery-1.10.2.js" type="text/javascript"></script>
 
 <script src="/js/lib/bootstrap/bootstrap.min.js"></script>
 <!--
@@ -11,7 +11,7 @@
 
 <!--libreria - DatePicker.jsp-->
 <script src="/js/lib/bootstrap-datetimepicker.min.js"></script>
-<script src="/js/lib/client.js"></script>
+
 
 <script src="/js/application.js"></script>
 

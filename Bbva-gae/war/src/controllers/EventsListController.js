@@ -18,7 +18,7 @@ if (!Array.prototype.indexOf)
 	};
 }
 
-function EventsListController($scope, $http)
+function EventsListController($scope, $http, $window)
 {
 	/*$http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
 	{
@@ -29,8 +29,35 @@ function EventsListController($scope, $http)
   	//$scope.var1 = "EventsListController variable definida desde el controlador";
 
   	//selecciona el desplegable y ordena automaticamente, variable definida en la vista con ng-model
+
+  	console.log('EventsListController');
+
   	$scope.orderField = "title";
   	$scope.orderReverse = "true";
+
+	$window.init = function()
+    {
+    	$scope.$apply($scope.load_evento_lib);
+    };
+
+    $scope.load_evento_lib = function()
+    {
+       	gapi.client.load('evento', 'v5', function()
+       	{
+            console.log('cargada api');
+            $scope.is_backend_ready = true;
+            $scope.list();
+        }, 'https://sopragroupux.appspot.com/_ah/api');
+    };
+
+    $scope.list = function()
+    {
+        gapi.client.evento.listEvent().execute(function(resp)
+        {
+            $scope.events = resp.items;
+            $scope.$apply();
+        });
+    };
 
   	$scope.destroyEvent = function(index)
   	{
@@ -59,8 +86,6 @@ function EventsListController($scope, $http)
 			//$scope.deleteModalShown = false;
 		});
 	};
-
-
 }
 
 

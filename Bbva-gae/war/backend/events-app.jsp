@@ -29,16 +29,22 @@
       <script src="/js/lib/html5shiv.js"></script>
     <![endif]-->
 
+
+<jsp:include page="/libraries-angular.jsp"/>
+
   <!-- Bloque de Librerias - libreriasjs -->
   <jsp:include page="/libraries-js.jsp" />
 
-<script src="https://apis.google.com/js/client.js?onload=auth""></script>
+
+
+<script src="https://apis.google.com/js/client.js?onload=auth"></script>
+<!--
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 
 
 <script src="/js/maps.js"></script>
 <script src="/js/calendar.js"></script>
-
+-->
 <script type="text/javascript">
   $(function()
   {
@@ -53,7 +59,7 @@
   });
 </script>
 
-  <jsp:include page="/libraries-angular.jsp"/>
+
 
 </head>
 <body>

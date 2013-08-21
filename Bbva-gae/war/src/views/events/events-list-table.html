@@ -1,4 +1,4 @@
-<div class="container-fluid" ng-controller="appController">
+<div class="container-fluid">
 
     <div class="row-fluid">
         <div class="span11">
@@ -49,7 +49,12 @@
                     <th>Id interno</th>
                     <th>Acciones</th>
                 </tr>
-                <tr ng-repeat="obj in datosResource | filter:query | orderBy:orderField:orderReverse">
+
+                <tr ng-hide="is_backend_ready">
+                    <td colspan="10">Cargando...</td>
+                </tr>
+
+                <tr ng-repeat="obj in events | filter:query | orderBy:orderField:orderReverse" ng-show="is_backend_ready">
                     <td>{{obj.title}}</td>
                     <td>{{obj.dateStart}}</td>
                     <td>{{obj.dateEnd}}</td>
@@ -57,7 +62,7 @@
                     <td class="wrapword"><a href="{{obj.urlEvent}}" target="_blank">{{obj.urlEvent}}</a></td>
                     <td>{{obj.audience}}</td>
                     <td>{{obj.tags}}</td>
-                    <td>{{obj.address}}</td>
+                    <td class="wrapword">{{obj.address}}</td>
                     <td>{{obj.id}}</td>
                     <td>
                         <div class="group-buttons-table">
