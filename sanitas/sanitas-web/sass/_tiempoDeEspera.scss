@@ -339,7 +339,8 @@ div.tiempoDeEspera
 		@include clearfix();
 		margin:auto;
 		img {
-			height: 200px;
+			height: 170px;
+			padding-right: 5px;
 		}	
 	}
 	h3{
@@ -424,15 +425,25 @@ div.tiempoDeEspera
 		font-size: $fontSizeLarge;
 	}
 
-	.filterchart{
-		clear:both;
-		text-align: center;
-		span {
-			text-align: right;
-			width: 200px;
-			padding-right: 25px;
+	.filterchart
+	{
+		span{
+			padding:10px;
 		}
-	}	
+		select{
+			margin:10px 10px 10px 0px;
+		}	
+	}
+
+	.otroscentros{
+		span{
+			padding:10px;
+		}
+		select{
+			margin:10px 10px 10px 50px;
+		}
+	}
+	
 }
 
 

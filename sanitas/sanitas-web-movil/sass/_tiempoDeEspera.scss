@@ -170,7 +170,7 @@ div.tiempoDeEspera
 	{
 		margin-top: 5px;
 		//font-size:  $fontSize;
-	    font-size:$fontSizeSmall;
+	    font-size:$fontSizeSmall !important;
 		dl
 		{
 			@extend dl.dl-tiempoDeEspera;
@@ -219,7 +219,8 @@ div.tiempoDeEspera
 
 		strong.header {
 			display: block;
-			line-height: 23px;
+			//line-height: 23px;
+			line-height: 12px;
 			vertical-align: top;
 			color: $textColor-blueLighter;
 			font-size: inherit;
@@ -271,6 +272,8 @@ div.tiempoDeEspera
 		display: block !important;
 		float: none !important;
 		width: 90% !important;
+		//hack font-size esta caja
+		font-size: $fontSizeSmall+1 !important;
 
 		p {
 			width: 60%;
@@ -320,7 +323,7 @@ div.tiempoDeEspera
 				dt,
 				dd {
 					//font-size: $fontSize;
-					font-size: $fontSizeSmall;
+					font-size: $fontSizeSmall !important;
 				}
 			}
 		
@@ -436,16 +439,23 @@ div.tiempoDeEspera
 			background-repeat:no-repeat;
 		}
 
-	.filterchart{
-		clear:both;
-		text-align: center;
-		padding: 5px 10px;
-		label {
-			text-align: right;
-			width: 200px;
-			padding-right: 25px;
+	.filterchart
+	{
+		span{
+			padding:10px;
 		}
+		select{
+			margin:10px 10px 10px 0px;
+		}	
+	}
 
+	.otroscentros{
+		span{
+			padding:10px 10px 10px 0px;
+		}
+		select{
+			margin:10px 10px 10px 17px;
+		}
 	}
 
 }

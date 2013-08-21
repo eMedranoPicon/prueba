@@ -171,7 +171,7 @@ hgroup.todos.centros.listado article li div div.tiempoDeEspera {
 /* line 170, ../../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data {
   margin-top: 5px;
-  font-size: 10px;
+  font-size: 10px !important;
 }
 /* line 175, ../../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data dl {
@@ -225,13 +225,13 @@ div.tiempoDeEspera span.tiempoDeEspera-data span {
 /* line 220, ../../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data strong.header {
   display: block;
-  line-height: 23px;
+  line-height: 12px;
   vertical-align: top;
   color: #50b3ec;
   font-size: inherit;
   min-width: 210px;
 }
-/* line 230, ../../sass/_tiempoDeEspera.scss */
+/* line 231, ../../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data i.icon-espera {
   background: url('../../img/site_sanitas_movil/espera.png?1376472309');
   -webkit-background-size: 25px 25px;
@@ -242,7 +242,7 @@ div.tiempoDeEspera span.tiempoDeEspera-data i.icon-espera {
   width: 25px;
   height: 25px;
 }
-/* line 240, ../../sass/_tiempoDeEspera.scss */
+/* line 241, ../../sass/_tiempoDeEspera.scss */
 div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
   margin-bottom: 10px;
 }
@@ -258,7 +258,7 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
 *	.box-tiempoDeEspera
 *
 */
-/* line 257, ../../sass/_tiempoDeEspera.scss */
+/* line 258, ../../sass/_tiempoDeEspera.scss */
 .box-tiempoDeEspera {
   background: #a8cce6 !important;
   padding: 0 !important;
@@ -270,7 +270,7 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
   display: inline-block;
   position: relative;
 }
-/* line 267, ../../sass/_tiempoDeEspera.scss */
+/* line 268, ../../sass/_tiempoDeEspera.scss */
 .box-tiempoDeEspera .container-tiempoDeEspera {
   background-color: #FFF;
   margin: 0 3% 3% 3% !important;
@@ -278,27 +278,28 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
   display: block !important;
   float: none !important;
   width: 90% !important;
+  font-size: 11px !important;
 }
-/* line 275, ../../sass/_tiempoDeEspera.scss */
+/* line 278, ../../sass/_tiempoDeEspera.scss */
 .box-tiempoDeEspera .container-tiempoDeEspera p {
   width: 60%;
 }
 @media screen and (max-width: 480px) {
-  /* line 275, ../../sass/_tiempoDeEspera.scss */
+  /* line 278, ../../sass/_tiempoDeEspera.scss */
   .box-tiempoDeEspera .container-tiempoDeEspera p {
     width: 93%;
   }
 }
-/* line 285, ../../sass/_tiempoDeEspera.scss */
+/* line 288, ../../sass/_tiempoDeEspera.scss */
 .box-tiempoDeEspera .container-tiempoDeEspera > p {
   margin-top: 0px;
 }
-/* line 289, ../../sass/_tiempoDeEspera.scss */
+/* line 292, ../../sass/_tiempoDeEspera.scss */
 .box-tiempoDeEspera .container-tiempoDeEspera span.arrow.right {
   display: inline-block;
   float: right;
 }
-/* line 294, ../../sass/_tiempoDeEspera.scss */
+/* line 297, ../../sass/_tiempoDeEspera.scss */
 .box-tiempoDeEspera .container-tiempoDeEspera dl {
   padding-left: 65px;
   background: url('../../img/site_sanitas_movil/espera.png?1376472309');
@@ -318,7 +319,7 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
   clear: both;
 }
 @media screen and (max-width: 480px) {
-  /* line 294, ../../sass/_tiempoDeEspera.scss */
+  /* line 297, ../../sass/_tiempoDeEspera.scss */
   .box-tiempoDeEspera .container-tiempoDeEspera dl {
     width: 250px;
     -webkit-background-size: 25px 25px;
@@ -328,22 +329,22 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
     padding-left: 30px;
     min-height: 35px;
   }
-  /* line 312, ../../sass/_tiempoDeEspera.scss */
+  /* line 315, ../../sass/_tiempoDeEspera.scss */
   .box-tiempoDeEspera .container-tiempoDeEspera dl dt {
     width: 110px;
   }
-  /* line 316, ../../sass/_tiempoDeEspera.scss */
+  /* line 319, ../../sass/_tiempoDeEspera.scss */
   .box-tiempoDeEspera .container-tiempoDeEspera dl dt:first-child {
     margin-top: 0px;
   }
-  /* line 321, ../../sass/_tiempoDeEspera.scss */
+  /* line 324, ../../sass/_tiempoDeEspera.scss */
   .box-tiempoDeEspera .container-tiempoDeEspera dl dt,
   .box-tiempoDeEspera .container-tiempoDeEspera dl dd {
-    font-size: 10px;
+    font-size: 10px !important;
   }
 }
 @media screen and (min-width: 767px) {
-  /* line 267, ../../sass/_tiempoDeEspera.scss */
+  /* line 268, ../../sass/_tiempoDeEspera.scss */
   .box-tiempoDeEspera .container-tiempoDeEspera {
     background-image: url('../../img/site_sanitas_movil/medicos.jpg?1376481499');
     background-color: white;
@@ -351,7 +352,7 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
     background-position-x: right;
   }
 }
-/* line 338, ../../sass/_tiempoDeEspera.scss */
+/* line 341, ../../sass/_tiempoDeEspera.scss */
 .box-tiempoDeEspera h2 {
   color: #255072;
   font-size: 12px;
@@ -365,14 +366,14 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
 *	.tiempoDeEspera-detalle
 *
 */
-/* line 355, ../../sass/_tiempoDeEspera.scss */
+/* line 358, ../../sass/_tiempoDeEspera.scss */
 .box-advice {
   margin: 2% 10%;
   width: 78%;
   border: 1px solid black;
   background-color: white;
 }
-/* line 361, ../../sass/_tiempoDeEspera.scss */
+/* line 364, ../../sass/_tiempoDeEspera.scss */
 .box-advice p {
   margin: 15px;
   padding-right: 0;
@@ -380,24 +381,24 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
   text-align: center;
 }
 
-/* line 369, ../../sass/_tiempoDeEspera.scss */
+/* line 372, ../../sass/_tiempoDeEspera.scss */
 .container-article {
   margin-left: 15px;
 }
 
-/* line 380, ../../sass/_tiempoDeEspera.scss */
+/* line 383, ../../sass/_tiempoDeEspera.scss */
 .tiempoDeEspera-detalle dl dt, .tiempoDeEspera-detalle dl dd {
   color: #636363;
   margin-top: 9px;
 }
-/* line 388, ../../sass/_tiempoDeEspera.scss */
+/* line 391, ../../sass/_tiempoDeEspera.scss */
 .tiempoDeEspera-detalle h2 {
   font-family: 'GothamMediumRegular';
   text-transform: none;
   font-size: 11px;
   margin-bottom: 10px;
 }
-/* line 397, ../../sass/_tiempoDeEspera.scss */
+/* line 400, ../../sass/_tiempoDeEspera.scss */
 .tiempoDeEspera-detalle .container-images {
   width: 98%;
   margin: 0;
@@ -414,29 +415,29 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
 .tiempoDeEspera-detalle .container-images:after {
   clear: both;
 }
-/* line 403, ../../sass/_tiempoDeEspera.scss */
+/* line 406, ../../sass/_tiempoDeEspera.scss */
 .tiempoDeEspera-detalle .container-images img {
   display: inline-block;
 }
-/* line 408, ../../sass/_tiempoDeEspera.scss */
+/* line 411, ../../sass/_tiempoDeEspera.scss */
 .tiempoDeEspera-detalle .container-images img:nth-last-child(2) {
   width: 100%;
   max-width: 300px;
 }
-/* line 414, ../../sass/_tiempoDeEspera.scss */
+/* line 417, ../../sass/_tiempoDeEspera.scss */
 .tiempoDeEspera-detalle .container-images img:nth-last-child(1) {
   width: 100%;
   max-width: 300px;
 }
-/* line 421, ../../sass/_tiempoDeEspera.scss */
+/* line 424, ../../sass/_tiempoDeEspera.scss */
 .tiempoDeEspera-detalle .grafico-afluencia {
   margin-top: 15px;
 }
-/* line 423, ../../sass/_tiempoDeEspera.scss */
+/* line 426, ../../sass/_tiempoDeEspera.scss */
 .tiempoDeEspera-detalle .grafico-afluencia .grafico {
   width: 90%;
 }
-/* line 429, ../../sass/_tiempoDeEspera.scss */
+/* line 432, ../../sass/_tiempoDeEspera.scss */
 .tiempoDeEspera-detalle i.icon-calendar {
   background: url('../../img/site_sanitas_movil/calendar.png?1376472347');
   -webkit-background-size: 32px 32x;
@@ -449,15 +450,19 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
   padding-left: 33px;
   background-repeat: no-repeat;
 }
-/* line 439, ../../sass/_tiempoDeEspera.scss */
-.tiempoDeEspera-detalle .filterchart {
-  clear: both;
-  text-align: center;
-  padding: 5px 10px;
+/* line 444, ../../sass/_tiempoDeEspera.scss */
+.tiempoDeEspera-detalle .filterchart span {
+  padding: 10px;
 }
-/* line 443, ../../sass/_tiempoDeEspera.scss */
-.tiempoDeEspera-detalle .filterchart label {
-  text-align: right;
-  width: 200px;
-  padding-right: 25px;
+/* line 447, ../../sass/_tiempoDeEspera.scss */
+.tiempoDeEspera-detalle .filterchart select {
+  margin: 10px 10px 10px 0px;
+}
+/* line 453, ../../sass/_tiempoDeEspera.scss */
+.tiempoDeEspera-detalle .otroscentros span {
+  padding: 10px 10px 10px 0px;
+}
+/* line 456, ../../sass/_tiempoDeEspera.scss */
+.tiempoDeEspera-detalle .otroscentros select {
+  margin: 10px 10px 10px 17px;
 }

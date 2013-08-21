@@ -337,18 +337,19 @@ div.tiempoDeEspera span.tiempoDeEspera-image-unhospital-2 span i.icon-flecha-a {
 }
 /* line 341, ../sass/_tiempoDeEspera.scss */
 .chartContent .imgBox img {
-  height: 200px;
+  height: 170px;
+  padding-right: 5px;
 }
-/* line 345, ../sass/_tiempoDeEspera.scss */
+/* line 346, ../sass/_tiempoDeEspera.scss */
 .chartContent h3 {
   color: #78aa39 !important;
 }
-/* line 348, ../sass/_tiempoDeEspera.scss */
+/* line 349, ../sass/_tiempoDeEspera.scss */
 .chartContent span.tiempoDeEspera-image-vermas {
   display: inline-block;
   margin-top: -30px;
 }
-/* line 352, ../sass/_tiempoDeEspera.scss */
+/* line 353, ../sass/_tiempoDeEspera.scss */
 .chartContent span.tiempoDeEspera-image-vermas i.icon-espera-vermas {
   background: url('../images/espera-2.jpg?1376472348');
   -webkit-background-size: 70px 70px;
@@ -361,13 +362,13 @@ div.tiempoDeEspera span.tiempoDeEspera-image-unhospital-2 span i.icon-flecha-a {
   background-repeat: no-repeat;
   border: white 3px solid;
 }
-/* line 366, ../sass/_tiempoDeEspera.scss */
+/* line 367, ../sass/_tiempoDeEspera.scss */
 .chartContent span.tiempoDeEspera-data-vermas {
   width: 100% !important;
   background-color: white !important;
   font-style: normal;
 }
-/* line 374, ../sass/_tiempoDeEspera.scss */
+/* line 375, ../sass/_tiempoDeEspera.scss */
 .chartContent span.tiempoDeEspera-data-vermas dl.dl-tiempoDeEspera-chart {
   overflow: hidden;
   line-height: 14px;
@@ -376,17 +377,17 @@ div.tiempoDeEspera span.tiempoDeEspera-image-unhospital-2 span i.icon-flecha-a {
   margin: 0px;
   padding: 0px;
 }
-/* line 382, ../sass/_tiempoDeEspera.scss */
+/* line 383, ../sass/_tiempoDeEspera.scss */
 .chartContent span.tiempoDeEspera-data-vermas dl.dl-tiempoDeEspera-chart dd:nth-of-type(n+2) {
   margin-top: 10px;
 }
-/* line 385, ../sass/_tiempoDeEspera.scss */
+/* line 386, ../sass/_tiempoDeEspera.scss */
 .chartContent span.tiempoDeEspera-data-vermas dl.dl-tiempoDeEspera-chart dt, .chartContent span.tiempoDeEspera-data-vermas dl.dl-tiempoDeEspera-chart dd {
   margin: 4px;
   padding: 4px;
   font-weight: bold;
 }
-/* line 390, ../sass/_tiempoDeEspera.scss */
+/* line 391, ../sass/_tiempoDeEspera.scss */
 .chartContent span.tiempoDeEspera-data-vermas dl.dl-tiempoDeEspera-chart dt {
   float: left;
   clear: left;
@@ -401,13 +402,13 @@ div.tiempoDeEspera span.tiempoDeEspera-image-unhospital-2 span i.icon-flecha-a {
   background-repeat: no-repeat;
   background-position-y: 50%;
 }
-/* line 401, ../sass/_tiempoDeEspera.scss */
+/* line 402, ../sass/_tiempoDeEspera.scss */
 .chartContent span.tiempoDeEspera-data-vermas dl.dl-tiempoDeEspera-chart dd {
   overflow: hidden;
   color: black;
   width: 300px;
 }
-/* line 409, ../sass/_tiempoDeEspera.scss */
+/* line 410, ../sass/_tiempoDeEspera.scss */
 .chartContent i.icon-calendar {
   background: url('../images/calendar.png?1376472348');
   -webkit-background-size: 32px 32x;
@@ -420,7 +421,7 @@ div.tiempoDeEspera span.tiempoDeEspera-image-unhospital-2 span i.icon-flecha-a {
   padding-left: 40px;
   background-repeat: no-repeat;
 }
-/* line 419, ../sass/_tiempoDeEspera.scss */
+/* line 420, ../sass/_tiempoDeEspera.scss */
 .chartContent .positionhack {
   color: #00aeef;
   font-weight: bold;
@@ -428,19 +429,24 @@ div.tiempoDeEspera span.tiempoDeEspera-image-unhospital-2 span i.icon-flecha-a {
   margin-left: 78px;
   font-size: 1.1em;
 }
-/* line 427, ../sass/_tiempoDeEspera.scss */
-.chartContent .filterchart {
-  clear: both;
-  text-align: center;
-}
 /* line 430, ../sass/_tiempoDeEspera.scss */
 .chartContent .filterchart span {
-  text-align: right;
-  width: 200px;
-  padding-right: 25px;
+  padding: 10px;
+}
+/* line 433, ../sass/_tiempoDeEspera.scss */
+.chartContent .filterchart select {
+  margin: 10px 10px 10px 0px;
+}
+/* line 439, ../sass/_tiempoDeEspera.scss */
+.chartContent .otroscentros span {
+  padding: 10px;
+}
+/* line 442, ../sass/_tiempoDeEspera.scss */
+.chartContent .otroscentros select {
+  margin: 10px 10px 10px 50px;
 }
 
-/* line 439, ../sass/_tiempoDeEspera.scss */
+/* line 450, ../sass/_tiempoDeEspera.scss */
 .cajasDestacadas {
   *zoom: 1;
   width: 423px !important;
@@ -457,19 +463,19 @@ div.tiempoDeEspera span.tiempoDeEspera-image-unhospital-2 span i.icon-flecha-a {
 .cajasDestacadas:after {
   clear: both;
 }
-/* line 444, ../sass/_tiempoDeEspera.scss */
+/* line 455, ../sass/_tiempoDeEspera.scss */
 .cajasDestacadas div.cajaDereHospitales {
   display: inline-block !important;
   border: 0px !important;
 }
 
-/* line 453, ../sass/_tiempoDeEspera.scss */
+/* line 464, ../sass/_tiempoDeEspera.scss */
 .cajasDereHospitales {
   display: inline-block !important;
   border: 0px !important;
 }
 
-/* line 457, ../sass/_tiempoDeEspera.scss */
+/* line 468, ../sass/_tiempoDeEspera.scss */
 .includeExternal {
   *zoom: 1;
 }
@@ -484,7 +490,7 @@ div.tiempoDeEspera span.tiempoDeEspera-image-unhospital-2 span i.icon-flecha-a {
   clear: both;
 }
 
-/* line 460, ../sass/_tiempoDeEspera.scss */
+/* line 471, ../sass/_tiempoDeEspera.scss */
 .dobleAnchoEspera {
   width: 408px !important;
   border-radius: 6px;
@@ -493,18 +499,18 @@ div.tiempoDeEspera span.tiempoDeEspera-image-unhospital-2 span i.icon-flecha-a {
   padding: 5px 5px 3px 5px;
 }
 
-/* line 470, ../sass/_tiempoDeEspera.scss */
+/* line 481, ../sass/_tiempoDeEspera.scss */
 div.borderExtra {
   border-radius: 5px;
   border: #89969F 1px solid;
   padding: 10px 10px 5px 10px;
 }
-/* line 480, ../sass/_tiempoDeEspera.scss */
+/* line 491, ../sass/_tiempoDeEspera.scss */
 div.borderExtra div.bannerHomeHospitales a img {
   width: 95% !important;
 }
 
-/* line 491, ../sass/_tiempoDeEspera.scss */
+/* line 502, ../sass/_tiempoDeEspera.scss */
 .hospitalSeo {
   min-height: 250px !important;
 }
