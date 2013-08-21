@@ -19,20 +19,28 @@ $textcolor-blueLight	:	#5299CF;
 $textcolor-blueLighter	:	#50B3EC;
 $textcolor-blueTitle	:   #155577;
 $textcolor-grey			:	#666;
-$textcolor-green		:  #78AA39;
+$textcolor-green		:   #78AA39;
 
 
-$textcolor-blueChart	:  #009FE3;
+$textcolor-blueChart	:   #009FE3;
 
 $textcolor-blueUnder	:   #00aeef;
 
 $boxLittle	            :   50px;
 
-$fontSizeLarge			:	14px;
-$fontSize 				:	12px;
-$fontSizeUrl			:	11px;
-$fontSizeSmall 			:	10px;
 
+
+//$fontSizeLarge		:	14px;
+$fontSizeLarge 			:	1.1em;
+
+//$fontSize 			:	12px;
+$fontSize				:	1em;
+
+//$fontSizeSmall 		:	10px;
+$fontSizeSmall 			:	.8em;
+
+//$fontSizeUrl			:	11px;
+$fontSizeUrl 			:	.9em;
 
 @import "compass/css3/box-shadow";
 

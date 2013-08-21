@@ -112,7 +112,7 @@ hgroup.todos.centros.listado article li div
 		@media screen and (max-width: 480px)
 		{
 			width: 90%;
-			font-size: 10px;
+			font-size: $fontSizeSmall;
 
 			span.tiempoDeEspera-data
 			{
@@ -169,8 +169,8 @@ div.tiempoDeEspera
 	span.tiempoDeEspera-data
 	{
 		margin-top: 5px;
-		font-size:  $fontSize;
-
+		//font-size:  $fontSize;
+	    font-size:$fontSizeSmall;
 		dl
 		{
 			@extend dl.dl-tiempoDeEspera;
@@ -319,7 +319,8 @@ div.tiempoDeEspera
 
 				dt,
 				dd {
-					font-size: $fontSize;
+					//font-size: $fontSize;
+					font-size: $fontSizeSmall;
 				}
 			}
 		
@@ -336,7 +337,8 @@ div.tiempoDeEspera
 
 	h2 {
 		color: $textColor-blueh2;
-		font-size: $fontSizeLarge;
+		//font-size: $fontSizeLarge;
+		font-size: $fontSize;
 		text-transform: uppercase;
 		padding: 8px 0 8px 0;
 		text-indent: 3%;
@@ -386,7 +388,8 @@ div.tiempoDeEspera
 	h2 {
 		font-family: 'GothamMediumRegular';
 		text-transform: none;
-		font-size: $fontSize+1;
+		//font-size: $fontSize+1;
+		font-size: $fontSizeSmall+1;
 		margin-bottom: 10px;
 	}
 
