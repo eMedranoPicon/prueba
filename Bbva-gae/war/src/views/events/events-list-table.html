@@ -18,7 +18,7 @@
             <form class="form-inline">
                 <label for="orderField">
                     <select ng-model="orderField" id="orderField" name="orderField">
-                        <option value="title">Nombre del evento</option>
+                        <option value="title" selected>Nombre del evento</option>
                         <option value="dateStart">Fecha de inicio</option>
                         <option value="dateStart">Fecha de inicio</option>
                     </select>
@@ -27,7 +27,7 @@
                     <div class="hide">Ordenar: </div>
                     <select ng-model="orderReverse">
                         <option value="false">Ascendente</option>
-                        <option value="true">Descendente</option>
+                        <option value="true" selected>Descendente</option>
                     </select>
                 </label>
             </form>
@@ -54,6 +54,12 @@
                     <td colspan="10">Cargando...</td>
                 </tr>
 
+                <!--si no hay usuarios que mostrar, con la directiva ng-show comprobamos
+                el array usuarios y mostramos un mensaje-->
+                <tr ng-show="events.length == 0">
+                     <td colspan="10">No hay datos que mostrar</h2>
+                </tr>
+
                 <tr ng-repeat="obj in events | filter:query | orderBy:orderField:orderReverse" ng-show="is_backend_ready">
                     <td>{{obj.title}}</td>
                     <td>{{obj.dateStart}}</td>
@@ -72,6 +78,10 @@
                         </div>
                     </td>
                 </tr>
+
+
+
+
             </table>
         </div>
     </div>

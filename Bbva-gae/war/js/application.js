@@ -19,7 +19,7 @@ function auth() {
 	gapi.client.setApiKey('AIzaSyBXuLdZ43wnWNuBltblkukaj97WDfArpfE');
 
 	//inicializa gapi para angular en app.js
-	window.init();
+	//window.init();
 /*
 
 
@@ -41,11 +41,11 @@ function loadGapi() {
 }
 
 function getEvents() {
-	gapi.client.evento.listEvent.execute(function(resp) {	
+	gapi.client.evento.listEvent.execute(function(resp) {
 		console.log('cargado desde gapi');
 		console.log(resp);
 	});
-	
+
 	var apiUrl = "https://sopragroupux.appspot.com/_ah/api/evento/v5/event";
 	$.ajax({
 		url : apiUrl,

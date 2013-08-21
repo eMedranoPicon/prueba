@@ -2,19 +2,20 @@
 //para hacer uso de $resource debemos colocarlo al crear el modulo
 var app = angular.module("app", []);
 
-
-
 //definimos las rutas de la 'app'
 app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider)
 {
 	$httpProvider.defaults.useXDomain = true;
 	delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
+	$routeProvider.when("/", {
+		templateUrl: "/src/views/events/events-list-table.html",
+	})
+	.when('/event-edit/:id', {
+		templateUrl: '/src/views/events/event-edit-layout.html',
+		controller: EventEditController
+	}).
 
-
-
-
-	$routeProvider.
 
 /*
 	  when('/events', {
@@ -59,25 +60,26 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 }]);
 
 
-
-
-//Tambien podemos obtener los datos con una factoria, en models/factory.js
-
-app.filter('getById', function()
+app.controller("appController", function appController($scope, $http, $routeParams)
 {
+	$scope.showError = false;
+	$scope.textError = "";
+	$scope.is_backend_ready = false;
 
- 	return function(input, id)
- 	{
-    	var i=0, len=input.length;
-    	for (; i<len; i++)
-    	{
-      		if (+input[i].id == +id)
-      		{
-        		return input[i];
-      		}
-    	}
-    	return null;
-  	}
+    $http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
+	{
+		$scope.showError = false;
+		$scope.textError = "";
+		$scope.is_backend_ready = true;
+		$scope.events = data.items;
+
+  	}).error(function(data, status)
+    {
+		$scope.textError = "Error al cargar los datos. Por favor, inténtelo más tarde";
+		$scope.is_backend_ready = false;
+		$scope.showError = true;
+	});
+
 });
 
 

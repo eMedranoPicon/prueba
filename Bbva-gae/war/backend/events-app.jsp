@@ -30,7 +30,7 @@
     <![endif]-->
 
 
-<jsp:include page="/libraries-angular.jsp"/>
+  <jsp:include page="/libraries-angular.jsp"/>
 
   <!-- Bloque de Librerias - libreriasjs -->
   <jsp:include page="/libraries-js.jsp" />
@@ -82,10 +82,13 @@
   	</header>
 
     <div class="container-fluid">
-      <div class="row-fluid">
+      <div class="row-fluid" ng-controller="appController">
 
+        <div class="alert alert-error" ng-show="showError">
+          <p>{{textError}}</p>
+        </div>
 
-          <div ng-view></div>
+        <div ng-view></div>
 
       </div>
 		</div>

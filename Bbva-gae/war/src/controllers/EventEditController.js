@@ -38,7 +38,7 @@ function EventEditController($scope, $http, $routeParams)
 	});
     */
 
-
+/*
         gapi.client.load('evento', 'v5', function()
         {
             console.log('cargada api en edicontroller');
@@ -58,7 +58,7 @@ function EventEditController($scope, $http, $routeParams)
         });
     };
 
-
+*/
 
 	$scope.showJson = function()
     {
