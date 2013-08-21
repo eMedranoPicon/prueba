@@ -1,32 +1,24 @@
 <!--
-<div ng-controller="productsCtrl">
-        <form method="POST" ng-controller="productsCtrl">
-        <label>Add New Product:</label>
-            <input type="text" name="keywords" ng-model="rs.name" placeholder="enter name..." value="{{rs.name}}">
-            <input type="text" name="desc" ng-model="rs.description" placeholder="enter description..." value="{{rs.description}}">
-            <button type="submit" ng-click="save(rs.product_id)">Save</button>
-</form>
-</div>-->
-<!--
 <meta charset="utf-8">
 
 <form class="form-horizontal" id="edit-form" data-ng-init="iniMap()">-->
-    <form class="form-horizontal" id="edit-form" >
+
     <!-- hiddden fields -->
-    <input type="hidden" id="idEvent" value="{{events.id}}">
-    <input type="hidden" id="host" value="<%=user.getEmail()%>">
+    <!--
+    <input type="hidden" id="idEvent" value="{{event.id}}">
+    <input type="hidden" id="host" value="<%=user.getEmail()%>">-->
     <!-- End -->
     <div class="control-group">
         <label class="control-label" for="title">Titulo Evento</label>
         <div class="controls">
-            <input type="text" id="title" name="title" value="{{events.title}}"  />
+            <input type="text" id="title" name="title" ng-model="event.title"   />
         </div>
     </div>
 
     <div class="control-group">
         <label class="control-label" for="dateStart">Fecha y Hora de Inicio</label>
         <div class="controls">
-            <input id="dateStart" data-format="dd/MM/yyyy hh:mm" placeholder="dd/MM/yyyy hh:mm" type="text" value="{{events.dateStart}}"></input>
+            <input id="dateStart" data-format="dd/MM/yyyy hh:mm" placeholder="dd/MM/yyyy hh:mm" type="text" ng-model="event.dateStart"></input>
             <span class="add-on"> <i data-time-icon="icon-time" data-date-icon="icon-calendar"> </i>
             </span>
         </div>
@@ -35,7 +27,7 @@
     <div class="control-group">
         <label class="control-label" for="dateEnd">Fecha y Hora de Fin</label>
         <div class="controls">
-            <input id="dateEnd" data-format="dd/MM/yyyy hh:mm" placeholder="dd/MM/yyyy hh:mm" type="text"  value="{{events.dateEnd}}"></input>
+            <input id="dateEnd" data-format="dd/MM/yyyy hh:mm" placeholder="dd/MM/yyyy hh:mm" type="text"  ng-model="event.dateEnd" ></input>
             <span class="add-on"> <i data-time-icon="icon-time" data-date-icon="icon-calendar"> </i>
             </span>
         </div>
@@ -46,28 +38,28 @@
          <div class="control-group">
             <label class="control-label" for="address">Dirección</label>
             <div class="controls">
-                <input type="text" id="street" name="street" placeholder="" value="{{events.address[0]}}">
+                <input type="text" id="street" name="street" placeholder="" ng-model="event.address[0]" >
             </div>
         </div>
 
         <div class="control-group">
             <label class="control-label" for="zipcode">Código Postal</label>
             <div class="controls">
-                <input type="text" id="zipcode" name="zipcode" placeholder=""  value="{{events.address[1]}}">
+                <input type="text" id="zipcode" name="zipcode" placeholder=""  ng-model="event.address[1]">
             </div>
         </div>
 
         <div class="control-group">
             <label class="control-label" for="city">Ciudad</label>
             <div class="controls">
-                <input type="text" id="city" name="city" placeholder="" value="{{events.address[2]}}">
+                <input type="text" id="city" name="city" placeholder="" ng-model="event.address[2]">
             </div>
         </div>
 
         <div class="control-group">
             <label class="control-label" for="country">País</label>
             <div class="controls">
-                <input type="text" id="country" name="country" placeholder="" value="{{events.address[3]}}">
+                <input type="text" id="country" name="country" placeholder="" ng-model="event.address[3]" >
             </div>
         </div>
 
@@ -77,59 +69,63 @@
                  <a class="btn btn-success btn-small" href="javascript:previewMap();">Ubicar en Google Maps</a>
             </div>
         </div>
-
-
-
     </fieldset>
-
 
     <div class="control-group">
         <label class="control-label" for="description">Descripción</label>
         <div class="controls">
-            <textarea rows="4" cols="30" name="description" id="description" ng-model="event.description" value="event.description"></textarea>
+            <textarea rows="4" cols="30" name="description" id="description" ng-model="event.description" ng-model="event.description" ></textarea>
         </div>
     </div>
 
     <div class="control-group">
         <label class="control-label" for="urlEvent">URL Evento</label>
         <div class="controls">
-            <input type="text" id="urlEvent" name="urlEvent" placeholder="" value="{{events.urlEvent}}">
+            <input type="text" id="urlEvent" name="urlEvent" placeholder="" ng-model="event.urlEvent" >
         </div>
     </div>
 
     <div class="control-group">
         <label class="control-label" for="urlImg">URL Imagen</label>
         <div class="controls">
-            <input type="text" id="urlImg" name="urlImg" placeholder="" value="{{events.urlImg}}">
+            <input type="text" id="urlImg" name="urlImg" placeholder="" ng-model="event.urlImg">
         </div>
     </div>
 
     <div class="control-group">
         <label class="control-label" for="audience">Asistentes(separados por comas)</label>
         <div class="controls">
-            <input type="text" id="audience" name="audience" placeholder="" value="{{events.audience}}">
+            <input type="text" id="audience" name="audience" placeholder="" ng-model="event.audience" >
         </div>
     </div>
 
     <div class="control-group">
         <label class="control-label" for="tags">Etiquetas(separadas por comas)</label>
         <div class="controls">
-            <input type="text" id="tags" name="tags" placeholder="" value="{{events.tags}}">
+            <input type="text" id="tags" name="tags" placeholder="" ng-model="event.tags" >
         </div>
     </div>
 
-
-<!---->
     <div class="control-group">
         <div class="controls">
-<a class="btn btn-success btn-small" href="#" ng-click="showJson()">showjson</a>
-            <a class="btn btn-success btn-small" href="#" ng-click="upDateEvent(events.id)">Actualizar
-    Evento</a>
-    <button type="submit" class="btn btn-primary ">Guardar Evento</button>
+            <button type="submit" class="btn btn-primary ">Actualizar Evento</button>
         </div>
     </div>
-</form>
-<pre>   {{json}}</pre>
-<pre>event = {{event | json}}</pre>
-    <pre>events = {{events | json}}</pre>
 
+    <pre>event -> {{event | json}}</pre>
+
+    <pre>events -> {{events | json}}</pre>
+
+
+    <div id="confirmaEvento" class="modal hide fade">
+        <div class="modal-header">
+            <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
+            <h3>Evento</h3>
+        </div>
+        <div class="modal-body">
+            <p>El evento ha sido actualizado correctamente.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="/backend/events-app.jsp" class="btn btn-primary">Aceptar</a>
+        </div>
+    </div>

@@ -2,15 +2,18 @@
 //para hacer uso de $resource debemos colocarlo al crear el modulo
 var app = angular.module("app", []);
 
+
 //definimos las rutas de la 'app'
 app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider)
 {
 	$httpProvider.defaults.useXDomain = true;
 	delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
-	$routeProvider.when("/", {
+	$routeProvider
+	/*.when("/", {
 		templateUrl: "/src/views/events/events-list-table.html",
-	})
+		controller: appController
+	})*/
 	.when('/event-edit/:id', {
 		templateUrl: '/src/views/events/event-edit-layout.html',
 		controller: EventEditController
@@ -40,16 +43,16 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 		  }).
 */
 	 //mediante dos puntos (:) definimos un parámetro
-	 when('/event-edit/:id', {
+	/* when('/event-edit/:id', {
 		  templateUrl: '/src/views/events/event-edit-layout.html',
 		  controller: EventEditController
-		  }).
+		  }).*/
 
 
 	  //cualquier ruta no definida
 	  otherwise({
 		   templateUrl: '/src/views/events/events-list-table.html',
-		  controller: EventsListController
+		  controller: appController
 
 		});
 
@@ -60,28 +63,22 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 }]);
 
 
-app.controller("appController", function appController($scope, $http, $routeParams)
-{
-	$scope.showError = false;
-	$scope.textError = "";
-	$scope.is_backend_ready = false;
 
-    $http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
-	{
-		$scope.showError = false;
-		$scope.textError = "";
-		$scope.is_backend_ready = true;
-		$scope.events = data.items;
 
-  	}).error(function(data, status)
-    {
-		$scope.textError = "Error al cargar los datos. Por favor, inténtelo más tarde";
-		$scope.is_backend_ready = false;
-		$scope.showError = true;
-	});
+function findIndexById(id,arrayList) {
+	if (!id) return null;
+	var index = -1;
 
-});
+	for(var i = 0; i < arrayList.length; i++) {
+	  var o = arrayList[i];
+	  if (id == o.id) {
+	    index = i;
+	    break;
+	  }
+	}
 
+	return index;
+}
 
 
 /*

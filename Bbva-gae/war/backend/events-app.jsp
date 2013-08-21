@@ -75,14 +75,14 @@
   <!-- EO include navbar.jsp -->
 
   <!-- include events-home.html -->
-  <section class="section-page">
+  <section class="section-page" ng-controller="appController">
 
     <header class="header-section">
-   		<h1>Listado de eventos</h1>
+   		<h1>{{textTitle}}</h1>
   	</header>
 
     <div class="container-fluid">
-      <div class="row-fluid" ng-controller="appController">
+      <div class="row-fluid" >
 
         <div class="alert alert-error" ng-show="showError">
           <p>{{textError}}</p>

@@ -3,6 +3,7 @@
     <div class="row-fluid">
         <div class="span11">
             <h4>Buscar evento</h4>
+
             <form class="form-inline">
                 <label for="title">
                     Título: <input ng-model="query.title" type="text" id="title" name="title">
@@ -12,6 +13,7 @@
                 </label>
                 <!--<a class="btn btn-success" href="#"><i class="icon-search icon-white"></i> Buscar</a>-->
             </form>
+
         </div>
         <div class="span13">
             <h4>Ordenar eventos</h4>
@@ -20,7 +22,7 @@
                     <select ng-model="orderField" id="orderField" name="orderField">
                         <option value="title" selected>Nombre del evento</option>
                         <option value="dateStart">Fecha de inicio</option>
-                        <option value="dateStart">Fecha de inicio</option>
+                        <option value="dateEnd">Fecha de fin</option>
                     </select>
                 </label>
                 <label for="orderField">
