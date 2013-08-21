@@ -21,8 +21,6 @@ function auth() {
 	//inicializa gapi para angular en app.js
 	//window.init();
 /*
-
-
 	console.log('intentando cargar api');
 	var ROOT = 'https://sopragroupux.appspot.com/_ah/api';
 	gapi.client.load('evento', 'v5', function() {
@@ -30,8 +28,6 @@ function auth() {
 	}, ROOT);
 
 	*/
-
-
 }
 
 function loadGapi() {
@@ -231,8 +227,5 @@ function deleteEvent_notused(id) {
 
 /* Load al final */
 $(document).ready(function() {
-	//autorizando la peticion
-	//setTimeout(function() {
-		//auth();
-	//}, 1500);
+	
 });

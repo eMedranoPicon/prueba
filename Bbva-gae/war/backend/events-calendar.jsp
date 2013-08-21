@@ -32,10 +32,10 @@
 
 <!-- Bloque de Librerias - libreriasjs -->
 <jsp:include page="/libraries-js.jsp" />
-<script src="/src/lib/angular.min.js"></script>
+<!-- script src="/src/lib/angular.min.js"></script>
 <script src="/src/app.js"></script>
 <script src="/src/controllers/EventsListController.js"></script>
-<script src="/src/controllers/EventDetailController.js"></script>
+<script src="/src/controllers/EventDetailController.js"></script-->
 <script src="https://apis.google.com/js/client.js"></script>
 <script
 	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>

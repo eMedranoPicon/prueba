@@ -194,7 +194,7 @@ function cleanAddress(){
 
 /* Load al final */
 $(document).ready(function() {	
-	auth();
+	//auth();
 });
 
 
