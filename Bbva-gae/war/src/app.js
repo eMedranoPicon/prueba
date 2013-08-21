@@ -9,12 +9,7 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 	$httpProvider.defaults.useXDomain = true;
 	delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
-	$routeProvider
-	/*.when("/", {
-		templateUrl: "/src/views/events/events-list-table.html",
-		controller: appController
-	})*/
-	.when('/event-edit/:id', {
+	$routeProvider.when('/event-edit/:id', {
 		templateUrl: '/src/views/events/event-edit-layout.html',
 		controller: EventEditController
 	}).
@@ -63,8 +58,6 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 }]);
 
 
-
-
 function findIndexById(id,arrayList) {
 	if (!id) return null;
 	var index = -1;
@@ -81,6 +74,36 @@ function findIndexById(id,arrayList) {
 }
 
 
+function myIndexOf(arr,o)
+{
+
+    for (var i = 0; i < arr.length; i++)
+    {
+        if (arr[i].id == o.id)
+        {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+/*
+if (!Array.prototype.indexOf)
+{
+	Array.prototype.indexOf = function(obj, start)
+	{
+	    for (var i = (start || 0), j = this.length; i < j; i++)
+	    {
+	        if (this[i] === obj)
+	        	{
+	        		return i;
+	        	}
+	     }
+	     return -1;
+	};
+}
+*/
 /*
   var app = angular.module('angular-auth-demo', ['http-auth-interceptor']);
 

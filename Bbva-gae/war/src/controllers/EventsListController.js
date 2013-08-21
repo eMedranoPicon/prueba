@@ -3,21 +3,6 @@
 * Controlador del listado de Eventos
 */
 
-if (!Array.prototype.indexOf)
-{
-	Array.prototype.indexOf = function(obj, start)
-	{
-	    for (var i = (start || 0), j = this.length; i < j; i++)
-	    {
-	        if (this[i] === obj)
-	        	{
-	        		return i;
-	        	}
-	     }
-	     return -1;
-	};
-}
-
 function EventsListController($scope, $http, $window)
 {
 	/*$http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
@@ -70,7 +55,7 @@ function EventsListController($scope, $http, $window)
 
     $scope.deleteEventRemote = function(idEvent,index)
     {
-    	alert('deleteEVent');
+    	console.log('deleteEVent');
 		$http["delete"]('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/' + idEvent).success(function(data, status)
 		{
 			//$scope.status = status;

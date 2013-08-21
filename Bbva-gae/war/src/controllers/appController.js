@@ -24,4 +24,27 @@ function appController($scope, $http, $routeParams)
       $scope.showError = true;
   });
 
+  $scope.deleteEventRemote = function(idEvent)
+  {
+    console.log('appController deleteEventRemote');
+
+
+    $http["delete"]('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/' + idEvent).success(function(data, status)
+    {
+      //$scope.status = status;
+      //  alert(idEvent);
+      //alert(index);
+      //alert($scope.events.indexOf(idEvent));
+      var indexEventDelete = findIndexById(idEvent,$scope.events);
+      console.log('appController deleteEventRemote -> indexEventDelete: '+indexEventDelete);
+      $scope.events.splice(indexEventDelete, 1);
+      //$scope.events.splice(index, 1)
+    }).
+    error(function(data, status)
+    {
+      alert("Refresh table. User already deleted.");
+      //$scope.deleteModalShown = false;
+    });
+  };
+
 };
