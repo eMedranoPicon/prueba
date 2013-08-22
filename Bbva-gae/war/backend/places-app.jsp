@@ -15,7 +15,7 @@
 %>
 <!DOCTYPE html>
 
-<html lang="es" ng-app="app">
+<html lang="es" ng-app="appPlace">
 <head>
   <title>backend - places:: BBVA in cloud</title>
   <meta charset="utf-8">
@@ -72,7 +72,7 @@
 	</section>
 
 </div>
-<script src="/js/maps.js"></script>
+<!-- script src="/js/maps.js"></script> -->
 </body>
 
 </html>

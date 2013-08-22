@@ -15,7 +15,7 @@ function appControllerPlaces($scope, $http, $routeParams)
       $scope.showError = false;
       $scope.textError = "";
       $scope.is_backend_ready = true;
-      $scope.events = data.items;
+      $scope.places = data.items;
       
     }).error(function(data, status)
     {

@@ -16,10 +16,10 @@ function auth() {
 	});
 	gapi.client.setApiKey('AIzaSyBXuLdZ43wnWNuBltblkukaj97WDfArpfE');
 
-	
+	/*
 	 console.log('intentando cargar api Lugar'); var ROOT =
 	 'https://sopragroupux.appspot.com/_ah/api'; gapi.client.load('lugar',
-	 'v1', function() { console.log('cargada api'); }, ROOT);
+	 'v1', function() { console.log('cargada api'); }, ROOT);*/
 	 
 }
 
