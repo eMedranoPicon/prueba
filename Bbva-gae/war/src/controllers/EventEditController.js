@@ -58,6 +58,7 @@ function EventEditController($scope, $http, $routeParams)
     }
 
 
+
     $scope.upDateEvent = function(idEvent)
     {
         console.log('EventEditController upDateEvent $scope.indexEvent: '+$scope.indexEvent)
@@ -73,5 +74,7 @@ function EventEditController($scope, $http, $routeParams)
               $scope.showError = true;
         });
     }
+
+
 
 }

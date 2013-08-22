@@ -10040,3 +10040,19 @@ ol.decorated-list li a {
 .group-buttons-table {
   width: 140px;
 }
+
+/* line 4, ../sass/partials/_angular-custom.scss */
+.modal-header h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* line 13, ../sass/partials/_angular-custom.scss */
+.modal-body h2 {
+  font-size: 20px;
+  text-align: center;
+}
+/* line 18, ../sass/partials/_angular-custom.scss */
+.modal-body .error {
+  color: red;
+}

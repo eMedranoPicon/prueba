@@ -1,5 +1,4 @@
 <div class="container-fluid">
-
     <div class="row-fluid">
         <div class="span11">
             <h4>Buscar evento</h4>
@@ -51,17 +50,14 @@
                     <th>Id interno</th>
                     <th>Acciones</th>
                 </tr>
-
                 <tr ng-hide="is_backend_ready">
                     <td colspan="10">Cargando...</td>
                 </tr>
-
                 <!--si no hay usuarios que mostrar, con la directiva ng-show comprobamos
                 el array usuarios y mostramos un mensaje-->
                 <tr ng-show="events.length == 0">
                      <td colspan="10">No hay datos que mostrar</h2>
                 </tr>
-
                 <tr ng-repeat="obj in events | filter:query | orderBy:orderField:orderReverse" ng-show="is_backend_ready">
                     <td>{{obj.title}}</td>
                     <td>{{obj.dateStart}}</td>
@@ -75,19 +71,35 @@
                     <td>
                         <div class="group-buttons-table">
                             <a class="btn btn-success btn-small" href="#/event-edit/{{obj.id}}"><i class="icon-edit icon-white"></i> Editar</a>
-                            <a class="btn btn-warning btn-small" ng-click="deleteEventRemote(obj.id,$index)"><i class="icon-trash icon-white"></i> Borrar</a>
+                            <!--<a class="btn btn-warning btn-small" ng-click="deleteEventRemote(obj.id)"><i class="icon-trash icon-white"></i> Borrar</a>-->
+                            <a class="btn btn-warning btn-small" ng-click="openModalRemove(obj.id,obj.title,obj.dateStart,obj.description)">show dialog</a>
 
                         </div>
                     </td>
                 </tr>
-
-
-
-
             </table>
         </div>
     </div>
+</div>
 
+<div modal="deleteEventModal" close="closeModalRemove()" options="optsModal">
+    <div class="modal-header" ng-hide="hideInfoModal">
+        <h2>¿Estas seguro que quieres eliminar el evento con id: {{idEventDialog}} ?</h2>
+    </div>
+    <div class="modal-body" >
+        <dl ng-hide="hideInfoModal">
+            <dd><p>{{titleDialog}}</p></dd>
+            <dd><p>{{dateStartDialog}}</p></dd>
+            <dd><p>{{descriptionDialog}}</p></dd>
+        </dl>
+        <h2 ng-show="hideInfoModal" ng-class="{error:errorModal}">
+            {{textStatusModal}}
+        </h2>
+    </div>
+    <div class="modal-footer" ng-hide="hideInfoModal">
+        <button class="btn btn-warning cancel" ng-click="closeModalRemove()">Cancelar</button>
+        <button class="btn btn-warning cancel" ng-click="deleteEventRemote(idEventDialog)">Confirmar</button>
+    </div>
 </div>
 
 <div id="confirmaEliminarEvento" class="modal hide fade">

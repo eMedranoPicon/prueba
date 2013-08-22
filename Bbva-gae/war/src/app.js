@@ -1,7 +1,6 @@
 //var app = angular.module('app', []);
 //para hacer uso de $resource debemos colocarlo al crear el modulo
-var app = angular.module("app", []);
-
+var app = angular.module("app", ['ui.bootstrap']);
 
 //definimos las rutas de la 'app'
 app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider)
@@ -58,13 +57,16 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 }]);
 
 
-function findIndexById(id,arrayList) {
+function findIndexById(id,arrayList)
+{
 	if (!id) return null;
 	var index = -1;
 
-	for(var i = 0; i < arrayList.length; i++) {
+	for(var i = 0; i < arrayList.length; i++)
+	{
 	  var o = arrayList[i];
-	  if (id == o.id) {
+	  if (id == o.id)
+	  {
 	    index = i;
 	    break;
 	  }
@@ -76,7 +78,6 @@ function findIndexById(id,arrayList) {
 
 function myIndexOf(arr,o)
 {
-
     for (var i = 0; i < arr.length; i++)
     {
         if (arr[i].id == o.id)
