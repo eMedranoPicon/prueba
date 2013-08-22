@@ -38,19 +38,15 @@ function createEventCalendar() {
 		'calendarId' : '72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com',
 		'resource' : jEventCalendar
 	});
-	request.execute(function(resp) {
-		console.log('Guardado en Google Calendar');
+	request.execute(function(resp, status) {		
 		console.log(resp);
-	});
-
-	
+		console.log('Respuesta guardado :'+status);
+	});	
 
 }
 
 function readCalendar(token) {
-
 	var apiUrl = "/calendar/v3/calendars/72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com/events?key=785790985795-pf206je1417kten4jbd5funo77vlkuvf.apps.googleusercontent.com";
-
 	var tokenText = token.token_type + ' ' + token.access_token;
 	args = {
 		path : apiUrl,
@@ -62,12 +58,9 @@ function readCalendar(token) {
 		method : "GET",
 		callback : function(resp) {
 			console.log(resp);
-
 		}
-
 	}
 	gapi.client.request(args);
-
 }
 
 /* use a function for the exact format desired... */
@@ -91,3 +84,46 @@ function ISODateString(stringDate) {
 			+ pad(d.getUTCDate()) + 'T' + pad(d.getUTCHours()) + ':'
 			+ pad(d.getUTCMinutes()) + ':' + pad(d.getUTCSeconds()) + 'Z'
 }
+
+function validateDateRange(){
+	
+	String
+	dateStart = document.getElementById("dateStart").value;
+	String
+	dateEnd = document.getElementById("dateEnd").value;
+
+	var dateStartFormatted = ISODateString(dateStart); 
+	var dateEndFormatted = ISODateString(dateEnd);
+	
+	if (dateStartFormatted<dateEndFormatted){
+		console.log('ok');
+		//$('#dateEndLabel').removeClass('error').addClass('valid');		
+		$(":submit").removeAttr("disabled");
+	} else {
+		//$('#dateEndLabel').removeClass('valida').addClass('error');
+		alert('fechas incorrectas');
+		$(":submit").attr("disabled", true);
+		console.log('error');
+	}
+	
+}
+
+/*
+jQuery.validator.addMethod("checkdates",function() {
+	
+	String
+	dateStart = document.getElementById("dateStart").value;
+	String
+	dateEnd = document.getElementById("dateEnd").value;
+
+	var dateStartFormatted = ISODateString(dateStart); 
+	var dateEndFormatted = ISODateString(dateEnd);
+	
+	if (dateStartFormatted<dateEndFormatted) return true
+	else return false;
+    //total = parseFloat($('#LHSOPERAND').val()) + parseFloat($('#RHSOPERAND').val());
+    
+    //return total == parseFloat($('#TOTAL').val());
+}, "Rango Fechas Incorrectas");
+
+$("#dateEnd").rules('add', checkdates{});*/

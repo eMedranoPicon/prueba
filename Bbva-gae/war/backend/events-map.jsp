@@ -30,16 +30,18 @@
       <script src="/js/lib/html5shiv.js"></script>
     <![endif]-->
 
-<!-- Bloque de Librerias - libreriasjs -->
-<jsp:include page="/libraries-js.jsp" />
-<script src="/src/lib/angular.min.js"></script>
-<script src="/src/app.js"></script>
-<script src="/src/controllers/EventsListController.js"></script>
-<script src="/src/controllers/EventDetailController.js"></script>
+ <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+      <script src="/js/lib/html5shiv.js"></script>
+    <![endif]-->
+
+
+  <!--jsp:include page="/libraries-angular.jsp"/-->
+
+  <!-- Bloque de Librerias - libreriasjs -->
+ <jsp:include page="/libraries-js.jsp" />
 <script
 	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
-
-<script src="/js/application.js"></script>
 <script src="/js/maps.js"></script>
 
 
@@ -67,10 +69,6 @@
 	height: 480px;
 }
 </style>
-<script type="text/javascript">
-	//temporal
-	mapEvents();
-</script>
 </head>
 <body>
 
@@ -105,4 +103,8 @@
 	</div>
 
 </body>
+<script type="text/javascript">
+	//temporal
+	mapEvents();
+</script>
 </html>
