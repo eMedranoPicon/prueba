@@ -15,10 +15,9 @@ http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-scenario.js
 
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.js"></script>
 
-
-
 <script src="/src/lib/angular-scenario.js"></script>
 
+<script src="/src/lib/ui-bootstrap-tpls-0.5.0.js"></script>
 
 <script src="/src/app.js"></script>
 <script src="/src/controllers/appController.js"></script>
