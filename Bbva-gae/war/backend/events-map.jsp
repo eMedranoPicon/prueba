@@ -30,16 +30,16 @@
       <script src="/js/lib/html5shiv.js"></script>
     <![endif]-->
 
- <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-  <!--[if lt IE 9]>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
       <script src="/js/lib/html5shiv.js"></script>
     <![endif]-->
 
 
-  <!--jsp:include page="/libraries-angular.jsp"/-->
+<!--jsp:include page="/libraries-angular.jsp"/-->
 
-  <!-- Bloque de Librerias - libreriasjs -->
- <jsp:include page="/libraries-js.jsp" />
+<!-- Bloque de Librerias - libreriasjs -->
+<jsp:include page="/libraries-js.jsp" />
 <script
 	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 <script src="/js/maps.js"></script>
@@ -102,9 +102,10 @@
 		</section>
 	</div>
 
-</body>
+
 <script type="text/javascript">
 	//temporal
 	mapEvents();
 </script>
+</body>
 </html>

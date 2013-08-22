@@ -15,13 +15,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>backend - events:: BBVA in cloud</title>
+<title>backend - lugares de interés:: BBVA in cloud</title>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 <!-- styles -->
 <link rel="stylesheet" type="text/css" href="/css/main.css" />
-<link rel="stylesheet" type="text/css"
-	href="/css/bootstrap-datetimepicker.min.css" />
 <style>
 #map-canvas {
 	width: 100%;
@@ -54,9 +52,6 @@
 <script
 	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 <script src="https://apis.google.com/js/client.js?onload=auth"></script>
-
-<script src="/js/maps.js"></script>
-<script src="/js/calendar.js"></script>
 <script src="/js/backend.js"></script>
 
 </head>
@@ -80,42 +75,28 @@
 				<div class="span9">
 					<form class="form-horizontal" id="new-form">
 						<!-- hiddden fields -->
-						<input type="hidden" id="idEvent"> <input type="hidden"
-							id="host" value="<%=user.getEmail()%>">
+						<input type="hidden" id="idLugar"> <input type="hidden"
+							id="creador" value="<%=user.getEmail()%>">
 						<!-- End -->
 						<div class="control-group">
-							<label class="control-label" for="title">Titulo Evento*</label>
+							<label class="control-label" for="title">Nombre Lugar*</label>
 							<div class="controls">
 								<input type="text" id="title" name="title"
-									placeholder="Titulo Evento">
+									placeholder="Nombre Lugar">
 							</div>
 						</div>
-
 						<div class="control-group">
-							<label class="control-label" for="dateStart">Fecha y Hora
-								de Inicio*</label>
+							<label class="control-label" for="tipoLugar">Tipo Lugar*</label>
 							<div class="controls">
-								<input id="dateStart" data-format="dd/MM/yyyy hh:mm"
-									placeholder="dd/MM/yyyy hh:mm" type="text" required /> <span
-									class="add-on"> <i data-time-icon="icon-time"
-									data-date-icon="icon-calendar"> </i>
-								</span>
+									<select id="tipoLugar" name="tipoLugar">
+									  <option value="Restaurante">Restaurante</option>
+									  <option value="Convenciones">Convenciones</option>
+									  <option value="Centro de Ocio">Centro de Ocio</option>
+									  <option value="Convenciones">Otro</option>
+									</select>
 							</div>
 						</div>
-
-						<div class="control-group">
-							<label class="control-label" id="dateEndLabel" for="dateEnd">Fecha y Hora
-								de Fin*</label>
-							<div class="controls">
-								<input id="dateEnd" data-format="dd/MM/yyyy hh:mm"
-									placeholder="dd/MM/yyyy hh:mm" type="text" required
-									onblur="validateDateRange()" /> <span class="add-on"> <i
-									data-time-icon="icon-time" data-date-icon="icon-calendar">
-								</i>
-								</span>
-							</div>
-						</div>
-
+				
 						<fieldset>
 							<legend>Localización del evento</legend>
 
@@ -155,47 +136,37 @@
 								</div>
 							</div>
 						</fieldset>
-
-
+						<fieldset>
+							<legend>Observaciones</legend>
 						<div class="control-group">
-							<label class="control-label" for="description">Descripción*</label>
 							<div class="controls">
 								<textarea rows="4" cols="30" name="description" id="description"
 									required></textarea>
 							</div>
 						</div>
-						<div class="control-group">
-							<label class="control-label" for="urlEvent">URL Evento*</label>
+						</fieldset>
+						<fieldset>
+							<legend>Datos de Contacto</legend>
+							<div class="control-group">
+							<label class="control-label" for="nombreContacto">Nombre Completo*</label>
 							<div class="controls">
-								<input type="text" id="urlEvent" name="urlEvent" placeholder=""
-									required>
+								<input type="text" id="nombreContacto" name="nombreContacto"
+									placeholder="Nombre de Contacto">
 							</div>
 						</div>
 						<div class="control-group">
-							<label class="control-label" for="urlImg">URL Imagen</label>
+							<label class="control-label" for="emailContacto">Email Contacto*</label>
 							<div class="controls">
-								<input type="text" id="urlImg" name="urlImg" placeholder="">
+								<input type="text" id="emailContacto" name="emailContacto"
+									placeholder="Email de Contacto">
 							</div>
 						</div>
-						<div class="control-group">
-							<label class="control-label" for="audience">Asistentes(separados
-								por comas)</label>
-							<div class="controls">
-								<input type="text" id="audience" name="audience" placeholder="">
-							</div>
-						</div>
-						<div class="control-group">
-							<label class="control-label" for="tags">Etiquetas(separadas
-								por comas)</label>
-							<div class="controls">
-								<input type="text" id="tags" name="tags" placeholder="">
-							</div>
-						</div>
-
+							
+						</fieldset>
 						<div class="control-group">
 							<div class="controls">
 								<button type="submit" class="btn btn-primary ">Guardar
-									Evento</button>
+									Lugar</button>
 							</div>
 						</div>
 					</form>
@@ -203,12 +174,6 @@
 				<div class="span15">
 					<div class="Flexible-container">
 						<div id="map-canvas"></div>
-					</div>
-					<div class="Flexible-container">
-						<iframe
-							src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=72o4s6adl0uhbebjssl4dpraeo%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=Europe%2FMadrid"
-							style="border-width: 0" width="100%" height="400px"
-							frameborder="0" scrolling="no"></iframe>
 					</div>
 				</div>
 				<%
@@ -231,27 +196,10 @@
 				class="btn btn-primary">Aceptar</a>
 		</div>
 	</div>
-
+	<script src="/js/maps.js"></script>
+<script src="/js/lugar.js"></script>
 <script type="text/javascript">
 	$(function() {
-		console.log('carga datepicker');
-		$('#dateStart').datetimepicker({
-			language : 'es',
-			pickSeconds : false,
-			startDate : new Date()
-		});
-		$('#dateEnd').datetimepicker({
-			language : 'es',
-			pickSeconds : false,
-			startDate : new Date()
-		});
-		//Fecha de Finalizacion Obligatoria para poder crear evento en google calendar
-		$('#dateEnd').click(function() {
-			if ($('#dateEnd').val() == '') {
-				$('#dateEnd').val($('#dateStart').val());
-			}
-		});
-
 		//Limpiando Mapa						
 		//newEventMap();
 	});
