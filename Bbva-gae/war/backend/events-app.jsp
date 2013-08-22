@@ -74,13 +74,13 @@
 
 </div>
 
-</body>
-<script src="/js/maps.js"></script>
+<!--
+<script src="/js/maps.js"></script>-->
 <script src="/js/calendar.js"></script>
 
 		<script type="text/javascript">
-				
-		
+
+/*
 					$(function() {
 					console.log('carga datepicker');
 					//no funciona en el entorno ANGULARjs
@@ -100,8 +100,8 @@
 						if ($('#dateEnd').val()=='') {
 						$('#dateEnd').val($('#dateStart').val());
 						}
-					});	
-					
+					});
+
 					//funcionaria si la pagina se recargara. Hack temporal para evitar errores carga js. Disculpe las molestias :)
 					setTimeout(function() {
 							$(document).ready(function () {
@@ -110,8 +110,9 @@
 							    }
 							});
 					}, 2000);
-					
-				});
-					
+
+				});*/
+
 		</script>
+</body>
 </html>
