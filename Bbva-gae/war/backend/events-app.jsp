@@ -35,31 +35,8 @@
   <!-- Bloque de Librerias - libreriasjs -->
   <jsp:include page="/libraries-js.jsp" />
 
-
-
 <script src="https://apis.google.com/js/client.js?onload=auth"></script>
-<!--
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
-
-
-<script src="/js/maps.js"></script>
-<script src="/js/calendar.js"></script>
--->
-<script type="text/javascript">
-  $(function()
-  {
-    $('#dateStart').datetimepicker({
-      language : 'es-ES',
-      pickSeconds: false
-    });
-    $('#dateEnd').datetimepicker({
-      language : 'es-ES',
-      pickSeconds: false
-    });
-  });
-</script>
-
-
 
 </head>
 <body>
@@ -98,4 +75,43 @@
 </div>
 
 </body>
+<script src="/js/maps.js"></script>
+<script src="/js/calendar.js"></script>
+
+		<script type="text/javascript">
+				
+		
+					$(function() {
+					console.log('carga datepicker');
+					//no funciona en el entorno ANGULARjs
+					$('#dateStart').datetimepicker({
+						language : 'es',
+						pickSeconds : false,
+						startDate: new Date()
+					});
+					$('#dateEnd').datetimepicker({
+						language : 'es',
+						pickSeconds : false,
+						startDate: new Date()
+							});
+					//Fecha de Finalizacion Obligatoria para poder crear evento en google calendar
+					$('#dateEnd').click( function(){
+						console.log('click on dateEnd');
+						if ($('#dateEnd').val()=='') {
+						$('#dateEnd').val($('#dateStart').val());
+						}
+					});	
+					
+					//funcionaria si la pagina se recargara. Hack temporal para evitar errores carga js. Disculpe las molestias :)
+					setTimeout(function() {
+							$(document).ready(function () {
+							    if(window.location.href.indexOf("event-edit") > -1) {
+							    	previewMap();
+							    }
+							});
+					}, 2000);
+					
+				});
+					
+		</script>
 </html>
