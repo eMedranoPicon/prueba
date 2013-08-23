@@ -3,8 +3,6 @@ var calendarToken;
 var jEvent = [];
 var jEventCalendar;
 
-
-
 function auth() {
 	var config = {
 		'client_id' : '785790985795-pf206je1417kten4jbd5funo77vlkuvf.apps.googleusercontent.com',
@@ -18,16 +16,11 @@ function auth() {
 	});
 	gapi.client.setApiKey('AIzaSyBXuLdZ43wnWNuBltblkukaj97WDfArpfE');
 
-	//inicializa gapi para angular en app.js
-	//window.init();
-/*
-	console.log('intentando cargar api');
-	var ROOT = 'https://sopragroupux.appspot.com/_ah/api';
-	gapi.client.load('evento', 'v5', function() {
-	  console.log('cargada api');
-	}, ROOT);
-
-	*/
+	/*
+	 console.log('intentando cargar api Lugar'); var ROOT =
+	 'https://sopragroupux.appspot.com/_ah/api'; gapi.client.load('lugar',
+	 'v1', function() { console.log('cargada api'); }, ROOT);*/
+	 
 }
 
 function loadGapi() {
@@ -68,9 +61,9 @@ function noenter(e) {
 
 /* Funcion de prueba para crear eventos */
 function jEvenBuilder() {
-	// AddressDetails -  Point location a retrieve lat and long.
+	// AddressDetails - Point location a retrieve lat and long.
 	previewMap();
-	//timeout to wait for response
+	// timeout to wait for response
 	setTimeout(function() {
 		var idEvent = document.getElementById("idEvent").value;
 
@@ -87,26 +80,27 @@ function jEvenBuilder() {
 		var urlEvent = document.getElementById("urlEvent").value;
 		var urlImg = document.getElementById("urlImg").value;
 
-		//address details
+		// address details
 
-		var street = localStorage.getItem('maps_stname')+' '+localStorage.getItem('maps_stnumber');
+		var street = localStorage.getItem('maps_stname') + ' '
+				+ localStorage.getItem('maps_stnumber');
 		if (street == 'undefined') {
-			street="";
+			street = "";
 		}
 		console.log(street);
 		var zipcode = localStorage.getItem('maps_zipcode');
 		if (zipcode == 'undefined') {
-			zipcode="";
+			zipcode = "";
 		}
 		console.log(zipcode);
 		var city = localStorage.getItem('maps_city');
 		if (city == 'undefined') {
-			city="";
+			city = "";
 		}
 		console.log(city);
 		var country = localStorage.getItem('maps_country');
 		if (country == 'undefined') {
-			country="";
+			country = "";
 		}
 		console.log(country);
 
@@ -114,8 +108,9 @@ function jEvenBuilder() {
 		var lat = localStorage.getItem('maps_latitude');
 		var long = localStorage.getItem('maps_longitude');
 
-		//formatted.
-		var address = [street, zipcode, city, country, completeAddress, lat, long];
+		// formatted.
+		var address = [ street, zipcode, city, country, completeAddress, lat,
+				long ];
 
 		jEvent = [ {
 			"name" : "audience",
@@ -178,10 +173,10 @@ function saveEvent(jEvent) {
 		success : function(data) {
 
 			$('#confirmaEvento').modal('show');
-			//creacion event en calendar en background.
+			// creacion event en calendar en background.
 			console.log("success -> creating calendar in the background");
 			localStorage.setItem('calendarId', data.id);
-			gapi.client.load('calendar', 'v3',createEventCalendar);
+			gapi.client.load('calendar', 'v3', createEventCalendar);
 
 		},
 		error : function(xhr, ajaxOptions, thrownError) {
@@ -227,5 +222,5 @@ function deleteEvent_notused(id) {
 
 /* Load al final */
 $(document).ready(function() {
-	
+
 });

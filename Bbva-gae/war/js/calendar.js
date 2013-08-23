@@ -1,4 +1,3 @@
-
 function createEventCalendar() {
 	// recogemos variables de localstorage
 	var tokenText = localStorage.getItem('calendarToken_local');
@@ -6,7 +5,7 @@ function createEventCalendar() {
 
 	var host = document.getElementById("host").value;
 
-	//address details	
+	// address details
 	var address = localStorage.getItem('maps_completeaddress');
 
 	var title = document.getElementById("title").value;
@@ -18,7 +17,7 @@ function createEventCalendar() {
 	String
 	dateEnd = document.getElementById("dateEnd").value;
 
-	var dateStartFormatted = ISODateString(dateStart); 
+	var dateStartFormatted = ISODateString(dateStart);
 	var dateEndFormatted = ISODateString(dateEnd);
 
 	jEventCalendar = {
@@ -30,7 +29,7 @@ function createEventCalendar() {
 		"end" : {
 			"dateTime" : dateEndFormatted
 		}
-	// "id" : idCalendar,  // Conexion
+	// "id" : idCalendar, // Conexion
 	// "htmlLink" : urlEvent
 	};
 
@@ -38,10 +37,10 @@ function createEventCalendar() {
 		'calendarId' : '72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com',
 		'resource' : jEventCalendar
 	});
-	request.execute(function(resp, status) {		
+	request.execute(function(resp, status) {
 		console.log(resp);
-		console.log('Respuesta guardado :'+status);
-	});	
+		console.log('Respuesta guardado :' + status);
+	});
 
 }
 
@@ -85,45 +84,44 @@ function ISODateString(stringDate) {
 			+ pad(d.getUTCMinutes()) + ':' + pad(d.getUTCSeconds()) + 'Z'
 }
 
-function validateDateRange(){
-	
+function validateDateRange() {
+
 	String
 	dateStart = document.getElementById("dateStart").value;
 	String
 	dateEnd = document.getElementById("dateEnd").value;
 
-	var dateStartFormatted = ISODateString(dateStart); 
+	var dateStartFormatted = ISODateString(dateStart);
 	var dateEndFormatted = ISODateString(dateEnd);
-	
-	if (dateStartFormatted<dateEndFormatted){
+
+	if (dateStartFormatted < dateEndFormatted) {
 		console.log('ok');
-		//$('#dateEndLabel').removeClass('error').addClass('valid');		
+		// $('#dateEndLabel').removeClass('error').addClass('valid');
 		$(":submit").removeAttr("disabled");
 	} else {
-		//$('#dateEndLabel').removeClass('valida').addClass('error');
+		// $('#dateEndLabel').removeClass('valida').addClass('error');
 		alert('fechas incorrectas');
 		$(":submit").attr("disabled", true);
 		console.log('error');
 	}
-	
+
 }
 
 /*
-jQuery.validator.addMethod("checkdates",function() {
-	
-	String
-	dateStart = document.getElementById("dateStart").value;
-	String
-	dateEnd = document.getElementById("dateEnd").value;
-
-	var dateStartFormatted = ISODateString(dateStart); 
-	var dateEndFormatted = ISODateString(dateEnd);
-	
-	if (dateStartFormatted<dateEndFormatted) return true
-	else return false;
-    //total = parseFloat($('#LHSOPERAND').val()) + parseFloat($('#RHSOPERAND').val());
-    
-    //return total == parseFloat($('#TOTAL').val());
-}, "Rango Fechas Incorrectas");
-
-$("#dateEnd").rules('add', checkdates{});*/
+ * jQuery.validator.addMethod("checkdates",function() {
+ * 
+ * String dateStart = document.getElementById("dateStart").value; String dateEnd =
+ * document.getElementById("dateEnd").value;
+ * 
+ * var dateStartFormatted = ISODateString(dateStart); var dateEndFormatted =
+ * ISODateString(dateEnd);
+ * 
+ * if (dateStartFormatted<dateEndFormatted) return true else return false;
+ * //total = parseFloat($('#LHSOPERAND').val()) +
+ * parseFloat($('#RHSOPERAND').val());
+ * 
+ * //return total == parseFloat($('#TOTAL').val()); }, "Rango Fechas
+ * Incorrectas");
+ * 
+ * $("#dateEnd").rules('add', checkdates{});
+ */

@@ -231,7 +231,7 @@
 				class="btn btn-primary">Aceptar</a>
 		</div>
 	</div>
-</body>
+
 <script type="text/javascript">
 	$(function() {
 		console.log('carga datepicker');
@@ -256,4 +256,5 @@
 		//newEventMap();
 	});
 </script>
+</body>
 </html>
