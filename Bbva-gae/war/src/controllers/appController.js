@@ -21,6 +21,7 @@ function appController($scope, $http, $routeParams, $timeout)
       $scope.showError = false;
       $scope.textError = "";
       $scope.is_backend_ready = true;
+
       $scope.events = data.items;
       //console.log('appController $scope.events:' +$scope.events)
     }).error(function(data, status)
@@ -47,7 +48,6 @@ function appController($scope, $http, $routeParams, $timeout)
       $scope.textStatusModal = "Evento " + idEvent + " eliminado correctamente.";
 
       $timeout(function() { $scope.deleteEventModal = false; }, 2500);
-
     }).
     error(function(data, status)
     {
@@ -56,7 +56,6 @@ function appController($scope, $http, $routeParams, $timeout)
       $scope.textStatusModal = "Error: No se ha borrado el evento. Por favor intentelo más tarde. {{ " + status + " }}";
 
       $timeout(function() { $scope.deleteEventModal = false; }, 4000);
-
     });
 
   };

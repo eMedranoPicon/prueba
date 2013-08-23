@@ -38,6 +38,22 @@ function EventEditController($scope, $http, $routeParams)
     }
 
 
+    $scope.$watch('myMap', function()
+    {
+        $scope.setHome();
+    });
+
+
+    $scope.setHome = function()
+    {
+        $scope.homeMarker = new google.maps.Marker(
+        {
+            map: $scope.myMap,
+            position: $scope.mapOptions.center
+        });
+    }
+
+
     function getEvent(idEvent)
     {
         //console.log('EventEditController getEvent $scope.events: '+$scope.events)
@@ -58,8 +74,7 @@ function EventEditController($scope, $http, $routeParams)
     }
 
 
-
-    $scope.upDateEvent = function(idEvent)
+    $scope.upDateEvent = function()
     {
         console.log('EventEditController upDateEvent $scope.indexEvent: '+$scope.indexEvent)
 
@@ -74,7 +89,6 @@ function EventEditController($scope, $http, $routeParams)
               $scope.showError = true;
         });
     }
-
 
 
 }
