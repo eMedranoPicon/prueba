@@ -30,6 +30,7 @@
 
 
   <jsp:include page="/libraries-angular.jsp"/>
+  <jsp:include page="/libraries-angular-places.jsp"/>
 
   <!-- Bloque de Librerias - libreriasjs -->
   <jsp:include page="/libraries-js.jsp" />

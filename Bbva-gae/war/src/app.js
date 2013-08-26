@@ -1,6 +1,6 @@
 //var app = angular.module('app', []);
 //para hacer uso de $resource debemos colocarlo al crear el modulo
-var app = angular.module("app", ['ui.bootstrap']);
+var app = angular.module("app", ['ui.bootstrap','ui.map','ui.event']);
 
 //definimos las rutas de la 'app'
 app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider)
@@ -105,15 +105,3 @@ if (!Array.prototype.indexOf)
 	};
 }
 */
-/*
-  var app = angular.module('angular-auth-demo', ['http-auth-interceptor']);
-
-app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
-
-    $httpProvider.defaults.useXDomain = true;
-    delete $httpProvider.defaults.headers.common['X-Requested-With'];
-
-    $routeProvider.
-        when('/home', { templateUrl: 'partial-content.html', controller: 'ContentController' }).
-        otherwise({ redirectTo: '/home' });
-}]);*/

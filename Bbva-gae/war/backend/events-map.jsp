@@ -15,7 +15,7 @@
 %>
 <!DOCTYPE html>
 
-<html lang="es" ng-app="app">
+<html lang="es">
 <head>
 <title>backend - events:: BBVA in cloud</title>
 <meta charset="utf-8">
@@ -36,9 +36,7 @@
     <![endif]-->
 
 
-<!--jsp:include page="/libraries-angular.jsp"/-->
 
-<!-- Bloque de Librerias - libreriasjs -->
 <jsp:include page="/libraries-js.jsp" />
 <script
 	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>

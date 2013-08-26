@@ -5,6 +5,7 @@ function appController($scope, $http, $routeParams, $timeout)
   $scope.is_backend_ready = false;
   $scope.textTitle = "Listado de eventos";
   $scope.errorModal = false;
+  $scope.showEditLayout = false;
 
   $scope.orderField = "dateStart";
   $scope.orderReverse = "true";

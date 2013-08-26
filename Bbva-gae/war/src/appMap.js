@@ -1,12 +1,14 @@
-
-
-
 //Add the requried module 'angular-ui' as a dependency
-angular.module('maptesting', ['ui.map','ui.event']);
+var maptesting = angular.module('maptesting', ['ui.map','ui.event']);
 
-function MapCtrl($scope)
+
+maptesting.controller('MapCtrl', ['$scope', function ($scope)
 {
+
+	console.log('appMapCtrl');
+
     var ll = new google.maps.LatLng(13.0810, 80.2740);
+
     $scope.mapOptions = {
         center: ll,
         zoom: 15,
@@ -31,29 +33,4 @@ function MapCtrl($scope)
         window.alert("clicked");
     };
 
-}
-
-/*
-function onGoogleReady()
-{
-	angular.bootstrap(document.getElementById("map"), ['ui.map','ui.event']);
-}
-
-var appMaps = angular.module('appMaps', ['ui.map','ui.event']);
-
-appMaps.controller('MapCtrl', ['$scope', function ($scope) {
-
-
-    $scope.mapOptions = {
-      center: new google.maps.LatLng(35.784, -78.670),
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-
-     $scope.homeMarker = new google.maps.Marker({
-    map: $scope.myMap,
-    position: $scope.mapOptions.center
-  });
-
-  }]);
-  */
+}]);
