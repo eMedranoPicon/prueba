@@ -6,8 +6,10 @@ function EventEditMapController($scope,$rootScope,sharedService)
     $scope.myMarkers = [];
     $scope.latitud = 0;
     $scope.longitud = 0;
+    var LATITUDE_DEFAULT = 40.416949;
+    var LONGITUDE_DEFAULT =  -3.703347;
 
-    var ll = new google.maps.LatLng(0, 0);
+    var ll = new google.maps.LatLng(LATITUDE_DEFAULT, LONGITUDE_DEFAULT);
 
     $scope.mapOptions = {
         center: ll,
@@ -37,13 +39,13 @@ function EventEditMapController($scope,$rootScope,sharedService)
 
     function upDateMap(lat, lon)
     {
-        llUpdate = new google.maps.LatLng(lat,lon);
+        var llUpdate = new google.maps.LatLng(lat,lon);
 
         console.log('upDateMap '+ lat + '  '+ lon);
 
         $scope.myMap.setCenter(llUpdate);
+        removeAllMarkers();
         addMarker(llUpdate);
-
     }
 
 
@@ -65,6 +67,33 @@ function EventEditMapController($scope,$rootScope,sharedService)
     }
 
 
+    function calcLatLon(calle,cp,ciudad,pais)
+    {
+      var address = calle + "," +cp+","+ciudad+","+pais;
+      console.log('address:'+address);
+      geocoder = new google.maps.Geocoder();
+
+      geocoder.geocode
+       (
+          {
+            'address' : address
+          },
+          function(results, status)
+          {
+              if (status == google.maps.GeocoderStatus.OK)
+              {
+                  console.log('calcLatLon:' + results[0].geometry.location);
+                  upDateMap(results[0].geometry.location.mb,results[0].geometry.location.nb)
+              }
+              else
+              {
+                console.log("Geocode was not successful for the following reason: " + status);
+              }
+          }
+        );
+    }
+
+
     $scope.$on('handleBroadcast', function()
     {
         $scope.latitud = sharedService.latitud;
@@ -75,16 +104,17 @@ function EventEditMapController($scope,$rootScope,sharedService)
         $scope.paisBdc = sharedService.paisBdc;
 
         //upDateMap($scope.latitud,$scope.longitud);
-
-        console.log('sharedService en EventEditMapController datos: '+ $scope.latitud + ' ' + $scope.longitud + ' calle: ' + $scope.calleBdc+ ' cpBdc: ' + $scope.cpBdc+ ' ciudadBdc: ' + $scope.ciudadBdc+ ' paisBdc: ' + $scope.paisBdc);
+        console.log('LANZADO EVENTO DESDE EL CLICK');
+        calcLatLon($scope.calleBdc,$scope.cpBdc,$scope.ciudadBdc,$scope.paisBdc);
+        //console.log('sharedService en EventEditMapController datos: '+ $scope.latitud + ' ' + $scope.longitud + ' calle: ' + $scope.calleBdc+ ' cpBdc: ' + $scope.cpBdc+ ' ciudadBdc: ' + $scope.ciudadBdc+ ' paisBdc: ' + $scope.paisBdc);
     });
 
 
     $scope.$watch('latitud', function()
     {
-      console.log('watch latitud: '+sharedService.latitud);
-      console.log('watch longitud: '+sharedService.longitud);
-      upDateMap(sharedService.latitud,sharedService.longitud);
+        console.log('watch latitud: en EvenEditController: '+ sharedService.latitud + ' ' + sharedService.longitud + ' calle: ' + sharedService.calleBdc+ ' cpBdc: ' + sharedService.cpBdc+ ' ciudadBdc: ' + sharedService.ciudadBdc+ ' paisBdc: ' + sharedService.paisBdc);
+        //upDateMap(sharedService.latitud,sharedService.longitud);
+        calcLatLon(sharedService.calleBdc,sharedService.cpBdc,sharedService.ciudadBdc,sharedService.paisBdc);
     });
 
     //var myLatlngIni = new google.maps.LatLng(LATITUDE_DEFAULT,LONGITUDE_DEFAULT);
