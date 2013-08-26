@@ -8,7 +8,7 @@ function appControllerPlaces($scope, $http, $routeParams)
   $scope.orderField = "namePlace";
   $scope.orderReverse = "true";
 
-  console.log('appControllerPlaces');
+  console.log('appControllerPlaces - 1');
 
   $http.get('https://sopragroupux.appspot.com/_ah/api/place/v1/place/').success(function(data)
   {
@@ -38,7 +38,7 @@ function appControllerPlaces($scope, $http, $routeParams)
     }).
     error(function(data, status)
     {
-      alert("Refresh table. User already deleted.");
+      alert("Refresh table. Entry deleted.");
     });
   };
 

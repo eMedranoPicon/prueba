@@ -12,18 +12,27 @@ public class Place {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	private Long id;
+	@Persistent
 	private String namePlace;
+	@Persistent
 	private String typePlace;
-	private Address address;
+	@Persistent
 	private String description;
-	private Contact contact; // {Nombre Completo - Email}
+	@Persistent
 	private String creator;
+	
+	
+	@Persistent(defaultFetchGroup = "true")
+	private Address address;	
+	@Persistent(defaultFetchGroup = "true")
+	private Contact contact;
 	
 	
 	public Place() {
 		super();
 	}
-
+	
+	
 
 	public Place(String namePlace, String typePlace, Address address,
 			String description, Contact contact, String creator) {

@@ -1,31 +1,45 @@
 package sopra.ux.gae;
 
+import javax.jdo.annotations.IdGeneratorStrategy;
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.PrimaryKey;
+
+import com.google.appengine.api.datastore.Key;
+
+import sopra.ux.gae.Place;
+
+@PersistenceCapable
 public class Address {
 	
+	@PrimaryKey
+    @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+    private Key key;
+	@Persistent
 	private String street;
+	@Persistent
 	private String zipcode;
+	@Persistent
 	private String city;
+	@Persistent
 	private String country;
+	@Persistent
 	private String fullAddress;
+	@Persistent
 	private String latitude;
+	@Persistent
 	private String longitud;
 	
-		
-	public Address(){
-		super();
-	}
-		
+	@Persistent(mappedBy = "address")
+    private Place place;
 	
-	public Address(String street, String zipcode, String city, String country,
-			String fullAddress, String latitude, String longitud) {
-		super();
-		this.street = street;
-		this.zipcode = zipcode;
-		this.city = city;
-		this.country = country;
-		this.fullAddress = fullAddress;
-		this.latitude = latitude;
-		this.longitud = longitud;
+	public Key getKey() {
+		return key;
+	}
+
+
+	public void setKey(Key key) {
+		this.key = key;
 	}
 
 
@@ -73,7 +87,31 @@ public class Address {
 	public void setLongitud(String longitud) {
 		this.longitud = longitud;
 	}
-	
-	
 
+	public Place getPlace() {
+		return place;
+	}
+
+	public void setPlace(Place place) {
+		this.place = place;
+	}
+
+
+	public Address(String street, String zipcode, String city, String country,
+			String fullAddress, String latitude, String longitud, Place place) {
+		super();
+		this.street = street;
+		this.zipcode = zipcode;
+		this.city = city;
+		this.country = country;
+		this.fullAddress = fullAddress;
+		this.latitude = latitude;
+		this.longitud = longitud;
+	}
+	
+	public Address() {
+		super();
+	}
+	
+	
 }

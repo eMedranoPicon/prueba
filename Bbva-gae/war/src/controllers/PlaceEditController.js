@@ -8,12 +8,8 @@ function PlaceEditController($scope, $http, $routeParams)
     $scope.showError = false;
     $scope.textError = "";
     $scope.is_backend_ready = false;
-    $scope.textTitle = "Editar lugar de interés";
+    $scope.textTitle = "Editar lugar de interes";  
 
-    console.log('PlaceEditController');
-    //$scope.place = null;
-
-/*
     if (angular.isUndefined($scope.places))
     {
         console.log('recargar el scope');
@@ -28,7 +24,7 @@ function PlaceEditController($scope, $http, $routeParams)
 
         }).error(function(data, status)
         {
-              $scope.textError = "Error al cargar los datos. Por favor, intentalo más tarde";
+              $scope.textError = "Error al cargar los datos. Por favor, intentalo mas tarde";
               $scope.is_backend_ready = false;
               $scope.showError = true;
         });
@@ -53,20 +49,16 @@ function PlaceEditController($scope, $http, $routeParams)
         }
         else {
             $scope.showError = true;
-            $scope.textError = "Lugar de Interés" + idPlace + "no encontrado";
+            $scope.textError = "Lugar de Interes" + idPlace + "no encontrado";
         }
-    }*/
+    }
 
-
-    $scope.place = {};
-
-    $scope.savePlace = function()
+    $scope.updateEvent = function()
     {
 
     	console.log('EventPlaceController updasavePlacetePlace $scope.place: '+$scope.place)
 
-
-        $http.post('https://sopragroupux.appspot.com/_ah/api/place/v1/place', $scope.place).success(function()
+        $http.put('https://sopragroupux.appspot.com/_ah/api/place/v1/place', $scope.place).success(function()
         {
             console.log('Guardando');
             $('#confirmaPlace').modal('show');

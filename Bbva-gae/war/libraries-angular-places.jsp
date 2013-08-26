@@ -4,5 +4,6 @@
 <script src="/src/appPlace.js"></script>
 <script src="/src/controllers/appControllerPlaces.js"></script>
 <script src="/src/controllers/PlaceEditController.js"></script>
+<script src="/src/controllers/PlaceInsertController.js"></script>
 
 <!-- EO libraries-angular-places.jsp-->
