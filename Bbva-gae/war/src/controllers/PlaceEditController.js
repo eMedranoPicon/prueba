@@ -9,9 +9,11 @@ function PlaceEditController($scope, $http, $routeParams)
     $scope.textError = "";
     $scope.is_backend_ready = false;
     $scope.textTitle = "Editar lugar de interés";
-    $scope.place = null;
 
+    console.log('PlaceEditController');
+    //$scope.place = null;
 
+/*
     if (angular.isUndefined($scope.places))
     {
         console.log('recargar el scope');
@@ -53,14 +55,16 @@ function PlaceEditController($scope, $http, $routeParams)
             $scope.showError = true;
             $scope.textError = "Lugar de Interés" + idPlace + "no encontrado";
         }
-    }
+    }*/
 
+
+    $scope.place = {};
 
     $scope.savePlace = function()
     {
-        
-    	console.log('EventPlaceController updatePlace $scope.indexPlace: '+$scope.indexPlace)
-        
+
+    	console.log('EventPlaceController updasavePlacetePlace $scope.place: '+$scope.place)
+
 
         $http.post('https://sopragroupux.appspot.com/_ah/api/place/v1/place', $scope.place).success(function()
         {
