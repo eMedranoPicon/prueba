@@ -14,7 +14,7 @@ appPlace.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 	}).
 	when('/place-new/', {
 		templateUrl: '/src/views/places/place-edit-layout.html',
-		controller: PlaceEditController
+		controller: PlaceInsertController
 	}).
 
 	  //cualquier ruta no definida

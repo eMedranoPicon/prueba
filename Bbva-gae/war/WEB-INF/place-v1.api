@@ -4,7 +4,7 @@
   "root" : "https://sopragroupux.appspot.com/_ah/api",
   "name" : "place",
   "version" : "v1",
-  "description" : "BBVA - Lugar API",
+  "description" : "BBVA - Place API",
   "defaultVersion" : false,
   "adapter" : {
     "bns" : "https://sopragroupux.appspot.com/_ah/spi",
@@ -139,17 +139,17 @@
           "typePlace" : {
             "type" : "string"
           },
-          "address" : {
-            "$ref" : "Address"
-          },
           "description" : {
             "type" : "string"
           },
-          "contact" : {
-            "$ref" : "Contact"
-          },
           "creator" : {
             "type" : "string"
+          },
+          "address" : {
+            "$ref" : "Address"
+          },
+          "contact" : {
+            "$ref" : "Contact"
           }
         }
       },
@@ -157,6 +157,9 @@
         "id" : "Address",
         "type" : "object",
         "properties" : {
+          "key" : {
+            "$ref" : "Key"
+          },
           "street" : {
             "type" : "string"
           },
@@ -177,6 +180,37 @@
           },
           "longitud" : {
             "type" : "string"
+          },
+          "place" : {
+            "$ref" : "Place"
+          }
+        }
+      },
+      "Key" : {
+        "id" : "Key",
+        "type" : "object",
+        "properties" : {
+          "kind" : {
+            "type" : "string"
+          },
+          "appId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "parent" : {
+            "$ref" : "Key"
+          },
+          "complete" : {
+            "type" : "boolean"
+          },
+          "namespace" : {
+            "type" : "string"
           }
         }
       },
@@ -184,11 +218,17 @@
         "id" : "Contact",
         "type" : "object",
         "properties" : {
+          "key" : {
+            "$ref" : "Key"
+          },
           "name" : {
             "type" : "string"
           },
           "email" : {
             "type" : "string"
+          },
+          "place" : {
+            "$ref" : "Place"
           }
         }
       },
