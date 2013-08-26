@@ -30,6 +30,7 @@ function EventEditMapController($scope,$rootScope,sharedService)
             $scope.myMarkers = [marker, ];
         }
 
+        //hace que se ejecuten los watch
         $scope.$digest();
     };
 
@@ -68,10 +69,14 @@ function EventEditMapController($scope,$rootScope,sharedService)
     {
         $scope.latitud = sharedService.latitud;
         $scope.longitud = sharedService.longitud;
+        $scope.calleBdc = sharedService.calleBdc;
+        $scope.cpBdc = sharedService.cpBdc;
+        $scope.ciudadBdc = sharedService.ciudadBdc;
+        $scope.paisBdc = sharedService.paisBdc;
 
         //upDateMap($scope.latitud,$scope.longitud);
 
-        console.log('sharedService en EventEditMapController datos: '+ $scope.latitud + ' ' + $scope.longitud);
+        console.log('sharedService en EventEditMapController datos: '+ $scope.latitud + ' ' + $scope.longitud + ' calle: ' + $scope.calleBdc+ ' cpBdc: ' + $scope.cpBdc+ ' ciudadBdc: ' + $scope.ciudadBdc+ ' paisBdc: ' + $scope.paisBdc);
     });
 
 
@@ -82,6 +87,7 @@ function EventEditMapController($scope,$rootScope,sharedService)
       upDateMap(sharedService.latitud,sharedService.longitud);
     });
 
+    //var myLatlngIni = new google.maps.LatLng(LATITUDE_DEFAULT,LONGITUDE_DEFAULT);
 
 
 }

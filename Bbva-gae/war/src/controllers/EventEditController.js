@@ -50,7 +50,7 @@ function EventEditController($scope, $http, $routeParams, $rootScope, sharedServ
         if ($scope.indexEvent != -1)
         {
             $scope.event = $scope.events[$scope.indexEvent];
-            sharedService.prepForBroadcast($scope.event.address[5],$scope.event.address[6]);
+            sharedService.prepForBroadcast($scope.event.address[5],$scope.event.address[6],$scope.event.address[0]);
 
             //console.log('EventEditController getEvent $scope.event: '+$scope.event)
         }
@@ -58,23 +58,7 @@ function EventEditController($scope, $http, $routeParams, $rootScope, sharedServ
             $scope.showError = true;
             $scope.textError = "Evento" + idEvent + "no encontrado";
         }
-
-
     }
-
-    $scope.handleClick = function(lat,lon)
-    {
-        sharedService.prepForBroadcast(lat,lon);
-    };
-
-
-    $scope.$on('handleBroadcast', function()
-    {
-        $scope.latitud = sharedService.latitud;
-        $scope.longitud = sharedService.longitud;
-
-        console.log('sharedService datos: '+ $scope.latitud + ' ' + $scope.longitud);
-    });
 
 
     //Actualiza el envento enviado en el formulario
@@ -93,6 +77,25 @@ function EventEditController($scope, $http, $routeParams, $rootScope, sharedServ
               $scope.showError = true;
         });
     }
+
+
+    $scope.handleClick = function(lat,lon,calle,cp,ciudad,pais)
+    {
+        sharedService.prepForBroadcast(lat,lon,calle,cp,ciudad,pais);
+    };
+
+
+    $scope.$on('handleBroadcast', function()
+    {
+        $scope.latitud = sharedService.latitud;
+        $scope.longitud = sharedService.longitud;
+        $scope.calleBdc = sharedService.calleBdc;
+        $scope.cpBdc = sharedService.cpBdc;
+        $scope.ciudadBdc = sharedService.ciudadBdc;
+        $scope.paisBdc = sharedService.paisBdc;
+
+        console.log('sharedService en EvenEditController datos: '+ $scope.latitud + ' ' + $scope.longitud + ' calle: ' + $scope.calleBdc+ ' cpBdc: ' + $scope.cpBdc+ ' ciudadBdc: ' + $scope.ciudadBdc+ ' paisBdc: ' + $scope.paisBdc);
+    });
 
 
 }
