@@ -11,50 +11,38 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 	$routeProvider.when('/event-edit/:id', {
 		templateUrl: '/src/views/events/event-edit-layout.html',
 		controller: EventEditController
-	}).
-
-
-/*
-	  when('/events', {
-		  templateUrl: '/src/views/events/events-list.html',
-		  controller: EventsListController
-		  }).
-
-	  //mediante dos puntos (:) definimos un parámetro
-	  when('/event/:id', {
-		  templateUrl: '/src/views/events/event.html',
-		  controller: EventDetailController
-		  }).
-
-	  when('/events-table-list', {
-		  templateUrl: '/src/views/events/events-list-table.html',
-		  controller: EventsListController
-		  }).
-
-	 //mediante dos puntos (:) definimos un parámetro
-	 when('/event-edit/', {
-		  redirectTo: '/events'
-		  }).
-*/
-	 //mediante dos puntos (:) definimos un parámetro
-	/* when('/event-edit/:id', {
-		  templateUrl: '/src/views/events/event-edit-layout.html',
-		  controller: EventEditController
-		  }).*/
-
-
-	  //cualquier ruta no definida
-	  otherwise({
-		   templateUrl: '/src/views/events/events-list-table.html',
-		  controller: appController
-
-		});
-
-	 /*  otherwise({
-		  redirectTo: '/events'});*/
-
+	})
+	//cualquier ruta no definida
+	.otherwise({
+		templateUrl: '/src/views/events/events-list-table.html',
+		controller: appController
+	});
+	//otherwise({ redirectTo: '/events'});
 
 }]);
+
+app.factory('mySharedService', function($rootScope)
+{
+    var sharedService = {};
+
+    sharedService.latitud = '';
+    sharedService.longitud = '';
+
+    sharedService.prepForBroadcast = function(lat,lon)
+    {
+        this.latitud = lat;
+        this.longitud = lon;
+        this.broadcastItem();
+    };
+
+    sharedService.broadcastItem = function()
+    {
+        $rootScope.$broadcast('handleBroadcast');
+    };
+
+    return sharedService;
+});
+
 
 
 function findIndexById(id,arrayList)

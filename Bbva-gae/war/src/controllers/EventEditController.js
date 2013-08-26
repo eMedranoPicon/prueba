@@ -3,7 +3,7 @@
 * Controlador de edicion de Eventos
 */
 
-function EventEditController($scope, $http, $routeParams)
+function EventEditController($scope, $http, $routeParams, sharedService)
 {
     $scope.showError = false;
     $scope.textError = "";
@@ -56,7 +56,22 @@ function EventEditController($scope, $http, $routeParams)
             $scope.showError = true;
             $scope.textError = "Evento" + idEvent + "no encontrado";
         }
+
+
     }
+
+    $scope.handleClick = function(lat,lon)
+    {
+        sharedService.prepForBroadcast(lat,lon);
+    };
+
+    $scope.$on('handleBroadcast', function()
+    {
+        $scope.latitud = sharedService.latitud;
+        $scope.longitud = sharedService.longitud;
+
+        console.log('sharedService datos'+ $scope.latitud)
+    });
 
 
     //Actualiza el envento enviado en el formulario
@@ -75,49 +90,6 @@ function EventEditController($scope, $http, $routeParams)
               $scope.showError = true;
         });
     }
-
-
-    $scope.$watch('myMap', function()
-    {
-        $scope.setHome();
-        $scope.showEditLayout = true;
-    });
-
-
-    $scope.setHome = function()
-    {
-        console.log('visible myMap setHome')
-
-        var ll = new google.maps.LatLng(13.0810, 80.2740);
-
-        $scope.mapOptions = {
-        center: ll,
-        zoom: 15,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-
-    }
-
-
-
-
-    //Markers should be added after map is loaded
-    $scope.onMapIdle = function()
-    {
-        if ($scope.myMarkers === undefined)
-        {
-            var marker = new google.maps.Marker({
-                map: $scope.myMap,
-                position: ll
-            });
-            $scope.myMarkers = [marker, ];
-        }
-    };
-
-    $scope.markerClicked = function(m)
-    {
-        window.alert("clicked");
-    };
 
 
 }
