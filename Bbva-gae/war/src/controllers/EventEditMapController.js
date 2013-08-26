@@ -69,21 +69,17 @@ function EventEditMapController($scope,$rootScope,sharedService)
         $scope.latitud = sharedService.latitud;
         $scope.longitud = sharedService.longitud;
 
-        upDateMap($scope.latitud,$scope.longitud);
+        //upDateMap($scope.latitud,$scope.longitud);
 
         console.log('sharedService en EventEditMapController datos: '+ $scope.latitud + ' ' + $scope.longitud);
     });
 
-/*
-    $scope.$watch("$scope.latitud",function(){
-     console.log('$scope.latitud');
-      upDateMap($scope.latitud,$scope.longitud)
 
-    });
-*/
-    $scope.$watch('latitud', function() {
-      console.log('watch latitud');
-      upDateMap($scope.latitud,$scope.longitud);
+    $scope.$watch('latitud', function()
+    {
+      console.log('watch latitud: '+sharedService.latitud);
+      console.log('watch longitud: '+sharedService.longitud);
+      upDateMap(sharedService.latitud,sharedService.longitud);
     });
 
 
