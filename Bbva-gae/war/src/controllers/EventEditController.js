@@ -3,7 +3,7 @@
 * Controlador de edicion de Eventos
 */
 
-function EventEditController($scope, $http, $routeParams, sharedService)
+function EventEditController($scope, $http, $routeParams, $rootScope, sharedService)
 {
     $scope.showError = false;
     $scope.textError = "";
@@ -50,6 +50,8 @@ function EventEditController($scope, $http, $routeParams, sharedService)
         if ($scope.indexEvent != -1)
         {
             $scope.event = $scope.events[$scope.indexEvent];
+            sharedService.prepForBroadcast($scope.event.address[5],$scope.event.address[6]);
+
             //console.log('EventEditController getEvent $scope.event: '+$scope.event)
         }
         else {
@@ -65,12 +67,13 @@ function EventEditController($scope, $http, $routeParams, sharedService)
         sharedService.prepForBroadcast(lat,lon);
     };
 
+
     $scope.$on('handleBroadcast', function()
     {
         $scope.latitud = sharedService.latitud;
         $scope.longitud = sharedService.longitud;
 
-        console.log('sharedService datos'+ $scope.latitud)
+        console.log('sharedService datos: '+ $scope.latitud + ' ' + $scope.longitud);
     });
 
 

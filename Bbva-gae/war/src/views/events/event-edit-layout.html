@@ -17,9 +17,6 @@
         <!--In addition to creating the markers on the map, div elements with existing google.maps.Marker object should be created to hook up with events -->
         <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]" ui-event="{'map-click': 'markerClicked(marker)'}"></div>
     </div>
-
-
-     <pre>rootScope -> {{rootScope | json}}</pre>
     <!-- EO google maps -->
 
     <!-- calendar -->
