@@ -19,6 +19,10 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 	});
 	//otherwise({ redirectTo: '/events'});
 
+	EventEditController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', 'mySharedService'];
+	EventEditMapController.$inject = ['$scope', '$rootScope', 'mySharedService'];
+
+
 }]);
 
 app.factory('mySharedService', function($rootScope)
@@ -27,11 +31,19 @@ app.factory('mySharedService', function($rootScope)
 
     sharedService.latitud = '';
     sharedService.longitud = '';
+    sharedService.calleBdc = '';
+    sharedService.cpBdc = '';
+    sharedService.ciudadBdc = '';
+    sharedService.paisBdc = '';
 
-    sharedService.prepForBroadcast = function(lat,lon)
+    sharedService.prepForBroadcast = function(lat,lon,calle,cp,ciudad,pais)
     {
         this.latitud = lat;
         this.longitud = lon;
+        this.calleBdc = calle;
+        this.cpBdc = cp;
+        this.ciudadBdc = ciudad;
+        this.paisBdc = pais;
         this.broadcastItem();
     };
 
