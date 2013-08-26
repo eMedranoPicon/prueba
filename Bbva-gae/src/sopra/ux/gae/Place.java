@@ -1,7 +1,5 @@
 package sopra.ux.gae;
 
-import java.util.List;
-
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;
@@ -16,9 +14,9 @@ public class Place {
 	private Long id;
 	private String namePlace;
 	private String typePlace;
-	private List<String> address;
+	private Address address;
 	private String description;
-	private List<String> contact; // {Nombre Completo - Email}
+	private Contact contact; // {Nombre Completo - Email}
 	private String creator;
 	
 	
@@ -27,8 +25,8 @@ public class Place {
 	}
 
 
-	public Place(String namePlace, String typePlace, List<String> address,
-			String description, List<String> contact, String creator) {
+	public Place(String namePlace, String typePlace, Address address,
+			String description, Contact contact, String creator) {
 		super();
 		this.namePlace = namePlace;
 		this.typePlace = typePlace;
@@ -69,12 +67,12 @@ public class Place {
 	}
 
 
-	public List<String> getAddress() {
+	public Address getAddress() {
 		return address;
 	}
 
 
-	public void setAddress(List<String> address) {
+	public void setAddress(Address address) {
 		this.address = address;
 	}
 
@@ -89,12 +87,12 @@ public class Place {
 	}
 
 
-	public List<String> getContact() {
+	public Contact getContact() {
 		return contact;
 	}
 
 
-	public void setContact(List<String> contact) {
+	public void setContact(Contact contact) {
 		this.contact = contact;
 	}
 
@@ -107,8 +105,4 @@ public class Place {
 	public void setCreator(String creator) {
 		this.creator = creator;
 	}
-	
-		
-	
-	
 }

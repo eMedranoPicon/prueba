@@ -77,8 +77,8 @@
             <div class="container-data pull-right">
               <!--<p> Desde aquí podrás gestionar tus lugares de interés:</p>-->
               <ul class="decorated-list">
-                <li><a href="/backend/places-app.jsp#/places-edit-layout">Dar de <strong>alta</strong> un lugar de interés</a></li>
-                <li><a href="/backend/places-app.jsp#/places-table-list"><strong>Listar/Editar/Borrar</strong> lugares de interés</a></li>
+                <li><a href="/backend/places-app.jsp#/place-new"">Dar de <strong>alta</strong> un lugar de interés</a></li>
+                <li><a href="/backend/places-app.jsp"><strong>Listar/Editar/Borrar</strong> lugares de interés</a></li>
                 <li><a href="#">Localizar lugares de interés en Google <strong>Maps</strong></a></li>
               </ul>
             </div>

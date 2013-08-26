@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <div class="container-fluid">
 
     <div class="row-fluid">
@@ -31,7 +32,7 @@
                     <th>Nombre Lugar</th>
                     <th>Tipo Lugar</th>
                     <th>Descripcion</th>
-                    <th>Dirección del evento</th>
+                    <th>DirecciÃ³n del evento</th>
                     <th>Datos Contacto</th>
                     <th>Id interno</th>
                     <th>Acciones</th>
@@ -51,8 +52,8 @@
                     <td>{{obj.namePlace}}</td>
                     <td>{{obj.typePlace}}</td>
                     <td class="wrapword">{{obj.description}}</td>
-                    <td class="wrapword">{{obj.address[4]}}</td>
-                    <td class="wrapword">{{obj.contact}}</td>
+                    <td class="wrapword">{{obj.address.fullAddress}}</td>
+                    <td class="wrapword">{{obj.contact.mame}}</td>
                     <td>{{obj.id}}</td>
                     <td>
                         <div class="group-buttons-table">

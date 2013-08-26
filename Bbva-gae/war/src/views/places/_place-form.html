@@ -8,6 +8,7 @@
     <input type="hidden" id="idEvent" value="{{event.id}}">
     <input type="hidden" id="host" value="<%=user.getEmail()%>">-->
     <!-- End -->
+    <meta charset="utf-8">
     <div class="control-group">
         <label class="control-label" for="namePlace">Nombre Lugar</label>
         <div class="controls">
@@ -26,28 +27,28 @@
          <div class="control-group">
             <label class="control-label" for="address">Dirección</label>
             <div class="controls">
-                <input type="text" id="street" name="street" placeholder="" ng-model="place.address[0]" >
+                <input type="text" id="street" name="street" placeholder="" ng-model="place.address.street" >
             </div>
         </div>
 
         <div class="control-group">
             <label class="control-label" for="zipcode">Código Postal</label>
             <div class="controls">
-                <input type="text" id="zipcode" name="zipcode" placeholder=""  ng-model="place.address[1]">
+                <input type="text" id="zipcode" name="zipcode" placeholder=""  ng-model="place.address.zipcode">
             </div>
         </div>
 
         <div class="control-group">
             <label class="control-label" for="city">Ciudad</label>
             <div class="controls">
-                <input type="text" id="city" name="city" placeholder="" ng-model="place.address[2]">
+                <input type="text" id="city" name="city" placeholder="" ng-model="place.address.city">
             </div>
         </div>
 
         <div class="control-group">
             <label class="control-label" for="country">País</label>
             <div class="controls">
-                <input type="text" id="country" name="country" placeholder="" ng-model="place.address[3]" >
+                <input type="text" id="country" name="country" placeholder="" ng-model="place.address.country" >
             </div>
         </div>
 
@@ -71,20 +72,20 @@
      <div class="control-group">
         <label class="control-label" for="contactName">Persona de Contacto </label>
         <div class="controls">
-            <input type="text" id="contactName" name="contactName" ng-model="place.contact[0]"   />
+            <input type="text" id="contactName" name="contactName" ng-model="place.contact.name"   />
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="typePlace">Email de Contacto</label>
         <div class="controls">
-            <input type="text" id="contactEmail" name="contactEmail" ng-model="place.contact[1]"   />
+            <input type="text" id="contactEmail" name="contactEmail" ng-model="place.contact.email"   />
         </div>
     </div>
 	</fieldset>    
 
     <div class="control-group">
         <div class="controls">
-            <button type="submit" class="btn btn-primary ">Actualizar Evento</button>
+            <button type="submit" class="btn btn-primary ">Guardar Lugar</button>
         </div>
     </div>
 
