@@ -9918,6 +9918,7 @@ h3.headerPage {
   padding: 10px;
   border: 1px solid #dbdcdf;
   margin-bottom: 20px;
+  min-height: 220px;
   *zoom: 1;
 }
 /* line 15, ../sass/vendor/bst.2.3.2/_mixins.scss */
@@ -9954,8 +9955,9 @@ ol.decorated-list {
   *zoom: 1;
   list-style-type: disc;
   list-style-image: url(/img/bullet-square.png);
-  list-style-position: inside;
+  list-style-position: outside;
   margin: 10px 0 10px 0;
+  padding-left: 20px;
 }
 /* line 15, ../sass/vendor/bst.2.3.2/_mixins.scss */
 ul.decorated-list:before, ul.decorated-list:after,
@@ -9981,6 +9983,11 @@ ol.decorated-list li a {
   width: 100%;
   height: 360px;
   margin-bottom: 20px;
+}
+
+/* line 65, ../sass/partials/_layout.scss */
+.list-events-home .span12:nth-child(2n+1) {
+  margin-left: 0;
 }
 
 /* line 2, ../sass/partials/_backend.scss */

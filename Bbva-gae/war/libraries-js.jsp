@@ -1,9 +1,8 @@
 <!-- liberias-js -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
 <!--
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
--->
 <script src="/js/lib/jquery-1.10.2.js" type="text/javascript"></script>
-
+-->
 <script src="/js/lib/bootstrap/bootstrap.min.js"></script>
 <!--
 <script src="/js/lib/bootstrap/bootstrap-collapse.js"></script>

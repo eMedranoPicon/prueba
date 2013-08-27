@@ -45,10 +45,6 @@
   <jsp:include page="/content/common/navbar.jsp"/>
   <!-- EO include navbar.jsp -->
 
-  <!-- include carousel.html -->
-  <jsp:include page="/content/common/carousel.html"/>
-  <!-- EO include carousel.html -->
-
   <!-- include events-home.html -->
   <section class="section-page">
     <header class="header-section">
@@ -58,19 +54,16 @@
     <div class="container-fluid">
       <div class="row-fluid">
 
-        <div class="span12">
-
+        <div class="span16">
           <div class="row-fluid">
-
-            <jsp:include page="/src/views/events/front/events-list-home.html"/>
-
+            <jsp:include page="/src/views/events/front/events-list.html"/>
           </div>
-
-
         </div>
 
-        <div class="span12">
-          <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=72o4s6adl0uhbebjssl4dpraeo%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=Europe%2FMadrid" style=" border-width:0 " width="100%" height="400px" frameborder="0" scrolling="no"></iframe>
+        <div class="span8">
+          <div class="row-fluid">
+
+          </div>
         </div>
 
       </div>
