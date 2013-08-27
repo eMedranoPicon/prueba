@@ -21,7 +21,6 @@ function EventEditController($scope, $http, $routeParams, $rootScope, sharedServ
             $scope.textError = "";
             $scope.is_backend_ready = true;
             $scope.events = data.items;
-            //console.log('EventEditController recargar el scope $scope.events:' +$scope.events)
             getEvent($routeParams.id);
 
         }).error(function(data, status)
@@ -41,20 +40,16 @@ function EventEditController($scope, $http, $routeParams, $rootScope, sharedServ
     //Obtiene los datos del evento para editarlo
     function getEvent(idEvent)
     {
-        //console.log('EventEditController getEvent $scope.events: '+$scope.events)
-
         $scope.indexEvent = findIndexById(idEvent,$scope.events);
-
-        console.log('EventEditController getEvent $scope.indexEvent: '+$scope.indexEvent)
+        //console.log('EventEditController getEvent $scope.indexEvent: '+$scope.indexEvent)
 
         if ($scope.indexEvent != -1)
         {
             $scope.event = $scope.events[$scope.indexEvent];
-            sharedService.prepForBroadcast($scope.event.address[5],$scope.event.address[6],$scope.event.address[0]);
-
-            //console.log('EventEditController getEvent $scope.event: '+$scope.event)
+            sharedService.prepForBroadcast($scope.event.address[5],$scope.event.address[6],$scope.event.address[0],$scope.event.address[1],$scope.event.address[2],$scope.event.address[3]);
         }
-        else {
+        else
+        {
             $scope.showError = true;
             $scope.textError = "Evento" + idEvent + "no encontrado";
         }
