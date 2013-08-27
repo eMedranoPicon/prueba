@@ -74,26 +74,26 @@
                     </li>
                     <li>
                       <a href="https://sopragroupux.appspot.com/_ah/api/evento/v5/event/" target="_blank">Listado de un evento</a>
-                      <br>https://sopragroupux.appspot.com/_ah/api/evento/v4/event/{id}
-                      <br>httpMethod: "GET"
+                      <p>https://sopragroupux.appspot.com/_ah/api/evento/v4/event/{id}</p>
+                      <p>httpMethod: "GET"</p>
                     </li>
                     <li>
                       <a href="https://sopragroupux.appspot.com/_ah/api/evento/v5/event/" target="_blank">Insertar Evento</a>
-                      <br>https://sopragroupux.appspot.com/_ah/api/evento/v4/event/
-                      <br>httpMethod: "POST"
-                      <br>data: jSON de la estructura de Event.
+                      <p>https://sopragroupux.appspot.com/_ah/api/evento/v4/event/</p>
+                      <p>httpMethod: "POST"</p>
+                      <p>data: jSON de la estructura de Event.</p>
                     </li>
                     <li>
                       <a href="https://sopragroupux.appspot.com/_ah/api/evento/v5/event/" target="_blank">Eliminar Evento</a>
-                      <br>https://sopragroupux.appspot.com/_ah/api/evento/v5/event/{id}
-                      <br>httpMethod: "DELETE"
-                      <br>data: {id} del elemento a eliminar
+                      <p>https://sopragroupux.appspot.com/_ah/api/evento/v5/event/{id}</p>
+                      <p>httpMethod: "DELETE"</p>
+                      <p>data: {id} del elemento a eliminar</p>
                     </li>
                     <li>
                       <a href="https://sopragroupux.appspot.com/_ah/api/evento/v5/event/" target="_blank">Actualizar Evento</a>
-                      <br>https://sopragroupux.appspot.com/_ah/api/evento/v4/event/
-                      <br>httpMethod: "PUT"
-                      <br>data: jSON de la estructura de Event.
+                      <p>https://sopragroupux.appspot.com/_ah/api/evento/v4/event/</p>
+                      <p>httpMethod: "PUT"</p>
+                      <p>data: jSON de la estructura de Event.</p>
                     </li>
                   </ul>
                 </div>
