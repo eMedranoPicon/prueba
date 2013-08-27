@@ -27,5 +27,9 @@
     stale session data. For details, see
     http://code.google.com/appengine/docs/java/config/appconfig.html#Enabling_Sessions
   -->
-
+  <!--Other settings here...-->
+  <automatic-scaling>
+    <max-idle-instances>900</max-idle-instances>
+    <min-pending-latency>30ms</min-pending-latency>
+  </automatic-scaling>
 </appengine-web-app>
