@@ -5,8 +5,6 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
-import sopra.ux.gae.Place;
-
 import com.google.appengine.api.datastore.Key;
 
 @PersistenceCapable
@@ -18,9 +16,6 @@ public class Contact {
 	private String name;
 	@Persistent
 	private String email;
-	
-	@Persistent(mappedBy = "contact")
-    private Place place;
 
 	public String getName() {
 		return name;
@@ -40,12 +35,7 @@ public class Contact {
 	public void setKey(Key key) {
 		this.key = key;
 	}
-	public Place getPlace() {
-		return place;
-	}
-	public void setPlace(Place place) {
-		this.place = place;
-	}
+	
 	public Contact(String name, String email, Place place) {
 		super();
 		this.name = name;
