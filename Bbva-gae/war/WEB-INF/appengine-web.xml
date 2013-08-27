@@ -29,7 +29,7 @@
   -->
   <!--Other settings here...-->
   <automatic-scaling>
-    <max-idle-instances>900</max-idle-instances>
-    <min-pending-latency>30ms</min-pending-latency>
+    <max-idle-instances>1</max-idle-instances>
+    <min-pending-latency>100ms</min-pending-latency>
   </automatic-scaling>
 </appengine-web-app>
