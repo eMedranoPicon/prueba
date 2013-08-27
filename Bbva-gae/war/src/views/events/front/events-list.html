@@ -1,0 +1,14 @@
+<!-- include /content/events/events-list-home.html -->
+<div class="row-fluid list-events-home" ng-app="app" ng-controller="appController">
+	<div class="span12" ng-repeat="obj in events.slice(0,4) | filter:query | orderBy:orderField:orderReverse">
+		<article class="eventList">
+		   	<h1>{{obj.title}}</h1>
+		   	<small>{{obj.dateStart}}</small>
+		   	<div class="contentEventList">
+		    	<img src="img/events/events3.jpg" class="pull-left" />
+		    	<p>{{obj.description}}</p>
+		  	</div>
+		</article>
+	</div>
+</div>
+<!-- EO include /content/events/events-list-home.html -->
