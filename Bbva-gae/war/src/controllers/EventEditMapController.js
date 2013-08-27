@@ -37,15 +37,14 @@ function EventEditMapController($scope,$rootScope,sharedService)
     };
 
 
-    function upDateMap(lat, lon)
+    function upDateMap(latLon)
     {
-        var llUpdate = new google.maps.LatLng(lat,lon);
+        //var llUpdate = new google.maps.LatLng(lat,lon);
+        console.log('upDateMap '+ latLon);
 
-        console.log('upDateMap '+ lat + '  '+ lon);
-
-        $scope.myMap.setCenter(llUpdate);
+        $scope.myMap.setCenter(latLon);
         removeAllMarkers();
-        addMarker(llUpdate);
+        addMarker(latLon);
     }
 
 
@@ -82,8 +81,14 @@ function EventEditMapController($scope,$rootScope,sharedService)
           {
               if (status == google.maps.GeocoderStatus.OK)
               {
-                  console.log('calcLatLon:' + results[0].geometry.location);
-                  upDateMap(results[0].geometry.location.mb,results[0].geometry.location.nb)
+                  console.log('sharedService.latitud: ' + sharedService.latitud);
+                  console.log('sharedService.longitud: ' + sharedService.longitud);
+                  console.log('calcLatLon array : ' + results[0].geometry.location + "lat(): "+results[0].geometry.location.lat()+ " lng(): "+results[0].geometry.location.lng());
+                  sharedService.latitud = results[0].geometry.location.lat();
+                  sharedService.longitud = results[0].geometry.location.lng();
+                  $scope.latitud = results[0].geometry.location.lat();
+                  $scope.longitud = results[0].geometry.location.lng();
+                  upDateMap(results[0].geometry.location)
               }
               else
               {

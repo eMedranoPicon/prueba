@@ -55,9 +55,38 @@ function EventEditController($scope, $http, $routeParams, $rootScope, sharedServ
         }
     }
 
+    $scope.updateEventWithPosition = function()
+    {
+      var address = $scope.event.address[0] + "," +$scope.event.address[1]+","+$scope.event.address[2]+","+$scope.event.address[3];
+      $scope.event.address[4] = address;
+
+      geocoder = new google.maps.Geocoder();
+
+      geocoder.geocode
+       (
+          {
+            'address' : address
+          },
+          function(results, status)
+          {
+              if (status == google.maps.GeocoderStatus.OK)
+              {
+                  $scope.event.address[5] = results[0].geometry.location.lat();
+                  $scope.event.address[6] = results[0].geometry.location.lng();
+                  upDateEvent();
+              }
+              else
+              {
+                console.log("Geocode was not successful for the following reason: " + status);
+                upDateEvent();
+              }
+          }
+        );
+    }
+
 
     //Actualiza el envento enviado en el formulario
-    $scope.upDateEvent = function()
+    function upDateEvent()
     {
         console.log('EventEditController upDateEvent $scope.indexEvent: '+$scope.indexEvent)
 
