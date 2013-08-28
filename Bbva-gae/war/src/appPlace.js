@@ -1,5 +1,5 @@
 
-var appPlace = angular.module("appPlace", []);
+var appPlace = angular.module("appPlace", ['ui.map','ui.event']);
 
 
 //definimos las rutas de la 'appPlace'
@@ -13,16 +13,19 @@ appPlace.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 		controller: PlaceEditController
 	}).
 	when('/place-new/', {
-		templateUrl: '/src/views/places/place-edit-layout.html',
+		templateUrl: '/src/views/places/place-insert-layout.html',
 		controller: PlaceInsertController
 	}).
-
 	  //cualquier ruta no definida
 	  otherwise({
 		   templateUrl: '/src/views/places/places-list-table.html',
 		  controller: appControllerPlaces
 
 		});
+	
+	
+	PlaceEditController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', 'mySharedService'];
+	PlaceMapController.$inject = ['$scope', '$rootScope', 'mySharedService'];
 
 }]);
 
@@ -56,3 +59,33 @@ function myIndexOf(arr,o)
 
   return -1;
 }
+
+appPlace.factory('mySharedService', function($rootScope)
+		{
+		    var sharedService = {};
+
+		    sharedService.latitud = '';
+		    sharedService.longitud = '';
+		    sharedService.calleBdc = '';
+		    sharedService.cpBdc = '';
+		    sharedService.ciudadBdc = '';
+		    sharedService.paisBdc = '';
+
+		    sharedService.prepForBroadcast = function(lat,lon,calle,cp,ciudad,pais)
+		    {
+		        this.latitud = lat;
+		        this.longitud = lon;
+		        this.calleBdc = calle;
+		        this.cpBdc = cp;
+		        this.ciudadBdc = ciudad;
+		        this.paisBdc = pais;
+		        this.broadcastItem();
+		    };
+
+		    sharedService.broadcastItem = function()
+		    {
+		        $rootScope.$broadcast('handleBroadcast');
+		    };
+
+		    return sharedService;
+		});

@@ -4,7 +4,6 @@ import sopra.ux.gae.PMF;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
-import com.google.api.server.spi.config.ApiNamespace;
 import com.google.api.server.spi.response.CollectionResponse;
 import com.google.appengine.api.datastore.Cursor;
 import com.google.appengine.datanucleus.query.JDOCursorHelper;
@@ -19,7 +18,7 @@ import javax.persistence.EntityNotFoundException;
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 
-@Api(name = "place", version = "v1", description = "BBVA - Place API", namespace = @ApiNamespace(ownerDomain = "ux.sopra", ownerName = "ux.sopra", packagePath = "gae"))
+@Api(name = "place", version = "v1", description = "BBVA - Place API")
 public class PlaceEndpoint {
 
 	/**
@@ -38,9 +37,13 @@ public class PlaceEndpoint {
 		PersistenceManager mgr = null;
 		Cursor cursor = null;
 		List<Place> execute = null;
+		
 
 		try {
 			mgr = getPersistenceManager();
+			//
+			mgr.getFetchPlan().setMaxFetchDepth(2);
+			//
 			Query query = mgr.newQuery(Place.class);
 			if (cursorString != null && cursorString != "") {
 				cursor = Cursor.fromWebSafeString(cursorString);

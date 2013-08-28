@@ -41,7 +41,7 @@ function PlaceEditController($scope, $http, $routeParams)
 
         $scope.indexPlace = findIndexById(idPlace,$scope.places);
 
-        console.log('EditPlaceController getPlace $scope.indexPlace: '+$scope.indexPlace)
+        console.log('EditPlaceController getPlace: '+$scope.indexPlace);
 
         if ($scope.indexPlace != -1)
         {
@@ -56,7 +56,7 @@ function PlaceEditController($scope, $http, $routeParams)
     $scope.updateEvent = function()
     {
 
-    	console.log('EventPlaceController updasavePlacetePlace $scope.place: '+$scope.place)
+    	console.log('EventPlaceController :'+$scope.place)
 
         $http.put('https://sopragroupux.appspot.com/_ah/api/place/v1/place', $scope.place).success(function()
         {

@@ -36,7 +36,6 @@
   <jsp:include page="/libraries-js.jsp" />
 
 <script src="https://apis.google.com/js/client.js?onload=auth"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 
 </head>
 <body>
@@ -73,7 +72,6 @@
 	</section>
 
 </div>
-<!-- script src="/js/maps.js"></script> -->
 </body>
 
 </html>

@@ -21,8 +21,7 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 
 	EventEditController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', 'mySharedService'];
 	EventEditMapController.$inject = ['$scope', '$rootScope', 'mySharedService'];
-
-
+	
 }]);
 
 app.factory('mySharedService', function($rootScope)
