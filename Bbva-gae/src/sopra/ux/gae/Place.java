@@ -6,6 +6,8 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import com.google.appengine.datanucleus.annotations.Unowned;
+
 import sopra.ux.gae.Address;
 import sopra.ux.gae.Contact;
 
@@ -25,9 +27,9 @@ public class Place {
 	private String creator;
 	
 	
-	@Persistent(defaultFetchGroup = "true")
+	@Persistent(defaultFetchGroup = "true", dependent = "true", recursionDepth=2)
 	private Address address;	
-	@Persistent(defaultFetchGroup = "true")
+	@Persistent(defaultFetchGroup = "true", dependent = "true", recursionDepth=2)
 	private Contact contact;
 	
 	

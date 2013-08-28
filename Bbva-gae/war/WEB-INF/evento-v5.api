@@ -24,9 +24,6 @@
     "type" : "no-cache",
     "maxAge" : 0
   },
-  "ownerDomain" : "ux.sopra",
-  "ownerName" : "ux.sopra",
-  "packagePath" : "gae",
   "methods" : {
     "evento.getEvent" : {
       "path" : "event/{id}",
@@ -159,6 +156,15 @@
           },
           "tags" : {
             "type" : "string"
+          },
+          "eventPast" : {
+            "type" : "boolean"
+          },
+          "datesArray" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
           },
           "address" : {
             "type" : "array",

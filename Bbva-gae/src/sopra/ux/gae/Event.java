@@ -1,5 +1,11 @@
 package sopra.ux.gae;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import javax.jdo.annotations.IdGeneratorStrategy;
@@ -14,7 +20,7 @@ public class Event {
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	private Long id;
 	private String title;
-	private String urlImg;
+	private String urlImg = "/img/events/events3.jpg";
 	private String host;
 	private String urlEvent;
 	private String description;
@@ -22,12 +28,15 @@ public class Event {
 	private String dateEnd;
 	private String audience; //separated by commas
 	private String tags; //separated by commas
+	private boolean eventPast;
+	private List<String> datesArray; //[dd,mm,yyyy,dateStart,dd,mm,dateEnd]
 	
 	private List<String> address; //{street, zipcode, city,country, lat, long}	
-	
+			
 	public Event(String title, String urlImg, String host, String urlEvent,
 			String description, String dateStart, String dateEnd,
-			String audience, String tags, List<String> address) {
+			String audience, String tags, boolean eventPast,
+			List<String> dateString, List<String> address) {
 		super();
 		this.title = title;
 		this.urlImg = urlImg;
@@ -38,10 +47,11 @@ public class Event {
 		this.dateEnd = dateEnd;
 		this.audience = audience;
 		this.tags = tags;
+		this.eventPast = eventPast;
+		this.datesArray = dateString;
 		this.address = address;
 	}
 
-		
 	public Event() {
 		super();
 	}
@@ -147,6 +157,78 @@ public class Event {
 	public void setAddress(List<String> address) {
 		this.address = address;
 	}
+
+
+	public boolean isEventPast() {
+		
+		// This is how to get today's date in Java
+        Date today = new Date();
+        Date dateStartJ = null;
+		try {
+			dateStartJ = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(this.dateStart);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        System.out.println(dateStartJ); 
+        
+        if(today.after(dateStartJ)){
+        	eventPast = true;
+        } else {
+        	eventPast = false;
+        }
+        System.out.println(eventPast); 
+        
+		return eventPast;
+	}
+
+
+	public void setEventPast(boolean eventPast) {
+		this.eventPast = eventPast;
+	}
+
+	public List<String> getDatesArray() {
+		return datesArray;
+	}
+
+	public void setDatesArray() {		
+		List<String> datesEvent = new ArrayList<String>();		
+		Date dateS = null;
+		Date dateE = null;
+		Calendar calS = new GregorianCalendar();
+		Calendar calE = new GregorianCalendar();
+		try {
+			dateS = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(this.dateStart);
+			dateE = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(this.dateEnd);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+                
+        calS.setTime(dateS);
+        datesEvent.add(this.dateStart);
+        int dayS = calS.get(Calendar.DAY_OF_MONTH);
+        datesEvent.add(String.valueOf(dayS));
+        int monthS = calS.get(Calendar.MONTH);
+        datesEvent.add(String.valueOf(monthS+1));
+        int yearS = calS.get(Calendar.YEAR);
+        datesEvent.add(String.valueOf(yearS));        
+		
+        calE.setTime(dateE);
+        datesEvent.add(this.dateEnd);
+        int dayE = calE.get(Calendar.DAY_OF_MONTH);
+        datesEvent.add(String.valueOf(dayE));
+        int monthE = calE.get(Calendar.MONTH);
+        datesEvent.add(String.valueOf(monthE+1));
+        int yearE = calS.get(Calendar.YEAR);
+        datesEvent.add(String.valueOf(yearE)); 
+        
+		this.datesArray = datesEvent;
+	}
+
+
+	
+	
 
 	
 

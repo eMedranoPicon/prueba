@@ -105,6 +105,9 @@ public class PlaceEndpoint {
 		PersistenceManager mgr = getPersistenceManager();
 		try {
 			if (place.getId() != null) {
+					//touch place
+					place.setAddress(place.getAddress());
+					place.setContact(place.getContact());
 				if (containsPlace(place)) {
 					throw new EntityExistsException("Object already exists");
 				}
@@ -132,6 +135,9 @@ public class PlaceEndpoint {
 			if (!containsPlace(place)) {
 				throw new EntityNotFoundException("Object does not exist");
 			}
+			//touch place
+			place.setAddress(place.getAddress());
+			place.setContact(place.getContact());
 			mgr.makePersistent(place);
 		} finally {
 			mgr.close();

@@ -4,7 +4,6 @@ import sopra.ux.gae.PMF;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
-import com.google.api.server.spi.config.ApiNamespace;
 import com.google.api.server.spi.response.CollectionResponse;
 import com.google.appengine.api.datastore.Cursor;
 import com.google.appengine.datanucleus.query.JDOCursorHelper;
@@ -19,7 +18,7 @@ import javax.persistence.EntityNotFoundException;
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 
-@Api(name = "evento", version = "v5", description = "BBVA - Event API", namespace = @ApiNamespace(ownerDomain = "ux.sopra", ownerName = "ux.sopra", packagePath = "gae"))
+@Api(name = "evento", version = "v5", description = "BBVA - Event API")
 public class EventEndpoint {
 
 	/**
@@ -101,10 +100,16 @@ public class EventEndpoint {
 	 * @return The inserted entity.
 	 */
 	@ApiMethod(name = "insertEvent")
-	public Event insertEvent(Event event) {
+	public Event insertEvent(Event event) {		
 		PersistenceManager mgr = getPersistenceManager();
-		try {
+		try {			
 			if (event.getId() != null) {
+				/*
+				 * logica de evento pasado
+				 * */
+				event.setEventPast(event.isEventPast());
+				event.setDatesArray();
+				
 				if (containsEvent(event)) {
 					throw new EntityExistsException("Object already exists");
 				}
@@ -129,6 +134,12 @@ public class EventEndpoint {
 	public Event updateEvent(Event event) {
 		PersistenceManager mgr = getPersistenceManager();
 		try {
+			/*
+			 * logica de evento pasado
+			 * */
+			event.setEventPast(event.isEventPast());
+			event.setDatesArray();
+			
 			if (!containsEvent(event)) {
 				throw new EntityNotFoundException("Object does not exist");
 			}
