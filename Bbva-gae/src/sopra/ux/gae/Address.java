@@ -7,8 +7,6 @@ import javax.jdo.annotations.PrimaryKey;
 
 import com.google.appengine.api.datastore.Key;
 
-import sopra.ux.gae.Place;
-
 @PersistenceCapable
 public class Address {
 	
@@ -29,9 +27,6 @@ public class Address {
 	private String latitude;
 	@Persistent
 	private String longitud;
-	
-	@Persistent(mappedBy = "address")
-    private Place place;
 	
 	public Key getKey() {
 		return key;
@@ -87,15 +82,6 @@ public class Address {
 	public void setLongitud(String longitud) {
 		this.longitud = longitud;
 	}
-
-	public Place getPlace() {
-		return place;
-	}
-
-	public void setPlace(Place place) {
-		this.place = place;
-	}
-
 
 	public Address(String street, String zipcode, String city, String country,
 			String fullAddress, String latitude, String longitud, Place place) {

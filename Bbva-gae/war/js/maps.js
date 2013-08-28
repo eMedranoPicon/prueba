@@ -162,10 +162,12 @@ function getLatLong(address) {
 
 							// lat
 							localStorage.setItem('maps_latitude',
-									results[0].geometry.location.mb);
+									//results[0].geometry.location.mb);
+									results[0].geometry.location.lat());
 							// long
 							localStorage.setItem('maps_longitude',
-									results[0].geometry.location.nb);
+									//results[0].geometry.location.nb);
+									results[0].geometry.location.lng());
 							// complete address
 							localStorage.setItem('maps_completeaddress',
 									results[0].formatted_address);

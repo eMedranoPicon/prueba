@@ -6,6 +6,9 @@ import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.PrimaryKey;
 
+import sopra.ux.gae.Address;
+import sopra.ux.gae.Contact;
+
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
 public class Place {
 	
