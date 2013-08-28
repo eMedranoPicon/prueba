@@ -19,7 +19,7 @@
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: $grayLighter;
+  background-color: $white;
 }
 
 // Prevent IE8 from misplacing imgs
@@ -124,9 +124,10 @@
   line-height: $baseLineHeight;
   border: 1px solid transparent;
   @include border-radius(4px 4px 0 0);
+  cursor: pointer;
   &:hover,
   &:focus {
-    border-color: $grayLighter $grayLighter #ddd;
+    border-color: #DDD #DDD #DDD;
   }
 }
 // Active state, and it's :hover/:focus to override normal :hover/:focus

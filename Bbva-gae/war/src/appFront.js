@@ -1,9 +1,9 @@
 //var app = angular.module('app', []);
 //para hacer uso de $resource debemos colocarlo al crear el modulo
-var app = angular.module("app", ['checkImg','ui.bootstrap','ui.map','ui.event']);
+var appFront = angular.module("appFront", ['checkImg','acronimoPais', 'ui.bootstrap','ui.map','ui.event']);
 
 //definimos las rutas de la 'app'
-app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider)
+appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider)
 {
 	$httpProvider.defaults.useXDomain = true;
 	delete $httpProvider.defaults.headers.common['X-Requested-With'];
@@ -12,9 +12,13 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 		templateUrl: '/src/views/events/event-edit-layout.html',
 		controller: EventEditController
 	})
+	.when('/event-detail/:id', {
+		templateUrl: '/src/views/events/front/event-detail.html',
+		controller: EventDetailController
+	})
 	//cualquier ruta no definida
 	.otherwise({
-		templateUrl: '/src/views/events/events-list-table.html',
+		templateUrl: '/src/views/events/front/events-list.html',
 		controller: appController
 	});
 	//otherwise({ redirectTo: '/events'});
@@ -25,7 +29,7 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 
 }]);
 
-app.factory('mySharedService', function($rootScope)
+appFront.factory('mySharedService', function($rootScope)
 {
     var sharedService = {};
 

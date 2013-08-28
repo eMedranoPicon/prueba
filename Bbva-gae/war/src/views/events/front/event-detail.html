@@ -1,0 +1,26 @@
+<!-- include src/views/events/front/events-detail.html -->
+<div class="span16">
+    <div class="row-fluid">
+        <div class="row-fluid list-events-home" ng-controller="appController">
+			<div class="span12" ng-repeat="obj in events | filter:query | orderBy:orderField:orderReverse">
+				<article class="eventList">
+				   	<h1>{{obj.title}}</h1>
+				   	<small>{{obj.dateStart}}</small>
+				   	<div class="contentEventList">
+				    	<!--<img src="img/events/events3.jpg" class="pull-left" />-->
+				    	<img src="{{ checkURLImg(obj.urlImg) }} " class="pull-left" />
+				    	<p>{{obj.description}}</p>
+				    	<a class="pull-right" href="events/event-detail.jsp/#{{obj.id}}" title="Ver detalle del evento">[m&aacute;s info]</a>
+				  	</div>
+				</article>
+			</div>
+		</div>
+    </div>
+</div>
+
+<div class="span8">
+    <div class="row-fluid">
+
+    </div>
+</div>
+<!-- EO include src/views/events/front/events-detail.html -->

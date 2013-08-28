@@ -266,8 +266,8 @@ $successText:             #468847 !default;
 $successBackground:       #dff0d8 !default;
 $successBorder:           darken(adjust-hue($successBackground, -10), 5%) !default;
 
-$infoText:                #3a87ad !default;
-$infoBackground:          #d9edf7 !default;
+$infoText:                $white !default;
+$infoBackground:          $blue !default;
 $infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
 
 

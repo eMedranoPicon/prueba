@@ -66,3 +66,112 @@ ol.decorated-list
 		margin-left: 0;
 	}
 }
+.conference-listing {
+	.date-listing
+	{
+		border-top: 5px solid #B9D1EC;
+		padding-top: 0.5em;
+		margin-top: 1em;
+		position: relative;
+
+		h3
+		{
+			margin-top: 0;
+			text-transform: uppercase;
+			color: #3C80CA;
+			padding-right: 3em;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+			font-size: 2.1em;
+
+			.year {
+				display: block;
+				color: #B9D1EC;
+			}
+		}
+	}
+
+	ol {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+}
+
+.conference
+{
+	.startday
+	{
+		position: relative;
+		top: 0.1em;
+		border: 1px solid #8CB4E0;
+		width: 24px;
+		height: 24px;
+		font-size: 14px;
+		display: block;
+		float: left;
+		margin-left: -3em;
+		padding: 2px;
+		text-align: center;
+		font-weight: bold;
+		color: #3C80CA;
+		background-color: #FFF;
+	}
+
+	.icon-scrach
+	{
+		display: block;
+		width: 100%;
+		height: 4px;
+		background-color: #B9D1EC;
+		margin-bottom: 3px;
+
+		.ick
+		{
+			background-color: #8CB4E0;
+			width: 0.25em;
+			height: 0.35em;
+			position: absolute;
+			left: 0.3em;
+			top: -0.3em;
+		}
+
+		.uck
+		{
+			left: 1.5em;
+		}
+	}
+}
+
+
+.interactive-listing
+{
+	padding-right: 8em;
+	position: relative;
+	zoom: 1;
+
+	.mini-actions
+	{
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin: 0.2em 0 0 0;
+		text-align: right;
+		width: 8em;
+		zoom: 1;
+	}
+}
+
+ul.inline-tags
+{
+	@include clearfix();
+	padding-top: 0.5em;
+
+	li {
+		float: left;
+		margin-right: 0.4em;
+		margin-bottom: 0.8em;
+		white-space: nowrap;
+	}
+}
+

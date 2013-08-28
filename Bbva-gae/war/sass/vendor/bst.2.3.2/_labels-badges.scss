@@ -9,12 +9,12 @@
   display: inline-block;
   padding: 2px 4px;
   font-size: $baseFontSize * .846;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 14px; // ensure proper line-height if floated
   color: $white;
   vertical-align: baseline;
   white-space: nowrap;
-  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  text-shadow: none;
   background-color: $grayLight;
 }
 // Set unique padding and border-radii
@@ -51,17 +51,17 @@ a {
 // Only give background-color difference to links (and to simplify, we don't qualifty with `a` but [href] attribute)
 @each $item in label, badge {
   // Important (red)
-  .#{$item}-important         { background-color: $errorText; }
-  .#{$item}-important[href]   { background-color: darken($errorText, 10%); }
+  .#{$item}-important         { background-color: $errorBackground; }
+  .#{$item}-important[href]   { background-color: darken($errorBackground, 10%); }
   // Warnings (orange)
   .#{$item}-warning           { background-color: $orange; }
   .#{$item}-warning[href]     { background-color: darken($orange, 10%); }
   // Success (green)
-  .#{$item}-success           { background-color: $successText; }
-  .#{$item}-success[href]     { background-color: darken($successText, 10%); }
+  .#{$item}-success           { background-color: $successBackground; }
+  .#{$item}-success[href]     { background-color: darken($successBackground, 10%); }
   // Info (turquoise)
-  .#{$item}-info              { background-color: $infoText; }
-  .#{$item}-info[href]        { background-color: darken($infoText, 10%); }
+  .#{$item}-info              { background-color: $infoBackground; }
+  .#{$item}-info[href]        { background-color: darken($infoBackground, 10%); }
   // Inverse (black)
   .#{$item}-inverse           { background-color: $grayDark; }
   .#{$item}-inverse[href]     { background-color: darken($grayDark, 10%); }

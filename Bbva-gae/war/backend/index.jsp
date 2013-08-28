@@ -58,7 +58,7 @@
                 <li><a href="/backend/event-new.jsp">Dar de <strong>alta</strong> un evento</a></li>
                 <li><a href="/backend/events-app.jsp#/events-table-list"><strong>Listar/Editar/Borrar</strong> eventos</a></li>
                 <li><a href="/backend/events-map.jsp">Localizar eventos en Google <strong>Maps</strong></a></li>
-                <li><a href="/backend/events-calendar.jsp"">Localizar eventos en Google <strong>Calendar</strong></a></li>
+                <li><a href="/backend/events-calendar.jsp">Localizar eventos en Google <strong>Calendar</strong></a></li>
               </ul>
             </div>
           </div>
@@ -77,7 +77,7 @@
             <div class="container-data pull-right">
               <!--<p> Desde aquí podrás gestionar tus lugares de interés:</p>-->
               <ul class="decorated-list">
-                <li><a href="/backend/places-app.jsp#/place-new"">Dar de <strong>alta</strong> un lugar de interés</a></li>
+                <li><a href="/backend/places-app.jsp#/place-new">Dar de <strong>alta</strong> un lugar de interés</a></li>
                 <li><a href="/backend/places-app.jsp"><strong>Listar/Editar/Borrar</strong> lugares de interés</a></li>
                 <li><a href="#">Localizar lugares de interés en Google <strong>Maps</strong></a></li>
               </ul>

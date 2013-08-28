@@ -6,6 +6,9 @@ function appController($scope, $http, $routeParams, $timeout)
   $scope.textTitle = "Listado de eventos";
   $scope.errorModal = false;
   $scope.showEditLayout = false;
+  $scope.eventosTodos = "";
+
+  $scope.filterCriteria = {};
 
   $scope.orderField = "dateStart";
   $scope.orderReverse = "true";
@@ -24,6 +27,8 @@ function appController($scope, $http, $routeParams, $timeout)
       $scope.is_backend_ready = true;
 
       $scope.events = data.items;
+      $scope.eventosTodos = $scope.events.length;
+
       //console.log('appController $scope.events:' +$scope.events)
     }).error(function(data, status)
     {
@@ -80,5 +85,20 @@ function appController($scope, $http, $routeParams, $timeout)
       $scope.deleteEventModal = false;
       console.log('closeModalRemove');
   };
+
+
+  $scope.checkURLImg = function (urlImg)
+  {
+      var urlDefault = "/img/events/events3.jpg";
+
+      if ((urlImg==undefined) || (urlImg==""))
+      {
+          return urlDefault;
+      }
+      else
+        {
+          return urlImg;
+        }
+  }
 
 };
