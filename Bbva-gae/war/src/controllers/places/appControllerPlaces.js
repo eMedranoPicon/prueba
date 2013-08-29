@@ -1,4 +1,4 @@
-function appControllerPlaces($scope, $http, $routeParams)
+function appControllerPlaces($scope, $http, $routeParams, $timeout)
 {
   $scope.showError = false;
   $scope.textError = "";
@@ -8,9 +8,10 @@ function appControllerPlaces($scope, $http, $routeParams)
   $scope.orderField = "namePlace";
   $scope.orderReverse = "true";
 
-  console.log('appControllerPlaces - 1');
+  console.log('AngularJS - Place');
 
-  $http.get('https://sopragroupux.appspot.com/_ah/api/place/v1/place/').success(function(data)
+  //$http.get('https://sopragroupux.appspot.com/_ah/api/place/v1/place/').success(function(data)
+  $http.get('https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/').success(function(data)
   {
       $scope.showError = false;
       $scope.textError = "";
@@ -24,22 +25,51 @@ function appControllerPlaces($scope, $http, $routeParams)
       $scope.showError = true;
   });
 
-  $scope.deleteEventRemote = function(idPlace)
+  $scope.deletePlaceRemote = function(idPlace)
   {
-    console.log('appControllerPlaces deletePlaceRemote');
+    console.log('appController deletePlaceRemote');
 
-
-    $http["delete"]('https://sopragroupux.appspot.com/_ah/api/place/v1/place/' + idPlace).success(function(data, status)
+    $http["delete"]('https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/' + idPlace).success(function(data, status)
     {
-      
+
       var indexPlaceDelete = findIndexById(idPlace,$scope.places);
-      console.log('appControllerPlaces deletePlaceRemote -> indexPlaceDelete: '+indexPlaceDelete);
-      $scope.events.splice(indexPlaceDelete, 1);
+      console.log('appController  -> indexPlaceDelete: '+indexPlaceDelete);
+      $scope.places.splice(indexPlaceDelete, 1);
+
+      $scope.hideInfoModal = true;
+      $scope.errorModal = false;
+      $scope.textStatusModal = "Evento " + idPlace + " eliminado correctamente.";
+
+      $timeout(function() { $scope.deletePlaceModal = false; }, 2500);
     }).
     error(function(data, status)
     {
-      alert("Refresh table. Entry deleted.");
+      $scope.hideInfoModal = true;
+      $scope.errorModal = true;
+      $scope.textStatusModal = "Error: No se ha borrado el evento. Por favor intentelo mas tarde. {{ " + status + " }}";
+
+      $timeout(function() { $scope.deletePlaceModal = false; }, 4000);
     });
+
+  };
+
+
+  $scope.openModalRemove  = function(idPlace,name,description)
+  {
+      console.log('openModalRemove');
+
+      $scope.deletePlaceModal = true;
+
+      $scope.idPlaceDialog = idPlace;
+      $scope.titleDialog = name;
+      $scope.descriptionDialog = description;
+  };
+
+
+  $scope.closeModalRemove  = function()
+  {
+      $scope.deletePlaceModal = false;
+      console.log('closeModalRemove');
   };
 
 };

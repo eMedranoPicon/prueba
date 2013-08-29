@@ -1,5 +1,5 @@
 
-var appPlace = angular.module("appPlace", ['ui.map','ui.event']);
+var appPlace = angular.module("appPlace", ['ui.bootstrap','ui.map','ui.event']);
 
 
 //definimos las rutas de la 'appPlace'
@@ -25,6 +25,7 @@ appPlace.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 	
 	
 	PlaceEditController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', 'mySharedService'];
+	PlaceInsertController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', 'mySharedService'];
 	PlaceMapController.$inject = ['$scope', '$rootScope', 'mySharedService'];
 
 }]);

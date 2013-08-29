@@ -137,7 +137,7 @@ function getLatLong(address) {
 							}
 
 							if (!(typeof components.route === 'undefined')) {
-								// address number
+								// address name
 								localStorage.setItem('maps_stname',
 										components.route);
 							}

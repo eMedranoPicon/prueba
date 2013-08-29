@@ -101,28 +101,25 @@ function PlaceMapController($scope,$rootScope,sharedService)
 
     $scope.$on('handleBroadcast', function()
     {
-        $scope.latitud = sharedService.latitud;
+    	console.log('LANZADO EVENTO DESDE EL CLICK');
+    	
+    	$scope.latitud = sharedService.latitud;
         $scope.longitud = sharedService.longitud;
         $scope.calleBdc = sharedService.calleBdc;
         $scope.cpBdc = sharedService.cpBdc;
         $scope.ciudadBdc = sharedService.ciudadBdc;
         $scope.paisBdc = sharedService.paisBdc;
-
-        //upDateMap($scope.latitud,$scope.longitud);
-        console.log('LANZADO EVENTO DESDE EL CLICK');
+        
         calcLatLon($scope.calleBdc,$scope.cpBdc,$scope.ciudadBdc,$scope.paisBdc);
-        //console.log('sharedService en EventEditMapController datos: '+ $scope.latitud + ' ' + $scope.longitud + ' calle: ' + $scope.calleBdc+ ' cpBdc: ' + $scope.cpBdc+ ' ciudadBdc: ' + $scope.ciudadBdc+ ' paisBdc: ' + $scope.paisBdc);
     });
 
 
     $scope.$watch('latitud', function()
     {
         console.log('watch latitud: en EvenEditController: '+ sharedService.latitud + ' ' + sharedService.longitud + ' calle: ' + sharedService.calleBdc+ ' cpBdc: ' + sharedService.cpBdc+ ' ciudadBdc: ' + sharedService.ciudadBdc+ ' paisBdc: ' + sharedService.paisBdc);
-        //upDateMap(sharedService.latitud,sharedService.longitud);
         calcLatLon(sharedService.calleBdc,sharedService.cpBdc,sharedService.ciudadBdc,sharedService.paisBdc);
     });
 
-    //var myLatlngIni = new google.maps.LatLng(LATITUDE_DEFAULT,LONGITUDE_DEFAULT);
 
 
 }

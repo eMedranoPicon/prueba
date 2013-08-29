@@ -32,7 +32,7 @@ function appController($scope, $http, $routeParams, $timeout, $location)
       //console.log('appController $scope.events:' +$scope.events)
     }).error(function(data, status)
     {
-      $scope.textError = "Error al cargar los datos. Por favor, inténtelo más tarde";
+      $scope.textError = "Error al cargar los datos. Por favor, intentelo mas tarde";
       $scope.is_backend_ready = false;
       $scope.showError = true;
   });
