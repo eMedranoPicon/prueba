@@ -36,7 +36,7 @@ public class Contact {
 		this.key = key;
 	}
 	
-	public Contact(String name, String email, Place place) {
+	public Contact(String name, String email) {
 		super();
 		this.name = name;
 		this.email = email;

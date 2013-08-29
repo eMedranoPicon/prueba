@@ -3,6 +3,7 @@ package sopra.ux.gae;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -28,15 +29,18 @@ public class Event {
 	private String dateEnd;
 	private String audience; //separated by commas
 	private String tags; //separated by commas
+	private List<String> tagsArray;
 	private boolean eventPast;
 	private List<String> datesArray; //[dd,mm,yyyy,dateStart,dd,mm,dateEnd]
 	
 	private List<String> address; //{street, zipcode, city,country, lat, long}	
 			
+	
+
 	public Event(String title, String urlImg, String host, String urlEvent,
 			String description, String dateStart, String dateEnd,
-			String audience, String tags, boolean eventPast,
-			List<String> dateString, List<String> address) {
+			String audience, String tags, List<String> tagsArray,
+			boolean eventPast, List<String> datesArray, List<String> address) {
 		super();
 		this.title = title;
 		this.urlImg = urlImg;
@@ -47,10 +51,12 @@ public class Event {
 		this.dateEnd = dateEnd;
 		this.audience = audience;
 		this.tags = tags;
+		this.tagsArray = tagsArray;
 		this.eventPast = eventPast;
-		this.datesArray = dateString;
+		this.datesArray = datesArray;
 		this.address = address;
 	}
+
 
 	public Event() {
 		super();
@@ -226,8 +232,19 @@ public class Event {
 		this.datesArray = datesEvent;
 	}
 
+	public List<String> getTagsArray() {
+		return tagsArray;
+	}
 
-	
+	public void setTagsArray() {
+		this.tagsArray = new ArrayList<String>();	
+		if(this.tags != null) {
+		List<String> lista = new ArrayList<String>(Arrays.asList(this.tags.split(",")));
+		this.tagsArray = lista;
+		} else {
+			this.tagsArray.add("No hay tags registradas");
+		} 		
+	}	
 	
 
 	

@@ -157,6 +157,12 @@
           "tags" : {
             "type" : "string"
           },
+          "tagsArray" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
           "eventPast" : {
             "type" : "boolean"
           },
