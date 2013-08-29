@@ -40,7 +40,7 @@ function appControllerPlaces($scope, $http, $routeParams, $timeout)
       $scope.errorModal = false;
       $scope.textStatusModal = "Evento " + idPlace + " eliminado correctamente.";
 
-      $timeout(function() { $scope.deletePlaceModal = false; }, 2500);
+      $timeout(function() { $scope.deletePlaceModal = false; }, 1500);
     }).
     error(function(data, status)
     {
@@ -48,7 +48,7 @@ function appControllerPlaces($scope, $http, $routeParams, $timeout)
       $scope.errorModal = true;
       $scope.textStatusModal = "Error: No se ha borrado el evento. Por favor intentelo mas tarde. {{ " + status + " }}";
 
-      $timeout(function() { $scope.deletePlaceModal = false; }, 4000);
+      $timeout(function() { $scope.deletePlaceModal = false; }, 3000);
     });
 
   };

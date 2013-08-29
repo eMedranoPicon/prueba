@@ -38,7 +38,7 @@
               <li><a href="/backend/places-app.jsp#/place-new">Dar de <strong>alta</strong> un lugar de interés</a></li>
               <li><a href="/backend/places-app.jsp"><strong>Listar/Editar/Borrar</strong> lugares de interés</a></li>
               <li class="divider"></li>
-              <li><a href="#">Localizar lugares de inter&eacute;s en Google <strong>Maps</strong></a></li>
+              <li><a href="/backend/places-map.jsp#/place-map">Localizar lugares de inter&eacute;s en Google <strong>Maps</strong></a></li>
             </ul>
           </li>
 

@@ -3,7 +3,7 @@
 * Controlador de edicion de Places
 */
 
-function PlaceEditController($scope, $http, $routeParams, $rootScope, sharedService)
+function PlaceEditController($scope, $http, $routeParams, $rootScope, $location, sharedService)
 {
 	console.log(' controller : PlaceEditController');
 	
@@ -12,6 +12,14 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, sharedServ
     $scope.is_backend_ready = false;
     $scope.textTitle = "Editar lugar de interes";
     $scope.showEditLayout = false;
+    
+
+    $scope.placeModal = false;
+    $scope.errorModal = false;
+    $scope.optsModal = {
+      backdropFade: true,
+      dialogFade:true
+    };
 
     if (angular.isUndefined($scope.places))
     {
@@ -55,7 +63,7 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, sharedServ
         }
     }
 
-    $scope.updatePlace = function()
+     function updatePlace()
     {
 
     	console.log('EventPlaceController :'+$scope.place)
@@ -63,8 +71,7 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, sharedServ
 		$http.put('https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/', $scope.place).success(function()
         //$http.put('https://sopragroupux.appspot.com/_ah/api/place/v1/place', $scope.place).success(function()
         {
-            console.log('Guardando');
-            $('#confirmaPlace').modal('show');
+            console.log('Guardando');            
 
         }).error(function(data, status)
         {
@@ -91,7 +98,7 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, sharedServ
         console.log('sharedService en PlaceEditController datos: '+ $scope.latitud + ' ' + $scope.longitud + ' calle: ' + $scope.calleBdc+ ' cpBdc: ' + $scope.cpBdc+ ' ciudadBdc: ' + $scope.ciudadBdc+ ' paisBdc: ' + $scope.paisBdc);
     });
     
-    $scope.updatePlaceLocation = function()
+    function updatePlaceLocation()
     {
       
     	var address = $scope.place.street + "," +$scope.place.zipcode+","+$scope.place.city+","+$scope.place.country;      
@@ -125,18 +132,15 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, sharedServ
 
 					if (!(typeof components.street_number === 'undefined')) {
 						// address number
-						localStorage.setItem('scope_maps_stnumber',
-								components.street_number);
+						var street_num = components.street_number;
 					}
 
 					if (!(typeof components.route === 'undefined')) {
 						// address number
-						localStorage.setItem('scope_maps_stname',
-								components.route);
+						var street_name = components.route;
 					}
 					
-					$scope.place.street = localStorage.getItem('scope_maps_stname') + ' '
-					+ localStorage.getItem('scope_maps_stnumber');
+					$scope.place.street =  street_name+' '+street_num;
 
 					if (!(typeof components.locality === 'undefined')) {
 						// ciudad
@@ -159,15 +163,33 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, sharedServ
 					$scope.place.longitud = results[0].geometry.location.lng();
 					$scope.place.fullAddress = results[0].formatted_address;
             	                
-                  $scope.updatePlace();
+                  //$scope.updatePlace();
+					updatePlace();
               }
               else
               {
                 console.log("Geocode was not successful for the following reason: " + status);
-                $scope.updatePlace();
+                ///$scope.updatePlace();
+                updatePlace();
               }
           }
         );
     }
+    
+
+    $scope.openModalUpdate = function()
+    {
+      console.log('openModal updatePlace');
+      updatePlaceLocation();
+        console.log('openModal');
+        $scope.placeModal = true;
+    };
+
+    $scope.closeModal  = function()
+    {
+        $scope.placeModal = false;
+        console.log('closeModal');
+        $location.path('/');
+    };
 
 }
