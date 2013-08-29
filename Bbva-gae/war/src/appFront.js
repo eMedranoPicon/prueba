@@ -1,6 +1,4 @@
-//var app = angular.module('app', []);
-//para hacer uso de $resource debemos colocarlo al crear el modulo
-var appFront = angular.module("appFront", ['checkImg','acronimoPais', 'ui.bootstrap','ui.map','ui.event']);
+var appFront = angular.module("appFront", ['checkImg','acronimoPais','ui.bootstrap','ui.map','ui.event']);
 
 //definimos las rutas de la 'app'
 appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider)
@@ -8,57 +6,18 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 	$httpProvider.defaults.useXDomain = true;
 	delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
-	$routeProvider.when('/event-edit/:id', {
-		templateUrl: '/src/views/events/event-edit-layout.html',
-		controller: EventEditController
-	})
-	.when('/event-detail/:id', {
+	$routeProvider
+	/*.when('/event-detail/:id', {
 		templateUrl: '/src/views/events/front/event-detail.html',
 		controller: EventDetailController
-	})
+	})*/
 	//cualquier ruta no definida
 	.otherwise({
 		templateUrl: '/src/views/events/front/events-list.html',
-		controller: appController
+		controller: appFrontController
 	});
 	//otherwise({ redirectTo: '/events'});
-
-	EventEditController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', 'mySharedService'];
-	EventEditMapController.$inject = ['$scope', '$rootScope', 'mySharedService'];
-
-
 }]);
-
-appFront.factory('mySharedService', function($rootScope)
-{
-    var sharedService = {};
-
-    sharedService.latitud = '';
-    sharedService.longitud = '';
-    sharedService.calleBdc = '';
-    sharedService.cpBdc = '';
-    sharedService.ciudadBdc = '';
-    sharedService.paisBdc = '';
-
-    sharedService.prepForBroadcast = function(lat,lon,calle,cp,ciudad,pais)
-    {
-        this.latitud = lat;
-        this.longitud = lon;
-        this.calleBdc = calle;
-        this.cpBdc = cp;
-        this.ciudadBdc = ciudad;
-        this.paisBdc = pais;
-        this.broadcastItem();
-    };
-
-    sharedService.broadcastItem = function()
-    {
-        $rootScope.$broadcast('handleBroadcast');
-    };
-
-    return sharedService;
-});
-
 
 
 function findIndexById(id,arrayList)
@@ -92,20 +51,3 @@ function myIndexOf(arr,o)
 
     return -1;
 }
-
-/*
-if (!Array.prototype.indexOf)
-{
-	Array.prototype.indexOf = function(obj, start)
-	{
-	    for (var i = (start || 0), j = this.length; i < j; i++)
-	    {
-	        if (this[i] === obj)
-	        	{
-	        		return i;
-	        	}
-	     }
-	     return -1;
-	};
-}
-*/

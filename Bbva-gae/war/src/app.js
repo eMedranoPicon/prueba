@@ -1,5 +1,3 @@
-//var app = angular.module('app', []);
-//para hacer uso de $resource debemos colocarlo al crear el modulo
 var app = angular.module("app", ['checkImg','ui.bootstrap','ui.map','ui.event']);
 
 //definimos las rutas de la 'app'
@@ -87,20 +85,3 @@ function myIndexOf(arr,o)
 
     return -1;
 }
-
-/*
-if (!Array.prototype.indexOf)
-{
-	Array.prototype.indexOf = function(obj, start)
-	{
-	    for (var i = (start || 0), j = this.length; i < j; i++)
-	    {
-	        if (this[i] === obj)
-	        	{
-	        		return i;
-	        	}
-	     }
-	     return -1;
-	};
-}
-*/
