@@ -7,10 +7,10 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 	delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
 	$routeProvider
-	/*.when('/event-detail/:id', {
+	.when('/events', {
 		templateUrl: '/src/views/events/front/event-detail.html',
-		controller: EventDetailController
-	})*/
+		controller: appFrontController
+	})
 	//cualquier ruta no definida
 	.otherwise({
 		templateUrl: '/src/views/events/front/events-list.html',

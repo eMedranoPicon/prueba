@@ -33,4 +33,22 @@ function appFrontController($scope, $http, $routeParams)
       $scope.showError = true;
     });
 
+   var indexedTeams = [];
+
+    $scope.playersToFilter = function() {
+        indexedTeams = [];
+        return $scope.events;
+    }
+
+    $scope.filterTeams = function(player)
+    {
+      var teamIsNew = indexedTeams.indexOf(player.datesArray[2]) == -1;
+      if (teamIsNew)
+      {
+          indexedTeams.push(player.datesArray[2]);
+      }
+      return teamIsNew;
+    }
+
+
 };
