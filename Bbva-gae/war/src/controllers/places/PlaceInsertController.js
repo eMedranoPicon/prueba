@@ -3,7 +3,7 @@
 * Controlador de edicion de Places
 */
 
-function PlaceInsertController($scope, $http, $routeParams, $rootScope, sharedService)
+function PlaceInsertController($scope, $http, $routeParams, $rootScope, $location, sharedService)
 {
 	console.log(' controller : PlaceInsertController');
 	
@@ -11,6 +11,14 @@ function PlaceInsertController($scope, $http, $routeParams, $rootScope, sharedSe
     $scope.textError = "";
     $scope.is_backend_ready = false;
     $scope.textTitle = "Insertar lugar de interes";  
+    
+
+    $scope.placeModal = false;
+    $scope.errorModal = false;
+    $scope.optsModal = {
+      backdropFade: true,
+      dialogFade:true
+    };
 
     $scope.place = {};
     $scope.place.namePlace="";
@@ -26,7 +34,7 @@ function PlaceInsertController($scope, $http, $routeParams, $rootScope, sharedSe
     $scope.place.email="";
     $scope.place.description="";
     
-    $scope.savePlace = function()
+    function savePlace()
     {
 
     	console.log('EventPlaceController $scope.place: '+$scope.place)
@@ -35,16 +43,14 @@ function PlaceInsertController($scope, $http, $routeParams, $rootScope, sharedSe
         //$http.post('https://sopragroupux.appspot.com/_ah/api/place/v1/place', $scope.place).success(function()
         {
             console.log('Guardando');
-            $('#confirmaPlace').modal('show');
-
         }).error(function(data, status)
         {
-              $scope.textError = "Error al insertar los datos. Por favor, intentelo más tarde";
+              $scope.textError = "Error al insertar los datos. Por favor, intentelo mas tarde";
               $scope.showError = true;
         });
     }
     
-    $scope.insertPlaceLocation = function()
+     function insertPlaceLocation()
     {
     	var address = $scope.place.street + "," +$scope.place.zipcode+","+$scope.place.city+","+$scope.place.country;      
 
@@ -75,20 +81,17 @@ function PlaceInsertController($scope, $http, $routeParams, $rootScope, sharedSe
   					 */
   					console.log(components);
 
-  					if (!(typeof components.street_number === 'undefined')) {
-  						// address number
-  						localStorage.setItem('scope_maps_stnumber',
-  								components.street_number);
-  					}
+					if (!(typeof components.street_number === 'undefined')) {
+						// address number
+						var street_num = components.street_number;
+					}
 
-  					if (!(typeof components.route === 'undefined')) {
-  						// address number
-  						localStorage.setItem('scope_maps_stname',
-  								components.route);
-  					}
-  					
-  					$scope.place.street = localStorage.getItem('scope_maps_stname') + ' '
-  					+ localStorage.getItem('scope_maps_stnumber');
+					if (!(typeof components.route === 'undefined')) {
+						// address number
+						var street_name = components.route;
+					}
+					
+					$scope.place.street =  street_name+' '+street_num;
 
   					if (!(typeof components.locality === 'undefined')) {
   						// ciudad
@@ -110,12 +113,14 @@ function PlaceInsertController($scope, $http, $routeParams, $rootScope, sharedSe
   					// long
   					$scope.place.longitud = results[0].geometry.location.lng();
   					$scope.place.fullAddress = results[0].formatted_address;            
-                  $scope.savePlace();
+                  //$scope.savePlace();
+  					savePlace();
               }
               else
               {
                 console.log("Geocode was not successful for the following reason: " + status);
-                $scope.savePlace();
+                //$scope.savePlace();
+                savePlace();
               }
           }
         );
@@ -138,5 +143,20 @@ function PlaceInsertController($scope, $http, $routeParams, $rootScope, sharedSe
 
         console.log('sharedService en EvenEditController datos: '+ $scope.latitud + ' ' + $scope.longitud + ' calle: ' + $scope.calleBdc+ ' cpBdc: ' + $scope.cpBdc+ ' ciudadBdc: ' + $scope.ciudadBdc+ ' paisBdc: ' + $scope.paisBdc);
     });
+    
+    $scope.openModalInsert = function()
+    {
+      console.log('openModal saveEvent');
+      insertPlaceLocation();
+        console.log('openModal');
+        $scope.placeModal = true;
+    };
+
+    $scope.closeModal  = function()
+    {
+        $scope.placeModal = false;
+        console.log('closeModal');
+        $location.path('/');
+    };
 
 }

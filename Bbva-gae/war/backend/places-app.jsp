@@ -30,11 +30,12 @@
 
 
   <jsp:include page="/libraries-angular.jsp"/>
+  <script src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
+  <jsp:include page="/libraries-angular-maps.jsp" />
   <jsp:include page="/libraries-angular-places.jsp"/>
 
   <!-- Bloque de Librerias - libreriasjs -->
   <jsp:include page="/libraries-js.jsp" />
-
 <script src="https://apis.google.com/js/client.js?onload=auth"></script>
 
 </head>

@@ -1,0 +1,11 @@
+<meta charset="utf-8">
+<div class="container-fluid">	
+	<!-- google maps -->
+    <div ng-controller="PlaceMapController">
+        <div id="map_canvas" ui-map="myMap" class="span24 map_canvas Flexible-container" ui-options="mapOptions" ui-event="{'map-idle' : 'onMapIdle()'}"></div>
+        <!--In addition to creating the markers on the map, div elements with existing google.maps.Marker object should be created to hook up with events -->
+        <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]" ui-event="{'map-click': 'markerClicked(marker)'}"></div>
+        <!--<pre>rootscope -> {{rootscope | json}}</pre>-->
+    </div>
+    <!-- EO google maps -->	
+</div>

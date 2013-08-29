@@ -84,14 +84,17 @@
     <pre>places -> {{places | json}}</pre>
 
 
-    <div id="confirmaPlace" class="modal hide fade">
-        <div class="modal-header">           
-            <h3>Lugar Interés</h3>
+    <div modal="placeModal" close="closeModal()" options="optsModal">
+        <div class="modal-header" ng-hide="hideInfoModal">
+            <h2>Lugar de Interes: {{place.id}}</h2>
         </div>
-        <div class="modal-body">
-            <p>El Lugar de interés ha sido actualizado correctamente.</p>
+        <div class="modal-body" >
+            <p ng-hide="hideInfoModal">El evento ha sido guardado correctamente.</p>
+            <h2 ng-show="hideInfoModal" ng-class="{error:errorModal}">
+                {{textStatusModal}}
+            </h2>
         </div>
-        <div class="modal-footer">
-            <a href="/backend/places-app.jsp" class="btn btn-primary">Aceptar</a>
+        <div class="modal-footer" ng-hide="hideInfoModal">
+            <a ng-click="closeModal()" class="btn btn-primary">Aceptar</a>
         </div>
     </div>
