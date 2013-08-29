@@ -17,35 +17,35 @@
          <div class="control-group">
             <label class="control-label" for="address">Dirección</label>
             <div class="controls">
-                <input type="text" id="street" name="street" placeholder="" ng-model="place.address.street" >
+                <input type="text" id="street" name="street" placeholder="" ng-model="place.street" >
             </div>
         </div>
 
         <div class="control-group">
             <label class="control-label" for="zipcode">Código Postal</label>
             <div class="controls">
-                <input type="text" id="zipcode" name="zipcode" placeholder=""  ng-model="place.address.zipcode">
+                <input type="text" id="zipcode" name="zipcode" placeholder=""  ng-model="place.zipcode">
             </div>
         </div>
 
         <div class="control-group">
             <label class="control-label" for="city">Ciudad</label>
             <div class="controls">
-                <input type="text" id="city" name="city" placeholder="" ng-model="place.address.city">
+                <input type="text" id="city" name="city" placeholder="" ng-model="place.city">
             </div>
         </div>
 
         <div class="control-group">
             <label class="control-label" for="country">País</label>
             <div class="controls">
-                <input type="text" id="country" name="country" placeholder="" ng-model="place.address.country" >
+                <input type="text" id="country" name="country" placeholder="" ng-model="place.country" >
             </div>
         </div>
 
-         <div class="control-group">
+       <div class="control-group">
 
-            <div class="controls form-action">
-                 <a class="btn btn-success btn-small" href="javascript:previewMap();">Ubicar en Google Maps</a>
+            <div class="controls form-action">                 
+                 <button type="button" class="btn btn-success btn-small" ng-click="handleClick(place.latitude, place.longitud,place.street, place.zipcode, place.city, place.country)">Ubicar en Google Maps</button>                 
             </div>
         </div>
     </fieldset>
@@ -62,13 +62,13 @@
      <div class="control-group">
         <label class="control-label" for="contactName">Persona de Contacto </label>
         <div class="controls">
-            <input type="text" id="contactName" name="contactName" ng-model="place.contact.name"   />
+            <input type="text" id="contactName" name="contactName" ng-model="place.name"   />
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="typePlace">Email de Contacto</label>
         <div class="controls">
-            <input type="text" id="contactEmail" name="contactEmail" ng-model="place.contact.email"   />
+            <input type="text" id="contactEmail" name="contactEmail" ng-model="place.email"   />
         </div>
     </div>
 	</fieldset>    

@@ -52,36 +52,37 @@
                     <td>{{obj.namePlace}}</td>
                     <td>{{obj.typePlace}}</td>
                     <td class="wrapword">{{obj.description}}</td>
-                    <td class="wrapword">{{obj.address.city}}</td>
-                    <td class="wrapword">{{obj.contact.name}}</td>
+                    <td class="wrapword">{{obj.fullAddress}}</td>
+                    <td class="wrapword">{{obj.name}}</td>
                     <td>{{obj.id}}</td>
                     <td>
                         <div class="group-buttons-table">
                             <a class="btn btn-success btn-small" href="#/place-edit/{{obj.id}}"><i class="icon-edit icon-white"></i> Editar</a>
-                            <a class="btn btn-warning btn-small" ng-click="deletePlaceRemote(obj.id,$index)"><i class="icon-trash icon-white"></i> Borrar</a>
-
+                            <a class="btn btn-warning btn-small" ng-click="openModalRemove(obj.id,obj.namePlace,obj.description)"><i class="icon-trash icon-white"></i> Borrar</a>
                         </div>
                     </td>
                 </tr>
-
-
-
-
             </table>
         </div>
     </div>
 
 </div>
 
-<div id="confirmaEliminarEvento" class="modal hide fade">
-    <div class="modal-header">
-        <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
-        <h3>Evento</h3>
+<div modal="deletePlaceModal" close="closeModalRemove()" options="optsModal">
+    <div class="modal-header" ng-hide="hideInfoModal">
+        <h2>¿Estas seguro que quieres eliminar el evento con id: {{idPlaceDialog}} ?</h2>
     </div>
-    <div class="modal-body">
-        <p>El evento ha sido actualizado correctamente.</p>
+    <div class="modal-body" >
+        <dl ng-hide="hideInfoModal">
+            <dd><p>{{titleDialog}}</p></dd>
+            <dd><p>{{descriptionDialog}}</p></dd>
+        </dl>
+        <h2 ng-show="hideInfoModal" ng-class="{error:errorModal}">
+            {{textStatusModal}}
+        </h2>
     </div>
-    <div class="modal-footer">
-        <a href="/backend/events-app.jsp" class="btn btn-primary">Aceptar</a>
+    <div class="modal-footer" ng-hide="hideInfoModal">
+        <button class="btn btn-warning cancel" ng-click="closeModalRemove()">Cancelar</button>
+        <button class="btn btn-warning cancel" ng-click="deletePlaceRemote(idPlaceDialog)">Confirmar</button>
     </div>
 </div>

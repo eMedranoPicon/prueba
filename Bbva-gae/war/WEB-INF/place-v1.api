@@ -24,9 +24,6 @@
     "type" : "no-cache",
     "maxAge" : 0
   },
-  "ownerDomain" : "ux.sopra",
-  "ownerName" : "ux.sopra",
-  "packagePath" : "gae",
   "methods" : {
     "place.getPlace" : {
       "path" : "place/{id}",
@@ -203,11 +200,11 @@
           "parent" : {
             "$ref" : "Key"
           },
-          "namespace" : {
-            "type" : "string"
-          },
           "complete" : {
             "type" : "boolean"
+          },
+          "namespace" : {
+            "type" : "string"
           }
         }
       },

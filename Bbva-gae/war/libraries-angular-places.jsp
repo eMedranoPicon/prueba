@@ -1,4 +1,5 @@
 <!-- libraries-angular-places.jsp-->
+<script src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
 
 <!-- para google maps - mas angular -->
 <script src="/src/lib/angular-ui/ui-utils/modules/event/event.js"></script>

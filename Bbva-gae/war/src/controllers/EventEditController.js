@@ -25,7 +25,7 @@ function EventEditController($scope, $http, $routeParams, $rootScope, sharedServ
 
         }).error(function(data, status)
         {
-              $scope.textError = "Error al cargar los datos. Por favor, inténtelo más tarde";
+              $scope.textError = "Error al cargar los datos. Por favor, intentalo mas tarde";
               $scope.is_backend_ready = false;
               $scope.showError = true;
         });
