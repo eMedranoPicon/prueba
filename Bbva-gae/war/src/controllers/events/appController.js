@@ -87,18 +87,4 @@ function appController($scope, $http, $routeParams, $timeout)
   };
 
 
-  $scope.checkURLImg = function (urlImg)
-  {
-      var urlDefault = "/img/events/events3.jpg";
-
-      if ((urlImg==undefined) || (urlImg==""))
-      {
-          return urlDefault;
-      }
-      else
-        {
-          return urlImg;
-        }
-  }
-
 };

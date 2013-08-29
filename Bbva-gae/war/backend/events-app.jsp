@@ -32,6 +32,8 @@
 
 
 <jsp:include page="/libraries-angular.jsp" />
+<script src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
+<jsp:include page="/libraries-angular-maps.jsp" />
 <jsp:include page="/libraries-angular-events.jsp" />
 
 
