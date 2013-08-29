@@ -53,7 +53,7 @@ function PlaceEditController($scope, $http, $routeParams)
         }
     }
 
-    $scope.updateEvent = function()
+    $scope.updatePlace = function()
     {
 
     	console.log('EventPlaceController :'+$scope.place)
