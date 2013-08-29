@@ -3,7 +3,7 @@
 * Controlador de edicion de Eventos
 */
 
-function EventEditController($scope, $http, $routeParams, $rootScope, $location, sharedService)
+function EventEditController($scope, $http, $routeParams, $rootScope, sharedService)
 {
     $scope.showError = false;
     $scope.textError = "";
@@ -62,7 +62,7 @@ function EventEditController($scope, $http, $routeParams, $rootScope, $location,
         }
     }
 
-    function updateEventWithPosition()
+    $scope.updateEventWithPosition = function()
     {
       var address = $scope.event.address[0] + "," +$scope.event.address[1]+","+$scope.event.address[2]+","+$scope.event.address[3];
       $scope.event.address[4] = address;
@@ -89,7 +89,7 @@ function EventEditController($scope, $http, $routeParams, $rootScope, $location,
               }
           }
         );
-    };
+    }
 
 
     //Actualiza el envento enviado en el formulario
@@ -107,7 +107,7 @@ function EventEditController($scope, $http, $routeParams, $rootScope, $location,
               $scope.showError = true;
         });
 
-
+        openModal();
     }
 
 
@@ -132,24 +132,15 @@ function EventEditController($scope, $http, $routeParams, $rootScope, $location,
 
     function openModal()
     {
-        console.log('openModal updateEventWithPosition');
-        updateEventWithPosition();
-        $scope.eventModal = true;
-    };
-
-    $scope.openModal = function()
-    {
-      console.log('openModal updateEventWithPosition');
-       updateEventWithPosition();
         console.log('openModal');
         $scope.eventModal = true;
     };
+
 
     $scope.closeModal  = function()
     {
         $scope.eventModal = false;
         console.log('closeModal');
-        $location.path('/');
     };
 
 

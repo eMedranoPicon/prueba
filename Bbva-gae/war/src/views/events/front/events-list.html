@@ -16,9 +16,9 @@
 					<h3>September<span class="year">2013</span></h3>
 					<!--
 						<div ng-repeat="playerPerTeam in playersToFilter() | filter:filterTeams">
-        <b>{{playerPerTeam.team}}</b>
-        <li ng-repeat="player in players | filter:{team: playerPerTeam.team}">{{player.name}}</li>
-    </div>
+					        <b>{{playerPerTeam.team}}</b>
+					        <li ng-repeat="player in players | filter:{team: playerPerTeam.team}">{{player.name}}</li>
+					    </div>
 					-->
 					---------
 					<div ng-repeat="monthPerEvent in eventsToFilter() | filter:filterMonths">
@@ -41,10 +41,8 @@
 							</p>
 							<p class="date">{{ obj.dateStart }}</p>
 							<ul class="inline-tags" >
-								<!--
-									Solo funciona a partir de la 1.1.5
-									<li n g-r ep eat="point in obj.tagsArray track by $index"><span class="label label-info">{{  ob j.tagsArray[$index]}}</span></li>
-								-->
+								<!-- Solo funciona a partir de la 1.1.5 -->
+								<li ng-repeat="point in obj.tagsArray track by $index"><span class="label label-info">{{obj.tagsArray[$index]}}</span></li>
 							</ul>
 						</li>
 					</ol>
@@ -67,9 +65,8 @@
 				    	<img src="{{ obj.urlImg | checkImg }} " class="pull-left" />
 				    	<p>{{obj.description}}</p>
 				    	<ul class="inline-tags" >
-				    		<!--
-							<li ng-repeat="point in obj.datesArray  track by $index"><span class="label label-info">{{obj.datesArray[$index]}}</span></li>
-							-->
+				    		<!-- Solo funciona a partir de la 1.1.5 -->
+							<li ng-repeat="point in obj.tagsArray track by $index"><span class="label label-info">{{obj.tagsArray[$index]}}</span></li>
 						</ul>
 				    	<a class="pull-right" href="#/event-detail/{{obj.id}}" title="Ver detalle del evento">[m&aacute;s info]</a>
 				  	</div>

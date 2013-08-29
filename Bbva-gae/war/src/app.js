@@ -17,7 +17,7 @@ app.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpPr
 	});
 	//otherwise({ redirectTo: '/events'});
 
-	EventEditController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', 'mySharedService'];
+	EventEditController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
 	EventEditMapController.$inject = ['$scope', '$rootScope', 'mySharedService'];
 
 }]);

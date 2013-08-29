@@ -1,4 +1,4 @@
-function appController($scope, $http, $routeParams, $timeout)
+function appController($scope, $http, $routeParams, $timeout, $location)
 {
   $scope.showError = false;
   $scope.textError = "";
@@ -84,6 +84,7 @@ function appController($scope, $http, $routeParams, $timeout)
   {
       $scope.deleteEventModal = false;
       console.log('closeModalRemove');
+       $location.path('/blablbla');
   };
 
 
