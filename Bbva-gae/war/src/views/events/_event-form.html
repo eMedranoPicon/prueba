@@ -112,16 +112,17 @@
 
     <pre>events -> {{events | json}}</pre>
 
-
-    <div id="confirmaEvento" class="modal hide fade">
-        <div class="modal-header">
-            <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
-            <h3>Evento</h3>
+    <div modal="eventModal" close="closeModal()" options="optsModal">
+        <div class="modal-header" ng-hide="hideInfoModal">
+            <h2>Evento: {{event.id}}</h2>
         </div>
-        <div class="modal-body">
-            <p>El evento ha sido actualizado correctamente.</p>
+        <div class="modal-body" >
+            <p ng-hide="hideInfoModal">El evento ha sido actualizado correctamente.</p>
+            <h2 ng-show="hideInfoModal" ng-class="{error:errorModal}">
+                {{textStatusModal}}
+            </h2>
         </div>
-        <div class="modal-footer">
-            <a href="/backend/events-app.jsp" class="btn btn-primary">Aceptar</a>
+        <div class="modal-footer" ng-hide="hideInfoModal">
+            <a ng-click="closeModal()" class="btn btn-primary">Aceptar</a>
         </div>
     </div>

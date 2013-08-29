@@ -3,13 +3,20 @@
 * Controlador de edicion de Eventos
 */
 
-function EventEditController($scope, $http, $routeParams, $rootScope, sharedService)
+function EventEditController($scope, $http, $routeParams, $rootScope, $location, sharedService)
 {
     $scope.showError = false;
     $scope.textError = "";
     $scope.is_backend_ready = false;
     $scope.textTitle = "Editar evento";
     $scope.showEditLayout = false;
+
+    $scope.eventModal = false;
+    $scope.errorModal = false;
+    $scope.optsModal = {
+      backdropFade: true,
+      dialogFade:true
+    };
 
     if (angular.isUndefined($scope.events))
     {
@@ -55,7 +62,7 @@ function EventEditController($scope, $http, $routeParams, $rootScope, sharedServ
         }
     }
 
-    $scope.updateEventWithPosition = function()
+    function updateEventWithPosition()
     {
       var address = $scope.event.address[0] + "," +$scope.event.address[1]+","+$scope.event.address[2]+","+$scope.event.address[3];
       $scope.event.address[4] = address;
@@ -82,24 +89,25 @@ function EventEditController($scope, $http, $routeParams, $rootScope, sharedServ
               }
           }
         );
-    }
+    };
 
 
     //Actualiza el envento enviado en el formulario
     function upDateEvent()
     {
-        console.log('EventEditController upDateEvent $scope.indexEvent: '+$scope.indexEvent)
+        console.log('EventEditController upDateEvent $scope.indexEvent: '+$scope.indexEvent);
 
         $http.put('https://sopragroupux.appspot.com/_ah/api/evento/v5/event', $scope.event).success(function()
         {
             console.log('Haciendo PUT upDateEvent');
-            $('#confirmaEvento').modal('show');
 
         }).error(function(data, status)
         {
               $scope.textError = "Error al insertar los datos. Por favor, inténtelo más tarde";
               $scope.showError = true;
         });
+
+
     }
 
 
@@ -120,6 +128,29 @@ function EventEditController($scope, $http, $routeParams, $rootScope, sharedServ
 
         console.log('sharedService en EvenEditController datos: '+ $scope.latitud + ' ' + $scope.longitud + ' calle: ' + $scope.calleBdc+ ' cpBdc: ' + $scope.cpBdc+ ' ciudadBdc: ' + $scope.ciudadBdc+ ' paisBdc: ' + $scope.paisBdc);
     });
+
+
+    function openModal()
+    {
+        console.log('openModal updateEventWithPosition');
+        updateEventWithPosition();
+        $scope.eventModal = true;
+    };
+
+    $scope.openModal = function()
+    {
+      console.log('openModal updateEventWithPosition');
+       updateEventWithPosition();
+        console.log('openModal');
+        $scope.eventModal = true;
+    };
+
+    $scope.closeModal  = function()
+    {
+        $scope.eventModal = false;
+        console.log('closeModal');
+        $location.path('/');
+    };
 
 
 }
