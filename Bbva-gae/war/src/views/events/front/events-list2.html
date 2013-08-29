@@ -1,0 +1,98 @@
+<!-- include src/views/events/front/events-list.html -->
+<div class="span16">
+    <div class="row-fluid">
+    	<div class="span24">
+			<tabset>
+			    <tab heading="Pr&oacute;ximos eventos" active="tab.active" disabled="tab.disabled" select='filterCriteria.eventPast="false"'>Pr&oacute;ximos eventos {{eventosProximos}}</tab>
+			    <tab heading="Eventos pasados" select='filterCriteria.eventPast="true"'>Eventos pasados {{eventosPasados}}</tab>
+			    <tab heading="Todos los eventos ({{eventosTodos}})" select='filterCriteria={}'>Todos los eventos <small>({{eventosTodos}})</tab>
+			</tabset>
+		</div>
+		<div class="span24 conference-listing">
+			<div class="date-listing conference-listing initial interactive-listing-container" >
+
+
+				<div class="span8 day-label" style="position: relative; top: 0px;">
+					<h3>September<span class="year">2013</span></h3>
+					<!--
+						<div ng-repeat="playerPerTeam in playersToFilter() | filter:filterTeams">
+					        <b>{{playerPerTeam.team}}</b>
+					        <li ng-repeat="player in players | filter:{team: playerPerTeam.team}">{{player.name}}</li>
+					    </div>
+					-->
+					---------
+
+						<!--
+						<div ng-repeat="playerPerTeam in playersToFilter() | filter:filterTeams">
+					        <b>{{playerPerTeam.eventPast}}</b>
+					        <li ng-repeat="player in events | filter:{eventPast: playerPerTeam.eventPast}">{{player.title}}</li>
+					    </div>
+						-->
+
+				    ++++++++++++
+				    ---------
+					<div ng-repeat="eventPerMonth in eventsToFilter() | filter:filterEvents">
+				        <b>{{eventPerMonth.datesArray[2]}}</b>
+				        <li ng-repeat="event in events | filter:eventsPerMonth(eventPerMonth.datesArray[2])">{{event.title}}</li>
+				    </div>
+
+
+				    ++++++++++++
+				</div>
+
+				<div class="span16 day-schedule">
+					<ol ng-repeat="obj in events | filter:filterCriteria | orderBy:orderField:orderReverse">
+
+						<li class="conference interactive-listing">
+							<span class="startday"><span class="icon-scrach"><span class="ick"></span><span class="ick uck"></span></span>{{obj.datesArray[1]}}</span>
+							<h4><a href="#">{{obj.title}}</a></h4>
+							<p class="location">
+								<a href="#" class="flag-small flag-{{ obj.address[3] | acronimoPais}}">{{obj.address[3]}}</a>
+								<a href="#">{{obj.address[3]}}</a>,
+								<a href="#">{{obj.address[2]}}</a>
+							</p>
+							<p class="date">{{ obj.dateStart }}</p>
+							<ul class="inline-tags" >
+								<!-- Solo funciona a partir de la 1.1.5 -->
+								<li ng-repeat="point in obj.tagsArray track by $index"><span class="label label-info">{{obj.tagsArray[$index]}}</span></li>
+							</ul>
+						</li>
+					</ol>
+				</div>
+
+			</div>
+		</div>
+  	</div>
+</div>
+
+<div class="span16">
+    <div class="row-fluid">
+        <div class="row-fluid list-events-home" >
+        	<!--<div class="span12" ng-repeat="obj in events | filter:filterCriteria.title='Nuevo Evento nube' | orderBy:orderField:orderReverse">-->
+			<div class="span12" ng-repeat="obj in events | filter:filterCriteria | orderBy:orderField:orderReverse">
+				<article class="eventList">
+				   	<h1>{{obj.title}}</h1>
+				   	<small>{{ obj.dateStart }}</small>
+				   	<div class="contentEventList">
+				    	<img src="{{ obj.urlImg | checkImg }} " class="pull-left" />
+				    	<p>{{obj.description}}</p>
+				    	<ul class="inline-tags" >
+				    		<!-- Solo funciona a partir de la 1.1.5 -->
+							<li ng-repeat="point in obj.tagsArray track by $index"><span class="label label-info">{{obj.tagsArray[$index]}}</span></li>
+						</ul>
+				    	<a class="pull-right" href="#/event-detail/{{obj.id}}" title="Ver detalle del evento">[m&aacute;s info]</a>
+				  	</div>
+				</article>
+			</div>
+		</div>
+    </div>
+</div>
+
+<div class="span8">
+    <div class="row-fluid">
+    </div>
+</div>
+
+
+
+<!-- EO include src/views/events/front/events-list.html -->
