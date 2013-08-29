@@ -1,8 +1,3 @@
-angular.module('phonecatFilters', []).filter('checkmark', function() {
-  return function(input) {
-    return input ? '\u2713' : '\u2718';
-  };
-});
 
 angular.module('checkImg', []).filter('checkImg', function()
 {
@@ -19,6 +14,7 @@ angular.module('checkImg', []).filter('checkImg', function()
         		}
 			};
 });
+
 
 angular.module('acronimoPais', []).filter('acronimoPais', function()
 {
@@ -67,7 +63,6 @@ angular.module('months', []).filter('months', function(){
                 arrayToReturn.push(items[i]);
             }
         }
-
         return arrayToReturn;
     };
 });
