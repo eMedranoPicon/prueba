@@ -4,7 +4,7 @@
    response.setDateHeader( "Expires", 0 );
 %>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" ng-app="appFront">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -35,7 +35,7 @@
 </head>
 <!--  http://alefeuvre.github.io/foundation-grid-displayer/ -->
 <!-- <body data-grid-framework="bo" data-grid-color="blue" data-grid-opacity="0.5" data-grid-zindex="10" data-grid-nbcols="12">-->
-<body ng-app="appFront">
+<body >
 
 <div class="container">
 
@@ -62,6 +62,8 @@
     </div>
   </section>
   <!-- EO include events-home.html -->
+
+  <jsp:include page="/content/common/footer.html"/>
 
 </div> <!-- EO Container Page -->
 

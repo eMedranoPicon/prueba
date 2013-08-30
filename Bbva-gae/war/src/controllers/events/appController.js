@@ -10,7 +10,7 @@ function appController($scope, $http, $routeParams, $timeout, $location)
 
   $scope.filterCriteria = {};
 
-  $scope.orderField = "dateStart";
+  $scope.orderField = "dateStartStamp";
   $scope.orderReverse = "true";
 
   $scope.optsModal = {
@@ -19,6 +19,8 @@ function appController($scope, $http, $routeParams, $timeout, $location)
   };
 
   console.log('appController');// +$scope.events)
+
+  $scope.$apply();
 
   $http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
   {
@@ -84,7 +86,6 @@ function appController($scope, $http, $routeParams, $timeout, $location)
   {
       $scope.deleteEventModal = false;
       console.log('closeModalRemove');
-       $location.path('/blablbla');
   };
 
 

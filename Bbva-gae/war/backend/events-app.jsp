@@ -83,9 +83,7 @@
 
 	</div>
 
-  <footer>
-    <p></p>
-  <footer>
+   <jsp:include page="/content/common/footer.html"/>
 
 
 	<!--

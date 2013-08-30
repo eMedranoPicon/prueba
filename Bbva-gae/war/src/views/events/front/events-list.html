@@ -2,31 +2,44 @@
 <div class="span16">
     <div class="row-fluid">
     	<div class="span24">
-			<tabset>
+    		<tabset>
 			    <tab heading="Pr&oacute;ximos eventos" active="tab.active" disabled="tab.disabled" select='filterCriteria.eventPast="false"'>Pr&oacute;ximos eventos {{eventosProximos}}</tab>
 			    <tab heading="Eventos pasados" select='filterCriteria.eventPast="true"'>Eventos pasados {{eventosPasados}}</tab>
 			    <tab heading="Todos los eventos ({{eventosTodos}})" select='filterCriteria={}'>Todos los eventos <small>({{eventosTodos}})</tab>
 			</tabset>
 		</div>
-
 		<div class="row-fluid span24 conference-listing">
-
-
-
-	        <div class="row-fluid date-listing conference-listing interactive-listing-container" ng-repeat="eventPerMonth in eventsToFilter() | filter:filterEvents">
+	        <div ng-repeat="eventPerMonth in eventsToFilter() | filter:filterCriteria | filter:filterEvents | orderBy:orderField:orderReverse" class="row-fluid date-listing conference-listing interactive-listing-container" >
 	        	<div class="span8 day-label">
-	        		<h3>{{eventPerMonth.datesArray[2]}}<span class="year">{{eventPerMonth.datesArray[3]}}</span></h3>
+	        		<h3>{{eventPerMonth.datesArray[2] | mesEnLiteral }}<span class="year">{{eventPerMonth.datesArray[3]}}</span></h3>
 	        	</div>
 	        	<div class="span16 day-schedule">
-		        	<ol ng-repeat="event in events | filter:eventsPerMonth(eventPerMonth.datesArray[2])">
-		        		<li>{{event.title}}</li>
+		        	<ol ng-repeat="event in events | filter:filterCriteria | filter:eventsPerMonth(eventPerMonth.datesArray[2]) | orderBy:orderField:orderReverse">
+		        		<li class="conference interactive-listing">
+							<span class="startday"><span class="icon-scrach"><span class="ick"></span><span class="ick uck"></span></span>{{event.datesArray[1]}}</span>
+							<h4><a href="#/event-detail/{{event.id}}">{{event.title}}</a></h4>
+							<p class="location">
+								<a href="#" class="flag-small flag-{{ event.address[3] | acronimoPais}}">{{event.address[3]}}</a>
+								<a href="#">{{event.address[3]}}</a>,
+								<a href="#">{{event.address[2]}}</a>
+							</p>
+							<p class="date">{{event.dateStart}}</p>
+							<ul class="inline-tags" >
+								<li ng-repeat="point in event.tagsArray track by $index"><span class="label label-info">{{event.tagsArray[$index]}}</span></li>
+							</ul>
+						</li>
 		        	</ol>
 		        </div>
 	    	</div>
 	    </div>
-
-
-
+	    <!--
+		{{orderField}}
+		<ol ng-repeat="obj in events | orderBy:orderField:orderReverse">
+		    <li>
+		    	<b>{{obj.dateStartStamp}} , {{obj.title}}</b>
+			</li>
+		</ol>
+		-->
   	</div>
 </div>
 

@@ -12,9 +12,8 @@ function appFrontController($scope, $http, $routeParams)
 
   $scope.filterCriteria = {};
 
-  $scope.orderField = "dateStart";
+  $scope.orderField = "dateStartStamp";
   $scope.orderReverse = "true";
-
 
 
   $http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
@@ -22,7 +21,6 @@ function appFrontController($scope, $http, $routeParams)
     $scope.showError = false;
     $scope.textError = "";
     $scope.is_backend_ready = true;
-
     $scope.events = data.items;
     $scope.eventosTodos = $scope.events.length;
     //console.log('appController $scope.events:' +$scope.events)
@@ -38,10 +36,12 @@ function appFrontController($scope, $http, $routeParams)
   /* filtrado de eventos */
   var indexedEvents = [];
 
+
   $scope.eventsToFilter = function() {
       indexedEvents = [];
       return $scope.events;
   };
+
 
   $scope.filterEvents = function(event)
   {
@@ -53,12 +53,24 @@ function appFrontController($scope, $http, $routeParams)
     return teamIsNew;
   };
 
+
+  $scope.filterEvents2 = function(event)
+  {
+    var teamIsNew = indexedEvents.indexOf(event.datesArray[2]) == -1;
+    if ((teamIsNew)&&(event.eventPast==eventPast))
+    {
+        indexedEvents.push(event.datesArray[2]);
+    }
+    return teamIsNew;
+  };
+
+
   $scope.eventsPerMonth = function(mes)
   {
-    console.log('eventsPerMonth mes[2]:'+mes)
+    //console.log('eventsPerMonth mes[2]:'+mes)
     return function(event)
     {
-      console.log('eventsPerMonth event.datesArray[2]:'+event.datesArray[2])
+     // console.log('eventsPerMonth event.datesArray[2]:'+event.datesArray[2])
       return event.datesArray[2] == mes;
     }
   };

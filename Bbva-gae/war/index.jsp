@@ -80,6 +80,8 @@
   </section>
   <!-- EO include events-home.html -->
 
+  <jsp:include page="/content/common/footer.html"/>
+
 </div> <!-- EO Container Page -->
 
 </body>
