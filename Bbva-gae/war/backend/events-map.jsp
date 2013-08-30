@@ -91,7 +91,7 @@
 				<div class="row-fluid">
 					<div class="span24">
 						<div class="Flexible-container">
-							<div id="map-canvas"></div>
+							<div id="map-canvas" class="map_canvas"></div>
 						</div>
 					</div>
 				</div>

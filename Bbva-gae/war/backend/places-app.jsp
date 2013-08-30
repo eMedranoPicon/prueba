@@ -18,7 +18,7 @@
 <html lang="es" ng-app="appPlace">
 <head>
   <title>backend - places:: BBVA in cloud</title>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <!-- styles -->
   <link rel="stylesheet" type="text/css" href="/css/main.css" />
@@ -51,8 +51,9 @@
   <jsp:include page="/content/common/backend-navbar.jsp"/>
   <!-- EO include navbar.jsp -->
 
-  <!-- include events-home.html -->
-  <section class="section-page" ng-controller="appControllerPlaces">
+  <!-- include events-home.html
+  <section class="section-page" ng-controller="appControllerPlaces"-->
+  <section class="section-page">
 
     <header class="header-section">
    		<h1>{{textTitle}}</h1>

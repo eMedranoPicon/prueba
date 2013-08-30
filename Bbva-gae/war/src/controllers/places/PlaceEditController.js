@@ -21,7 +21,8 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, $location,
       dialogFade:true
     };
 
-    if (angular.isUndefined($scope.places))
+
+    		if (angular.isUndefined($scope.places))
     {
         console.log('recargar el scope');
         //$http.get('https://sopragroupux.appspot.com/_ah/api/place/v1/place/').success(function(data)
@@ -45,9 +46,10 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, $location,
         console.log('llamada a getPlace');
         getPlace($routeParams.id);
     }
+    		
 
 
-    function getPlace(idPlace)
+   function getPlace(idPlace)
     {
 
         $scope.indexPlace = findIndexById(idPlace,$scope.places);
@@ -63,7 +65,7 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, $location,
         }
     }
 
-     function updatePlace()
+   $scope.updatePlace = function() 
     {
 
     	console.log('EventPlaceController :'+$scope.place)
@@ -71,7 +73,8 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, $location,
 		$http.put('https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/', $scope.place).success(function()
         //$http.put('https://sopragroupux.appspot.com/_ah/api/place/v1/place', $scope.place).success(function()
         {
-            console.log('Guardando');            
+            console.log('Guardando')
+            
 
         }).error(function(data, status)
         {
@@ -98,10 +101,10 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, $location,
         console.log('sharedService en PlaceEditController datos: '+ $scope.latitud + ' ' + $scope.longitud + ' calle: ' + $scope.calleBdc+ ' cpBdc: ' + $scope.cpBdc+ ' ciudadBdc: ' + $scope.ciudadBdc+ ' paisBdc: ' + $scope.paisBdc);
     });
     
-    function updatePlaceLocation()
+    $scope.updatePlaceLocation = function()
     {
       
-    	var address = $scope.place.street + "," +$scope.place.zipcode+","+$scope.place.city+","+$scope.place.country;      
+      var address = $scope.place.street + "," +$scope.place.zipcode+","+$scope.place.city+","+$scope.place.country;      
 
       geocoder = new google.maps.Geocoder();
 
@@ -161,16 +164,13 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, $location,
 					$scope.place.latitude =	results[0].geometry.location.lat();
 					// long
 					$scope.place.longitud = results[0].geometry.location.lng();
-					$scope.place.fullAddress = results[0].formatted_address;
-            	                
-                  //$scope.updatePlace();
-					updatePlace();
+					$scope.place.fullAddress = results[0].formatted_address;            	                
+                  $scope.updatePlace();
               }
               else
               {
                 console.log("Geocode was not successful for the following reason: " + status);
-                ///$scope.updatePlace();
-                updatePlace();
+                $scope.updatePlace();
               }
           }
         );
@@ -179,8 +179,7 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, $location,
 
     $scope.openModalUpdate = function()
     {
-      console.log('openModal updatePlace');
-      updatePlaceLocation();
+    	$scope.updatePlaceLocation();
         console.log('openModal');
         $scope.placeModal = true;
     };
@@ -189,6 +188,8 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, $location,
     {
         $scope.placeModal = false;
         console.log('closeModal');
+        //if (!$scope.$$phase) { $scope.$apply(); }
+        $scope.$apply();
         $location.path('/');
     };
 

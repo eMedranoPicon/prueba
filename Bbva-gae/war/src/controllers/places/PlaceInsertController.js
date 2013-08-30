@@ -10,7 +10,7 @@ function PlaceInsertController($scope, $http, $routeParams, $rootScope, $locatio
 	$scope.showError = false;
     $scope.textError = "";
     $scope.is_backend_ready = false;
-    $scope.textTitle = "Insertar lugar de interes";  
+    $scope.textTitle = "Nuevo lugar de interes";  
     
 
     $scope.placeModal = false;
@@ -34,7 +34,7 @@ function PlaceInsertController($scope, $http, $routeParams, $rootScope, $locatio
     $scope.place.email="";
     $scope.place.description="";
     
-    function savePlace()
+   $scope.savePlace = function ()
     {
 
     	console.log('EventPlaceController $scope.place: '+$scope.place)
@@ -43,6 +43,7 @@ function PlaceInsertController($scope, $http, $routeParams, $rootScope, $locatio
         //$http.post('https://sopragroupux.appspot.com/_ah/api/place/v1/place', $scope.place).success(function()
         {
             console.log('Guardando');
+            
         }).error(function(data, status)
         {
               $scope.textError = "Error al insertar los datos. Por favor, intentelo mas tarde";
@@ -50,7 +51,7 @@ function PlaceInsertController($scope, $http, $routeParams, $rootScope, $locatio
         });
     }
     
-     function insertPlaceLocation()
+   $scope.insertPlaceLocation = function ()
     {
     	var address = $scope.place.street + "," +$scope.place.zipcode+","+$scope.place.city+","+$scope.place.country;      
 
@@ -113,14 +114,14 @@ function PlaceInsertController($scope, $http, $routeParams, $rootScope, $locatio
   					// long
   					$scope.place.longitud = results[0].geometry.location.lng();
   					$scope.place.fullAddress = results[0].formatted_address;            
-                  //$scope.savePlace();
-  					savePlace();
+                  $scope.savePlace();
+  					//savePlace();
               }
               else
               {
                 console.log("Geocode was not successful for the following reason: " + status);
-                //$scope.savePlace();
-                savePlace();
+                $scope.savePlace();
+                //savePlace();
               }
           }
         );
@@ -147,7 +148,7 @@ function PlaceInsertController($scope, $http, $routeParams, $rootScope, $locatio
     $scope.openModalInsert = function()
     {
       console.log('openModal saveEvent');
-      insertPlaceLocation();
+      $scope.insertPlaceLocation();
         console.log('openModal');
         $scope.placeModal = true;
     };
@@ -156,6 +157,8 @@ function PlaceInsertController($scope, $http, $routeParams, $rootScope, $locatio
     {
         $scope.placeModal = false;
         console.log('closeModal');
+        // apply...
+        $scope.$apply();
         $location.path('/');
     };
 

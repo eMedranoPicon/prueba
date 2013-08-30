@@ -8,16 +8,15 @@ function appControllerPlaces($scope, $http, $routeParams, $timeout)
   $scope.orderField = "namePlace";
   $scope.orderReverse = "true";
 
-  console.log('AngularJS - Place');
-
+  console.log('AngularJS - Place');  
+  $scope.$apply();
   //$http.get('https://sopragroupux.appspot.com/_ah/api/place/v1/place/').success(function(data)
   $http.get('https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/').success(function(data)
   {
       $scope.showError = false;
       $scope.textError = "";
-      $scope.is_backend_ready = true;
-      $scope.places = data.items;
-      
+      $scope.is_backend_ready = true;      
+      $scope.places = data.items;      
     }).error(function(data, status)
     {
       $scope.textError = "Error al cargar los datos. Por favor, intentalo más tarde";

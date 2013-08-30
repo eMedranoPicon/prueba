@@ -1,5 +1,5 @@
 
-function PlaceMapController($scope,$rootScope,sharedService)
+function PlaceMapController($scope,$http,$rootScope,sharedService)
 {
 		console.log(' controller : PlaceMapController');
 
@@ -8,6 +8,31 @@ function PlaceMapController($scope,$rootScope,sharedService)
     $scope.longitud = 0;
     var LATITUDE_DEFAULT = 40.416949;
     var LONGITUDE_DEFAULT =  -3.703347;
+    
+    $scope.showError = false;
+    $scope.textError = "";
+    $scope.is_backend_ready = false;
+    $scope.textTitle = "Listado de Lugares de Interes";
+    
+    var pinColor = "0066AE";
+    var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
+        new google.maps.Size(21, 34),
+        new google.maps.Point(0,0),
+        new google.maps.Point(10, 34));
+    var bbvaIcon = {url: '/img/bbva-icon.png',
+            size: new google.maps.Size(20, 32),
+            origin: new google.maps.Point(0,0),
+            scaledSize:new google.maps.Size(20, 32),
+            anchor: new google.maps.Point(10, 32)};
+    /*var bbvaShadow = {url: 'https://developers.google.com/maps/documentation/javascript/examples/images/beachflag.png',
+            size: new google.maps.Size(20, 32),
+            origin: new google.maps.Point(0,0),
+            anchor: new google.maps.Point(0, 32)};*/
+    
+    var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+        new google.maps.Size(40, 37),
+        new google.maps.Point(0, 0),
+        new google.maps.Point(12, 35));
 
     var ll = new google.maps.LatLng(LATITUDE_DEFAULT, LONGITUDE_DEFAULT);
 
@@ -27,7 +52,9 @@ function PlaceMapController($scope,$rootScope,sharedService)
         {
             var marker = new google.maps.Marker({
                 map: $scope.myMap,
-                position: ll
+                position: ll,
+                icon: bbvaIcon,
+                shadow: pinShadow
             });
             $scope.myMarkers = [marker, ];
         }
@@ -52,7 +79,9 @@ function PlaceMapController($scope,$rootScope,sharedService)
     {
       $scope.myMarkers.push(new google.maps.Marker({
           map : $scope.myMap,
-          position : pos
+          position : pos,
+          icon: bbvaIcon,
+          shadow: pinShadow
       }));
     };
 
@@ -119,9 +148,7 @@ function PlaceMapController($scope,$rootScope,sharedService)
         console.log('watch latitud: en EvenEditController: '+ sharedService.latitud + ' ' + sharedService.longitud + ' calle: ' + sharedService.calleBdc+ ' cpBdc: ' + sharedService.cpBdc+ ' ciudadBdc: ' + sharedService.ciudadBdc+ ' paisBdc: ' + sharedService.paisBdc);
         calcLatLon(sharedService.calleBdc,sharedService.cpBdc,sharedService.ciudadBdc,sharedService.paisBdc);
     });
-
-
-
+    
 }
 
 

@@ -26,7 +26,9 @@ public class Event {
 	private String urlEvent;
 	private String description;
 	private String dateStart; 
+	private String dateStartStamp;	
 	private String dateEnd;
+	private String dateEndStamp;
 	private String audience; //separated by commas
 	private String tags; //separated by commas
 	private List<String> tagsArray;
@@ -34,28 +36,7 @@ public class Event {
 	private List<String> datesArray; //[dd,mm,yyyy,dateStart,dd,mm,dateEnd]
 	
 	private List<String> address; //{street, zipcode, city,country, lat, long}	
-			
-	
-
-	public Event(String title, String urlImg, String host, String urlEvent,
-			String description, String dateStart, String dateEnd,
-			String audience, String tags, List<String> tagsArray,
-			boolean eventPast, List<String> datesArray, List<String> address) {
-		super();
-		this.title = title;
-		this.urlImg = urlImg;
-		this.host = host;
-		this.urlEvent = urlEvent;
-		this.description = description;
-		this.dateStart = dateStart;
-		this.dateEnd = dateEnd;
-		this.audience = audience;
-		this.tags = tags;
-		this.tagsArray = tagsArray;
-		this.eventPast = eventPast;
-		this.datesArray = datesArray;
-		this.address = address;
-	}
+				
 
 
 	public Event() {
@@ -213,21 +194,24 @@ public class Event {
                 
         calS.setTime(dateS);
         datesEvent.add(this.dateStart);
+        
         int dayS = calS.get(Calendar.DAY_OF_MONTH);
         datesEvent.add(String.valueOf(dayS));
         int monthS = calS.get(Calendar.MONTH);
         datesEvent.add(String.valueOf(monthS+1));
         int yearS = calS.get(Calendar.YEAR);
-        datesEvent.add(String.valueOf(yearS));        
+        datesEvent.add(String.valueOf(yearS));  
+     
 		
         calE.setTime(dateE);
         datesEvent.add(this.dateEnd);
+        
         int dayE = calE.get(Calendar.DAY_OF_MONTH);
         datesEvent.add(String.valueOf(dayE));
         int monthE = calE.get(Calendar.MONTH);
         datesEvent.add(String.valueOf(monthE+1));
         int yearE = calS.get(Calendar.YEAR);
-        datesEvent.add(String.valueOf(yearE)); 
+        datesEvent.add(String.valueOf(yearE));
         
 		this.datesArray = datesEvent;
 	}
@@ -244,10 +228,55 @@ public class Event {
 		} else {
 			this.tagsArray.add("No hay tags registradas");
 		} 		
+	}
+
+
+
+	public String getDateStartStamp() {
+		return dateStartStamp;
+	}
+
+
+
+	public void setDateStartStamp() {
+		
+	        Date startStamp = null;
+			try {
+				startStamp = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(this.dateStart);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	        
+	        Calendar cal = new GregorianCalendar();
+	        cal.setTime(startStamp);
+	     // print the next time in milliseconds
+	        long dateS = cal.getTimeInMillis();
+		this.dateStartStamp = String.valueOf(dateS);
+	}
+
+
+
+	public String getDateEndStamp() {
+		return dateEndStamp;
+	}
+
+
+
+	public void setDateEndStamp() {
+		 Date endStamp = null;
+			try {
+				endStamp = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(this.dateEnd);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	        
+	        Calendar cal = new GregorianCalendar();
+	        cal.setTime(endStamp);
+	     // print the next time in milliseconds
+	        long dateS = cal.getTimeInMillis();
+		this.dateEndStamp = String.valueOf(dateS);
 	}	
-	
-
-	
-
 	
 }

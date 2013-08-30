@@ -18,7 +18,7 @@ appPlace.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 	}).
 	when('/place-map/', {
 		templateUrl: '/src/views/places/places-map.html',
-		controller: PlaceMapController
+		controller: PlaceMapListController
 	}).
 	  //cualquier ruta no definida
 	  otherwise({
@@ -27,10 +27,11 @@ appPlace.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 
 		});
 	
-	
-	PlaceEditController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
+
 	PlaceInsertController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
-	PlaceMapController.$inject = ['$scope', '$rootScope', 'mySharedService'];
+	PlaceEditController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
+	PlaceMapController.$inject = ['$scope', '$http','$rootScope', 'mySharedService'];
+	PlaceMapListController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
 
 }]);
 

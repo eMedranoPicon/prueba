@@ -110,6 +110,8 @@ public class EventEndpoint {
 				event.setEventPast(event.isEventPast());
 				event.setDatesArray();
 				event.setTagsArray();
+				event.setDateStartStamp();
+				event.setDateEndStamp();
 				
 				if (containsEvent(event)) {
 					throw new EntityExistsException("Object already exists");
@@ -141,6 +143,9 @@ public class EventEndpoint {
 			event.setEventPast(event.isEventPast());
 			event.setDatesArray();
 			event.setTagsArray();
+			event.setDateStartStamp();
+			event.setDateEndStamp();
+			
 			
 			if (!containsEvent(event)) {
 				throw new EntityNotFoundException("Object does not exist");

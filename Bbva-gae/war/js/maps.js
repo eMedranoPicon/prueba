@@ -8,22 +8,24 @@ var markersArrayAddress = [];
 var LATITUDE_DEFAULT = 40;
 var LONGITUDE_DEFAULT = -3;
 
-// plot initial point using geocode instead of coordinates (works just fine)
 function initialize() {
 	geocoder = new google.maps.Geocoder();
-	// var myLatlngIni = new
-	// google.maps.LatLng(localStorage.getItem('maps_latitude'),localStorage.getItem('maps_longitude'));
-
+	
 	// Centrar España
 	var myLatlngIni = new google.maps.LatLng(LATITUDE_DEFAULT,
 			LONGITUDE_DEFAULT);
 	var myOptions = {
 		center : myLatlngIni,
 		zoom : 6,
-		mapTypeId : google.maps.MapTypeId.ROADMAP,
-		navigationControlOptions : {
-			style : google.maps.NavigationControlStyle.SMALL
-		}
+		mapTypeControl: true,
+	    mapTypeControlOptions: {
+	      style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+	    },
+	    zoomControl: true,
+	    zoomControlOptions: {
+	      style: google.maps.ZoomControlStyle.SMALL
+	    },
+	    mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
 	map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
 	marker = new google.maps.Marker({
