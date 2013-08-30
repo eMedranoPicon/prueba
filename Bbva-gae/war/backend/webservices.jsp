@@ -108,6 +108,8 @@
 
 	</section>
 
+   <jsp:include page="/content/common/footer.html"/>
+
 </div>
 </body>
 </html>

@@ -20,6 +20,8 @@ function appController($scope, $http, $routeParams, $timeout, $location)
 
   console.log('appController');// +$scope.events)
 
+  $scope.$apply();
+
   $http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
   {
       $scope.showError = false;
@@ -84,7 +86,6 @@ function appController($scope, $http, $routeParams, $timeout, $location)
   {
       $scope.deleteEventModal = false;
       console.log('closeModalRemove');
-       $location.path('/blablbla');
   };
 
 

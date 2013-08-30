@@ -40,6 +40,10 @@
   <jsp:include page="/content/common/backend-header.jsp"/>
   <!-- EO include backend-header.jsp -->
 
+  <!-- include navbar.jsp -->
+  <jsp:include page="/content/common/backend-navbar.jsp" />
+  <!-- EO include navbar.jsp -->
+
   <div class="container-fluid">
 
     <div class="row-fluid">
@@ -156,6 +160,8 @@
     </div>
 
   </div>
+
+   <jsp:include page="/content/common/footer.html"/>
 
 </div> <!-- EO Container Page -->
 </body>

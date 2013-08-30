@@ -18,6 +18,7 @@ function EventEditController($scope, $http, $routeParams, $rootScope, $location,
       dialogFade:true
     };
 
+
     if (angular.isUndefined($scope.events))
     {
         console.log('recargar el scope');
@@ -47,11 +48,13 @@ function EventEditController($scope, $http, $routeParams, $rootScope, $location,
     //Obtiene los datos del evento para editarlo
     function getEvent(idEvent)
     {
+        //$scope.event.$apply();
         $scope.indexEvent = findIndexById(idEvent,$scope.events);
         //console.log('EventEditController getEvent $scope.indexEvent: '+$scope.indexEvent)
 
         if ($scope.indexEvent != -1)
         {
+
             $scope.event = $scope.events[$scope.indexEvent];
             sharedService.prepForBroadcast($scope.event.address[5],$scope.event.address[6],$scope.event.address[0],$scope.event.address[1],$scope.event.address[2],$scope.event.address[3]);
         }
@@ -61,6 +64,7 @@ function EventEditController($scope, $http, $routeParams, $rootScope, $location,
             $scope.textError = "Evento" + idEvent + "no encontrado";
         }
     }
+
 
     function updateEventWithPosition()
     {
@@ -106,16 +110,12 @@ function EventEditController($scope, $http, $routeParams, $rootScope, $location,
               $scope.textError = "Error al insertar los datos. Por favor, inténtelo más tarde";
               $scope.showError = true;
         });
-
-
     }
-
 
     $scope.handleClick = function(lat,lon,calle,cp,ciudad,pais)
     {
         sharedService.prepForBroadcast(lat,lon,calle,cp,ciudad,pais);
     };
-
 
     $scope.$on('handleBroadcast', function()
     {
@@ -149,6 +149,7 @@ function EventEditController($scope, $http, $routeParams, $rootScope, $location,
     {
         $scope.eventModal = false;
         console.log('closeModal');
+        $scope.$apply();
         $location.path('/');
     };
 

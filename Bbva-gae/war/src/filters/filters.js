@@ -37,34 +37,51 @@ angular.module('acronimoPais', []).filter('acronimoPais', function()
 			};
 });
 
-
-angular.module('weDontLike', []).filter('weDontLike', function(){
-
-    return function(items, name){
-
-        var arrayToReturn = [];
-        for (var i=0; i<items.length; i++){
-            if (items[i].name != name) {
-                arrayToReturn.push(items[i]);
-            }
+angular.module('mesEnLiteral', []).filter('mesEnLiteral', function()
+{
+    return function(input)
+        {
+          switch(input)
+        {
+          case '1':
+            return 'enero';
+            break;
+          case '2':
+            return 'febrero';
+            break;
+          case '3':
+            return 'marzo';
+            break;
+          case '4':
+            return 'abril';
+            break;
+          case '5':
+            return 'mayo';
+            break;
+          case '6':
+            return 'junio';
+            break;
+          case '7':
+            return 'julio';
+            break;
+          case '8':
+            return 'agosto';
+            break;
+          case '9':
+            return 'septiembre';
+            break;
+          case '10':
+            return 'octubre';
+            break;
+          case '11':
+            return 'noviembre';
+            break;
+          case '12':
+            return 'diciembre';
+            break;
         }
-
-        return arrayToReturn;
-    };
+      };
 });
 
-angular.module('months', []).filter('months', function(){
-
-    return function(items, month){
-
-        var arrayToReturn = [];
-        for (var i=0; i<items.length; i++){
-            if (items[i].dateStart == month) {
-                arrayToReturn.push(items[i]);
-            }
-        }
-        return arrayToReturn;
-    };
-});
 
 

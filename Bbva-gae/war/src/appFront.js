@@ -1,4 +1,4 @@
-var appFront = angular.module("appFront", ['checkImg','acronimoPais','ui.bootstrap','ui.map','ui.event']);
+var appFront = angular.module("appFront", ['checkImg','acronimoPais','mesEnLiteral','ui.bootstrap','ui.map','ui.event']);
 
 //definimos las rutas de la 'app'
 appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider)
@@ -7,7 +7,7 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 	delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
 	$routeProvider
-	.when('/events', {
+	.when('/event-detail/:id', {
 		templateUrl: '/src/views/events/front/event-detail.html',
 		controller: appFrontController
 	})
@@ -38,7 +38,6 @@ function findIndexById(id,arrayList)
 	    break;
 	  }
 	}
-
 	return index;
 }
 
@@ -52,6 +51,6 @@ function myIndexOf(arr,o)
             return i;
         }
     }
-
     return -1;
 }
+
