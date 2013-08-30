@@ -12,7 +12,7 @@ function appFrontController($scope, $http, $routeParams)
 
   $scope.filterCriteria = {};
 
-  $scope.orderField = "dateStart";
+  $scope.orderField = "dateStartStamp";
   $scope.orderReverse = "true";
 
 
@@ -67,7 +67,7 @@ function appFrontController($scope, $http, $routeParams)
 
   $scope.eventsPerMonth = function(mes)
   {
-    console.log('eventsPerMonth mes[2]:'+mes)
+    //console.log('eventsPerMonth mes[2]:'+mes)
     return function(event)
     {
      // console.log('eventsPerMonth event.datesArray[2]:'+event.datesArray[2])

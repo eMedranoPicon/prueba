@@ -19,9 +19,9 @@
             <form class="form-inline">
                 <label for="orderField">
                     <select ng-model="orderField" id="orderField" name="orderField">
-                        <option value="title" selected>Nombre del evento</option>
-                        <option value="dateStart">Fecha de inicio</option>
-                        <option value="dateEnd">Fecha de fin</option>
+                        <option value="title" >Nombre del evento</option>
+                        <option value="dateStartStamp" selected="selected">Fecha de inicio</option>
+                        <option value="dateEndStamp">Fecha de fin</option>
                     </select>
                 </label>
                 <label for="orderReverse">
@@ -60,8 +60,8 @@
                 </tr>
                 <tr ng-repeat="obj in events | filter:query | orderBy:orderField:orderReverse" ng-show="is_backend_ready">
                     <td>{{obj.title}}</td>
-                    <td>{{obj.dateStart}}</td>
-                    <td>{{obj.dateEnd}}</td>
+                    <td>{{obj.dateStart}}<br>{{obj.dateStartStamp}}</td>
+                    <td>{{obj.dateEnd}}<br>{{obj.dateEndStamp}}</td>
                     <td class="wrapword">{{obj.description}}</td>
                     <td class="wrapword"><a href="{{obj.urlEvent}}" target="_blank">{{obj.urlEvent}}</a></td>
                     <td>{{obj.audience}}</td>

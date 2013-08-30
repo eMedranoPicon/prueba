@@ -9,7 +9,7 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 	$routeProvider
 	.when('/event-detail/:id', {
 		templateUrl: '/src/views/events/front/event-detail.html',
-		controller: appFrontController
+		controller: EventDetailController
 	})
 	.when('/events2', {
 		templateUrl: '/src/views/events/front/events-list2.html',
@@ -20,8 +20,41 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 		templateUrl: '/src/views/events/front/events-list.html',
 		controller: appFrontController
 	});
-	//otherwise({ redirectTo: '/events'});
+
+	EventDetailController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
+	MapController.$inject = ['$scope', '$rootScope', 'mySharedService'];
 }]);
+
+
+appFront.factory('mySharedService', function($rootScope)
+{
+    var sharedService = {};
+
+    sharedService.latitud = '';
+    sharedService.longitud = '';
+    sharedService.calleBdc = '';
+    sharedService.cpBdc = '';
+    sharedService.ciudadBdc = '';
+    sharedService.paisBdc = '';
+
+    sharedService.prepForBroadcast = function(lat,lon,calle,cp,ciudad,pais)
+    {
+        this.latitud = lat;
+        this.longitud = lon;
+        this.calleBdc = calle;
+        this.cpBdc = cp;
+        this.ciudadBdc = ciudad;
+        this.paisBdc = pais;
+        this.broadcastItem();
+    };
+
+    sharedService.broadcastItem = function()
+    {
+        $rootScope.$broadcast('handleBroadcast');
+    };
+
+    return sharedService;
+});
 
 
 function findIndexById(id,arrayList)

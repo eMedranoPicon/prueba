@@ -10,7 +10,7 @@ function appController($scope, $http, $routeParams, $timeout, $location)
 
   $scope.filterCriteria = {};
 
-  $scope.orderField = "dateStart";
+  $scope.orderField = "dateStartStamp";
   $scope.orderReverse = "true";
 
   $scope.optsModal = {

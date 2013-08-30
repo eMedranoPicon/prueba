@@ -1,20 +1,65 @@
-<!-- include src/views/events/front/events-detail.html -->
+<!-- include src/views/events/front/event-detail.html -->
 <div class="span16">
     <div class="row-fluid">
-        <div class="row-fluid list-events-home" ng-controller="appController">
-			<div class="span12" ng-repeat="obj in events | filter:query | orderBy:orderField:orderReverse">
-				<article class="eventList">
-				   	<h1>{{obj.title}}</h1>
-				   	<small>{{obj.dateStart}}</small>
-				   	<div class="contentEventList">
-				    	<!--<img src="img/events/events3.jpg" class="pull-left" />-->
-				    	<img src="{{ checkURLImg(obj.urlImg) }} " class="pull-left" />
-				    	<p>{{obj.description}}</p>
-				    	<a class="pull-right" href="events/event-detail.jsp/#{{obj.id}}" title="Ver detalle del evento">[m&aacute;s info]</a>
-				  	</div>
-				</article>
-			</div>
-		</div>
+    	<article class="event-detail" >
+            <!--ng-show="showDetailLayout">
+    		-->
+            <header>
+    			<h1>{{event.title}}</h1>
+    		</header>
+    		<div class="row-fluid">
+    			<div class="span12">
+    				<h2 class="main-date">
+    					<span class="day">{{event.datesArray[1]}}</span>
+    					<span class="month">{{event.datesArray[2] | mesEnLiteral }}</span>
+    					<span class="year">{{event.datesArray[3]}}</span>
+    				</h2>
+    			</div>
+    			<div class="span12">
+    				<h3 class="main-place">
+    					<a href="#" class="flag-large flag-{{ event.address[3] | acronimoPais}}">{{event.address[3]}}</a>
+    					<a href="#">{{event.address[2]}}</a> en <a href="#">{{event.address[3]}}</a>
+    				</h3>
+    			</div>
+    		</div>
+    		<div class="row-fluid">
+    			<div class="span24">
+    				<p>{{event.description}}</p>
+    			</div>
+    		</div>
+    		<div class="row-fluid">
+    			<div class="span12">
+    				<ul class="item-list">
+    					<li><a href="{{event.urlEvent}}" target="_blank">{{event.urlEvent}}</a></li>
+    					<li><a href="#/addtoCalendar" class="btn">Añadir evento al calendario</a></li>
+    				</ul>
+    			</div>
+    			<div class="span12">
+    				<ul class="item-list">
+    					<li><a href="http://twitter.com" class="icon twitter"><span>@cuentadelevento</span></a></li>
+    					<li><a href="https://twitter.com/#!/search/" class="icon hashtag twitter-search"><span>#hashtagdelevento</span></a></li>
+    				</ul>
+    			</div>
+    		</div>
+    		<div class="row-fluid">
+    			<div class="span6">
+    				<!-- google maps-->
+				    <div ng-controller="MapController">
+				        <div id="map_canvas" ui-map="myMap" class="map_canvas" ui-options="mapOptions" ui-event="{'map-idle' : 'onMapIdle()'}"></div>
+				        <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]" ui-event="{'map-click': 'markerClicked(marker)'}"></div>
+				    </div>
+				   <!--EO google maps -->
+    			</div>
+    			<div class="span18">
+    				<ul class="item-list">
+    					<li><a href="http://twitter.com" class="icon twitter"><span>@cuentadelevento</span></a></li>
+    					<li><a href="https://twitter.com/#!/search/" class="icon hashtag twitter-search"><span>#hashtagdelevento</span></a></li>
+    				</ul>
+    			</div>
+    		</div>
+
+    	</article>
+
     </div>
 </div>
 
@@ -23,4 +68,4 @@
 
     </div>
 </div>
-<!-- EO include src/views/events/front/events-detail.html -->
+<!-- EO include src/views/events/front/event-detail.html -->
