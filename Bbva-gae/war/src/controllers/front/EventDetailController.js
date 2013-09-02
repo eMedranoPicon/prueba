@@ -1,6 +1,5 @@
-/**
-* EventEditController
-* Controlador de edicion de Eventos
+/*
+* EventDetailController
 */
 
 function EventDetailController($scope, $http, $routeParams, $rootScope, $location, sharedService)
