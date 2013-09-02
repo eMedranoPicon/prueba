@@ -127,8 +127,8 @@
             <div class="container-data pull-right">
               <!--<p> Desde aquí podrás gestionar tus eventos:</p>-->
               <ul class="decorated-list">
-                <li><a href="#">Dar de <strong>alta</strong> un slide</a></li>
-                <li><a href="#"><strong>Listar/Editar/Borrar</strong> slides</a></li>
+                <li><a href="/backend/banner-app.jsp#/banner-new">Dar de <strong>alta</strong> un slide</a></li>
+                <li><a href="/backend/banner-app.jsp"><strong>Listar/Editar/Borrar</strong> slides</a></li>
               </ul>
             </div>
           </div>

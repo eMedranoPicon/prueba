@@ -105,7 +105,7 @@
 
 					<div class="span24">
 
-						<div class="accordion" id="accordion2">
+						<div class="accordion" id="accordion3">
 							<div class="accordion-group">
 								<div class="accordion-heading">
 									<a class="accordion-toggle" data-toggle="collapse"
@@ -141,6 +141,54 @@
 												href="https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/"
 												target="_blank">Actualizar Lugar</a>
 												<p>https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/</p>
+												<p>httpMethod: "PUT"</p>
+												<p>data: jSON de la estructura de Lugar.</p></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+					<div class="span24">
+
+						<div class="accordion" id="accordion4">
+							<div class="accordion-group">
+								<div class="accordion-heading">
+									<a class="accordion-toggle" data-toggle="collapse"
+										data-parent="#accordion2" href="#collapseOne"> Web
+										Services :: Banner </a>
+								</div>
+								<div id="collapseOne" class="accordion-body collapse in">
+									<div class="accordion-inner">
+										<ul class="decorated-list">
+											<li><a
+												href="https://sopraux-bbva.appspot.com/_ah/api/banner/v1/banner/"
+												target="_blank">Listado Banner</a>
+												<p>https://sopraux-bbva.appspot.com/_ah/api/banner/v1/banner/</p>
+												<p>httpMethod: "GET"</p></li>
+											<li><a
+												href="https://sopraux-bbva.appspot.com/_ah/api/banner/v1/banner/"
+												target="_blank">Listado de Banner</a>
+												<p>https://sopraux-bbva.appspot.com/_ah/api/banner/v1/banner/{id}</p>
+												<p>httpMethod: "GET"</p></li>
+											<li><a
+												href="https://sopraux-bbva.appspot.com/_ah/api/banner/v1/banner/"
+												target="_blank">Insertar Banner</a>
+												<p>https://sopraux-bbva.appspot.com/_ah/api/banner/v1/banner/</p>
+												<p>httpMethod: "POST"</p>
+												<p>data: jSON de la estructura de Lugar.</p></li>
+											<li><a
+												href="https://sopraux-bbva.appspot.com/_ah/api/banner/v1/banner/"
+												target="_blank">Eliminar Banner</a>
+												<p>https://sopraux-bbva.appspot.com/_ah/api/banner/v1/banner/{id}</p>
+												<p>httpMethod: "DELETE"</p>
+												<p>data: {id} del elemento a eliminar</p></li>
+											<li><a
+												href="https://sopraux-bbva.appspot.com/_ah/api/banner/v1/banner/"
+												target="_blank">Actualizar Banner</a>
+												<p>https://sopraux-bbva.appspot.com/_ah/api/banner/v1/banner/</p>
 												<p>httpMethod: "PUT"</p>
 												<p>data: jSON de la estructura de Lugar.</p></li>
 										</ul>

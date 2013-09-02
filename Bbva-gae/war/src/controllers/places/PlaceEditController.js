@@ -82,7 +82,7 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, $location,
 		$http.put('https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/', $scope.place).success(function()
         //$http.put('https://sopragroupux.appspot.com/_ah/api/place/v1/place', $scope.place).success(function()
         {
-            console.log('Guardando')
+            console.log('Guardando');
             
 
         }).error(function(data, status)
