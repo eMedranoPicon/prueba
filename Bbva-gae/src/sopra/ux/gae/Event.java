@@ -30,6 +30,7 @@ public class Event {
 	private String dateEnd;
 	private String dateEndStamp;
 	private String audience; //separated by commas
+	private List<String> audienceArray;
 	private String tags; //separated by commas
 	private List<String> tagsArray;
 	private boolean eventPast;
@@ -146,8 +147,12 @@ public class Event {
 	}
 
 
-	public boolean isEventPast() {
-		
+	public boolean isEventPast() {	        
+		return eventPast;
+	}
+
+
+	public void setEventPast() {
 		// This is how to get today's date in Java
         Date today = new Date();
         Date dateStartJ = null;
@@ -158,20 +163,15 @@ public class Event {
 			e.printStackTrace();
 		}
         System.out.println(dateStartJ); 
-        
+        boolean eventFlag;
         if(today.after(dateStartJ)){
-        	eventPast = true;
+        	eventFlag = true;
         } else {
-        	eventPast = false;
+        	eventFlag = false;
         }
-        System.out.println(eventPast); 
+        System.out.println(eventFlag); 
         
-		return eventPast;
-	}
-
-
-	public void setEventPast(boolean eventPast) {
-		this.eventPast = eventPast;
+		this.eventPast = eventFlag;
 	}
 
 	public List<String> getDatesArray() {
@@ -277,6 +277,22 @@ public class Event {
 	     // print the next time in milliseconds
 	        long dateS = cal.getTimeInMillis();
 		this.dateEndStamp = String.valueOf(dateS);
-	}	
+	}
+	
+	public List<String> getAudienceArray() {
+		return audienceArray;
+	}
+
+	public void setAudienceArray() {
+		this.audienceArray = new ArrayList<String>();	
+		if(this.audience != null) {
+		List<String> listaAudience = new ArrayList<String>(Arrays.asList(this.audience.split(",")));
+		this.audienceArray = listaAudience;
+		} else {
+			this.audienceArray.add("No hay audiencia");
+		} 		
+	}
+	
+	
 	
 }

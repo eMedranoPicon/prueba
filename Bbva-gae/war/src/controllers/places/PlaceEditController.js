@@ -13,6 +13,15 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, $location,
     $scope.textTitle = "Editar lugar de interes";
     $scope.showEditLayout = false;
     
+    $scope.typePlaceSelect = [
+                              {'type': '', 'description': ''},
+                              {'type': 'Restaurante', 'description': 'Restaurante'},
+                              {'type': 'Museo', 'description': 'Museo'},
+                              {'type': 'Plaza', 'description': 'Plaza'},
+                              {'type': 'Bar', 'description': 'Bar'},
+                              {'type': 'Galeria', 'description': 'Galeria'}
+                             ];
+    
 
     $scope.placeModal = false;
     $scope.errorModal = false;

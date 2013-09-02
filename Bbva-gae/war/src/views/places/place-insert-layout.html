@@ -9,13 +9,14 @@
 		<form class="form-horizontal" id="edit-form" ng-submit="openModalInsert()" ng-include="'/src/views/places/_place-form.html'"></form>
 
 	</div>
-
+    <div class="span15">
 	 <!-- google maps -->
-    <div ng-controller="PlaceMapController">
-        <div id="map_canvas" ui-map="myMap" class="span15 map_canvas" ui-options="mapOptions" ui-event="{'map-idle' : 'onMapIdle()'}"></div>
-        <!--In addition to creating the markers on the map, div elements with existing google.maps.Marker object should be created to hook up with events -->
-        <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]" ui-event="{'map-click': 'markerClicked(marker)'}"></div>
-        <!--<pre>rootscope -> {{rootscope | json}}</pre>-->
+	    <div ng-controller="PlaceMapController">
+	        <div id="map_canvas" ui-map="myMap" class="map_canvas" ui-options="mapOptions" ui-event="{'map-idle' : 'onMapIdle()'}"></div>
+	        <!--In addition to creating the markers on the map, div elements with existing google.maps.Marker object should be created to hook up with events -->
+	        <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]" ui-event="{'map-click': 'markerClicked(marker)'}"></div>
+	        <!--<pre>rootscope -> {{rootscope | json}}</pre>-->
+	    </div>
     </div>
     <!-- EO google maps -->
 

@@ -23,12 +23,7 @@ function PlaceMapController($scope,$http,$rootScope,sharedService)
             size: new google.maps.Size(20, 32),
             origin: new google.maps.Point(0,0),
             scaledSize:new google.maps.Size(20, 32),
-            anchor: new google.maps.Point(10, 32)};
-    /*var bbvaShadow = {url: 'https://developers.google.com/maps/documentation/javascript/examples/images/beachflag.png',
-            size: new google.maps.Size(20, 32),
-            origin: new google.maps.Point(0,0),
-            anchor: new google.maps.Point(0, 32)};*/
-    
+            anchor: new google.maps.Point(10, 32)};    
     var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
         new google.maps.Size(40, 37),
         new google.maps.Point(0, 0),
@@ -72,6 +67,8 @@ function PlaceMapController($scope,$http,$rootScope,sharedService)
         $scope.myMap.setCenter(latLon);
         removeAllMarkers();
         addMarker(latLon);
+        /*Zoom*/
+        $scope.myMap.setZoom(16);
     }
 
 

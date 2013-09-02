@@ -40,7 +40,7 @@
 <!-- Bloque de Librerias - libreriasjs -->
 <jsp:include page="/libraries-js.jsp" />
 
-<script src="https://apis.google.com/js/client.js?onload=auth"></script>
+<script src="https://apis.google.com/js/client.js?onload=loadGapi"></script>
 
 
 
@@ -89,6 +89,7 @@
 	<!--
 <script src="/js/maps.js"></script>-->
 	<script src="/js/calendar.js"></script>
+	<script src="/js/auth.js"></script>
 
 	<script type="text/javascript">
 		/*

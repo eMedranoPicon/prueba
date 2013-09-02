@@ -40,27 +40,6 @@
 <script
 	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 <script src="/js/application.js"></script>
-
-<style>
-/* Flexible iFrame */
-.Flexible-container {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
-	height: 0;
-	overflow: hidden;
-}
-
-.Flexible-container iframe,.Flexible-container object,.Flexible-container embed
-	{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-</style>
-
 </head>
 <body>
 

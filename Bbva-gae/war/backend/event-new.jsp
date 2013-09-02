@@ -22,29 +22,6 @@
 <link rel="stylesheet" type="text/css" href="/css/main.css" />
 <link rel="stylesheet" type="text/css"
 	href="/css/bootstrap-datetimepicker.min.css" />
-<style>
-#map-canvas {
-	width: 100%;
-	height: 360px;
-}
-/* Flexible iFrame */
-.Flexible-container {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
-	height: 0;
-	overflow: hidden;
-}
-
-.Flexible-container iframe,.Flexible-container object,.Flexible-container embed
-	{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-</style>
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
 			<script src="/js/lib/html5shiv.js"></script>
@@ -53,11 +30,10 @@
 <jsp:include page="/libraries-js.jsp" />
 <script
 	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
-<script src="https://apis.google.com/js/client.js?onload=auth"></script>
-
 <script src="/js/maps.js"></script>
 <script src="/js/calendar.js"></script>
 <script src="/js/backend.js"></script>
+<script src="/js/auth.js"></script>
 
 </head>
 <body>
@@ -202,7 +178,7 @@
 				</div>
 				<div class="span15">
 					<div class="Flexible-container">
-						<div id="map-canvas"></div>
+						<div id="map-canvas" class="map_canvas"></div>
 					</div>
 					<div class="Flexible-container">
 						<iframe
@@ -256,5 +232,6 @@
 		//newEventMap();
 	});
 </script>
+<script src="https://apis.google.com/js/client.js?onload=auth"></script>
 </body>
 </html>
