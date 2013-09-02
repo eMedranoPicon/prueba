@@ -7,6 +7,15 @@ var markersArrayLong = [];
 var markersArrayAddress = [];
 var LATITUDE_DEFAULT = 40;
 var LONGITUDE_DEFAULT = -3;
+var bbvaIcon = {url: '/img/bbva-icon.png',
+        size: new google.maps.Size(20, 32),
+        origin: new google.maps.Point(0,0),
+        scaledSize:new google.maps.Size(20, 32),
+        anchor: new google.maps.Point(10, 32)};    
+var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+    new google.maps.Size(40, 37),
+    new google.maps.Point(0, 0),
+    new google.maps.Point(12, 35));
 
 function initialize() {
 	geocoder = new google.maps.Geocoder();
@@ -30,7 +39,9 @@ function initialize() {
 	map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
 	marker = new google.maps.Marker({
 		map : map,
-		position : myLatlngIni
+		position : myLatlngIni,
+        icon: bbvaIcon,
+        shadow: pinShadow
 	});
 	marker.setVisible(false);
 }
@@ -49,7 +60,7 @@ function previewMap() {
 	
 	console.log(result);
 	/*Zoom*/
-	map.setZoom(12);
+	map.setZoom(16);
 
 }
 
@@ -92,7 +103,9 @@ function mapEvents() {
 					marker = new google.maps.Marker({
 						map : map,
 						title : markersArrayAddress[i],
-						position : myLatlng
+						position : myLatlng,
+		                icon: bbvaIcon,
+		                shadow: pinShadow
 					});
 					map.setCenter(myLatlng);
 					break;
@@ -184,7 +197,9 @@ function getLatLong(address) {
 							marker = new google.maps.Marker({
 								map : map,
 								position : results[0].geometry.location,
-								title : results[0].formatted_address
+								title : results[0].formatted_address,
+								icon: bbvaIcon,
+				                shadow: pinShadow
 							});							
 
 						} else {

@@ -103,20 +103,21 @@ public class EventEndpoint {
 	public Event insertEvent(Event event) {		
 		PersistenceManager mgr = getPersistenceManager();
 		try {			
-			if (event.getId() != null) {
-				/*
-				 * logica de evento pasado
-				 * */
-				event.setEventPast(event.isEventPast());
-				event.setDatesArray();
-				event.setTagsArray();
-				event.setDateStartStamp();
-				event.setDateEndStamp();
-				
+			if (event.getId() != null) {				
 				if (containsEvent(event)) {
 					throw new EntityExistsException("Object already exists");
 				}
 			}
+			/*
+			 * logica de evento - campos extras
+			 * */
+			event.setEventPast();
+			event.setDatesArray();
+			event.setTagsArray();
+			event.setDateStartStamp();
+			event.setDateEndStamp();
+			event.setAudienceArray();
+			
 			mgr.makePersistent(event);
 		} finally {
 			mgr.close();
@@ -140,13 +141,12 @@ public class EventEndpoint {
 			/*
 			 * logica de evento pasado
 			 * */
-			event.setEventPast(event.isEventPast());
+			event.setEventPast();
 			event.setDatesArray();
 			event.setTagsArray();
 			event.setDateStartStamp();
 			event.setDateEndStamp();
-			
-			
+			event.setAudienceArray();			
 			if (!containsEvent(event)) {
 				throw new EntityNotFoundException("Object does not exist");
 			}

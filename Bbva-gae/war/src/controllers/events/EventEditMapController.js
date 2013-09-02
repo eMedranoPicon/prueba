@@ -8,6 +8,11 @@ function EventEditMapController($scope,$rootScope,sharedService)
     $scope.longitud = 0;
     var LATITUDE_DEFAULT = 40.416949;
     var LONGITUDE_DEFAULT =  -3.703347;
+    var bbvaIcon = {url: '/img/bbva-icon.png',
+            size: new google.maps.Size(20, 32),
+            origin: new google.maps.Point(0,0),
+            scaledSize:new google.maps.Size(20, 32),
+            anchor: new google.maps.Point(10, 32)};  
 
     var ll = new google.maps.LatLng(LATITUDE_DEFAULT, LONGITUDE_DEFAULT);
 
@@ -27,7 +32,8 @@ function EventEditMapController($scope,$rootScope,sharedService)
         {
             var marker = new google.maps.Marker({
                 map: $scope.myMap,
-                position: ll
+                position: ll,
+                icon: bbvaIcon
             });
             $scope.myMarkers = [marker, ];
         }
@@ -52,7 +58,8 @@ function EventEditMapController($scope,$rootScope,sharedService)
     {
       $scope.myMarkers.push(new google.maps.Marker({
           map : $scope.myMap,
-          position : pos
+          position : pos,
+          icon: bbvaIcon
       }));
     };
 
