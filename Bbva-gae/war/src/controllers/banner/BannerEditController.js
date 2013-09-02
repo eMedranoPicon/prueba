@@ -3,7 +3,7 @@
 * Controlador de edicion de Banner
 */
 
-function BannerEditController($scope, $http, $routeParams, $rootScope)
+function BannerEditController($scope, $http, $routeParams, $rootScope, $location)
 {
 	console.log('BannerEditController');
 	
@@ -32,7 +32,6 @@ function BannerEditController($scope, $http, $routeParams, $rootScope)
             $scope.is_backend_ready = true;
             $scope.bannerList = data.items;
             getBanner($routeParams.id);
-            $scope.$apply();
 
         }).error(function(data, status)
         {
@@ -73,7 +72,7 @@ function BannerEditController($scope, $http, $routeParams, $rootScope)
 		$http.put('https://sopraux-bbva.appspot.com/_ah/api/banner/v1/banner/', $scope.banner).success(function()
         {
             console.log('Guardando');      
-            $scope.$apply();
+            $location.path("/");
 
         }).error(function(data, status)
         {

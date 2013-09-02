@@ -2,7 +2,7 @@
 * Controlador de edicion de Banner
 */
 
-function BannerInsertController($scope, $http, $routeParams, $rootScope)
+function BannerInsertController($scope, $http, $routeParams, $rootScope,$location)
 {
 	console.log('BanneInsertController');
 	
@@ -23,8 +23,7 @@ function BannerInsertController($scope, $http, $routeParams, $rootScope)
     	$http.post('https://sopraux-bbva.appspot.com/_ah/api/banner/v1/banner/', $scope.banner).success(function()       
         {
             console.log('Guardando');
-            /* Cambio de modelo fuera de AngularJSs*/
-            $scope.apply();
+            $location.path("/");
             
         }).error(function(data, status)
         {

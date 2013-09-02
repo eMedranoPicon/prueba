@@ -1,4 +1,4 @@
-function appControllerBanner($scope, $http, $routeParams, $timeout)
+function appControllerBanner($scope, $http, $routeParams,$location, $timeout)
 {
   $scope.showError = false;
   $scope.textError = "";
@@ -38,7 +38,7 @@ function appControllerBanner($scope, $http, $routeParams, $timeout)
       $scope.hideInfoModal = true;
       $scope.errorModal = false;
       $scope.textStatusModal = "Evento " + idBanner + " eliminado correctamente.";
-
+      $location.path("/");
       //$timeout(function() { $scope.deletePlaceModal = false; }, 1500);
     }).
     error(function(data, status)
