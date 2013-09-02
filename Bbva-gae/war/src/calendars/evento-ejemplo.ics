@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//sopragroupux.appspot.com//sopragroupux.appspot.com//ES
+X-ORIGINAL-URL:http://lanyrd.com/2013/shropgeek-rebellion/shropgeek-rebellion.ics
+X-WR-CALNAME;CHARSET=utf-8:SharePoint Technology Conference
+METHOD:PUBLISH
+X-MS-OLK-FORCEINSPECTOROPEN:TRUE
+BEGIN:VEVENT
+SUMMARY;CHARSET=utf-8:SharePoint Technology Conference
+LOCATION;CHARSET=utf-8:O\'Farrell Street 336\,94102\,San Francisco\,Estados Unidos
+URL:http://lanyrd.com/2013/shropgeek-rebellion/
+UID:296fb5810c7c24713951885a10710df43bb246ce
+DESCRIPTION:http://sopragroupux.appspot.com
+DTSTART;VALUE=DATE:20130926
+DTEND;VALUE=DATE:20130927
+GEO:52.7113198;-2.7521029
+END:VEVENT
+END:VCALENDAR

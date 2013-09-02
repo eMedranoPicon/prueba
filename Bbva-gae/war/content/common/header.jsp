@@ -4,9 +4,9 @@
     <h1><span>BBVA in cloud</span></h1>
   </a>
 
-  <h2>BBVA in Google Cloud</h2>
+  <h2 class="hidden-phone">BBVA in Google Cloud</h2>
 
-  <div class="legendTop pull-right">
+  <div class="legendTop pull-right hidden-phone">
     <ul class="languages">
       <li><a href="#" class="lang-button">Ingl&eacute;s</a></li>
       <li><a href="#" class="lang-button lang-current">Castellano</a></li>
