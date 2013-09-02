@@ -72,6 +72,8 @@ function PlaceMapController($scope,$http,$rootScope,sharedService)
         $scope.myMap.setCenter(latLon);
         removeAllMarkers();
         addMarker(latLon);
+        /*Zoom*/
+        $scope.myMap.setZoom(16);
     }
 
 

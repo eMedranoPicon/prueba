@@ -45,8 +45,11 @@ function previewMap() {
 	var country = document.getElementById("country").value;
 
 	var address = street + ', ' + zipcode + ', ' + city + ', ' + country;
-	var result = getLatLong(address);
+	var result = getLatLong(address);	
+	
 	console.log(result);
+	/*Zoom*/
+	map.setZoom(12);
 
 }
 
@@ -59,8 +62,6 @@ function newEventMap() {
 	};
 
 	map.setCenter(mapOptions);
-	// map = new google.maps.Map(document.getElementById("map-canvas"),
-	// mapOptions);
 
 }
 
@@ -184,7 +185,7 @@ function getLatLong(address) {
 								map : map,
 								position : results[0].geometry.location,
 								title : results[0].formatted_address
-							});
+							});							
 
 						} else {
 							alert("Geocode was not successful for the following reason: "
