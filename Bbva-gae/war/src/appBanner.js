@@ -1,4 +1,3 @@
-
 var appBanner = angular.module("appBanner", ['ui.bootstrap']);
 
 

@@ -20,7 +20,7 @@ function appController($scope, $http, $routeParams, $timeout, $location)
 
   console.log('appController');// +$scope.events)
 
-  $scope.$apply();
+  //$scope.$apply();
 
   $http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
   {

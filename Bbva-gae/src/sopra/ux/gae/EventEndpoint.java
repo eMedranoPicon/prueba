@@ -139,7 +139,7 @@ public class EventEndpoint {
 		PersistenceManager mgr = getPersistenceManager();
 		try {
 			/*
-			 * logica de evento pasado
+			 * logica de evento
 			 * */
 			event.setEventPast();
 			event.setDatesArray();

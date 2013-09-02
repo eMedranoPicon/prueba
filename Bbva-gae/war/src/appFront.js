@@ -22,7 +22,7 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 	});
 
 	EventDetailController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
-	MapController.$inject = ['$scope', '$rootScope', 'mySharedService'];
+	MapController.$inject = ['$scope', '$rootScope', 'mySharedService'];	
 }]);
 
 

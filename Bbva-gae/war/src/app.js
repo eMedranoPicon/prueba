@@ -54,6 +54,7 @@ app.factory('mySharedService', function($rootScope)
 });
 
 
+
 function findIndexById(id,arrayList)
 {
 	if (!id) return null;

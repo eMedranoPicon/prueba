@@ -16,7 +16,6 @@ function appControllerBanner($scope, $http, $routeParams,$location, $timeout)
       $scope.textError = "";
       $scope.is_backend_ready = true;      
       $scope.bannerList = data.items; 
-      $scope.$apply();
     }).error(function(data, status)
     {
       $scope.textError = "Error al cargar los datos. Por favor, intentalo más tarde";

@@ -21,7 +21,7 @@ function BannerEditController($scope, $http, $routeParams, $rootScope, $location
     };
 
 
-    		if (angular.isUndefined($scope.bannerList))
+    if (angular.isUndefined($scope.bannerList))
     {
         console.log('recargar el scope');
         /* Balance de carga AppEngine - Usando otro servidor.*/

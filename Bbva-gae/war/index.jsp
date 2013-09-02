@@ -4,7 +4,7 @@
    response.setDateHeader( "Expires", 0 );
 %>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" ng-app="appFront">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -28,6 +28,7 @@
   <script src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
   <jsp:include page="/libraries-angular-maps.jsp" />
   <jsp:include page="/libraries-angular-events.jsp" />
+  <jsp:include page="/libraries-angular-front.jsp" />
 
   <!-- Bloque de Librerias - libreriasjs -->
   <jsp:include page="/libraries-js.jsp" />
@@ -48,7 +49,7 @@
   <!-- EO include navbar.jsp -->
 
   <!-- include carousel.html -->
-  <jsp:include page="/content/common/carousel.html"/>
+  <jsp:include page="/src/views/banner/banner-front.html"/>
   <!-- EO include carousel.html -->
 
   <!-- include events-home.html -->
