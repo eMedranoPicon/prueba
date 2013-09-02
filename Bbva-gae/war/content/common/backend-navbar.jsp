@@ -53,8 +53,8 @@
           <li class="divider-vertical dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slider <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Dar de <strong>alta</strong> un slide</a></li>
-              <li><a href="#"><strong>Listar/Editar/Borrar</strong> slides</a></li>
+              <li><a href="/backend/banner-app.jsp#/banner-new">Dar de <strong>alta</strong> un slide</a></li>
+              <li><a href="/backend/banner-app.jsp"><strong>Listar/Editar/Borrar</strong> slides</a></li>
             </ul>
           </li>
 
