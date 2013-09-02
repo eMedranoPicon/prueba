@@ -7,7 +7,7 @@
             <header>
     			<h1>{{event.title}}</h1>
     		</header>
-    		<div class="row-fluid">
+    		<div class="row-fluid subheader">
     			<div class="span12">
     				<h2 class="main-date">
     					<span class="day">{{event.datesArray[1]}}</span>
@@ -18,46 +18,47 @@
     			<div class="span12">
     				<h3 class="main-place">
     					<a href="#" class="flag-large flag-{{ event.address[3] | acronimoPais}}">{{event.address[3]}}</a>
-    					<a href="#">{{event.address[2]}}</a> en <a href="#">{{event.address[3]}}</a>
+    					<a href="#" class="city">{{event.address[2]}}</a>  <a href="#" class="country">en {{event.address[3]}}</a>
     				</h3>
     			</div>
     		</div>
-    		<div class="row-fluid">
-    			<div class="span24">
-    				<p>{{event.description}}</p>
-    			</div>
-    		</div>
-    		<div class="row-fluid">
-    			<div class="span12">
-    				<ul class="item-list">
-    					<li><a href="{{event.urlEvent}}" target="_blank">{{event.urlEvent}}</a></li>
-    					<li><a href="#/addtoCalendar" class="btn">Añadir evento al calendario</a></li>
-    				</ul>
-    			</div>
-    			<div class="span12">
-    				<ul class="item-list">
-    					<li><a href="http://twitter.com" class="icon twitter"><span>@cuentadelevento</span></a></li>
-    					<li><a href="https://twitter.com/#!/search/" class="icon hashtag twitter-search"><span>#hashtagdelevento</span></a></li>
-    				</ul>
-    			</div>
-    		</div>
-    		<div class="row-fluid">
-    			<div class="span6">
-    				<!-- google maps-->
-				    <div ng-controller="MapController">
-				        <div id="map_canvas" ui-map="myMap" class="map_canvas" ui-options="mapOptions" ui-event="{'map-idle' : 'onMapIdle()'}"></div>
-				        <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]" ui-event="{'map-click': 'markerClicked(marker)'}"></div>
-				    </div>
-				   <!--EO google maps -->
-    			</div>
-    			<div class="span18">
-    				<ul class="item-list">
-    					<li><a href="http://twitter.com" class="icon twitter"><span>@cuentadelevento</span></a></li>
-    					<li><a href="https://twitter.com/#!/search/" class="icon hashtag twitter-search"><span>#hashtagdelevento</span></a></li>
-    				</ul>
-    			</div>
-    		</div>
-
+            <div class="event-content">
+        		<div class="row-fluid">
+        			<div class="span24">
+        				<p>{{event.description}}</p>
+        			</div>
+        		</div>
+        		<div class="row-fluid">
+        			<div class="span12">
+        				<ul class="item-list">
+        					<li><a href="{{event.urlEvent}}" target="_blank">{{event.urlEvent}}</a></li>
+        					<li><a href="#/addtoCalendar" class="btn">Añadir evento al calendario</a></li>
+        				</ul>
+        			</div>
+        			<div class="span12">
+        				<ul class="item-list">
+        					<li><a href="http://twitter.com" class="icon twitter"><span>@cuentadelevento</span></a></li>
+        					<li><a href="https://twitter.com/#!/search/" class="icon hashtag twitter-search"><span>#hashtagdelevento</span></a></li>
+        				</ul>
+        			</div>
+        		</div>
+        		<div class="row-fluid">
+        			<div class="span8">
+        				<!-- google maps-->
+    				    <div ng-controller="MapController">
+    				        <div id="map_canvas" ui-map="myMap" class="map_canvas" ui-options="mapOptions" ui-event="{'map-idle' : 'onMapIdle()'}"></div>
+    				        <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]" ui-event="{'map-click': 'markerClicked(marker)'}"></div>
+    				    </div>
+    				   <!--EO google maps -->
+        			</div>
+        			<div class="span16">
+        				<ul class="item-list">
+        					<li><a href="http://twitter.com" class="icon twitter"><span>@cuentadelevento</span></a></li>
+        					<li><a href="https://twitter.com/#!/search/" class="icon hashtag twitter-search"><span>#hashtagdelevento</span></a></li>
+        				</ul>
+        			</div>
+        		</div>
+            </div>
     	</article>
 
     </div>

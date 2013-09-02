@@ -1,8 +1,6 @@
 @import "compass";
-
 /* Import reset module */
 @import "compass/reset";
-
 @import "compass/css3/font-face";
 @import "compass/css3/border-radius";
 //http://compass-style.org/examples/compass/css3/gradient/
@@ -32,3 +30,4 @@
 @import "partials/_angular-custom.scss";
 @import "partials/_flags.scss";
 @import "partials/_footer.scss";
+@import "partials/_events.scss";
