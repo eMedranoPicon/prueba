@@ -39,6 +39,7 @@
 
 <div class="container">
 
+
   <!-- include header.jsp -->
   <jsp:include page="/content/common/header.jsp"/>
   <!-- EO include header.jsp -->

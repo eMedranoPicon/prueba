@@ -15,80 +15,17 @@
   }
 }
 
-//Estructura utilizada para los articles
-@mixin estructureArticles()
-{
-  @include clearfix();
+// Phones only
+//@media (max-width: 767px)
 
-  .container-article
-  {
-    @include clearfix();
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+//@media (min-width: 768px) and (max-width: 979px)
 
-    padding-top: 5px;
+// Responsive: Landscape phone to desktop/tablet
+// --------------------------------------------------
+//@media (max-width: 767px)
 
-    .image-container-article {
-      margin: 0px 20px 20px 0;
-    }
-
-    p {
-      text-align: justify;
-    }
-
-    .dataContainer {
-      width: 100%;
-    }
-
-    .image-article img {
-      padding: 0 10px 10px 10px;
-    }
-
-    .text-article p {
-     text-align: left;
-    }
-
-    .indexElement {
-      @include clearfix();
-      margin: 10px 0;
-      min-height: 50px;
-    }
-  }
-
-  .imgContainer
-  {
-    // width: 11%;
-    // margin-right: 3%;
-    img {
-      max-width: 200%;
-    }
-  }
-
-  .dataContainer
-  {
-    //  width: 86%;
-    margin-bottom: 15px;
-    a
-    {
-        color: $textColor;
-        text-decoration: none;
-
-        &:visited{
-            color: $textColor;
-        }
-        &:hover{
-            color: $grayDarkest;
-        }
-        &:active{
-            color: $textColor;
-        }
-    }
-
-    dl
-    {
-      margin-bottom: 0px;
-      dd {
-        margin-left: 0;
-      }
-    }
-  }
-
-}
+// Responsive: Large desktop and up
+// --------------------------------------------------
+//@media (min-width: 1200px)

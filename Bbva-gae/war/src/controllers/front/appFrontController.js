@@ -15,7 +15,6 @@ function appFrontController($scope, $http, $routeParams)
   $scope.orderField = "dateStartStamp";
   $scope.orderReverse = "true";
 
-
   $http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
   {
     $scope.showError = false;
