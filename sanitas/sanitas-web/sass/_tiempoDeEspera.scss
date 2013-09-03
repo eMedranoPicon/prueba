@@ -362,63 +362,6 @@ div.tiempoDeEspera
 
 	}
 
-	//Styles Hospitales
-	//Modificaciones 03/09/2013
-	.tiempoDeEspera-data-vermas
-	{
-		@extend span.tiempoDeEspera-data;
-		@include clearfix();
-		width: 533px;
-		background-color: #E6E6E6;
-		font-style: normal;
-		margin: 5px 0 15px 0;
-
-		dl.dl-tiempoDeEspera-chart
-		{
-			@include clearfix();
-		    line-height: 14px;
-		    font-size: $fontSizeLarge;
-			margin: 10px 10px 20px 10px;
-			padding: 0px;
-			display: inline-block;
-
-			dd:nth-of-type(n+2)
-			{
-			    //margin-top: 10px;
-			}
-
-			dt, dd
-			{
-			    font-weight: bold;
-			    line-height: 1.7em;
-			    display: inline-block;
-			}
-
-			dt
-			{
-			    width: 150px;
-				color: $greydark;
-				padding-left: 20px;
-				//@include background(image-url("reloj-azul.png"));
-				//@include background-size(14px 14px);
-				//background-repeat: no-repeat;
-				//background-position-y: 50%;
-			}
-
-			dd
-			{
-				margin: 0px;
-				padding: 10px 0 0 0px;
-				width: 320px;
-			    color: $black;
-			    strong
-			    {
-			    	font-size: 2em;
-			    }
-			}
-		}
-	}
-
 	form {
 		margin: 10px 0;
 	}
@@ -460,10 +403,10 @@ div.tiempoDeEspera
 	.otroscentros
 	{
 			span{
-				padding:10px;
+				padding:10px 10px 10px 0px;
 			}
 			select{
-				margin:10px 10px 10px 50px;
+				margin: 10px 10px 10px 12px;
 			}
 	}
 
@@ -493,7 +436,8 @@ div.tiempoDeEspera
 
 .dobleAnchoEspera{
 	width: 408px !important;
-	border-radius: 6px;
+	//border-radius: 6px;
+	@include border-radius(6px);
 	border: #89969F 1px solid;
 	margin: 3px 0px 3px 0px;
 	padding: 5px 5px 3px 5px;
@@ -524,3 +468,75 @@ div.borderExtra
 {
 	min-height:250px !important;
 }
+
+
+.fichaTiemposEspera
+{
+	clear: both;
+	display: inline-block;
+	color: #333;
+	font-size: 1.0em;
+	@include border-radius(6px);
+	border: #89969F 1px solid;
+	@include background(image-url("son094305-3.png"));
+	background-repeat: no-repeat;
+	overflow: hidden;
+
+	.fichaTiemposEsperaText
+	{
+		color: #8E908F;
+		padding-left: 200px;
+		overflow: hidden;
+		margin: 10px;
+		h4
+		{
+			color: inherit;
+			font-size: 1em;
+			font-weight: normal;
+		}
+
+		dl.dl-tiempoDeEspera
+		{
+			@include clearfix();
+		    line-height: 14px;
+		    font-size: $fontSizeLarge;
+			margin: 0px 0px 10px 0px;
+			padding: 0px;
+			display: inline-block;
+			width: 100%;
+
+			dt, dd
+			{
+			    font-weight: bold;
+			    line-height: 1.7em;
+			    display: inline-block;
+			}
+
+			dt
+			{
+			    width: 125px;
+				color: $greydark;
+				padding-left: 20px;
+				@include background(image-url("reloj-azul.png"));
+				@include background-size(14px 14px);
+				background-repeat: no-repeat;
+				background-position-y: 50%;
+			}
+
+			dd
+			{
+				margin: 0px;
+				padding: 10px 0 0 0px;
+				width: 160px;
+			    color: $greydark;
+			    strong
+			    {
+			    	font-size: 1.6em;
+			    	color: $greydark;
+			    }
+			}
+		}
+	}
+
+}
+
