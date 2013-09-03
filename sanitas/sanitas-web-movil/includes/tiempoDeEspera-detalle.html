@@ -10,106 +10,79 @@
 
 		<div class="box-white">
 
-		    <div class="box-advice">
-		      <p>
-		        <strong>
-		          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nulla magna, imperdiet nec molestie vitae, tristique quis mauris. ollicitudin eu malesuada non, porttitor ut est.
-		        </strong>
-		      </p>
-		    </div>
+			<article class="tiempoDeEspera-urgencias">
 
-		    <article class="tiempoDeEspera-urgencias">
-		      <h2>Tiempo de espera en urgencias</h2>
+				<div class="container-images">
 
-		      <div class="container-article">
+		            <img src="img/site_sanitas_movil/img-mov.jpg" alt="" />
 
-		        <dl class="dl-tiempoDeEspera iconTime">
-		          <dt>Medicina General</dt>
-		          <dd>De 15 a 30 minutos</dd>
-		          <dt>Pediatría</dt>
-		          <dd>Más de 30 minutos</dd>
-		          <dt>Ginecología</dt>
-		          <dd>Más de 30 minutos</dd>
-		          <dt>Traumatología</dt>
-		          <dd>Más de 30 minutos</dd>
-		        </dl>
-
-		        <div class="container-images">
-		          <div class="content-image">
-		            <img src="img/site_sanitas_movil/Medico_Mujer2.jpg" alt="" />
-		          </div>
-		          <div class="content-image">
-		            <img src="img/site_sanitas_movil/apunte.jpg" alt="" />
-		          </div>
-		        </div>
-
-		      </div>
-
-		    </article>
-
-		    <article class="tiempoDeEspera-urgencias">
-		      <h2>Franjas horarias con menor afluencia de pacientes</h2>
-
-		      <div class="container-article">
-
-		        <dl class="dl-tiempoDeEspera iconTime">
-		          <dt>Medicina General</dt>
-		          <dd>De 16:00 a 17:00 h </dd>
-		          <dt></dt>
-		          <dd>De 22:00 a 23:00 h</dd>
-		          <dt></dt>
-		          <dd>De 02:00 a 04:00 h</dd>
-		          <dt>Pediatría</dt>
-		          <dd>De 16:00 a 17:00 h</dd>
-		          <dt>Ginecología</dt>
-		          <dd>De 16:00 a 17:00 h</dd>
-		          <dt>Otro</dt>
-		          <dd>De 16:00 a 17:00 h</dd>
-		        </dl>
-
-		        <div class="grafico-afluencia">
-
-		         <div class="span12 otroscentros">
-				    <span>Ver Otros Hospitales</span>
-				    <select class="selectpicker">
-				      <option>Hospitales</option>
-				      <option>Hospital La Moraleja</option>
-				      <option>Hospital CIMA</option>    
-				    </select>
-				  </div>
-				  <p>
-				    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				  </p>
-				  <div class="span12 filterchart">
-				    <span>Selecciona Especialidad</span>
-				    <select class="selectpicker">
-				      <option>Especialidad</option>
-				      <option>Medicina General</option>
-				      <option>Pediatría</option>
-				      <option>Ginecología</option>
-				      <option>Traumatología</option>
-				    </select>
-				    <span>Selecciona día</span>
-				    <select class="selectpicker">
-				      <option>Día</option>
-				      <option>Lunes</option>
-				      <option>Martes</option>
-				      <option>Miercoles</option>
-				      <option>Jueves</option>
-				      <option>Viernes</option>
-				      <option>Sábado</option>
-				      <option>Domingo</option>
-				    </select>
-				  </div>
-
-		         <div id="grafico" class="container-article grafico">
-                    <canvas id="chartSanitas" width="500" height="400"></canvas>
-                    <!--img src="entregables/images/grafico.jpg" alt="" /-->
-                 </div>
 
 		        </div>
 
-		      </div>
+		    	<div class="tiempoDeEspera-urgencias box-tiempoDeEspera">
+					<h2>TIEMPO DE ESPERA EN URGENCIAS</h2>
+				    <div class="container-tiempoDeEspera">
+						<dl class="dl-tiempoDeEspera iconTime first" >
+						<dt>Medicina General</dt>
+						<dd>De <strong>15</strong> a <strong>30</strong> minutos</dd>
+						<dt>Pediatría</dt>
+						<dd>Más de <strong>30</strong> minutos</dd>
+			        </dl>
+			        <dl class="dl-tiempoDeEspera last" >
+						<dt>Ginecología</dt>
+						<dd>Más de <strong>30</strong> minutos</dd>
+						<dt>Traumatología</dt>
+						<dd>Más de <strong>30</strong> minutos</dd>
+			        </dl>
+				    </div>
+				</div>
+
+		    	<div class="container-article">
+
+		        	<div class="grafico-afluencia">
+
+		        		<form>
+						  	<div class="span12 filterchart">
+							    <label><span class="hidden-phone">Selecciona Especialidad</span></label>
+							    <select class="selectpicker">
+							      <option>Especialidad</option>
+							      <option>Medicina General</option>
+							      <option>Pediatría</option>
+							      <option>Ginecología</option>
+							      <option>Traumatología</option>
+							    </select>
+							     <label><span class="hidden-phone">Selecciona día</span></label>
+							    <select class="selectpicker">
+							      <option>Día</option>
+							      <option>Lunes</option>
+							      <option>Martes</option>
+							      <option>Miercoles</option>
+							      <option>Jueves</option>
+							      <option>Viernes</option>
+							      <option>Sábado</option>
+							      <option>Domingo</option>
+							    </select>
+						  	</div>
+
+							<div id="grafico" class="container-article grafico">
+								<canvas id="chartSanitas" width="500" height="400"></canvas>
+								<!--img src="entregables/images/grafico.jpg" alt="" /-->
+							</div>
+
+							<div class="span12 otroscentros">
+							     <label><span >Ver tiempos de espera en: </span></label>
+							    <select class="selectpicker">
+							      <option>Otros hospitales</option>
+							      <option>Hospital La Moraleja</option>
+							      <option>Hospital CIMA</option>
+							    </select>
+						  	</div>
+
+						</form>
+
+		        	</div>
+
+		      	</div>
 
 		    </article>
 

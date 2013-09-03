@@ -17,6 +17,15 @@ span.arrow-grey {
 	}
 }
 
+
+.hidden-phone
+{
+	@media screen and (max-width: 768px)
+	{
+		display: none;
+	}
+}
+
 #chartSanitas{
 width: 100% !important;
 max-width: 800px;
@@ -58,7 +67,7 @@ dl.dl-tiempoDeEspera
 	}
 
 	dd {
-		
+
 		width: 70%;
 
 		@media screen and (max-width: 480px)
@@ -81,15 +90,16 @@ dl.dl-tiempoDeEspera.iconTime
 		@include background-size(14px 14px);
 		background-repeat: no-repeat;
 		width: 140px;
-
-		span {
+		line-height: 15px;
+		span
+		{
 			display: none;
 		}
 	}
 
 	dd {
 		width: 70%;
-
+		line-height: 15px;
 		@media screen and (max-width: 480px)
 		{
 			padding-left: 40px;
@@ -97,11 +107,11 @@ dl.dl-tiempoDeEspera.iconTime
 	}
 }
 
-/*
-*
-*	div.tiempoDeEspera
-*
-*/
+////////////////////////////
+//
+//	div.tiempoDeEspera
+//
+////////////////////////////
 
 hgroup.todos.centros.listado article li div
 {
@@ -248,11 +258,11 @@ div.tiempoDeEspera
 	}
 }
 
-/*
-*
-*	.box-tiempoDeEspera
-*
-*/
+////////////////////////////
+//
+//	.box-tiempoDeEspera
+//
+////////////////////////////
 
 .box-tiempoDeEspera
 {
@@ -326,7 +336,7 @@ div.tiempoDeEspera
 					font-size: $fontSizeSmall !important;
 				}
 			}
-		
+
 		}
 
 	 	@media screen and (min-width: 767px)
@@ -348,11 +358,11 @@ div.tiempoDeEspera
 	}
 }
 
-/*
-*
-*	.tiempoDeEspera-detalle
-*
-*/
+////////////////////////////
+//
+//	.tiempoDeEspera-detalle
+//
+////////////////////////////
 
 .box-advice
 {
@@ -381,17 +391,14 @@ div.tiempoDeEspera
 
 		dt,dd
 		{
-			//font-family: 'GothamMediumRegular';
 			color: $textColor;
 			margin-top: 9px;
-			//width: 50%;
 		}
 	}
 
 	h2 {
 		font-family: 'GothamMediumRegular';
 		text-transform: none;
-		//font-size: $fontSize+1;
 		font-size: $fontSizeSmall+1;
 		margin-bottom: 10px;
 	}
@@ -399,7 +406,8 @@ div.tiempoDeEspera
 	.container-images
 	{
 		width: 98%;
-		margin: 0;
+		//Modificaciones 02/09/2013
+		margin: 0 0 20px 0;
 		padding: 0;
 		@include clearfix();
 
@@ -410,21 +418,44 @@ div.tiempoDeEspera
 		img:nth-last-child(2)
 		{
 			width: 100%;
-			max-width: 300px
+			//Modificaciones 02/09/2013
+			//max-width: 300px
 		}
 
 		img:nth-last-child(1)
 		{
 			width: 100%;
-			max-width: 300px;
+			//Modificaciones 02/09/2013
+			//max-width: 300px;
 		}
 	}
 
 	.grafico-afluencia
 	{
 		margin-top: 15px;
-		.grafico {
-			width: 90%;
+
+		.grafico
+		{
+			width: 95%;
+			@include clearfix();
+		}
+
+		//Modificaciones 02/09/2013
+		form
+		{
+			margin-bottom: 20px;
+			width: 100%;
+
+			.filterchart
+			{
+				margin: 15px 0;
+				clear: both;
+			}
+			.otroscentros
+			{
+				margin: 30px 0;
+				clear: both;
+			}
 		}
 	}
 
@@ -446,7 +477,7 @@ div.tiempoDeEspera
 		}
 		select{
 			margin:10px 10px 10px 0px;
-		}	
+		}
 	}
 
 	.otroscentros{
@@ -457,5 +488,84 @@ div.tiempoDeEspera
 			margin:10px 10px 10px 17px;
 		}
 	}
+}
 
+//Modificaciones 02/09/2013
+.tiempoDeEspera-urgencias
+{
+	.box-tiempoDeEspera
+	{
+		.container-tiempoDeEspera
+		{
+			background-image: none;
+
+			dl
+			{
+				width: 44%;
+				@media screen and (max-width: 800px)
+				{
+					width: 70%;
+				}
+				@media screen and (max-width: 480px)
+				{
+					padding-left: 30px;
+					margin-bottom: 10px !important;
+				}
+
+				&.dl-tiempoDeEspera
+				{
+					min-height: 50px !important;
+
+					&.iconTime
+					{
+						min-height: 60px;
+					}
+
+					&.first
+					{
+						@media screen and (max-width: 1210px)
+						{
+							margin-bottom: 0px;
+						}
+					}
+
+					&.last
+					{
+						background-image: none;
+						padding-left: 0px;
+						@media screen and (max-width: 1210px)
+						{
+							padding-left: 65px;
+						}
+						@media screen and (max-width: 480px)
+						{
+							padding-left: 30px;
+						}
+					}
+				}
+
+				dt {
+					width: 100px;
+				}
+
+				dd {
+					width: 45%;
+					@media screen and (max-width: 1210px)
+					{
+						width: 50%;
+					}
+					@media screen and (max-width: 520px)
+					{
+						padding-left: 20px;
+						width: 85%;
+					}
+					strong
+					{
+						font-size: 18px;
+						font-weight: normal;
+					}
+				}
+			}
+		}
+	}
 }
