@@ -30,15 +30,6 @@
       <script src="/js/lib/html5shiv.js"></script>
     <![endif]-->
 
-<!-- Bloque de Librerias - libreriasjs -->
-<jsp:include page="/libraries-js.jsp" />
-<!-- Bloque de Librerias - Angularjs - genericas -->
-<jsp:include page="/libraries-angular.jsp" />
-<!-- EO Bloque de Librerias -  Angularjs - genericas -->
-<script src="/src/appBack.js"></script>
-<script src="https://apis.google.com/js/client.js"></script>
-<script
-	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 </head>
 <body>
 
@@ -74,6 +65,16 @@
 
 		</section>
 	</div>
+	
+<!-- Bloque de Librerias - libreriasjs -->
+<jsp:include page="/libraries-js.jsp" />
+<!-- Bloque de Librerias - Angularjs - genericas -->
+<jsp:include page="/libraries-angular.jsp" />
+<!-- EO Bloque de Librerias -  Angularjs - genericas -->
+<script src="/src/appBack.js"></script>
+<script src="https://apis.google.com/js/client.js"></script>
+<script
+	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 
 </body>
 </html>

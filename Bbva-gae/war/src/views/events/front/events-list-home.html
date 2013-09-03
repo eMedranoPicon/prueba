@@ -1,5 +1,5 @@
 <!-- include /content/events/events-list-home.html -->
-<div class="row-fluid list-events-home" ng-app="app" ng-controller="appController">
+<div ng-cloak class="row-fluid list-events-home" ng-app="app" ng-controller="appController">
 	<div class="span12" ng-repeat="obj in events.slice(0,4) | filter:query | orderBy:orderField:orderReverse">
 		<article class="eventList">
 		   	<h1>{{obj.title}}</h1>

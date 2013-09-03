@@ -23,16 +23,6 @@
   <!--[if lt IE 9]>
     <script src="/js/lib/html5shiv.js"></script>
   <![endif]-->
-
-  <!-- Bloque de Librerias - libreriasjs -->
-  <jsp:include page="/libraries-js.jsp"/>
-  <!-- EO Bloque de Librerias - libreriasjs -->
-  <!-- Bloque de Librerias - Angularjs - genericas -->
-  <jsp:include page="/libraries-angular.jsp" />
-  <!-- EO Bloque de Librerias -  Angularjs - genericas -->
-  <script src="/src/appBack.js"></script>
-  <script src="https://apis.google.com/js/client.js"></script>
-
 </head>
 
 <body>
@@ -167,5 +157,15 @@
    <jsp:include page="/content/common/footer.html"/>
 
 </div> <!-- EO Container Page -->
+
+  <!-- Bloque de Librerias - libreriasjs -->
+  <jsp:include page="/libraries-js.jsp"/>
+  <!-- EO Bloque de Librerias - libreriasjs -->
+  <!-- Bloque de Librerias - Angularjs - genericas -->
+  <jsp:include page="/libraries-angular.jsp" />
+  <!-- EO Bloque de Librerias -  Angularjs - genericas -->
+  <script src="/src/appBack.js"></script>
+  <script src="https://apis.google.com/js/client.js"></script>
+
 </body>
 </html>

@@ -39,8 +39,8 @@ function PlaceInsertController($scope, $http, $routeParams, $rootScope, $locatio
                        {'type': 'Restaurante', 'description': 'Restaurante'},
                        {'type': 'Museo', 'description': 'Museo'},
                        {'type': 'Plaza', 'description': 'Plaza'},
-                       {'type': 'Bar', 'description': 'Bar'},
-                       {'type': 'Galeria', 'description': 'Galeria'}
+                       {'type': 'Gimnasio', 'description': 'Gimnasio'},
+                       {'type': 'Centro Covenciones', 'description': 'Centro Convenciones'}
                       ];
 
    $scope.savePlace = function ()

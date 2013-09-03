@@ -1,9 +1,3 @@
-
-<%
-	response.setHeader("Pragma", "no-cache");
-	response.setHeader("Cache-Control", "no-cache");
-	response.setDateHeader("Expires", 0);
-%>
 <!DOCTYPE html>
 <html lang="es" ng-app="appFront">
 <head>
@@ -24,16 +18,6 @@
 <!--[if lt IE 9]>
     <script src="js/lib/html5shiv.js"></script>
   <![endif]-->
-
-<!-- Bloque de Librerias - libreriasjs -->
-<jsp:include page="/libraries-js.jsp" />
-<jsp:include page="/libraries-angular.jsp" />
-<script
-	src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
-<jsp:include page="/libraries-angular-maps.jsp" />
-<jsp:include page="/libraries-angular-front.jsp" />
-
-
 </head>
 <!--  http://alefeuvre.github.io/foundation-grid-displayer/ -->
 <!-- <body data-grid-framework="bo" data-grid-color="blue" data-grid-opacity="0.5" data-grid-zindex="10" data-grid-nbcols="12">-->
@@ -55,5 +39,13 @@
 
 	</div>
 	<!-- EO Container Page -->
+
+	<!-- Bloque de Librerias - libreriasjs -->
+	<jsp:include page="/libraries-js.jsp" />
+	<jsp:include page="/libraries-angular.jsp" />
+	<script
+		src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
+	<jsp:include page="/libraries-angular-maps.jsp" />
+	<jsp:include page="/libraries-angular-front.jsp" />
 </body>
 </html>

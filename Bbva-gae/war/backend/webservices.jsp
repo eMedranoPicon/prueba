@@ -15,7 +15,7 @@
 %>
 <!DOCTYPE html>
 
-<html lang="es">
+<html lang="es" ng-app="appBack">
 <head>
 <title>backend - webservices:: BBVA in cloud</title>
 <meta charset="utf-8">
@@ -27,12 +27,6 @@
 <!--[if lt IE 9]>
       <script src="/js/lib/html5shiv.js"></script>
     <![endif]-->
-
-<!-- Bloque de Librerias - libreriasjs -->
-<jsp:include page="/libraries-js.jsp" />
-<script src="/js/application.js"></script>
-
-
 </head>
 <body>
 
@@ -56,8 +50,7 @@
 			<div class="container-fluid">
 				<div class="row-fluid">
 					<div class="span24">
-
-						<div class="accordion" id="accordion2">
+						<div class="accordion">
 							<div class="accordion-group">
 								<div class="accordion-heading">
 									<a class="accordion-toggle" data-toggle="collapse"
@@ -99,20 +92,13 @@
 									</div>
 								</div>
 							</div>
-						</div>
-
-					</div>
-
-					<div class="span24">
-
-						<div class="accordion" id="accordion3">
 							<div class="accordion-group">
 								<div class="accordion-heading">
 									<a class="accordion-toggle" data-toggle="collapse"
-										data-parent="#accordion2" href="#collapseOne"> Web
+										data-parent="#accordion3" href="#collapseTwo"> Web
 										Services :: Lugares de Interes </a>
 								</div>
-								<div id="collapseOne" class="accordion-body collapse in">
+								<div id="collapseTwo" class="accordion-body collapse in">
 									<div class="accordion-inner">
 										<ul class="decorated-list">
 											<li><a
@@ -147,20 +133,13 @@
 									</div>
 								</div>
 							</div>
-
-						</div>
-
-					</div>
-					<div class="span24">
-
-						<div class="accordion" id="accordion4">
 							<div class="accordion-group">
 								<div class="accordion-heading">
 									<a class="accordion-toggle" data-toggle="collapse"
-										data-parent="#accordion2" href="#collapseOne"> Web
+										data-parent="#accordion4" href="#collapseThree"> Web
 										Services :: Banner </a>
 								</div>
-								<div id="collapseOne" class="accordion-body collapse in">
+								<div id="collapseThree" class="accordion-body collapse in">
 									<div class="accordion-inner">
 										<ul class="decorated-list">
 											<li><a
@@ -195,15 +174,18 @@
 									</div>
 								</div>
 							</div>
-
 						</div>
-
 					</div>
 				</div>
 			</div>
-
 		</section>
 
 	</div>
+	<jsp:include page="/libraries-js.jsp" />
+	<!-- Bloque de Librerias - Angularjs - genericas -->
+	<jsp:include page="/libraries-angular.jsp" />
+	<!-- EO Bloque de Librerias -  Angularjs - genericas -->
+	<script src="/src/appBack.js"></script>
+	<script src="/js/application.js"></script>
 </body>
 </html>

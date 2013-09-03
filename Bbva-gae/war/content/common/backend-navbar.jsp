@@ -58,7 +58,7 @@
             </ul>
           </li>
 
-          <li class="divider-vertical dropdown">
+          <li ng-class="{ active: isActive('/webservices.jsp')}"class="divider-vertical dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Utilidades <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="/backend/webservices.jsp">Ver <strong>web services</strong> disponibles</a></li>

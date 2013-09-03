@@ -15,7 +15,7 @@
 %>
 <!DOCTYPE html>
 
-<html lang="es" >
+<html lang="es">
 <head>
 <title>backend - events:: BBVA in cloud</title>
 <meta charset="utf-8">
@@ -23,30 +23,13 @@
 
 <!-- styles -->
 <link rel="stylesheet" type="text/css" href="/css/main.css" />
-<link rel="stylesheet" type="text/css" href="/css/bootstrap-datetimepicker.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="/css/bootstrap-datetimepicker.min.css" />
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
       <script src="/js/lib/html5shiv.js"></script>
     <![endif]-->
-
-
-<jsp:include page="/libraries-angular.jsp" />
-<script src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
-<jsp:include page="/libraries-angular-maps.jsp" />
-<jsp:include page="/libraries-angular-events.jsp" />
-
-
-<!-- Bloque de Librerias - libreriasjs -->
-<jsp:include page="/libraries-js.jsp" />
-
-<script src="https://apis.google.com/js/client.js?onload=loadGapi"></script>
-
-
-
-<!--
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
--->
 </head>
 <body ng-app="app">
 
@@ -83,7 +66,24 @@
 
 	</div>
 
-   <jsp:include page="/content/common/footer.html"/>
+	<jsp:include page="/content/common/footer.html" />
+	<jsp:include page="/libraries-angular.jsp" />
+	<script
+		src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
+	<jsp:include page="/libraries-angular-maps.jsp" />
+	<jsp:include page="/libraries-angular-events.jsp" />
+
+
+	<!-- Bloque de Librerias - libreriasjs -->
+	<jsp:include page="/libraries-js.jsp" />
+
+	<script src="https://apis.google.com/js/client.js?onload=loadGapi"></script>
+
+
+
+	<!--
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+-->
 
 
 	<!--
