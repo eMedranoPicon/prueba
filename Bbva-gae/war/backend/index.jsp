@@ -4,7 +4,7 @@
 <%@ page import="com.google.appengine.api.users.UserServiceFactory"%>
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" ng-app="appBack">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -27,7 +27,10 @@
   <!-- Bloque de Librerias - libreriasjs -->
   <jsp:include page="/libraries-js.jsp"/>
   <!-- EO Bloque de Librerias - libreriasjs -->
-
+  <!-- Bloque de Librerias - Angularjs - genericas -->
+  <jsp:include page="/libraries-angular.jsp" />
+  <!-- EO Bloque de Librerias -  Angularjs - genericas -->
+  <script src="/src/appBack.js"></script>
   <script src="https://apis.google.com/js/client.js"></script>
 
 </head>
@@ -81,9 +84,9 @@
             <div class="container-data pull-right">
               <!--<p> Desde aquí podrás gestionar tus lugares de interés:</p>-->
               <ul class="decorated-list">
-                <li><a href="/backend/places-app.jsp#/place-new">Dar de <strong>alta</strong> un lugar de interés</a></li>
-                <li><a href="/backend/places-app.jsp"><strong>Listar/Editar/Borrar</strong> lugares de interés</a></li>
-                <li><a href="/backend/places-map.jsp#/place-map">Localizar lugares de interés en Google <strong>Maps</strong></a></li>
+                <li><a href="/backend/places/places-app.jsp#/place-new">Dar de <strong>alta</strong> un lugar de interés</a></li>
+                <li><a href="/backend/places/places-app.jsp"><strong>Listar/Editar/Borrar</strong> lugares de interés</a></li>
+                <li><a href="/backend/places/places-map.jsp#/place-map">Localizar lugares de interés en Google <strong>Maps</strong></a></li>
               </ul>
             </div>
           </div>
@@ -127,8 +130,8 @@
             <div class="container-data pull-right">
               <!--<p> Desde aquí podrás gestionar tus eventos:</p>-->
               <ul class="decorated-list">
-                <li><a href="/backend/banner-app.jsp#/banner-new">Dar de <strong>alta</strong> un slide</a></li>
-                <li><a href="/backend/banner-app.jsp"><strong>Listar/Editar/Borrar</strong> slides</a></li>
+                <li><a href="/backend/banner/banner-app.jsp#/banner-new">Dar de <strong>alta</strong> un slide</a></li>
+                <li><a href="/backend/banner/banner-app.jsp"><strong>Listar/Editar/Borrar</strong> slides</a></li>
               </ul>
             </div>
           </div>

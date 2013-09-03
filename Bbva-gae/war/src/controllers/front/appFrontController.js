@@ -72,7 +72,5 @@ function appFrontController($scope, $http, $routeParams)
      // console.log('eventsPerMonth event.datesArray[2]:'+event.datesArray[2])
       return event.datesArray[2] == mes;
     }
-  };
-
-
+  };  
 };

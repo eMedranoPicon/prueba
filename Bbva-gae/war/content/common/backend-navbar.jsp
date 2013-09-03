@@ -14,17 +14,17 @@
       <a class="brand visible-phone" href="#">BBVA in Google Cloud</a>
 
       <!-- Everything you want hidden at 940px or less, place within here -->
-      <div class="nav-collapse collapse">
+      <div class="nav-collapse collapse" ng-controller="NavController" >
         <!-- .nav, .navbar-search, .navbar-form, etc -->
         <ul class="nav">
-          <li class="active divider-vertical">
+          <li ng-class="{ active: isActive('/index.jsp')}" class="divider-vertical">
             <a href="/backend/index.jsp">Home</a>
           </li>
 
-          <li class="divider-vertical dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eventos <b class="caret"></b></a>
+          <li ng-class="{ active: isActive('/event')}" class="divider-vertical dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">Eventos <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="/backend/event-new.jsp">Dar de <strong>alta</strong> un evento</a></li>
+              <li ><a href="/backend/event-new.jsp">Dar de <strong>alta</strong> un evento</a></li>
               <li><a href="/backend/events-app.jsp#/events-table-list"><strong>Listar/Editar/Borrar</strong> eventos</a></li>
               <li class="divider"></li>
               <li><a href="/backend/events-map.jsp">Localizar eventos en Google <strong>Maps</strong></a></li>
@@ -32,17 +32,17 @@
             </ul>
           </li>
 
-          <li class="divider-vertical dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Lugares de inter&eacute;s <b class="caret"></b></a>
+          <li ng-class="{ active: isActive('/place')}" class="divider-vertical dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown">Lugares de inter&eacute;s <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="/backend/places-app.jsp#/place-new">Dar de <strong>alta</strong> un lugar de interés</a></li>
-              <li><a href="/backend/places-app.jsp"><strong>Listar/Editar/Borrar</strong> lugares de interés</a></li>
+              <li><a href="/backend/places/places-app.jsp#/place-new">Dar de <strong>alta</strong> un lugar de interés</a></li>
+              <li><a href="/backend/places/places-app.jsp"><strong>Listar/Editar/Borrar</strong> lugares de interés</a></li>
               <li class="divider"></li>
-              <li><a href="/backend/places-map.jsp#/place-map">Localizar lugares de inter&eacute;s en Google <strong>Maps</strong></a></li>
+              <li><a href="/backend/places/places-map.jsp#/place-map">Localizar lugares de inter&eacute;s en Google <strong>Maps</strong></a></li>
             </ul>
           </li>
 
-          <li class="divider-vertical dropdown">
+          <li ng-class="{ active: isActive('/video')}" class="divider-vertical dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">V&iacute;deos <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="#">Dar de <strong>alta</strong> un lugar de inter&eacute;s</a></li>
@@ -50,11 +50,11 @@
             </ul>
           </li>
 
-          <li class="divider-vertical dropdown">
+          <li ng-class="{ active: isActive('/banner')}" class="divider-vertical dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Slider <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="/backend/banner-app.jsp#/banner-new">Dar de <strong>alta</strong> un slide</a></li>
-              <li><a href="/backend/banner-app.jsp"><strong>Listar/Editar/Borrar</strong> slides</a></li>
+              <li><a href="/backend/banner/banner-app.jsp#/banner-new">Dar de <strong>alta</strong> un slide</a></li>
+              <li><a href="/backend/banner/banner-app.jsp"><strong>Listar/Editar/Borrar</strong> slides</a></li>
             </ul>
           </li>
 

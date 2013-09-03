@@ -19,11 +19,12 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 	.otherwise({
 		templateUrl: '/src/views/events/front/events-list.html',
 		controller: appFrontController
-	});
-
+	});	
+	
 	EventDetailController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
 	MapController.$inject = ['$scope', '$rootScope', 'mySharedService'];	
 }]);
+
 
 
 appFront.factory('mySharedService', function($rootScope)

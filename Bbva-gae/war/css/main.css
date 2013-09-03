@@ -9648,6 +9648,16 @@ label.error {
   margin-top: 10px;
 }
 
+/* line 61, ../sass/vendor-custom/bst.2.3.2/_carousel.scss */
+.carousel-control.right {
+  cursor: pointer !important;
+}
+
+/* line 66, ../sass/vendor-custom/bst.2.3.2/_carousel.scss */
+.carousel-control.left {
+  cursor: pointer !important;
+}
+
 /* line 11, ../sass/vendor-custom/bst.2.3.2/_buttons.scss */
 .btn {
   color: white;
@@ -9986,8 +9996,13 @@ ol.decorated-list li a {
   margin-bottom: 20px;
 }
 
-/* Flexible iFrame */
 /* line 66, ../sass/partials/_layout.scss */
+.map_canvas_list {
+  height: 500px !important;
+}
+
+/* Flexible iFrame */
+/* line 71, ../sass/partials/_layout.scss */
 .Flexible-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -9996,7 +10011,7 @@ ol.decorated-list li a {
   overflow: hidden;
 }
 
-/* line 75, ../sass/partials/_layout.scss */
+/* line 80, ../sass/partials/_layout.scss */
 .Flexible-container iframe, .Flexible-container object, .Flexible-container embed {
   position: absolute;
   top: 0;
@@ -10005,25 +10020,25 @@ ol.decorated-list li a {
   height: 100%;
 }
 
-/* line 83, ../sass/partials/_layout.scss */
+/* line 88, ../sass/partials/_layout.scss */
 #map_canvas {
   width: 100%;
   height: 480px;
 }
 
-/* line 92, ../sass/partials/_layout.scss */
+/* line 97, ../sass/partials/_layout.scss */
 .list-events-home .span12:nth-child(2n+1) {
   margin-left: 0;
 }
 
-/* line 100, ../sass/partials/_layout.scss */
+/* line 105, ../sass/partials/_layout.scss */
 .conference-listing .date-listing {
   border-top: 5px solid #B9D1EC;
   padding-top: 0.5em;
   margin-top: 1em;
   position: relative;
 }
-/* line 107, ../sass/partials/_layout.scss */
+/* line 112, ../sass/partials/_layout.scss */
 .conference-listing .date-listing h3 {
   margin-top: 0;
   text-transform: uppercase;
@@ -10032,19 +10047,19 @@ ol.decorated-list li a {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 2.1em;
 }
-/* line 115, ../sass/partials/_layout.scss */
+/* line 120, ../sass/partials/_layout.scss */
 .conference-listing .date-listing h3 .year {
   display: block;
   color: #B9D1EC;
 }
-/* line 123, ../sass/partials/_layout.scss */
+/* line 128, ../sass/partials/_layout.scss */
 .conference-listing ol {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 134, ../sass/partials/_layout.scss */
+/* line 139, ../sass/partials/_layout.scss */
 .conference .startday {
   position: relative;
   top: 0.1em;
@@ -10061,7 +10076,7 @@ ol.decorated-list li a {
   color: #3C80CA;
   background-color: #FFF;
 }
-/* line 152, ../sass/partials/_layout.scss */
+/* line 157, ../sass/partials/_layout.scss */
 .conference .icon-scrach {
   display: block;
   width: 100%;
@@ -10069,7 +10084,7 @@ ol.decorated-list li a {
   background-color: #B9D1EC;
   margin-bottom: 3px;
 }
-/* line 160, ../sass/partials/_layout.scss */
+/* line 165, ../sass/partials/_layout.scss */
 .conference .icon-scrach .ick {
   background-color: #8CB4E0;
   width: 0.25em;
@@ -10078,22 +10093,22 @@ ol.decorated-list li a {
   left: 0.3em;
   top: -0.3em;
 }
-/* line 170, ../sass/partials/_layout.scss */
+/* line 175, ../sass/partials/_layout.scss */
 .conference .icon-scrach .uck {
   left: 1.5em;
 }
-/* line 175, ../sass/partials/_layout.scss */
+/* line 180, ../sass/partials/_layout.scss */
 .conference p {
   font-size: 12px;
 }
 
-/* line 181, ../sass/partials/_layout.scss */
+/* line 186, ../sass/partials/_layout.scss */
 .interactive-listing {
   padding-right: 8em;
   position: relative;
   zoom: 1;
 }
-/* line 187, ../sass/partials/_layout.scss */
+/* line 192, ../sass/partials/_layout.scss */
 .interactive-listing .mini-actions {
   position: absolute;
   right: 0;
@@ -10104,7 +10119,7 @@ ol.decorated-list li a {
   zoom: 1;
 }
 
-/* line 199, ../sass/partials/_layout.scss */
+/* line 204, ../sass/partials/_layout.scss */
 ul.inline-tags {
   *zoom: 1;
   padding-top: 0.5em;
@@ -10119,7 +10134,7 @@ ul.inline-tags:before, ul.inline-tags:after {
 ul.inline-tags:after {
   clear: both;
 }
-/* line 203, ../sass/partials/_layout.scss */
+/* line 208, ../sass/partials/_layout.scss */
 ul.inline-tags li {
   float: left;
   margin-right: 0.4em;
@@ -10127,7 +10142,7 @@ ul.inline-tags li {
   white-space: nowrap;
 }
 
-/* line 217, ../sass/partials/_layout.scss */
+/* line 222, ../sass/partials/_layout.scss */
 .icon,
 a.icon,
 a.icon:link,
@@ -10141,7 +10156,7 @@ a.icon:active {
   line-height: 20px;
 }
 
-/* line 224, ../sass/partials/_layout.scss */
+/* line 229, ../sass/partials/_layout.scss */
 .icon.google {
   background-image: url(/img/google-32x32.png);
   background-size: 16px;
@@ -10149,7 +10164,7 @@ a.icon:active {
   padding-left: 23px;
 }
 
-/* line 231, ../sass/partials/_layout.scss */
+/* line 236, ../sass/partials/_layout.scss */
 .icon.cal {
   background-image: url(/img/datego-32x32.png);
   background-size: 14px;
@@ -10157,7 +10172,7 @@ a.icon:active {
   padding-left: 23px;
 }
 
-/* line 239, ../sass/partials/_layout.scss */
+/* line 244, ../sass/partials/_layout.scss */
 ul.users li {
   background-image: url(/img/default_user_icon.png);
   background-size: 30px;
@@ -17214,6 +17229,12 @@ footer {
 /* line 9, ../sass/partials/_footer.scss */
 footer p {
   font-weight: normal;
+}
+
+/* line 13, ../sass/partials/_footer.scss */
+.push {
+  height: 600px;
+  /* .push must be the same height as .footer */
 }
 
 /* line 3, ../sass/partials/_events.scss */

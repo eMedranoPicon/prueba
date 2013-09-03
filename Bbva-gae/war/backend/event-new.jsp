@@ -13,7 +13,7 @@
 	}
 %>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" ng-app="appBack">
 <head>
 <title>backend - events:: BBVA in cloud</title>
 <meta charset="utf-8">
@@ -28,6 +28,10 @@
 			<![endif]-->
 <!-- Bloque de Librerias - libreriasjs -->
 <jsp:include page="/libraries-js.jsp" />
+<!-- Bloque de Librerias - Angularjs - genericas -->
+<jsp:include page="/libraries-angular.jsp" />
+<script src="/src/appBack.js"></script>
+<!-- EO Bloque de Librerias -  Angularjs - genericas -->
 <script
 	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 <script src="/js/maps.js"></script>
@@ -80,8 +84,8 @@
 						</div>
 
 						<div class="control-group">
-							<label class="control-label" id="dateEndLabel" for="dateEnd">Fecha y Hora
-								de Fin*</label>
+							<label class="control-label" id="dateEndLabel" for="dateEnd">Fecha
+								y Hora de Fin*</label>
 							<div class="controls">
 								<input id="dateEnd" data-format="dd/MM/yyyy hh:mm"
 									placeholder="dd/MM/yyyy hh:mm" type="text" required
@@ -208,30 +212,30 @@
 		</div>
 	</div>
 
-<script type="text/javascript">
-	$(function() {
-		console.log('carga datepicker');
-		$('#dateStart').datetimepicker({
-			language : 'es',
-			pickSeconds : false,
-			startDate : new Date()
-		});
-		$('#dateEnd').datetimepicker({
-			language : 'es',
-			pickSeconds : false,
-			startDate : new Date()
-		});
-		//Fecha de Finalizacion Obligatoria para poder crear evento en google calendar
-		$('#dateEnd').click(function() {
-			if ($('#dateEnd').val() == '') {
-				$('#dateEnd').val($('#dateStart').val());
-			}
-		});
+	<script type="text/javascript">
+		$(function() {
+			console.log('carga datepicker');
+			$('#dateStart').datetimepicker({
+				language : 'es',
+				pickSeconds : false,
+				startDate : new Date()
+			});
+			$('#dateEnd').datetimepicker({
+				language : 'es',
+				pickSeconds : false,
+				startDate : new Date()
+			});
+			//Fecha de Finalizacion Obligatoria para poder crear evento en google calendar
+			$('#dateEnd').click(function() {
+				if ($('#dateEnd').val() == '') {
+					$('#dateEnd').val($('#dateStart').val());
+				}
+			});
 
-		//Limpiando Mapa						
-		//newEventMap();
-	});
-</script>
-<script src="https://apis.google.com/js/client.js?onload=auth"></script>
+			//Limpiando Mapa						
+			//newEventMap();
+		});
+	</script>
+	<script src="https://apis.google.com/js/client.js?onload=auth"></script>
 </body>
 </html>

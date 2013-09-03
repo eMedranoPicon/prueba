@@ -14,13 +14,13 @@
       <a class="brand visible-phone" href="#">BBVA in Google Cloud</a>
 
       <!-- Everything you want hidden at 940px or less, place within here -->
-      <div class="nav-collapse collapse">
+      <div class="nav-collapse collapse" ng-controller="NavController">
         <!-- .nav, .navbar-search, .navbar-form, etc -->
         <ul class="nav">
-          <li class="active divider-vertical"><a href="/index.jsp">Home</a></li>
-          <li class="divider-vertical"><a href="/events.jsp" >Eventos</a></li>
-          <li class="divider-vertical"><a href="#">Lugar&eacute;s de inter&eacute;s</a></li>
-          <li class="divider-vertical"><a href="#">V&iacute;deos</a></li>
+          <li class="divider-vertical" ng-class="{ active: isActive('/index.jsp')}"><a href="/index.jsp">Home</a></li>
+          <li class="divider-vertical" ng-class="{ active: isActive('/events.jsp')}"><a href="/events.jsp" >Eventos</a></li>
+          <li class="divider-vertical" ng-class="{ active: isActive('/places.jsp')}"><a href="/places.jsp">Lugar&eacute;s de inter&eacute;s</a></li>
+          <li class="divider-vertical" ng-class="{ active: isActive('/videos.jsp')}"><a href="/videos.jsp">V&iacute;deos</a></li>
         </ul>
 
         <form class="navbar-search">
