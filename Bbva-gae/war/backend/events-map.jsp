@@ -29,12 +29,6 @@
 <!--[if lt IE 9]>
       <script src="/js/lib/html5shiv.js"></script>
     <![endif]-->
-
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="/js/lib/html5shiv.js"></script>
-    <![endif]-->
-
 </head>
 <body>
 
@@ -75,8 +69,7 @@
 	<script
 		src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 	<script src="/js/maps.js"></script>
-
-
+	<script src="/js/application.js"></script>
 	<script type="text/javascript">
 		//temporal
 		mapEvents();
