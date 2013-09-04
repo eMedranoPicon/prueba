@@ -17,63 +17,60 @@
 
 <html lang="es" ng-app="appPlace">
 <head>
-  <title>backend - places:: BBVA in cloud</title>
-    <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-  <!-- styles -->
-  <link rel="stylesheet" type="text/css" href="/css/main.css" />
+<title>backend - places:: BBVA in cloud</title>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<!-- styles -->
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
 
-  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-  <!--[if lt IE 9]>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
       <script src="/js/lib/html5shiv.js"></script>
     <![endif]-->
-
-
-  <jsp:include page="/libraries-angular.jsp"/>
-  <script src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
-  <jsp:include page="/libraries-angular-maps.jsp" />
-  <jsp:include page="/libraries-angular-places.jsp"/>
-
-  <!-- Bloque de Librerias - libreriasjs -->
-  <jsp:include page="/libraries-js.jsp" />
-<script src="https://apis.google.com/js/client.js?onload=auth"></script>
-
 </head>
 <body>
 
-<div class="container">
+	<div class="container">
 
-  <!-- include backend-header.jsp -->
-  <jsp:include page="/content/common/backend-header.jsp"/>
-  <!-- EO include backend-header.jsp -->
+		<!-- include backend-header.jsp -->
+		<jsp:include page="/content/common/backend-header.jsp" />
+		<!-- EO include backend-header.jsp -->
 
-  <!-- include navbar.jsp -->
-  <jsp:include page="/content/common/backend-navbar.jsp"/>
-  <!-- EO include navbar.jsp -->
+		<!-- include navbar.jsp -->
+		<jsp:include page="/content/common/backend-navbar.jsp" />
+		<!-- EO include navbar.jsp -->
 
-  <!-- include events-home.html
+		<!-- include events-home.html
   <section class="section-page" ng-controller="appControllerPlaces"-->
-  <section class="section-page">
+		<section class="section-page">
 
-    <header class="header-section">
-   		<h1>{{textTitle}}</h1>
-  	</header>
+			<header class="header-section">
+				<h1>{{textTitle}}</h1>
+			</header>
 
-    <div class="container-fluid">
-      <div class="row-fluid" >
+			<div class="container-fluid">
+				<div class="row-fluid">
 
-        <div class="alert alert-error" ng-show="showError">
-          <p>{{textError}}</p>
-        </div>
+					<div class="alert alert-error" ng-show="showError">
+						<p>{{textError}}</p>
+					</div>
 
-        <div ng-view></div>
+					<div ng-view></div>
 
-      </div>
-		</div>
+				</div>
+			</div>
 
-	</section>
+		</section>
 
-</div>
+	</div>
+	<!-- Bloque de Librerias - libreriasjs -->
+	<jsp:include page="/libraries-js.jsp" />
+	<jsp:include page="/libraries-angular.jsp" />
+	<script
+		src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
+	<jsp:include page="/libraries-angular-maps.jsp" />
+	<jsp:include page="/libraries-angular-places.jsp" />
+	<script src="https://apis.google.com/js/client.js?onload=auth"></script>
 </body>
 
 </html>

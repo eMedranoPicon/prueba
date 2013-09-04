@@ -37,9 +37,6 @@ function PlaceMapController($scope,$http,$rootScope,sharedService)
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    console.log('$scope.mapOptions : '+ $scope.mapOptions);
-
-
     //Markers should be added after map is loaded
     $scope.onMapIdle = function()
     {
@@ -61,9 +58,6 @@ function PlaceMapController($scope,$http,$rootScope,sharedService)
 
     function upDateMap(latLon)
     {
-        //var llUpdate = new google.maps.LatLng(lat,lon);
-        console.log('upDateMap '+ latLon);
-
         $scope.myMap.setCenter(latLon);
         removeAllMarkers();
         addMarker(latLon);
@@ -95,7 +89,6 @@ function PlaceMapController($scope,$http,$rootScope,sharedService)
     function calcLatLon(calle,cp,ciudad,pais)
     {
       var address = calle + "," +cp+","+ciudad+","+pais;
-      console.log('address:'+address);
       geocoder = new google.maps.Geocoder();
 
       geocoder.geocode
@@ -107,8 +100,6 @@ function PlaceMapController($scope,$http,$rootScope,sharedService)
           {
               if (status == google.maps.GeocoderStatus.OK)
               {
-                  console.log('sharedService.latitud: ' + sharedService.latitud);
-                  console.log('sharedService.longitud: ' + sharedService.longitud);
                   console.log('calcLatLon array : ' + results[0].geometry.location + "lat(): "+results[0].geometry.location.lat()+ " lng(): "+results[0].geometry.location.lng());
                   sharedService.latitud = results[0].geometry.location.lat();
                   sharedService.longitud = results[0].geometry.location.lng();
@@ -141,8 +132,7 @@ function PlaceMapController($scope,$http,$rootScope,sharedService)
 
 
     $scope.$watch('latitud', function()
-    {
-        console.log('watch latitud: en EvenEditController: '+ sharedService.latitud + ' ' + sharedService.longitud + ' calle: ' + sharedService.calleBdc+ ' cpBdc: ' + sharedService.cpBdc+ ' ciudadBdc: ' + sharedService.ciudadBdc+ ' paisBdc: ' + sharedService.paisBdc);
+    {        
         calcLatLon(sharedService.calleBdc,sharedService.cpBdc,sharedService.ciudadBdc,sharedService.paisBdc);
     });
     

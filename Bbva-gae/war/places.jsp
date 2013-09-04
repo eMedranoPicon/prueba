@@ -19,8 +19,6 @@
     <script src="js/lib/html5shiv.js"></script>
   <![endif]-->
 </head>
-<!--  http://alefeuvre.github.io/foundation-grid-displayer/ -->
-<!-- <body data-grid-framework="bo" data-grid-color="blue" data-grid-opacity="0.5" data-grid-zindex="10" data-grid-nbcols="12">-->
 <body>
 
 	<div class="container">
@@ -31,8 +29,21 @@
 		<!-- include navbar.jsp -->
 		<jsp:include page="/content/common/navbar.jsp" />
 		<!-- EO include navbar.jsp -->
-		<!-- push footer to the bottom -->
-		<div class="push"></div>
+		<!-- include places-fronte.html -->
+		<section class="section-page">
+			<header class="header-section">
+				<h1>Lugares de Inter&eacutes</h1>
+			</header>
+
+			<div class="container-fluid">
+				<div class="row-fluid">
+
+					<div ng-view></div>
+
+				</div>
+			</div>
+		</section>
+		<!-- EO include places-front.html -->
 		<!-- include footer.jsp -->
 		<jsp:include page="/content/common/footer.html" />
 		<!-- EO include footer.jsp -->

@@ -15,6 +15,10 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 		templateUrl: '/src/views/events/front/events-list2.html',
 		controller: appFrontController
 	})
+	.when('/places.jsp', {
+		templateUrl: '/src/views/places/places-list-front.html',
+		controller: appControllerPlaces
+	})
 	//cualquier ruta no definida
 	.otherwise({
 		templateUrl: '/src/views/events/front/events-list.html',

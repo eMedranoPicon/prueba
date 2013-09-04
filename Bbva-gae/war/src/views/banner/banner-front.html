@@ -1,5 +1,5 @@
 <!-- include banner.html -->
-<div ng-controller="BannerFrontController">
+<div ng-cloak ng-controller="BannerFrontController">
 	<carousel interval="myInterval"> <slide
 		ng-repeat="slide in slides" active="slide.active"> <img
 		ng-src="{{slide.urlImg}}" style="margin: auto;">

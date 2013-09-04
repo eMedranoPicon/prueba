@@ -61,6 +61,35 @@
 							style="border-width: 0" width="100%" height="470px"
 							frameborder="0" scrolling="no"></iframe>
 					</div>
+				</div>
+			</div>
+		</section>
+		<!-- include places-home.html -->
+		<section class="section-page">
+			<header class="header-section">
+				<h1>
+					<a href="#">Lugares de Inter&eacutes</a>
+				</h1>
+			</header>
+
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span12">
+
+						<div class="row-fluid">
+
+							<jsp:include page="/src/views/places/places-list-home.html" />
+
+						</div>
+
+
+					</div>
+
+					<div class="span12">
+						<div class="row-fluid">
+							<jsp:include page="/src/views/places/places-map-front.html" />
+						</div>
+					</div>
 
 				</div>
 			</div>

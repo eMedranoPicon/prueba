@@ -56,8 +56,7 @@
 		<jsp:include page="/content/common/backend-navbar.jsp" />
 		<!-- EO include navbar.jsp -->
 
-		<!-- include events-home.html 
-		<section class="section-page" ng-controller="appControllerPlaces">-->
+		<!-- include events-home.html-->
 		<section class="section-page">
 
 			<header class="header-section">

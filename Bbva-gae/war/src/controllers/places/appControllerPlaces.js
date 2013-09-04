@@ -9,7 +9,7 @@ function appControllerPlaces($scope, $http, $routeParams, $timeout)
   $scope.orderReverse = "true";
 
   console.log('AngularJS - Place');  
-  $scope.$apply();
+  //$scope.$apply();
   //$http.get('https://sopragroupux.appspot.com/_ah/api/place/v1/place/').success(function(data)
   $http.get('https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/').success(function(data)
   {
@@ -70,5 +70,25 @@ function appControllerPlaces($scope, $http, $routeParams, $timeout)
       $scope.deletePlaceModal = false;
       console.log('closeModalRemove');
   };
+  
+  /* filtrado de eventos */
+  var indexedPlaces = [];
+
+
+  $scope.placesToFilter = function() {
+	  indexedPlaces = [];
+      return $scope.places;
+  };
+
+
+ /* $scope.filterPlaces = function(place)
+  {
+    var teamIsNew = indexedEvents.indexOf(event.datesArray[2]) == -1;
+    if (teamIsNew)
+    {
+        indexedEvents.push(event.datesArray[2]);
+    }
+    return teamIsNew;
+  };*/ 
 
 };

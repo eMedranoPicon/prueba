@@ -42,8 +42,6 @@ function PlaceMapListController($scope,$http,$rootScope)
 	        mapTypeId: google.maps.MapTypeId.ROADMAP
 	    };
 
-	    console.log('$scope.mapOptions : '+ $scope.mapOptions);
-
 
 	    //Markers should be added after map is loaded
 	    $scope.onMapIdle = function()
@@ -58,7 +56,7 @@ function PlaceMapListController($scope,$http,$rootScope)
 	        }
 
 	        //hace que se ejecuten los watch
-	        $scope.$digest();
+	        //$scope.$digest();
 	    }; 
 
 
@@ -102,8 +100,6 @@ function PlaceMapListController($scope,$http,$rootScope)
         	latlong = new google.maps.LatLng($scope.places[p].latitude, $scope.places[p].longitud);
         	addMarkerComplete(latlong , $scope.places[p].fullAddress );
         }
-        // This should be dynamic        
-        //$scope.myMap.setZoom(6);
         
       }).error(function(data, status)
       {
