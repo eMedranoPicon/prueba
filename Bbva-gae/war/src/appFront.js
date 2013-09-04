@@ -15,6 +15,10 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 		templateUrl: '/src/views/events/front/events-list2.html',
 		controller: appFrontController
 	})
+	.when('/place-detail/:id', {
+		templateUrl: '/src/views/places/place-detail.html',
+		controller: PlaceFrontController
+	})
 	.when('/places.jsp', {
 		templateUrl: '/src/views/places/places-list-front.html',
 		controller: appControllerPlaces
@@ -26,6 +30,7 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 	});	
 	
 	EventDetailController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
+	PlaceFrontController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
 	MapController.$inject = ['$scope', '$rootScope', 'mySharedService'];	
 }]);
 

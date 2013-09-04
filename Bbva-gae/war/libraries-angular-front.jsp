@@ -6,4 +6,5 @@
 	<script src="/src/controllers/common/MapController.js"></script>	
 	<script src="/src/controllers/places/appControllerPlaces.js"></script>
 	<script src="/src/controllers/places/PlaceMapListController.js"></script>
+	<script src="/src/controllers/places/PlaceFrontController.js"></script>
 <!-- EO libraries-angular-eventsFront.jsp -->

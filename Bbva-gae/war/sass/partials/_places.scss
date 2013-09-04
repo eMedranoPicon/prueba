@@ -1,0 +1,27 @@
+.place-large,
+.place-small,
+.place-med {
+	vertical-align:baseline;text-indent:-5000px;direction:ltr;overflow:hidden;display:inline-block;*display:inline;zoom:1
+}
+
+.place-small {
+	width: 16px;
+	height: 11px;
+}
+
+a.place-large,
+a.place-small,
+a.place-med {
+	border: none;
+}
+
+.place-us.place-small {
+	background-position: -153px -48px;
+	display: inline-block;
+}
+
+.place-ae, .place-ar, .place-at, .place-au, .place-be, .place-bg, .place-br, .place-ca, .place- {
+	background-image: url(/img/places/places-sprite.png);
+	display: none;
+}
+

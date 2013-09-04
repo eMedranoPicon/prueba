@@ -17342,3 +17342,41 @@ section.asistentes h3 {
   border-bottom: 1px solid #aee0f6;
   color: #52bcec;
 }
+
+/* line 3, ../sass/partials/_places.scss */
+.place-large,
+.place-small,
+.place-med {
+  vertical-align: baseline;
+  text-indent: -5000px;
+  direction: ltr;
+  overflow: hidden;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+/* line 7, ../sass/partials/_places.scss */
+.place-small {
+  width: 16px;
+  height: 11px;
+}
+
+/* line 14, ../sass/partials/_places.scss */
+a.place-large,
+a.place-small,
+a.place-med {
+  border: none;
+}
+
+/* line 18, ../sass/partials/_places.scss */
+.place-us.place-small {
+  background-position: -153px -48px;
+  display: inline-block;
+}
+
+/* line 23, ../sass/partials/_places.scss */
+.place-ae, .place-ar, .place-at, .place-au, .place-be, .place-bg, .place-br, .place-ca, .place- {
+  background-image: url(/img/places/places-sprite.png);
+  display: none;
+}

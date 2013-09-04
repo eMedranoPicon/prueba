@@ -83,5 +83,25 @@ angular.module('mesEnLiteral', []).filter('mesEnLiteral', function()
       };
 });
 
+angular.module('lugares', []).filter('acronimoLugar', function()
+		{
+		  	return function(input)
+		  			{
+		   				switch(input)
+						{
+							case 'Restaurante':
+							  return 're';
+							  break;
+							case 'Centro Convenciones':
+							  return 'cc';
+							  break;
+							case 'Gimnasio':
+							  return 'gm';
+							  break;
+							default:
+							   return 'other';
+						}
+					};
+		});
 
 

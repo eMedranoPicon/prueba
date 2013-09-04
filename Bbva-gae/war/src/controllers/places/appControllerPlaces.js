@@ -81,14 +81,22 @@ function appControllerPlaces($scope, $http, $routeParams, $timeout)
   };
 
 
- /* $scope.filterPlaces = function(place)
+ $scope.filterPlaces = function(place)
   {
-    var teamIsNew = indexedEvents.indexOf(event.datesArray[2]) == -1;
-    if (teamIsNew)
+    var flag = indexedPlaces.indexOf(place.typePlace) == -1;
+    if (flag)
     {
-        indexedEvents.push(event.datesArray[2]);
+        indexedPlaces.push(place.typePlace);
     }
-    return teamIsNew;
-  };*/ 
+    return flag;
+  }; 
 
+  $scope.placesCatFilter = function(cat)
+  {
+    return function(place)
+    {
+     // console.log('eventsPerMonth event.datesArray[2]:'+event.datesArray[2])
+      return place.typePlace == cat;
+    }
+  };  
 };
