@@ -1,8 +1,32 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ page import="com.google.appengine.api.users.User"%>
+<%@ page import="com.google.appengine.api.users.UserService"%>
+<%@ page import="com.google.appengine.api.users.UserServiceFactory"%>
+<%
+	UserService userService = UserServiceFactory.getUserService();
+	User user = userService.getCurrentUser();
+
+	String url = userService.createLoginURL(request.getRequestURI());
+	String urlLinktext = "Login";
+	if (user != null) {
+		url = userService.createLogoutURL(request.getRequestURI());
+		urlLinktext = "Logout";
+	}
+%>
 <!DOCTYPE html>
-<html>
+
+<html lang="es">
 <head>
+<title>backend - places:: BBVA in cloud</title>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<!-- styles -->
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="/js/lib/html5shiv.js"></script>
+    <![endif]-->
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 <script type="text/javascript">
 	var CLIENT_ID = '785790985795-pf206je1417kten4jbd5funo77vlkuvf.apps.googleusercontent.com';
@@ -38,8 +62,11 @@
 		filePicker.style.display = 'none';
 		if (authResult && !authResult.error) {
 			// Access token has been successfully retrieved, requests can be sent to the API.
+		    gapi.client.load('drive', 'v2', function() {
+		    	console.log("Detro del API");
+		    });
 			filePicker.style.display = 'block';
-			filePicker.onchange = uploadFile;
+			filePicker.onchange = uploadFile;			
 		} else {
 			// No access token could be retrieved, show the button to start the authorization flow.
 			authButton.style.display = 'block';
@@ -47,10 +74,10 @@
 				gapi.auth.authorize({
 					'client_id' : CLIENT_ID,
 					'scope' : SCOPES,
-					'immediate' : false
+					'immediate' : true
 				}, handleAuthResult);
 			};
-		}
+		}		
 	}
 
 	/**
@@ -59,10 +86,8 @@
 	 * @param {Object} evt Arguments from the file selector.
 	 */
 	function uploadFile(evt) {
-		gapi.client.load('drive', 'v2', function() {
 			var file = evt.target.files[0];
 			insertFile(file);
-		});
 	}
 
 	/**
@@ -113,8 +138,7 @@
 			});
 			if (!callback) {
 				callback = function(file) {
-					console.log(file);
-					retrieveAllFiles();
+					console.log(file);					
 				};
 			}
 			request.execute(callback);
@@ -124,35 +148,101 @@
 	/**
 	 * Show Files new file.
 	 *
-	 * @param {Function} callback Function to call when the request is complete.
 	 */
-	 var retrieveAllFiles = function () {
-         var retrievePageOfFiles = function(request, result) {
-             request.execute(function(resp) {
-                 console.log(resp);
-                 result = result.concat(resp.items);
-                 var nextPageToken = resp.nextPageToken;
-                 console.log("nextPageToken ="+nextPageToken);
-                 if (nextPageToken) {
-                     request = gapi.client.drive.files.list({'pageToken': nextPageToken});
-                     retrievePageOfFiles(request, result);
-                 } else {
-                     printFileList(result);
-                 }
-             });
-         }
-     var initialRequest = gapi.client.drive.files.list({'maxResults': 10});
-     console.log("initialRequest = "+initialRequest);
-      retrievePageOfFiles(initialRequest, []);
-     }
+	var retrieveAllFiles = function() {
+		var retrievePageOfFiles = function(request, result) {
+			request.execute(function(resp) {
+				//result = result.concat(resp.items);			
+				
+				var html = '<ul>';
+				for (var key in resp.items)
+				{
+					if (!(typeof resp.items[key].embedLink === 'undefined')) {
+						console.log(resp.items[key]);
+					var linkAll =resp.items[key].webContentLink;
+					var link = linkAll.substr(0, linkAll.indexOf('&')); 
+					
+					var linkVideoAll = resp.items[key].embedLink;
+					var linkVideo = linkVideoAll.substr(0, linkVideoAll.indexOf('&BASE_URL=https://docs.google.com/')); 
+					html += '<li><b>' + key + '</b> ' + 
+					resp.items[key].title +'<br>'+resp.items[key].mimeType+'<br>'+link+'<br>'+linkVideo+'<br>'+
+					'INICIO<video width="320" height="240" controls>'+
+					'<source src='+linkVideo+' type="video/mp4">'+
+					'<source src='+linkVideo+' type="video/ogg">'+					
+					'Your browser does not support the video tag.</video>FIN'+
+					'<br>embed<embed src='+linkVideo+'&output=embed type="application/x-shockwave-flash" wmode="transparent"><br>'+
+					'<br>iframe<iframe src='+linkVideo+'&output=embed type="application/x-shockwave-flash" wmode="transparent"></iframe><hr>'+
+					'START<video width="320" height="240" controls>'+
+					'<source src='+link+' type="video/mp4">'+
+					'<source src='+link+' type="video/ogg">'+
+					'Your browser does not support the video tag.</video>END'+
+					'<br>embed<embed src='+link+'&output=embed type="application/x-shockwave-flash" wmode="transparent">'+
+					'<br>iframe<iframe src='+link+'&output=embed type="application/x-shockwave-flash" wmode="transparent"></iframe></li><hr><hr><hr>';
+				    }
+				}
+
+				html += '</ul>';
+
+				document.getElementById('Listado').innerHTML = html;
+				
+				/*
+				var nextPageToken = resp.nextPageToken;
+				console.log("nextPageToken =" + nextPageToken);
+				if (nextPageToken) {
+					request = gapi.client.drive.files.list({
+						'pageToken' : nextPageToken
+					});
+					retrievePageOfFiles(request, result);
+				} else {
+					console.log(result);
+				}*/
+			});
+		}
+		var initialRequest = gapi.client.drive.files.list({
+			'maxResults' : 10,'q':'"0B7sf9nIuNLe-S0VBdXlrNVl3eGs" in parents'
+		});
+		console.log("initialRequest = " + initialRequest);
+		retrievePageOfFiles(initialRequest, []);
+	}
 </script>
 <script type="text/javascript"
 	src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
 </head>
 <body>
-	<!--Add a file picker for the user to start the upload process -->
-	<input type="file" id="filePicker" style="display: none" />
-	<input type="button" id="authorizeButton" style="display: none"
-		value="Authorize" />
+
+	<div class="container">
+
+		<!-- include backend-header.jsp -->
+		<jsp:include page="/content/common/backend-header.jsp" />
+		<!-- EO include backend-header.jsp -->
+
+		<!-- include navbar.jsp -->
+		<jsp:include page="/content/common/backend-navbar.jsp" />
+		<!-- EO include navbar.jsp -->
+
+		<!-- include events-home.html-->
+		<section class="section-page">
+
+			<div class="container-fluid">
+				<!--Add a file picker for the user to start the upload process -->
+				<input type="file" id="filePicker" style="display: none" /> 
+				<input type="button" id="authorizeButton" style="display: none"	value="Authorize" />
+				<input type="button" id="listFiles" onclick="retrieveAllFiles()" value="ListFiles" />
+				<div id="Listado">
+				</div>
+
+			</div>
+	</div>
+
+	</section>
+
+	</div>
+
+	<jsp:include page="/libraries-angular.jsp" />
+	<script
+		src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
+	<!-- Bloque de Librerias - libreriasjs -->
+	<jsp:include page="/libraries-js.jsp" />
+
 </body>
 </html>
