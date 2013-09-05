@@ -198,7 +198,20 @@
 				class="btn btn-primary">Aceptar</a>
 		</div>
 	</div>
-
+	<!-- Bloque de Librerias - libreriasjs -->
+	<jsp:include page="/libraries-js.jsp" />
+	<!-- Bloque de Librerias - Angularjs - genericas -->
+	<jsp:include page="/libraries-angular.jsp" />
+	<script src="/src/appBack.js"></script>
+	<!-- EO Bloque de Librerias -  Angularjs - genericas -->
+	<script src="https://apis.google.com/js/client.js?onload=auth"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>	
+	<script src="/js/maps.js"></script>
+	<script src="/js/calendar.js"></script>
+	<script src="/js/backend.js"></script>
+	<script src="/js/auth.js"></script>		
+	<script src="/js/application.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			console.log('carga datepicker');
@@ -222,20 +235,6 @@
 			//Limpiando Mapa						
 			//newEventMap();
 		});
-	</script>
-	<!-- Bloque de Librerias - libreriasjs -->
-	<jsp:include page="/libraries-js.jsp" />
-	<!-- Bloque de Librerias - Angularjs - genericas -->
-	<jsp:include page="/libraries-angular.jsp" />
-	<script src="/src/appBack.js"></script>
-	<!-- EO Bloque de Librerias -  Angularjs - genericas -->	
-	<script src="/js/maps.js"></script>
-	<script src="/js/calendar.js"></script>
-	<script src="/js/backend.js"></script>
-	<script src="/js/auth.js"></script>		
-	<script src="/js/application.js"></script>
-	<script src="https://apis.google.com/js/client.js?onload=auth"></script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+	</script>	
 </body>
 </html>

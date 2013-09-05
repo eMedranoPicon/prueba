@@ -17343,10 +17343,8 @@ section.asistentes h3 {
   color: #52bcec;
 }
 
-/* line 3, ../sass/partials/_places.scss */
-.place-large,
-.place-small,
-.place-med {
+/* line 1, ../sass/partials/_places.scss */
+.place-large {
   vertical-align: baseline;
   text-indent: -5000px;
   direction: ltr;
@@ -17356,27 +17354,67 @@ section.asistentes h3 {
   zoom: 1;
 }
 
-/* line 7, ../sass/partials/_places.scss */
-.place-small {
-  width: 16px;
-  height: 11px;
+/* line 5, ../sass/partials/_places.scss */
+.place-large {
+  width: 93px;
+  height: 93px;
+  float: left;
+  display: block;
+  position: relative;
+  margin-right: 5px;
 }
 
 /* line 14, ../sass/partials/_places.scss */
-a.place-large,
-a.place-small,
-a.place-med {
+a.place-large {
   border: none;
 }
 
-/* line 18, ../sass/partials/_places.scss */
-.place-us.place-small {
-  background-position: -153px -48px;
+/* line 17, ../sass/partials/_places.scss */
+.place-re, .place-cc, .place-gm, .place-mu, .place-other {
+  background-image: url(/img/places/places-sprite.png);
   display: inline-block;
 }
 
-/* line 23, ../sass/partials/_places.scss */
-.place-ae, .place-ar, .place-at, .place-au, .place-be, .place-bg, .place-br, .place-ca, .place- {
-  background-image: url(/img/places/places-sprite.png);
-  display: none;
+/* line 22, ../sass/partials/_places.scss */
+.place-re {
+  background-position: 0px -490px;
+}
+
+/* line 26, ../sass/partials/_places.scss */
+.place-gm {
+  background-position: 0px -98px;
+}
+
+/* line 29, ../sass/partials/_places.scss */
+.place-cc {
+  background-position: 0px -196px;
+}
+
+/* line 32, ../sass/partials/_places.scss */
+.place-other {
+  background-position: 0px 0px;
+}
+
+/* line 35, ../sass/partials/_places.scss */
+.place-mu {
+  background-position: 0px -294px;
+}
+
+/* line 39, ../sass/partials/_places.scss */
+.place-header {
+  padding-bottom: 15px;
+}
+/* line 42, ../sass/partials/_places.scss */
+.place-header h1 {
+  padding-top: 20px;
+}
+
+/* line 46, ../sass/partials/_places.scss */
+.contact-place {
+  background-image: url(/img/default_user_icon.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  margin-bottom: 15px;
+  line-height: 30px;
 }

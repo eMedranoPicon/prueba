@@ -95,7 +95,7 @@
             <div class="container-data pull-right">
               <!--<p> Desde aquí podrás gestionar tus videos:</p>-->
               <ul class="decorated-list">
-                <li><a href="#">Dar de <strong>alta</strong> un video</a></li>
+                <li><a href="/videos/video.jsp">Dar de <strong>alta</strong> un video</a></li>
                 <li><a href="#"><strong>Listar/Borrar</strong> videos</a></li>
 
               </ul>

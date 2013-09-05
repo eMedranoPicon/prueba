@@ -98,6 +98,9 @@ angular.module('lugares', []).filter('acronimoLugar', function()
 							case 'Gimnasio':
 							  return 'gm';
 							  break;
+							case 'Museo':
+							  return 'mu';
+							  break;
 							default:
 							   return 'other';
 						}

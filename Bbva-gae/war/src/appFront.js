@@ -1,4 +1,4 @@
-var appFront = angular.module("appFront", ['checkImg','acronimoPais','mesEnLiteral','ui.bootstrap','ui.map','ui.event']);
+var appFront = angular.module("appFront", ['checkImg','lugares','acronimoPais','mesEnLiteral','ui.bootstrap','ui.map','ui.event']);
 
 //definimos las rutas de la 'app'
 appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider)

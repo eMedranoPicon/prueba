@@ -19,7 +19,7 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, $location,
                               {'type': 'Museo', 'description': 'Museo'},
                               {'type': 'Plaza', 'description': 'Plaza'},
                               {'type': 'Gimnasio', 'description': 'Gimnasio'},
-                              {'type': 'Centro Covenciones', 'description': 'Centro Convenciones'}
+                              {'type': 'Centro Convenciones', 'description': 'Centro Convenciones'}
                              ];
     
 

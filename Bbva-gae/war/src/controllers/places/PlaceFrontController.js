@@ -59,8 +59,9 @@ function PlaceFrontController($scope, $http, $routeParams, $rootScope, $location
 		$scope.indexPlace = findIndexById(idPlace, $scope.places);
 
 		if ($scope.indexPlace != -1) {
-			$scope.place = $scope.places[$scope.indexPlace];	
-			 sharedService.prepForBroadcastLatLong($scope.place.latitude,$scope.place.longitud);
+			$scope.place = $scope.places[$scope.indexPlace];
+			$scope.showDetailLayout = true;
+			 //sharedService.prepForBroadcastLatLong($scope.place.latitude,$scope.place.longitud);
 		} else {
 			$scope.showError = true;
 			$scope.textError = "Lugar de Interes" + idPlace + "no encontrado";
