@@ -52,7 +52,6 @@
 
 			<div class="container-fluid">
 				<div class="row-fluid">
-
 					<div class="alert alert-error" ng-show="showError">
 						<p>{{textError}}</p>
 					</div>

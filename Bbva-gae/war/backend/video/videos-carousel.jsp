@@ -47,22 +47,49 @@
 				<h1>Listado Videos</h1>
 			</header>
 			<div class="container-fluid videoLayout">
-			    <table id="contentList" class="table table-striped">
-                <tr>
-                    <th>Titulo Video</th>
-                    <th>Descripcion</th>
-                    <th>URL</th>
-                </tr>
-			    </table>
+			<div id="myCarousel" class="carousel slide">
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
+				<!-- Carousel items -->
+				<div class="carousel-inner">
+					<div class="active item">
+					<video width="480" height="320" controls="">
+					<source src="https://docs.google.com/uc?id=0B8IzyUkbosWjRUk4M3g3VVpCWlE" type="video/mp4">
+					<source src="https://docs.google.com/uc?id=0B8IzyUkbosWjRUk4M3g3VVpCWlE" type="video/ogg">
+					Your browser does not support the video tag.
+					</video>
+					</div>
+					<div class="item">
+						<video width="480" height="320" controls="">
+							<source	src="https://docs.google.com/uc?id=0B8IzyUkbosWjMm5WREwxbEhMU2M" type="video/mp4">
+							<source
+								src="https://docs.google.com/uc?id=0B8IzyUkbosWjMm5WREwxbEhMU2M" type="video/ogg">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+					<div class="item"><video width="480" height="320" controls="">
+					<source src="https://docs.google.com/uc?id=0B8IzyUkbosWjRUk4M3g3VVpCWlE" type="video/mp4">
+					<source src="https://docs.google.com/uc?id=0B8IzyUkbosWjRUk4M3g3VVpCWlE" type="video/ogg">
+					Your browser does not support the video tag.
+					</video></div>
+				</div>
+				<!-- Carousel nav -->
+				<a class="carousel-control left" href="#myCarousel"
+					data-slide="prev">&lsaquo;</a> <a class="carousel-control right"
+					href="#myCarousel" data-slide="next">&rsaquo;</a>
+			</div>
 				<!--Add a file picker for the user to start the upload process -->
 				<div style="display: none">
 					<input type="file" id="filePicker" style="display: none" /> <input
 						type="button" id="authorizeButton" style="display: none"
 						value="Authorize" />
-				</div>				
+				</div>
 				<input class="btn" type="button" id="listFiles"
 					onclick="retrieveAllFiles()" value="ListFiles" />
-				<div id="ListadoVideos"></div>
+				<div id="Listado"></div>
 			</div>
 			
 		</section>
