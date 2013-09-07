@@ -172,9 +172,45 @@
 	<div class="modal-footer">
 		<a href="/backend/events/events-app.jsp" class="btn btn-primary">Aceptar</a>
 	</div>
+<<<<<<< HEAD:Bbva-gae/war/backend/events/event-new.jsp
 </div>
 
 
+=======
+	<!-- Bloque de Librerias - libreriasjs -->
+	<jsp:include page="/libraries-js.jsp" />
+	<!-- Bloque de Librerias - Angularjs - genericas -->
+	<jsp:include page="/libraries-angular.jsp" />
+	<script src="/src/appBack.js"></script>
+	<!-- EO Bloque de Librerias -  Angularjs - genericas -->
+	<script src="https://apis.google.com/js/client.js?onload=auth"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>	
+	<script src="/js/maps.js"></script>
+	<script src="/js/calendar.js"></script>
+	<script src="/js/backend.js"></script>
+	<script src="/js/auth.js"></script>		
+	<script src="/js/application.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			console.log('carga datepicker');
+			$('#dateStart').datetimepicker({
+				language : 'es',
+				pickSeconds : false,
+				startDate : new Date()
+			});
+			$('#dateEnd').datetimepicker({
+				language : 'es',
+				pickSeconds : false,
+				startDate : new Date()
+			});
+			//Fecha de Finalizacion Obligatoria para poder crear evento en google calendar
+			$('#dateEnd').click(function() {
+				if ($('#dateEnd').val() == '') {
+					$('#dateEnd').val($('#dateStart').val());
+				}
+			});
+>>>>>>> ccb0e309529cc31ef2316236a2c52051eaf2be1f:Bbva-gae/war/backend/event-new.jsp
 
 <!-- Bloque de Librerias - libreriasjs -->
 <jsp:include page="/libraries-js.jsp" />
@@ -209,11 +245,15 @@
 				$('#dateEnd').val($('#dateStart').val());
 			}
 		});
+<<<<<<< HEAD:Bbva-gae/war/backend/events/event-new.jsp
 
 		//Limpiando Mapa
 		//newEventMap();
 	});
 </script>
 
+=======
+	</script>	
+>>>>>>> ccb0e309529cc31ef2316236a2c52051eaf2be1f:Bbva-gae/war/backend/event-new.jsp
 </body>
 </html>

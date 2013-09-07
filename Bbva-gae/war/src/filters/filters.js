@@ -84,6 +84,7 @@ angular.module('mesEnLiteral', []).filter('mesEnLiteral', function()
 });
 
 angular.module('lugares', []).filter('acronimoLugar', function()
+<<<<<<< HEAD
 	{
 	  	return function(input)
 	  			{
@@ -103,6 +104,30 @@ angular.module('lugares', []).filter('acronimoLugar', function()
 					}
 				};
 	});
+=======
+		{
+		  	return function(input)
+		  			{
+		   				switch(input)
+						{
+							case 'Restaurante':
+							  return 're';
+							  break;
+							case 'Centro Convenciones':
+							  return 'cc';
+							  break;
+							case 'Gimnasio':
+							  return 'gm';
+							  break;
+							case 'Museo':
+							  return 'mu';
+							  break;
+							default:
+							   return 'other';
+						}
+					};
+		});
+>>>>>>> ccb0e309529cc31ef2316236a2c52051eaf2be1f
 
 angular.module('titlePage', []).filter('titlePage', function()
 {
