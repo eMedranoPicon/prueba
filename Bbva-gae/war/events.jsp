@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" ng-app="appFront">
+<html lang="es" ng-app="appFront" ng-controller="appFrontController" >
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -37,8 +37,8 @@
 
 		<!-- include events-home.html -->
 		<section class="section-page">
-			<header class="header-section">
-				<h1>Eventos</h1>
+			<header class="header-section" ng-cloak>
+				<h1>{{locationPath | titlePage}}</h1>
 			</header>
 
 			<div class="container-fluid">

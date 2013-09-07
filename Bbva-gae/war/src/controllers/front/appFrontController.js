@@ -1,4 +1,4 @@
-function appFrontController($scope, $http, $routeParams)
+function appFrontController($scope, $http, $routeParams, $location)
 {
   console.log('appFrontController');
 
@@ -14,6 +14,8 @@ function appFrontController($scope, $http, $routeParams)
 
   $scope.orderField = "dateStartStamp";
   $scope.orderReverse = "true";
+
+  $scope.locationPath = $location.path();
 
   $http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
   {
@@ -72,5 +74,5 @@ function appFrontController($scope, $http, $routeParams)
      // console.log('eventsPerMonth event.datesArray[2]:'+event.datesArray[2])
       return event.datesArray[2] == mes;
     }
-  };  
+  };
 };

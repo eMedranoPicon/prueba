@@ -35,10 +35,10 @@
 	<div class="container">
 
 		<!-- include backend-header.jsp -->
-		<jsp:include page="/content/common/backend-header.jsp" />
+		<jsp:include page="/backend/backend-header.jsp" />
 		<!-- EO include backend-header.jsp -->
 		<!-- include navbar.jsp -->
-		<jsp:include page="/content/common/backend-navbar.jsp" />
+		<jsp:include page="/backend/backend-navbar.jsp" />
 		<!-- EO include navbar.jsp -->
 
 

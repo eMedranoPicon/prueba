@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="es" ng-app="appFront">
+<html lang="es" ng-app="appFront" ng-controller="appFrontController" ng-cloak>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta charset="utf-8">
-<!--<link rel="icon" href="img/favicon.ico" type="image/icon">-->
-<title>BBVA in cloud</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta charset="utf-8">
+	<!--<link rel="icon" href="img/favicon.ico" type="image/icon">-->
+	<title>BBVA in cloud</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
-<!-- styles -->
-<link href="/css/main.css" rel="stylesheet">
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-    <script src="js/lib/html5shiv.js"></script>
-  <![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- styles -->
+	<link href="/css/main.css" rel="stylesheet">
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	    <script src="js/lib/html5shiv.js"></script>
+	  <![endif]-->
 </head>
 <body>
 
@@ -37,7 +37,7 @@
 		<section class="section-page">
 			<header class="header-section">
 				<h1>
-					<a href="content/events/events.jsp">Eventos</a>
+					<a href="events.jsp">Eventos</a><a class="pull-right" href="events.jsp"><small>[Ver todos los eventos]</small></a>
 				</h1>
 			</header>
 

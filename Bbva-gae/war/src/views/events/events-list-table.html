@@ -60,17 +60,17 @@
                 </tr>
                 <tr ng-repeat="obj in events | filter:query | orderBy:orderField:orderReverse" ng-show="is_backend_ready">
                     <td>{{obj.title}}</td>
-                    <td>{{obj.dateStart}}<br>{{obj.dateStartStamp}}</td>
-                    <td>{{obj.dateEnd}}<br>{{obj.dateEndStamp}}</td>
+                    <td>{{obj.dateStart}}</td>
+                    <td>{{obj.dateEnd}}</td>
                     <td class="wrapword">{{obj.description}}</td>
                     <td class="wrapword"><a href="{{obj.urlEvent}}" target="_blank">{{obj.urlEvent}}</a></td>
-                    <td>{{obj.audience}}</td>
-                    <td>{{obj.tags}}</td>
+                    <td class="wrapword">{{obj.audience}}</td>
+                    <td class="wrapword">{{obj.tags}}</td>
                     <td class="wrapword">{{obj.address}}</td>
-                    <td>{{obj.id}}</td>
-                    <td>
+                    <td class="wrapword">{{obj.id}}</td>
+                    <td class="wrapword">
                         <div class="group-buttons-table">
-                            <a class="btn btn-success btn-small" href="#/event-edit/{{obj.id}}"><i class="icon-edit icon-white"></i> Editar</a>
+                            <a class="btn btn-success btn-small" href="#/event-edit/{{obj.id}}"><i class="icon-edit icon-white"></i> Editar</a><br><br>
                             <a class="btn btn-warning btn-small" ng-click="openModalRemove(obj.id,obj.title,obj.dateStart,obj.description)"><i class="icon-trash icon-white"></i> Borrar</a>
                         </div>
                     </td>

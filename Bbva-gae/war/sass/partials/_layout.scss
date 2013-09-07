@@ -4,6 +4,17 @@
 	{
 		border-bottom: 1px solid $borderGray;
 		margin-bottom: $margin-bottom-block;
+
+		h1 {
+			a {
+				&:hover {
+					text-decoration: none;
+				}
+				small {
+					font-size: 50%;
+				}
+			}
+		}
 	}
 }
 
@@ -16,8 +27,19 @@
 
 	@include clearfix();
 
-	h1 {
+	h1
+	{
 		font-size: $fontSizeLargest;
+		line-height: $fontSizeLargest+2;
+
+		a {
+			color: $blueText;
+			&:hover
+			{
+				text-decoration: none;
+				color: $linkColorHover;
+			}
+		}
 	}
 
 	p {
@@ -25,11 +47,12 @@
 	}
 
 	small {
-		margin-bottom:  10px;
+		font-size: 100%;
 	}
 
 	.contentEventList
 	{
+		margin-top: 10px;
 		img {
 			width:40%;
 			margin: 0px 10px 10px 0;
@@ -204,6 +227,7 @@ ul.inline-tags
 {
 	@include clearfix();
 	padding-top: 0.5em;
+	margin: 5px 0 0 0;
 
 	li {
 		float: left;
@@ -251,4 +275,7 @@ ul.users {
 	}
 }
 
-[ng\:cloak], [ng-cloak], .ng-cloak { display: none; }
+//[ng\:cloak], [ng-cloak],
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}

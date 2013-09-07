@@ -6,7 +6,7 @@
 function BannerEditController($scope, $http, $routeParams, $rootScope, $location)
 {
 	console.log('BannerEditController');
-	
+
 	$scope.showError = false;
     $scope.textError = "";
     $scope.is_backend_ready = false;
@@ -45,7 +45,7 @@ function BannerEditController($scope, $http, $routeParams, $rootScope, $location
         console.log('Scope no recargado. getBanner');
         getBanner($routeParams.id);
     }
-    		
+
 
 
    function getBanner(idBanner)
@@ -55,7 +55,7 @@ function BannerEditController($scope, $http, $routeParams, $rootScope, $location
 
         if ($scope.indexBanner != -1)
         {
-            $scope.banner = $scope.bannerList[$scope.indexBanner];           
+            $scope.banner = $scope.bannerList[$scope.indexBanner];
         }
         else {
             $scope.showError = true;
@@ -63,16 +63,16 @@ function BannerEditController($scope, $http, $routeParams, $rootScope, $location
         }
     }
 
-   $scope.updateBanner = function() 
+   $scope.updateBanner = function()
     {
 
     	console.log('Editando Banner con id:'+$scope.banner.id)
-    	
+
     	/* Balance de carga AppEngine - Usando otro servidor.*/
 		$http.put('https://sopraux-bbva.appspot.com/_ah/api/banner/v1/banner/', $scope.banner).success(function()
         {
-            console.log('Guardando');      
-            $location.path("/");
+            console.log('Guardando');
+            $location.path("/banner-list");
 
         }).error(function(data, status)
         {
@@ -80,8 +80,8 @@ function BannerEditController($scope, $http, $routeParams, $rootScope, $location
               $scope.showError = true;
         });
     }
-    
-   
+
+
 /*
     $scope.openModalUpdate = function()
     {

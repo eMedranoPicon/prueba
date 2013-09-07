@@ -84,24 +84,66 @@ angular.module('mesEnLiteral', []).filter('mesEnLiteral', function()
 });
 
 angular.module('lugares', []).filter('acronimoLugar', function()
-		{
-		  	return function(input)
-		  			{
-		   				switch(input)
-						{
-							case 'Restaurante':
-							  return 're';
-							  break;
-							case 'Centro Convenciones':
-							  return 'cc';
-							  break;
-							case 'Gimnasio':
-							  return 'gm';
-							  break;
-							default:
-							   return 'other';
-						}
-					};
-		});
+	{
+	  	return function(input)
+	  			{
+	   				switch(input)
+					{
+						case 'Restaurante':
+						  return 're';
+						  break;
+						case 'Centro Convenciones':
+						  return 'cc';
+						  break;
+						case 'Gimnasio':
+						  return 'gm';
+						  break;
+						default:
+						   return 'other';
+					}
+				};
+	});
 
+angular.module('titlePage', []).filter('titlePage', function()
+{
+    return function(input)
+    {
+      if ((input==undefined) || (input==""))
+      {
+        return '';
+      }
+      else
+      {
+        console.log('titlePage:'+input);
+        if (input.indexOf('banner-list') != -1 )
+        {
+          return 'Listado de sliders';
+        }
+        if (input.indexOf('banner-edit') != -1 )
+        {
+          return 'Editar slider';
+        }
+        if (input.indexOf('banner-new') != -1 )
+        {
+          return 'Dar de alta un nuevo slider';
+        }
+        if (input.indexOf('banner-app.jsp') != -1 )
+        {
+          return 'Listado de sliders';
+        }
+        if (input.indexOf('events-list') != -1 )
+        {
+          return 'Listado de eventos';
+        }
+        if (input.indexOf('events.jsp') != -1 )
+        {
+          return 'Listado de eventos';
+        }
+        if (input.indexOf('events2') != -1 )
+        {
+          return 'Listado de eventos';
+        }
+      }
+    };
+});
 

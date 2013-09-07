@@ -16,12 +16,23 @@
 			<div class="nav-collapse collapse">
 				<!-- .nav, .navbar-search, .navbar-form, etc -->
 				<ul class="nav" ng-controller="NavController">
-					<li class="divider-vertical"
-						ng-class="{ active: isActive('/index.jsp')}"><a
-						href="/index.jsp">Home</a></li>
-					<li class="divider-vertical"
-						ng-class="{ active: isActive('/events.jsp')}"><a
-						href="/events.jsp">Eventos</a></li>
+					<li class="divider-vertical" ng-class="{ active: isActive('/index.jsp')}"><a href="/index.jsp#/">Home</a></li>
+					<li class="divider-vertical" ng-class="{ active: isActive('/events.jsp')}"><a href="/events.jsp#/events-list">Eventos</a></li>
+
+					<li ng-class="{ active: isActive('/events.jsp')}" class="divider-vertical dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown2">Eventos <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/events.jsp#/events-list">Ver <strong>todos</strong> los eventos</a></li>
+							<li><a href="/events.jsp#/events-prox">Ver eventos <strong>próximos</strong></a></li>
+							<li><a href="/events.jsp#/events-past">Ver eventos <strong>pasados</strong></a></li>
+							<li class="divider"></li>
+							<li><a href="/events.jsp#/events-map">Localizar eventos en Google <strong>Maps</strong></a></li>
+							<li class="divider"></li>
+							<li><a href="/backend/events/events-map.jsp">Localizar eventos en Google <strong>Maps</strong></a></li>
+							<li><a href="/backend/events/events-calendar.jsp">Localizar	eventos en Google <strong>Calendar</strong></a></li>
+						</ul>
+					</li>
+
 					<li class="divider-vertical"
 						ng-class="{ active: isActive('/places.jsp')}"><a
 						href="/places.jsp">Lugar&eacute;s de inter&eacute;s</a></li>
