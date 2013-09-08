@@ -10,12 +10,21 @@ function appFrontController($scope, $http, $routeParams, $location)
   $scope.showEditLayout = false;
   $scope.eventosTodos = "";
 
-  $scope.filterCriteria = {};
-
+   $scope.filterCriteria = {};
+  $scope.filterCriteria2 = true;
   $scope.orderField = "dateStartStamp";
   $scope.orderReverse = "true";
 
   $scope.locationPath = $location.path();
+  $scope.titlePageText = $scope.locationPath;
+
+
+  $scope.changeTitle = function()
+  {
+    $scope.titlePageText = "Listado de todos los eventos"
+    console.log($scope.titlePageText)
+  };
+
 
   $http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
   {

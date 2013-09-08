@@ -117,7 +117,7 @@ angular.module('titlePage', []).filter('titlePage', function()
       }
       else
       {
-        console.log('titlePage:'+input);
+       console.log('titlePage:'+input);
         if (input.indexOf('banner-list') != -1 )
         {
           return 'Listado de sliders';
@@ -146,6 +146,15 @@ angular.module('titlePage', []).filter('titlePage', function()
         {
           return 'Listado de eventos';
         }
+        if (input.indexOf('events-past') != -1 )
+        {
+          return 'Listado de eventos ';
+        }
+        if (input.indexOf('events-prox') != -1 )
+        {
+          return 'Listado de eventos ';
+        }
+        else{ return input;}
       }
     };
 });

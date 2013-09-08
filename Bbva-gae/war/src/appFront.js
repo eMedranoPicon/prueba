@@ -19,6 +19,14 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 	.when('/events-list', {
 		templateUrl: '/src/views/events/front/events-list.html'
 	})
+	.when('/events-past', {
+		templateUrl: '/src/views/events/front/events-list-past.html',
+		controller: appFrontController
+	})
+	.when('/events-prox', {
+		templateUrl: '/src/views/events/front/events-list-prox.html',
+		controller: appFrontController
+	})
 	.when('/events-map', {
 		templateUrl: '/src/views/events/front/events-map.html',
 		controller: EventsMapListController

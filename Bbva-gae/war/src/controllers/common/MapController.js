@@ -17,7 +17,7 @@ function MapController($scope,$rootScope,sharedService)
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    console.log('$scope.mapOptions : '+ $scope.mapOptions);
+    //console.log('$scope.mapOptions : '+ $scope.mapOptions);
 
 
     //Markers should be added after map is loaded
@@ -40,7 +40,7 @@ function MapController($scope,$rootScope,sharedService)
     function upDateMap(latLon)
     {
         //var llUpdate = new google.maps.LatLng(lat,lon);
-        console.log('upDateMap '+ latLon);
+        //console.log('upDateMap '+ latLon);
 
         $scope.myMap.setCenter(latLon);
         removeAllMarkers();
@@ -69,7 +69,7 @@ function MapController($scope,$rootScope,sharedService)
     function calcLatLon(calle,cp,ciudad,pais)
     {
       var address = calle + "," +cp+","+ciudad+","+pais;
-      console.log('address:'+address);
+      //console.log('address:'+address);
       geocoder = new google.maps.Geocoder();
 
       geocoder.geocode
@@ -81,9 +81,9 @@ function MapController($scope,$rootScope,sharedService)
           {
               if (status == google.maps.GeocoderStatus.OK)
               {
-                  console.log('sharedService.latitud: ' + sharedService.latitud);
-                  console.log('sharedService.longitud: ' + sharedService.longitud);
-                  console.log('calcLatLon array : ' + results[0].geometry.location + "lat(): "+results[0].geometry.location.lat()+ " lng(): "+results[0].geometry.location.lng());
+                  //console.log('sharedService.latitud: ' + sharedService.latitud);
+                  //console.log('sharedService.longitud: ' + sharedService.longitud);
+                  //console.log('calcLatLon array : ' + results[0].geometry.location + "lat(): "+results[0].geometry.location.lat()+ " lng(): "+results[0].geometry.location.lng());
                   sharedService.latitud = results[0].geometry.location.lat();
                   sharedService.longitud = results[0].geometry.location.lng();
                   $scope.latitud = results[0].geometry.location.lat();
@@ -109,7 +109,7 @@ function MapController($scope,$rootScope,sharedService)
         $scope.paisBdc = sharedService.paisBdc;
 
         //upDateMap($scope.latitud,$scope.longitud);
-        console.log('LANZADO EVENTO DESDE EL CLICK');
+        //console.log('LANZADO EVENTO DESDE EL CLICK');
         calcLatLon($scope.calleBdc,$scope.cpBdc,$scope.ciudadBdc,$scope.paisBdc);
         //console.log('sharedService en EventEditMapController datos: '+ $scope.latitud + ' ' + $scope.longitud + ' calle: ' + $scope.calleBdc+ ' cpBdc: ' + $scope.cpBdc+ ' ciudadBdc: ' + $scope.ciudadBdc+ ' paisBdc: ' + $scope.paisBdc);
     });
@@ -117,7 +117,7 @@ function MapController($scope,$rootScope,sharedService)
 
     $scope.$watch('latitud', function()
     {
-        console.log('watch latitud: en EvenEditController: '+ sharedService.latitud + ' ' + sharedService.longitud + ' calle: ' + sharedService.calleBdc+ ' cpBdc: ' + sharedService.cpBdc+ ' ciudadBdc: ' + sharedService.ciudadBdc+ ' paisBdc: ' + sharedService.paisBdc);
+        //console.log('watch latitud: en EvenEditController: '+ sharedService.latitud + ' ' + sharedService.longitud + ' calle: ' + sharedService.calleBdc+ ' cpBdc: ' + sharedService.cpBdc+ ' ciudadBdc: ' + sharedService.ciudadBdc+ ' paisBdc: ' + sharedService.paisBdc);
         //upDateMap(sharedService.latitud,sharedService.longitud);
         calcLatLon(sharedService.calleBdc,sharedService.cpBdc,sharedService.ciudadBdc,sharedService.paisBdc);
     });
