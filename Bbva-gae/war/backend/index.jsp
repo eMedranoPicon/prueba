@@ -44,10 +44,10 @@
             <div class="container-data pull-right">
               <!--<p> Desde aquí podrás gestionar tus eventos:</p>-->
               <ul class="decorated-list">
-                <li><a href="/backend/event-new.jsp">Dar de <strong>alta</strong> un evento</a></li>
-                <li><a href="/backend/events-app.jsp#/events-table-list"><strong>Listar/Editar/Borrar</strong> eventos</a></li>
-                <li><a href="/backend/events-map.jsp">Localizar eventos en Google <strong>Maps</strong></a></li>
-                <li><a href="/backend/events-calendar.jsp">Localizar eventos en Google <strong>Calendar</strong></a></li>
+                <li><a href="/backend/events/event-new.jsp">Dar de <strong>alta</strong> un evento</a></li>
+                <li><a href="/backend/events/events-app.jsp#/events-table-list"><strong>Listar/Editar/Borrar</strong> eventos</a></li>
+                <li><a href="/backend/events/events-map.jsp">Localizar eventos en Google <strong>Maps</strong></a></li>
+                <li><a href="/backend/events/events-calendar.jsp">Localizar eventos en Google <strong>Calendar</strong></a></li>
               </ul>
             </div>
           </div>
@@ -83,9 +83,8 @@
             <div class="container-data pull-right">
               <!--<p> Desde aquí podrás gestionar tus videos:</p>-->
               <ul class="decorated-list">
-                <li><a href="/videos/video.jsp">Dar de <strong>alta</strong> un video</a></li>
-                <li><a href="#"><strong>Listar/Borrar</strong> videos</a></li>
-
+               <li><a href="/backend/video/videos-new.jsp">Dar de <strong>alta</strong> un lugar de V&iacute;deos</a></li>
+			   <li><a href="/backend/video/videos.jsp"><strong>Listar/Borrar</strong> v&iacute;deos</a></li>
               </ul>
             </div>
           </div>

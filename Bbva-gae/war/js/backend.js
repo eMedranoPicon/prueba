@@ -35,7 +35,7 @@ $(document).ready(function()
 
 			submitHandler: function(form) {
 		    	//do ajax call
-		     	jEvenBuilder();
+				insertEvent();
 		   }
 	  });
 

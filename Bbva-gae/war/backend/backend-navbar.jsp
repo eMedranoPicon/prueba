@@ -45,10 +45,9 @@
 						class="dropdown-toggle" data-toggle="dropdown">V&iacute;deos <b
 							class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Dar de <strong>alta</strong> un lugar de
-									inter&eacute;s
+							<li><a href="/backend/video/videos-new.jsp"><strong>Subir</strong> un v&iacute;deo
 							</a></li>
-							<li><a href="#"><strong>Listar/Borrar</strong>
+							<li><a href="/backend/video/videos.jsp"><strong>Listar/Borrar</strong>
 									v&iacute;deos</a></li>
 						</ul></li>
 					<!-- Slider -->

@@ -84,12 +84,15 @@ console.log('$routeParams.id: '+$routeParams.id)
               {
                   $scope.event.address[5] = results[0].geometry.location.lat();
                   $scope.event.address[6] = results[0].geometry.location.lng();
-                  upDateEvent();
+                  prepCalendar(); 
+                  //upDateEvent();
               }
               else
               {
                 console.log("Geocode was not successful for the following reason: " + status);
-                upDateEvent();
+                
+                prepCalendar();                
+                //upDateEvent();
               }
           }
         );
@@ -152,6 +155,51 @@ console.log('$routeParams.id: '+$routeParams.id)
         $scope.$apply();
         $location.path('/');
     };
+    
+    //Actualiza el envento enviado en el formulario
+    function prepCalendar()
+    {
+        $scope.eventCalendar = {};
+        $scope.eventCalendar.id = $scope.event.idCalendar;
+        $scope.eventCalendar.summary = $scope.event.title;
+        $scope.eventCalendar.location = $scope.event.address[4];
+        $scope.eventCalendar.start = {};
+        $scope.eventCalendar.start.dateTime = ISODateString($scope.event.dateStart);
+        $scope.eventCalendar.end = {};
+        $scope.eventCalendar.end.dateTime = ISODateString($scope.event.dateEnd);
+        
+        return saveOnCalendar();	  
+    }
+  //Actualiza el envento enviado en el formulario
+    function saveOnCalendar()
+    {
+        console.log('Eliminando Calendario y Creando uno nuevo');
+        if (typeof $scope.eventCalendar.id === 'undefined')  {
+        	var request = gapi.client.calendar.events.insert({    	
+    		    'calendarId' : '72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com',
+    		    'resource' : $scope.eventCalendar
+    		  });
+    		  request.execute(function(resp,status) {
+    			  console.log(status);
+    			  $scope.event.idCalendar=resp.id;
+    			  $scope.apply();
+    			  upDateEvent();
+    		  });	
+        } else {
+        	var request = gapi.client.calendar.events.update({
+    		    'eventId': $scope.eventCalendar.id,
+    		    'calendarId' : '72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com',
+    		    'resource' : $scope.eventCalendar
+    		  });
+    		  request.execute(function(resp,status) {
+    			  upDateEvent();
+    			  console.log(status);
+    		  });
+        } 
+        
+		  
+     
+    }
 
 
 }

@@ -32,39 +32,35 @@
 <body>
 
 	<div class="container">
+	     
 
 		<!-- include backend-header.jsp -->
-		<jsp:include page="/content/common/backend-header.jsp" />
+		<jsp:include page="/backend/backend-header.jsp" />
 		<!-- EO include backend-header.jsp -->
 
 		<!-- include navbar.jsp -->
-		<jsp:include page="/content/common/backend-navbar.jsp" />
+		<jsp:include page="/backend/backend-navbar.jsp" />
 		<!-- EO include navbar.jsp -->
-
 		<!-- include events-home.html-->
 		<section class="section-page">
 			<header class="header-section">
 				<h1>Listado Videos</h1>
 			</header>
 			<div class="container-fluid videoLayout">
-			    <table id="contentList" class="table table-striped">
+			    <table id="contentList" class="table table-striped">			    
                 <tr>
                     <th>Titulo Video</th>
                     <th>Descripcion</th>
                     <th>URL</th>
+                    <th>Acciones</th>
                 </tr>
+                <tr class="hide_bar progress progress-striped active">
+								<td colspan="4" class="bar barWidth"></td>
+				
+				</tr>	
 			    </table>
-				<!--Add a file picker for the user to start the upload process -->
-				<div style="display: none">
-					<input type="file" id="filePicker" style="display: none" /> <input
-						type="button" id="authorizeButton" style="display: none"
-						value="Authorize" />
-				</div>				
-				<input class="btn" type="button" id="listFiles"
-					onclick="retrieveAllFiles()" value="ListFiles" />
 				<div id="ListadoVideos"></div>
 			</div>
-			
 		</section>
 	</div>
 
@@ -77,7 +73,7 @@
 	<script src="/js/authDrive.js"></script>
 	<script src="/js/videos.js"></script>
 	<script type="text/javascript"
-		src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+		src="https://apis.google.com/js/client.js?onload=handleClientLoadList"></script>
 
 </body>
 </html>

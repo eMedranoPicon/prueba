@@ -17,7 +17,7 @@
 
 <html lang="es" ng-app="appBack">
 <head>
-<title>backend - places:: BBVA in cloud</title>
+<title>backend - places :: BBVA in cloud</title>
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 <!-- styles -->
@@ -34,11 +34,11 @@
 	<div class="container">
 
 		<!-- include backend-header.jsp -->
-		<jsp:include page="/content/common/backend-header.jsp" />
+		<jsp:include page="/backend/backend-header.jsp" />
 		<!-- EO include backend-header.jsp -->
 
 		<!-- include navbar.jsp -->
-		<jsp:include page="/content/common/backend-navbar.jsp" />
+		<jsp:include page="/backend/backend-navbar.jsp" />
 		<!-- EO include navbar.jsp -->
 		<%
 		    if (user == null) {
@@ -57,16 +57,14 @@
 				<div class="span12">
 					<form class="form-horizontal">
 						<div class="control-group">
-							<label class="control-label" for="tituloVideo">Titulo
-								Video *</label>
+							<label class="control-label" for="tituloVideo">Titulo Video *</label>
 							<div class="controls">
-								<input type="text" required id="titleVideo"
-									placeholder="Titulo Video" name="titleVideo" required
+								<input type="text" required id="titleVideo"	placeholder="Titulo Video" name="titleVideo" required
 									data-errormessage-value-missing="Por favor, rellene el campo obligatorio" />
 							</div>
 						</div>
 						<fieldset>
-							<legend>Descripci&oacuten Video</legend>
+							<legend>Descripci&oacute;n Video</legend>
 							<div class="control-group">
 								<label class="control-label" for="description">Descripcion</label>
 								<div class="controls">
@@ -78,25 +76,17 @@
 
 						<!--Add a file picker for the user to start the upload process -->
 						<div class="control-group">
-							<label class="control-label" for="tituloVideo">Subir
-								Video *</label>
+							<label class="control-label" for="tituloVideo">Subir Video *</label>
 							<div class="controls">
 								<input class="" type="file" id="filePicker"
 									style="display: none" /> <input type="button"
 									id="authorizeButton" style="display: none" value="Authorize" />
 							</div>
 							<div class="hide_bar progress progress-striped active">
-								<div class="bar" style="width: 100%;"></div>
+								<div class="bar barWidth"></div>
 							</div>
-							<span class="exito successOff alert alert-success">Subido
-								Correctamente</span>
-						</div>
-						<!-- div class="control-group">
-						<div class="controls">
-							<button id="editVideoForm"
-								class="btn btn-primary ">Subir Video</button>
-						</div>
-					</div-->					 
+							<span class="exito successOff alert alert-success">Subido Correctamente</span>
+						</div>				 
 					</form>
 				</div>
 				<div class="span12">

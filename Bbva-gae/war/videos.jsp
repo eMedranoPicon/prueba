@@ -40,11 +40,33 @@
 		<!-- include navbar.jsp -->
 		<jsp:include page="/content/common/navbar.jsp" />
 		<!-- EO include navbar.jsp -->
-		<!-- push footer to the bottom -->
-		<div class="push"></div>
+		
+		<section class="section-page">
+			<header class="header-section">
+				<h1>Listado de videos</h1>
+			</header>
+			<div class="container-fluid videoLayout">
+			<div class="hide_bar progress progress-striped active">
+								<div class="bar barWidth"></div>
+							</div>			  
+				<div id="ListadoVideos"></div>
+			</div>
+		</section>
 		<!-- include footer.jsp -->
 		<jsp:include page="/content/common/footer.html" />
 		<!-- EO include footer.jsp -->
 	</div>
+	<jsp:include page="/libraries-angular.jsp" />
+	<script
+		src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
+	<!-- Bloque de Librerias - libreriasjs -->
+	<jsp:include page="/libraries-js.jsp" />
+	<script src="/src/appBack.js"></script>
+	<script src="/js/authDrive.js"></script>
+	<script src="/js/videos.js"></script>
+	<script type="text/javascript"
+		src="https://apis.google.com/js/client.js?onload=handleClientLoadFront"></script>
+
+</body>
 </body>
 </html>

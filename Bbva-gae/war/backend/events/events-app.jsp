@@ -68,14 +68,15 @@
 	<jsp:include page="/libraries-angular-events.jsp" />
 	<!-- Bloque de Librerias - libreriasjs -->
 	<jsp:include page="/libraries-js.jsp" />
-	<script src="https://apis.google.com/js/client.js?onload=loadGapi"></script>
+	<script src="/js/calendar.js"></script>
+	<script src="/js/auth.js"></script>
+	<script src="https://apis.google.com/js/client.js?onload=auth"></script>
 	<!--
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 	-->
 	<!--
 	<script src="/js/maps.js"></script>
 	-->
-	<script src="/js/calendar.js"></script>
-	<script src="/js/auth.js"></script>
+	
 </body>
 </html>

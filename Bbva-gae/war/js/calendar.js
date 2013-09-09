@@ -29,8 +29,6 @@ function createEventCalendar() {
 		"end" : {
 			"dateTime" : dateEndFormatted
 		}
-	// "id" : idCalendar, // Conexion
-	// "htmlLink" : urlEvent
 	};
 
 	var request = gapi.client.calendar.events.insert({
@@ -38,8 +36,11 @@ function createEventCalendar() {
 		'resource' : jEventCalendar
 	});
 	request.execute(function(resp, status) {
-		console.log(resp);
+		console.log(resp.id);
 		console.log('Respuesta guardado :' + status);
+		//Creado en Calendar, conseguido id.
+		jEventBuilder(resp.id);		
+		
 	});
 
 }

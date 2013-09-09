@@ -33,7 +33,7 @@
 
 	<jsp:include page="/backend/backend-navbar.jsp" />
 
-	<section class="section-page" ng-controller="appController" ng-cloak >
+	<section class="section-page">
 		<header class="header-section">
 			<h1>Dar de alta un nuevo evento</h1>
 		</header>
@@ -180,14 +180,13 @@
 <jsp:include page="/libraries-angular.jsp" />
 <script src="/src/appBack.js"></script>
 <!-- EO Bloque de Librerias -  Angularjs - genericas -->
-<script src="https://apis.google.com/js/client.js?onload=auth"></script>
 <script	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 <script src="/js/maps.js"></script>
 <script src="/js/calendar.js"></script>
 <script src="/js/backend.js"></script>
 <script src="/js/auth.js"></script>
 <script src="/js/application.js"></script>
-
+<script src="https://apis.google.com/js/client.js?onload=auth"></script>
 <script type="text/javascript">
 	$(function() {
 		console.log('carga datepicker');
@@ -207,8 +206,6 @@
 				$('#dateEnd').val($('#dateStart').val());
 			}
 		});
-		//Limpiando Mapa
-		//newEventMap();
 	});
 </script>
 

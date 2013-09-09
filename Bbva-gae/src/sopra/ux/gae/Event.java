@@ -29,6 +29,7 @@ public class Event {
 	private String dateStartStamp;	
 	private String dateEnd;
 	private String dateEndStamp;
+	private String idCalendar;
 	private String audience; //separated by commas
 	private List<String> audienceArray;
 	private String tags; //separated by commas
@@ -292,6 +293,20 @@ public class Event {
 			this.audienceArray.add("No hay audiencia");
 		} 		
 	}
+
+
+
+    public String getIdCalendar() {
+        return idCalendar;
+    }
+
+
+
+    public void setIdCalendar(String idCalendar) {
+        this.idCalendar = idCalendar;
+    }
+	
+	
 	
 	
 	

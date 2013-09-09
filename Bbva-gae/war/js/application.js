@@ -40,7 +40,7 @@ function noenter(e) {
 }
 
 /* Funcion de prueba para crear eventos */
-function jEvenBuilder() {
+function jEventBuilder(idCalendar) {
 	// AddressDetails - Point location a retrieve lat and long.
 	previewMap();
 	// timeout to wait for response
@@ -122,7 +122,10 @@ function jEvenBuilder() {
 		}, {
 			"name" : "urlEvent",
 			"value" : urlEvent
-		} ];
+		},{
+			"name" : "idCalendar",
+			"value" : idCalendar
+		}];
 
 		var options = {};
 		for ( var i = 0; i < jEvent.length; i++) {
@@ -151,13 +154,7 @@ function saveEvent(jEvent) {
 		data : jEvent,
 		type : "POST",
 		success : function(data) {
-
 			$('#confirmaEvento').modal('show');
-			// creacion event en calendar en background.
-			console.log("success -> creating calendar in the background");
-			localStorage.setItem('calendarId', data.id);
-			gapi.client.load('calendar', 'v3', createEventCalendar);
-
 		},
 		error : function(xhr, ajaxOptions, thrownError) {
 			console.error("Event list error: " + xhr.status);
@@ -168,10 +165,10 @@ function saveEvent(jEvent) {
 /*
  * Comprobacio si es guardado o update
  */
-function saveOrUpdate() {
+function insertEvent() {
 
 	if (document.getElementById("idEvent").value == "") {
-		jEvenBuilder();
+		createEventCalendar();
 	} else {
 		console.log('Requiere Objec Json and Id');
 	}

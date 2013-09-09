@@ -21,7 +21,7 @@ function uploadFile(evt) {
 function insertFile(fileData, callback) {
 	$('.progress').removeClass('hide_bar').addClass('show_bar');
 	$('.exito').removeClass('successOn').addClass('successOff');
-	var titleVideo = document.getElementById("titleVideo").value;
+	var titleVideo = document.getElementById("titleVideo").value;	
 	var description = document.getElementById("description").value;
 	// var fileData = evt.target.files[0];
 	const
@@ -35,6 +35,12 @@ function insertFile(fileData, callback) {
 	reader.readAsBinaryString(fileData);
 	reader.onload = function(e) {
 		var contentType = fileData.type || 'application/octet-stream';
+		if (!(typeof titleVideo === 'undefined')){
+			titleVideo = fileData.name;
+		}
+		if (!(typeof description === 'undefined')){
+			description = "No description";
+		}
 		var metadata = {
 			'title' : titleVideo,
 			'description' : description,
@@ -67,13 +73,12 @@ function insertFile(fileData, callback) {
 			callback = function(file) {
 				$('.progress').removeClass('show_bar').addClass('hide_bar');
 				$('.exito').removeClass('successOff').addClass('successOn');
-				console.log(file);
 				/* Que sea tipo video y que no este borrado */
 				if (!(typeof file.embedLink === 'undefined')
 						&& (file.explicitlyTrashed != true)) {
 					var linkAll = file.webContentLink;
 					var link = linkAll.substr(0, linkAll.indexOf('&'));
-					var html = '<video width="480" height="320" controls autoplay>'
+					var html = '<video controls autoplay>'
 							+ '<source src='
 							+ link
 							+ ' type="video/mp4">'
@@ -93,27 +98,22 @@ function insertFile(fileData, callback) {
 		}
 	}
 }
-/*
- * $('#editVideoForm').click(function() { insertFile(); });
- */
-
 /**
- * Show Videos .
+ * Show Videos from the folder with id:0B7sf9nIuNLe-S0VBdXlrNVl3eGs
  * 
  */
 var retrieveAllFiles = function() {
+	$('.progress').removeClass('hide_bar').addClass('show_bar');
 	var retrievePageOfFiles = function(request, result) {
 		request
 				.execute(function(resp, status) {
-					console.log(status);
-					console.log("----");
-					console.log(resp);
+					$('.progress').removeClass('show_bar').addClass('hide_bar');
+					document.getElementById('contentList').innerHTML = "";
 					var htmlVideos = '<ul>';
 					for ( var key in resp.items) {
 						/* Que sea tipo video y que no este borrado */
 						if (!(typeof resp.items[key].embedLink === 'undefined')
 								&& (resp.items[key].explicitlyTrashed != true)) {
-							console.log(resp.items[key]);
 							var linkAll = resp.items[key].webContentLink;
 							var link = linkAll.substr(0, linkAll.indexOf('&'));
 							
@@ -121,10 +121,12 @@ var retrieveAllFiles = function() {
 									+ resp.items[key].title
 									+ '</td><td>'
 									+ resp.items[key].description
-									+ '</td><td>'
-									+ link+'</td></tr>';
+									+ '</td><td><a href=\"'
+									+link+'\">'
+									+link+'</a></td>'
+									+'<td><a onClick="removeVideo(\''+resp.items[key].id+'\')" class="btn btn-warning btn-small" ><i class="icon-trash icon-white"></i>Borrar</a></td></tr>';
 							
-							htmlVideos += '<li><video width="480" height="320" controls>'
+							htmlVideos += '<li><video controls>'
 									+ '<source src='
 									+ link
 									+ ' type="video/mp4">'
@@ -135,9 +137,59 @@ var retrieveAllFiles = function() {
 							$('#contentList').append(html);
 						}
 					}
+					htmlVideos += '</ul>';					
+					document.getElementById('ListadoVideos').innerHTML = htmlVideos;
+				});
+	}
+	var initialRequest = gapi.client.drive.files.list({
+		'maxResults' : 10,
+		'q' : '"0B7sf9nIuNLe-S0VBdXlrNVl3eGs" in parents'
+	});
+	console.log("initialRequest = " + initialRequest);
+	retrievePageOfFiles(initialRequest, []);
+}
 
-					htmlVideos += '</ul>';
-					
+
+function removeVideo(idVideo){
+	console.log('entrando borrar');
+	  var request = gapi.client.drive.files.trash({
+		    'fileId': idVideo
+		  });
+		  request.execute(function(resp,status) {
+			  console.log(status);
+			  alert('Eliminado Correctamente');
+			  retrieveAllFiles();
+		  });	
+	
+}
+/**
+ * Show Videos from the folder with id:0B7sf9nIuNLe-S0VBdXlrNVl3eGs
+ * FrontEnd View
+ */
+var retrieveAllFilesFront = function() {
+	$('.progress').removeClass('hide_bar').addClass('show_bar');
+	var retrievePageOfFiles = function(request, result) {
+		request
+				.execute(function(resp, status) {
+					$('.progress').removeClass('show_bar').addClass('hide_bar');
+					var htmlVideos = '<ul>';
+					for ( var key in resp.items) {
+						/* Que sea tipo video y que no este borrado */
+						if (!(typeof resp.items[key].embedLink === 'undefined')
+								&& (resp.items[key].explicitlyTrashed != true)) {
+							var linkAll = resp.items[key].webContentLink;
+							var link = linkAll.substr(0, linkAll.indexOf('&'));	
+							htmlVideos += '<li><video controls>'
+									+ '<source src='
+									+ link
+									+ ' type="video/mp4">'
+									+ '<source src='
+									+ link
+									+ ' type="video/ogg">'
+									+ 'Your browser does not support the video tag.</video></li>';
+						}
+					}
+					htmlVideos += '</ul>';					
 					document.getElementById('ListadoVideos').innerHTML = htmlVideos;
 				});
 	}
