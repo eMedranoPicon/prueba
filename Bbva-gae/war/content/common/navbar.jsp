@@ -17,7 +17,8 @@
 				<!-- .nav, .navbar-search, .navbar-form, etc -->
 				<ul class="nav" ng-controller="NavController">
 					<li class="divider-vertical" ng-class="{ active: isActive('/index.jsp')}"><a href="/index.jsp#/">Home</a></li>
-					<li class="divider-vertical" ng-class="{ active: isActive('/events.jsp')}"><a href="/events.jsp#/events-list">Eventos</a></li>
+					<!--
+					<li class="divider-vertical" ng-class="{ active: isActive('/events.jsp')}"><a href="/events.jsp#/events-list">Eventos</a></li>-->
 
 					<li ng-class="{ active: isActive('/events.jsp')}" class="divider-vertical dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown2">Eventos <b class="caret"></b></a>

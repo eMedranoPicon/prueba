@@ -47,7 +47,8 @@ function appFrontController($scope, $http, $routeParams, $location)
   var indexedEvents = [];
 
 
-  $scope.eventsToFilter = function() {
+  $scope.eventsToFilter = function()
+  {
       indexedEvents = [];
       return $scope.events;
   };
