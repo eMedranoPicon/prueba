@@ -199,8 +199,8 @@ console.log('$routeParams.id: '+$routeParams.id)
     		  request.execute(function(resp,status) {    			  
     			  console.log(status);
     			  /*Editado en Calendar.*/
-    			  //$scope.event.idCalSequence=resp.sequence;
-    			  $scope.apply();
+    			  $scope.event.idCalSequence=resp.sequence;
+    			  //$scope.apply();
     			  upDateEvent();
     		  });
         } 
