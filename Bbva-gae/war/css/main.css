@@ -17461,3 +17461,39 @@ a.place-large {
   margin-bottom: 15px;
   line-height: 30px;
 }
+
+/* line 2, ../sass/partials/_videos.scss */
+.videoLayout .progress {
+  margin-top: 1%;
+}
+/* line 5, ../sass/partials/_videos.scss */
+.videoLayout .hide_bar {
+  display: none;
+}
+/* line 8, ../sass/partials/_videos.scss */
+.videoLayout .show_bar {
+  display: block;
+}
+/* line 12, ../sass/partials/_videos.scss */
+.videoLayout .successOff {
+  display: none;
+}
+/* line 15, ../sass/partials/_videos.scss */
+.videoLayout .successOn {
+  display: block;
+  width: 91%;
+  margin-top: 1%;
+}
+/* line 21, ../sass/partials/_videos.scss */
+.videoLayout .well {
+  width: 77% !important;
+}
+/* line 25, ../sass/partials/_videos.scss */
+.videoLayout .verVideos {
+  width: 20%;
+}
+/* line 29, ../sass/partials/_videos.scss */
+.videoLayout .carousel .item {
+  height: 320px !important;
+  text-align: center !important;
+}
