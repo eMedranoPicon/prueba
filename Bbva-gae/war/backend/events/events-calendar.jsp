@@ -35,13 +35,9 @@
 
 	<div class="container">
 
-		<!-- include backend-header.jsp -->
-		<jsp:include page="/content/common/backend-header.jsp" />
-		<!-- EO include backend-header.jsp -->
-		<!-- include navbar.jsp -->
-		<jsp:include page="/content/common/backend-navbar.jsp" />
-		<!-- EO include navbar.jsp -->
+		<jsp:include page="/backend/backend-header.jsp" />
 
+		<jsp:include page="/backend/backend-navbar.jsp" />
 
 		<!-- include events-home.html -->
 		<section class="section-page">
@@ -65,7 +61,7 @@
 
 		</section>
 	</div>
-	
+
 <!-- Bloque de Librerias - libreriasjs -->
 <jsp:include page="/libraries-js.jsp" />
 <!-- Bloque de Librerias - Angularjs - genericas -->
@@ -73,9 +69,8 @@
 <!-- EO Bloque de Librerias -  Angularjs - genericas -->
 <script src="/src/appBack.js"></script>
 <script src="https://apis.google.com/js/client.js"></script>
-<script
-	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
-	<script src="/js/application.js"></script>
+<script	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+<script src="/js/application.js"></script>
 
 </body>
 </html>

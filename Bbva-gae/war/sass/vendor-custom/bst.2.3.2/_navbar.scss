@@ -23,11 +23,11 @@
 
 // Navbar search
 // -------------------------
-.navbar-search 
+.navbar-search
 {
   float: right;
   margin-top: 9px;
-  .search-query 
+  .search-query
   {
     margin-bottom: 0;
     padding: 8px 14px;
@@ -36,7 +36,19 @@
   }
 }
 
-.navbar .nav > li > a 
+.navbar .nav > li > a
 {
   font-size: $fontSizeLarge;
+}
+
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+}
+
+a.menu:after, .dropdown-toggle:after {
+    content: none;
+}
+
+.dropdown-menu {
+  margin: 0;
 }

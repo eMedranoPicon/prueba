@@ -7,15 +7,16 @@ function appControllerBanner($scope, $http, $routeParams,$location, $timeout)
 
   $scope.orderField = "namePlace";
   $scope.orderReverse = "true";
+  $scope.location = $location;
 
-  console.log('AngularJS - Banner');  
+  console.log('appControllerBanner');
  /* Balance de carga AppEngine - Usando otro servidor.*/
   $http.get('https://sopraux-bbva.appspot.com/_ah/api/banner/v1/banner/').success(function(data)
   {
       $scope.showError = false;
       $scope.textError = "";
-      $scope.is_backend_ready = true;      
-      $scope.bannerList = data.items; 
+      $scope.is_backend_ready = true;
+      $scope.bannerList = data.items;
     }).error(function(data, status)
     {
       $scope.textError = "Error al cargar los datos. Por favor, intentalo más tarde";

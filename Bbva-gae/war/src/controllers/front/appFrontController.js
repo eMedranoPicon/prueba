@@ -1,4 +1,4 @@
-function appFrontController($scope, $http, $routeParams)
+function appFrontController($scope, $http, $routeParams, $location)
 {
   console.log('appFrontController');
 
@@ -10,10 +10,21 @@ function appFrontController($scope, $http, $routeParams)
   $scope.showEditLayout = false;
   $scope.eventosTodos = "";
 
-  $scope.filterCriteria = {};
-
+   $scope.filterCriteria = {};
+  $scope.filterCriteria2 = true;
   $scope.orderField = "dateStartStamp";
   $scope.orderReverse = "true";
+
+  $scope.locationPath = $location.path();
+  $scope.titlePageText = $scope.locationPath;
+
+
+  $scope.changeTitle = function()
+  {
+    $scope.titlePageText = "Listado de todos los eventos"
+    console.log($scope.titlePageText)
+  };
+
 
   $http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
   {
@@ -72,5 +83,5 @@ function appFrontController($scope, $http, $routeParams)
      // console.log('eventsPerMonth event.datesArray[2]:'+event.datesArray[2])
       return event.datesArray[2] == mes;
     }
-  };  
+  };
 };

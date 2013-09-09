@@ -6,12 +6,15 @@ function appController($scope, $http, $routeParams, $timeout, $location)
   $scope.textTitle = "Listado de eventos";
   $scope.errorModal = false;
   $scope.showEditLayout = false;
+  $scope.imgLoaded = false;
   $scope.eventosTodos = "";
 
   $scope.filterCriteria = {};
 
   $scope.orderField = "dateStartStamp";
   $scope.orderReverse = "true";
+
+  $scope.location = $location;
 
   $scope.optsModal = {
     backdropFade: true,
@@ -27,6 +30,7 @@ function appController($scope, $http, $routeParams, $timeout, $location)
       $scope.showError = false;
       $scope.textError = "";
       $scope.is_backend_ready = true;
+      $scope.imgLoaded = true;
 
       $scope.events = data.items;
       $scope.eventosTodos = $scope.events.length;
@@ -55,7 +59,10 @@ function appController($scope, $http, $routeParams, $timeout, $location)
       $scope.errorModal = false;
       $scope.textStatusModal = "Evento " + idEvent + " eliminado correctamente.";
 
-      $timeout(function() { $scope.deleteEventModal = false; }, 2500);
+      $timeout(function() {
+        $scope.deleteEventModal = false;
+        $location.path("/");
+      }, 2500);
     }).
     error(function(data, status)
     {

@@ -1,4 +1,5 @@
-var appFront = angular.module("appFront", ['checkImg','lugares','acronimoPais','mesEnLiteral','ui.bootstrap','ui.map','ui.event']);
+
+var appFront = angular.module("appFront", ['checkImg','acronimoPais','mesEnLiteral','ui.bootstrap','ui.map','ui.event','titlePage']);
 
 //definimos las rutas de la 'app'
 appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider)
@@ -15,6 +16,24 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 		templateUrl: '/src/views/events/front/events-list2.html',
 		controller: appFrontController
 	})
+	.when('/events-list', {
+		templateUrl: '/src/views/events/front/events-list.html'
+	})
+	.when('/events-past', {
+		templateUrl: '/src/views/events/front/events-list-past.html',
+		controller: appFrontController
+	})
+	.when('/events-prox', {
+		templateUrl: '/src/views/events/front/events-list-prox.html',
+		controller: appFrontController
+	})
+	.when('/events-map', {
+		templateUrl: '/src/views/events/front/events-map.html',
+		controller: EventsMapListController
+	})
+	.when('/events.jsp', {
+		templateUrl: '/src/views/events/front/events-list.html'
+	})
 	.when('/place-detail/:id', {
 		templateUrl: '/src/views/places/place-detail.html',
 		controller: PlaceFrontController
@@ -24,14 +43,14 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 		controller: appControllerPlaces
 	})
 	//cualquier ruta no definida
-	.otherwise({
+	/*.otherwise({
 		templateUrl: '/src/views/events/front/events-list.html',
 		controller: appFrontController
-	});	
-	
+	});*/
+
 	EventDetailController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
 	PlaceFrontController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
-	MapController.$inject = ['$scope', '$rootScope', 'mySharedService'];	
+	MapController.$inject = ['$scope', '$rootScope', 'mySharedService'];
 }]);
 
 

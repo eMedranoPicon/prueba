@@ -20,9 +20,11 @@ function EventDetailController($scope, $http, $routeParams, $rootScope, $locatio
       dialogFade:true
     };
 
+    console.log('$routeParams.id: '+$routeParams.id)
+
     if (angular.isUndefined($scope.events))
     {
-      console.log('recargar el scope');
+      //console.log('recargar el scope');
 
       $http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
       {
@@ -41,7 +43,7 @@ function EventDetailController($scope, $http, $routeParams, $rootScope, $locatio
     }
     else
     {
-      console.log('llamada a getEvent');
+      //console.log('llamada a getEvent');
       getEvent($routeParams.id);
     }
 
@@ -82,13 +84,13 @@ function EventDetailController($scope, $http, $routeParams, $rootScope, $locatio
       $scope.ciudadBdc = sharedService.ciudadBdc;
       $scope.paisBdc = sharedService.paisBdc;
 
-      console.log('sharedService en EvenEditController datos: '+ $scope.latitud + ' ' + $scope.longitud + ' calle: ' + $scope.calleBdc+ ' cpBdc: ' + $scope.cpBdc+ ' ciudadBdc: ' + $scope.ciudadBdc+ ' paisBdc: ' + $scope.paisBdc);
+      //console.log('sharedService en EvenEditController datos: '+ $scope.latitud + ' ' + $scope.longitud + ' calle: ' + $scope.calleBdc+ ' cpBdc: ' + $scope.cpBdc+ ' ciudadBdc: ' + $scope.ciudadBdc+ ' paisBdc: ' + $scope.paisBdc);
     });
 
 
     $scope.openModalAddCalendar = function()
     {
-      console.log('openModalAddCalendar');
+      //console.log('openModalAddCalendar');
       $scope.addCalendarEventModal = true;
     };
 
@@ -96,7 +98,7 @@ function EventDetailController($scope, $http, $routeParams, $rootScope, $locatio
     $scope.closeModalAddCalendar = function()
     {
       $scope.addCalendarEventModal = false;
-      console.log('closeModalAddCalendar');
+      //console.log('closeModalAddCalendar');
     };
 
 

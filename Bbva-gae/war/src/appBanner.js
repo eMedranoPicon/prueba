@@ -1,4 +1,4 @@
-var appBanner = angular.module("appBanner", ['ui.bootstrap']);
+var appBanner = angular.module("appBanner", ['ui.bootstrap','titlePage']);
 
 
 //definimos las rutas de la 'appBanner'
@@ -15,25 +15,35 @@ appBanner.config(['$routeProvider', '$httpProvider', function ($routeProvider, $
 		templateUrl: '/src/views/banner/banner-insert-layout.html',
 		controller: BannerInsertController
 	}).
-	  //cualquier ruta no definida
-	  otherwise({
-		   templateUrl: '/src/views/banner/banner-list-table.html',
-		  controller: appControllerBanner
+	when('/banner-list/', {
+		templateUrl: '/src/views/banner/banner-list-table.html',
+		//controller: appControllerBanner
+	}).
+	//cualquier ruta no definida
+	otherwise({
+	   templateUrl: '/src/views/banner/banner-list-table.html',
+	   controller: appControllerBanner
+	});
 
-		});
+
+
+
 }]);
 
 
-function findIndexById(id,arrayList) {
+function findIndexById(id,arrayList)
+{
 	if (!id) return null;
 	var index = -1;
 
-	for(var i = 0; i < arrayList.length; i++) {
-	  var o = arrayList[i];
-	  if (id == o.id) {
-	    index = i;
-	    break;
-	  }
+	for(var i = 0; i < arrayList.length; i++)
+	{
+	  	var o = arrayList[i];
+	  	if (id == o.id)
+	  	{
+	    	index = i;
+	    	break;
+	  	}
 	}
 
 	return index;

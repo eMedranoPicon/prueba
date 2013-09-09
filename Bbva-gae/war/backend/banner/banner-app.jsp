@@ -14,62 +14,47 @@
 	}
 %>
 <!DOCTYPE html>
-
-<html lang="es" ng-app="appBanner">
+<html lang="es" ng-app="appBanner" ng-controller="appControllerBanner">
 <head>
-<title>backend - places:: BBVA in cloud</title>
-<meta charset="utf-8">
-<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-<!-- styles -->
-<link rel="stylesheet" type="text/css" href="/css/main.css" />
-
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="/js/lib/html5shiv.js"></script>
-    <![endif]-->
+	<title>backend - places:: BBVA in cloud</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<!-- styles -->
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	   <script src="/js/lib/html5shiv.js"></script>
+	<![endif]-->
 </head>
 <body>
 
-	<div class="container">
+<div class="container">
+	<jsp:include page="/backend/backend-header.jsp" />
+	<jsp:include page="/backend/backend-navbar.jsp" />
 
-		<!-- include backend-header.jsp -->
-		<jsp:include page="/content/common/backend-header.jsp" />
-		<!-- EO include backend-header.jsp -->
-
-		<!-- include navbar.jsp -->
-		<jsp:include page="/content/common/backend-navbar.jsp" />
-		<!-- EO include navbar.jsp -->
-
-		<!-- include events-home.html-->
-		<section class="section-page">
-
-			<header class="header-section">
-				<h1>{{textTitle}}</h1>
-			</header>
-
-			<div class="container-fluid">
-				<div class="row-fluid">
-
-					<div class="alert alert-error" ng-show="showError">
-						<p>{{textError}}</p>
-					</div>
-
-					<div ng-view></div>
-
+	<section class="section-page" ng-cloak>
+		<header class="header-section">
+			<h1>{{location.path() | titlePage}}</h1>
+		</header>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="alert alert-error" ng-show="showError">
+					<p>{{textError}}</p>
 				</div>
+				<div ng-view></div>
 			</div>
+		</div>
+	</section>
 
-		</section>
+	<jsp:include page="/content/common/footer.html" />
 
-	</div>
-	<jsp:include page="/libraries-angular.jsp" />
-	<script
-		src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
-	<jsp:include page="/libraries-angular-banner.jsp" />
+</div>
 
-	<!-- Bloque de Librerias - libreriasjs -->
-	<jsp:include page="/libraries-js.jsp" />
+<jsp:include page="/libraries-angular.jsp" />
+<script	src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
+<jsp:include page="/libraries-angular-banner.jsp" />
+<!-- Bloque de Librerias - libreriasjs -->
+<jsp:include page="/libraries-js.jsp" />
 
 </body>
-
 </html>

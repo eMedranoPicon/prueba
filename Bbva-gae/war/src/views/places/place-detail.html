@@ -3,15 +3,15 @@
     <div class="row-fluid">
     	<article class="event-detail" ng-show="showDetailLayout">
             <header class="place-header">
-            	<a href="" class="place-large place-{{place.typePlace | acronimoLugar}}"></a>  
-    			<h1>{{place.namePlace}}</h1>      			
+            	<a href="" class="place-large place-{{place.typePlace | acronimoLugar}}"></a>
+    			<h1>{{place.namePlace}}</h1>
     			<h3>{{place.typePlace}}</h3>
-    						
+
     		</header>
             <div class="event-content">
         		<div class="row-fluid">
         			<div class="span24">
-        				<p>{{place.description}}</p>                        
+        				<p>{{place.description}}</p>
         			</div>
         		</div>
         		<div class="row-fluid">
@@ -20,15 +20,15 @@
         					<li><a href="{{place.url}}" target="_blank">{{place.url}}</a></li>
         				</ul>
         			</div>
-        			<div class="span8">        				
+        			<div class="span8">
         			</div>
-                    <div class="span8">                        
+                    <div class="span8">
                     </div>
         		</div>
                 <section class="localizacion-evento">
                     <h3>Localizaci&oacuten</h3>
             		<div class="row-fluid">
-            			<div class="span8"> 							           			
+            			<div class="span8">
             				<!-- google maps-->
         				    <div ng-controller="MapController">
         				        <div id="map_canvas" ui-map="myMap" class="map_canvas" ui-options="mapOptions" ui-event="{'map-idle' : 'onMapIdle()'}"></div>
@@ -47,8 +47,8 @@
                 <section class="asistentes">
                     <h3>Responsable</h3>
                     <div class="row-fluid">
-                        <div class="span24">                               
-                                    <div class="contact-place"> {{place.name}} - {{place.email}}</div>   
+                        <div class="span24">
+                                    <div class="contact-place"> {{place.name}} - {{place.email}}</div>
                         </div>
                     </div>
                 </section>

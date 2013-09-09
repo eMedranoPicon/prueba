@@ -18,7 +18,7 @@ function EventEditController($scope, $http, $routeParams, $rootScope, $location,
       dialogFade:true
     };
 
-
+console.log('$routeParams.id: '+$routeParams.id)
     if (angular.isUndefined($scope.events))
     {
         console.log('recargar el scope');
