@@ -52,13 +52,13 @@ function appController($scope, $http, $routeParams, $timeout, $location)
     {
 
       var indexEventDelete = findIndexById(idEvent,$scope.events);
-      console.log('appController deleteEventRemote -> indexEventDelete: '+indexEventDelete);
+      console.log('appController deleteEventRemote -> indexEventDelete: '+indexEventDelete); 
+      $scope.deleteinCalendar();
       $scope.events.splice(indexEventDelete, 1);
-
       $scope.hideInfoModal = true;
       $scope.errorModal = false;
       $scope.textStatusModal = "Evento " + idEvent + " eliminado correctamente.";
-
+     
       $timeout(function() {
         $scope.deleteEventModal = false;
         $location.path("/");
@@ -76,12 +76,12 @@ function appController($scope, $http, $routeParams, $timeout, $location)
   };
 
 
-  $scope.openModalRemove  = function(idEvent,title,dateStart,description)
+  $scope.openModalRemove  = function(idEvent,title,dateStart,description,idcalendar)
   {
       console.log('openModalRemove');
 
       $scope.deleteEventModal = true;
-
+      $scope.idCalendarToDelete=idcalendar;
       $scope.idEventDialog = idEvent;
       $scope.titleDialog = title;
       $scope.dateStartDialog = dateStart;
@@ -93,6 +93,18 @@ function appController($scope, $http, $routeParams, $timeout, $location)
   {
       $scope.deleteEventModal = false;
       console.log('closeModalRemove');
+  };
+  
+  $scope.deleteinCalendar  = function()
+  {
+      console.log('Eliminando de Google Calendar :'+$scope.idCalendarToDelete);
+	  var request = gapi.client.calendar.events.delete({
+		  'eventId': $scope.idCalendarToDelete,
+		   'calendarId' : '72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com'
+		  });
+		  request.execute(function(resp,status) {
+			  console.log(status);
+		  });
   };
 
 

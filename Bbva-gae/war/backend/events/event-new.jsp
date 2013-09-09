@@ -181,15 +181,14 @@
 <script src="/src/appBack.js"></script>
 <!-- EO Bloque de Librerias -  Angularjs - genericas -->
 <script	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
-<script src="/js/maps.js"></script>
-<script src="/js/calendar.js"></script>
-<script src="/js/backend.js"></script>
 <script src="/js/auth.js"></script>
 <script src="/js/application.js"></script>
-<script src="https://apis.google.com/js/client.js?onload=auth"></script>
+<script src="/js/calendar.js"></script>
+<script src="/js/maps.js"></script>
+<script src="/js/backend.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=handleClientLoadCalendar"></script>
 <script type="text/javascript">
 	$(function() {
-		console.log('carga datepicker');
 		$('#dateStart').datetimepicker({
 			language : 'es',
 			pickSeconds : false,
@@ -208,6 +207,5 @@
 		});
 	});
 </script>
-
 </body>
 </html>

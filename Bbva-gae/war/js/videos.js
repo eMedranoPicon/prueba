@@ -151,7 +151,7 @@ var retrieveAllFiles = function() {
 
 
 function removeVideo(idVideo){
-	console.log('entrando borrar');
+	console.log('Enviando Video a la Papelera');
 	  var request = gapi.client.drive.files.trash({
 		    'fileId': idVideo
 		  });

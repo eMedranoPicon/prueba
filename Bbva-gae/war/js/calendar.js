@@ -1,5 +1,6 @@
 function createEventCalendar() {
 	// recogemos variables de localstorage
+	var CALENDAR_ID='72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com';
 	var tokenText = localStorage.getItem('calendarToken_local');
 	var idCalendar = localStorage.getItem('calendarId');
 
@@ -32,35 +33,15 @@ function createEventCalendar() {
 	};
 
 	var request = gapi.client.calendar.events.insert({
-		'calendarId' : '72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com',
+		'calendarId' : CALENDAR_ID,
 		'resource' : jEventCalendar
 	});
-	request.execute(function(resp, status) {
-		console.log(resp.id);
-		console.log('Respuesta guardado :' + status);
+	request.execute(function(resp, status) {		
 		//Creado en Calendar, conseguido id.
-		jEventBuilder(resp.id);		
+		jEventBuilder(resp.id,resp.sequence);		
 		
 	});
 
-}
-
-function readCalendar(token) {
-	var apiUrl = "/calendar/v3/calendars/72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com/events?key=785790985795-pf206je1417kten4jbd5funo77vlkuvf.apps.googleusercontent.com";
-	var tokenText = token.token_type + ' ' + token.access_token;
-	args = {
-		path : apiUrl,
-		dataType : 'json',
-		contentType : 'application/json',
-		headers : {
-			'Authorization' : tokenText
-		},
-		method : "GET",
-		callback : function(resp) {
-			console.log(resp);
-		}
-	}
-	gapi.client.request(args);
 }
 
 /* use a function for the exact format desired... */
@@ -107,22 +88,3 @@ function validateDateRange() {
 	}
 
 }
-
-/*
- * jQuery.validator.addMethod("checkdates",function() {
- * 
- * String dateStart = document.getElementById("dateStart").value; String dateEnd =
- * document.getElementById("dateEnd").value;
- * 
- * var dateStartFormatted = ISODateString(dateStart); var dateEndFormatted =
- * ISODateString(dateEnd);
- * 
- * if (dateStartFormatted<dateEndFormatted) return true else return false;
- * //total = parseFloat($('#LHSOPERAND').val()) +
- * parseFloat($('#RHSOPERAND').val());
- * 
- * //return total == parseFloat($('#TOTAL').val()); }, "Rango Fechas
- * Incorrectas");
- * 
- * $("#dateEnd").rules('add', checkdates{});
- */

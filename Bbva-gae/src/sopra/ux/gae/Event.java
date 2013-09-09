@@ -30,6 +30,7 @@ public class Event {
 	private String dateEnd;
 	private String dateEndStamp;
 	private String idCalendar;
+	private String idCalSequence;
 	private String audience; //separated by commas
 	private List<String> audienceArray;
 	private String tags; //separated by commas
@@ -305,9 +306,17 @@ public class Event {
     public void setIdCalendar(String idCalendar) {
         this.idCalendar = idCalendar;
     }
-	
-	
-	
-	
+
+
+
+    public String getIdCalSequence() {
+        return idCalSequence;
+    }
+
+
+
+    public void setIdCalSequence(String idCalSequence) {
+        this.idCalSequence = idCalSequence;
+    }
 	
 }

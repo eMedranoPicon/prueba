@@ -160,21 +160,24 @@ console.log('$routeParams.id: '+$routeParams.id)
     function prepCalendar()
     {
         $scope.eventCalendar = {};
-        $scope.eventCalendar.id = $scope.event.idCalendar;
         $scope.eventCalendar.summary = $scope.event.title;
         $scope.eventCalendar.location = $scope.event.address[4];
         $scope.eventCalendar.start = {};
         $scope.eventCalendar.start.dateTime = ISODateString($scope.event.dateStart);
         $scope.eventCalendar.end = {};
         $scope.eventCalendar.end.dateTime = ISODateString($scope.event.dateEnd);
+        $scope.eventCalendar.id = $scope.event.idCalendar;
+        $scope.eventCalendar.sequence = parseInt($scope.event.idCalSequence)+1;
         
         return saveOnCalendar();	  
     }
   //Actualiza el envento enviado en el formulario
     function saveOnCalendar()
     {
-        console.log('Eliminando Calendario y Creando uno nuevo');
+        console.log('Calendar API');
+        console.log($scope.eventCalendar);
         if (typeof $scope.eventCalendar.id === 'undefined')  {
+        	console.log('Calendar API - Insercion');
         	var request = gapi.client.calendar.events.insert({    	
     		    'calendarId' : '72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com',
     		    'resource' : $scope.eventCalendar
@@ -182,18 +185,23 @@ console.log('$routeParams.id: '+$routeParams.id)
     		  request.execute(function(resp,status) {
     			  console.log(status);
     			  $scope.event.idCalendar=resp.id;
+    			  $scope.event.idCalSequence=resp.sequence;
     			  $scope.apply();
     			  upDateEvent();
     		  });	
         } else {
+        	console.log('Calendar API - Edicion');
         	var request = gapi.client.calendar.events.update({
-    		    'eventId': $scope.eventCalendar.id,
-    		    'calendarId' : '72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com',
+        		'calendarId' : '72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com',
+        		'eventId': $scope.eventCalendar.id,    		    
     		    'resource' : $scope.eventCalendar
     		  });
-    		  request.execute(function(resp,status) {
-    			  upDateEvent();
+    		  request.execute(function(resp,status) {    			  
     			  console.log(status);
+    			  /*Editado en Calendar.*/
+    			  //$scope.event.idCalSequence=resp.sequence;
+    			  $scope.apply();
+    			  upDateEvent();
     		  });
         } 
         
