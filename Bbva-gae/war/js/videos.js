@@ -78,7 +78,7 @@ function insertFile(fileData, callback) {
 						&& (file.explicitlyTrashed != true)) {
 					var linkAll = file.webContentLink;
 					var link = linkAll.substr(0, linkAll.indexOf('&'));
-					var html = '<video controls autoplay>'
+					var html = '<video class="videoSize" controls autoplay>'
 							+ '<source src='
 							+ link
 							+ ' type="video/mp4">'
@@ -126,7 +126,7 @@ var retrieveAllFiles = function() {
 									+link+'</a></td>'
 									+'<td><a onClick="removeVideo(\''+resp.items[key].id+'\')" class="btn btn-warning btn-small" ><i class="icon-trash icon-white"></i>Borrar</a></td></tr>';
 							
-							htmlVideos += '<li><video controls>'
+							htmlVideos += '<li><video class="videoSize" controls>'
 									+ '<source src='
 									+ link
 									+ ' type="video/mp4">'
@@ -179,7 +179,7 @@ var retrieveAllFilesFront = function() {
 								&& (resp.items[key].explicitlyTrashed != true)) {
 							var linkAll = resp.items[key].webContentLink;
 							var link = linkAll.substr(0, linkAll.indexOf('&'));	
-							htmlVideos += '<li><video controls>'
+							htmlVideos += '<li><video class="videoSize" controls>'
 									+ '<source src='
 									+ link
 									+ ' type="video/mp4">'

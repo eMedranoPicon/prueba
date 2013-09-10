@@ -1,5 +1,5 @@
 <!-- include views/places/places-list-home.html -->
-<div ng-cloak class=" row-fluid list-events-home" ng-controller="appControllerPlaces">
+<div ng-cloak class=" row-fluid list-events-home" ng-controller="PlaceController">
 	<div class="span12" ng-repeat="obj in places.slice(0,4) | filter:query | orderBy:orderField:orderReverse">
 		<article class="eventList">
 		   	<h1>{{obj.namePlace}}</h1>

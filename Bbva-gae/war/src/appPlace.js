@@ -23,7 +23,7 @@ appPlace.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 	  //cualquier ruta no definida
 	  otherwise({
 		   templateUrl: '/src/views/places/places-list-table.html',
-		  controller: appControllerPlaces
+		  controller: PlaceController
 
 		});
 

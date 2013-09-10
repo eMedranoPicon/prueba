@@ -36,20 +36,19 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 	})
 	.when('/place-detail/:id', {
 		templateUrl: '/src/views/places/place-detail.html',
-		controller: PlaceFrontController
+		controller: PlaceDetailController
 	})
-	.when('/places.jsp', {
+	.when('/places-list', {
 		templateUrl: '/src/views/places/places-list-front.html',
-		controller: appControllerPlaces
-	})
-	//cualquier ruta no definida
-	/*.otherwise({
-		templateUrl: '/src/views/events/front/events-list.html',
-		controller: appFrontController
-	});*/
+		controller: PlaceController
+	}).when('/places-map', {
+		templateUrl: '/src/views/places/places-map-home.html',
+		controller: PlaceMapHomeController
+	});
 
 	EventDetailController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
-	PlaceFrontController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
+	PlaceDetailController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
+	PlaceMapHomeController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
 	MapController.$inject = ['$scope', '$rootScope', 'mySharedService'];
 }]);
 

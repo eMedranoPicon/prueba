@@ -28,7 +28,7 @@
 						</ul>
 					</li>
 					<!-- Lugares de interes -->
-					<li ng-class="{ active: isActive('/place')}" class="divider-vertical dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Lugares de inter&eacute;s <bclass="caret"></b></a>
+					<li ng-class="{ active: isActive('/place')}" class="divider-vertical dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Lugares de inter&eacute;s <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="/backend/places/places-app.jsp#/place-new">Dar	de <strong>alta</strong> un lugar de interés
 							</a></li>

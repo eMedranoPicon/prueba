@@ -21,15 +21,6 @@ function checkAuth() {
 		'immediate' : true
 	}, handleAuthResult);
 }
-
-function auth() {
-	gapi.auth.authorize({
-		'client_id' : CLIENT_ID,
-		'scope' : SCOPES,
-		'immediate' : true
-	}, handleAuthResult);
-}
-
 /**
  * Called when authorization server replies.
  * 
