@@ -1,5 +1,7 @@
 
-var appFront = angular.module("appFront", ['checkImg','acronimoPais','mesEnLiteral','ui.bootstrap','ui.map','ui.event','titlePage']);
+var appFront = angular.module("appFront", ['checkImg','acronimoPais','mesEnLiteral','ui.bootstrap','ui.map','ui.event','titlePage','guthub.directives']);
+
+
 
 //definimos las rutas de la 'app'
 appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider)
@@ -17,7 +19,8 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 		controller: appFrontController
 	})
 	.when('/events-list', {
-		templateUrl: '/src/views/events/front/events-list.html'
+		templateUrl: '/src/views/events/front/events-list.html',
+		controller: appFrontController
 	})
 	.when('/events-past', {
 		templateUrl: '/src/views/events/front/events-list-past.html',
@@ -26,13 +29,19 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 	.when('/events-prox', {
 		templateUrl: '/src/views/events/front/events-list-prox.html',
 		controller: appFrontController
+
 	})
 	.when('/events-map', {
 		templateUrl: '/src/views/events/front/events-map.html',
 		controller: EventsMapListController
 	})
+	.when('/events-calendar', {
+		templateUrl: '/src/views/events/events-calendar.html',
+		controller: appFrontController
+	})
 	.when('/events.jsp', {
-		templateUrl: '/src/views/events/front/events-list.html'
+		templateUrl: '/src/views/events/front/events-list.html',
+		controller: appFrontController
 	})
 	.when('/place-detail/:id', {
 		templateUrl: '/src/views/places/place-detail.html',
@@ -50,6 +59,7 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 
 	EventDetailController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
 	PlaceFrontController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
+
 	MapController.$inject = ['$scope', '$rootScope', 'mySharedService'];
 }]);
 

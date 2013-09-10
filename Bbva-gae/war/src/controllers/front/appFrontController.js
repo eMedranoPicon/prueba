@@ -1,4 +1,4 @@
-function appFrontController($scope, $http, $routeParams, $location)
+function appFrontController($scope, $http, $routeParams, $location, $rootScope)
 {
   console.log('appFrontController');
 
@@ -18,12 +18,14 @@ function appFrontController($scope, $http, $routeParams, $location)
   $scope.locationPath = $location.path();
   $scope.titlePageText = $scope.locationPath;
 
+  $rootScope.titlePageText3 = $location.path();
 
   $scope.changeTitle = function()
   {
     $scope.titlePageText = "Listado de todos los eventos"
     console.log($scope.titlePageText)
   };
+
 
 
   $http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
@@ -43,8 +45,14 @@ function appFrontController($scope, $http, $routeParams, $location)
     });
 
 
+
   /* filtrado de eventos */
   var indexedEvents = [];
+
+  function resolve() {
+    console.log ('resolve')
+    $scope.titlePageText2 = "blli li"
+  }
 
 
   $scope.eventsToFilter = function()

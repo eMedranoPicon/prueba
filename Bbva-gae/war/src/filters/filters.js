@@ -117,7 +117,7 @@ angular.module('titlePage', []).filter('titlePage', function()
       }
       else
       {
-       console.log('titlePage:'+input);
+       console.log('titlePage filter:'+input);
         if (input.indexOf('banner-list') != -1 )
         {
           return 'Listado de sliders';
@@ -148,12 +148,22 @@ angular.module('titlePage', []).filter('titlePage', function()
         }
         if (input.indexOf('events-past') != -1 )
         {
-          return 'Listado de eventos ';
+          return 'Listado de eventos pasados';
         }
         if (input.indexOf('events-prox') != -1 )
         {
-          return 'Listado de eventos ';
+          return 'Listado de eventos proximos';
         }
+        if (input.indexOf('events-map') != -1 )
+        {
+          return 'Localizar eventos en google maps';
+        }
+        if (input.indexOf('events-calendar') != -1 )
+        {
+          return 'Localizar eventos en google calendar';
+        }
+
+
         else{ return input;}
       }
     };

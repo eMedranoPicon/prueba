@@ -1,7 +1,9 @@
 
-function EventsMapListController($scope,$http,$rootScope)
+function EventsMapListController($scope,$http,$rootScope,$location)
 {
 		console.log(' controller : PlaceMapList');
+
+		$rootScope.titlePageText3 = $location.path();
 
 		$scope.myMarkers = [];
 	    $scope.latitud = 0;

@@ -90,39 +90,5 @@
 	<script src="/js/calendar.js"></script>
 	<script src="/js/auth.js"></script>
 
-	<script type="text/javascript">
-		/*
-		 $(function() {
-		 console.log('carga datepicker');
-		 //no funciona en el entorno ANGULARjs
-		 $('#dateStart').datetimepicker({
-		 language : 'es',
-		 pickSeconds : false,
-		 startDate: new Date()
-		 });
-		 $('#dateEnd').datetimepicker({
-		 language : 'es',
-		 pickSeconds : false,
-		 startDate: new Date()
-		 });
-		 //Fecha de Finalizacion Obligatoria para poder crear evento en google calendar
-		 $('#dateEnd').click( function(){
-		 console.log('click on dateEnd');
-		 if ($('#dateEnd').val()=='') {
-		 $('#dateEnd').val($('#dateStart').val());
-		 }
-		 });
-
-		 //funcionaria si la pagina se recargara. Hack temporal para evitar errores carga js. Disculpe las molestias :)
-		 setTimeout(function() {
-		 $(document).ready(function () {
-		 if(window.location.href.indexOf("event-edit") > -1) {
-		 previewMap();
-		 }
-		 });
-		 }, 2000);
-
-		 });*/
-	</script>
 </body>
 </html>
