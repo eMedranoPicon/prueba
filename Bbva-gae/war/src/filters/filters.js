@@ -156,11 +156,11 @@ angular.module('titlePage', []).filter('titlePage', function()
         }
         if (input.indexOf('events-map') != -1 )
         {
-          return 'Localizar eventos en google maps';
+          return 'Mapa de eventos';
         }
         if (input.indexOf('events-calendar') != -1 )
         {
-          return 'Localizar eventos en google calendar';
+          return 'Calendario de eventos';
         }
 
 

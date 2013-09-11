@@ -10,10 +10,12 @@ function appFrontController($scope, $http, $routeParams, $location, $rootScope)
   $scope.showEditLayout = false;
   $scope.eventosTodos = "";
 
-   $scope.filterCriteria = {};
+  $scope.filterCriteria = {};
   $scope.filterCriteria2 = true;
   $scope.orderField = "dateStartStamp";
   $scope.orderReverse = "true";
+
+  $rootScope.titlePageText3 = $location.path();
 
   $scope.updateTitle = function(titleText)
   {
