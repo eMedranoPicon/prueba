@@ -57,6 +57,6 @@
 	<jsp:include page="/libraries-angular-front.jsp" />	
 	<jsp:include page="/libraries-angular-maps.jsp" />
 	<script
-		src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
+		src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.6.0.min.js"></script>
 </body>
 </html>

@@ -1,7 +1,8 @@
 function PlaceMapController($scope,$http,$rootScope,sharedService)
 {
-		console.log(' controller : PlaceMapController');
-
+	console.log(' controller : PlaceMapController');
+	//Titulo
+	$rootScope.titlePageTextFilter = titleTextBack;
     $scope.myMarkers = [];
     $scope.latitud = 0;
     $scope.longitud = 0;
@@ -140,7 +141,6 @@ function PlaceMapController($scope,$http,$rootScope,sharedService)
 function PlaceMapListController($scope,$http,$rootScope)
 {
 		console.log(' controller : PlaceMapList');
-
 		$scope.myMarkers = [];
 	    $scope.latitud = 0;
 	    $scope.longitud = 0;

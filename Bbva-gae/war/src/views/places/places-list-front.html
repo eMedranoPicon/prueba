@@ -2,12 +2,15 @@
 <div class="span16">
     <div class="row-fluid">
     	<div class="span24">
-    		<tabset>
-			    <tab heading="Todos los Lugares" select='filterCriteria={}'></tab>			    
-			</tabset>
+			<tabset ng-click="forcingCriteria();">
+				<tab heading="Todos los Lugares" select='filterCriteria={}'></tab>		
+			     <tab ng-repeat="placetab in placesToFilter() | filter:filterPlaces" heading="{{placetab.typePlace}}" select='filterCriteria.typePlace="{{placetab.typePlace}}"'>
+			     {{placetab.typePlace}} 
+    			</tab> 
+			</tabset>    
 		</div>
 		<div class="row-fluid span24 conference-listing">
-	        <div ng-repeat="placesPerCat in placesToFilter() | filter:filterPlaces | orderBy:orderField:orderReverse" class="row-fluid date-listing conference-listing interactive-listing-container" >
+	        <div ng-repeat="placesPerCat in placesToFilter() | filter:filterCriteria | filter:filterPlaces | orderBy:orderField:orderReverse" class="row-fluid date-listing conference-listing interactive-listing-container" >
 	        	<div class="span8 day-label">
 	        		<h3>{{placesPerCat.typePlace}}</h3>
 	        	</div>

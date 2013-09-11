@@ -15,7 +15,7 @@
 %>
 <!DOCTYPE html>
 
-<html lang="es" ng-app="appPlace">
+<html lang="es" ng-app="appPlace" ng-controller="PlaceController">
 <head>
 <title>backend - Lugares de Interes:: BBVA in cloud</title>
 <meta charset="utf-8">
@@ -24,11 +24,6 @@
 <link rel="stylesheet" type="text/css" href="/css/main.css" />
 <link rel="stylesheet" type="text/css"
 	href="/css/bootstrap-datetimepicker.min.css" />
-
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="/js/lib/html5shiv.js"></script>
-    <![endif]-->
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -59,15 +54,15 @@
 		<!-- include events-home.html-->
 		<section class="section-page">
 
-			<header class="header-section">
-				<h1>{{textTitle}}</h1>
-			</header>
+			<header class="header-section" ng-cloak>
+				<h1>{{titlePageTextFilter | titlePageBack}}</h1>
+ 			</header>
 			<div class="container-fluid">
 				<div class="row-fluid">
 
-					<div class="alert alert-error" ng-show="showError">
+					<!--div class="alert alert-error" ng-show="showError">
 						<p>{{textError}}</p>
-					</div>
+					</div-->
 
 					<div ng-view></div>
 

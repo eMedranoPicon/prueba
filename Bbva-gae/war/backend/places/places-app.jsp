@@ -15,7 +15,7 @@
 %>
 <!DOCTYPE html>
 
-<html lang="es" ng-app="appPlace">
+<html lang="es" ng-app="appPlace" ng-controller="PlaceController">
 <head>
 <title>backend - places:: BBVA in cloud</title>
 <meta charset="utf-8">
@@ -40,20 +40,19 @@
 		<jsp:include page="/backend/backend-navbar.jsp" />
 		<!-- EO include navbar.jsp -->
 
-		<!-- include events-home.html
-  <section class="section-page" ng-controller="PlaceController"-->
+		<!-- include events-home.html-->
 		<section class="section-page">
 
-			<header class="header-section">
-				<h1>{{textTitle}}</h1>
-			</header>
+			<header class="header-section" ng-cloak>
+				<h1>{{titlePageTextFilter | titlePageBack}}</h1>
+ 			</header>
 
 			<div class="container-fluid">
 				<div class="row-fluid">
 
-					<div class="alert alert-error" ng-show="showError">
+					<!--div class="alert alert-error" ng-show="showError">
 						<p>{{textError}}</p>
-					</div>
+					</div-->
 
 					<div ng-view></div>
 
@@ -68,9 +67,9 @@
 	<jsp:include page="/libraries-angular.jsp" />
 	<script
 		src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
+	
 	<jsp:include page="/libraries-angular-maps.jsp" />
 	<jsp:include page="/libraries-angular-places.jsp" />
-	<script src="https://apis.google.com/js/client.js?onload=auth"></script>
 </body>
 
 </html>

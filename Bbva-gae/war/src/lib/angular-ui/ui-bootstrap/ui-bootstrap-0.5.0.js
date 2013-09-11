@@ -2661,7 +2661,7 @@ function($parse, $http, $templateCache, $compile) {
     );
   }
 }])
-
+/**editado @msq - Sopra*//
 .directive('tabsetTitles', function($http) {
   return {
     restrict: 'A',
@@ -2682,7 +2682,7 @@ function($parse, $http, $templateCache, $compile) {
 })
 
 ;
-
+/**Fin Edición*/
 
 angular.module('ui.bootstrap.timepicker', [])
 

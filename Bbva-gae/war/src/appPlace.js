@@ -1,5 +1,5 @@
 
-var appPlace = angular.module("appPlace", ['ui.bootstrap','ui.map','ui.event','acronimoLugar']);
+var appPlace = angular.module("appPlace", ['ui.bootstrap','ui.map','ui.event','acronimoLugar','titlePageBack']);
 
 
 //definimos las rutas de la 'appPlace'

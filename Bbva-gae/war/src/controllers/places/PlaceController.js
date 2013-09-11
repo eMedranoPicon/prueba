@@ -1,12 +1,18 @@
-function PlaceController($scope, $http, $routeParams, $timeout)
+function PlaceController($scope, $http, $routeParams, $timeout,$location, $rootScope)
 {
+  //
+  $scope.URL_API = 'https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/';
+  //
+	
   $scope.showError = false;
   $scope.textError = "";
   $scope.is_backend_ready = false;
   $scope.textTitle = "Listado de Lugares de Interes";
-  $scope.URL_API = 'https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/';
   $scope.orderField = "namePlace";
   $scope.orderReverse = "true";
+  $scope.filterCriteria = {};
+  
+  $rootScope.titlePageTextFilter = $location.path();
   
   $http.get($scope.URL_API).success(function(data)
   {
@@ -16,7 +22,7 @@ function PlaceController($scope, $http, $routeParams, $timeout)
       $scope.places = data.items;      
     }).error(function(data, status)
     {
-      $scope.textError = "Error al cargar los datos. Por favor, intentalo más tarde";
+      $scope.textError = "Error al cargar los datos. Por favor, intentalo mas tarde";
       $scope.is_backend_ready = false;
       $scope.showError = true;
   });
@@ -94,5 +100,12 @@ function PlaceController($scope, $http, $routeParams, $timeout)
     {
       return place.typePlace == cat;
     }
-  };  
+  }; 
+  
+forcingCriteria = function()
+  {
+   console.log('dentro');
+	console.log($scope);
+  };
+   
 };

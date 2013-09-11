@@ -169,3 +169,34 @@ angular.module('titlePage', []).filter('titlePage', function()
     };
 });
 
+angular.module('titlePageBack', []).filter('titlePageBack', function()
+		{
+		    return function(input)
+		    {
+		      if ((input==undefined) || (input==""))
+		      {
+		        return '';
+		      }
+		      else
+		      {
+		        if (input.indexOf('place-edit') != -1 )
+		        {
+		          return 'Edición Lugar de Interés';
+		        }
+		        if (input.indexOf('place-new') != -1 )
+		        {
+		          return 'Nuevo Lugar de Interés';
+		        }
+		        if (input.indexOf('place-map') != -1 )
+		        {
+		          return 'Mapa Lugares de Interés';
+		        }  
+		        if (input.indexOf('/places-app') != -1 )
+		        {
+			          return 'Listado Lugares de Interés';
+			    }
+		        else{ return input;}
+		      }
+		    };
+		});
+

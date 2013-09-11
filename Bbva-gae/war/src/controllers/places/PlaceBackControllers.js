@@ -206,7 +206,9 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, $location,
 function PlaceInsertController($scope, $http, $routeParams, $rootScope, $location, sharedService)
 {
 	console.log(' controller : PlaceInsertController');
-
+	//Titulo
+	$rootScope.titlePageTextFilter = titleText;
+	
 	$scope.showError = false;
     $scope.textError = "";
     $scope.is_backend_ready = false;
