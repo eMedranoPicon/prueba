@@ -30,11 +30,8 @@ dl.dl-tiempoDeEspera
 }
 
 //
-//
 //	div.tiempoDeEspera
 //
-//
-
 div.tiempoDeEspera
 {
 	margin:0px;
@@ -101,8 +98,9 @@ div.tiempoDeEspera
 			font-size: inherit;
 			padding: 5px 10px;
 		}
+
 		i.icon-espera
-			{
+		{
 			@include background(image-url("espera.png"));
 			@include background-size(25px 25px);
 			display: inline-block;
@@ -111,20 +109,19 @@ div.tiempoDeEspera
 			height: 25px;
 			background-repeat:no-repeat;
 			background-position: center;
-			}
-
+		}
 
 		a{
 		text-decoration:underline;
 		}
-
 	}
 
-
-	span.tiempoDeEspera-image{
+	span.tiempoDeEspera-image
+	{
 		display: inline-block;
 		padding:0px 8px 0px 10px;
 		vertical-align: top;
+
 		i.icon-espera-web
 		{
 			@include background(image-url("espera-2.png"));
@@ -134,8 +131,8 @@ div.tiempoDeEspera
 			height: 60px;
 			background-repeat:no-repeat;
 		}
-
 	}
+
 	span.tiempoDeEspera-data > p:nth-of-type(2)
 	{
 		margin-bottom: 10px;
@@ -254,8 +251,6 @@ div.tiempoDeEspera
 			color: $textcolor-blueUnder !important;
 		}
 	}
-
-
 
 	span.tiempoDeEspera-data-unhospital
 	{
@@ -539,4 +534,101 @@ div.borderExtra
 	}
 
 }
+
+//Modificaciones 11/09/2013
+//used in: tiempoDeEspera-unhospital
+.contentCajasHospitales
+{
+	margin-top: 25px;
+}
+
+//used in: tiempoDeEspera-unhospital
+.tiempoDeEsperaList
+{
+	.Maps {
+		margin-left: 0px;
+		padding-left: 3px;
+
+		img {
+			width: 207px;
+		}
+	}
+
+	h3 {
+		@include background(image-url("icon-timeBig.png"));
+		background-repeat: no-repeat;
+		line-height: 2em;
+		color: $textcolor-blueTitle;
+		font-size: 1em;
+		padding-left: 24px;
+		width: 200px;
+		margin: 5px 0 0 0;
+	}
+
+	.dl-tiempoDeEspera
+	{
+		width: 100%;
+		margin-bottom: 5px;
+
+		dt,dd {
+			line-height: 2em;
+
+		}
+		dt {
+			color: $black;
+			font-size: 0.9em;
+			font-weight: bold;
+			width: 100px;
+			padding-left: 3px;
+		}
+		dd {
+			font-size: 0.9em;
+			color: $textcolor-greyLight;
+			@include background(image-url("reloj-azul.png"));
+			background-repeat: no-repeat;
+			padding-left: 20px;
+			background-position-y: 3px;
+		}
+		hr {
+			border-bottom: 1px solid $grey;
+			border-top: 0px;
+			border-left: 0px;
+			border-right: 0px;
+			margin: 0px;
+		}
+	}
+
+}
+
+//used in: tiempoDeEspera-unhospital
+.tiempoDeEsperaContent
+{
+	margin-left: 0px;
+
+	.footer
+	{
+		margin-left: 3px;
+		a {
+			text-decoration: none;
+			color: $textcolor-blueUnder;
+			font-weight: bold;
+			font-size: 0.9em;
+
+			&:hover {
+				color: $textcolor-blueTitle;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 
