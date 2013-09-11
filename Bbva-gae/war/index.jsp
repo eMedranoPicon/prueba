@@ -87,7 +87,7 @@
 
 					<div class="span12">
 						<div class="row-fluid">
-							<jsp:include page="/src/views/places/places-map-front.html" />
+							<jsp:include page="/src/views/places/places-map-home.html" />
 						</div>
 					</div>
 
@@ -108,6 +108,5 @@
 	<jsp:include page="/libraries-angular-maps.jsp" />
 	<jsp:include page="/libraries-angular-events.jsp" />
 	<jsp:include page="/libraries-angular-front.jsp" />
-
 </body>
 </html>

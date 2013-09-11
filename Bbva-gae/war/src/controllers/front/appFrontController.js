@@ -15,18 +15,10 @@ function appFrontController($scope, $http, $routeParams, $location, $rootScope)
   $scope.orderField = "dateStartStamp";
   $scope.orderReverse = "true";
 
-  $scope.locationPath = $location.path();
-  $scope.titlePageText = $scope.locationPath;
-
-  $rootScope.titlePageText3 = $location.path();
-
-  $scope.changeTitle = function()
+  $scope.updateTitle = function(titleText)
   {
-    $scope.titlePageText = "Listado de todos los eventos"
-    console.log($scope.titlePageText)
-  };
-
-
+    $rootScope.titlePageText3 = titleText;
+  }
 
   $http.get('https://sopragroupux.appspot.com/_ah/api/evento/v5/event/').success(function(data)
   {
@@ -43,7 +35,6 @@ function appFrontController($scope, $http, $routeParams, $location, $rootScope)
       $scope.is_backend_ready = false;
       $scope.showError = true;
     });
-
 
 
   /* filtrado de eventos */

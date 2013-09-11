@@ -41,7 +41,7 @@
 		<!-- EO include navbar.jsp -->
 
 		<!-- include events-home.html
-  <section class="section-page" ng-controller="appControllerPlaces"-->
+  <section class="section-page" ng-controller="PlaceController"-->
 		<section class="section-page">
 
 			<header class="header-section">

@@ -117,7 +117,7 @@ angular.module('titlePage', []).filter('titlePage', function()
       }
       else
       {
-       console.log('titlePage filter:'+input);
+       //console.log('titlePage filter:'+input);
         if (input.indexOf('banner-list') != -1 )
         {
           return 'Listado de sliders';

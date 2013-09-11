@@ -2,12 +2,15 @@
  * Login to Access Google API Drive
  */
 var CLIENT_ID = '785790985795-pf206je1417kten4jbd5funo77vlkuvf.apps.googleusercontent.com';
+var CLIENT_ID_FRONT = '785790985795-0vf2bfiimlndb3jbti86ju054av973u8.apps.googleusercontent.com';
 var SCOPES = 'https://www.googleapis.com/auth/drive';
-
+var SCOPES_READ = 'https://www.googleapis.com/auth/drive.readonly';
+var APIKEY = "AIzaSyAhyF-UL_Qr1eChaf3KrlgerqkerutsFzw"
 /**
  * Called when the client library is loaded to start the auth flow.
  */
 function handleClientLoad() {
+	gapi.client.setApiKey(APIKEY);
 	window.setTimeout(checkAuth, 1);
 }
 
@@ -36,7 +39,7 @@ function handleAuthResult(authResult) {
 	if (authResult && !authResult.error) {
 		// Access token has been successfully retrieved, requests can be sent to
 		// the API.
-		gapi.client.load('drive', 'v2', function() {
+		gapi.client.load('drive', 'v2', function(status) {
 			console.log("Dentro del API");
 		});
 		filePicker.style.display = 'block';
@@ -62,6 +65,7 @@ function handleAuthResult(authResult) {
  * Called when the client library is loaded to start the auth flow.
  */
 function handleClientLoadList() {
+	gapi.client.setApiKey(APIKEY);
 	window.setTimeout(checkAuthList, 1);
 }
 
@@ -86,7 +90,8 @@ function handleAuthResultList(authResultList) {
 	// Access token has been successfully retrieved, requests can be sent to the
 	// API.
 	gapi.client.load('drive', 'v2', function(status) {
-		console.log("Dentro del API");
+		console.log(status);
+		console.log("Dentro del API for Listing");
 		retrieveAllFiles();
 	});
 
@@ -99,6 +104,7 @@ function handleAuthResultList(authResultList) {
  * Called when the client library is loaded to start the auth flow.
  */
 function handleClientLoadFront() {
+	gapi.client.setApiKey(APIKEY);
 	window.setTimeout(checkAuthFront, 1);
 }
 
@@ -123,7 +129,8 @@ function handleAuthResultFront(authResultList) {
 	// Access token has been successfully retrieved, requests can be sent to the
 	// API.
 	gapi.client.load('drive', 'v2', function(status) {
-		console.log("Dentro del API");
+		console.log(status);
+		console.log("Dentro del API for Front");
 		retrieveAllFilesFront();
 	});
 

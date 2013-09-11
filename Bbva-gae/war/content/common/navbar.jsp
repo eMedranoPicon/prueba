@@ -34,10 +34,15 @@
 							<li><a href="/backend/events/events-calendar.jsp">Localizar	eventos en Google <strong>Calendar</strong></a></li>
 						</ul>
 					</li>
-
-					<li class="divider-vertical"
-						ng-class="{ active: isActive('/places.jsp')}"><a
-						href="/places.jsp">Lugar&eacute;s de inter&eacute;s</a></li>
+						<!-- Lugares de interes -->
+					<li ng-class="{ active: isActive('/place')}" class="divider-vertical dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Lugares de inter&eacute;s <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/places.jsp#/places-list">Listado lugares de inter&eacute;s
+							</a></li>
+							<li><a href="/places.jsp#/places-map">Localizar
+									lugares de inter&eacute;s en Google <strong>Maps</strong></a></li>
+						</ul>
+					</li>
 					<li class="divider-vertical"
 						ng-class="{ active: isActive('/videos.jsp')}"><a
 						href="/videos.jsp">V&iacute;deos</a></li>

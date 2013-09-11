@@ -186,10 +186,10 @@ console.log('$routeParams.id: '+$routeParams.id)
     			  console.log(status);
     			  $scope.event.idCalendar=resp.id;
     			  $scope.event.idCalSequence=resp.sequence;
-    			  $scope.apply();
+    			  //$scope.apply();
     			  upDateEvent();
     		  });	
-        } else {
+       } else {
         	console.log('Calendar API - Edicion');
         	var request = gapi.client.calendar.events.update({
         		'calendarId' : '72o4s6adl0uhbebjssl4dpraeo@group.calendar.google.com',
@@ -198,7 +198,7 @@ console.log('$routeParams.id: '+$routeParams.id)
     		  });
     		  request.execute(function(resp,status) {    			  
     			  console.log(status);
-    			  /*Editado en Calendar.*/
+    			  //Editado en Calendar.
     			  $scope.event.idCalSequence=resp.sequence;
     			  //$scope.apply();
     			  upDateEvent();

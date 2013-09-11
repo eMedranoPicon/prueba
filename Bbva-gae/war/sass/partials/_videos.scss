@@ -1,12 +1,10 @@
 .videoLayout{
 	
-	.videoList {
- 	max-width:480px !important;
- 	min-width:320px !important;
-  	width: 100%    !important;
-  	min-height: 320px  !important;
-  	height: auto   !important;
+	.videoSize {
+ 	width:480px !important;
+ 	height:320px !important;
 	}
+	
 
 	.progress{
 	margin-top: 1%;
