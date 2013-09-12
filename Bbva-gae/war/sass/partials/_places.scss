@@ -1,53 +1,83 @@
-.place-large{
-	vertical-align:baseline;text-indent:-5000px;direction:ltr;overflow:hidden;display:inline-block;*display:inline;zoom:1
-}
-
-.place-large {
-	width: 93px;
-	height: 93px;
-	float: left;
-	display: block;
-	position: relative;
-	margin-right: 5px;
-}
-
-a.place-large{
-	border: none;
-}
-.place-re, .place-cc, .place-gm, .place-mu, .place-other {
-	background-image: url(/img/places/places-sprite.png);
+.place-grid {
+	.place-large {
+		width: 93px;
+		height: 93px;
+		float: left;
+		display: block;
+		position: relative;
+		margin-right: 10px;
+	}
+	
+	a.place-large{
+		border: none;
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+	.place-re, .place-cc, .place-gm, .place-mu, .place-other {
+		background-image: url(/img/places/places-sprite.png);
+		display: inline-block;
+	}
+	
+	.place-re{
+	background-position: 0px -490px;
+	}
+	
+	.place-gm{
+	background-position: 0px -98px;
+	}
+	.place-cc{
+	background-position: 0px -196px;
+	}
+	.place-other{
+	background-position: 0px 0px;
+	}
+	.place-mu{
+	background-position: 0px -294px;
+	}
+	
+	.place-header {
+			padding-bottom: 15px;
+			h1
+			{
+			padding-top: 20px;
+			}
+	}
+	.contact-place{
+	background-image: url(/img/default_user_icon.png);
+	background-size: 30px;
+	background-repeat: no-repeat;
+	padding-left: 40px;
+	margin-bottom: 15px;
+	line-height: 30px;
+	}
+	
+	
+	
+	.newLine{
+	clear:both;
+	}
+	.placeListTitle{
 	display: inline-block;
-}
-
-.place-re{
-background-position: 0px -490px;
-}
-
-.place-gm{
-background-position: 0px -98px;
-}
-.place-cc{
-background-position: 0px -196px;
-}
-.place-other{
-background-position: 0px 0px;
-}
-.place-mu{
-background-position: 0px -294px;
-}
-
-.place-header {
-		padding-bottom: 15px;
-		h1
-		{
-		padding-top: 20px;
-		}
-}
-.contact-place{
-background-image: url(/img/default_user_icon.png);
-background-size: 30px;
-background-repeat: no-repeat;
-padding-left: 40px;
-margin-bottom: 15px;
-line-height: 30px;
+	vertical-align: top;
+	width: 50%;
+	}
+	.place-list{
+		width: 93px;
+		height: 93px;
+		display: inline-block;
+		position: relative;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		float: right;
+		
+	}
+	.conference-listing
+	{
+	padding-top: 1.5em !important;
+	}
+	.interactive-listing
+	{
+	border-bottom: 1px solid #c4c3bc !important;
+	margin-bottom: 10px !important;
+	}
 }

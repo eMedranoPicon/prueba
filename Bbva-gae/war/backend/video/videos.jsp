@@ -32,7 +32,7 @@
 <body>
 
 	<div class="container">
-	     
+
 
 		<!-- include backend-header.jsp -->
 		<jsp:include page="/backend/backend-header.jsp" />
@@ -47,25 +47,25 @@
 				<h1>Listado Videos</h1>
 			</header>
 			<div class="container-fluid videoLayout">
-			    <table id="contentList" class="table table-striped">			    
-                <tr>
-                    <th>Titulo Video</th>
-                    <th>Descripcion</th>
-                    <th>URL</th>
-                    <th>Acciones</th>
-                </tr>
-                <tr class="hide_bar progress progress-striped active">
-								<td colspan="4" class="bar barWidth"></td>
-				
-				</tr>	
-			    </table>
+				<table id="contentList" class="table table-striped">
+					<tr>
+						<th>Titulo Video</th>
+						<th>Descripcion</th>
+						<th>URL</th>
+						<th>Acciones</th>
+					</tr>
+					<tr class="hide_bar progress progress-striped active">
+						<td colspan="4" class="bar barWidth"></td>
+
+					</tr>
+				</table>
 				<div id="ListadoVideos"></div>
 			</div>
 		</section>
-	</div>
-	<!-- include footer.jsp -->
+		<!-- include footer.jsp -->
 		<jsp:include page="/content/common/footer.html" />
 		<!-- EO include footer.jsp -->
+	</div>
 	<jsp:include page="/libraries-angular.jsp" />
 	<script
 		src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>

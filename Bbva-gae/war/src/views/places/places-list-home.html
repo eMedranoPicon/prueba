@@ -1,15 +1,15 @@
 <!-- include views/places/places-list-home.html -->
-<div ng-cloak class=" row-fluid list-events-home" ng-controller="PlaceController">
+<div ng-cloak class=" row-fluid list-events-home place-grid" ng-controller="PlaceController">
 	<div class="span12" ng-repeat="obj in placesToFilter() | filter:filterPlaces">
 		<article class="eventList">
 		   <a href="" class="place-large place-{{obj.typePlace | acronimoLugar}}"></a>
 		   	<h1>{{obj.namePlace}}</h1>
 		   	<div class="contentEventList">
 		   		<small>{{obj.typePlace}}</small><br/>
-		   		<strong>{{obj.fullAddress}}</strong><br/><br/>
+		   		<strong>{{obj.fullAddress}}</strong>		   		
 		    	<!-- img src="{{obj.urlImg}}" class="pull-left"  -->
-		    	<p>{{obj.description | limitTo:200 }}...</p>
-		    	<a class="pull-right" href="places.jsp#/place-detail/{{obj.id}}" title="Ver detalle del lugar">[m&aacute;s info]</a>
+		    	<p class="newLine">{{obj.description | limitTo:200 }}...</p>
+		    	<a class="pull-right" href="places.jsp#/place-detail/{{obj.id}}" title="Ver detalle del lugar">[m&aacute;s informaci&oacute;n]</a>
 		  	</div>
 		</article>
 	</div>

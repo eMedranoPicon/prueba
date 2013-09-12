@@ -99,12 +99,11 @@
 		<%
 		    }
 		%>
-
-	</div>
-	<!-- include footer.jsp -->
+	    <!-- include footer.jsp -->
 	    <div class="push"></div>
 		<jsp:include page="/content/common/footer.html" />
 		<!-- EO include footer.jsp -->
+	</div>
 	<jsp:include page="/libraries-angular.jsp" />
 	<script
 		src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>

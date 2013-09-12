@@ -1,6 +1,6 @@
 <!-- include src/views/places/places-list-front.html -->
 <div class="span16">
-    <div class="row-fluid">
+    <div class="row-fluid place-grid">
     	<div class="span24">
 			<tabset>
 				<tab heading="Todos los Lugares" select='filterCriteria={}'></tab>		
@@ -15,16 +15,16 @@
 		</div>
 		<div class="row-fluid span24 conference-listing">
 	        <div ng-repeat="placesPerCat in placesToFilter() | filter:filterCriteria | filter:filterPlaces | orderBy:orderField:orderReverse" class="row-fluid date-listing conference-listing interactive-listing-container" >
-	        	<div class="span12">
-	        	    <a href="" class="place-large place-{{placesPerCat.typePlace | acronimoLugar}}"></a>
-	        		<h3>{{placesPerCat.typePlace}}</h3>
+	        	<div class="span12">	        	    
+	        		<h3 class="placeListTitle">{{placesPerCat.typePlace}}</h3>
+	        		<div class="place-list place-{{placesPerCat.typePlace | acronimoLugar}}"></div>
 	        	</div>
 	        	<div class="span12">
 		        	<ol ng-repeat="place in places | filter:placesCatFilter(placesPerCat.typePlace) | orderBy:orderField:orderReverse">
 		        		<li class="conference interactive-listing">
 							<h4><a href="places.jsp#/place-detail/{{place.id}}">{{place.namePlace}}</a></h4>
 							<p class="location">
-								<a href="#">{{place.fullAddress}}</a>
+								{{place.fullAddress}}
 							</p>							
 						</li>
 		        	</ol>
