@@ -60,7 +60,9 @@
 			</div>
 
 		</section>
-
+		<!-- include footer.jsp -->
+		<jsp:include page="/content/common/footer.html" />
+		<!-- EO include footer.jsp -->
 	</div>
 	<!-- Bloque de Librerias - libreriasjs -->
 	<jsp:include page="/libraries-js.jsp" />

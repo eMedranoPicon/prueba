@@ -3,15 +3,15 @@
 <%@ page import="com.google.appengine.api.users.UserService"%>
 <%@ page import="com.google.appengine.api.users.UserServiceFactory"%>
 <%
-	UserService userService = UserServiceFactory.getUserService();
-	User user = userService.getCurrentUser();
+    UserService userService = UserServiceFactory.getUserService();
+    User user = userService.getCurrentUser();
 
-	String url = userService.createLoginURL(request.getRequestURI());
-	String urlLinktext = "Login";
-	if (user != null) {
-		url = userService.createLogoutURL(request.getRequestURI());
-		urlLinktext = "Logout";
-	}
+    String url = userService.createLoginURL(request.getRequestURI());
+    String urlLinktext = "Login";
+    if (user != null) {
+        url = userService.createLogoutURL(request.getRequestURI());
+        urlLinktext = "Logout";
+    }
 %>
 <!DOCTYPE html>
 
@@ -31,13 +31,14 @@
     <![endif]-->
 
 
-<jsp:include page="/libraries-angular.jsp"/>
-  <script src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
-  <jsp:include page="/libraries-angular-maps.jsp" />
-  <jsp:include page="/libraries-angular-places.jsp"/>
+<jsp:include page="/libraries-angular.jsp" />
+<script
+	src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
+<jsp:include page="/libraries-angular-maps.jsp" />
+<jsp:include page="/libraries-angular-places.jsp" />
 
-  <!-- Bloque de Librerias - libreriasjs -->
-  <jsp:include page="/libraries-js.jsp" />
+<!-- Bloque de Librerias - libreriasjs -->
+<jsp:include page="/libraries-js.jsp" />
 <script src="https://apis.google.com/js/client.js?onload=auth"></script>
 </head>
 <body>
@@ -56,7 +57,7 @@
 
 			<header class="header-section" ng-cloak>
 				<h1>{{titlePageTextFilter | titlePageBack}}</h1>
- 			</header>
+			</header>
 			<div class="container-fluid">
 				<div class="row-fluid">
 
@@ -69,6 +70,10 @@
 				</div>
 			</div>
 		</section>
+		<!-- include footer.jsp -->
+		<jsp:include page="/content/common/footer.html" />
+		<!-- EO include footer.jsp -->
+		
 	</div>
 </body>
 </html>

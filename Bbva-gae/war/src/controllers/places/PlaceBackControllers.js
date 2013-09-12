@@ -206,8 +206,6 @@ function PlaceEditController($scope, $http, $routeParams, $rootScope, $location,
 function PlaceInsertController($scope, $http, $routeParams, $rootScope, $location, sharedService)
 {
 	console.log(' controller : PlaceInsertController');
-	//Titulo
-	$rootScope.titlePageTextFilter = titleText;
 	
 	$scope.showError = false;
     $scope.textError = "";
@@ -250,8 +248,7 @@ function PlaceInsertController($scope, $http, $routeParams, $rootScope, $locatio
 
     	console.log('EventPlaceController $scope.place: '+$scope.place)
     	sharedService.prepForBroadcast($scope.place.latitude, $scope.place.longitud,$scope.place.street, $scope.place.zipcode, $scope.place.city, $scope.place.country);
-    	$http.post('https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/', $scope.place).success(function()
-        //$http.post('https://sopragroupux.appspot.com/_ah/api/place/v1/place', $scope.place).success(function()
+    	$http.post($scope.URL_API, $scope.place).success(function()        
         {
             console.log('Guardando');
             

@@ -1,5 +1,5 @@
 
-var appFront = angular.module("appFront", ['checkImg','acronimoPais','mesEnLiteral','ui.bootstrap','ui.map','ui.event','titlePage','guthub.directives']);
+var appFront = angular.module("appFront", ['checkImg','acronimoPais','acronimoLugar','mesEnLiteral','ui.bootstrap','ui.map','ui.event','titlePage','guthub.directives']);
 
 
 

@@ -1,8 +1,7 @@
 function PlaceMapController($scope,$http,$rootScope,sharedService)
 {
 	console.log(' controller : PlaceMapController');
-	//Titulo
-	$rootScope.titlePageTextFilter = titleTextBack;
+	$scope.URL_API = 'https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/';
     $scope.myMarkers = [];
     $scope.latitud = 0;
     $scope.longitud = 0;
@@ -138,7 +137,7 @@ function PlaceMapController($scope,$http,$rootScope,sharedService)
     
 }
 
-function PlaceMapListController($scope,$http,$rootScope)
+function PlaceMapListController($scope,$http,$rootScope,$location)
 {
 		console.log(' controller : PlaceMapList');
 		$scope.myMarkers = [];
@@ -146,7 +145,7 @@ function PlaceMapListController($scope,$http,$rootScope)
 	    $scope.longitud = 0;
 	    var LATITUDE_DEFAULT = 40.416949;
 	    var LONGITUDE_DEFAULT =  -3.703347;
-	    
+	    $rootScope.titlePageTextFilter = $location.path();
 	    $scope.showError = false;
 	    $scope.textError = "";
 	    $scope.is_backend_ready = false;
@@ -162,10 +161,6 @@ function PlaceMapListController($scope,$http,$rootScope)
 	            origin: new google.maps.Point(0,0),
 	            scaledSize:new google.maps.Size(20, 32),
 	            anchor: new google.maps.Point(10, 32)};
-	    /*var bbvaShadow = {url: 'https://developers.google.com/maps/documentation/javascript/examples/images/beachflag.png',
-	            size: new google.maps.Size(20, 32),
-	            origin: new google.maps.Point(0,0),
-	            anchor: new google.maps.Point(0, 32)};*/
 	    
 	    var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
 	        new google.maps.Size(40, 37),
@@ -226,8 +221,7 @@ function PlaceMapListController($scope,$http,$rootScope)
       });
     }
 
-    //$http.get('https://sopragroupux.appspot.com/_ah/api/place/v1/place/').success(function(data)
-    $http.get('https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/').success(function(data)
+    $http.get($scope.URL_API).success(function(data)
     {
         $scope.showError = false;
         $scope.textError = "";
@@ -241,7 +235,7 @@ function PlaceMapListController($scope,$http,$rootScope)
         
       }).error(function(data, status)
       {
-        $scope.textError = "Error al cargar los datos. Por favor, intentalo más tarde";
+        $scope.textError = "Error al cargar los datos. Por favor, intentalo mï¿½s tarde";
         $scope.is_backend_ready = false;
         $scope.showError = true;
     });

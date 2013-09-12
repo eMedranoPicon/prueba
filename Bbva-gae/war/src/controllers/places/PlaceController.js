@@ -74,7 +74,7 @@ function PlaceController($scope, $http, $routeParams, $timeout,$location, $rootS
       console.log('closeModalRemove');
   };
   
-  /* filtrado de eventos */
+  /*filtrado de lugares */
   var indexedPlaces = [];
 
 
@@ -102,10 +102,5 @@ function PlaceController($scope, $http, $routeParams, $timeout,$location, $rootS
     }
   }; 
   
-forcingCriteria = function()
-  {
-   console.log('dentro');
-	console.log($scope);
-  };
    
 };

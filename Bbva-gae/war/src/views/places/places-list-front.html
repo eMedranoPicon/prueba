@@ -2,22 +2,27 @@
 <div class="span16">
     <div class="row-fluid">
     	<div class="span24">
-			<tabset ng-click="forcingCriteria();">
+			<tabset>
 				<tab heading="Todos los Lugares" select='filterCriteria={}'></tab>		
-			     <tab ng-repeat="placetab in placesToFilter() | filter:filterPlaces" heading="{{placetab.typePlace}}" select='filterCriteria.typePlace="{{placetab.typePlace}}"'>
+				<tab heading="Centro Convenciones" select='filterCriteria.typePlace="Centro Convenciones"'></tab>
+				<tab heading="Gimnasio" select='filterCriteria.typePlace="Gimnasio"'></tab>
+				<tab heading="Museo" select='filterCriteria.typePlace="Museo"'></tab>
+				<tab heading="Restaurante" select='filterCriteria.typePlace="Restaurante"'></tab>
+			     <!-- tab ng-repeat="placetab in placesToFilter() | filter:filterPlaces" heading="{{placetab.typePlace}}" select='filterCriteria.typePlace="{{placetab.typePlace}}"'>
 			     {{placetab.typePlace}} 
-    			</tab> 
+    			</tab -->
 			</tabset>    
 		</div>
 		<div class="row-fluid span24 conference-listing">
 	        <div ng-repeat="placesPerCat in placesToFilter() | filter:filterCriteria | filter:filterPlaces | orderBy:orderField:orderReverse" class="row-fluid date-listing conference-listing interactive-listing-container" >
-	        	<div class="span8 day-label">
+	        	<div class="span12">
+	        	    <a href="" class="place-large place-{{placesPerCat.typePlace | acronimoLugar}}"></a>
 	        		<h3>{{placesPerCat.typePlace}}</h3>
 	        	</div>
-	        	<div class="span16 day-schedule">
+	        	<div class="span12">
 		        	<ol ng-repeat="place in places | filter:placesCatFilter(placesPerCat.typePlace) | orderBy:orderField:orderReverse">
 		        		<li class="conference interactive-listing">
-							<h4><a href="#/place-detail/{{place.id}}">{{place.namePlace}}</a></h4>
+							<h4><a href="places.jsp#/place-detail/{{place.id}}">{{place.namePlace}}</a></h4>
 							<p class="location">
 								<a href="#">{{place.fullAddress}}</a>
 							</p>							
