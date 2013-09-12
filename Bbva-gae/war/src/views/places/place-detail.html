@@ -30,8 +30,8 @@
             		<div class="row-fluid">
             			<div class="span8">
             				<!-- google maps-->
-        				    <div ng-controller="MapController">
-        				        <div id="map_canvas" ui-map="myMap" class="map_canvas" ui-options="mapOptions" ui-event="{'map-idle' : 'onMapIdle()'}"></div>
+        				    <div ng-controller="PlaceMapFrontController" ng-init="init('{{place.latitude}}','{{place.longitud}}')">
+        				    	<div id="map_canvas" ui-map="myMap" class="map_canvas" ui-options="mapOptions" ui-event="{'map-idle' : 'onMapIdle()'}"></div>
         				        <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]" ui-event="{'map-click': 'markerClicked(marker)'}"></div>
         				    </div>
         				   <!--EO google maps -->

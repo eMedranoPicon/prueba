@@ -2,14 +2,14 @@
  * PlaceEditController Controlador de edicion de Places
  */
 
-function PlaceDetailController($scope, $http, $routeParams, $rootScope, $location, sharedService) {
+function PlaceDetailController($scope, $http, $routeParams, $rootScope, $location,mapView) {
 	console.log(' controller : PlaceDetailController');
 	$scope.URL_API = 'https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/';
 	$scope.showError = false;
 	$scope.textError = "";
 	$scope.is_backend_ready = false
 	$scope.showEditLayout = false;
-
+	
 	$scope.typePlaceSelect = [ {
 		'type' : '',
 		'description' : ''
@@ -59,20 +59,35 @@ function PlaceDetailController($scope, $http, $routeParams, $rootScope, $locatio
 
 		if ($scope.indexPlace != -1) {
 			$scope.place = $scope.places[$scope.indexPlace];
-			$scope.showDetailLayout = true;
-			 //sharedService.prepForBroadcastLatLong($scope.place.latitude,$scope.place.longitud);
+			$scope.showDetailLayout = true;	
+			//			 
+			 mapView.setLat($scope.place.latitude); 
+			 //mapView.setLong($scope.place.longitud);
+			 
+			 
+			/* $scope.$on('LongChanged', function(event, x) {
+			        $scope.longitud = x;
+			    }); */
+			 $scope.$on('LatChanged', function(event, y) {
+			        $scope.latitude = y;
+			    }); 
+			 
+			 
+			///
 		} else {
 			$scope.showError = true;
 			$scope.textError = "Lugar de Interes" + idPlace + "no encontrado";
 		}
 	}
+	
+	
 
 }
 
-function PlaceMapHomeController($scope,$http,$rootScope,sharedService)
+function PlaceMapHomeController($scope,$http,$rootScope)
 {
 	console.log(' controller : PlaceMapHomeController');
-
+	$scope.URL_API = 'https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/';
 	$scope.myMarkers = [];
     $scope.latitud = 0;
     $scope.longitud = 0;
@@ -134,16 +149,16 @@ function PlaceMapHomeController($scope,$http,$rootScope,sharedService)
       }));
     };
 
-function addMarkerComplete(pos, title)
-{
-  $scope.myMarkers.push(new google.maps.Marker({
-      map : $scope.myMap,
-      position : pos,
-      title : title,
-      icon: bbvaIcon,
-      shadow: pinShadow
-  }));
-};
+	function addMarkerComplete(pos, title)
+	{
+	  $scope.myMarkers.push(new google.maps.Marker({
+	      map : $scope.myMap,
+	      position : pos,
+	      title : title,
+	      icon: bbvaIcon,
+	      shadow: pinShadow
+	  }));
+	};
 
 
 function removeAllMarkers()
@@ -175,20 +190,29 @@ $http.get($scope.URL_API).success(function(data)
     
 }
 
-function PlaceMapFrontController($scope,$http,$rootScope,sharedService)
+function PlaceMapFrontController($scope,$http,$rootScope,mapView)
 {
-		console.log(' controller : PlaceMapFrontController');
-
+	console.log(' controller : PlaceMapFrontController');
+	$scope.URL_API = 'https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/';
     $scope.myMarkers = [];
-    $scope.latitud = 0;
-    $scope.longitud = 0;
-    var LATITUDE_DEFAULT = 40.416949;
-    var LONGITUDE_DEFAULT =  -3.703347;
+    var LATITUDE_DEFAULT = 40.42;
+    var LONGITUDE_DEFAULT =  -3.7;
     
     $scope.showError = false;
     $scope.textError = "";
     $scope.is_backend_ready = false;
     $scope.textTitle = "Listado de Lugares de Interes";
+    
+    //mapView.setLat($scope.place.latitude); 
+	//mapView.setLong($scope.place.longitud);
+	 
+	 
+	/*$scope.$on('LongChanged', function(event, x) {
+	        $scope.longitud = x;
+	    }); 
+	$scope.$on('LatChanged', function(event, y) {
+	        $scope.latitude = y;
+	    }); */
     
     var pinColor = "0066AE";
     var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
@@ -253,63 +277,27 @@ function PlaceMapFrontController($scope,$http,$rootScope,sharedService)
     };
 
 
-    //$scope.myMarkers.splice(0, $scope.myMarkers.length);
     function removeAllMarkers()
     {
       angular.forEach($scope.myMarkers, function(marker) {
         marker.setMap(null);
       });
     }
-
-
-    function calcLatLon(calle,cp,ciudad,pais)
-    {
-      var address = calle + "," +cp+","+ciudad+","+pais;
-      geocoder = new google.maps.Geocoder();
-
-      geocoder.geocode
-       (
-          {
-            'address' : address
-          },
-          function(results, status)
-          {
-              if (status == google.maps.GeocoderStatus.OK)
-              {
-                  console.log('calcLatLon array : ' + results[0].geometry.location + "lat(): "+results[0].geometry.location.lat()+ " lng(): "+results[0].geometry.location.lng());
-                  sharedService.latitud = results[0].geometry.location.lat();
-                  sharedService.longitud = results[0].geometry.location.lng();
-                  $scope.latitud = results[0].geometry.location.lat();
-                  $scope.longitud = results[0].geometry.location.lng();
-                  upDateMap(results[0].geometry.location)
-              }
-              else
-              {
-                console.log("Geocode was not successful for the following reason: " + status);
-              }
-          }
-        );
-    }
-
-
-    $scope.$on('handleBroadcast', function()
-    {
-    	console.log('LANZADO EVENTO DESDE EL CLICK');
-    	
-    	$scope.latitud = sharedService.latitud;
-        $scope.longitud = sharedService.longitud;
-        $scope.calleBdc = sharedService.calleBdc;
-        $scope.cpBdc = sharedService.cpBdc;
-        $scope.ciudadBdc = sharedService.ciudadBdc;
-        $scope.paisBdc = sharedService.paisBdc;
-        
-        calcLatLon($scope.calleBdc,$scope.cpBdc,$scope.ciudadBdc,$scope.paisBdc);
-    });
-
-
-    $scope.$watch('latitud', function()
-    {        
-        calcLatLon(sharedService.calleBdc,sharedService.cpBdc,sharedService.ciudadBdc,sharedService.paisBdc);
-    });
+      
+   /* $scope.$on('LongChanged', function(event, x) {
+        $scope.longitud = x; 
+    $scope.$on('LatChanged', function(event, y) {
+        $scope.latitudeess = y;
+    });*/
     
+    
+    var ladecima  = new google.maps.LatLng($scope.latitude,$scope.longitud);
+    //upDateMap(ladecima);
+    
+    $scope.init = function(lat, long)
+    {
+    	console.log('ladecima ');
+    	console.log(lat+' - '+long);
+    };
 }
+

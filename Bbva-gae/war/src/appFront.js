@@ -54,18 +54,15 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 		controller: PlaceMapHomeController
 	});
 
-	EventDetailController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
-	PlaceDetailController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
-	PlaceMapHomeController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
-	PlaceMapFrontController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
+	EventDetailController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];	
 	MapController.$inject = ['$scope', '$rootScope', 'mySharedService'];
+	
 }]);
-
 
 appFront.factory('mySharedService', function($rootScope)
 {
     var sharedService = {};
-
+    
     sharedService.latitud = '';
     sharedService.longitud = '';
     sharedService.calleBdc = '';
@@ -83,15 +80,38 @@ appFront.factory('mySharedService', function($rootScope)
         this.paisBdc = pais;
         this.broadcastItem();
     };
-
-    sharedService.broadcastItem = function()
-    {
+    sharedService.broadcastItem = function()    {
         $rootScope.$broadcast('handleBroadcast');
     };
-
     return sharedService;
 });
+/*
+appFront.service('mapView', function($rootScope) {    
+    var latitudeView="";
+    var longitudView="";   
+    
+    return {       
+        setLat: function(value) {
+        	latitudeView = value;
+        	 $rootScope.$broadcast('LatChanged', latitudeView);
+        },
+        setLong: function(value) {
+        	longitudView = value;
+            $rootScope.$broadcast('LongChanged', longitudView);
+        }        
+    }
+});*/
 
+appFront.service('mapView', function($rootScope) {    
+    var latitudeView=1;   
+    
+    return {       
+        setLat: function() {
+        	latitudeView++;
+        	 $rootScope.$broadcast('LatChanged', latitudeView);
+        }        
+    }
+});
 
 function findIndexById(id,arrayList)
 {
