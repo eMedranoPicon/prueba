@@ -57,6 +57,7 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 	EventDetailController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
 	PlaceDetailController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
 	PlaceMapHomeController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
+	PlaceMapFrontController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
 	MapController.$inject = ['$scope', '$rootScope', 'mySharedService'];
 }]);
 

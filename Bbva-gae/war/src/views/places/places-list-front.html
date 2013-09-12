@@ -19,9 +19,9 @@
 	        		<h3 class="placeListTitle">{{placesPerCat.typePlace}}</h3>
 	        		<div class="place-list place-{{placesPerCat.typePlace | acronimoLugar}}"></div>
 	        	</div>
-	        	<div class="span12">
+	        	<div class="span12 place-border">
 		        	<ol ng-repeat="place in places | filter:placesCatFilter(placesPerCat.typePlace) | orderBy:orderField:orderReverse">
-		        		<li class="conference interactive-listing">
+		        		<li class="conference">
 							<h4><a href="places.jsp#/place-detail/{{place.id}}">{{place.namePlace}}</a></h4>
 							<p class="location">
 								{{place.fullAddress}}

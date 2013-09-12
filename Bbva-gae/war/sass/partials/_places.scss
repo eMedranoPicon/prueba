@@ -75,9 +75,14 @@
 	{
 	padding-top: 1.5em !important;
 	}
-	.interactive-listing
+	.place-border
 	{
-	border-bottom: 1px solid #c4c3bc !important;
-	margin-bottom: 10px !important;
+		 ol {
+		 	border-bottom:1px solid #c4c3bc;
+		 	&:last-child
+			 {
+			 border-bottom:none;	
+			 }
+		}
 	}
 }

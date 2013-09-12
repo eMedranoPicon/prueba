@@ -17491,10 +17491,13 @@ section.asistentes h3 {
 .place-grid .conference-listing {
   padding-top: 1.5em !important;
 }
-/* line 79, ../sass/partials/_places.scss */
-.place-grid .interactive-listing {
-  border-bottom: 1px solid #c4c3bc !important;
-  margin-bottom: 10px !important;
+/* line 80, ../sass/partials/_places.scss */
+.place-grid .place-border ol {
+  border-bottom: 1px solid #c4c3bc;
+}
+/* line 83, ../sass/partials/_places.scss */
+.place-grid .place-border ol:last-child {
+  border-bottom: none;
 }
 
 /* line 3, ../sass/partials/_videos.scss */

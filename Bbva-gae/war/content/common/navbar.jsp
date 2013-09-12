@@ -49,7 +49,7 @@
 				</ul>
 
 				<form class="navbar-search">
-					<input type="text" class="search-query" placeholder="Search">
+					<input type="text" class="search-query" placeholder="Buscar">
 				</form>
 
 			</div>

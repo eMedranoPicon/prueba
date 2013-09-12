@@ -94,10 +94,6 @@ function PlaceMapHomeController($scope,$http,$rootScope,sharedService)
             origin: new google.maps.Point(0,0),
             scaledSize:new google.maps.Size(20, 32),
             anchor: new google.maps.Point(10, 32)};
-    /*var bbvaShadow = {url: 'https://developers.google.com/maps/documentation/javascript/examples/images/beachflag.png',
-            size: new google.maps.Size(20, 32),
-            origin: new google.maps.Point(0,0),
-            anchor: new google.maps.Point(0, 32)};*/
     
     var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
         new google.maps.Size(40, 37),
@@ -126,7 +122,7 @@ function PlaceMapHomeController($scope,$http,$rootScope,sharedService)
         }
 
         //hace que se ejecuten los watch
-        //$scope.$digest();
+        $scope.$digest();
     }; 
 
 
@@ -150,7 +146,6 @@ function addMarkerComplete(pos, title)
 };
 
 
-//$scope.myMarkers.splice(0, $scope.myMarkers.length);
 function removeAllMarkers()
 {
   angular.forEach($scope.myMarkers, function(marker) {
@@ -158,8 +153,7 @@ function removeAllMarkers()
   });
 }
 
-//$http.get('https://sopragroupux.appspot.com/_ah/api/place/v1/place/').success(function(data)
-$http.get('https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/').success(function(data)
+$http.get($scope.URL_API).success(function(data)
 {
     $scope.showError = false;
     $scope.textError = "";
@@ -173,7 +167,7 @@ $http.get('https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/').success(fu
     
   }).error(function(data, status)
   {
-    $scope.textError = "Error al cargar los datos. Por favor, intentalo más tarde";
+    $scope.textError = "Error al cargar los datos. Por favor, intentalo mï¿½s tarde";
     $scope.is_backend_ready = false;
     $scope.showError = true;
 });
