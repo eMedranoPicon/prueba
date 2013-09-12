@@ -315,18 +315,18 @@ dl.dl-tiempoDeEspera dd {
   background-repeat: no-repeat;
   overflow: hidden;
 }
-/* line 322, ../sass/_tiempoDeEspera.scss */
+/* line 323, ../sass/_tiempoDeEspera.scss */
 .fichaTiemposEspera .fichaTiemposEsperaContent {
   padding-left: 200px;
   overflow: hidden;
   margin: 10px;
 }
-/* line 328, ../sass/_tiempoDeEspera.scss */
+/* line 329, ../sass/_tiempoDeEspera.scss */
 .fichaTiemposEspera .fichaTiemposEsperaContent p {
   margin: 0;
   color: #999999;
 }
-/* line 334, ../sass/_tiempoDeEspera.scss */
+/* line 335, ../sass/_tiempoDeEspera.scss */
 .fichaTiemposEspera .fichaTiemposEsperaContent h3 {
   line-height: 2em;
   color: #155577 !important;
@@ -335,21 +335,21 @@ dl.dl-tiempoDeEspera dd {
   padding: 0;
   margin: 5px 0 5px 0;
 }
-/* line 344, ../sass/_tiempoDeEspera.scss */
+/* line 345, ../sass/_tiempoDeEspera.scss */
 .fichaTiemposEspera .fichaTiemposEsperaContent.tiempoDeEsperaContent {
   display: block;
 }
-/* line 348, ../sass/_tiempoDeEspera.scss */
+/* line 349, ../sass/_tiempoDeEspera.scss */
 .fichaTiemposEspera .fichaTiemposEsperaContent.tiempoDeEsperaContent dl.dl-tiempoDeEspera {
   width: 315px;
   margin-bottom: 0;
 }
-/* line 352, ../sass/_tiempoDeEspera.scss */
+/* line 353, ../sass/_tiempoDeEspera.scss */
 .fichaTiemposEspera .fichaTiemposEsperaContent.tiempoDeEsperaContent dl.dl-tiempoDeEspera dd, .fichaTiemposEspera .fichaTiemposEsperaContent.tiempoDeEsperaContent dl.dl-tiempoDeEspera dt {
   font-size: 1em;
   line-height: 2.4em;
 }
-/* line 356, ../sass/_tiempoDeEspera.scss */
+/* line 357, ../sass/_tiempoDeEspera.scss */
 .fichaTiemposEspera .fichaTiemposEsperaContent.tiempoDeEsperaContent dl.dl-tiempoDeEspera dd {
   width: 125px;
   background-position-y: 6px;
