@@ -1,0 +1,33 @@
+
+
+$blueDark2 	            : 	#104c71;
+$blueDark 	            : 	#063a61;
+$blue3		            :	#1e7dc1;
+$blue2 		            : 	#1d3c54;
+$blue 		            : 	#5299CF;
+$blueBox 		        : 	#A8CCE6;
+
+$white 		            :	#fff;
+$black 		            :	#000;
+
+$textColor 				:	#636363;
+$textColor-blueh2		:	#255072;
+$textColor-blue2		:	#5078BE;
+$textColor-blue			:	#177abe;
+$textColor-blueLight	:	#5299CF;
+$textColor-blueLighter	:	#50B3EC;
+
+$boxLittle	            :   50px;
+
+$fontSizeLarge			:	14px;
+$fontSize 				:	12px;
+$fontSizeSmall 			:	10px;
+
+
+@import "compass/css3/box-shadow";
+
+//http://compass-style.org/reference/compass/css3/images/
+@import "compass/css3/images";
+
+//http://compass-style.org/reference/compass/css3/background_size/
+@import "compass/css3/background-size"

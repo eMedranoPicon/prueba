@@ -94,50 +94,43 @@
 
   <!-- chartContent -->
   <div class="chartContent">
-
-    <div class="fichaTiemposEspera">
-
-
-        <div class="fichaTiemposEsperaText">
-          <!--<h3>Seguros dentales</h3>-->
-          <h4>Los tiempos de espera aproximados son los siguientes</h4>
-          <dl class="dl-tiempoDeEspera">
-            <dt>Medicina General</dt>
-            <dd>De <strong>15</strong> a <strong>30</strong> minutos</dd>
-            <dt>Pediatría</dt>
-            <dd>Más de <strong>30</strong> minutos</dd>
-            <dt>Ginecología</dt>
-            <dd>De <strong>20</strong> a <strong>45</strong> minutos</dd>
-            <dt>Traumatología</dt>
-            <dd>De <strong>20</strong> a <strong>40</strong> minutos</dd>
-          </dl>
-        </div>
-
+    <div class="fichaTiemposEspera tiempoDeEsperaList">
+      <div class="fichaTiemposEsperaContent tiempoDeEsperaContent">
+        <p>Tiempos de espera aproximados</p>
+        <h3>Urgencias Hospital Sanitas La Zarzuela</h3>
+        <dl class="dl-tiempoDeEspera">
+          <dt>Medicina General</dt>
+          <dd>15 - 30 minutos</dd>
+          <hr>
+          <dt>Pediatría</dt>
+          <dd>Más de 30 minutos</dd>
+          <hr>
+          <dt>Ginecología</dt>
+          <dd>20 - 45 minutos</dd>
+          <hr>
+          <dt>Traumatología</dt>
+          <dd>20 - 45 minutos</dd>
+        </dl>
+      </div>
     </div>
 
-
     <form>
-       <div class="span12 otroscentros">
-        <span>Ver Otros Hospitales</span>
+      <h3>Consultar tiempos medios de espera por Centro, especialidad y hora/día</h3>
+      <div class="span12 filterchart">
         <select class="selectpicker">
-          <option>Hospitales</option>
+          <option selected>Hospitales</option>
           <option>Hospital La Moraleja</option>
           <option>Hospital CIMA</option>
         </select>
-      </div>
-      <div class="span12 filterchart">
-
-        <label>Selecciona Especialidad</label>
         <select class="selectpicker">
-          <option>Especialidad</option>
+          <option selected>Especialidad</option>
           <option>Medicina General</option>
           <option>Pediatría</option>
           <option>Ginecología</option>
           <option>Traumatología</option>
         </select>
-        <label>Selecciona día</label>
         <select class="selectpicker">
-          <option>Día</option>
+          <option selected>Día</option>
           <option>Lunes</option>
           <option>Martes</option>
           <option>Miercoles</option>
@@ -148,9 +141,7 @@
         </select>
       </div>
       <canvas id="chartSanitas" width="533" height="400"></canvas>
-
     </form>
-
   </div>
   <!-- EO chartContent -->
 
