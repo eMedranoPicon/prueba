@@ -18,11 +18,7 @@
 <!--[if lt IE 9]>
     <script src="js/lib/html5shiv.js"></script>
   <![endif]-->
-
-
 </head>
-<!--  http://alefeuvre.github.io/foundation-grid-displayer/ -->
-<!-- <body data-grid-framework="bo" data-grid-color="blue" data-grid-opacity="0.5" data-grid-zindex="10" data-grid-nbcols="12">-->
 <body>
 
 	<div class="container">
@@ -56,12 +52,10 @@
 		src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
 	<jsp:include page="/libraries-angular-maps.jsp" />
 	<jsp:include page="/libraries-angular-front.jsp" />
-
-	<jsp:include page="/libraries-js.jsp" />
 	<script src="/src/appBack.js"></script>
-	<script src="/js/authDrive.js"></script>
-	<script src="/js/videos.js"></script>
+	<script src="/js/AuthVideos.js"></script>
+	<script src="/js/videos-test.js"></script>
 	<script type="text/javascript"
-		src="https://apis.google.com/js/client.js?onload=handleClientLoadFront"></script>
+		src="https://apis.google.com/js/client.js?onload=cargando"></script>
 </body>
 </html>
