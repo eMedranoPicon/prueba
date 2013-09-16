@@ -45,8 +45,6 @@
 					</li>
 					<li class="divider-vertical" ng-class="{ active: isActive('/videos.jsp')}">
 					<a href="/videos.jsp">V&iacute;deos</a></li>
-					<li class="divider-vertical">
-					<a href="/videos-test.jsp">V&iacute;deos</a></li>
 				</ul>
 
 				<form class="navbar-search">

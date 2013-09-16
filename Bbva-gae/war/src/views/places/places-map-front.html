@@ -1,10 +1,25 @@
 <div class="container-fluid">	
 	<!-- google maps -->
-    <div>
-        <div id="map_canvas" ui-map="myMap" class="span12 map_canvas Flexible-container" ui-options="mapOptions" ui-event="{'map-idle' : 'onMapIdle()'}"></div>
-        <!--In addition to creating the markers on the map, div elements with existing google.maps.Marker object should be created to hook up with events -->
-        <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]" ui-event="{'map-click': 'markerClicked(marker)'}"></div>
-        <!--<pre>rootscope -> {{rootscope | json}}</pre>-->
+    <div class="span18">
+	    <div id="map_canvas" ui-map="myMap" class="span18 map_canvas Flexible-container" ui-options="mapOptions" ui-event="{'map-idle' : 'onMapIdle()'}"></div>
+	    <!--In addition to creating the markers on the map, div elements with existing google.maps.Marker object should be created to hook up with events -->
+	    <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]" ui-event="{'map-click': 'markerClicked(marker)'}"></div>       
+    </div>
+    <div class="span6">
+    		<aside>
+	    		<header class="header-section">
+					<h2>Filtros</h2>
+				</header>
+				<div class="container-fluid">
+				<button ng-click="filterMarker('')" class="btn btn-large btn-block" type="button">Todos</button>
+				<button ng-click="filterMarker('Restaurante')" class="btn btn-large btn-block" type="button">Restaurantes</button>
+				<button ng-click="filterMarker('Gimnasio')" class="btn btn-large btn-block" type="button">Gimnasios</button>
+				<button ng-click="filterMarker('Centro Convenciones')" class="btn btn-large btn-block" type="button">Centro de Convenciones</button>
+				<button ng-click="filterMarker('Museo')" class="btn btn-large btn-block" type="button">Museos</button>
+				<button ng-click="filterMarker('Plaza')" class="btn btn-large btn-block" type="button">Plazas</button>
+				</div>
+			</aside>
+			
     </div>
     <!-- EO google maps -->	
 </div>

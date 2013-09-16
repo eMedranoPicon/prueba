@@ -50,7 +50,7 @@ appFront.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 		templateUrl: '/src/views/places/places-list-front.html',
 		controller: PlaceController
 	}).when('/places-map', {
-		templateUrl: '/src/views/places/places-map-home.html',
+		templateUrl: '/src/views/places/places-map-front.html',
 		controller: PlaceMapHomeController
 	});
 

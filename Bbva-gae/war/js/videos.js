@@ -19,11 +19,12 @@ function uploadFile(evt) {
  *            callback Function to call when the request is complete.
  */
 function insertFile(fileData, callback) {
+	//
 	$('.progress').removeClass('hide_bar').addClass('show_bar');
 	$('.exito').removeClass('successOn').addClass('successOff');
+	//
 	var titleVideo = document.getElementById("titleVideo").value;	
 	var description = document.getElementById("description").value;
-	// var fileData = evt.target.files[0];
 	const
 	boundary = '-------314159265358979323846';
 	const
@@ -71,8 +72,22 @@ function insertFile(fileData, callback) {
 		});
 		if (!callback) {
 			callback = function(file) {
+				
+				
 				$('.progress').removeClass('show_bar').addClass('hide_bar');
 				$('.exito').removeClass('successOff').addClass('successOn');
+				
+				videoData = {};
+				videoData.id = file.id;
+				videoData.videoID = file.id;
+				videoData.title = file.title;
+				videoData.trashed = false;
+				// Insert a video data
+				gapi.client.video.insertVideo(videoData).execute(function(resp) {
+					console.log(resp);
+					console.log('Guardado Correctamente en Video API');
+				});
+				
 				/* Que sea tipo video y que no este borrado */
 				if (!(typeof file.embedLink === 'undefined')
 						&& (file.explicitlyTrashed != true)) {
@@ -143,7 +158,7 @@ var retrieveAllFiles = function() {
 	}
 	var initialRequest = gapi.client.drive.files.list({
 		'maxResults' : 10,
-		'q' : '"0B7sf9nIuNLe-S0VBdXlrNVl3eGs" in parents'
+		'q' : '"0B7sf9nIuNLe-S0VBdXlrNVl3eGs" in parents and trashed = false'
 	});
 	console.log("initialRequest = " + initialRequest);
 	retrievePageOfFiles(initialRequest, []);
@@ -158,6 +173,13 @@ function removeVideo(idVideo){
 		  request.execute(function(resp,status) {
 			  console.log(status);
 			  alert('Eliminado Correctamente');
+			  
+			// Insert a video data
+				gapi.client.video.removeVideo(idVideo).execute(function(resp) {
+					console.log(resp);
+					console.log('Borrado Correctamente en Video API');
+				});			  
+			  
 			  retrieveAllFiles();
 		  });	
 	
@@ -198,5 +220,49 @@ var retrieveAllFilesFront = function() {
 		'q' : '"0B7sf9nIuNLe-S0VBdXlrNVl3eGs" in parents'
 	});
 	console.log("initialRequest = " + initialRequest);
+	retrievePageOfFiles(initialRequest, []);
+}
+
+
+
+
+
+/**
+ * Show Videos from the folder with id:0B7sf9nIuNLe-S0VBdXlrNVl3eGs
+ * FrontEnd View
+ */
+var retrieveAllFilesFrontVideo = function() {
+	$('.progress').removeClass('hide_bar').addClass('show_bar');
+	var retrievePageOfFiles = function(request, result) {
+		request
+				.execute(function(resp, status) {
+					$('.progress').removeClass('show_bar').addClass('hide_bar');
+					var htmlVideos = '<ul>';
+					for ( var key in resp.items) {
+						/* Que sea tipo video y que no este borrado 
+						 * !(typeof resp.items[key].embedLink === 'undefined')
+								&& */
+						if ((resp.items[key].trashed == false)) {
+							/*var linkAll = resp.items[key].webContentLink;						
+							var link = linkAll.substr(0, linkAll.indexOf('&'));	*/
+							
+						    var URL_BASE = 'https://googledrive.com/host/';
+						    var url_total = URL_BASE+resp.items[key].id+'/';
+						    
+							htmlVideos += '<li><video class="videoSize" controls>'
+									+ '<source src='
+									+ url_total
+									+ ' type="video/mp4">'
+									+ '<source src='
+									+ url_total
+									+ ' type="video/ogg">'
+									+ 'Your browser does not support the video tag.</video></li>';
+						}
+					}
+					htmlVideos += '</ul>';					
+					document.getElementById('ListadoVideos').innerHTML = htmlVideos;
+				});
+	}
+	var initialRequest = gapi.client.video.listVideo();
 	retrievePageOfFiles(initialRequest, []);
 }

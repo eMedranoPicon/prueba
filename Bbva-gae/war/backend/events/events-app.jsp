@@ -61,22 +61,15 @@
 	<jsp:include page="/content/common/footer.html" />
 
 </div>
-
+	<jsp:include page="/libraries-js.jsp" />
 	<jsp:include page="/libraries-angular.jsp" />
 	<script	src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
 	<jsp:include page="/libraries-angular-maps.jsp" />
 	<jsp:include page="/libraries-angular-events.jsp" />
-	<!-- Bloque de Librerias - libreriasjs -->
-	<jsp:include page="/libraries-js.jsp" />
+	<!-- Bloque de Librerias - libreriasjs -->	
 	<script src="/js/calendar.js"></script>
 	<script src="/js/auth.js"></script>
-	<script src="https://apis.google.com/js/client.js?onload=auth"></script>
-	<!--
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
-	-->
-	<!--
-	<script src="/js/maps.js"></script>
-	-->
+	<script src="https://apis.google.com/js/client.js?onload=handleClientLoadCalendar"></script>
 	
 </body>
 </html>

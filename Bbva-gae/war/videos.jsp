@@ -62,6 +62,6 @@
 	<script src="/js/authDrive.js"></script>
 	<script src="/js/videos.js"></script>
 	<script type="text/javascript"
-		src="https://apis.google.com/js/client.js?onload=handleClientLoadFront"></script>
+		src="https://apis.google.com/js/client.js?onload=handleClientLoadFrontVideo"></script>
 </body>
 </html>

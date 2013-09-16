@@ -71,7 +71,11 @@
 		src="/src/lib/angular-ui/ui-bootstrap/ui-bootstrap-tpls-0.5.0.js"></script>
 	
 	<jsp:include page="/libraries-angular-maps.jsp" />
-	<jsp:include page="/libraries-angular-places.jsp" />
+	<jsp:include page="/libraries-angular-places.jsp" />	
+	<script src="/js/authDrive.js"></script>
+	<script src="/js/placesScrap.js"></script>
+	<script type="text/javascript"
+		src="https://apis.google.com/js/client.js?onload=handleClientLoadPlace"></script>
 </body>
 
 </html>
