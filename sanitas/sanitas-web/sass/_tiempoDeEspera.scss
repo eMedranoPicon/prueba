@@ -186,7 +186,7 @@ dl.dl-tiempoDeEspera
 
 //used in: tiempoDeEspera-unhospital
 .contentCajasHospitales {
-	margin-top: 25px;
+	margin-top: 10px;
 }
 
 //used in: tiempoDeEspera-hospitales
@@ -364,4 +364,171 @@ dl.dl-tiempoDeEspera
 }
 // *****************************************
 // EO Modificaciones 11/09/2013
+// *****************************************
+
+
+// *****************************************
+// Modificaciones 16/09/2013
+// *****************************************
+
+//used in: hospital-zarzuela
+.dobleAnchoEspera{
+	width: 408px !important;
+	//border-radius: 6px;
+	@include border-radius(6px);
+	border: #89969F 1px solid;
+	margin: 3px 0px 3px 0px;
+	padding: 5px 5px 3px 5px;
+}
+
+//used in: hospital-zarzuela
+.tiempoDeEspera-unhospital {
+	@include clearfix();
+}
+
+//used in: hospital-zarzuela
+.tiempoDeEspera-image-unhospital
+{
+	@extend .tiempoDeEspera-image;
+	width: 60px !important;
+	display: inline-block;
+
+	i.icon-espera-40
+	{
+		@include background(image-url("espera-2.png"));
+		@include background-size(40px 40px);
+		display: inline-block;
+		padding: 10px 0px 0px 1px;
+		width: 40px;
+		height: 40px;
+		background-repeat:no-repeat;
+		background-position:50% 50%;
+	}
+	span
+	{
+		width: 58px;
+		display: inherit;
+		a{
+			color: $textcolor-blueUnder !important;
+			font-size: $fontSizeUrl;
+			font-weight:  bold;
+
+		}
+		i.icon-flecha-a
+		{
+			@include background(image-url("iconListCajas.gif"));
+			@include background-size(8px 8px);
+			display: inline-block;
+			width: 8px;
+			height: 8px;
+			background-repeat:no-repeat;
+		}
+	}
+}
+
+//used in: hospital-zarzuela
+.tiempoDeEspera-data
+{
+	font-size:  $fontSize;
+	display: inline-block;
+	padding: 0px 0px 5px 0px;
+	margin-top: 1px; // pixel-perfection
+	vertical-align: top;
+	width: 293px; //ancho fijo. diseño
+	font-style:normal;
+
+	dl
+	{
+		@extend dl.dl-tiempoDeEspera;
+		margin-left: 10px;
+		color: $textcolor-grey;
+
+		dt:first-child
+		{
+			margin-top: 0px;
+		}
+	}
+
+	p
+	{
+		@include clearfix();
+		margin: 0px 0 0 0px;
+		font-size: inherit;
+
+		span:nth-last-child(1)
+		{
+			display: block;
+			float: left;
+		}
+
+		span:nth-last-child(2)
+		{
+			display: block;
+			width: 110px;
+			float: left;
+		}
+	}
+
+	p:nth-last-child(1)
+	{
+		margin-top: 0px;
+	}
+
+	span {
+		font-size: inherit;
+		color: $textcolor-blue2;
+	}
+
+	strong.header
+	{
+		display: block;
+		line-height: 15px;
+		vertical-align: top;
+		color: $textcolor-blueTitle;
+		font-size: inherit;
+		padding: 5px 10px;
+	}
+	i.icon-espera
+	{
+		@include background(image-url("espera.png"));
+		@include background-size(25px 25px);
+		display: inline-block;
+		padding: 10px 0px 0px 1px;
+		width: 25px;
+		height: 25px;
+		background-repeat:no-repeat;
+		background-position: center;
+	}
+
+	a{
+		text-decoration:underline;
+	}
+
+}
+
+//used in: hospital-zarzuela
+.tiempoDeEspera-data-unhospital
+{
+	@extend .tiempoDeEspera-data;
+	padding: 0px 0px 4px 0px !important;
+	margin: 6px 0px 11px 0px !important;
+
+	strong.header
+	{
+		display: inline-block !important;
+		padding: 0px 10px !important;
+	}
+}
+
+//used in: tiempos-Espera
+.formChartContent {
+	@extend .chartContent;
+
+	.selectHospital {
+		margin-top: 0px !important;
+	}
+}
+
+// *****************************************
+// EO Modificaciones 16/09/2013
 // *****************************************
