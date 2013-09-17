@@ -24,7 +24,7 @@
 						<a class="dropdown-toggle" data-toggle="dropdown2">Eventos <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="/events.jsp#/events-list">Ver <strong>todos</strong> los eventos</a></li>
-							<li><a href="/events.jsp#/events-prox">Ver eventos <strong>próximos</strong></a></li>
+							<li><a href="/events.jsp#/events-prox">Ver eventos <strong>pr&oacute;ximos</strong></a></li>
 							<li><a href="/events.jsp#/events-past">Ver eventos <strong>pasados</strong></a></li>
 							<li class="divider"></li>
 							<li><a href="/events.jsp#/events-map">Localizar eventos en Google <strong>Maps</strong></a></li>
