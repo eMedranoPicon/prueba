@@ -16,7 +16,7 @@
 		<div class="row-fluid span24 conference-listing">
 	        <div ng-repeat="placesPerCat in placesToFilter() | filter:filterCriteria | filter:filterPlaces | orderBy:orderField:orderReverse" class="row-fluid date-listing conference-listing interactive-listing-container" >
 	        	<div class="span12">	        	    
-	        		<h3 class="placeListTitle">{{placesPerCat.typePlace}}</h3>
+	        		<h3 class="placeListTitle color-{{placesPerCat.typePlace | acronimoLugar}}">{{placesPerCat.typePlace}}</h3>
 	        		<div class="place-list place-{{placesPerCat.typePlace | acronimoLugar}}"></div>
 	        	</div>
 	        	<div class="span12 place-border">

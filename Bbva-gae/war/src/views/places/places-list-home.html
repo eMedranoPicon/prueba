@@ -5,7 +5,7 @@
 		   <a href="" class="place-large place-{{obj.typePlace | acronimoLugar}}"></a>
 		   	<h1>{{obj.namePlace}}</h1>
 		   	<div class="contentEventList">
-		   		<small>{{obj.typePlace}}</small><br/>
+		   		<small class='color-{{obj.typePlace | acronimoLugar}}'>{{obj.typePlace}}</small><br/>
 		   		<strong>{{obj.fullAddress}}</strong>		   		
 		    	<!-- img src="{{obj.urlImg}}" class="pull-left"  -->
 		    	<p class="newLine">{{obj.description | limitTo:200 }}...</p>

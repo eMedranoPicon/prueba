@@ -56,7 +56,7 @@
 		img {
 			width:40%;
 			margin: 0px 10px 10px 0;
-		}
+		}		
 	}
 }
 
@@ -281,10 +281,28 @@ ul.users {
   display: none !important;
 }
 
-.wall-slider{
+.wall-slider
+{
 background-color: #C4C3BC;
 }
-.contentWin{
+.contentWin
+{
 min-height:100px;
 min-width:300px;
+}
+.color-re{
+color:$blueDark!important;
+}
+
+.color-gm{
+color:#32B5B8 !important;
+}
+.color-cc{
+color:#C40461 !important;
+}
+.color-other{
+color:#72A629 !important;
+}
+.color-mu{
+color:#F09000 !important;
 }

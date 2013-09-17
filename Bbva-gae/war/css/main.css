@@ -10229,15 +10229,40 @@ ul.users li {
   display: none !important;
 }
 
-/* line 284, ../sass/partials/_layout.scss */
+/* line 285, ../sass/partials/_layout.scss */
 .wall-slider {
   background-color: #C4C3BC;
 }
 
-/* line 287, ../sass/partials/_layout.scss */
+/* line 289, ../sass/partials/_layout.scss */
 .contentWin {
   min-height: 100px;
   min-width: 300px;
+}
+
+/* line 293, ../sass/partials/_layout.scss */
+.color-re {
+  color: #006ec1 !important;
+}
+
+/* line 297, ../sass/partials/_layout.scss */
+.color-gm {
+  color: #32B5B8 !important;
+}
+
+/* line 300, ../sass/partials/_layout.scss */
+.color-cc {
+  color: #C40461 !important;
+}
+
+/* line 303, ../sass/partials/_layout.scss */
+.color-other {
+  color: #72A629 !important;
+}
+
+/* line 306, ../sass/partials/_layout.scss */
+.color-mu {
+  color: #F09000 !important;
 }
 
 /* line 2, ../sass/partials/_backend.scss */
