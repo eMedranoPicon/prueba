@@ -118,7 +118,7 @@ hgroup.todos.centros.listado article li div
 	div.tiempoDeEspera
 	{
 		width: 90%;
-
+		margin-top: 15px;
 		@media screen and (max-width: 480px)
 		{
 			width: 90%;
@@ -574,5 +574,24 @@ div.tiempoDeEspera
 				}
 			}
 		}
+	}
+}
+
+.button-destacado.blue.more
+{
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+
+hgroup.todos.centros.listado article li div
+{
+	@media only screen and (min-width: 1024px)
+	{
+		min-height: 105px;
+	}
+
+	@media only screen and (min-width: 768px)
+	{
+		min-height: 105px;
 	}
 }
