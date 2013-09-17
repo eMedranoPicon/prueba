@@ -1,5 +1,4 @@
 function cargando(){
-	console.log('intento de carga');
 	mxGoogleDrive.isDriveReady();
 	mxGoogleDrive.checkAuthorization(mxGoogleDrive.authConfig);
 }
@@ -111,7 +110,6 @@ var mxGoogleDrive =
 	handleAuth : function(auth)
 	{
 		mxLog.debug('handleAuth');
-		console.log("entro");
 		mxIntegration.setActiveIntegration(mxGoogleDrive);
 		if (auth == null)
 		{
@@ -200,7 +198,6 @@ var mxGoogleDrive =
 	},
 	isDriveReady : function()
 	{
-		console.log(gapi.client.drive);
 		return gapi.client.drive != null;
 		
 	},

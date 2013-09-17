@@ -116,3 +116,16 @@ section.asistentes
 		color: $blueLight;
 	}
 }
+
+.filtereventsmap{
+  .sombreado{
+    font-size:1.1em;
+    cursor:pointer;
+    margin:3px;
+    padding:5px;
+     &:hover
+     {
+       background-color:$blueDarker;        
+     }
+   }
+}

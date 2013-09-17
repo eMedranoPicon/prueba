@@ -1,4 +1,4 @@
-<!-- include src/views/events/front/event-detail.html -->
+<!-- include src/views/events/front/place-detail.html -->
 <div class="span16">
     <div class="row-fluid">
     	<article class="event-detail place-grid" ng-show="showDetailLayout">
@@ -30,7 +30,7 @@
             		<div class="row-fluid">
             			<div class="span8">
             				<!-- google maps-->
-        				    <div ng-controller="PlaceMapFrontController" ng-init="init('{{place.latitude}}','{{place.longitud}}')">
+        				    <div ng-controller="PlaceMapController">
         				    	<div id="map_canvas" ui-map="myMap" class="map_canvas" ui-options="mapOptions" ui-event="{'map-idle' : 'onMapIdle()'}"></div>
         				        <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]" ui-event="{'map-click': 'markerClicked(marker)'}"></div>
         				    </div>
@@ -63,4 +63,4 @@
 
     </div>
 </div>
-<!-- EO include src/views/events/front/event-detail.html -->
+<!-- EO include src/views/events/front/place-detail.html -->

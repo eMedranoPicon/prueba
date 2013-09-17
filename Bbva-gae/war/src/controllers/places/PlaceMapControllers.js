@@ -1,6 +1,5 @@
-function PlaceMapController($scope, $http, $rootScope, sharedService) {
+function PlaceMapController($scope, $rootScope, sharedServicePlace) {
 	console.log(' controller : PlaceMapController');
-	$scope.URL_API = 'https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/';
 	$scope.myMarkers = [];
 	$scope.latitud = 0;
 	$scope.longitud = 0;
@@ -112,23 +111,17 @@ function PlaceMapController($scope, $http, $rootScope, sharedService) {
 						});
 	}
 
-	$scope.$on('handleBroadcast', function() {
-		console.log('LANZADO EVENTO DESDE EL CLICK');
-
-		$scope.latitud = sharedService.latitud;
-		$scope.longitud = sharedService.longitud;
-		$scope.calleBdc = sharedService.calleBdc;
-		$scope.cpBdc = sharedService.cpBdc;
-		$scope.ciudadBdc = sharedService.ciudadBdc;
-		$scope.paisBdc = sharedService.paisBdc;
-
-		calcLatLon($scope.calleBdc, $scope.cpBdc, $scope.ciudadBdc,
-				$scope.paisBdc);
+	$scope.$on('handleBroadcastPlace', function() {
+		$scope.latitude = sharedServicePlace.latitude;
+		$scope.longitud = sharedServicePlace.longitud;		
+		var punterito = new google.maps.LatLng($scope.latitude, $scope.longitud);		
+		upDateMap(punterito);
 	});
 
-	$scope.$watch('latitud', function() {
-		calcLatLon(sharedService.calleBdc, sharedService.cpBdc,
-				sharedService.ciudadBdc, sharedService.paisBdc);
+	$scope.$watch('latitude', function() {	
+		var punterito = new google.maps.LatLng(sharedServicePlace.latitude, sharedServicePlace.longitud);
+		upDateMap(punterito);
+		
 	});
 
 }

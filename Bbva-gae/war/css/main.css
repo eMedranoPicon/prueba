@@ -10234,6 +10234,12 @@ ul.users li {
   background-color: #C4C3BC;
 }
 
+/* line 287, ../sass/partials/_layout.scss */
+.contentWin {
+  min-height: 100px;
+  min-width: 300px;
+}
+
 /* line 2, ../sass/partials/_backend.scss */
 .control-panel {
   padding: 10px;
@@ -17410,6 +17416,18 @@ section.asistentes h3 {
   color: #52bcec;
 }
 
+/* line 121, ../sass/partials/_events.scss */
+.filtereventsmap .sombreado {
+  font-size: 1.1em;
+  cursor: pointer;
+  margin: 3px;
+  padding: 5px;
+}
+/* line 127, ../sass/partials/_events.scss */
+.filtereventsmap .sombreado:hover {
+  background-color: #094fa4;
+}
+
 /* line 2, ../sass/partials/_places.scss */
 .place-grid .place-large {
   width: 93px;
@@ -17500,6 +17518,28 @@ section.asistentes h3 {
   border-bottom: none;
 }
 
+/*
+.filterplaces 
+{
+ 	.gyms
+ 	{
+ 	//@include background-image(linear-gradient(top, $lightblue, $darkblue));
+ 	background-color:#32B5B8 !important;
+ 	}
+ 	.museums
+ 	{
+ 	background-color:#F09000 !important;
+ 	}
+ 	.ccs
+ 	{
+ 	background-color:#C40461 !important;
+ 	}
+ 	.squares
+ 	{
+ 	background-color:#72A629 !important;
+ 	}
+
+}*/
 /* line 3, ../sass/partials/_videos.scss */
 .videoLayout .videoSize {
   width: 480px !important;

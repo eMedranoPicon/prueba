@@ -2,9 +2,9 @@
  * PlaceEditController Controlador de edicion de Places
  */
 
-function PlaceDetailController($scope, $http, $routeParams, $rootScope,
-		$location, mapView) {
-	console.log(' controller : PlaceDetailController');
+function PlaceDetailController($scope, $http, $routeParams, $rootScope, $location, sharedServicePlace) {
+	
+	console.log("PlaceDetailController");
 	$scope.URL_API = 'https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/';
 	$scope.showError = false;
 	$scope.textError = "";
@@ -30,7 +30,8 @@ function PlaceDetailController($scope, $http, $routeParams, $rootScope,
 		'type' : 'Centro Covenciones',
 		'description' : 'Centro Convenciones'
 	} ];
-
+	
+	console.log('$routeParams.id: '+$routeParams.id)
 	if (angular.isUndefined($scope.places)) {
 		console.log('recargar el scope');
 		$http
@@ -50,7 +51,7 @@ function PlaceDetailController($scope, $http, $routeParams, $rootScope,
 							$scope.showError = true;
 						});
 	} else {
-		console.log('llamada a getPlace');
+		//console.log('llamada a getPlace');
 		getPlace($routeParams.id);
 	}
 
@@ -60,125 +61,15 @@ function PlaceDetailController($scope, $http, $routeParams, $rootScope,
 
 		if ($scope.indexPlace != -1) {
 			$scope.place = $scope.places[$scope.indexPlace];
+			sharedServicePlace.prepForBroadcastPlace($scope.place.latitude,
+					$scope.place.longitud);
 			$scope.showDetailLayout = true;
-			//			 
-			mapView.setLat($scope.place.latitude);
-			// mapView.setLong($scope.place.longitud);
-
-			/*
-			 * $scope.$on('LongChanged', function(event, x) { $scope.longitud =
-			 * x; });
-			 */
-			$scope.$on('LatChanged', function(event, y) {
-				$scope.latitude = y;
-			});
-
-			// /
 		} else {
 			$scope.showError = true;
 			$scope.textError = "Lugar de Interes" + idPlace + "no encontrado";
 		}
 	}
 
-}
-
-function PlaceMapFrontController($scope, $http, $rootScope, mapView) {
-	console.log(' controller : PlaceMapFrontController');
-	$scope.URL_API = 'https://sopraux-bbva.appspot.com/_ah/api/place/v1/place/';
-	$scope.myMarkers = [];
-	var LATITUDE_DEFAULT = 40.42;
-	var LONGITUDE_DEFAULT = -3.7;
-
-	$scope.showError = false;
-	$scope.textError = "";
-	$scope.is_backend_ready = false;
-	$scope.textTitle = "Listado de Lugares de Interes";
-
-	// mapView.setLat($scope.place.latitude);
-	// mapView.setLong($scope.place.longitud);
-
-	/*
-	 * $scope.$on('LongChanged', function(event, x) { $scope.longitud = x; });
-	 * $scope.$on('LatChanged', function(event, y) { $scope.latitude = y; });
-	 */
-
-	var pinColor = "0066AE";
-	var pinImage = new google.maps.MarkerImage(
-			"http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|"
-					+ pinColor, new google.maps.Size(21, 34),
-			new google.maps.Point(0, 0), new google.maps.Point(10, 34));
-	var bbvaIcon = {
-		url : '/img/bbva-icon.png',
-		size : new google.maps.Size(20, 32),
-		origin : new google.maps.Point(0, 0),
-		scaledSize : new google.maps.Size(20, 32),
-		anchor : new google.maps.Point(10, 32)
-	};
-	var pinShadow = new google.maps.MarkerImage(
-			"http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
-			new google.maps.Size(40, 37), new google.maps.Point(0, 0),
-			new google.maps.Point(12, 35));
-
-	var ll = new google.maps.LatLng(LATITUDE_DEFAULT, LONGITUDE_DEFAULT);
-
-	$scope.mapOptions = {
-		center : ll,
-		zoom : 15,
-		mapTypeId : google.maps.MapTypeId.ROADMAP
-	};
-
-	// Markers should be added after map is loaded
-	$scope.onMapIdle = function() {
-		if ($scope.myMarkers === undefined) {
-			var marker = new google.maps.Marker({
-				map : $scope.myMap,
-				position : ll,
-				icon : bbvaIcon,
-				shadow : pinShadow
-			});
-			$scope.myMarkers = [ marker, ];
-		}
-
-		// hace que se ejecuten los watch
-		$scope.$digest();
-	};
-
-	function upDateMap(latLon) {
-		$scope.myMap.setCenter(latLon);
-		removeAllMarkers();
-		addMarker(latLon);
-		/* Zoom */
-		$scope.myMap.setZoom(16);
-	}
-
-	function addMarker(pos) {
-		$scope.myMarkers.push(new google.maps.Marker({
-			map : $scope.myMap,
-			position : pos,
-			icon : bbvaIcon,
-			shadow : pinShadow
-		}));
-	}
-	;
-
-	function removeAllMarkers() {
-		angular.forEach($scope.myMarkers, function(marker) {
-			marker.setMap(null);
-		});
-	}
-
-	/*
-	 * $scope.$on('LongChanged', function(event, x) { $scope.longitud = x;
-	 * $scope.$on('LatChanged', function(event, y) { $scope.latitudeess = y; });
-	 */
-
-	var ladecima = new google.maps.LatLng($scope.latitude, $scope.longitud);
-	// upDateMap(ladecima);
-
-	$scope.init = function(lat, long) {
-		console.log('ladecima ');
-		console.log(lat + ' - ' + long);
-	};
 }
 
 function PlaceMapHomeController($scope, $http, $rootScope) {
@@ -314,8 +205,7 @@ function PlaceMapHomeController($scope, $http, $rootScope) {
 
 	$scope.mapMakers = function($obj) {
 		for (p in $obj) {
-			latlong = new google.maps.LatLng($obj[p].latitude,
-					$obj[p].longitud);
+			latlong = new google.maps.LatLng($obj[p].latitude, $obj[p].longitud);
 
 			switch ($obj[p].typePlace) {
 			case 'Gimnasio':
@@ -334,8 +224,7 @@ function PlaceMapHomeController($scope, $http, $rootScope) {
 				icono = bbvaIcon;
 			}
 
-			var cabecera = $obj[p].namePlace + '('
-					+ $obj[p].typePlace + ') - '
+			var cabecera = $obj[p].namePlace + '(' + $obj[p].typePlace + ') - '
 					+ $obj[p].fullAddress;
 
 			addMarkerComplete(latlong, cabecera, icono);
@@ -345,9 +234,8 @@ function PlaceMapHomeController($scope, $http, $rootScope) {
 
 	$scope.filterMarker = function(param) {
 		removeAllMarkers();
-		$scope.myMarkers = [];	
-		if (param != '') 
-		{			
+		$scope.myMarkers = [];
+		if (param != '') {
 			$scope.placeFiltered = [];
 
 			for (m in $scope.places) {
@@ -357,7 +245,7 @@ function PlaceMapHomeController($scope, $http, $rootScope) {
 				}
 
 			}
-			$scope.mapMakers($scope.placeFiltered);			
+			$scope.mapMakers($scope.placeFiltered);
 		} else {
 			$scope.mapMakers($scope.placesFull);
 		}

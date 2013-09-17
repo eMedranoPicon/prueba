@@ -225,7 +225,12 @@ public class Event {
 	public void setTagsArray() {
 		this.tagsArray = new ArrayList<String>();	
 		if(this.tags != null) {
-		List<String> lista = new ArrayList<String>(Arrays.asList(this.tags.split(",")));
+	    String[] aryt = this.tags.split(",");   
+        String[] trimmedArrayTags = new String[aryt.length];
+        
+        for (int i = 0; i < aryt.length; i++)
+        trimmedArrayTags[i] = aryt[i].trim();    
+		List<String> lista = new ArrayList<String>(Arrays.asList(trimmedArrayTags));
 		this.tagsArray = lista;
 		} else {
 			this.tagsArray.add("No hay tags registradas");
@@ -288,7 +293,13 @@ public class Event {
 	public void setAudienceArray() {
 		this.audienceArray = new ArrayList<String>();	
 		if(this.audience != null) {
-		List<String> listaAudience = new ArrayList<String>(Arrays.asList(this.audience.split(",")));
+		 String[] ary = this.audience.split(",");   
+		 String[] trimmedArray = new String[ary.length];
+		
+		 for (int i = 0; i < ary.length; i++)
+		 trimmedArray[i] = ary[i].trim();
+		 
+		List<String> listaAudience = new ArrayList<String>(Arrays.asList(trimmedArray));		
 		this.audienceArray = listaAudience;
 		} else {
 			this.audienceArray.add("No hay audiencia");

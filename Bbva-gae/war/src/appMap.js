@@ -5,7 +5,6 @@ var maptesting = angular.module('maptesting', ['ui.map','ui.event']);
 maptesting.controller('MapCtrl', ['$scope', function ($scope)
 {
 
-	console.log('appMapCtrl');
 
     var ll = new google.maps.LatLng(13.0810, 80.2740);
 

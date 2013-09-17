@@ -1,10 +1,22 @@
 <div class="container-fluid">
 	<!-- google maps -->
-    <div >
+    <div class="span18">
         <div id="map_canvas" ui-map="myMap" class="span12 map_canvas Flexible-container" ui-options="mapOptions" ui-event="{'map-idle' : 'onMapIdle()'}"></div>
         <!--In addition to creating the markers on the map, div elements with existing google.maps.Marker object should be created to hook up with events -->
         <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]" ui-event="{'map-click': 'markerClicked(marker)'}"></div>
         <!--<pre>rootscope -> {{rootscope | json}}</pre>-->
+    </div>
+    <div class="span6">
+    		<aside class="filtereventsmap">
+	    		<header class="header-section">
+					<h2>Etiquetas</h2>
+				</header>
+				<div class="container-fluid">
+				<div ng-click="filterMarker('')" class="label label-info sombreado" >TODOS</div>
+				<div class="label label-info sombreado" ng-repeat="n in tagsFilter" ng-click="filterMarker('{{n}}')" class="btn">{{n}}</div>
+				</div>
+			</aside>
+			
     </div>
     <!-- EO google maps -->
 </div>

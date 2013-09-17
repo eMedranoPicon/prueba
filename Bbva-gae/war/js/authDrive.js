@@ -98,7 +98,6 @@ function handleAuthResultList(authResultList) {
 	// Access token has been successfully retrieved, requests can be sent to the
 	// API.
 	gapi.client.load('drive', 'v2', function(status) {
-		console.log(status);
 		console.log("Dentro del API for Listing");
 
 			gapi.client.load('video', 'v1', function() {
@@ -141,7 +140,6 @@ function handleAuthResultFront(authResultList) {
 	// Access token has been successfully retrieved, requests can be sent to the
 	// API.
 	gapi.client.load('drive', 'v2', function(status) {
-		console.log(status);
 		console.log("Dentro del API for Front");
 		retrieveAllFilesFront();
 	});

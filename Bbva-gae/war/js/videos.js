@@ -84,7 +84,6 @@ function insertFile(fileData, callback) {
 				videoData.trashed = false;
 				// Insert a video data
 				gapi.client.video.insertVideo(videoData).execute(function(resp) {
-					console.log(resp);
 					console.log('Guardado Correctamente en Video API');
 				});
 				
@@ -160,7 +159,6 @@ var retrieveAllFiles = function() {
 		'maxResults' : 10,
 		'q' : '"0B7sf9nIuNLe-S0VBdXlrNVl3eGs" in parents and trashed = false'
 	});
-	console.log("initialRequest = " + initialRequest);
 	retrievePageOfFiles(initialRequest, []);
 }
 
@@ -171,12 +169,10 @@ function removeVideo(idVideo){
 		    'fileId': idVideo
 		  });
 		  request.execute(function(resp,status) {
-			  console.log(status);
 			  alert('Eliminado Correctamente');
 			  
 			// Insert a video data
 				gapi.client.video.removeVideo(idVideo).execute(function(resp) {
-					console.log(resp);
 					console.log('Borrado Correctamente en Video API');
 				});			  
 			  
@@ -219,7 +215,6 @@ var retrieveAllFilesFront = function() {
 		'maxResults' : 10,
 		'q' : '"0B7sf9nIuNLe-S0VBdXlrNVl3eGs" in parents'
 	});
-	console.log("initialRequest = " + initialRequest);
 	retrievePageOfFiles(initialRequest, []);
 }
 

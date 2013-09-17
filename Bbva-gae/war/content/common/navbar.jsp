@@ -28,10 +28,7 @@
 							<li><a href="/events.jsp#/events-past">Ver eventos <strong>pasados</strong></a></li>
 							<li class="divider"></li>
 							<li><a href="/events.jsp#/events-map">Localizar eventos en Google <strong>Maps</strong></a></li>
-							<li><a href="/events.jsp#/events-calendar">Localizar eventos en Google <strong>Calendar</strong></a></li>
-							<li class="divider"></li>
-							<li><a href="/backend/events/events-map.jsp">Localizar eventos en Google <strong>Maps</strong></a></li>
-							<li><a href="/backend/events/events-calendar.jsp">Localizar	eventos en Google <strong>Calendar</strong></a></li>
+							<li><a href="/events.jsp#/events-calendar">Localizar eventos en Google <strong>Calendar</strong></a></li>						
 						</ul>
 					</li>
 						<!-- Lugares de interes -->

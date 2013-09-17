@@ -1,6 +1,6 @@
 <!-- include views/places/places-list-home.html -->
 <div ng-cloak class=" row-fluid list-events-home place-grid" ng-controller="PlaceController">
-	<div class="span12" ng-repeat="obj in placesToFilter() | filter:filterPlaces">
+	<div class="span12" ng-repeat="obj in placesToFilter().slice(0,4) | filter:filterPlaces">
 		<article class="eventList">
 		   <a href="" class="place-large place-{{obj.typePlace | acronimoLugar}}"></a>
 		   	<h1>{{obj.namePlace}}</h1>

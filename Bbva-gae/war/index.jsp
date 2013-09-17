@@ -68,7 +68,7 @@
 		<section class="section-page">
 			<header class="header-section">
 				<h1>
-					<a href="#">Lugares de Inter&eacutes</a>
+					<a href="/places.jsp#/places-list">Lugares de Inter&eacutes</a>
 				</h1>
 			</header>
 

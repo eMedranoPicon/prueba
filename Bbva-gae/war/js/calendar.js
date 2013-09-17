@@ -57,7 +57,6 @@ function ISODateString(stringDate) {
 	// new Date(yyyy,mm,dd,hh,mm)
 	// dd/mm/yyyy hh:mm
 	var d = new Date(anno, mes, dia, hora, minuto);
-	console.log(d);
 	function pad(n) {
 		return n < 10 ? '0' + n : n
 	}
@@ -77,14 +76,12 @@ function validateDateRange() {
 	var dateEndFormatted = ISODateString(dateEnd);
 
 	if (dateStartFormatted < dateEndFormatted) {
-		console.log('ok');
 		// $('#dateEndLabel').removeClass('error').addClass('valid');
 		$(":submit").removeAttr("disabled");
 	} else {
 		// $('#dateEndLabel').removeClass('valida').addClass('error');
 		alert('fechas incorrectas');
 		$(":submit").attr("disabled", true);
-		console.log('error');
 	}
 
 }
