@@ -20,7 +20,7 @@ var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?
 function initialize() {
 	geocoder = new google.maps.Geocoder();
 	
-	// Centrar España
+	// Centrar Espaï¿½a
 	var myLatlngIni = new google.maps.LatLng(LATITUDE_DEFAULT,
 			LONGITUDE_DEFAULT);
 	var myOptions = {
@@ -223,10 +223,5 @@ function cleanAddress() {
 
 /* Load al final */
 $(document).ready(function() {
-	// auth();
-});
-
-$(window).bind("load", function() {
-	// funciona
-	// previewMap();
+	mapEvents();
 });

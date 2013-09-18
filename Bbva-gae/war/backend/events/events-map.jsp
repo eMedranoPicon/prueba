@@ -29,6 +29,8 @@
 <!--[if lt IE 9]>
       <script src="/js/lib/html5shiv.js"></script>
     <![endif]-->
+<script
+		src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 </head>
 <body>
 
@@ -60,19 +62,13 @@
 			</div>
 
 		</section>
-	</div>	
-	<script
-		src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+	</div>
 	<jsp:include page="/libraries-js.jsp" />
 	<!-- Bloque de Librerias - Angularjs - genericas -->
 	<jsp:include page="/libraries-angular.jsp" />
 	<!-- EO Bloque de Librerias -  Angularjs - genericas -->
 	<script src="/src/appBack.js"></script>
 	<script src="/js/application.js"></script>	
-	<script src="/js/maps.js"></script>
-	<script type="text/javascript">
-		//temporal
-		mapEvents();
-	</script>
+	<script src="/js/maps.js"></script>	
 </body>
 </html>
