@@ -325,3 +325,25 @@ $fluidGridGutterWidth1200:     percentage($gridGutterWidth1200/$gridRowWidth1200
 // 768px-979px
 $fluidGridColumnWidth768:      percentage($gridColumnWidth768/$gridRowWidth768) !default;
 $fluidGridGutterWidth768:      percentage($gridGutterWidth768/$gridRowWidth768) !default;
+
+
+// NEO Default colors
+// -------------------------
+$dark-blue-menu                   : #004B8C !default;
+$clear-blue-menu                  : #0078D2 !default;
+$clear-blue-title                  : #0078D2 !default; //USED
+
+// Colores azules corporativos BBVA
+$dark-blue                        : #004FA4 !default;
+
+//$semiclear-blue                   : #006EC1 !default;
+$semiclear-blue                   : #0065b7 !default; // USED
+
+$clear-blue                       : #009EE5 !default;
+$lighted-blue 					  : #E3F8FE !default;
+$alert                            : #FFFFFF !default;
+$border                           : #DDE3EA !default;
+$bg-bluegray                      : #f5f7f8 !default;
+$bg-header                        : #f4f3ee !default;
+$clear-terrain                    : #F8F8F5 !default;
+$bold                             : 700;

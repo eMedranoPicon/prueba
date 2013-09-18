@@ -1,66 +1,81 @@
 <!-- include src/views/events/front/place-detail.html -->
 <div class="span16">
-    <div class="row-fluid">
-    	<article class="event-detail place-grid" ng-show="showDetailLayout">
-            <header class="place-header">
-            	<a href="" class="place-large place-{{place.typePlace | acronimoLugar}}"></a>
-    			<h1>{{place.namePlace}}</h1>
-    			<h3 class="color-{{place.typePlace | acronimoLugar}}">{{place.typePlace}}</h3>
+	<div class="row-fluid">
+		<article class="event-detail place-grid" ng-show="showDetailLayout">
+			<header class="place-header">
+				<a href=""
+					class="place-large place-{{place.typePlace | acronimoLugar}}"></a>
+				<h1>{{place.namePlace}}</h1>
+				<h3 class="color-{{place.typePlace | acronimoLugar}}">{{place.typePlace}}</h3>
 
-    		</header>
-            <div class="event-content">
-        		<div class="row-fluid">
-        			<div class="span24">
-        				<p>{{place.description}}</p>
-        			</div>
-        		</div>
-        		<div class="row-fluid">
-        			<div class="span8">
-        				<ul class="item-list">
-        					<li><a href="{{place.url}}" target="_blank">{{place.url}}</a></li>
-        				</ul>
-        			</div>
-        			<div class="span8">
-        			</div>
-                    <div class="span8">
-                    </div>
-        		</div>
-                <section class="localizacion-evento">
-                    <h3>Localizaci&oacuten</h3>
-            		<div class="row-fluid">
-            			<div class="span8">
-            				<!-- google maps-->
-        				    <div ng-controller="PlaceMapController">
-        				    	<div id="map_canvas" ui-map="myMap" class="map_canvas" ui-options="mapOptions" ui-event="{'map-idle' : 'onMapIdle()'}"></div>
-        				        <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]" ui-event="{'map-click': 'markerClicked(marker)'}"></div>
-        				    </div>
-        				   <!--EO google maps -->
-            			</div>
-            			<div class="span16">
-            				<span>{{place.fullAddress}}</span>
-            				<ul class="item-list">
-                                <li><a href="https://maps.google.com/maps?q={{place.latitude}},{{place.longitud}}" target="_blank" class="btn">Ver en google maps</a></li>
-                            </ul>
-            			</div>
-            		</div>
-                </section>
-                <section class="asistentes">
-                    <h3>Responsable</h3>
-                    <div class="row-fluid">
-                        <div class="span24">
-                                    <div class="contact-place"> {{place.name}} - {{place.email}}</div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-    	</article>
+			</header>
+			<div class="event-content">
+				<div class="row-fluid">
+					<div class="span24">
+						<p>{{place.description}}</p>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="span8">
+						<ul class="item-list">
+							<li><a href="{{place.url}}" target="_blank">{{place.url}}</a></li>
+						</ul>
+					</div>
+					<div class="span8"></div>
+					<div class="span8"></div>
+				</div>
+				<section class="localizacion-evento">
+					<h3>Localizaci&oacuten</h3>
+					<div class="row-fluid">
+						<div class="span8">
+							<!-- google maps-->
+							<div ng-controller="PlaceMapController">
+								<div id="map_canvas" ui-map="myMap" class="map_canvas"
+									ui-options="mapOptions" ui-event="{'map-idle' : 'onMapIdle()'}"></div>
+								<div ng-repeat="marker in myMarkers"
+									ui-map-marker="myMarkers[$index]"
+									ui-event="{'map-click': 'markerClicked(marker)'}"></div>
+							</div>
+							<!--EO google maps -->
+						</div>
+						<div class="span16">
+							<span>{{place.fullAddress}}</span>
+							<ul class="item-list">
+								<li><a
+									href="https://maps.google.com/maps?q={{place.latitude}},{{place.longitud}}"
+									target="_blank" class="btn">Ver en google maps</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="asistentes">
+					<h3>Responsable</h3>
+					<div class="row-fluid">
+						<div class="span24">
+							<div class="contact-place">{{place.name}} - {{place.email}}</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</article>
 
-    </div>
+	</div>
 </div>
 
-<div class="span8">
-    <div class="row-fluid">
+<aside class="span8 c-with-header">
 
-    </div>
-</div>
+	<div class="news">
+		<header class="header">
+			<h1 class="clearfix">Lugares relacionados</h1>
+		</header>
+		<ul>
+			<li><a href="/places.jsp#/place-detail/6198977837924352">Hard Rock Cafe</a>
+				<p class="color-re">Restaurante</p></li>
+			<li><a href="/places.jsp#/place-detail/4909628655665152">Hotel Melia Valencia Palacio de Congresos</a>
+				<p class="color-cc">Centro Convenciones</p></li>
+			<li><a href="/places.jsp#/place-detail/5747559595245568">Museo del Prado</a>
+				<p class="color-mu">Museo</p></li>
+		</ul>
+	</div>
+</aside>
 <!-- EO include src/views/events/front/place-detail.html -->
