@@ -1,0 +1,23 @@
+/* Custom css*/
+
+.jqplot-highlighter-tooltip,.jqplot-canvasOverlay-tooltip {
+	background-color: #ffffff;
+	border:solid 2px #0178C8 !important;
+	padding: 5px;
+	z-index: 100;
+}
+
+
+.jqplot-x2axis{
+	margin-top: 50px !important;
+	margin-bottom: -10px !important;
+}
+
+.jqplot-point-label{
+	margin-top: 15px !important;
+	margin-bottom: -15px !important;
+}
+
+#chartTiempoDeEspera{
+	margin-top: -40px !important;
+}

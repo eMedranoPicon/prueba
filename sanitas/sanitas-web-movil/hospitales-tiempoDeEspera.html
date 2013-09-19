@@ -14,6 +14,7 @@
     <link href="support/SanitasMovil/css/main.css" media="screen" rel="stylesheet" type="text/css" />
     <!-- TIEMPO DE ESPERA -->
     <link href="css/site_sanitas_movil/web-movil-TiempoDeEspera.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="css/site_sanitas_movil/customSanitas.css" media="screen" rel="stylesheet" type="text/css" />
     <!-- EO TIEMPO DE ESPERA -->
     <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -88,7 +89,7 @@
     }
     });
 
-// TIEMPO DE ESPERA
+/* TIEMPO DE ESPERA
     (function($) {
 
       // My micro jQuery templating engine
@@ -108,7 +109,7 @@
         });
 
       });
-    })(jQuery);
+    })(jQuery);*/
     // EO TIEMPO DE ESPERA
 
 
@@ -153,7 +154,96 @@
     <!--left-->
 
     <!-- TIEMPO DE ESPERA -->
-    <span class="includeExternal" data-html="includes/tiempoDeEspera-detalle.html"></span>
+    <!--span class="includeExternal" data-html="includes/tiempoDeEspera-detalle.html"></span-->
+    <!-- TIEMPO DE ESPERA -->
+    <article class="tiempoDeEspera-detalle">
+      <a class="button-destacado white back "><span></span>Hospital la Zarzuela</a>
+      <h1>TIEMPO DE ESPERA EN URGENCIAS</h1>
+
+      <div class="box-grey noborder shadow">
+
+        <div class="box-white">
+
+          <article class="tiempoDeEspera-urgencias">
+
+            <form>
+                  <div class="span12 otroscentros">
+                  <select class="selectpicker">
+                    <option selected>Hospital Sanitas La Zarzuela</option>
+                    <option>Hospital La Moraleja</option>
+                    <option>Hospital CIMA</option>
+                  </select>
+                </div>
+
+            <div class="container-images">
+                    <img src="img/site_sanitas_movil/img-mov.jpg" alt="" />
+                </div>
+
+
+
+              <div class="tiempoDeEspera-urgencias box-tiempoDeEspera">
+              <h2>TIEMPO DE ESPERA EN URGENCIAS</h2>
+                <div class="container-tiempoDeEspera">
+                <dl class="dl-tiempoDeEspera iconTime first" >
+                <dt>Medicina General</dt>
+                <dd>De <strong>15</strong> a <strong>30</strong> minutos</dd>
+                <dt>Pediatría</dt>
+                <dd>Más de <strong>30</strong> minutos</dd>
+                  </dl>
+                  <dl class="dl-tiempoDeEspera last" >
+                <dt>Ginecología</dt>
+                <dd>Más de <strong>30</strong> minutos</dd>
+                <dt>Traumatología</dt>
+                <dd>Más de <strong>30</strong> minutos</dd>
+                  </dl>
+                </div>
+            </div>
+
+              <div class="container-article">
+
+                <p>
+                        In rutrum eleifend tortor, et condimentum erat placerat ut. Curabitur metus nulla, malesuada sed sem ac, posuere blandit nisi. Nunc vel dolor eget est imperdiet condimentum. Donec nec elementum mauris. Quisque non tellus at elit elementum adipiscing. Aenean nec quam arcu.
+                      </p>
+
+                  <div class="grafico-afluencia">
+
+                    <div class="span12 filterchart">
+
+                      <select class="selectpicker">
+                        <option>Especialidad</option>
+                        <option>Medicina General</option>
+                        <option>Pediatría</option>
+                        <option>Ginecología</option>
+                        <option>Traumatología</option>
+                      </select>
+
+                      <select class="selectpicker">
+                        <option>Día</option>
+                        <option>Lunes</option>
+                        <option>Martes</option>
+                        <option>Miercoles</option>
+                        <option>Jueves</option>
+                        <option>Viernes</option>
+                        <option>Sábado</option>
+                        <option>Domingo</option>
+                      </select>
+                    </div>
+                    <div id="grafico" class="container-article grafico">
+                     <div id="chartTiempoDeEspera" style="width:540px; height:300px"></div>
+                    </div>
+                  
+                </form>
+                  </div>
+                </div>
+
+            </article>
+
+        </div>
+
+      </div>
+
+    </article>
+    <!-- EO TIEMPO DE ESPERA -->
     <!-- EO TIEMPO DE ESPERA -->
 
     <!--left-->
@@ -216,13 +306,26 @@
   <footer>
     <a href="">Aviso Legal</a> © 2013 Sanitas.es
   </footer>
+  <!-- TIEMPO DE ESPERA -->
+    <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="js/site_sanitas_movil/jqplot/excanvas.js"></script><![endif]-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/site_sanitas_movil/jqplot/jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="js/site_sanitas_movil/jqplot/plugins/jqplot.barRenderer.min.js"></script>
+    <script type="text/javascript" src="js/site_sanitas_movil/jqplot/plugins/jqplot.pieRenderer.min.js"></script>
+    <script type="text/javascript" src="js/site_sanitas_movil/jqplot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+    <script type="text/javascript" src="js/site_sanitas_movil/jqplot/plugins/jqplot.pointLabels.min.js"></script>
+    <!-- Additional plugins go here -->
+    <script type="text/javascript" src="js/site_sanitas_movil/jqplot/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>
+    <script type="text/javascript" src="js/site_sanitas_movil/jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
+    <script  type="text/javascript" src="js/site_sanitas_movil/jqplot/plugins/jqplot.pointLabels.min.js"></script>
+    <script  type="text/javascript" src="js/site_sanitas_movil/jqplot/plugins/jqplot.highlighter.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="js/site_sanitas_movil/jqplot/jquery.jqplot.min.css" />
+    
+    <!-- EO TIEMPO DE ESPERA -->
 
   <script src="support/SanitasMovil/js/sanitas/main.js"></script>
-
-   <!--  TIEMPO DE ESPERA Chart -->
-  <script src="js/site_sanitas_movil/chart/Chart.js"></script>
-  <script src="js/site_sanitas_movil/chart/Chart-data.js"></script>
-  <!--  EO TIEMPO DE ESPERA Chart -->
-
+  <!-- carga final de grafico-->
+  <script type="text/javascript" src="js/site_sanitas_movil/customChart.js"></script>
 </body>
 </html>

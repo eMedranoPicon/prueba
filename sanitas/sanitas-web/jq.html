@@ -161,7 +161,23 @@ $(document).ready(function()
             },
             pointLabels: { show: true },
             shadow: false,
-            showMarker: true
+            //showMarker: true,
+             markerRenderer: $.jqplot.MarkerRenderer,    // renderer to use to draw the data
+             // point markers.
+            markerOptions: {
+            show: true,             // wether to show data point markers.
+            style: 'filledSquare',  // circle, diamond, square, filledCircle.
+            // filledDiamond or filledSquare.
+            lineWidth: 0,       // width of the stroke drawing the marker.
+            size: 3,            // size (diameter, edge length, etc.) of the marker.
+            color: '#C4DFF2',    // color of marker, set to color of line by default. C4DFF2
+            shadow: true,       // wether to draw shadow on marker or not.
+            shadowAngle: 45,    // angle of the shadow.  Clockwise from x axis.
+            shadowOffset: 1,    // offset from the line of the shadow,
+            shadowDepth: 1,     // Number of strokes to make when drawing shadow.  Each stroke
+            // offset by shadowOffset from the last.
+            shadowAlpha: 0.5   // Opacity of the shadow
+            }
 
         },
         seriesColors: ['#708800'],
@@ -221,7 +237,7 @@ $(document).ready(function()
     // display series_label, x-axis_tick, y-axis value
     var texto =  plot2.data[seriesIndex][pointIndex][1]+"min de espera a las " + plot2.data[seriesIndex][pointIndex][0]+":00";
     return texto;
-}
+    }
 });
 </script>
 

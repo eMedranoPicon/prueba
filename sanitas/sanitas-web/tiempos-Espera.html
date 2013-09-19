@@ -180,12 +180,20 @@
 
 <!-- TIEMPO DE ESPERA -->
 <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="js/jqplot/excanvas.js"></script><![endif]-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/jqplot/jquery.jqplot.min.js"></script>
 <script type="text/javascript" src="js/jqplot/plugins/jqplot.barRenderer.min.js"></script>
 <script type="text/javascript" src="js/jqplot/plugins/jqplot.pieRenderer.min.js"></script>
 <script type="text/javascript" src="js/jqplot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
 <script type="text/javascript" src="js/jqplot/plugins/jqplot.pointLabels.min.js"></script>
-<link rel="stylesheet" type="text/css" hrf="js/jqplot/jquery.jqplot.css" />
+<!-- Additional plugins go here -->
+<script type="text/javascript" src="js/jqplot/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>
+<script type="text/javascript" src="js/jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
+<script  type="text/javascript" src="js/jqplot/plugins/jqplot.pointLabels.min.js"></script>
+<script  type="text/javascript" src="js/jqplot/plugins/jqplot.highlighter.js"></script>
+
+<link rel="stylesheet" type="text/css" href="js/jqplot/jquery.jqplot.min.css" />
+<link rel="stylesheet" type="text/css" href="css/customSanitas.css" />
 
 <script type="text/javascript" src="js/customChart.js"></script>
 <!-- EO TIEMPO DE ESPERA -->
@@ -806,10 +814,10 @@
                     title="Nueva ventana para enviar por email"
                     src="support/Sanitas/sanitas/wcm/idc/groups/public/documents/digitalmedia/iconsend.gif" /></a>
                   <script type="text/javascript"
-                    src="../../../../../../../js/medicoscentros/jquery.validate.js"></script>
+                    src="support/Sanitas/sanitas/js/medicoscentros/jquery.validate.js"></script>
                   <script type="text/javascript"
                     src="support/Sanitas/sanitas/wcm/idc/groups/public/%40san/%40san/%400/documents/document/san_sia_scr_iconscompartir.js"></script>
-                    <div id="TopMsg" class="MsgBoxSeguros2">
+                    <div id="TopMsg" style="display:none" class="MsgBoxSeguros2">
                       <form method="post"
                         action="http://www.sanitas.es/sanitas/mandar-email-amigo"
                         name="enviarPorMailAmigo" id="enviarPorMailAmigo">
