@@ -1,5 +1,5 @@
-/* Custom css*/
-.jqplot-series-canvas,.jqplot-series-shadowCanvas
+/* Custom css .jqplot-series-canvas, .jqplot-series-shadowCanvas*/
+.jqplot-series-canvas
 {
 /* Note: This gradient may render differently in browsers that don't support the unprefixed gradient syntax */
 
