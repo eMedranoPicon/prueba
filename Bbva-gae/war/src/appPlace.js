@@ -30,7 +30,7 @@ appPlace.config(['$routeProvider', '$httpProvider', function ($routeProvider, $h
 
 	PlaceInsertController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
 	PlaceEditController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
-	PlaceMapController.$inject = ['$scope', '$http','$rootScope', 'mySharedService'];
+	PlaceMapControllerBack.$inject = ['$scope', '$http','$rootScope', 'mySharedService'];
 	PlaceMapListController.$inject = ['$scope', '$http', '$routeParams', '$rootScope', '$location', 'mySharedService'];
 
 }]);

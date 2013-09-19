@@ -143,7 +143,7 @@
 				</div>
 				<div class="span15">
 					<div class="Flexible-container">
-						<div id="map-canvas" class="map_canvas"></div>
+						<div id="map-canvas-event" class="map_canvas"></div>
 					</div>
 					<div class="Flexible-container">
 						<iframe

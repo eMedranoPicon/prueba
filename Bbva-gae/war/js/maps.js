@@ -36,7 +36,7 @@ function initialize() {
 	    },
 	    mapTypeId: google.maps.MapTypeId.ROADMAP
 	};
-	map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+	map = new google.maps.Map(document.getElementById("map-canvas-event"), myOptions);
 	marker = new google.maps.Marker({
 		map : map,
 		position : myLatlngIni,

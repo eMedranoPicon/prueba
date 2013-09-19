@@ -12,7 +12,7 @@
 	
     <!-- google maps -->
     <div class="span15">
-	    <div ng-controller="PlaceMapController">
+	    <div ng-controller="PlaceMapControllerBack">
 	        <div id="map_canvas" ui-map="myMap" class="map_canvas" ui-options="mapOptions" ui-event="{'map-idle' : 'onMapIdle()'}"></div>
 	        <!--In addition to creating the markers on the map, div elements with existing google.maps.Marker object should be created to hook up with events -->
 	        <div ng-repeat="marker in myMarkers" ui-map-marker="myMarkers[$index]" ui-event="{'map-click': 'markerClicked(marker)'}"></div>

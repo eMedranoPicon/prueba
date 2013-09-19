@@ -55,7 +55,7 @@
 				<div class="row-fluid">
 					<div class="span24">
 						<div class="Flexible-container">
-							<div id="map-canvas" class="map_canvas map_canvas_list"></div>
+							<div id="map-canvas-event" class="map_canvas map_canvas_list"></div>
 						</div>
 					</div>
 				</div>

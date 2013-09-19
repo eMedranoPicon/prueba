@@ -164,7 +164,7 @@ angular.module('titlePage', []).filter('titlePage', function()
         }
 
 
-        else{ return input;}
+        else{ return 'Eventos';}
       }
     };
 });
@@ -181,21 +181,21 @@ angular.module('titlePageBack', []).filter('titlePageBack', function()
 		      {
 		        if (input.indexOf('place-edit') != -1 )
 		        {
-		          return 'Edición Lugar de Interés';
+		          return 'Edicion Lugar de Interes';
 		        }
 		        if (input.indexOf('place-new') != -1 )
 		        {
-		          return 'Nuevo Lugar de Interés';
+		          return 'Nuevo Lugar de Interes';
 		        }
 		        if (input.indexOf('place-map') != -1 )
 		        {
-		          return 'Mapa Lugares de Interés';
+		          return 'Mapa Lugares de Interes';
 		        }  
 		        if (input.indexOf('/places-app') != -1 )
 		        {
-			          return 'Listado Lugares de Interés';
+			          return 'Listado Lugares de Interes';
 			    }
-		        else{ return input;}
+		        else{ return 'Lugares de Interes';}
 		      }
 		    };
 		});
