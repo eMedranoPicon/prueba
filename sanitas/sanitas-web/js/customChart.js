@@ -1,17 +1,76 @@
-/*
-  $(document).ready(function ()
-  {
-    $.jqplot('chartTiempoDeEspera',  [[[1, 2],[3,5.12],[5,13.1],[7,33.6],[9,85.9],[11,219.9]]]);
-  });
-*/
-  $(document).ready(function(){
-        $.jqplot.config.enablePlugins = true;
-     var s1 =    [20,   10,  10,  10,  10,  10,  15,  18,  18,  25,  25,  30,  50,  50,  50,  55,  40,  25,  18,  18,  15,  10,  10,  10];
-     var ticks = ['08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','00','01','02','03','04','05','06','07']; 
+  $(window).bind("load", function() {         
+         chartData('a');
+      });
+    function chartData(datos)
+     {
+     console.log(datos);
+     $.jqplot.config.enablePlugins = true;
+     var valores = [];
+     var TICKS = ['08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','00','01','02','03','04','05','06','07']; 
+
+     /* Datos Especialidades*/
+     var defaults_v =    [15,  15,  15,  15,  15,  15,  20,  20,  20,  20,  20,  25,  40,  40,  45,  45,  40,  25,  18,  18,  15,  10,  10,  10];
+     var medicina_v =    [20,  10,  10,  10,  10,  10,  15,  18,  18,  25,  25,  30,  50,  50,  50,  55,  40,  25,  18,  18,  15,  10,  10,  10];
+     var pediatria_v =   [30,  25,  10,  20,  15,  30,  15,  10,  10,  20,  35,  30,  40,  40,  50,  50,  30,  25,  18,  18,  15,  10,  10,  10];
+     var ginecologia_v = [20,  20,  10,  10,  10,  20,  10,  10,  15,  30,  35,  35,  50,  50,  40,  40,  40,  20,  15,  15,  10,   5,   5,   5];
+     var trauma_v =      [20,  20,  10,  10,  25,  30,  25,  20,  30,  10,  15,  20,  30,  40,  45,  50,  45,  30,  20,  20,  15,  10,  10,  15];
+
+       /* Datos Especialidades*/
+     var lunes_v =       [10,  15,  15,  10,  10,  15,  20,  20,  20,  20,  20,  25,  40,  40,  40,  45,  40,  25,  20,  18,  15,  10,  10,  10];
+     var martes_v =      [10,  10,  10,  5,  5,  10,  15,  18,  18,  25,  25,  30,  50,  50,  55,  55,  40,  25,  20,  18,  15,  10,  10,  10];
+     var miercoles_v =   [10,  25,  10,  15,  20,  30,  15,  10,  10,  20,  35,  30,  40,  40,  45,  50,  30,  25,  20,  18,  15,  10,  10,  10];
+     var jueves_v = [10,  20,  10,  10,  15,  20,  10,  10,  15,  30,  35,  35,  50,  50,  40,  45,  40,  20,  15,  10,  10,   5,   5,   5];
+     var viernes_v =     [10,  20,  10,  15,  20,  30,  25,  20,  30,  10,  15,  20,  30,  40,  50,  50,  45,  30,  15,  20,  15,  10,  10,  15]; 
+     var sabado_v =      [10,  15,  15,  15,  15,  15,  20,  20,  20,  20,  20,  25,  40,  40,  40,  45,  40,  25,  20,  18,  15,  10,  10,  10];
+     var domingo_v =     [15,  10,  10,  10,  10,  10,  15,  18,  18,  25,  25,  30,  50,  50,  55,  55,  40,  25,  20,  18,  15,  10,  10,  10];
+
+
+      switch(datos)
+      {
+      /*Especialidades*/
+      case 'ginecologia':
+        valores = ginecologia_v;
+        break;
+      case 'pediatria':
+        valores = pediatria_v;
+        break;
+      case 'trauma':
+      valores = trauma_v;
+      break;
+      case 'medicina':
+      valores = medicina_v;
+      break;
+      /*Especialidades*/      
+      case 'lunes':
+        valores = lunes_v;
+        break;
+      case 'martes':
+        valores = martes_v;
+        break;
+      case 'miercoles':
+      valores = miercoles_v;
+      break;
+      case 'jueves':
+      valores = jueves_v;
+      break;
+      case 'viernes':
+        valores = viernes_v;
+        break;
+      case 'sabado':
+        valores = sabado_v;
+        break;
+      case 'domingo':
+      valores = domingo_v;
+      break;
+      /*default data*/
+      default:
+        valores = defaults_v;
+        break;       
+      }
 
     var datas = [];
-     for(t in s1){
-             datas[t]=[ticks[t],s1[t]]; 
+     for(t in TICKS){
+             datas[t]=[TICKS[t],valores[t]]; 
      }
       var plot2 = $.jqplot('chartTiempoDeEspera', [datas,datas], {
         // Only animate if we're not using excanvas (not in IE 7 or IE 8)..
@@ -81,6 +140,7 @@
         highlighter: {
         tooltipAxes: 'yx',
         useAxesFormatters: true,
+        tooltipLocation:'n',
         tooltipContentEditor:tooltipContentEditor,
         sizeAdjust: 20.5
         },
@@ -99,10 +159,14 @@
         shadowAlpha: 0.07           // Opacity of the shadow
         }
       });
+      
+      function tooltipContentEditor(str, seriesIndex, pointIndex, plot) {
+        // display series_label, x-axis_tick, y-axis value
+        var texto =  plot2.data[seriesIndex][pointIndex][1]+"min de espera <br> a las " + plot2.data[seriesIndex][pointIndex][0]+":00";
+        return texto;
+        }
 
-    function tooltipContentEditor(str, seriesIndex, pointIndex, plot) {
-    // display series_label, x-axis_tick, y-axis value
-    var texto =  plot2.data[seriesIndex][pointIndex][1]+"min de espera a las " + plot2.data[seriesIndex][pointIndex][0]+":00";
-    return texto;
-    }
+     }
+
+$(document).ready(function(){     
 });

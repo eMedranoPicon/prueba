@@ -6,10 +6,19 @@
 	padding: 5px;
 	z-index: 100;
 }
+
+.flexible {
+	max-width: 80% !important;
+	min-width: 320px !important;
+}
+.chartTiempoDeEspera{	
+	width: 100%;
+}
+.jqplot-base-canvas{
+   width: 100% !important;	
+}
 .chartContent{
 	margin: auto;
 	width: 80%;
-}
-#chartTiempoDeEspera{
-	margin-top: 40px !important;
+	border: 
 }

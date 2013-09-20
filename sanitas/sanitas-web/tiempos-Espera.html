@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <!-- Mirrored from www.sanitas.es/sanitas/seguros/es/particulares/medicosycentros/hospital_zarzuela/sobre_el_hospital/nuevas-habitaciones-suites/index.html by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 08 Aug 2013 10:34:59 GMT -->
@@ -16,9 +17,11 @@
 
 <!-- TIEMPO DE ESPERA -->
 <link href="css/web-TiempoDeEspera.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/customSanitas.css" media="screen" rel="stylesheet" type="text/css" />
 <!--[if lte IE 8]>
 <script src="js/chart/excanvas.js"></script>
 <![endif]-->
+
 <!-- EO TIEMPO DE ESPERA -->
 
 <script type="text/javascript"
@@ -80,7 +83,7 @@
 <script type="text/javascript"
   src="support/Sanitas/sanitas/wcm/idc/groups/public/%40san/%40san/%400/documents/document/san_sia_scr_sbsanitas_api.js"></script>
 <script type="text/javascript">
-  var sb = new SearchBroker("http://sbsanitas.colbenson.es/sb2-sanitas/",
+ var sb = new SearchBroker("http://sbsanitas.colbenson.es/sb2-sanitas/",
       true, false).init();
 </script>
 <script type="text/javascript"
@@ -181,19 +184,14 @@
 <!-- TIEMPO DE ESPERA -->
 <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="js/jqplot/excanvas.js"></script><![endif]-->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
 <script type="text/javascript" src="js/jqplot/jquery.jqplot.min.js"></script>
 <script type="text/javascript" src="js/jqplot/plugins/jqplot.barRenderer.min.js"></script>
 <script type="text/javascript" src="js/jqplot/plugins/jqplot.pieRenderer.min.js"></script>
 <script type="text/javascript" src="js/jqplot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
 <script type="text/javascript" src="js/jqplot/plugins/jqplot.pointLabels.min.js"></script>
-<!-- Additional plugins go here -->
-<script type="text/javascript" src="js/jqplot/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>
-<script type="text/javascript" src="js/jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
-<script  type="text/javascript" src="js/jqplot/plugins/jqplot.pointLabels.min.js"></script>
-<script  type="text/javascript" src="js/jqplot/plugins/jqplot.highlighter.js"></script>
-
-<link rel="stylesheet" type="text/css" href="js/jqplot/jquery.jqplot.min.css" />
-<link rel="stylesheet" type="text/css" href="css/customSanitas.css" />
+<script type="text/javascript" src="js/jqplot/plugins/jqplot.highlighter.js"></script>
+<link rel="stylesheet" type="text/css" hrf="js/jqplot/jquery.jqplot.css" />
 
 <script type="text/javascript" src="js/customChart.js"></script>
 <!-- EO TIEMPO DE ESPERA -->
@@ -817,7 +815,7 @@
                     src="support/Sanitas/sanitas/js/medicoscentros/jquery.validate.js"></script>
                   <script type="text/javascript"
                     src="support/Sanitas/sanitas/wcm/idc/groups/public/%40san/%40san/%400/documents/document/san_sia_scr_iconscompartir.js"></script>
-                    <div id="TopMsg" style="display:none" class="MsgBoxSeguros2">
+                    <div id="TopMsg" class="MsgBoxSeguros">
                       <form method="post"
                         action="http://www.sanitas.es/sanitas/mandar-email-amigo"
                         name="enviarPorMailAmigo" id="enviarPorMailAmigo">
@@ -844,7 +842,7 @@
                           <input type="hidden" name="captchaactual" id="captchaactual"
                             value="" />
                           <li><img class="imagenCaptcha"
-                            src="../../../../../../../simpleImg.png"
+                            src="support/Sanitas/sanitas/simpleImg.png"
                             alt="introducir codigo captcha" title="introducir codigo captcha"
                             id="alinearimagen" /></li>
                           <li><h6 class="liEnviar">
@@ -904,23 +902,23 @@
 
                   <h3>Consultar tiempos medios de espera por especialidad y hora/día</h3>
                   <div class="span12 filterchart">
-                    <select >
-                      <option selected>Especialidad</option>
-                      <option>Medicina General</option>
-                      <option>Pediatría</option>
-                      <option>Ginecología</option>
-                      <option>Traumatología</option>
+                    <select  class="selectData selectDataEsp">
+                      <option value="" selected>Especialidad</option>
+                      <option value="medicina">Medicina General</option>
+                      <option value="pediatria">Pediatría</option>
+                      <option value="ginecologia">Ginecología</option>
+                      <option value="trauma">Traumatología</option>
                     </select>
-                    <select>
-                      <option selected>Día</option>
-                      <option>Lunes</option>
-                      <option>Martes</option>
-                      <option>Miercoles</option>
-                      <option>Jueves</option>
-                      <option>Viernes</option>
-                      <option>Sábado</option>
-                      <option>Domingo</option>
-                    </select>
+                    <select  class="selectData selectDataDay">
+                      <option value="" selected>Día</option>
+                      <option value="lunes">Lunes</option>
+                      <option value="martes">Martes</option>
+                      <option value="miercoles">Miercoles</option>
+                      <option value="jueves">Jueves</option>
+                      <option value="viernes">Viernes</option>
+                      <option value="sabado">Sábado</option>
+                      <option value="domingo">Domingo</option>
+                    </select>  
                   </div>
                     <div id="chartTiempoDeEspera" style="width:540px; height:300px"></div>
                   </form>
@@ -1161,40 +1159,22 @@
     type="text/javascript"></script>
     <!--  TIEMPO DE ESPERA-->
      <script type="text/javascript">
-        (function($) {
 
-          // My micro jQuery templating engine
-          // Usage:
-          //
-          //    <section data-html="content"></section>
-          //
-          // Will load <content.html> into <section>
+        /* Chart TIEMPO DE ESPERA*/
 
-          $(document).ready(function() {
+      $('.selectDataDay').change(function() {
+        $( "#chartTiempoDeEspera" ).empty();
+       chartData($('.selectDataDay').val());
+      });
 
-            // Load external contents
-            $("[data-html]").each(function() {
-              el = $(this);
-              var src = $(this).attr("data-html");
-              el.load(src);
-            });
+      $('.selectDataEsp').change(function() {
+        $( "#chartTiempoDeEspera" ).empty();
+       chartData($('.selectDataEsp').val());
+      });
 
-          });
-        })(jQuery);
+    /* EO Chart TIEMPO DE ESPERA*/
+
       </script>
-
-       <!--  EO TIEMPO DE ESPERA-->
-
-       <!--  Chart -->
-
-
-
-
-
-
-       <!--  EO Chart -->
-
-
 
   <script type="text/javascript">
   <!--

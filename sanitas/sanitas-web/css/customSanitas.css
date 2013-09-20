@@ -1,23 +1,26 @@
 /* Custom css*/
-
-.jqplot-highlighter-tooltip,.jqplot-canvasOverlay-tooltip {
-	background-color: #ffffff;
+.jqplot-highlighter-tooltip {
+	background-color: #ffffff !important;
 	border:solid 2px #0178C8 !important;
-	padding: 5px;
+	padding: 5px !important;
 	z-index: 100;
+	text-align: center !important;
 }
 
+.flexible {
+	max-width: 100% !important;
+	min-width: 320px !important;
+}
+.jqplot-base-canvas{
+   width: 100% !important;	
+}
 
 .jqplot-x2axis{
-	margin-top: 50px !important;
-	margin-bottom: -10px !important;
+	margin-top: 25px !important;
+	margin-bottom: -5px !important;
 }
 
 .jqplot-point-label{
-	margin-top: 15px !important;
-	margin-bottom: -15px !important;
-}
-
-#chartTiempoDeEspera{
-	margin-top: -40px !important;
+	margin-top: 10px !important;
+	margin-bottom: -10px !important;
 }

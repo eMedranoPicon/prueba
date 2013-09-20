@@ -20,6 +20,9 @@
     <script  type="text/javascript" src="jqplot/plugins/jqplot.pointLabels.min.js"></script>
     <script  type="text/javascript" src="jqplot/plugins/jqplot.highlighter.js"></script>
 
+    <!-- To easily retrieve values of css parameters as margin or padding etc; as they are returned together with type of value eg. 100px, px for pixels. -->
+<script language="javascript" type="text/javascript" src="https://raw.github.com/bramstein/jsizes/master/lib/jquery.sizes.js"></script>
+
     <!-- End additional plugins -->
 
 </head>
@@ -47,8 +50,12 @@
                       <option value="domingo">Domingo</option>
                     </select>
                   </div>
-                    <div id="chartTiempoDeEspera" style="width:540px; height:300px"></div>               
+                  <div class="flexible">
+                    <div id="chartTiempoDeEspera"></div>               
+                  </div>
                 </div>
+<div id="chart"></div>
+<div id="chartTooltip" style="position: absolute; z-index: 99; display: none;"></div>
 <script  type="text/javascript">
       $(window).bind("load", function() {         
          chartData('a');
@@ -180,12 +187,17 @@
             }
         },
         axes: {
-         // xaxis: {
-       //     renderer: $.jqplot.CategoryAxisRenderer
-        //  },
+         /*xaxis: {
+          autoscale: true,
+          showTicks:false,
+          show:false,
+          renderer: $.jqplot.CategoryAxisRenderer
+         },*/
           x2axis: {
-            renderer: $.jqplot.CategoryAxisRenderer//,
-            //ticks:ticks
+            autoscale: true,
+            showTicks:true,
+            show:true,
+            renderer: $.jqplot.CategoryAxisRenderer
           },
           yaxis: {
             autoscale:true,
@@ -229,12 +241,21 @@
         return texto;
         }
 
+       $(window).resize(function() {
+        if (plot2) {
+            $.each(plot2.series, function(index, series) {
+                series.barWidth = undefined;
+            });
+            plot2.resetAxesScale(); 
+            plot2.replot({resetAxes:['x2axis']});
+            plot2.replot({resetAxes:true});
+        }
+        });
+
      }
 
-$(document).ready(function(){  
-    window.onresize = function(event) {
-    plot2.replot();
-    }   
+$(document).ready(function(){      
+
 });
 </script>
 
