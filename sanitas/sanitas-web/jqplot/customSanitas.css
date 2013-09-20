@@ -6,3 +6,10 @@
 	padding: 5px;
 	z-index: 100;
 }
+.chartContent{
+	margin: auto;
+	width: 80%;
+}
+#chartTiempoDeEspera{
+	margin-top: 40px !important;
+}
