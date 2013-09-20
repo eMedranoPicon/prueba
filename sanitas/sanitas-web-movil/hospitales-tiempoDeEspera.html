@@ -207,34 +207,29 @@
 
                   <div class="grafico-afluencia">
 
-                    <div class="span12 filterchart">
-
-                      <select class="selectpicker">
-                        <option>Especialidad</option>
-                        <option>Medicina General</option>
-                        <option>Pediatría</option>
-                        <option>Ginecología</option>
-                        <option>Traumatología</option>
-                      </select>
-
-                      <select class="selectpicker">
-                        <option>Día</option>
-                        <option>Lunes</option>
-                        <option>Martes</option>
-                        <option>Miercoles</option>
-                        <option>Jueves</option>
-                        <option>Viernes</option>
-                        <option>Sábado</option>
-                        <option>Domingo</option>
-                      </select>
-                    </div>
-                    <div id="grafico" class="container-article grafico">
-                     <div id="chartTiempoDeEspera" style="width:540px; height:300px"></div>
-                    </div>
-                  
+                    <select  class="selectData" id="espSelector">
+                      <option value="" selected>Especialidad</option>
+                      <option value="medicina">Medicina General</option>
+                      <option value="pediatria">Pediatría</option>
+                      <option value="ginecologia">Ginecología</option>
+                      <option value="trauma">Traumatología</option>
+                    </select>
+                    <select  class="selectData" id="daySelector">
+                      <option value="" selected>Día</option>
+                      <option value="lunes">Lunes</option>
+                      <option value="martes">Martes</option>
+                      <option value="miercoles">Miercoles</option>
+                      <option value="jueves">Jueves</option>
+                      <option value="viernes">Viernes</option>
+                      <option value="sabado">Sábado</option>
+                      <option value="domingo">Domingo</option>
+                    </select>  
                 </form>
-                  </div>
+                <div class="flexible">
+                    <div id="chartTiempoDeEspera"></div>               
                 </div>
+                </div>
+              </div>
 
             </article>
 
