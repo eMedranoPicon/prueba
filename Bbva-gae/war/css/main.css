@@ -9848,16 +9848,6 @@ h3.headerPage {
   margin-bottom: 30px;
 }
 
-/* line 17, ../sass/partials/_base.scss */
-html {
-  overflow-x: hidden;
-}
-
-/* line 20, ../sass/partials/_base.scss */
-body {
-  overflow-x: hidden;
-}
-
 /* line 4, ../sass/partials/_headers-page.scss */
 .header-page {
   *zoom: 1;
