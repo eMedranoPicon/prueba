@@ -23,7 +23,7 @@
 .flexible {
 	margin-top: 30px !important;
 	max-width: 100% !important;
-	min-width: 240px !important;
+	/*min-width: 240px !important;*/
 }
 .jqplot-base-canvas{
    width: 100% !important;	
@@ -36,4 +36,7 @@
    .jqplot-axis {
    font-size: .5em !important;
 	}
+   .jqplot-x2axis{
+   	display: none;
+   }
 }
