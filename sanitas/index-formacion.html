@@ -1,0 +1,186 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+<head>
+    <title>Sanitas seguros de salud</title>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="sanitas-web-movil/support/SanitasMovil/css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="sanitas-web-movil/support/SanitasMovil/css/main.css" media="screen" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="sanitas-web-movil///html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="sanitas-web-movil/support/SanitasMovil/js/lib/respond.min.js"></script>
+    <script src="sanitas-web-movil/support/SanitasMovil/js/lib/jquery.js"></script>
+    <script src="sanitas-web-movil/support/SanitasMovil/js/sanitas/dispositivo.js"></script>
+    <script src="sanitas-web-movil/support/SanitasMovil/js/lib/modernizr.js"></script>
+
+    <style>
+    @media screen and (max-width : 480px) {
+
+        /*ajustes generales 480*/
+        header h2 {
+            font-size: 12px;
+            left: 90px;
+            width: 200px;
+            margin-top: 0px;
+        }
+
+        a.button-destacado.blue.pedircita {
+            width: 90% !important;
+        }
+
+        article.hospitales .box-grey .contenido {
+            margin-bottom: 20px;
+            margin-right: 2%;
+            width: 95%;
+            display: inline-block;
+        }
+
+         section.nav.full-width
+        {
+             margin-top: 80px !important;
+
+        }
+    }
+
+    @media screen and (max-width: 768px) and (min-width: 480px) {
+
+        section.nav {
+            margin-top: 80px;
+        }
+
+        article.hospitales .box-grey .contenido {
+            margin-bottom: 20px;
+            margin-right: 2%;
+            width: 42%;
+            display: inline-block;
+        }
+         section.nav.full-width
+        {
+            margin-top: 80px !important;
+
+        }
+
+    }
+
+    @media screen and (min-width: 768px) {
+
+         article.hospitales .box-grey .contenido {
+            margin-bottom: 20px;
+            margin-right: 2%;
+            width: 44%;
+            display: inline-block;
+        }
+
+    }
+
+    @media only screen and (min-width: 1024px) {
+        article.hospitales .box-grey .contenido
+        {
+            margin-bottom: 20px;
+            margin-right: 1%;
+            width: 46%;
+            display: inline-block;
+        }
+
+    }
+
+    @media only screen and (max-width: 1024px) {
+        article .box-grey .button-destacado.blue {
+            width: 90%;
+        }
+    }
+
+    section.nav.full-width
+    {
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    .noborder {
+        border: 0px;
+        padding: 2%;
+    }
+
+    .box-grey {
+        width: 97%;
+    }
+
+    article.hospitales .box-grey .contenido {
+        margin-bottom: 20px;
+    }
+
+     article.hospitales .box-grey .contenido li.pending{
+        color: red;
+        font-weight: bold;
+    }
+
+    article.hospitales .box-grey .contenido li.doit{
+        color: green;
+        font-weight: bold;
+    }
+
+    .wrapperButtons {
+        margin-bottom: 0px;
+    }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="http://sanitas.es"><img src="sanitas-web-movil/support/SanitasMovil/images/logotipo-sanitas.png" alt="sanitas"></a>
+        <h2>Sanitas - Listado de entregables</h2>
+    </header>
+    <section class="nav full-width">
+        <article class="hospitales">
+            <h1>Páginas y bloques entregables</h1>
+            <div class="box-grey noborder">
+                 <div class="contenido">
+                    <h3>HOSPITALES - VER MÁS TIEMPO DE ESPERA</h3>
+                    <ul>
+                        <li class="doit">Página detalle ver tiempo de espera.</li>
+                         <li class="doit">Do it 09/08/13</li>
+                        <li>tiempoDeEspera-detalle.html, tiempoDeEspera.html, web-movil-TiempoDeEspera.css, _base.scss, _mixins.scss, _tiempoDeEspera.scss, web-movil-TiempoDeEspera.scss</li>
+                    </ul>
+                    <div class="wrapperButtons">
+                        <a href="design/web-movil/tiempoDeEspera-detalle-design.html"  class="button-destacado blue pedircita">Acceder a diseño<span></span></a>
+                    </div>
+                     <div class="wrapperButtons">
+                        <a href="sanitas-web-movil/hospitales-tiempoDeEspera.html"  class="button-destacado blue pedircita">Acceder a maqueta<span></span></a>
+                    </div>
+                </div>
+                 <div class="contenido">
+                    <h3>REEMBOLSOS - FORMULARIO</h3>
+                    <ul>
+                        <li class="doit">Formulario Reembolso.</li>
+                         <li class="doit">Do it 09/08/13</li>
+                        <li>archivos creados/modificados</li>
+                    </ul>
+                    <div class="wrapperButtons">
+                        <a href="#"  class="button-destacado blue pedircita">Acceder a diseño<span></span></a>
+                    </div>
+                     <div class="wrapperButtons">
+                        <a href="sanitas-web-movil/formulario-reembolso.html"  class="button-destacado blue pedircita">Acceder a maqueta<span></span></a>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </section>
+
+    <footer>
+     © 2013
+    </footer>
+
+    <script src="sanitas-web-movil/support/SanitasMovil/js/sanitas/main.js"></script>
+
+</body>
+</html>
