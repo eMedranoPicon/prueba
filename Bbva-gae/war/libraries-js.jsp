@@ -1,4 +1,5 @@
 <!-- liberias-js -->
+	<script src="/js/flag.js" type="text/javascript"></script>
 	<script src="/js/lib/jquery-1.10.2.min.js" type="text/javascript"></script>
 	<script src="/js/lib/bootstrap/bootstrap.min.js"></script>
 	<!--libreria - DatePicker-->
