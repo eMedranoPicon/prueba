@@ -9848,6 +9848,12 @@ h3.headerPage {
   margin-bottom: 30px;
 }
 
+/*hack rotation fix*/
+/* line 17, ../sass/partials/_base.scss */
+body {
+  min-width: 100%;
+}
+
 /* line 4, ../sass/partials/_headers-page.scss */
 .header-page {
   *zoom: 1;
