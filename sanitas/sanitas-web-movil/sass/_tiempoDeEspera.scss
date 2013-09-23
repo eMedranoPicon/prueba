@@ -635,8 +635,8 @@ hgroup.todos.centros.listado article li div
 .jqplot-base-canvas{
    width: 100% !important;	
 }
-
-@media all and (max-width: 460px) {
+/* tablet vertical y hacia arriba*/
+@media all and (max-width: 580px) {
   .jqplot-point-label{
 	font-size: .5em !important;
    }

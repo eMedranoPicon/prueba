@@ -629,7 +629,8 @@ div.tiempoDeEspera span.tiempoDeEspera-data > p:nth-of-type(2) {
   width: 100% !important;
 }
 
-@media all and (max-width: 460px) {
+/* tablet vertical y hacia arriba*/
+@media all and (max-width: 580px) {
   /* line 640, ../../sass/_tiempoDeEspera.scss */
   .jqplot-point-label {
     font-size: .5em !important;
