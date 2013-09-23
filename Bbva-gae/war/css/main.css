@@ -9848,10 +9848,14 @@ h3.headerPage {
   margin-bottom: 30px;
 }
 
-/*hack rotation fix*/
 /* line 17, ../sass/partials/_base.scss */
+html {
+  overflow-x: hidden;
+}
+
+/* line 20, ../sass/partials/_base.scss */
 body {
-  min-width: 100%;
+  overflow-x: hidden;
 }
 
 /* line 4, ../sass/partials/_headers-page.scss */
