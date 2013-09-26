@@ -1,0 +1,30 @@
+/* Custom css*/
+.jqplot-highlighter-tooltip {
+	background-color: #ffffff !important;
+	border:solid 2px #0178C8 !important;
+	padding: 5px !important;
+	z-index: 100;
+	text-align: center !important;
+}
+
+.flexible {
+	max-width: 100% !important;	
+	min-width: 320px !important;
+}
+.jqplot-base-canvas{
+   width: 100% !important;
+   height: 400px !important;	
+}
+
+.jqplot-x2axis{
+	margin-top: 25px !important;
+	margin-bottom: -5px !important;
+}
+
+.jqplot-point-label{
+	margin-top: 10px !important;
+	margin-bottom: -10px !important;
+}
+#chartTiempoDeEspera{
+	min-height: 385px !important;
+}

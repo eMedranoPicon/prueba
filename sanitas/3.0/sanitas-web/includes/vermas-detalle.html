@@ -1,0 +1,148 @@
+<div class="textoContent">
+  <h2>Tiempos de espera en urgencias</h2>
+
+  <!-- Legacy code-->
+  <!-- **************************************************************************************************************************************************************** -->
+  <div class="iconsCompartirDistribuidora">
+    <a style="text-decoration: none;" rel="follow" title=""
+      target="_blank"
+      href="http://facebook.com/share.php?u=http://www.sanitas.es/sanitas/seguros/es/particulares/medicosycentros/hospital_zarzuela/sobre_el_hospital/nuevas-habitaciones-suites/"><img
+      alt="Nueva ventana de compartir en facebook"
+      title="Nueva ventana de compartir en facebook"
+      src="support/Sanitas/sanitas/wcm/idc/groups/public/documents/digitalmedia/iconfacebookampliada.gif" /></a><a
+      style="text-decoration: none;" rel="follow" title="" target="_blank"
+      href="http://twitter.com/home?status=http://www.sanitas.es/sanitas/seguros/es/particulares/medicosycentros/hospital_zarzuela/sobre_el_hospital/nuevas-habitaciones-suites/"><img
+      alt="Nueva ventana de compartir en twitter"
+      title="Nueva ventana de compartir en twitter"
+      src="support/Sanitas/sanitas/wcm/idc/groups/public/documents/digitalmedia/icontwitter18.png" /></a><a
+      style="text-decoration: none;" rel="follow" title="" target="_self"
+      href="#"><img alt="Añadir a favoritos" title="Añadir a favoritos"
+      src="support/Sanitas/sanitas/wcm/idc/groups/public/documents/digitalmedia/iconfavoritosampliada.gif"
+      onclick="bookMark('index-2.html','Nuevas habitaciones suites')" /></a><a
+      style="text-decoration: none;" rel="follow" title="" target="_self"
+      href="#"><img alt="Imprimir la página actual"
+      title="Imprimir la página actual"
+      src="support/Sanitas/sanitas/wcm/idc/groups/public/documents/digitalmedia/iconprintampliada.gif"
+      onclick="window.print()" /></a><a style="text-decoration: none;"
+      rel="follow" title="" target="_self" onclick="showPrint2()"><img
+      alt="Nueva ventana para enviar por email"
+      title="Nueva ventana para enviar por email"
+      src="support/Sanitas/sanitas/wcm/idc/groups/public/documents/digitalmedia/iconsend.gif" /></a>
+    <script type="text/javascript"
+      src="../../../../../../../js/medicoscentros/jquery.validate.js"></script>
+    <script type="text/javascript"
+      src="support/Sanitas/sanitas/wcm/idc/groups/public/%40san/%40san/%400/documents/document/san_sia_scr_iconscompartir.js"></script>
+    <div id="TopMsg" class="MsgBoxSeguros2">
+      <form method="post"
+        action="http://www.sanitas.es/sanitas/mandar-email-amigo"
+        name="enviarPorMailAmigo" id="enviarPorMailAmigo">
+        <input type="hidden" name="urlactual" id="urlactual"
+          value="http://www.sanitas.es:80/sanitas/seguros/es/particulares/medicosycentros/hospital_zarzuela/sobre_el_hospital/nuevas-habitaciones-suites/index.html" /><a
+          onclick="showPrint2()" target="_self" title="" rel="follow"
+          style="text-decoration: none;"><img
+          src="support/Sanitas/sanitas/wcm/idc/groups/public/%40san/%40san/%400/documents/digitalmedia/iconcheckno.gif"
+          title="Cerrar ventana" alt="Cerrar ventana" /></a>
+        <ul>
+          <li><input type="hidden" value="" name="correo.urlEnviada" /></li>
+          <li><label class="liEmail">Introduce tu email</label></li>
+          <li class="liEmail"><input type="text" name="miEmail"
+            maxlength="100" id="miEmail" onblur="validarMiEmail()" /><span
+            id="miEmailVal" class="noseve"></span></li>
+          <li><label class="liEmail">Introduce el email de tu
+              amigo</label></li>
+          <li class="liEmail"><input type="text" maxlength="100"
+            name="emailAmigo" id="emailAmigo" onblur="validarAmigoEmail()" /><span
+            id="emailAmigoVal" class="noseve"></span></li>
+          <li><label class="liCaptcha">Introduce texto</label></li>
+          <li class="liEmail"><input name="imagen" id="alinearimagen"
+            onblur="validarCaptcha()"></input><span id="miCaptchaVal" class=""></span></li>
+          <input type="hidden" name="captchaactual" id="captchaactual"
+            value="" />
+          <li><img class="imagenCaptcha"
+            src="../../../../../../../simpleImg.png"
+            alt="introducir codigo captcha" title="introducir codigo captcha"
+            id="alinearimagen" /></li>
+          <li><h6 class="liEnviar">
+              <input id="boxButtonEnv" class="boxButton2" type="button"
+                onclick="javascript:validarCaptcha();validarMiEmail();validarAmigoEmail();local_confirmation_compartir();topdiv.click()"
+                value="Enviar" name="imageField" />
+            </h6></li>
+        </ul>
+        <div style="display: none;">
+        </div>
+      </form>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(
+          function() {
+            jQuery.extend(jQuery.expr[":"], {
+              reallyvisible : function(a) {
+                return !(jQuery(a).is(':hidden') || jQuery(a)
+                    .parents(':hidden').length);
+              }
+            });
+            $(".MsgBoxSeguros").hide();
+          });
+
+      showPrint2();
+    </script>
+  </div>
+  <div>
+</div>
+<!-- Legacy code END-->
+<!-- **************************************************************************************************************************************************************** -->
+
+  <!-- chartContent -->
+  <div class="chartContent">
+    <div class="fichaTiemposEspera tiempoDeEsperaList">
+      <div class="fichaTiemposEsperaContent tiempoDeEsperaContent">
+        <p>Tiempos de espera aproximados</p>
+        <h3>Urgencias Hospital Sanitas La Zarzuela</h3>
+        <dl class="dl-tiempoDeEspera">
+          <dt>Medicina General</dt>
+          <dd>15 - 30 minutos</dd>
+          <hr>
+          <dt>Pediatría</dt>
+          <dd>Más de 30 minutos</dd>
+          <hr>
+          <dt>Ginecología</dt>
+          <dd>20 - 45 minutos</dd>
+          <hr>
+          <dt>Traumatología</dt>
+          <dd>20 - 45 minutos</dd>
+        </dl>
+      </div>
+    </div>
+
+    <form>
+      <h3>Consultar tiempos medios de espera por Centro, especialidad y hora/día</h3>
+      <div class="span12 filterchart">
+        <select class="selectpicker">
+          <option selected>Hospitales</option>
+          <option>Hospital La Moraleja</option>
+          <option>Hospital CIMA</option>
+        </select>
+        <select class="selectpicker">
+          <option selected>Especialidad</option>
+          <option>Medicina General</option>
+          <option>Pediatría</option>
+          <option>Ginecología</option>
+          <option>Traumatología</option>
+        </select>
+        <select class="selectpicker">
+          <option selected>Día</option>
+          <option>Lunes</option>
+          <option>Martes</option>
+          <option>Miercoles</option>
+          <option>Jueves</option>
+          <option>Viernes</option>
+          <option>Sábado</option>
+          <option>Domingo</option>
+        </select>
+      </div>
+      <canvas id="chartSanitas" width="533" height="400"></canvas>
+    </form>
+  </div>
+  <!-- EO chartContent -->
+
+</div>

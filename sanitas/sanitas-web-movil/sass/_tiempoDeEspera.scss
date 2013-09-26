@@ -1,0 +1,605 @@
+
+.pull-right {
+	float: right !important;
+}
+
+.pull-left {
+	float: left !important;
+}
+
+span.arrow-grey {
+	right: 0px;
+
+	@media screen and (max-width: 480px)
+	{
+		margin-right: 0 !important;
+		top: 18%;
+	}
+}
+
+
+.hidden-phone
+{
+	@media screen and (max-width: 768px)
+	{
+		display: none;
+	}
+}
+
+#chartSanitas{
+width: 100% !important;
+max-width: 800px;
+height: auto !important;
+}
+
+dl.dl-tiempoDeEspera
+{
+	display: inline-block;
+	margin: 0 0 10px 0;
+	//width:245px;
+	width: 90%;
+	max-width:700px;
+	@include clearfix();
+
+	dt,
+	dd {
+		display: inline-block;
+		color: $textColor-blue;
+		//line-height: 14px;
+
+	}
+
+	dt {
+		width: 120px;
+		margin-top: 9px;
+	}
+
+	@media screen and (max-width: 480px)
+	{
+		dt:empty {
+			margin-top: 0px;
+			display: none;
+		}
+	}
+
+	dd{
+		margin-left: 0px;
+	}
+
+	dd {
+
+		width: 70%;
+
+		@media screen and (max-width: 480px)
+		{
+			margin-top: 9px;
+			padding-left: 20px;
+
+
+		}
+	}
+}
+
+dl.dl-tiempoDeEspera.iconTime
+{
+	width:100%;
+
+	dt {
+		padding-left: 20px;
+		@include background(image-url("reloj-azul.png"));
+		@include background-size(14px 14px);
+		background-repeat: no-repeat;
+		width: 140px;
+		line-height: 15px;
+		span
+		{
+			display: none;
+		}
+	}
+
+	dd {
+		width: 70%;
+		line-height: 15px;
+		@media screen and (max-width: 480px)
+		{
+			padding-left: 40px;
+		}
+	}
+}
+
+////////////////////////////
+//
+//	div.tiempoDeEspera
+//
+////////////////////////////
+
+hgroup.todos.centros.listado article li div
+{
+	div.tiempoDeEspera
+	{
+		width: 90%;
+		margin-top: 15px;
+		@media screen and (max-width: 480px)
+		{
+			width: 90%;
+			font-size: $fontSizeSmall;
+
+			span.tiempoDeEspera-data
+			{
+				font-size: $fontSizeSmall;
+			}
+
+			span:nth-last-child(2)
+			{
+				width: 100px;
+			}
+		}
+
+		@media screen and (max-width: 768px) and (min-width: 480px)
+		{
+			width: 99%;
+		}
+
+
+	}
+}
+
+.todos article ul li
+{
+	div.tiempoDeEspera
+	{
+		position: relative;
+		@include single-box-shadow(none);
+		margin: 5px 0 0 0;
+		padding: 0;
+		border: none;
+		width: 60%;
+
+		/*@media screen and (max-width: 480px)
+		{
+			width: 60%;
+		}*/
+
+		dl
+		{
+			@extend dl.dl-tiempoDeEspera;
+			width: 100%;
+
+			dd{
+				width: 65%;
+				min-width: 120px;
+			}
+		}
+	}
+
+}
+
+div.tiempoDeEspera
+{
+	span.tiempoDeEspera-data
+	{
+		margin-top: 5px;
+		//font-size:  $fontSize;
+	    font-size:$fontSizeSmall !important;
+		dl
+		{
+			@extend dl.dl-tiempoDeEspera;
+			margin-left: 30px;
+
+			dt:first-child,
+			dd:first-child
+			{
+				margin-top: 0px;
+			}
+
+			dd{
+				width: 60%;
+			}
+		}
+
+		p
+		{
+			@include clearfix();
+			margin: 0px 0 0 0px;
+			font-size: inherit;
+
+			span:nth-last-child(1)
+			{
+				display: block;
+				float: left;
+			}
+
+			span:nth-last-child(2)
+			{
+				display: block;
+				width: 110px;
+				float: left;
+			}
+		}
+
+		p:nth-last-child(1)
+		{
+			margin-top: 5px;
+		}
+
+		span {
+			font-size: inherit;
+			color: $textColor-blue2;
+		}
+
+		strong.header {
+			display: block;
+			//line-height: 23px;
+			line-height: 12px;
+			vertical-align: top;
+			color: $textColor-blueLighter;
+			font-size: inherit;
+			min-width: 210px;
+		}
+
+		i.icon-espera
+		{
+			@include background(image-url("espera.png"));
+			@include background-size(25px 25px);
+			display: inline-block;
+			width: 25px;
+			height: 25px;
+		}
+	}
+
+	span.tiempoDeEspera-data > p:nth-of-type(2)
+	{
+		margin-bottom: 10px;
+	}
+
+	@media screen and (max-width: 480px)
+	{
+	 padding-left: 10px !important;
+	}
+}
+
+////////////////////////////
+//
+//	.box-tiempoDeEspera
+//
+////////////////////////////
+
+.box-tiempoDeEspera
+{
+	background: $blueBox !important;
+	padding: 0 !important;
+	width: 98% !important;
+	@include single-box-shadow(rgba(0, 0, 0, 0.3),0px,3px,3px);
+	border: 0;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	cursor: hand;
+
+	.container-tiempoDeEspera
+	{
+		background-color: #FFF;
+		margin: 0 3% 3% 3% !important;
+		padding: 10px 2% !important;
+		display: block !important;
+		float: none !important;
+		width: 90% !important;
+		//hack font-size esta caja
+		font-size: $fontSizeSmall+1 !important;
+
+		p
+		{
+			width: 60%;
+
+			@media screen and (max-width: 480px)
+			{
+				width: 93%;
+			}
+		}
+
+		>p
+		{
+			margin-top: 0px;
+		}
+
+		span.arrow.right {
+			display: inline-block;
+			float: right;
+		}
+
+		dl
+		{
+			@extend dl.dl-tiempoDeEspera;
+
+			padding-left: 65px;
+			@include background(image-url("espera.png"));
+			background-repeat: no-repeat;
+			@include clearfix();
+			width: 75%;
+			min-height: 60px;
+
+			@media screen and (max-width: 480px)
+			{
+				width:250px;
+				@include background-size(25px 25px);
+				padding-left: 30px;
+				min-height: 35px;
+
+				dt {
+					width: 110px;
+				}
+
+				dt:first-child {
+					margin-top: 0px;
+				}
+
+				dt,
+				dd {
+					//font-size: $fontSize;
+					font-size: $fontSizeSmall !important;
+				}
+			}
+		}
+
+	 	@media screen and (min-width: 767px)
+		{
+			@include background-image(image-url("medicos.jpg"));
+			background-color: white;
+			background-repeat: no-repeat;
+			background-position-x: right;
+		}
+	}
+
+	h2 {
+		color: $textColor-blueh2;
+		//font-size: $fontSizeLarge;
+		font-size: $fontSize;
+		text-transform: uppercase;
+		padding: 8px 0 8px 0;
+		text-indent: 3%;
+	}
+}
+
+////////////////////////////
+//
+//	.tiempoDeEspera-detalle
+//
+////////////////////////////
+
+.box-advice
+{
+	margin: 2% 10%;
+	width: 78%;
+	border: 1px solid $black;
+	background-color: $white;
+
+	p {
+		margin: 15px;
+		padding-right: 0;
+		color: $blueDark2;
+		text-align: center;
+	}
+}
+
+.container-article {
+	//margin-left: 15px;
+	margin-left: 10px;
+}
+
+.tiempoDeEspera-detalle
+{
+	dl {
+		@extend dl.dl-tiempoDeEspera.iconTime;
+
+		dt,dd
+		{
+			color: $textColor;
+			margin-top: 9px;
+		}
+	}
+
+	h2 {
+		font-family: 'GothamMediumRegular';
+		text-transform: none;
+		font-size: $fontSizeSmall+1;
+		margin-bottom: 10px;
+	}
+
+	.container-images
+	{
+		width: 98%;
+		//Modificaciones 02/09/2013
+		margin: 0 0 20px 0;
+		padding: 0;
+		@include clearfix();
+
+		img {
+			display: inline-block;
+		}
+
+		img:nth-last-child(2)
+		{
+			width: 100%;
+			//Modificaciones 02/09/2013
+			//max-width: 300px
+		}
+
+		img:nth-last-child(1)
+		{
+			width: 100%;
+			//Modificaciones 02/09/2013
+			//max-width: 300px;
+		}
+	}
+
+	.grafico-afluencia
+	{
+		margin-top: 15px;
+
+		.grafico
+		{
+			width: 95%;
+			@include clearfix();
+		}
+
+		//Modificaciones 02/09/2013
+		form
+		{
+			margin-bottom: 20px;
+			width: 100%;
+
+			.filterchart
+			{
+				margin: 15px 0;
+				clear: both;
+			}
+			.otroscentros
+			{
+				margin: 20px 0 10px 0;
+				clear: both;
+			}
+
+		}
+		.selectData
+			{
+				margin-right: 35px;
+				margin-top: 5px;
+  				margin-bottom:10px;
+			}
+	}
+
+	i.icon-calendar
+	{
+		@include background(image-url("calendar.png"));
+		@include background-size(32px 32x);
+		display: inline-block;
+		width: 32px;
+		height: 32px;
+		padding-left:33px;
+		background-repeat:no-repeat;
+	}
+
+	.filterchart
+	{
+		span
+		{
+			padding: 10px 10px 10px 0;
+		}
+		select
+		{
+			margin: 10px 20px 10px 0px;
+		}
+	}
+
+	.otroscentros
+	{
+		span
+		{
+			padding:10px 10px 10px 0px;
+		}
+		select
+		{
+			margin:10px 10px 10px 0px;
+		}
+	}
+}
+
+//Modificaciones 02/09/2013
+.tiempoDeEspera-urgencias
+{
+	.box-tiempoDeEspera
+	{
+		.container-tiempoDeEspera
+		{
+			background-image: none;
+
+			dl
+			{
+				width: 44%;
+				@media screen and (max-width: 800px)
+				{
+					width: 70%;
+				}
+				@media screen and (max-width: 480px)
+				{
+					padding-left: 30px;
+					margin-bottom: 10px !important;
+				}
+
+				&.dl-tiempoDeEspera
+				{
+					min-height: 50px !important;
+
+					&.iconTime
+					{
+						min-height: 60px;
+					}
+
+					&.first
+					{
+						@media screen and (max-width: 1210px)
+						{
+							margin-bottom: 0px;
+						}
+					}
+
+					&.last
+					{
+						background-image: none;
+						padding-left: 0px;
+						@media screen and (max-width: 1210px)
+						{
+							padding-left: 65px;
+						}
+						@media screen and (max-width: 480px)
+						{
+							padding-left: 30px;
+						}
+					}
+				}
+
+				dt {
+					width: 100px;
+				}
+
+				dd {
+					width: 45%;
+					@media screen and (max-width: 1210px)
+					{
+						width: 50%;
+					}
+					@media screen and (max-width: 520px)
+					{
+						padding-left: 20px;
+						width: 85%;
+					}
+					strong
+					{
+						font-size: 18px;
+						font-weight: normal;
+					}
+				}
+			}
+		}
+	}
+}
+
+.button-destacado.blue.more
+{
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+
+hgroup.todos.centros.listado article li div
+{
+	@media only screen and (min-width: 1024px)
+	{
+		min-height: 105px;
+	}
+
+	@media only screen and (min-width: 768px)
+	{
+		min-height: 105px;
+	}
+}
+
