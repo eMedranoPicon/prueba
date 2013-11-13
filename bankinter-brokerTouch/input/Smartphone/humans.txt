@@ -1,0 +1,9 @@
+/* TEAM */
+Developer: Luis Daniel Abelaira Huertos
+Site: mo2o.com
+Location: Madrid, Madrid, Spain
+
+/* SITE */                            
+Last update: 2013/02/14   
+Standards: HTML5, CSS3
+Components: JavaScript, jQuery
