@@ -1,0 +1,23 @@
+.help-form .listview a.ui-link-inherit-mod {
+    padding: .3em 30px .3em 15px !important;
+    display: block;
+}
+.help-form .listview a.ui-link-inherit-mod:after{
+    display: block;
+    position: absolute;
+    top:10px;
+    content:"";
+    right: 12px;
+    background: transparent url(../img/listwiev-arrow.png) no-repeat 50% 50%;
+    background-size: 11px 18px;
+    width: 11px;
+    height: 18px;
+    text-shadow: none;
+    -moz-border-radius: 0em;
+    -webkit-border-radius: 0em;
+    border-radius: 0em;
+    border: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
