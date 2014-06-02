@@ -298,7 +298,7 @@ $(document).bind('ready', function(){
         var contentPadding = 20;
         var panelWidth = $('#cookies-panel-content').width();
         $('#cookies-panel-background').css({'height': String(window_h)+'px'});
-        $('#cookies-panel-content').css({'top': (window_h/2) - window_h*0.15 ,'left':window_w/2 - (panelWidth/2)-contentPadding, 'opacity':'1'});
+        $('#cookies-panel-content').css({'top': '45px' ,'left':window_w/2 - (panelWidth/2)-contentPadding, 'opacity':'1'});
         $('#cookiesAdd').click(function(){
         	alert("políticas sobre cookies ;) ");
         })
