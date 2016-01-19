@@ -1,0 +1,51 @@
+<div class="container presupuestos">
+
+  <h3>Mis <span class="hightlight">presupuestos</span><h3>
+
+  <div class="tab-content">
+    {% for MES in CALENDARIO %}
+      {% if loop.last or loop.revindex0 == 1 %}
+        <div id="section{{ loop.index }}_else" class="tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %} title_calendar">Total de gastos previstos <span class="hightlight">{{ MES.TOTAL_PRESUPUESTADO }}€</span></div>
+      {% else %}
+        <div id="section{{ loop.index }}_else" class="tab-pane fade title_calendar">Gasto total <span class="hightlight">{{ MES.TOTAL_GASTADO }}€</span> de <strong>{{ MES.TOTAL_PRESUPUESTADO }}€</strong> presupuestado</div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <ul class="nav nav-tabs">
+    {% for MES in CALENDARIO %}
+      {% if MES.LBL_MES == "ENE" %}
+        <li><span data-toggle="tab">2015</span></li>
+      {% endif %}
+      <li class="{% if loop.last %} future {% endif %} {% if loop.revindex0 == 1 %} active {% endif %}">
+        <a data-toggle="tab" href="#section{{ loop.index }}" data-target="#section{{ loop.index }}, #section{{ loop.index }}_else">{{ MES.LBL_MES }}</a>
+        <div class="muesca"></div>
+        <div class="muesca"></div>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="tab-content">
+    {% for MES in CALENDARIO %}
+      <div id="section{{ loop.index }}" class="tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %}">
+        {% for PRESUPUESTO in MES.PRESUPUESTOS %}
+          <div class="col-xs-4">
+            <a href="javascript:void()" class="target-presupuesto ">
+              <div class="info-general">
+                <div class="img-circle"><i class="icon-car-white"></i></div>
+                <div class="info"><span>{{ PRESUPUESTO.TITLE }}</span><div class="value">{{ PRESUPUESTO.PREVISTO }}<span class="decimal">,00</span> €</div></div>
+              </div>
+              <div class="data-progress">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="{{ PRESUPUESTO.PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ PRESUPUESTO.PORCENTAJE }}%"></div><span class="triangulo_izq"></span>
+                </div>
+                <div class="value"><strong>{{ PRESUPUESTO.GASTADO }}<span class="decimal">,00</span> €</strong></div>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+
+</div>

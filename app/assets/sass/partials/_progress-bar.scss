@@ -1,6 +1,6 @@
 .progress {
     @include border-radius(20px);
-    background-color: $white;
+    background-color: $grey900;
     height: 25px;
     margin: 10px 0;
     box-shadow: none;
@@ -9,7 +9,7 @@
 .progress-bar {
 	@include border-radius-separate(0, 20px, 0, 20px);
 	float: right;
-
+  box-shadow: none;
 }
 
 .triangulo_izq {

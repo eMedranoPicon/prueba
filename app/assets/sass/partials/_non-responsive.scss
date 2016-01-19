@@ -6,7 +6,7 @@
 
 /* Account for fixed navbar */
 body {
-  min-width: 1170px;
+  min-width: 980px;
   background-color: #FFF;
   font-family: $font;
   color: #000;
@@ -30,7 +30,8 @@ body {
 
 /* Reset the container */
 .container {
-  min-width: 970px;
+  min-width: 950px;
+  max-width: 950px;
   margin: 0 auto;
   height: 100%;
   position: relative;

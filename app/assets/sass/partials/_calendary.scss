@@ -1,0 +1,70 @@
+.presupuestos {
+  .nav-tabs {
+    font-size: 13px;
+    border-bottom: none;
+    margin-bottom: 10px;
+    &>li {
+      &>div.muesca{
+        background: $white;
+        width: 4px;
+        height: 8px;
+        position: absolute;
+        top: 0;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        left: 20%;
+        display: inline-block;
+        &:last-child {
+          left: inherit;
+          right:20%;
+        }
+      }
+      &.active>a{
+        background-color: $colorPresPrimary;
+        border: none;
+        color: $white;
+        &:hover {
+          background-color: $colorPresPrimary;
+          color: $white;
+        }
+      }
+      &.future>a{
+        background-color: $gray820;
+        color: $grey300;
+        &:hover {
+          background-color: $grey300;
+        }
+      }
+      &.future.active>a {
+        background-color: $grey300;
+        color: $white;
+      }
+      &>a {
+        width: 55px;
+        height: 60px;
+        margin: 0 3px;
+        border: none;
+        border-bottom: 1px solid $grey800;
+        color: $grey500;
+        font-weight: bold;
+        text-align: center;
+        padding: 22px 0;
+        border-radius: 0;
+        &:hover {
+          background-color: $colorPresSecond;
+          color: $white;
+        }
+      }
+      &>span {
+        color: $grey300;
+        width: 55px;
+        height: 60px;
+        margin: 0 2.5px;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;
+        padding-top: 22px;
+      }
+    }
+  }
+}

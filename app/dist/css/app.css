@@ -1,1 +1,909 @@
-.navbar-header,.navbar-nav>li{float:left}@font-face{font-family:AkkuratStd;src:url(../fonts/akkrgpro1.eot);src:url(../fonts/akkrgpro1.eot?#iefix) format("embedded-opentype"),url(../fonts/akkrgpro1.woff) format("woff"),url(../fonts/akkrgpro1.ttf) format("truetype"),url(../fonts/akkrgpro1.svg) format("svg");font-style:normal;font-weight:400}@font-face{font-family:AkkuratStd-Bold;src:url(../fonts/akkuratstdbold.eot);src:url(../fonts/akkuratstdbold.eot?#iefix) format("embedded-opentype"),url(../fonts/akkuratstdbold.woff) format("woff"),url(../fonts/akkuratstdbold.ttf) format("truetype"),url(../fonts/akkuratstdbold.svg) format("svg");font-style:normal;font-weight:400}@font-face{font-family:AkkuratStd-Light;src:url(../fonts/AkkuratStd-Light.eot);src:url(../fonts/AkkuratStd-Light.eot?#iefix) format("embedded-opentype"),url(../fonts/AkkuratStd-Light.woff) format("woff"),url(../fonts/AkkuratStd-Light.ttf) format("truetype"),url(../fonts/AkkuratStd-Light.svg) format("svg");font-style:normal;font-weight:400}.mgt-5{margin-top:5px!important}.mgt-10{margin-top:10px!important}.mgt-15{margin-top:15px!important}.mgt-20{margin-top:20px!important}.mgt-25{margin-top:25px!important}.mgt-30{margin-top:30px!important}.mgt-35{margin-top:35px!important}.mgt-40{margin-top:40px!important}.mgt-45{margin-top:45px!important}.mgt-50{margin-top:50px!important}.mgt-55{margin-top:55px!important}.mgt-60{margin-top:60px!important}.mgt-65{margin-top:65px!important}.mgt-70{margin-top:70px!important}.mgt-85{margin-top:85px!important}.mgt-90{margin-top:90px!important}.mgb-5{margin-bottom:5px!important}.mgb-10{margin-bottom:10px!important}.mgb-15{margin-bottom:15px!important}.mgb-20{margin-bottom:20px!important}.mgb-25{margin-bottom:25px!important}.mgb-65{margin-bottom:65px!important}.mgb-50{margin-bottom:50px!important}.mgb-75{margin-bottom:75px!important}.mgl-10{margin-left:10px!important}.ma-50{margin-top:50px!important;margin-bottom:50px!important}.pdt-5{padding-top:5px!important}.pdt-10{padding-top:10px!important}.pdt-15{padding-top:15px!important}.pdt-20{padding-top:20px!important}.pdt-25{padding-top:25px!important}.pdt-35{padding-top:35px!important}.pdt-40{padding-top:40px!important}.pdt-50{padding-top:50px!important}.pdt-55{padding-top:55px!important}.pdt-65{padding-top:65px!important}.pdt-80{padding-top:80px!important}.pdt-85{padding-top:85px!important}.pdt-90{padding-top:90px!important}.pdb-5{padding-bottom:5px!important}.pdb-10{padding-bottom:10px!important}.pdb-15{padding-bottom:15px!important}.pdb-20{padding-bottom:20px!important}.pdb-25{padding-bottom:25px!important}.pdb-35{padding-bottom:35px!important}.pdb-40{padding-bottom:40px!important}.pdb-45{padding-bottom:45px!important}.pdb-50{padding-bottom:50px!important}.pdb-55{padding-bottom:55px!important}.pdb-60{padding-bottom:60px!important}.pdb-65{padding-bottom:65px!important}.pdb-90{padding-bottom:90px!important}.pdb-95{padding-bottom:95px!important}.pdl-25{padding-left:25px!important}.pa-10{padding-top:10px!important;padding-bottom:10px!important}.pa-15{padding-top:15px!important;padding-bottom:15px!important}.pa-50{padding-top:50px!important;padding-bottom:50px!important}.pw-0{margin-right:0!important;margin-left:0!important;padding-right:0!important;padding-left:0!important}body{min-width:1170px;background-color:#FFF;font-family:AkkuratStd;color:#000;font-size:15px}.page-header{margin-bottom:30px}.page-header .lead{margin-bottom:10px}.container{min-width:970px;margin:0 auto;height:100%;position:relative}.btn-group-vertical>.btn-group:after,.btn-group-vertical>.btn-group:before,.btn-toolbar:after,.btn-toolbar:before,.clearfix:after,.clearfix:before,.container-fluid:after,.container-fluid:before,.container:after,.container:before,.dl-horizontal dd:after,.dl-horizontal dd:before,.form-horizontal .form-group:after,.form-horizontal .form-group:before,.modal-footer:after,.modal-footer:before,.modal-header:after,.modal-header:before,.nav:after,.nav:before,.navbar-collapse:after,.navbar-collapse:before,.navbar-header:after,.navbar-header:before,.navbar:after,.navbar:before,.pager:after,.pager:before,.panel-body:after,.panel-body:before,.row:after,.row:before{display:inherit;content:" "}.container .navbar-collapse,.container .navbar-header{margin-right:0;margin-left:0}.navbar-collapse{display:block!important;height:auto!important;padding-bottom:0;overflow:visible!important;border-top:0}.navbar-toggle{display:none}.navbar-brand{margin-left:-15px}.navbar-nav{float:left;margin:0}.navbar-nav>li>a{padding:15px}.navbar-nav.navbar-right{float:right}.navbar .navbar-nav .open .dropdown-menu{position:absolute;float:left;background-color:#fff;border:1px solid #ccc;border:1px solid rgba(0,0,0,.15);border-width:0 1px 1px;border-radius:0 0 4px 4px;box-shadow:0 6px 12px rgba(0,0,0,.175)}.navbar-default .navbar-nav .open .dropdown-menu>li>a{color:#333}.navbar .navbar-nav .open .dropdown-menu>.active>a,.navbar .navbar-nav .open .dropdown-menu>.active>a:focus,.navbar .navbar-nav .open .dropdown-menu>.active>a:hover,.navbar .navbar-nav .open .dropdown-menu>li>a:focus,.navbar .navbar-nav .open .dropdown-menu>li>a:hover{color:#fff!important;background-color:#428bca!important}.navbar .navbar-nav .open .dropdown-menu>.disabled>a,.navbar .navbar-nav .open .dropdown-menu>.disabled>a:focus,.navbar .navbar-nav .open .dropdown-menu>.disabled>a:hover{color:#999!important;background-color:transparent!important}.icon-download{background:url(../images/sprite.png) no-repeat;padding:9px 20px}.icon-close{background:url(../images/sprite.png) -41px -16px no-repeat;padding:10px}.icon-download-big{background:url(../images/sprite.png) 5px -32px no-repeat;padding:35px}.icon-sms{background:url(../images/sprite.png) -61px 1px no-repeat;padding:2px 12px}.icon-final-step{background:url(../images/sprite.png) -64px -39px no-repeat;padding:20px 35px;display:inline}.icon-detail-prestamo{background:url(../images/sprite.png) -85px 2px no-repeat;padding:6px 14px}.icon-close-red{background:url(../images/sprite.png) -62px -20px no-repeat;padding:2px 9px}.icon-check{background:url(../images/sprite.png) -110px -20px no-repeat;padding:2px 11px}.icon-pdf-times{background:url(../images/sprite.png) -43px -103px no-repeat;padding:22px}.icon-pdf-download-white{background:url(../images/sprite.png) 2px -101px no-repeat;padding:22px}.icon-pink{background:url(../images/sprite.png) -47px -146px no-repeat;padding:13px 20px}.icon-calendar{background:url(../images/sprite.png) -116px 2px no-repeat;padding:3px 7px;margin-right:5px}.icon-car-red{background:url(../images/sprite.png) 5px -150px no-repeat;padding:12px 24px}.icon-car-white{background:url(../images/sprite.png) 5px -177px no-repeat;padding:12px 24px}.progress{-khtml-border-radius:20px;border-radius:20px;background-color:#fff;height:25px;margin:10px 0;box-shadow:none}.progress-bar{-moz-border-radius-topleft:0;-moz-border-radius-topright:20px;-moz-border-radius-bottomright:20px;-moz-border-radius-bottomleft:0;float:right;-webkit-border-radius:0 20px 20px 0;border-radius:0 20px 20px 0}.triangulo_izq{width:0;height:0;border-bottom:14px solid transparent;border-top:13px solid transparent;border-right:14px solid #000;font-size:0;line-height:0;float:right}.values-progress-bar{overflow:hidden;height:40px}.values-progress-bar .value{font-weight:700;font-size:25px}.values-progress-bar .pull-left{text-align:left;color:#000}.values-progress-bar .pull-right{text-align:right}.values-progress-bar .pull-right .value{color:#000}
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+  Mixins available:
+    -   css3-prefix             - arguments: Property, Value
+    -   background-gradient     - arguments: Start Color: #3C3C3C, End Color: #999999
+    -   background-horizontal   - arguments: Start Color: #3C3C3C, End Color: #999999
+    -   background-radial       - arguments: Start Color: #FFFFFF, Start position: 0%, End Color: #000000, End position: 100%
+    -   background-size         - arguments: Width: 100%, Height: 100%
+    -   background-opacity      - arguments: Color: #000, Opacity: .85
+    -   border-radius           - arguments: Radius: 5px
+    -   border-radius-separate  - arguments: Top Left: 5px, Top Right: 5px, Bottom Left: 5px, Bottom Right: 5px
+    -   box                     - arguments: Orientation: horizontal, Pack: center, Align: center
+    -   box-rgba                - arguments: R: 60, G: 3, B: 12, Opacity: 0.23, Color: #3C3C3C
+    -   box-shadow              - arguments: X: 2px, Y: 2px, Blur: 5px, Color: rgba(0,0,0,.4)
+    -   box-sizing              - arguments: Type: border-box
+    -   columns                 - arguments: Count: 3, Gap: 10
+    -   double-borders          - arguments: Color One: #3C3C3C, Color Two: #999999, Radius: 0
+    -   flex                    - arguments: Value: 1
+    -   flip                    - arguments: ScaleX: -1
+    -   font-face               - arguments: Font Family: myFont, Eot File Src: myFont.eot, Woff File Src: myFont.woff, Ttf File Src: myFont.ttf
+    -   opacity                 - arguments: Opacity: 0.5
+    -   outline radius          - arguments: Radius: 5px
+    -   resize                  - arguments: Direction: both
+    -   rotate                  - arguments: Degree: 0, M11: 0, M12: 0, M21: 0, M22: 0
+    CSS Matrix Rotation Calculator http://www.boogdesign.com/examples/transforms/matrix-calculator.html
+    -   text-shadow             - arguments: X: 2px, Y: 2px, Blur: 5px, Color: rgba(0,0,0,.4)
+    -   transform               - arguments: Parameters: null
+    -   transform-style         - arguments: Style: preserve-3d
+    -   transition              - Default arguments: What: all, Length: 1s, Easing: ease-in-out
+    -                            - Examples: @include transition (all 2s ease-in-out);
+    -                                        @include transition (opacity 1s ease-in 2s, width 2s ease-out);
+    -   triple-borders          - arguments: Color One: #3C3C3C, Color Two: #999999, Color Three: #000000, Radius: 0
+    -   keyframes               - arguments: Animation name
+                                - content:   Animation css
+    -   animation               - arguments: name duration timing-function delay iteration-count direction fill-mode play-state
+                                             (http://www.w3schools.com/cssref/css3_pr_animation.asp)
+
+------------------------------------------------------------- */
+@font-face {
+  font-family: 'AkkuratStd';
+  src: url("../fonts/akkrgpro1.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/akkrgpro1.eot?#iefix") format("embedded-opentype"), url("../fonts/akkrgpro1.woff") format("woff"), url("../fonts/akkrgpro1.ttf") format("truetype"), url("../fonts/akkrgpro1.svg") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'AkkuratStd-Bold';
+  src: url("../fonts/akkuratstdbold.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/akkuratstdbold.eot?#iefix") format("embedded-opentype"), url("../fonts/akkuratstdbold.woff") format("woff"), url("../fonts/akkuratstdbold.ttf") format("truetype"), url("../fonts/akkuratstdbold.svg") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'AkkuratStd-Light';
+  src: url("../fonts/AkkuratStd-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/AkkuratStd-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/AkkuratStd-Light.woff") format("woff"), url("../fonts/AkkuratStd-Light.ttf") format("truetype"), url("../fonts/AkkuratStd-Light.svg") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* line 2, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgt-5 {
+  margin-top: 5px !important;
+}
+
+/* line 5, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgt-10 {
+  margin-top: 10px !important;
+}
+
+/* line 8, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgt-15 {
+  margin-top: 15px !important;
+}
+
+/* line 11, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgt-20 {
+  margin-top: 20px !important;
+}
+
+/* line 14, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgt-25 {
+  margin-top: 25px !important;
+}
+
+/* line 17, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgt-30 {
+  margin-top: 30px !important;
+}
+
+/* line 20, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgt-35 {
+  margin-top: 35px !important;
+}
+
+/* line 23, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgt-40 {
+  margin-top: 40px !important;
+}
+
+/* line 26, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgt-45 {
+  margin-top: 45px !important;
+}
+
+/* line 29, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgt-50 {
+  margin-top: 50px !important;
+}
+
+/* line 32, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgt-55 {
+  margin-top: 55px !important;
+}
+
+/* line 35, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgt-60 {
+  margin-top: 60px !important;
+}
+
+/* line 38, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgt-65 {
+  margin-top: 65px !important;
+}
+
+/* line 41, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgt-70 {
+  margin-top: 70px !important;
+}
+
+/* line 44, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgt-85 {
+  margin-top: 85px !important;
+}
+
+/* line 47, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgt-90 {
+  margin-top: 90px !important;
+}
+
+/* line 52, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgb-5 {
+  margin-bottom: 5px !important;
+}
+
+/* line 55, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgb-10 {
+  margin-bottom: 10px !important;
+}
+
+/* line 58, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgb-15 {
+  margin-bottom: 15px !important;
+}
+
+/* line 61, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgb-20 {
+  margin-bottom: 20px !important;
+}
+
+/* line 64, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgb-25 {
+  margin-bottom: 25px !important;
+}
+
+/* line 67, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgb-65 {
+  margin-bottom: 65px !important;
+}
+
+/* line 70, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgb-50 {
+  margin-bottom: 50px !important;
+}
+
+/* line 73, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgb-75 {
+  margin-bottom: 75px !important;
+}
+
+/* line 78, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.mgl-10 {
+  margin-left: 10px !important;
+}
+
+/* line 84, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.ma-50 {
+  margin-top: 50px   !important;
+  margin-bottom: 50px   !important;
+}
+
+/* line 90, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pw-0 {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* line 97, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdt-5 {
+  padding-top: 5px !important;
+}
+
+/* line 100, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdt-10 {
+  padding-top: 10px !important;
+}
+
+/* line 103, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdt-15 {
+  padding-top: 15px !important;
+}
+
+/* line 106, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdt-20 {
+  padding-top: 20px !important;
+}
+
+/* line 109, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdt-25 {
+  padding-top: 25px !important;
+}
+
+/* line 112, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdt-35 {
+  padding-top: 35px !important;
+}
+
+/* line 115, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdt-40 {
+  padding-top: 40px !important;
+}
+
+/* line 118, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdt-50 {
+  padding-top: 50px !important;
+}
+
+/* line 121, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdt-55 {
+  padding-top: 55px !important;
+}
+
+/* line 124, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdt-65 {
+  padding-top: 65px !important;
+}
+
+/* line 127, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdt-80 {
+  padding-top: 80px !important;
+}
+
+/* line 130, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdt-85 {
+  padding-top: 85px !important;
+}
+
+/* line 133, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdt-90 {
+  padding-top: 90px !important;
+}
+
+/* line 138, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdb-5 {
+  padding-bottom: 5px !important;
+}
+
+/* line 141, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdb-10 {
+  padding-bottom: 10px !important;
+}
+
+/* line 144, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdb-15 {
+  padding-bottom: 15px !important;
+}
+
+/* line 147, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdb-20 {
+  padding-bottom: 20px !important;
+}
+
+/* line 150, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdb-25 {
+  padding-bottom: 25px !important;
+}
+
+/* line 153, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdb-35 {
+  padding-bottom: 35px !important;
+}
+
+/* line 156, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdb-40 {
+  padding-bottom: 40px !important;
+}
+
+/* line 159, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdb-45 {
+  padding-bottom: 45px !important;
+}
+
+/* line 162, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdb-50 {
+  padding-bottom: 50px !important;
+}
+
+/* line 165, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdb-55 {
+  padding-bottom: 55px !important;
+}
+
+/* line 168, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdb-60 {
+  padding-bottom: 60px !important;
+}
+
+/* line 171, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdb-65 {
+  padding-bottom: 65px !important;
+}
+
+/* line 174, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdb-90 {
+  padding-bottom: 90px !important;
+}
+
+/* line 177, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdb-95 {
+  padding-bottom: 95px !important;
+}
+
+/* line 182, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pdl-25 {
+  padding-left: 25px !important;
+}
+
+/* line 188, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pa-10 {
+  padding-top: 10px   !important;
+  padding-bottom: 10px   !important;
+}
+
+/* line 192, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pa-15 {
+  padding-top: 15px   !important;
+  padding-bottom: 15px   !important;
+}
+
+/* line 196, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pa-50 {
+  padding-top: 50px   !important;
+  padding-bottom: 50px   !important;
+}
+
+/* line 202, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_helper.scss */
+.pw-0 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Template-specific stuff
+ *
+ * Customizations just for the template; these are not necessary for anything
+ * with disabling the responsiveness.
+ */
+/* Account for fixed navbar */
+/* line 8, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+body {
+  min-width: 980px;
+  background-color: #FFF;
+  font-family: AkkuratStd;
+  color: #000;
+  font-size: 15px;
+}
+
+/* Finesse the page header spacing */
+/* line 17, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.page-header {
+  margin-bottom: 30px;
+}
+
+/* line 20, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.page-header .lead {
+  margin-bottom: 10px;
+}
+
+/* Non-responsive overrides
+ *
+ * Utilitze the following CSS to disable the responsive-ness of the container,
+ * grid system, and navbar.
+ */
+/* Reset the container */
+/* line 32, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.container {
+  min-width: 950px;
+  max-width: 950px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+}
+
+/* line 40, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.btn-group-vertical > .btn-group:after, .btn-group-vertical > .btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .modal-header:after, .modal-header:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+  display: inherit;
+  content: " ";
+}
+
+/* line 46, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.container .navbar-header,
+.container .navbar-collapse {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Always float the navbar header */
+/* line 52, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.navbar-header {
+  float: left;
+}
+
+/* Undo the collapsing navbar */
+/* line 57, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.navbar-collapse {
+  display: block !important;
+  height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important;
+}
+
+/* line 64, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.navbar-toggle {
+  display: none;
+}
+
+/* line 67, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.navbar-collapse {
+  border-top: 0;
+}
+
+/* line 71, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.navbar-brand {
+  margin-left: -15px;
+}
+
+/* Always apply the floated nav */
+/* line 76, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.navbar-nav {
+  float: left;
+  margin: 0;
+}
+
+/* line 80, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.navbar-nav > li {
+  float: left;
+}
+
+/* line 83, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.navbar-nav > li > a {
+  padding: 15px;
+}
+
+/* Redeclare since we override the float above */
+/* line 88, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.navbar-nav.navbar-right {
+  float: right;
+}
+
+/* Undo custom dropdowns */
+/* line 93, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.navbar .navbar-nav .open .dropdown-menu {
+  position: absolute;
+  float: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-width: 0 1px 1px;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+/* line 104, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #333;
+}
+
+/* line 111, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+.navbar .navbar-nav .open .dropdown-menu > .active > a,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #fff !important;
+  background-color: #428bca !important;
+}
+
+/* line 117, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_non-responsive.scss */
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+  color: #999 !important;
+  background-color: transparent !important;
+}
+
+/* line 1, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_general.scss */
+.submenu_pie .container {
+  max-width: none;
+}
+
+/* line 5, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_general.scss */
+.pre-footer {
+  padding-bottom: 30px;
+}
+
+/* line 1, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_sprites.scss */
+.icon-download {
+  background: transparent url("../images/sprite.png") no-repeat 0px 0px;
+  padding: 9px 20px;
+}
+
+/* line 6, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_sprites.scss */
+.icon-close {
+  background: transparent url("../images/sprite.png") no-repeat -41px -16px;
+  padding: 10px 10px;
+}
+
+/* line 11, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_sprites.scss */
+.icon-download-big {
+  background: transparent url("../images/sprite.png") no-repeat scroll 5px -32px;
+  padding: 35px;
+}
+
+/* line 16, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_sprites.scss */
+.icon-sms {
+  background: transparent url("../images/sprite.png") no-repeat scroll -61px 1px;
+  padding: 2px 12px;
+}
+
+/* line 21, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_sprites.scss */
+.icon-final-step {
+  background: transparent url("../images/sprite.png") no-repeat scroll -64px -39px;
+  padding: 20px 35px;
+  display: inline;
+}
+
+/* line 27, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_sprites.scss */
+.icon-detail-prestamo {
+  background: transparent url("../images/sprite.png") no-repeat scroll -85px 2px;
+  padding: 6px 14px;
+}
+
+/* line 32, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_sprites.scss */
+.icon-close-red {
+  background: transparent url("../images/sprite.png") no-repeat scroll -62px -20px;
+  padding: 2px 9px;
+}
+
+/* line 37, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_sprites.scss */
+.icon-check {
+  background: transparent url("../images/sprite.png") no-repeat scroll -110px -20px;
+  padding: 2px 11px;
+}
+
+/* line 42, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_sprites.scss */
+.icon-pdf-times {
+  background: transparent url("../images/sprite.png") no-repeat scroll -43px -103px;
+  padding: 22px;
+}
+
+/* line 46, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_sprites.scss */
+.icon-pdf-download-white {
+  background: transparent url("../images/sprite.png") no-repeat scroll 2px -101px;
+  padding: 22px;
+}
+
+/* line 50, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_sprites.scss */
+.icon-pink {
+  background: transparent url("../images/sprite.png") no-repeat scroll -47px -146px;
+  padding: 13px 20px;
+}
+
+/* line 54, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_sprites.scss */
+.icon-calendar {
+  background: transparent url("../images/sprite.png") no-repeat scroll -116px 2px;
+  padding: 3px 7px;
+  margin-right: 5px;
+}
+
+/* line 59, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_sprites.scss */
+.icon-car-red {
+  background: transparent url("../images/sprite.png") no-repeat scroll 5px -150px;
+  padding: 12px 24px;
+}
+
+/* line 63, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_sprites.scss */
+.icon-car-white {
+  background: transparent url("../images/sprite.png") no-repeat scroll 5px -177px;
+  padding: 12px 24px;
+}
+
+/* line 1, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_progress-bar.scss */
+.progress {
+  -khtml-border-radius: 20px;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  height: 25px;
+  margin: 10px 0;
+  box-shadow: none;
+}
+
+/* line 9, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_progress-bar.scss */
+.progress-bar {
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-topright: 20px;
+  -moz-border-radius-bottomright: 20px;
+  -moz-border-radius-bottomleft: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  float: right;
+  box-shadow: none;
+}
+
+/* line 15, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_progress-bar.scss */
+.triangulo_izq {
+  width: 0;
+  height: 0;
+  border-bottom: 14px solid transparent;
+  /* left arrow slant */
+  border-top: 13px solid transparent;
+  /* right arrow slant */
+  border-right: 14px solid #000000;
+  /* bottom, add background color here */
+  font-size: 0;
+  line-height: 0;
+  float: right;
+}
+
+/* line 26, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_progress-bar.scss */
+.values-progress-bar {
+  overflow: hidden;
+  height: 40px;
+}
+
+/* line 29, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_progress-bar.scss */
+.values-progress-bar .value {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/* line 33, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_progress-bar.scss */
+.values-progress-bar .pull-left {
+  text-align: left;
+  color: #000000;
+}
+
+/* line 37, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_progress-bar.scss */
+.values-progress-bar .pull-right {
+  text-align: right;
+}
+
+/* line 39, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_progress-bar.scss */
+.values-progress-bar .pull-right .value {
+  color: #000000;
+}
+
+/* line 1, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos {
+  color: #556270;
+  font-family: AkkuratStd-Bold;
+}
+
+/* line 4, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos h3 {
+  font-size: 28px;
+}
+
+/* line 6, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos h3 .hightlight {
+  color: #cb7a10;
+  font-family: AkkuratStd-Bold;
+}
+
+/* line 10, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos h3 .title_calendar {
+  font-family: AkkuratStd-Light;
+}
+
+/* line 12, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos h3 .title_calendar strong {
+  font-family: AkkuratStd-Bold;
+}
+
+/* line 17, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos .target-presupuesto {
+  border: 1px solid #f3f3f3;
+  box-shadow: 0px 1px 0px 0px #d7d7d7;
+  background: #FFFFFF;
+  display: inherit;
+  font-weight: bold;
+  transition: border 0.2s;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 25, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos .target-presupuesto .info-general {
+  border-bottom: 1px solid #e8e7e3;
+  padding: 20px 15px;
+  display: table;
+  width: 100%;
+}
+
+/* line 30, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos .target-presupuesto .info-general .info {
+  padding-left: 12px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 34, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos .target-presupuesto .info-general .info > span {
+  color: #556270;
+  font-size: 15px;
+}
+
+/* line 38, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos .target-presupuesto .info-general .info .value {
+  color: #aeb5bc;
+  font-size: 20px;
+}
+
+/* line 41, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos .target-presupuesto .info-general .info .value .decimal {
+  font-size: 11px;
+}
+
+/* line 46, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos .target-presupuesto .info-general .img-circle {
+  display: table-cell;
+  background-color: #cb7a10;
+  height: 53px;
+  width: 53px;
+  position: relative;
+}
+
+/* line 52, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos .target-presupuesto .info-general .img-circle i {
+  width: 50%;
+  height: 50%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* line 62, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos .target-presupuesto .data-progress {
+  padding: 10px 15px 40px;
+}
+
+/* line 64, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos .target-presupuesto .data-progress .value {
+  font-size: 30px;
+  color: #556270;
+  text-align: right;
+}
+
+/* line 68, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos .target-presupuesto .data-progress .value .decimal {
+  font-size: 15px;
+}
+
+/* line 72, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos .target-presupuesto .data-progress .progress {
+  height: 8px;
+}
+
+/* line 74, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos .target-presupuesto .data-progress .progress .triangulo_izq {
+  border-bottom: 4px solid transparent;
+  border-top: 4px solid transparent;
+  border-right: 4px solid #cb7a10;
+}
+
+/* line 79, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos .target-presupuesto .data-progress .progress .progress-bar {
+  background: #cb7a10;
+}
+
+/* line 84, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_presupuesto.scss */
+.presupuestos .target-presupuesto:hover {
+  text-decoration: none;
+  border: 1px solid #cb7a10;
+}
+
+/* line 2, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_calendary.scss */
+.presupuestos .nav-tabs {
+  font-size: 13px;
+  border-bottom: none;
+  margin-bottom: 10px;
+}
+
+/* line 7, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_calendary.scss */
+.presupuestos .nav-tabs > li > div.muesca {
+  background: #FFFFFF;
+  width: 4px;
+  height: 8px;
+  position: absolute;
+  top: 0;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  left: 20%;
+  display: inline-block;
+}
+
+/* line 17, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_calendary.scss */
+.presupuestos .nav-tabs > li > div.muesca:last-child {
+  left: inherit;
+  right: 20%;
+}
+
+/* line 22, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_calendary.scss */
+.presupuestos .nav-tabs > li.active > a {
+  background-color: #cb7a10;
+  border: none;
+  color: #FFFFFF;
+}
+
+/* line 26, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_calendary.scss */
+.presupuestos .nav-tabs > li.active > a:hover {
+  background-color: #cb7a10;
+  color: #FFFFFF;
+}
+
+/* line 31, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_calendary.scss */
+.presupuestos .nav-tabs > li.future > a {
+  background-color: #dadddf;
+  color: #556270;
+}
+
+/* line 34, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_calendary.scss */
+.presupuestos .nav-tabs > li.future > a:hover {
+  background-color: #556270;
+}
+
+/* line 38, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_calendary.scss */
+.presupuestos .nav-tabs > li.future.active > a {
+  background-color: #556270;
+  color: #FFFFFF;
+}
+
+/* line 42, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_calendary.scss */
+.presupuestos .nav-tabs > li > a {
+  width: 55px;
+  height: 60px;
+  margin: 0 3px;
+  border: none;
+  border-bottom: 1px solid #d7d7d7;
+  color: #aeb5bc;
+  font-weight: bold;
+  text-align: center;
+  padding: 22px 0;
+  border-radius: 0;
+}
+
+/* line 53, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_calendary.scss */
+.presupuestos .nav-tabs > li > a:hover {
+  background-color: #e5c59b;
+  color: #FFFFFF;
+}
+
+/* line 58, /home/gustavo/Proyectos/coinc2016/develop/app/assets/sass/partials/_calendary.scss */
+.presupuestos .nav-tabs > li > span {
+  color: #556270;
+  width: 55px;
+  height: 60px;
+  margin: 0 2.5px;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 22px;
+}

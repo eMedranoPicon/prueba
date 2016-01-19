@@ -1,0 +1,89 @@
+.presupuestos {
+  color: $grey300;
+  font-family: $fontBold;
+  h3 {
+    font-size: 28px;
+    .hightlight {
+      color: $colorPresPrimary;
+      font-family: $fontBold;
+    }
+    .title_calendar {
+      font-family: $fontLight;
+      strong {
+        font-family: $fontBold;
+      }
+    }
+  }
+  .target-presupuesto {
+    border: 1px solid $grey950;
+    box-shadow: 0px 1px 0px 0px $grey800;
+    background: $white;
+    display: inherit;
+    font-weight: bold;
+    transition: border 0.2s;
+    @include border-radius($radius: 3px);
+    .info-general {
+      border-bottom: 1px solid $grey850;
+      padding: 20px 15px;
+      display: table;
+      width: 100%;
+      .info {
+        padding-left: 12px;
+        display: table-cell;
+        vertical-align: middle;
+        & > span {
+          color: $grey300;
+          font-size: 15px;
+        }
+        .value {
+          color: $grey500;
+          font-size: 20px;
+          .decimal {
+            font-size: 11px;
+          }
+        }
+      }
+      .img-circle {
+        display: table-cell;
+        background-color: $colorPresPrimary;
+        height: 53px;
+        width: 53px;
+        position: relative;
+        i {
+          width: 50%;
+          height: 50%;
+          overflow: auto;
+          margin: auto;
+          position: absolute;
+          top: 0; left: 0; bottom: 0; right: 0;
+        }
+      }
+    }
+    .data-progress {
+      padding: 10px 15px 40px;
+      .value {
+        font-size: 30px;
+        color: $grey300;
+        text-align: right;
+        .decimal {
+          font-size: 15px;
+        }
+      }
+      .progress {
+        height: 8px;
+        .triangulo_izq {
+          border-bottom: 4px solid transparent;
+          border-top: 4px solid transparent;
+          border-right: 4px solid $colorPresPrimary;
+        }
+        .progress-bar {
+          background: $colorPresPrimary;
+        }
+      }
+    }
+    &:hover {
+      text-decoration: none;
+      border: 1px solid $colorPresPrimary;
+    }
+  }
+}
