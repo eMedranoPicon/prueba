@@ -5,6 +5,7 @@ def get_index():
 				"TOTAL_GASTADO": "1.560",
 				"TOTAL_PRESUPUESTADO": "1.760",
               	"LBL_MES": "SEP",
+				"MES_COMPLETO": "Septiembre",
 				"MODIFICADO": False,
 				"PRESUPUESTOS": [
 					{
@@ -20,6 +21,7 @@ def get_index():
 				"TOTAL_GASTADO": "1.560",
 				"TOTAL_PRESUPUESTADO": "1.760",
               	"LBL_MES": "OCT",
+				"MES_COMPLETO": "Octubre",
 				"MODIFICADO": False,
 				"PRESUPUESTOS": [
 					{
@@ -35,6 +37,7 @@ def get_index():
 				"TOTAL_GASTADO": "1.560",
 				"TOTAL_PRESUPUESTADO": "1.760",
               	"LBL_MES": "NOV",
+				"MES_COMPLETO": "Noviembre",
 				"MODIFICADO": False,
 				"PRESUPUESTOS": [
 					{
@@ -50,7 +53,8 @@ def get_index():
 				"TOTAL_GASTADO": "1.560",
 				"TOTAL_PRESUPUESTADO": "1.760",
               	"LBL_MES": "DIC",
-				"MODIFICADO": False,
+				"MES_COMPLETO": "Diciembre",
+				"MODIFICADO": True,
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
@@ -65,6 +69,7 @@ def get_index():
 				"TOTAL_GASTADO": "1.560",
 				"TOTAL_PRESUPUESTADO": "1.760",
               	"LBL_MES": "ENE",
+				"MES_COMPLETO": "Enero",
 				"MODIFICADO": False,
 				"PRESUPUESTOS": [
 					{
@@ -80,6 +85,7 @@ def get_index():
 				"TOTAL_GASTADO": "1.560",
 				"TOTAL_PRESUPUESTADO": "1.760",
               	"LBL_MES": "FEB",
+				"MES_COMPLETO": "Febrero",
 				"MODIFICADO": False,
 				"PRESUPUESTOS": [
 					{
@@ -95,6 +101,7 @@ def get_index():
 				"TOTAL_GASTADO": "1.560",
 				"TOTAL_PRESUPUESTADO": "1.760",
               	"LBL_MES": "MAR",
+				"MES_COMPLETO": "Marzo",
 				"MODIFICADO": False,
 				"PRESUPUESTOS": [
 					{
@@ -110,6 +117,7 @@ def get_index():
 				"TOTAL_GASTADO": "1.560",
 				"TOTAL_PRESUPUESTADO": "1.760",
               	"LBL_MES": "ABR",
+				"MES_COMPLETO": "Abril",
 				"MODIFICADO": False,
 				"PRESUPUESTOS": [
 					{
@@ -125,6 +133,7 @@ def get_index():
 				"TOTAL_GASTADO": "1.560",
 				"TOTAL_PRESUPUESTADO": "1.760",
               	"LBL_MES": "MAY",
+				"MES_COMPLETO": "Mayo",
 				"MODIFICADO": False,
 				"PRESUPUESTOS": [
 					{
@@ -140,7 +149,8 @@ def get_index():
 				"TOTAL_GASTADO": "1.560",
 				"TOTAL_PRESUPUESTADO": "1.760",
               	"LBL_MES": "JUN",
-				"MODIFICADO": False,
+				"MES_COMPLETO": "Junio",
+				"MODIFICADO": True,
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
@@ -155,6 +165,7 @@ def get_index():
 				"TOTAL_GASTADO": "1.560",
 				"TOTAL_PRESUPUESTADO": "1.760",
               	"LBL_MES": "JUL",
+				"MES_COMPLETO": "Julio",
 				"MODIFICADO": False,
 				"PRESUPUESTOS": [
 					{
@@ -170,6 +181,7 @@ def get_index():
 				"TOTAL_GASTADO": "1.560",
 				"TOTAL_PRESUPUESTADO": "1.760",
               	"LBL_MES": "AGO",
+				"MES_COMPLETO": "Agosto",
 				"MODIFICADO": False,
 				"PRESUPUESTOS": [
 					{
@@ -182,9 +194,9 @@ def get_index():
 				]
           	},
 			{
-				"TOTAL_GASTADO": "1.560",
 				"TOTAL_PRESUPUESTADO": "1.760",
               	"LBL_MES": "SEP",
+				"MES_COMPLETO": "Septiembre",
 				"MODIFICADO": False,
 				"PRESUPUESTOS": [
 					{
@@ -197,9 +209,9 @@ def get_index():
 				]
           	},
 			{
-				"TOTAL_GASTADO": "1.560",
 				"TOTAL_PRESUPUESTADO": "1.760",
               	"LBL_MES": "OCT",
+				"MES_COMPLETO": "Octubre",
 				"MODIFICADO": False,
 				"PRESUPUESTOS": [
 					{

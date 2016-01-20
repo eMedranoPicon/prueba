@@ -1,0 +1,10 @@
+*~
+*.log
+*.db
+*.project
+*.sublime-project
+*.sublime-workspace
+bower_components/*
+node_modules/*
+context_vars/__pycache__/
+__pycache__

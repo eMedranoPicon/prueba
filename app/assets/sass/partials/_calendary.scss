@@ -2,21 +2,41 @@
   .nav-tabs {
     font-size: 13px;
     border-bottom: none;
-    margin-bottom: 10px;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    &.slideup {
+      @include slideup();
+    }
+    &.slidedown {
+      @include slidedown(60px);
+    }
     &>li {
+      width: calc(100%/15);
+      position: relative;
+      &>div.modificado {
+        width: 4px;
+        height: 4px;
+        position: absolute;
+        background: $colorPresPrimary;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 75%;
+        @include border-radius(50px);
+      }
       &>div.muesca{
         background: $white;
         width: 4px;
         height: 8px;
         position: absolute;
         top: 0;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
         left: 20%;
         display: inline-block;
+        @include border-radius-separate(0, 0, 4px, 4px);
         &:last-child {
           left: inherit;
-          right:20%;
+          right:20%!important;
         }
       }
       &.active>a{
@@ -40,7 +60,6 @@
         color: $white;
       }
       &>a {
-        width: 55px;
         height: 60px;
         margin: 0 3px;
         border: none;
@@ -49,7 +68,7 @@
         font-weight: bold;
         text-align: center;
         padding: 22px 0;
-        border-radius: 0;
+        @include border-radius(0);
         &:hover {
           background-color: $colorPresSecond;
           color: $white;

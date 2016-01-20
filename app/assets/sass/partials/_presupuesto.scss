@@ -1,27 +1,53 @@
 .presupuestos {
   color: $grey300;
   font-family: $fontBold;
-  h3 {
+  .content-title-calendar {
+    display: table;
+    vertical-align: bottom;
+    width: 100%;
+    font-family: $fontLight;
+    &>div {
+      display: table-cell;
+      &.show_calendar {
+        font-family: $font;
+        text-align: right;
+        font-size: 13px;
+        color: $colorPresPrimary;
+        a {
+          text-decoration: none;
+          cursor: pointer;
+          text-transform: uppercase;
+          color: $grey300;
+          &:hover {
+            color: $colorPresPrimary;
+          }
+        }
+      }
+    }
+  }
+  h3, .content-title-calendar {
     font-size: 28px;
     .hightlight {
       color: $colorPresPrimary;
       font-family: $fontBold;
     }
-    .title_calendar {
-      font-family: $fontLight;
-      strong {
-        font-family: $fontBold;
-      }
+  }
+  .content-title-calendar .title_calendar {
+    font-family: $fontLight;
+    strong {
+      font-family: $fontBold;
     }
   }
   .target-presupuesto {
     border: 1px solid $grey950;
-    box-shadow: 0px 1px 0px 0px $grey800;
+    //box-shadow: 0px 1px 0px 0px $grey800;
     background: $white;
     display: inherit;
     font-weight: bold;
-    transition: border 0.2s;
-    @include border-radius($radius: 3px);
+    text-decoration: none;
+    @include box-shadow (0, 1px, 0, $grey800);
+    @include transition (border 0.2s);
+    @include border-radius(3px);
     .info-general {
       border-bottom: 1px solid $grey850;
       padding: 20px 15px;

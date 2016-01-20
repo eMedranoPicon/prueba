@@ -299,3 +299,19 @@
 @mixin animation($str) {
   @include css3-prefix('animation', $str);
 }
+
+
+//*** MIXINS DESARROLLO COINC ***//
+
+// SLIDE UP/DOWN
+@mixin slideup() {
+  max-height: 0;
+  overflow-y: hidden;
+  @include transition (max-height 0.45s ease-in);
+}
+
+@mixin slidedown($max-height) {
+  max-height: $max-height;
+  overflow-y: hidden;
+  @include transition (max-height 0.45s ease-out);
+}
