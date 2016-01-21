@@ -40,14 +40,21 @@
   }
   .target-presupuesto {
     border: 1px solid $grey950;
-    //box-shadow: 0px 1px 0px 0px $grey800;
     background: $white;
     display: inherit;
     font-weight: bold;
     text-decoration: none;
+    height: 215px;
     @include box-shadow (0, 1px, 0, $grey800);
     @include transition (border 0.2s);
     @include border-radius(3px);
+    &.target-future {
+      height: 85px;
+      @include transition (height 3s);
+      .info-general {
+        border-bottom: none;
+      }
+    }
     .info-general {
       border-bottom: 1px solid $grey850;
       padding: 20px 15px;
@@ -83,6 +90,11 @@
           position: absolute;
           top: 0; left: 0; bottom: 0; right: 0;
         }
+      }
+      .modify {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: right;
       }
     }
     .data-progress {

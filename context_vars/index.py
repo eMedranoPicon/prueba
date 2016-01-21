@@ -220,6 +220,13 @@ def get_index():
 						"PREVISTO": "580",
 						"GASTADO": "250",
 						"PORCENTAJE": "55"
+					},
+					{
+						"TITLE": "Vivienda",
+						"ICONO": "",
+						"PREVISTO": "580",
+						"GASTADO": "250",
+						"PORCENTAJE": "55"
 					}
 				]
           	},

@@ -3922,4 +3922,14 @@ $(document).ready(function () {
     }
   });
 
+  $(".target-future").hover(
+    function() {
+      $(this).find('.modify>i').addClass('icon-orange');
+    }, function() {
+      $(this).find('.modify>i').removeClass('icon-orange');
+    }
+  );
+
+  $(".card").flip();
+
 });

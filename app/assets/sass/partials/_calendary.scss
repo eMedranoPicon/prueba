@@ -69,6 +69,7 @@
         text-align: center;
         padding: 22px 0;
         @include border-radius(0);
+        @include transition (background-color 0.2s, color 0.2s);
         &:hover {
           background-color: $colorPresSecond;
           color: $white;

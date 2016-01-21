@@ -45,20 +45,34 @@
   <div class="tab-content">
     {% for MES in CALENDARIO %}
       <article id="section{{ loop.index }}" class="tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %}">
+        {% set parentloop = loop %}
         {% for PRESUPUESTO in MES.PRESUPUESTOS %}
           <div class="col-xs-4">
-            <a href="javascript:void()" class="target-presupuesto ">
-              <div class="info-general">
+            {% if parentloop.last %}
+            <div class="target-presupuesto target-future card">
+              <div class="info-general front">
                 <div class="img-circle"><i class="icon-car-white"></i></div>
-                <div class="info"><span>{{ PRESUPUESTO.TITLE }}</span><div class="value">{{ PRESUPUESTO.PREVISTO }}<span class="decimal">,00</span> €</div></div>
+                <div class="info"><span>{{ PRESUPUESTO.TITLE }}</span><div class="value">{{ PRESUPUESTO.PREVISTO }}<span class="decimal">,00</span> €</div>  <div class="modify">esto es un texto<i class="icon-edit"></i></div></div>
+
               </div>
-              <div class="data-progress">
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="{{ PRESUPUESTO.PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ PRESUPUESTO.PORCENTAJE }}%"></div><span class="triangulo_izq"></span>
+              <div class="back">
+                Back content
+              </div>
+            </div>
+            {% else %}
+              <a href="javascript:void()" class="target-presupuesto">
+                <div class="info-general">
+                  <div class="img-circle"><i class="icon-car-white"></i></div>
+                  <div class="info"><span>{{ PRESUPUESTO.TITLE }}</span><div class="value">{{ PRESUPUESTO.PREVISTO }}<span class="decimal">,00</span> €</div></div>
                 </div>
-                <div class="value"><strong>{{ PRESUPUESTO.GASTADO }}<span class="decimal">,00</span> €</strong></div>
-              </div>
-            </a>
+                <div class="data-progress">
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{{ PRESUPUESTO.PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ PRESUPUESTO.PORCENTAJE }}%"></div><span class="triangulo_izq"></span>
+                  </div>
+                  <div class="value"><strong>{{ PRESUPUESTO.GASTADO }}<span class="decimal">,00</span> €</strong></div>
+                </div>
+              </a>
+            {% endif %}
           </div>
         {% endfor %}
       </article>
