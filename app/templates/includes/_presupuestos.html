@@ -42,10 +42,9 @@
     {% endfor %}
   </ul>
 
-  
   <div class="tab-content">
     {% for MES in CALENDARIO %}
-      <div id="section{{ loop.index }}_bar" class="progress-bar-content tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %}">
+      <article id="section{{ loop.index }}_bar" class="progress-bar-content tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %}">
         {% if MES.TOTAL_PORCENTAJE < 100 %}
           <div class="progress border-radius-less">
             <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ MES.TOTAL_PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ MES.TOTAL_PORCENTAJE }}%"></div>
@@ -64,12 +63,8 @@
             <span class="bar-spent">Gastado </span><span class="bar-money-spent">{{ MES.TOTAL_GASTADO }}€</span>
           </div>
         {% endif %}
-      </div>
-    {% endfor %}
-  </div>
+      </article>
 
-  <div class="tab-content">
-    {% for MES in CALENDARIO %}
       <article id="section{{ loop.index }}" class="tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %}">
         {% set parentloop = loop %}
         {% for PRESUPUESTO in MES.PRESUPUESTOS %}

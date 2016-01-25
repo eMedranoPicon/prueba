@@ -4,6 +4,7 @@
 *.project
 *.sublime-project
 *.sublime-workspace
+app/dist/*
 bower_components/*
 node_modules/*
 context_vars/__pycache__/
