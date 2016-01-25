@@ -43,8 +43,7 @@ var src_app = './app',
     './bower_components/jquery/dist/jquery.js',
     './bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js',
     './bower_components/jQuery.mmenu/dist/js/jquery.mmenu.min.all.js',
-    './bower_components/jquery-ui/jquery-ui.min.js',
-    './bower_components/flip/dist/jquery.flip.min.js'
+    './bower_components/jquery-ui/jquery-ui.min.js'
   ],
   vendor_css_src = [
     './bower_components/bootstrap/dist/css/bootstrap.min.css'
