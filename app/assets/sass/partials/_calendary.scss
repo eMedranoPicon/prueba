@@ -1,0 +1,90 @@
+.presupuestos {
+  .nav-tabs {
+    font-size: 13px;
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    &.slideup {
+      @include slideup();
+    }
+    &.slidedown {
+      @include slidedown(60px);
+    }
+    &>li {
+      width: calc(100%/15);
+      position: relative;
+      &>div.modificado {
+        width: 4px;
+        height: 4px;
+        position: absolute;
+        background: $colorPresPrimary;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 75%;
+        @include border-radius(50px);
+      }
+      &>div.muesca{
+        background: $white;
+        width: 4px;
+        height: 8px;
+        position: absolute;
+        top: 0;
+        left: 20%;
+        display: inline-block;
+        @include border-radius-separate(0, 0, 4px, 4px);
+        &:last-child {
+          left: inherit;
+          right:20%!important;
+        }
+      }
+      &.active>a{
+        background-color: $colorPresPrimary;
+        border: none;
+        color: $white;
+        &:hover {
+          background-color: $colorPresPrimary;
+          color: $white;
+        }
+      }
+      &.future>a{
+        background-color: $gray820;
+        color: $grey300;
+        &:hover {
+          background-color: $grey300;
+        }
+      }
+      &.future.active>a {
+        background-color: $grey300;
+        color: $white;
+      }
+      &>a {
+        height: 60px;
+        margin: 0 3px;
+        border: none;
+        border-bottom: 1px solid $grey800;
+        color: $grey500;
+        font-weight: bold;
+        text-align: center;
+        padding: 22px 0;
+        @include border-radius(0);
+        @include transition (background-color 0.2s, color 0.2s);
+        &:hover {
+          background-color: $colorPresSecond;
+          color: $white;
+        }
+      }
+      &>span {
+        color: $grey300;
+        width: 55px;
+        height: 60px;
+        margin: 0 2.5px;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;
+        padding-top: 22px;
+      }
+    }
+  }
+}
