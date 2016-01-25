@@ -28,10 +28,38 @@ def get_index():
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
-						"ICONO": "icon-car-white",
-						"PREVISTO": "580",
-						"GASTADO": "250",
-						"PORCENTAJE": "55"
+						"ICONO": "icon-house-white",
+						"PREVISTO": "640",
+						"GASTADO": "610",
+						"PORCENTAJE": "110"
+					},
+					{
+						"TITLE": "Colegio",
+						"ICONO": "icon-book-white",
+						"PREVISTO": "100",
+						"GASTADO": "100",
+						"PORCENTAJE": "100"
+					},
+					{
+						"TITLE": "Tarjeta",
+						"ICONO": "icon-card-white",
+						"PREVISTO": "245",
+						"GASTADO": "245",
+						"PORCENTAJE": "100"
+					},
+					{
+						"TITLE": "Seguros",
+						"ICONO": "icon-umbrella-white",
+						"PREVISTO": "395",
+						"GASTADO": "395",
+						"PORCENTAJE": "100"
+					},
+					{
+						"TITLE": "Cuota préstamo",
+						"ICONO": "icon-hand-white",
+						"PREVISTO": "270",
+						"GASTADO": "270",
+						"PORCENTAJE": "100"
 					}
 				]
           	},
@@ -53,9 +81,9 @@ def get_index():
 				]
           	},
 			{
-				"TOTAL_GASTADO": "1.560",
+				"TOTAL_GASTADO": "3.260",
 				"TOTAL_PRESUPUESTADO": "1.760", 
-				"TOTAL_PORCENTAJE": 90,
+				"TOTAL_PORCENTAJE": 220,
               	"LBL_MES": "DIC",
 				"MES_COMPLETO": "Diciembre",
 				"MODIFICADO": True,

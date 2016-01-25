@@ -1,6 +1,6 @@
 .presupuestos {
   color: $grey300;
-  font-family: $fontBold;
+  font-family: $font;
   .content-title-calendar {
     display: table;
     vertical-align: bottom;
@@ -171,6 +171,7 @@
     height: 60px;
     .progress {
       height: 24px;
+      margin-bottom: 0px;
       &.closed {
         display: none;
       }
@@ -203,12 +204,27 @@
       margin-left: 10px;
       .bar-money-spent {
         color: $colorPresPrimary;
+        font-family: $fontBold;
         font-size: 12px;
       }
       .bar-spent {
-        color: $colorPresSecond;
+        color: $colorPresPrimary;
+        font-family: $font;
         font-size: 12px;
       }
+      &.dark {
+        .bar-money-spent {
+          color: $colorPresTer;
+        }
+        .bar-spent {
+          color: $colorPresTer;
+        }
+      }
+    }
+    .bar-text-container-right {
+      @extend .bar-text-container;
+      float: right;
+      margin-right: 10px;
     }
     .triangulo_izq {
       border-bottom: 12px solid;
@@ -227,12 +243,23 @@
       border-right-color: $colorPresPrimary;
       background: transparent;
       height: 45px;
-      margin-left: 13px;
-      margin-top: -32px;
+      margin-left: 12px;
+      margin-top: -24px;
       border-right-width: 2px;
     }
+    .dotted-line-right {
+      float: right;
+      border-left-style: dotted;
+      border-left-color: $colorPresPrimary;
+      background: transparent;
+      height: 45px;
+      margin-top: -24px;
+      border-left-width: 2px;
+    }
   }
-  
+  .invisible {
+    display: hidden;
+  }
 }
 
 
