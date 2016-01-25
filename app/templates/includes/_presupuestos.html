@@ -45,7 +45,7 @@
 
   <div class="tab-content">
     {% for MES in CALENDARIO %}
-      <article id="section{{ loop.index }}_bar" class="progress-bar-content tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %}">
+      <article id="section{{ loop.index }}_bar" class="progress-bar-content tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %} {% if loop.last %} invisible {% endif %}">
         {% if MES.TOTAL_PORCENTAJE < 100 %}
           <div class="progress border-radius-less">
             <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ MES.TOTAL_PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ MES.TOTAL_PORCENTAJE }}%"></div>
@@ -55,14 +55,28 @@
             </div>
           </div>
         {% else %}
+          {% if (MES.TOTAL_PORCENTAJE - 200) >= 0 %} 
+            {% set value = 0 %}
+            {% set width = 100 %}
+          {% else %}
+            {% set value = (200 - MES.TOTAL_PORCENTAJE) %}
+            {% set width = (MES.TOTAL_PORCENTAJE - 100) %}
+          {% endif %}
           <span class="triangulo_izq left"></span>
           <div class="progress over-loaded border-radius-less">
-            <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ 200 - MES.TOTAL_PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ 200 - MES.TOTAL_PORCENTAJE }}%"></div>
+            <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ value }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ value }}%"></div>
           </div>
-          <div class="dotted-line" style="width: {{ MES.TOTAL_PORCENTAJE - 100 }}%"></div>
-          <div class="bar-text-container">
-            <span class="bar-spent">Gastado </span><span class="bar-money-spent">{{ MES.TOTAL_GASTADO }}€</span>
-          </div>
+          {% if value > 10 %}
+            <div class="dotted-line" style="width: {{ width }}%"></div>
+            <div class="bar-text-container dark">
+              <span class="bar-spent">Gastado </span><span class="bar-money-spent">{{ MES.TOTAL_GASTADO }}€</span>
+            </div>
+          {% else %}
+            <div class="dotted-line-right" style="width: {{ 100 - width }}%"></div>
+            <div class="bar-text-container-right dark">
+              <span class="bar-spent">Gastado </span><span class="bar-money-spent">{{ MES.TOTAL_GASTADO }}€</span>
+            </div>
+          {% endif %}
         {% endif %}
       </article>
     {% endfor %}
@@ -103,7 +117,7 @@
             {% else %}
               <a href="javascript:void()" class="target-presupuesto">
                 <div class="info-general">
-                  <div class="img-circle"><i class="icon-car-white"></i></div>
+                  <div class="img-circle"><i class="{{ PRESUPUESTO.ICONO }}"></i></div>
                   <div class="info"><span>{{ PRESUPUESTO.TITLE }}</span><div class="value">{{ PRESUPUESTO.PREVISTO }}<span class="decimal">,00</span> €</div></div>
                 </div>
                 <div class="data-progress">
