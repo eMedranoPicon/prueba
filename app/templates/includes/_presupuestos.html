@@ -42,7 +42,7 @@
     {% endfor %}
   </ul>
 
-  
+
   <div class="tab-content">
     {% for MES in CALENDARIO %}
       <article id="section{{ loop.index }}_bar" class="progress-bar-content tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %}">
@@ -61,7 +61,7 @@
           </div>
           <div class="dotted-line" style="width: {{ MES.TOTAL_PORCENTAJE - 100 }}%"></div>
           <div class="bar-text-container">
-              <span class="bar-spent">Gastado </span><span class="bar-money-spent">{{ MES.TOTAL_GASTADO }}€</span>
+            <span class="bar-spent">Gastado </span><span class="bar-money-spent">{{ MES.TOTAL_GASTADO }}€</span>
           </div>
         {% endif %}
       </article>
@@ -75,16 +75,30 @@
         {% for PRESUPUESTO in MES.PRESUPUESTOS %}
           <div class="col-xs-4">
             {% if parentloop.last %}
-            <div class="target-presupuesto target-future card">
-              <div class="info-general front">
-                <div class="img-circle"><i class="icon-car-white"></i></div>
-                <div class="info"><span>{{ PRESUPUESTO.TITLE }}</span><div class="value">{{ PRESUPUESTO.PREVISTO }}<span class="decimal">,00</span> €</div>  <div class="modify">esto es un texto<i class="icon-edit"></i></div></div>
-
+              <div class="target-presupuesto target-future flip">
+                <div class="card">
+                  <div class="info-general face front">
+                    <div class="img-circle"><i class="icon-car-white"></i></div>
+                    <div class="info">
+                      <span>{{ PRESUPUESTO.TITLE }}</span>
+                      <div>
+                        <span class="value value{{loop.index~parentloop.index}}">{{ PRESUPUESTO.PREVISTO }}</span>,<span class="decimal decimal{{loop.index~parentloop.index}}">00</span> €
+                      </div>
+                    </div>
+                    <div class="modify"><i class="icon-edit"></i></div>
+                  </div>
+                  <div class="info-general face back">
+                      <div class="info modify-info">Ajuste manual<br />para este mes.</div>
+                      <div class="info modify-data">
+                        <label for="my-input{{loop.index~parentloop.index}}" class="label-input" id="label-input{{loop.index~parentloop.index}}">
+                          <span class="value value{{loop.index~parentloop.index}}">{{ PRESUPUESTO.PREVISTO }}</span>,<span class="decimal decimal{{loop.index~parentloop.index}}">00</span>
+                        </label>
+                        <input class="my-input" data-id="{{loop.index~parentloop.index}}" id="my-input{{loop.index~parentloop.index}}" type="text" name="name" value="" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true" />€
+                      </div>
+                      <div class="modify"><i class="return-flip icon-edit icon-orange"></i></div>
+                  </div>
+                </div>
               </div>
-              <div class="back">
-                Back content
-              </div>
-            </div>
             {% else %}
               <a href="javascript:void()" class="target-presupuesto">
                 <div class="info-general">
@@ -95,7 +109,7 @@
                   <div class="progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="{{ PRESUPUESTO.PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ PRESUPUESTO.PORCENTAJE }}%"></div><span class="triangulo_izq"></span>
                   </div>
-                  <div class="value"><strong>{{ PRESUPUESTO.GASTADO }}<span class="decimal">,00</span> €</strong></div>
+                  <div class="value"><strong>{{ PRESUPUESTO.GASTADO }}<span class="decimal">,00</span>€</strong></div>
                 </div>
               </a>
             {% endif %}
