@@ -3,7 +3,8 @@ def get_index():
 		"CALENDARIO": [
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760",
+				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "SEP",
 				"MES_COMPLETO": "Septiembre",
 				"MODIFICADO": False,
@@ -18,8 +19,9 @@ def get_index():
 				]
           	},
 			{
-				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760",
+				"TOTAL_GASTADO": "1.760",
+				"TOTAL_PRESUPUESTADO": "1.560", 
+				"TOTAL_PORCENTAJE": 110,
               	"LBL_MES": "OCT",
 				"MES_COMPLETO": "Octubre",
 				"MODIFICADO": False,
@@ -34,8 +36,9 @@ def get_index():
 				]
           	},
 			{
-				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760",
+				"TOTAL_GASTADO": "1.000",
+				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PORCENTAJE": 60,
               	"LBL_MES": "NOV",
 				"MES_COMPLETO": "Noviembre",
 				"MODIFICADO": False,
@@ -51,7 +54,8 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760",
+				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "DIC",
 				"MES_COMPLETO": "Diciembre",
 				"MODIFICADO": True,
@@ -67,7 +71,8 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760",
+				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "ENE",
 				"MES_COMPLETO": "Enero",
 				"MODIFICADO": False,
@@ -83,7 +88,8 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760",
+				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "FEB",
 				"MES_COMPLETO": "Febrero",
 				"MODIFICADO": False,
@@ -99,7 +105,8 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760",
+				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "MAR",
 				"MES_COMPLETO": "Marzo",
 				"MODIFICADO": False,
@@ -115,7 +122,8 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760",
+				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "ABR",
 				"MES_COMPLETO": "Abril",
 				"MODIFICADO": False,
@@ -131,7 +139,8 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760",
+				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "MAY",
 				"MES_COMPLETO": "Mayo",
 				"MODIFICADO": False,
@@ -147,7 +156,8 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760",
+				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "JUN",
 				"MES_COMPLETO": "Junio",
 				"MODIFICADO": True,
@@ -163,7 +173,8 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760",
+				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "JUL",
 				"MES_COMPLETO": "Julio",
 				"MODIFICADO": False,
@@ -179,7 +190,8 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760",
+				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "AGO",
 				"MES_COMPLETO": "Agosto",
 				"MODIFICADO": False,
@@ -194,7 +206,8 @@ def get_index():
 				]
           	},
 			{
-				"TOTAL_PRESUPUESTADO": "1.760",
+				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "SEP",
 				"MES_COMPLETO": "Septiembre",
 				"MODIFICADO": False,
@@ -209,7 +222,8 @@ def get_index():
 				]
           	},
 			{
-				"TOTAL_PRESUPUESTADO": "1.760",
+				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "OCT",
 				"MES_COMPLETO": "Octubre",
 				"MODIFICADO": False,

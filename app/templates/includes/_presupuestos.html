@@ -32,7 +32,7 @@
         <li><span data-toggle="tab">2015</span></li>
       {% endif %}
       <li class="{% if loop.last %} future {% endif %} {% if loop.revindex0 == 1 %} active {% endif %}">
-        <a data-toggle="tab" href="#section{{ loop.index }}" data-target="#section{{ loop.index }}, #section{{ loop.index }}_else">{{ MES.LBL_MES }}</a>
+        <a data-toggle="tab" href="#section{{ loop.index }}" data-target="#section{{ loop.index }}, #section{{ loop.index }}_else, #section{{ loop.index }}_bar">{{ MES.LBL_MES }}</a>
         {% if MES.MODIFICADO %}
           <div class="modificado"></div>
         {% endif %}
@@ -41,6 +41,32 @@
       </li>
     {% endfor %}
   </ul>
+
+  
+  <div class="tab-content">
+    {% for MES in CALENDARIO %}
+      <div id="section{{ loop.index }}_bar" class="progress-bar-content tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %}">
+        {% if MES.TOTAL_PORCENTAJE < 100 %}
+          <div class="progress border-radius-less">
+            <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ MES.TOTAL_PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ MES.TOTAL_PORCENTAJE }}%"></div>
+            <span class="triangulo_izq"></span>
+            <div class="bar-text-container">
+              <span class="bar-spent">Gastado </span><span class="bar-money-spent">{{ MES.TOTAL_GASTADO }}€</span>
+            </div>
+          </div>
+        {% else %}
+          <span class="triangulo_izq left"></span>
+          <div class="progress over-loaded border-radius-less">
+            <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ 200 - MES.TOTAL_PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ 200 - MES.TOTAL_PORCENTAJE }}%"></div>
+          </div>
+          <div class="dotted-line" style="width: {{ MES.TOTAL_PORCENTAJE - 100 }}%"></div>
+          <div class="bar-text-container">
+            <span class="bar-spent">Gastado </span><span class="bar-money-spent">{{ MES.TOTAL_GASTADO }}€</span>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
 
   <div class="tab-content">
     {% for MES in CALENDARIO %}
