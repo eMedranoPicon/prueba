@@ -11,7 +11,7 @@ def get_index():
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
-						"ICONO": "",
+						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
 						"PORCENTAJE": "55"
@@ -28,7 +28,7 @@ def get_index():
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
-						"ICONO": "",
+						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
 						"PORCENTAJE": "55"
@@ -45,7 +45,7 @@ def get_index():
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
-						"ICONO": "",
+						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
 						"PORCENTAJE": "55"
@@ -62,7 +62,7 @@ def get_index():
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
-						"ICONO": "",
+						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
 						"PORCENTAJE": "55"
@@ -79,7 +79,7 @@ def get_index():
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
-						"ICONO": "",
+						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
 						"PORCENTAJE": "55"
@@ -96,7 +96,7 @@ def get_index():
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
-						"ICONO": "",
+						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
 						"PORCENTAJE": "55"
@@ -113,7 +113,7 @@ def get_index():
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
-						"ICONO": "",
+						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
 						"PORCENTAJE": "55"
@@ -130,7 +130,7 @@ def get_index():
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
-						"ICONO": "",
+						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
 						"PORCENTAJE": "55"
@@ -147,7 +147,7 @@ def get_index():
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
-						"ICONO": "",
+						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
 						"PORCENTAJE": "55"
@@ -164,7 +164,7 @@ def get_index():
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
-						"ICONO": "",
+						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
 						"PORCENTAJE": "55"
@@ -181,7 +181,7 @@ def get_index():
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
-						"ICONO": "",
+						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
 						"PORCENTAJE": "55"
@@ -198,7 +198,7 @@ def get_index():
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
-						"ICONO": "",
+						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
 						"PORCENTAJE": "55"
@@ -214,7 +214,7 @@ def get_index():
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
-						"ICONO": "",
+						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
 						"PORCENTAJE": "55"
@@ -230,14 +230,14 @@ def get_index():
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
-						"ICONO": "",
+						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
 						"PORCENTAJE": "55"
 					},
 					{
 						"TITLE": "Vivienda",
-						"ICONO": "",
+						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
 						"PORCENTAJE": "55"
