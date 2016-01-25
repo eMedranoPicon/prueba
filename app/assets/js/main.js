@@ -5,19 +5,25 @@ $(document).ready(function () {
   $(":input").inputmask();
 
   // SLIDE UP/DOWN CALENDAR
-  $(".calendary-interaction").on('click', function() {
-    if ($("ul.calendary").hasClass("slideup")) {
-      $("ul.calendary").removeClass("slideup").addClass("slidedown");
-    } else {
-      $("ul.calendary").removeClass("slidedown").addClass("slideup");
-    }
-  });
+  $(".calendary-interaction")
+    .on('click', function() {
+      if ($("ul.calendary").hasClass("slideup")) {
+        $("ul.calendary").removeClass("slideup").addClass("slidedown");
+      } else {
+        $("ul.calendary").removeClass("slidedown").addClass("slideup");
+      }
+    })
+    .hover (
+      function() {
+        $(this).find('.icon-calendar-new').addClass('icon-hover');
+      }, function() {
+        $(this).find('.icon-calendar-new').removeClass('icon-hover');
+      }
+    );
 
 
 
-  /**
-   * HOVER EN LOS ICONOS DE LOS PRESUPUESTOS FUTUROS
-   */
+  // HOVER EN LOS ICONOS DE LOS PRESUPUESTOS FUTUROS
   $(".icon-edit, .icon-check-circle") .hover(
     function() {
       $(this).addClass('icon-hover');
@@ -26,17 +32,13 @@ $(document).ready(function () {
     }
   );
 
-  /**
-   * TRAS MODIFICAR LOS DATOS DE UN PRESUPUESTO FUTURO
-   */
+  // TRAS MODIFICAR LOS DATOS DE UN PRESUPUESTO FUTURO
   $('.icon-check-circle').on('click', function() {
       $(this).closest('.card').removeClass('flipped').find('.icon-edit').removeClass('icon-edit').addClass('icon-return-circle');
       event.stopPropagation();
   });
 
-  /**
-   * RESTAURAR EL VALOR POR DEFECTO
-   */
+  // RESTAURAR EL VALOR POR DEFECTO
   $(document).on('click', 'i.icon-return-circle', function(event) {
     var id = $(this).data('id');
     $(this).addClass('icon-edit').removeClass('icon-return-circle');
@@ -46,9 +48,7 @@ $(document).ready(function () {
     $('.decimal'+id).html(value[1]);
   });
 
-  /**
-   * ACCEDE A LA EDICIÓN DEL PRESUPUESTO FUTURO
-   */
+  // ACCEDE A LA EDICIÓN DEL PRESUPUESTO FUTURO
   $(document).on('click', '.icon-edit', function(e) {
     if (!$(this).closest('.card').hasClass("flipped")) {
       $(this).closest('.card').addClass("flipped");
@@ -63,9 +63,7 @@ $(document).ready(function () {
     }
   });
 
-  /**
-   * TRATAMIENTO DEL INPUT
-   */
+  // TRATAMIENTO DEL INPUT
   $('.my-input')
     .on('blur', function() {
       var id = $(this).data('id');
