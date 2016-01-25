@@ -19,7 +19,7 @@
               {% elif loop.revindex0 != 1 %}
                 Presupuesto pasado
               {% endif %}
-              <a class="calendary-interaction">{{ MES.MES_COMPLETO }}</a>
+              <a class="calendary-interaction">{{ MES.MES_COMPLETO }} <i class="icon-calendar-new"></i></a>
             </div>
           </div>
       </div>
@@ -99,7 +99,7 @@
                         <span class="value value{{loop.index~parentloop.index}}">{{ PRESUPUESTO.PREVISTO }}</span>,<span class="decimal decimal{{loop.index~parentloop.index}}">00</span> €
                       </div>
                     </div>
-                    <div class="modify"><i class="icon-edit"></i></div>
+                    <div class="modify"><i data-id="{{loop.index~parentloop.index}}" class="icon-edit"></i></div>
                   </div>
                   <div class="info-general face back">
                       <div class="info modify-info">Ajuste manual<br />para este mes.</div>
@@ -107,9 +107,10 @@
                         <label for="my-input{{loop.index~parentloop.index}}" class="label-input" id="label-input{{loop.index~parentloop.index}}">
                           <span class="value value{{loop.index~parentloop.index}}">{{ PRESUPUESTO.PREVISTO }}</span>,<span class="decimal decimal{{loop.index~parentloop.index}}">00</span>
                         </label>
+                        <input id="init-value{{loop.index~parentloop.index}}" type="hidden" name="name" value="{{ PRESUPUESTO.PREVISTO }}"/>
                         <input class="my-input" data-id="{{loop.index~parentloop.index}}" id="my-input{{loop.index~parentloop.index}}" type="text" name="name" value="" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true" />€
                       </div>
-                      <div class="modify"><i class="return-flip icon-edit icon-orange"></i></div>
+                      <div class="modify"><i class="icon-check-circle"></i></div>
                   </div>
                 </div>
               </div>

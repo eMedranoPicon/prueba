@@ -66,8 +66,8 @@
 }
 .icon-edit {
 	background: transparent url("../images/sprite.png") no-repeat scroll -97px -152px;
-  padding: 5px 12px;
-	&.icon-orange {
+  	padding: 5px 12px;
+	&.icon-hover {
 		background: transparent url("../images/sprite.png") no-repeat scroll -97px -174px;
 	}
 }
@@ -91,3 +91,26 @@
 	background: transparent url("../images/sprite.png") no-repeat scroll -168px -105px;
 	padding: 14px 15px;
 }
+
+.icon-check-circle {
+    background: transparent url("../images/sprite.png") no-repeat scroll -136px -3px;
+    padding: 10px 16px;
+		&.icon-hover {
+			background: transparent url("../images/sprite.png") no-repeat scroll -170px -3px;
+		}
+}
+.icon-return-circle {
+	background: transparent url("../images/sprite.png") no-repeat scroll -136px -36px;
+	padding: 10px 16px;
+	&.icon-hover {
+		background: transparent url("../images/sprite.png") no-repeat scroll -170px -36px;
+	}
+}
+.icon-calendar-new {
+    background: transparent url("../images/sprite.png") no-repeat scroll -170px -168px;;
+    padding: 10px 13px;
+		&.icon-hover {
+				background: transparent url("../images/sprite.png") no-repeat scroll -138px -168px;
+		}
+}
+
