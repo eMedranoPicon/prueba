@@ -34,12 +34,12 @@
       color: $colorPresPrimary;
       font-family: $fontBold;
     }
-    strong {
-      font-family: $fontBold;
-    }
   }
   .content-title-calendar .title_calendar {
     font-family: $fontLight;
+    strong {
+      font-family: $fontBold;
+    }
   }
   .target-presupuesto {
     border: 1px solid $grey950;
@@ -54,9 +54,8 @@
     &.target-future {
       height: 85px;
       border: none;
-      transition: all 0.45s;
-      box-shadow: none;
       .info-general {
+        border-bottom: none;
         padding: 15px;
       }
       &.flip .card .front {
@@ -123,7 +122,7 @@
       .modify-data {
         display: table-cell;
         vertical-align: middle;
-        width: 115px;
+        width: 120px;
         font-size: 13px;
         padding-left: 0;
         color: $grey300;
@@ -172,9 +171,10 @@
     }
   }
   .progress-bar-content {
-    height: 55px;
+    height: 50px;
     .progress {
       height: 24px;
+      margin-bottom: 0px;
       &.closed {
         display: none;
       }
@@ -207,12 +207,27 @@
       margin-left: 10px;
       .bar-money-spent {
         color: $colorPresPrimary;
+        font-family: $fontBold;
         font-size: 12px;
       }
       .bar-spent {
-        color: $colorPresSecond;
+        color: $colorPresPrimary;
+        font-family: $font;
         font-size: 12px;
       }
+      &.dark {
+        .bar-money-spent {
+          color: $colorPresTer;
+        }
+        .bar-spent {
+          color: $colorPresTer;
+        }
+      }
+    }
+    .bar-text-container-right {
+      @extend .bar-text-container;
+      float: right;
+      margin-right: 10px;
     }
     .triangulo_izq {
       border-bottom: 12px solid;
@@ -231,9 +246,54 @@
       border-right-color: $colorPresPrimary;
       background: transparent;
       height: 45px;
-      margin-left: 13px;
-      margin-top: -32px;
+      margin-left: 12px;
+      margin-top: -24px;
       border-right-width: 2px;
     }
+    .dotted-line-right {
+      float: right;
+      border-left-style: dotted;
+      border-left-color: $colorPresPrimary;
+      background: transparent;
+      height: 45px;
+      margin-top: -24px;
+      border-left-width: 2px;
+    }
   }
+  .invisible {
+    display: none;
+  }
+
+}
+
+
+.flip {
+  -webkit-perspective: 800;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.flip .card.flipped {
+  -webkit-transform: rotatey(180deg);
+}
+.flip .card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+}
+.flip .card .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden ;
+}
+.flip .card .front {
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+}
+.flip .card .back {
+  -webkit-transform: rotatey(180deg);
+  cursor: pointer;
 }
