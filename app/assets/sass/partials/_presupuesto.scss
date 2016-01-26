@@ -53,6 +53,7 @@
     @include border-radius(3px);
     &.target-future {
       height: 85px;
+      width: 276px;
       .info-general {
         border-bottom: none;
         padding: 15px;
