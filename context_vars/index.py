@@ -3,7 +3,7 @@ def get_index():
 		"CALENDARIO": [
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PRESUPUESTADO": "1.760",
 				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "SEP",
 				"MES_COMPLETO": "Septiembre",
@@ -20,7 +20,7 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.760",
-				"TOTAL_PRESUPUESTADO": "1.560", 
+				"TOTAL_PRESUPUESTADO": "1.560",
 				"TOTAL_PORCENTAJE": 110,
               	"LBL_MES": "OCT",
 				"MES_COMPLETO": "Octubre",
@@ -65,7 +65,7 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.000",
-				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PRESUPUESTADO": "1.760",
 				"TOTAL_PORCENTAJE": 60,
               	"LBL_MES": "NOV",
 				"MES_COMPLETO": "Noviembre",
@@ -82,7 +82,7 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "3.260",
-				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PRESUPUESTADO": "1.760",
 				"TOTAL_PORCENTAJE": 220,
               	"LBL_MES": "DIC",
 				"MES_COMPLETO": "Diciembre",
@@ -99,7 +99,7 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PRESUPUESTADO": "1.760",
 				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "ENE",
 				"MES_COMPLETO": "Enero",
@@ -116,7 +116,7 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PRESUPUESTADO": "1.760",
 				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "FEB",
 				"MES_COMPLETO": "Febrero",
@@ -133,7 +133,7 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PRESUPUESTADO": "1.760",
 				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "MAR",
 				"MES_COMPLETO": "Marzo",
@@ -150,7 +150,7 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PRESUPUESTADO": "1.760",
 				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "ABR",
 				"MES_COMPLETO": "Abril",
@@ -167,7 +167,7 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PRESUPUESTADO": "1.760",
 				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "MAY",
 				"MES_COMPLETO": "Mayo",
@@ -184,7 +184,7 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PRESUPUESTADO": "1.760",
 				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "JUN",
 				"MES_COMPLETO": "Junio",
@@ -201,7 +201,7 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PRESUPUESTADO": "1.760",
 				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "JUL",
 				"MES_COMPLETO": "Julio",
@@ -218,7 +218,7 @@ def get_index():
           	},
 			{
 				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PRESUPUESTADO": "1.760",
 				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "AGO",
 				"MES_COMPLETO": "Agosto",
@@ -234,7 +234,7 @@ def get_index():
 				]
           	},
 			{
-				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PRESUPUESTADO": "1.760",
 				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "SEP",
 				"MES_COMPLETO": "Septiembre",
@@ -250,7 +250,7 @@ def get_index():
 				]
           	},
 			{
-				"TOTAL_PRESUPUESTADO": "1.760", 
+				"TOTAL_PRESUPUESTADO": "1.760",
 				"TOTAL_PORCENTAJE": 90,
               	"LBL_MES": "OCT",
 				"MES_COMPLETO": "Octubre",
@@ -273,4 +273,52 @@ def get_index():
 				]
           	},
       	],
+
+		"METAS": [
+			{
+				"TITLE": "Ordenador personal",
+				"ICONO": "icon-car-white",
+				"OBJETIVO": "1.850",
+				"PORCENTAJE": "55",
+				"CATEGORIA": "I",
+				"VISIBILIDAD": "PÚBLICA",
+				"FECHA": "OCT 2015"
+			},
+			{
+				"TITLE": "Regalo mamá",
+				"ICONO": "icon-car-white",
+				"OBJETIVO": "1.975",
+				"PORCENTAJE": "55",
+				"CATEGORIA": "I",
+				"VISIBILIDAD": "PÚBLICA",
+				"FECHA": "NOV 2015"
+			},
+			{
+				"TITLE": "Tablet para María",
+				"ICONO": "icon-car-white",
+				"OBJETIVO": "900",
+				"PORCENTAJE": "55",
+				"CATEGORIA": "I",
+				"VISIBILIDAD": "PÚBLICA",
+				"FECHA": "ENE 2016"
+			},
+			{
+				"TITLE": "Clases de Inglés",
+				"ICONO": "icon-car-white",
+				"OBJETIVO": "1.900",
+				"PORCENTAJE": "55",
+				"CATEGORIA": "J",
+				"VISIBILIDAD": "PÚBLICA",
+				"FECHA": "FEB 2016"
+			},
+			{
+				"TITLE": "Vacaciones de verano",
+				"ICONO": "icon-car-white",
+				"OBJETIVO": "2000",
+				"PORCENTAJE": "55",
+				"CATEGORIA": "C",
+				"VISIBILIDAD": "PÚBLICA",
+				"FECHA": "MAR 2016"
+			},
+		]
 	}

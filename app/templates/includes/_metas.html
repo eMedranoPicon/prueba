@@ -1,0 +1,39 @@
+<section class="container metas">
+
+  <h3>Mis <span class="hightlight">metas</span></h3>
+
+  {% for META in METAS %}
+    <div class="col-xs-4">
+      <a href="javascript:void()" class="target-meta">
+        <div class="head-target">
+          <div class="container-icon"><div class="img-circle"><i class="{{ META.ICONO }}"></i></div></div>
+          <div class="title"><span>{{ META.TITLE }}</span></div>
+        </div>
+        <div class="data-progress">
+          <div class="progress">
+            <div class="progress-bar normal" role="progressbar" aria-valuenow="{{ META.PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ META.PORCENTAJE }}%"></div><span class="triangulo_der"></span>
+          </div>
+          <div class="value">{{ META.OBJETIVO }}<span class="decimal">,00</span> €</div>
+        </div>
+        <div class="detail">
+          <div class="col-xs-4">
+            {% if META.CATEGORIA == I %}
+              INDIVIDUAL
+            {% elif META.CATEGORIA == C %}
+              COLECTIVA
+            {% else%}
+              JUNIOR
+            {% endif %}
+          </div>
+          <div class="col-xs-4">
+            {{ META.VISIBILIDAD }}
+          </div>
+          <div class="col-xs-4">
+            {{ META.FECHA }}
+          </div>
+        </div>
+      </a>
+    </div>
+  {% endfor %}
+
+</section>

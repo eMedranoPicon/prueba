@@ -2,8 +2,13 @@
 $white            : #FFFFFF;
 $black            : #000000;
 
-$brown300		      : #924a00;
+$green500         : #70a41c;
 
+$purple500        : #8f99e3;
+
+$blueSky          : #1cb0d3;
+
+$orange800		    : #924a00;
 $orange500        : #cb7a10;
 $orange300        : #e5c59b;
 
@@ -21,7 +26,10 @@ $font             : AkkuratStd;
 $fontLight        : AkkuratStd-Light;
 $fontBold         : AkkuratStd-Bold;
 
+//Metas
+$colorMetaPrimary : $green500;
+
 //Presupuestos
 $colorPresPrimary : $orange500;
 $colorPresSecond  : $orange300;
-$colorPresTer	    : $brown300;
+$colorPresTer	    : $orange800;
