@@ -21,8 +21,6 @@ $(document).ready(function () {
       }
     );
 
-
-
   // HOVER EN LOS ICONOS DE LOS PRESUPUESTOS FUTUROS
   $(".icon-edit, .icon-check-circle") .hover(
     function() {
