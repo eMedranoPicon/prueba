@@ -314,7 +314,7 @@ def get_index():
 			{
 				"TITLE": "Vacaciones de verano",
 				"ICONO": "icon-car-white",
-				"OBJETIVO": "2000",
+				"OBJETIVO": "2.000",
 				"PORCENTAJE": "55",
 				"CATEGORIA": "C",
 				"VISIBILIDAD": "PÚBLICA",
