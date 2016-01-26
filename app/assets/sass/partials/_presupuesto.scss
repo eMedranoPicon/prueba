@@ -43,23 +43,19 @@
   }
   .target-presupuesto {
     border: 1px solid $grey950;
+    border-bottom: 1px solid $grey800;
     background: $white;
     display: inherit;
     font-weight: bold;
     text-decoration: none;
     height: 215px;
-    @include box-shadow (0, 1px, 0, $grey800);
     @include transition (border 0.2s);
     @include border-radius(3px);
     &.target-future {
       height: 85px;
-      border: none;
       .info-general {
         border-bottom: none;
         padding: 15px;
-      }
-      &:hover {
-        border: none;
       }
     }
     .info-general {
