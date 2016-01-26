@@ -41,15 +41,6 @@
       font-family: $fontBold;
     }
   }
-  .targets {
-    margin-left: -10px;
-    margin-right: -10px;
-  }
-  .col-xs-4 {
-    margin-bottom: 20px;
-    padding-right: 10px;
-    padding-left: 10px;
-  }
   .target-presupuesto {
     border: 1px solid $grey950;
     background: $white;
@@ -86,9 +77,14 @@
       padding: 20px 15px;
       display: table;
       width: 100%;
+      &>div {
+        display: table-cell;
+      }
+      .container-icon {
+        width: 55px;
+      }
       .info {
         padding-left: 12px;
-        display: table-cell;
         vertical-align: middle;
         font-size: 20px;
         color: $grey500;
@@ -104,22 +100,21 @@
         }
       }
       .img-circle {
-        display: table-cell;
         background-color: $colorPresPrimary;
         height: 53px;
         width: 53px;
         position: relative;
         i {
           width: 50%;
-          height: 50%;
-          overflow: auto;
-          margin: auto;
+          height: auto;
+          top: 50%;
+          margin: 0px auto;
           position: absolute;
-          top: 0; left: 0; bottom: 0; right: 0;
+          left: 50%;
+          @include css3-prefix(transform, translate(-50%, -50%));
         }
       }
       .modify {
-        display: table-cell;
         vertical-align: middle;
         text-align: right;
       }
@@ -129,7 +124,6 @@
         color: $grey300;
       }
       .modify-data {
-        display: table-cell;
         vertical-align: middle;
         width: 120px;
         font-size: 13px;
@@ -180,7 +174,7 @@
     }
   }
   .progress-bar-content {
-    height: 75px;
+    height: 50px;
     .progress {
       height: 24px;
       margin-bottom: 0px;
