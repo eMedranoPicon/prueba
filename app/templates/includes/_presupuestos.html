@@ -55,7 +55,7 @@
             </div>
           </div>
         {% else %}
-          {% if (MES.TOTAL_PORCENTAJE - 200) >= 0 %} 
+          {% if (MES.TOTAL_PORCENTAJE - 200) >= 0 %}
             {% set value = 0 %}
             {% set width = 100 %}
           {% else %}
@@ -89,9 +89,9 @@
         {% for PRESUPUESTO in MES.PRESUPUESTOS %}
           <div class="col-xs-4">
             {% if parentloop.last %}
-              <div class="target-presupuesto target-future flip">
-                <div class="card">
-                  <div class="info-general face front">
+              <div class="target-presupuesto target-future flip-container">
+                <div class="flipper">
+                  <div class="info-general front">
                     <div class="img-circle"><i class="icon-car-white"></i></div>
                     <div class="info">
                       <span>{{ PRESUPUESTO.TITLE }}</span>
@@ -101,7 +101,7 @@
                     </div>
                     <div class="modify"><i data-id="{{loop.index~parentloop.index}}" class="icon-edit"></i></div>
                   </div>
-                  <div class="info-general face back">
+                  <div class="info-general back">
                       <div class="info modify-info">Ajuste manual<br />para este mes.</div>
                       <div class="info modify-data">
                         <label for="my-input{{loop.index~parentloop.index}}" class="label-input" id="label-input{{loop.index~parentloop.index}}">

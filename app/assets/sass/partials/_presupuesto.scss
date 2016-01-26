@@ -57,7 +57,6 @@
       transition: all 0.45s;
       box-shadow: none;
       .info-general {
-        border-bottom: none;
         padding: 15px;
       }
       &.flip .card .front {
@@ -173,7 +172,7 @@
     }
   }
   .progress-bar-content {
-    height: 50px;
+    height: 55px;
     .progress {
       height: 24px;
       &.closed {
@@ -237,41 +236,4 @@
       border-right-width: 2px;
     }
   }
-
-}
-
-
-.flip {
-  @include css3-prefix(perspective, 800);
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.flip .card.flipped {
-  @include css3-prefix(transform, rotatey(180deg));
-}
-.flip .card {
-  width: 100%;
-  height: 100%;
-  @include css3-prefix(transform-style, preserve-3d);
-  @include css3-prefix(transition, 0.5s);
-}
-.flip .card .face {
-  width: 100%;
-  position: absolute;
-  @include css3-prefix(backface-visibility, hidden);
-}
-.flip .card .front {
-  position: absolute;
-  cursor: pointer;
-  height: 100%;
-  background-color: $white;
-  @include box-shadow (0, 1px, 0, $grey800);
-}
-.flip .card .back {
-  height: 100%;
-  cursor: pointer;
-  background-color: $white;
-  @include css3-prefix(transform, rotatey(180deg));
-  @include box-shadow (0, 1px, 0, $grey800);
 }
