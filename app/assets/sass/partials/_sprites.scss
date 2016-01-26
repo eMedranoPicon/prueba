@@ -113,3 +113,14 @@
 				background: transparent url("../images/sprite.png") no-repeat scroll -138px -168px;
 		}
 }
+
+.icon-flag {
+	background: transparent url("../images/sprite.png") no-repeat scroll -206px -86px;
+	padding: 3px 5px;
+	&.icon-green {
+		background: transparent url("../images/sprite.png") no-repeat scroll -206px -86px;
+	}
+	&.icon-blue {
+		background: transparent url("../images/sprite.png") no-repeat scroll -206px -102px;
+	}
+}

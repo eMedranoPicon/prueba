@@ -17,10 +17,10 @@
         </div>
         <div class="detail">
           <div class="col-xs-4">
-            {% if META.CATEGORIA == I %}
-              INDIVIDUAL
-            {% elif META.CATEGORIA == C %}
-              COLECTIVA
+            {% if META.CATEGORIA == 'I' %}
+              <i class="icon-flag icon-green"></i> INDIVIDUAL
+            {% elif META.CATEGORIA == 'C' %}
+              <i class="icon-flag icon-blue"></i> <i class="icon-flag icon-blue"></i> COLECTIVA
             {% else%}
               JUNIOR
             {% endif %}
