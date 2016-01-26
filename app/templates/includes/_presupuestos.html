@@ -84,7 +84,7 @@
 
   <div class="tab-content">
     {% for MES in CALENDARIO %}
-      <article id="section{{ loop.index }}" class="tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %}">
+      <article id="section{{ loop.index }}" class="targets tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %}">
         {% set parentloop = loop %}
         {% for PRESUPUESTO in MES.PRESUPUESTOS %}
           <div class="col-xs-4">
