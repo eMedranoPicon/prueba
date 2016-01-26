@@ -9,3 +9,4 @@ bower_components/*
 node_modules/*
 context_vars/__pycache__/
 __pycache__
+gulpfile.js
