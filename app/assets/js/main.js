@@ -34,7 +34,7 @@ $(document).ready(function () {
 
   // TRAS MODIFICAR LOS DATOS DE UN PRESUPUESTO FUTURO
   $('.icon-check-circle').on('click', function() {
-      $(this).closest('.card').removeClass('flipped').find('.icon-edit').removeClass('icon-edit').addClass('icon-return-circle');
+      $(this).closest('.flip-container').removeClass('hover').find('.icon-edit').removeClass('icon-edit').addClass('icon-return-circle');
       event.stopPropagation();
   });
 
@@ -50,9 +50,9 @@ $(document).ready(function () {
 
   // ACCEDE A LA EDICIÓN DEL PRESUPUESTO FUTURO
   $(document).on('click', '.icon-edit', function(e) {
-    if (!$(this).closest('.card').hasClass("flipped")) {
-      $(this).closest('.card').addClass("flipped");
-      var $labelInput = $(this).closest('.card').find(".label-input");
+    if (!$(this).closest('.flip-container').hasClass("hover")) {
+      $(this).closest('.flip-container').addClass("hover");
+      var $labelInput = $(this).closest('.flip-container').find(".label-input");
       if($labelInput.length){
         var labelID = $labelInput.attr('for');
         $('#'+labelID).show().focus();
