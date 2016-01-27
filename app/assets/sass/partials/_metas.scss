@@ -91,6 +91,18 @@
     .detail {
       color: $grey500;
       font-size: 12px;
+      &>div {
+        padding: 0;
+        text-align: center;
+        &:first-child {
+          padding-left: 15px;
+          text-align: left;
+        }
+        &:last-child {
+          padding-right: 15px;
+          text-align: right;
+        }
+      }
     }
     &:hover {
       text-decoration: none;
