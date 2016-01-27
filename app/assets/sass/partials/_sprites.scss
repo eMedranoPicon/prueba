@@ -1,67 +1,27 @@
-.icon-download {
-	background: transparent url("../images/sprite.png") no-repeat 0px 0px;
-	padding: 9px 20px;
+.icon-flag {
+	background: transparent url("../images/sprite.png") no-repeat scroll -206px -87px;
+	padding: 2px 5px;
+	&.icon-green {
+		background: transparent url("../images/sprite.png") no-repeat scroll -206px -87px;
+	}
+	&.icon-blue {
+		background: transparent url("../images/sprite.png") no-repeat scroll -206px -102px;
+	}
 }
-
-.icon-close {
-	background: transparent url("../images/sprite.png") no-repeat -41px -16px;
-	padding: 10px 10px;
+.icon-bicycle {
+	background: transparent url("../images/sprite.png") no-repeat scroll -229px -21px;
+	padding: 3px 10px;
+	&.icon-purple {
+		background: transparent url("../images/sprite.png") no-repeat scroll -229px -21px;
+	}
 }
-
-.icon-download-big {
-	background: transparent url("../images/sprite.png") no-repeat scroll 5px -32px;
-	padding: 35px;
-}
-
-.icon-sms {
-	background: transparent url("../images/sprite.png") no-repeat scroll -61px 1px;
-	padding: 2px 12px;
-}
-
-.icon-final-step {
-	background: transparent url("../images/sprite.png") no-repeat scroll -64px -39px;
-	padding: 20px 35px;
-	display: inline;
-}
-
-.icon-detail-prestamo {
-    background: transparent url("../images/sprite.png") no-repeat scroll -85px 2px;
-    padding: 6px 14px;
-}
-
-.icon-close-red {
-    background: transparent url("../images/sprite.png") no-repeat scroll -62px -20px;
-    padding: 2px 9px;
-}
-
-.icon-check {
-	background: transparent url("../images/sprite.png") no-repeat scroll -110px -20px;
-	padding: 2px 11px;
-}
-
-.icon-pdf-times {
-    background: transparent url("../images/sprite.png") no-repeat scroll -43px -103px;
-    padding: 22px;
-}
-.icon-pdf-download-white {
-    background: transparent url("../images/sprite.png") no-repeat scroll 2px -101px;
-    padding: 22px;
-}
-.icon-pink {
-    background: transparent url("../images/sprite.png") no-repeat scroll -47px -146px;
-    padding: 13px 20px;
+.icon-eye {
+	background: transparent url("../images/sprite.png") no-repeat scroll -204px -70px;
+	padding: 3px 8px;
 }
 .icon-calendar {
     background: transparent url("../images/sprite.png") no-repeat scroll -116px 1px;
     padding: 3px 7px;
-}
-.icon-car-red {
-	background: transparent url("../images/sprite.png") no-repeat scroll 5px -150px;
-	padding: 12px 24px;
-}
-.icon-car-white {
-	background: transparent url("../images/sprite.png") no-repeat scroll 5px -177px;
-	padding: 12px 24px;
 }
 .icon-edit {
 	background: transparent url("../images/sprite.png") no-repeat scroll -97px -152px;
@@ -111,28 +71,4 @@
 		&.icon-hover {
 				background: transparent url("../images/sprite.png") no-repeat scroll -138px -168px;
 		}
-}
-
-.icon-flag {
-	background: transparent url("../images/sprite.png") no-repeat scroll -206px -87px;
-	padding: 2px 5px;
-	&.icon-green {
-		background: transparent url("../images/sprite.png") no-repeat scroll -206px -87px;
-	}
-	&.icon-blue {
-		background: transparent url("../images/sprite.png") no-repeat scroll -206px -102px;
-	}
-}
-
-.icon-bicycle {
-	background: transparent url("../images/sprite.png") no-repeat scroll -229px -21px;
-	padding: 3px 10px;
-	&.icon-purple {
-		background: transparent url("../images/sprite.png") no-repeat scroll -229px -21px;
-	}
-}
-
-.icon-eye {
-	background: transparent url("../images/sprite.png") no-repeat scroll -204px -70px;
-	padding: 3px 8px;
 }
