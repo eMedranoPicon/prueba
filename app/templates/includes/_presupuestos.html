@@ -62,7 +62,7 @@
             {% set value = (200 - MES.TOTAL_PORCENTAJE) %}
             {% set width = (MES.TOTAL_PORCENTAJE - 100) %}
           {% endif %}
-          <span class="triangulo_izq left"></span>
+          <span class="triangulo_izq-overload"></span>
           <div class="progress over-loaded border-radius-less">
             <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ value }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ value }}%"></div>
           </div>
@@ -124,10 +124,7 @@
                   {% if PRESUPUESTO.PORCENTAJE < 100 %}
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="{{ PRESUPUESTO.PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ PRESUPUESTO.PORCENTAJE }}%"></div>
-                      <span class="triangulo_izq-tiny"></span>
-                      <div class="bar-text-container">
-                        <span class="bar-spent">Gastado </span><span class="bar-money-spent">{{ PRESUPUESTO.GASTADO }}€</span>
-                      </div>
+                      <span class="triangulo_izq"></span>
                     </div>
                   {% else %}
                     {% if (PRESUPUESTO.PORCENTAJE - 200) >= 0 %}
@@ -137,21 +134,15 @@
                       {% set value = (200 - PRESUPUESTO.PORCENTAJE) %}
                       {% set width = (PRESUPUESTO.PORCENTAJE - 100) %}
                     {% endif %}
-                    <span class="triangulo_izq-tiny left"></span>
                     <div class="progress over-loaded">
                       <div class="progress-bar" role="progressbar" aria-valuenow="{{ value }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ value }}%"></div>
                     </div>
-                    {% if value > 10 %}
+                    <div class="line-container">
                       <div class="dotted-line" style="width: {{ width }}%"></div>
-                      <div class="bar-text-container dark">
-                        <span class="bar-spent">Gastado </span><span class="bar-money-spent">{{ PRESUPUESTO.GASTADO }}€</span>
-                      </div>
-                    {% else %}
-                      <div class="dotted-line-right" style="width: {{ 100 - width }}%"></div>
-                      <div class="bar-text-container-right dark">
-                        <span class="bar-spent">Gastado </span><span class="bar-money-spent">{{ PRESUPUESTO.GASTADO }}€</span>
-                      </div>
-                    {% endif %}
+                    </div>
+                    <div class="bar-text-container">
+                      <div class="value"><strong>{{ PRESUPUESTO.GASTADO }}<span class="decimal">,00</span>€</strong></div>
+                    </div>
                   {% endif %}
                   <div class="value"><strong>{{ PRESUPUESTO.GASTADO }}<span class="decimal">,00</span>€</strong></div>
                 </div>

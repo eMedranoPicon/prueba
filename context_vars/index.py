@@ -17,12 +17,12 @@ def get_index():
 						"PORCENTAJE": 55
 					}
 				]
-          	},
+        	},
 			{
 				"TOTAL_GASTADO": "1.760",
 				"TOTAL_PRESUPUESTADO": "1.560",
 				"TOTAL_PORCENTAJE": 110,
-              	"LBL_MES": "OCT",
+            	"LBL_MES": "OCT",
 				"MES_COMPLETO": "Octubre",
 				"MODIFICADO": False,
 				"PRESUPUESTOS": [
@@ -62,7 +62,7 @@ def get_index():
 						"PORCENTAJE": 100
 					}
 				]
-          	},
+        	},
 			{
 				"TOTAL_GASTADO": "1.000",
 				"TOTAL_PRESUPUESTADO": "1.760",

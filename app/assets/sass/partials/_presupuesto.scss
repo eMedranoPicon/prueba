@@ -2,6 +2,7 @@
   color: $grey300;
   font-family: $font;
   .targets > div {
+    padding-bottom: 20px;
     &:nth-child(3n+1) {
       padding-left: 0;
     }
@@ -146,31 +147,40 @@
     }
     .data-progress {
       padding: 10px 15px 40px;
+      @include progress-bar(8px, $colorPresPrimary, $colorPresTer);
       .value {
+        display: inline-block;
         font-size: 30px;
         color: $grey300;
         text-align: right;
+        float: right;
+        margin-top: 30px;
         .decimal {
           font-size: 15px;
         }
       }
-      .progress-tiny {
-        @extend .progress;
-        height: 8px;
-        .triangulo_izq {
-          @extend .triangulo_izq;
-          border-bottom: 4px solid transparent;
-          border-top: 4px solid transparent;
-          border-right: 4px solid $colorPresPrimary;
-        }
-        .progress-bar {
-          background: $colorPresPrimary;
-        }
-        &.over-loaded {
-          background: $colorPresPrimary;
-          .progress-bar {
-            background: $colorPresSecond;
+      .bar-text-container {
+        display: inline-block;
+        .value {
+          font-size: 20px;
+          text-align: left;
+          float: left;
+          margin-top: 5px;
+          .decimal {
+            font-size: 7px;
           }
+        }
+      }
+      .line-container {
+        width: 100%;
+        .dotted-line {
+          float: left;
+          border-right-style: dotted;
+          border-right-color: $colorPresTer;
+          background: transparent;
+          height: 15px;
+          margin-top: -8px;
+          border-right-width: 2px;
         }
       }
     }
@@ -181,34 +191,7 @@
   }
   .progress-bar-content {
     height: 75px;
-    .progress {
-      height: 24px;
-      margin-bottom: 0px;
-      &.closed {
-        display: none;
-      }
-      &.open {
-        display: block;
-      }
-      .progress-bar {
-        background: $colorPresSecond;
-      }
-      .triangulo_izq {
-        border-bottom-color: transparent;
-        border-top-color: transparent;
-        border-right-color: $colorPresSecond;
-      }
-      .bar-text-container {
-        float: right;
-        margin-right: 10px;
-      }
-      &.over-loaded {
-        background: $colorPresPrimary;
-        .progress-bar {
-          background: $colorPresSecond;
-        }
-      }
-    }
+    @include progress-bar(24px, $colorPresSecond, $colorPresPrimary);
     .bar-text-container {
       display:inline-block;
       vertical-align: middle;
@@ -237,17 +220,6 @@
       @extend .bar-text-container;
       float: right;
       margin-right: 10px;
-    }
-    .triangulo_izq {
-      border-bottom: 12px solid;
-      border-top: 12px solid;
-      border-right: 12px solid;
-    }
-    & > .triangulo_izq {
-      float: left;
-      border-bottom-color: transparent;
-      border-top-color: transparent;
-      border-right-color: $colorPresPrimary;
     }
     .dotted-line {
       float: left;

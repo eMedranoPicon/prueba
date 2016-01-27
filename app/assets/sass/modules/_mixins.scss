@@ -315,3 +315,40 @@
   overflow-y: hidden;
   @include transition (max-height 0.45s ease-out);
 }
+
+@mixin progress-bar($height, $colorBar, $colorOverLoaded) {
+  .progress {
+    height: $height;
+    margin-bottom: 0px;
+    &.closed {
+      display: none;
+    }
+    &.open {
+      display: block;
+    }
+    .progress-bar {
+      background: $colorBar;
+    }
+    &.over-loaded {
+      background: $colorOverLoaded;
+      .progress-bar {
+        background: $colorBar;
+      }
+    }
+  }
+  .triangulo_izq {
+    border-bottom: $height/2 solid;
+    border-top: $height/2 solid;
+    border-right: $height/2 solid;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-right-color: $colorBar;
+  }
+  .triangulo_izq-overload {
+    @extend .triangulo_izq;
+    float: left;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-right-color: $colorOverLoaded;
+  }
+}
