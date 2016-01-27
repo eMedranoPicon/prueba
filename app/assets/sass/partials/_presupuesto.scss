@@ -154,7 +154,7 @@
       }
     }
     .data-progress {
-      padding: 10px 15px 40px;
+      padding: 10px 20px 40px;
       @include progress-bar(8px, $colorPresPrimary, $colorPresTer);
       .value {
         display: inline-block;
@@ -205,6 +205,9 @@
       vertical-align: middle;
       margin-top: 5px;
       margin-left: 10px;
+      .warning {
+        margin-right: 5px;
+      }
       .bar-money-spent {
         color: $colorPresPrimary;
         font-family: $fontBold;

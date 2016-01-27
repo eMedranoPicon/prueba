@@ -37,22 +37,22 @@ def get_index():
 						"TITLE": "Colegio",
 						"ICONO": "icon-book-white",
 						"PREVISTO": "100",
-						"GASTADO": "100",
-						"PORCENTAJE": 100
+						"GASTADO": "150",
+						"PORCENTAJE": 150
 					},
 					{
 						"TITLE": "Tarjeta",
 						"ICONO": "icon-card-white",
 						"PREVISTO": "245",
-						"GASTADO": "245",
-						"PORCENTAJE": 100
+						"GASTADO": "490",
+						"PORCENTAJE": 200
 					},
 					{
 						"TITLE": "Seguros",
 						"ICONO": "icon-umbrella-white",
 						"PREVISTO": "395",
-						"GASTADO": "395",
-						"PORCENTAJE": 100
+						"GASTADO": "595",
+						"PORCENTAJE": 180
 					},
 					{
 						"TITLE": "Cuota préstamo",
