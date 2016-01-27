@@ -121,7 +121,7 @@
                   <div class="info"><span>{{ PRESUPUESTO.TITLE }}</span><div class="value">{{ PRESUPUESTO.PREVISTO }}<span class="decimal">,00</span> €</div></div>
                 </div>
                 <div class="data-progress">
-                  {% if PRESUPUESTO.PORCENTAJE < 100 %}
+                  {% if PRESUPUESTO.PORCENTAJE <= 100 %}
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="{{ PRESUPUESTO.PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ PRESUPUESTO.PORCENTAJE }}%"></div>
                       <span class="triangulo_izq"></span>
