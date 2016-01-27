@@ -52,9 +52,8 @@
     padding: 13px 20px;
 }
 .icon-calendar {
-    background: transparent url("../images/sprite.png") no-repeat scroll -116px 2px;
+    background: transparent url("../images/sprite.png") no-repeat scroll -116px 1px;
     padding: 3px 7px;
-    margin-right: 5px;
 }
 .icon-car-red {
 	background: transparent url("../images/sprite.png") no-repeat scroll 5px -150px;
@@ -72,20 +71,20 @@
 	}
 }
 .icon-house-white {
-	background: transparent url("../images/sprite.png") no-repeat scroll -132px -141px;
-	padding: 0px 17px;
+	background: transparent url("../images/sprite.png") no-repeat scroll -132px -139px;
+	padding: 15px 17px;
 }
 .icon-umbrella-white {
 	background: transparent url("../images/sprite.png") no-repeat scroll -135px -75px;
-	padding: 0px 13px;
+	padding: 13px 13px;
 }
 .icon-book-white {
 	background: transparent url("../images/sprite.png") no-repeat scroll -168px -74px;
-	padding: 0px 15px;
+  padding: 12px 15px;
 }
 .icon-card-white {
 	background: transparent url("../images/sprite.png") no-repeat scroll -134px -110px;
-	padding: 0px 15px;
+	padding: 12px 15px;
 }
 .icon-hand-white {
 	background: transparent url("../images/sprite.png") no-repeat scroll -168px -105px;
@@ -114,3 +113,26 @@
 		}
 }
 
+.icon-flag {
+	background: transparent url("../images/sprite.png") no-repeat scroll -206px -87px;
+	padding: 2px 5px;
+	&.icon-green {
+		background: transparent url("../images/sprite.png") no-repeat scroll -206px -87px;
+	}
+	&.icon-blue {
+		background: transparent url("../images/sprite.png") no-repeat scroll -206px -102px;
+	}
+}
+
+.icon-bicycle {
+	background: transparent url("../images/sprite.png") no-repeat scroll -229px -21px;
+	padding: 3px 10px;
+	&.icon-purple {
+		background: transparent url("../images/sprite.png") no-repeat scroll -229px -21px;
+	}
+}
+
+.icon-eye {
+	background: transparent url("../images/sprite.png") no-repeat scroll -204px -70px;
+	padding: 3px 8px;
+}

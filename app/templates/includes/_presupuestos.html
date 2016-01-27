@@ -10,7 +10,7 @@
               {% if loop.last or loop.revindex0 == 1 %}
                 Total de gastos previstos <span class="hightlight">{{ MES.TOTAL_PRESUPUESTADO }}€</span>
               {% else %}
-                Gasto total <span class="hightlight">{{ MES.TOTAL_GASTADO }}€</span> de <strong>{{ MES.TOTAL_PRESUPUESTADO }}€</strong> presupuestado
+                Gasto total <span class="hightlight">{{ MES.TOTAL_GASTADO }}€</span> de <span>{{ MES.TOTAL_PRESUPUESTADO }}€</span> presupuestado
               {% endif %}
             </div>
             <div class="show_calendar">
@@ -26,7 +26,7 @@
     {% endfor %}
   </div>
 
-  <ul class="nav nav-tabs calendary slidedown">
+  <ul class="nav nav-tabs calendary slideup">
     {% for MES in CALENDARIO %}
       {% if MES.LBL_MES == "ENE" %}
         <li><span data-toggle="tab">2015</span></li>
@@ -45,7 +45,7 @@
 
   <div class="tab-content">
     {% for MES in CALENDARIO %}
-      <article id="section{{ loop.index }}_bar" class="progress-bar-content tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %} {% if loop.last %} invisible {% endif %}">
+      <article id="section{{ loop.index }}_bar" class="progress-bar-content tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %} {% if loop.last %} hidden {% endif %}">
         {% if MES.TOTAL_PORCENTAJE < 100 %}
           <div class="progress border-radius-less">
             <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ MES.TOTAL_PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ MES.TOTAL_PORCENTAJE }}%"></div>
@@ -84,7 +84,7 @@
 
   <div class="tab-content">
     {% for MES in CALENDARIO %}
-      <article id="section{{ loop.index }}" class="tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %}">
+      <article id="section{{ loop.index }}" class="targets tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %}">
         {% set parentloop = loop %}
         {% for PRESUPUESTO in MES.PRESUPUESTOS %}
           <div class="col-xs-4">
@@ -92,7 +92,7 @@
               <div class="target-presupuesto target-future flip-container">
                 <div class="flipper">
                   <div class="info-general front">
-                    <div class="img-circle"><i class="icon-car-white"></i></div>
+                    <div class="container-icon"><div class="img-circle"><i class="icon-car-white"></i></div></div>
                     <div class="info">
                       <span>{{ PRESUPUESTO.TITLE }}</span>
                       <div>
@@ -117,7 +117,7 @@
             {% else %}
               <a href="javascript:void()" class="target-presupuesto">
                 <div class="info-general">
-                  <div class="img-circle"><i class="{{ PRESUPUESTO.ICONO }}"></i></div>
+                  <div class="container-icon"><div class="img-circle"><i class="{{ PRESUPUESTO.ICONO }}"></i></div></div>
                   <div class="info"><span>{{ PRESUPUESTO.TITLE }}</span><div class="value">{{ PRESUPUESTO.PREVISTO }}<span class="decimal">,00</span> €</div></div>
                 </div>
                 <div class="data-progress">

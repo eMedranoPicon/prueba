@@ -9,8 +9,12 @@
 .progress-bar {
 	@include border-radius-separate(0, 20px, 0, 20px);
 	float: right;
-    box-shadow: none;
-    height: 100%;
+  box-shadow: none;
+  height: 100%;
+}
+.progress-bar.normal {
+	@include border-radius-separate(20px, 0, 20px, 0);
+	float: left;
 }
 
 .triangulo_izq {
@@ -22,6 +26,17 @@
     font-size: 0;
     line-height: 0;
     float: right;
+}
+
+.triangulo_der {
+    width: 0;
+    height: 0;
+    border-bottom: 14px solid transparent;  /* left arrow slant */
+    border-top: 13px solid transparent; /* right arrow slant */
+    border-left:14px solid $black; /* bottom, add background color here */
+    font-size: 0;
+    line-height: 0;
+    float: left;
 }
 
 .values-progress-bar {

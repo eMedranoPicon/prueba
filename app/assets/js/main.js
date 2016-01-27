@@ -21,8 +21,6 @@ $(document).ready(function () {
       }
     );
 
-
-
   // HOVER EN LOS ICONOS DE LOS PRESUPUESTOS FUTUROS
   $(".icon-edit, .icon-check-circle") .hover(
     function() {
@@ -34,8 +32,8 @@ $(document).ready(function () {
 
   // TRAS MODIFICAR LOS DATOS DE UN PRESUPUESTO FUTURO
   $('.icon-check-circle').on('click', function() {
-      $(this).closest('.flip-container').removeClass('hover').find('.icon-edit').removeClass('icon-edit').addClass('icon-return-circle');
-      event.stopPropagation();
+    $(this).closest('.flip-container').removeClass('hover').find('.icon-edit').removeClass('icon-edit').addClass('icon-return-circle');
+    event.stopPropagation();
   });
 
   // RESTAURAR EL VALOR POR DEFECTO

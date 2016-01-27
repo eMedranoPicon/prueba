@@ -1,0 +1,112 @@
+.metas {
+  color: $grey300;
+  font-family: $font;
+  h3, .content-title-calendar {
+    font-size: 28px;
+    .hightlight {
+      color: $colorMetaPrimary;
+      font-family: $fontBold;
+    }
+  }
+
+  .targets > article {
+    &:nth-child(3n+1) {
+      padding-left: 0;
+    }
+    &:nth-child(3n) {
+      padding-right: 0;
+    }
+    &:nth-child(3n-1) {
+      padding: 0 7px;
+    }
+  }
+
+  .target-meta {
+    border: 1px solid $grey950;
+    background: $white;
+    display: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    height: 215px;
+    @include box-shadow (0, 1px, 0, $grey800);
+    @include transition (border 0.2s);
+    @include border-radius(3px);
+
+    .head-target {
+      border-bottom: 1px solid $grey850;
+      padding: 20px 15px;
+      display: table;
+      width: 100%;
+      &>div {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .container-icon {
+        width: 60px;
+        .img-circle {
+          background-color: $colorMetaPrimary;
+          height: 53px;
+          width: 53px;
+          position: relative;
+          i {
+            width: 50%;
+            height: auto;
+            top: 50%;
+            margin: 0px auto;
+            position: absolute;
+            left: 50%;
+            @include css3-prefix(transform, translate(-50%, -50%));
+          }
+        }
+      }
+      .title {
+        color: $grey300;
+        font-family: $fontBold;
+        font-size: 15px;
+        font-weight: normal;
+      }
+    }
+
+    .data-progress {
+      padding: 10px 15px 20px;
+      .value {
+        font-size: 30px;
+        color: $grey300;
+        .decimal {
+          font-size: 15px;
+        }
+      }
+      .progress {
+        height: 8px;
+        .triangulo_der {
+          border-bottom: 4px solid transparent;
+          border-top: 4px solid transparent;
+          border-left: 4px solid $colorMetaPrimary;
+        }
+        .progress-bar {
+          background: $colorMetaPrimary;
+        }
+      }
+    }
+    .detail {
+      color: $grey500;
+      font-size: 12px;
+      &>div {
+        padding: 0;
+        text-align: center;
+        &:first-child {
+          padding-left: 15px;
+          text-align: left;
+        }
+        &:last-child {
+          padding-right: 15px;
+          text-align: right;
+        }
+      }
+    }
+    &:hover {
+      text-decoration: none;
+      border: 1px solid $colorMetaPrimary;
+    }
+  }
+}

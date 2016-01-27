@@ -1,6 +1,17 @@
 .presupuestos {
   color: $grey300;
   font-family: $font;
+  .targets > div {
+    &:nth-child(3n+1) {
+      padding-left: 0;
+    }
+    &:nth-child(3n) {
+      padding-right: 0;
+    }
+    &:nth-child(3n-1) {
+      padding: 0 7px;
+    }
+  }
   .content-title-calendar {
     display: table;
     vertical-align: bottom;
@@ -30,11 +41,11 @@
   }
   h3, .content-title-calendar {
     font-size: 28px;
-    .hightlight {
-      color: $colorPresPrimary;
+    span {
       font-family: $fontBold;
     }
-    strong {
+    .hightlight {
+      color: $colorPresPrimary;
       font-family: $fontBold;
     }
   }
@@ -43,34 +54,20 @@
   }
   .target-presupuesto {
     border: 1px solid $grey950;
+    border-bottom: 1px solid $grey800;
     background: $white;
     display: inherit;
     font-weight: bold;
     text-decoration: none;
     height: 215px;
-    @include box-shadow (0, 1px, 0, $grey800);
     @include transition (border 0.2s);
     @include border-radius(3px);
     &.target-future {
       height: 85px;
-      border: none;
-      transition: all 0.45s;
-      box-shadow: none;
+      width: 276px;
       .info-general {
+        border-bottom: none;
         padding: 15px;
-      }
-      &.flip .card .front {
-        border: 1px solid $grey950;
-        &:hover {
-          text-decoration: none;
-          border: 1px solid $colorPresPrimary;
-        }
-      }
-      &.flip .card .back {
-        border: 1px solid $grey950;
-      }
-      &:hover {
-        border: none;
       }
     }
     .info-general {
@@ -78,9 +75,14 @@
       padding: 20px 15px;
       display: table;
       width: 100%;
+      &>div {
+        display: table-cell;
+      }
+      .container-icon {
+        width: 55px;
+      }
       .info {
         padding-left: 12px;
-        display: table-cell;
         vertical-align: middle;
         font-size: 20px;
         color: $grey500;
@@ -96,22 +98,21 @@
         }
       }
       .img-circle {
-        display: table-cell;
         background-color: $colorPresPrimary;
         height: 53px;
         width: 53px;
         position: relative;
         i {
           width: 50%;
-          height: 50%;
-          overflow: auto;
-          margin: auto;
+          height: auto;
+          top: 50%;
+          margin: 0px auto;
           position: absolute;
-          top: 0; left: 0; bottom: 0; right: 0;
+          left: 50%;
+          @include css3-prefix(transform, translate(-50%, -50%));
         }
       }
       .modify {
-        display: table-cell;
         vertical-align: middle;
         text-align: right;
       }
@@ -121,9 +122,7 @@
         color: $grey300;
       }
       .modify-data {
-        display: table-cell;
         vertical-align: middle;
-        width: 115px;
         font-size: 13px;
         padding-left: 0;
         color: $grey300;
@@ -172,9 +171,10 @@
     }
   }
   .progress-bar-content {
-    height: 55px;
+    height: 50px;
     .progress {
       height: 24px;
+      margin-bottom: 0px;
       &.closed {
         display: none;
       }
@@ -207,12 +207,27 @@
       margin-left: 10px;
       .bar-money-spent {
         color: $colorPresPrimary;
+        font-family: $fontBold;
         font-size: 12px;
       }
       .bar-spent {
-        color: $colorPresSecond;
+        color: $colorPresPrimary;
+        font-family: $font;
         font-size: 12px;
       }
+      &.dark {
+        .bar-money-spent {
+          color: $colorPresTer;
+        }
+        .bar-spent {
+          color: $colorPresTer;
+        }
+      }
+    }
+    .bar-text-container-right {
+      @extend .bar-text-container;
+      float: right;
+      margin-right: 10px;
     }
     .triangulo_izq {
       border-bottom: 12px solid;
@@ -231,9 +246,18 @@
       border-right-color: $colorPresPrimary;
       background: transparent;
       height: 45px;
-      margin-left: 13px;
-      margin-top: -32px;
+      margin-left: 12px;
+      margin-top: -24px;
       border-right-width: 2px;
+    }
+    .dotted-line-right {
+      float: right;
+      border-left-style: dotted;
+      border-left-color: $colorPresPrimary;
+      background: transparent;
+      height: 45px;
+      margin-top: -24px;
+      border-left-width: 2px;
     }
   }
 }
