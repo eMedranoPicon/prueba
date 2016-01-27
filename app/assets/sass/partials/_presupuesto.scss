@@ -2,6 +2,10 @@
   color: $grey300;
   font-family: $font;
   background-color: $gray990;
+  a:focus {
+    outline-offset: none;
+    outline: none;
+  }
   .targets > div {
     padding-bottom: 20px;
     &:nth-child(3n+1) {
