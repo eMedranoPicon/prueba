@@ -1,6 +1,17 @@
 .presupuestos {
   color: $grey300;
   font-family: $font;
+  .targets > div {
+    &:nth-child(3n+1) {
+      padding-left: 0;
+    }
+    &:nth-child(3n) {
+      padding-right: 0;
+    }
+    &:nth-child(3n-1) {
+      padding: 0 7px;
+    }
+  }
   .content-title-calendar {
     display: table;
     vertical-align: bottom;

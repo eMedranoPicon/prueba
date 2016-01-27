@@ -52,9 +52,8 @@
     padding: 13px 20px;
 }
 .icon-calendar {
-    background: transparent url("../images/sprite.png") no-repeat scroll -116px 2px;
+    background: transparent url("../images/sprite.png") no-repeat scroll -116px 1px;
     padding: 3px 7px;
-    margin-right: 5px;
 }
 .icon-car-red {
 	background: transparent url("../images/sprite.png") no-repeat scroll 5px -150px;
@@ -115,12 +114,25 @@
 }
 
 .icon-flag {
-	background: transparent url("../images/sprite.png") no-repeat scroll -206px -86px;
-	padding: 3px 5px;
+	background: transparent url("../images/sprite.png") no-repeat scroll -206px -87px;
+	padding: 2px 5px;
 	&.icon-green {
-		background: transparent url("../images/sprite.png") no-repeat scroll -206px -86px;
+		background: transparent url("../images/sprite.png") no-repeat scroll -206px -87px;
 	}
 	&.icon-blue {
 		background: transparent url("../images/sprite.png") no-repeat scroll -206px -102px;
 	}
+}
+
+.icon-bicycle {
+	background: transparent url("../images/sprite.png") no-repeat scroll -229px -21px;
+	padding: 3px 10px;
+	&.icon-purple {
+		background: transparent url("../images/sprite.png") no-repeat scroll -229px -21px;
+	}
+}
+
+.icon-eye {
+	background: transparent url("../images/sprite.png") no-repeat scroll -204px -70px;
+	padding: 3px 8px;
 }
