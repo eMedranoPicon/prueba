@@ -220,12 +220,19 @@
         .img-circle {
           margin: 0 auto;
           display: block;
+          i {
+            color: $white;
+            width: auto;
+          }
         }
         h4 {
           text-align: center;
           color: $colorPresPrimary;
           font-size: 14px;
         }
+      }
+      &:hover {
+        border: 1px dashed $colorPresPrimary;
       }
     }
   }
