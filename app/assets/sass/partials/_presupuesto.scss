@@ -52,7 +52,7 @@
   .content-title-calendar .title_calendar {
     font-family: $fontLight;
   }
-  
+
   .target-presupuesto {
     border: 1px solid $grey950;
     border-bottom: 1px solid $grey800;
@@ -154,9 +154,10 @@
           font-size: 15px;
         }
       }
-      .progress {
+      .progress-tiny {
+        @extend .progress;
         height: 8px;
-        .triangulo_izq-tiny {
+        .triangulo_izq {
           @extend .triangulo_izq;
           border-bottom: 4px solid transparent;
           border-top: 4px solid transparent;
