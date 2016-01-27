@@ -26,7 +26,7 @@
         @include border-radius(50px);
       }
       &>div.muesca{
-        background: $white;
+        background: $gray990;
         width: 4px;
         height: 8px;
         position: absolute;
@@ -64,6 +64,7 @@
         margin: 0 3px;
         border: none;
         border-bottom: 1px solid $grey800;
+        background-color: $white;
         color: $grey500;
         font-weight: bold;
         text-align: center;

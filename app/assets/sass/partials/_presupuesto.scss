@@ -1,6 +1,7 @@
 .presupuestos {
   color: $grey300;
   font-family: $font;
+  background-color: $gray990;
   .targets > div {
     padding-bottom: 20px;
     &:nth-child(3n+1) {
