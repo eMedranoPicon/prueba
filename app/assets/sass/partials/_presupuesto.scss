@@ -3,7 +3,7 @@
   font-family: $font;
   background-color: $gray990;
   a:focus {
-    outline-offset: none;
+    outline-offset: 0;
     outline: none;
   }
   .targets > div {
