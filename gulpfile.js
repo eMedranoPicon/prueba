@@ -192,9 +192,9 @@ gulp.task('old_browsers', function() {
   return gulp.src(['app/assets/js/old_browsers_support/**/*']).pipe(gulp.dest('app/dist/js/old_browsers_support'));
 });
 
-gulp.task('legacy-code', function() {
-  return gulp.src(['app/legacy/*/*']).pipe(gulp.dest('app/dist/legacy'));
-});
+// gulp.task('legacy-code', function() {
+//   return gulp.src(['app/legacy/*/*']).pipe(gulp.dest('app/dist/legacy'));
+// });
 
 gulp.task('connect', function() {
   return connect.server({
@@ -206,7 +206,7 @@ gulp.task('connect', function() {
 
 gulp.task('default', function() {
   runSequence(
-    ['old_browsers', 'fonts', 'images', 'sass-lint', 'jshint', 'sass', 'vendor-scripts', 'scripts', 'jinja', 'legacy-code'],
+    ['old_browsers', 'fonts', 'images', 'sass-lint', 'jshint', 'sass', 'vendor-scripts', 'scripts', 'jinja'],
     ['watch', 'connect'], // by default test are excluded of default task but it could be included with 'test' task
     function() {
       gulp.src('').pipe(notify({
@@ -221,7 +221,7 @@ gulp.task('default', function() {
 gulp.task('dist', function() {
   runSequence(
     'clean',
-    ['old_browsers', 'jshint-dist', 'sass-lint', 'sass-min', 'vendor-scripts', 'scripts-min', 'jinja', 'legacy-code'],
+    ['old_browsers', 'jshint-dist', 'sass-lint', 'sass-min', 'vendor-scripts', 'scripts-min', 'jinja'],
     function() {
       gulp.src('').pipe(notify({
         title: 'Dist',
