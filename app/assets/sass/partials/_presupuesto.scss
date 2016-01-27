@@ -148,12 +148,20 @@
           font-size: 20px;
         }
         input {
-          width: 90px;
+          width: 80px;
+          height: 28px;
           text-align: center;
           color: $grey500;
           font-size: 20px;
           border-bottom: 1px solid $gray600;
+          border-left: none;
+          border-top: none;
+          border-right: none;
           display: none;
+        }
+        .euro-label {
+          height: 32px;
+          vertical-align: bottom;
         }
       }
     }
@@ -256,13 +264,17 @@
       float: right;
       margin-right: 10px;
     }
+    .line-text-container {
+      width: 908px;
+      float: right;
+    }
     .dotted-line {
       float: left;
       border-right-style: dotted;
       border-right-color: $colorPresPrimary;
       background: transparent;
       height: 45px;
-      margin-left: 12px;
+      margin-left: 2px;
       margin-top: -24px;
       border-right-width: 2px;
     }

@@ -67,10 +67,13 @@
             <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ value }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ value }}%"></div>
           </div>
           {% if value > 10 %}
-            <div class="dotted-line" style="width: {{ width }}%"></div>
-            <div class="bar-text-container dark">
-              <span class="bar-spent">Gastado </span><span class="bar-money-spent">{{ MES.TOTAL_GASTADO }}€</span>
+            <div class="line-text-container">
+              <div class="dotted-line" style="width: {{ width }}%"></div>
+              <div class="bar-text-container dark">
+                <span class="bar-spent">Gastado </span><span class="bar-money-spent">{{ MES.TOTAL_GASTADO }}€</span>
+              </div>
             </div>
+
           {% else %}
             <div class="dotted-line-right" style="width: {{ 100 - width }}%"></div>
             <div class="bar-text-container-right dark">
@@ -108,7 +111,10 @@
                           <span class="value value{{loop.index~parentloop.index}}">{{ PRESUPUESTO.PREVISTO }}</span>,<span class="decimal decimal{{loop.index~parentloop.index}}">00</span>
                         </label>
                         <input id="init-value{{loop.index~parentloop.index}}" type="hidden" name="name" value="{{ PRESUPUESTO.PREVISTO }}"/>
-                        <input class="my-input" data-id="{{loop.index~parentloop.index}}" id="my-input{{loop.index~parentloop.index}}" type="text" name="name" value="" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true" />€
+                        <input class="my-input" data-id="{{loop.index~parentloop.index}}" id="my-input{{loop.index~parentloop.index}}" type="text" name="name" value="" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true" />
+
+                        <span class="euro-label">€</span>
+
                       </div>
                       <div class="modify"><i class="icon-check-circle"></i></div>
                   </div>
@@ -141,7 +147,7 @@
                       <div class="dotted-line" style="width: {{ width }}%"></div>
                     </div>
                     <div class="bar-text-container">
-                      <div class="value"><strong>{{ PRESUPUESTO.GASTADO }}<span class="decimal">,00</span>€</strong></div>
+                      <div class="value"><strong>{{ PRESUPUESTO.DIFERENCIA }}<span class="decimal">,00</span>€</strong></div>
                     </div>
                   {% endif %}
                   <div class="value"><strong>{{ PRESUPUESTO.GASTADO }}<span class="decimal">,00</span>€</strong></div>
