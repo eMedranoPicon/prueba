@@ -155,15 +155,15 @@
         color: $grey300;
         text-align: right;
         float: right;
-        margin-top: 30px;
+        margin-top: 15px;
         .decimal {
           font-size: 15px;
         }
       }
       .bar-text-container {
-        display: inline-block;
+        position: absolute;
         .value {
-          font-size: 20px;
+          font-size: 16px;
           text-align: left;
           float: left;
           margin-top: 5px;
