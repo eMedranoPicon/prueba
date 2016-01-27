@@ -52,23 +52,28 @@
 }
 
 .icon-check-circle {
-    background: transparent url("../images/sprite.png") no-repeat scroll -135px -3px;
-    padding: 8px 16px;
-		&.icon-hover {
-			background: transparent url("../images/sprite.png") no-repeat scroll -169px -3px;
-		}
+  background: transparent url("../images/sprite.png") no-repeat scroll -135px -3px;
+  padding: 8px 16px;
+	&.icon-hover {
+		background: transparent url("../images/sprite.png") no-repeat scroll -169px -3px;
+	}
 }
 .icon-return-circle {
 	background: transparent url("../images/sprite.png") no-repeat scroll -135px -35px;
-padding: 8px 16px;
+	padding: 8px 16px;
 	&.icon-hover {
 		background: transparent url("../images/sprite.png") no-repeat scroll -169px -35px;
 	}
 }
 .icon-calendar-new {
-    background: transparent url("../images/sprite.png") no-repeat scroll -170px -168px;;
-    padding: 10px 13px;
-		&.icon-hover {
-				background: transparent url("../images/sprite.png") no-repeat scroll -138px -168px;
-		}
+  background: transparent url("../images/sprite.png") no-repeat scroll -170px -168px;;
+  padding: 10px 13px;
+	&.icon-hover {
+			background: transparent url("../images/sprite.png") no-repeat scroll -138px -168px;
+	}
+}
+
+.icon-files-add {
+  background: transparent url("../images/sprite.png") no-repeat scroll -233px -42px;
+  padding: 17px 30px;
 }

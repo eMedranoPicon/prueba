@@ -245,4 +245,25 @@
       border-left-width: 2px;
     }
   }
+
+  table.no-presupuestos {
+    border: 1px dashed $colorPresPrimary;
+    border-collapse: collapse;
+    color: $colorPresPrimary;
+    height: 120px;
+    margin-top: 40px;
+    td {
+      border: 1px dashed $colorPresPrimary;
+      padding: 0 35px;
+      line-height: 1.5;
+      vertical-align: middle;
+      &:hover {
+        border: 1px solid $colorPresPrimary;
+      }
+    }
+    &:hover {
+      border: 1px solid $colorPresPrimary;
+    }
+  }
+
 }
