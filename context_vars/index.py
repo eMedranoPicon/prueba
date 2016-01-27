@@ -14,7 +14,7 @@ def get_index():
 						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
-						"PORCENTAJE": "55"
+						"PORCENTAJE": 55
 					}
 				]
           	},
@@ -31,35 +31,35 @@ def get_index():
 						"ICONO": "icon-house-white",
 						"PREVISTO": "640",
 						"GASTADO": "610",
-						"PORCENTAJE": "110"
+						"PORCENTAJE": 110
 					},
 					{
 						"TITLE": "Colegio",
 						"ICONO": "icon-book-white",
 						"PREVISTO": "100",
 						"GASTADO": "100",
-						"PORCENTAJE": "100"
+						"PORCENTAJE": 100
 					},
 					{
 						"TITLE": "Tarjeta",
 						"ICONO": "icon-card-white",
 						"PREVISTO": "245",
 						"GASTADO": "245",
-						"PORCENTAJE": "100"
+						"PORCENTAJE": 100
 					},
 					{
 						"TITLE": "Seguros",
 						"ICONO": "icon-umbrella-white",
 						"PREVISTO": "395",
 						"GASTADO": "395",
-						"PORCENTAJE": "100"
+						"PORCENTAJE": 100
 					},
 					{
 						"TITLE": "Cuota préstamo",
 						"ICONO": "icon-hand-white",
 						"PREVISTO": "270",
 						"GASTADO": "270",
-						"PORCENTAJE": "100"
+						"PORCENTAJE": 100
 					}
 				]
           	},
@@ -76,7 +76,7 @@ def get_index():
 						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
-						"PORCENTAJE": "55"
+						"PORCENTAJE": 55
 					}
 				]
           	},
@@ -93,7 +93,7 @@ def get_index():
 						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
-						"PORCENTAJE": "55"
+						"PORCENTAJE": 55
 					}
 				]
           	},
@@ -110,7 +110,7 @@ def get_index():
 						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
-						"PORCENTAJE": "55"
+						"PORCENTAJE": 55
 					}
 				]
           	},
@@ -127,7 +127,7 @@ def get_index():
 						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
-						"PORCENTAJE": "55"
+						"PORCENTAJE": 55
 					}
 				]
           	},
@@ -144,7 +144,7 @@ def get_index():
 						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
-						"PORCENTAJE": "55"
+						"PORCENTAJE": 55
 					}
 				]
           	},
@@ -161,7 +161,7 @@ def get_index():
 						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
-						"PORCENTAJE": "55"
+						"PORCENTAJE": 55
 					}
 				]
           	},
@@ -178,7 +178,7 @@ def get_index():
 						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
-						"PORCENTAJE": "55"
+						"PORCENTAJE": 55
 					}
 				]
           	},
@@ -195,7 +195,7 @@ def get_index():
 						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
-						"PORCENTAJE": "55"
+						"PORCENTAJE": 55
 					}
 				]
           	},
@@ -212,7 +212,7 @@ def get_index():
 						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
-						"PORCENTAJE": "55"
+						"PORCENTAJE": 55
 					}
 				]
           	},
@@ -229,7 +229,7 @@ def get_index():
 						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
-						"PORCENTAJE": "55"
+						"PORCENTAJE": 55
 					}
 				]
           	},
@@ -245,7 +245,7 @@ def get_index():
 						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
-						"PORCENTAJE": "55"
+						"PORCENTAJE": 55
 					}
 				]
           	},
@@ -261,14 +261,14 @@ def get_index():
 						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
-						"PORCENTAJE": "55"
+						"PORCENTAJE": 55
 					},
 					{
 						"TITLE": "Vivienda",
 						"ICONO": "icon-car-white",
 						"PREVISTO": "580",
 						"GASTADO": "250",
-						"PORCENTAJE": "55"
+						"PORCENTAJE": 55
 					}
 				]
           	},
@@ -279,7 +279,7 @@ def get_index():
 				"TITLE": "Ordenador personal",
 				"ICONO": "icon-car-white",
 				"OBJETIVO": "1.850",
-				"PORCENTAJE": "55",
+				"PORCENTAJE": 55,
 				"CATEGORIA": "I",
 				"VISIBILIDAD": "PÚBLICA",
 				"FECHA": "OCT 2015"
@@ -288,7 +288,7 @@ def get_index():
 				"TITLE": "Regalo mamá",
 				"ICONO": "icon-car-white",
 				"OBJETIVO": "1.975",
-				"PORCENTAJE": "55",
+				"PORCENTAJE": 55,
 				"CATEGORIA": "I",
 				"VISIBILIDAD": "PÚBLICA",
 				"FECHA": "NOV 2015"
@@ -297,7 +297,7 @@ def get_index():
 				"TITLE": "Tablet para María",
 				"ICONO": "icon-car-white",
 				"OBJETIVO": "900",
-				"PORCENTAJE": "55",
+				"PORCENTAJE": 55,
 				"CATEGORIA": "I",
 				"VISIBILIDAD": "PÚBLICA",
 				"FECHA": "ENE 2016"
@@ -306,7 +306,7 @@ def get_index():
 				"TITLE": "Clases de Inglés",
 				"ICONO": "icon-car-white",
 				"OBJETIVO": "1.900",
-				"PORCENTAJE": "55",
+				"PORCENTAJE": 55,
 				"CATEGORIA": "J",
 				"VISIBILIDAD": "PÚBLICA",
 				"FECHA": "FEB 2016"
@@ -315,7 +315,7 @@ def get_index():
 				"TITLE": "Vacaciones de verano",
 				"ICONO": "icon-car-white",
 				"OBJETIVO": "2.000",
-				"PORCENTAJE": "55",
+				"PORCENTAJE": 55,
 				"CATEGORIA": "C",
 				"VISIBILIDAD": "PÚBLICA",
 				"FECHA": "MAR 2016"

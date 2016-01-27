@@ -41,6 +41,7 @@
   .content-title-calendar .title_calendar {
     font-family: $fontLight;
   }
+  
   .target-presupuesto {
     border: 1px solid $grey950;
     border-bottom: 1px solid $grey800;
@@ -144,13 +145,20 @@
       }
       .progress {
         height: 8px;
-        .triangulo_izq {
+        .triangulo_izq-tiny {
+          @extend .triangulo_izq;
           border-bottom: 4px solid transparent;
           border-top: 4px solid transparent;
           border-right: 4px solid $colorPresPrimary;
         }
         .progress-bar {
           background: $colorPresPrimary;
+        }
+        &.over-loaded {
+          background: $colorPresPrimary;
+          .progress-bar {
+            background: $colorPresSecond;
+          }
         }
       }
     }
@@ -160,7 +168,7 @@
     }
   }
   .progress-bar-content {
-    height: 50px;
+    height: 75px;
     .progress {
       height: 24px;
       margin-bottom: 0px;
