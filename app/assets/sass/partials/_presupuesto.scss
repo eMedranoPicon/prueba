@@ -197,6 +197,25 @@
       text-decoration: none;
       border: 1px solid $colorPresPrimary;
     }
+    &.new-presupuesto {
+      border: 1px dashed $grey700;
+      display: table;
+      width: 100%;
+      .info-general {
+        display: table-cell;
+        vertical-align: middle;
+        border: none;
+        .img-circle {
+          margin: 0 auto;
+          display: block;
+        }
+        h4 {
+          text-align: center;
+          color: $colorPresPrimary;
+          font-size: 14px;
+        }
+      }
+    }
   }
   .progress-bar-content {
     height: 75px;
