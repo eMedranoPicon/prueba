@@ -108,14 +108,14 @@ gulp.task('vendor-scripts', function() {
 
 gulp.task('scripts', function() {
   return gulp.src(src_js_files)
-    .pipe(concat('app.js'))
+    .pipe(concat('gesGastos.js'))
     .pipe(gulp.dest(dist_js_dir));
 }).help = 'Concatenates all js files.';
 
 
 gulp.task('scripts-min', function() {
   return gulp.src(src_js_files)
-    .pipe(concat('app.js'))
+    .pipe(concat('gesGastos.js'))
     .pipe(uglify())
     .pipe(gulp.dest(dist_js_dir));
 }).help = 'Concatenates and minifies all js files.';
