@@ -129,6 +129,9 @@
       .modify {
         vertical-align: middle;
         text-align: right;
+        i {
+          cursor: pointer;
+        }
       }
       .modify-info {
         font-size: 13px;
