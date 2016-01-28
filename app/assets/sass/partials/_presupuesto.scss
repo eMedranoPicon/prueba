@@ -3,8 +3,8 @@
   font-family: $font;
   background-color: $gray990;
   a:focus {
-    outline-offset: none;
-    outline: none;
+    outline-offset: 0;
+    outline: none!important;
   }
   .targets > div {
     padding-bottom: 20px;
@@ -73,7 +73,7 @@
     @include transition (border 0.2s);
     @include border-radius(3px);
     &.target-future {
-      height: 87px;
+      height: 90px;
       width: 276px;
       .info-general {
         border-bottom: none;
@@ -158,6 +158,10 @@
           border-top: none;
           border-right: none;
           display: none;
+          &:focus {
+            outline-offset: 0;
+            outline: none!important;
+          }
         }
         .euro-label {
           height: 32px;
@@ -220,12 +224,19 @@
         .img-circle {
           margin: 0 auto;
           display: block;
+          i {
+            color: $white;
+            width: auto;
+          }
         }
         h4 {
           text-align: center;
           color: $colorPresPrimary;
           font-size: 14px;
         }
+      }
+      &:hover {
+        border: 1px dashed $colorPresPrimary;
       }
     }
   }

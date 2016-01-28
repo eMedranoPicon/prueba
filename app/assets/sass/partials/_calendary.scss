@@ -12,7 +12,7 @@
       @include slidedown(90px);
     }
     &>li {
-      width: calc(100%/15);
+      width: calc(100% / 15);
       position: relative;
       &>div.modificado {
         width: 4px;

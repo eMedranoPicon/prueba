@@ -4,8 +4,7 @@ flip-container, .front, .back {
 
 .flip-container {
   border: 1px solid #ccc;
-  @include css3-prefix(transform, preserve-3d);
-  @include css3-prefix(perspective, 1000);
+  @include css3-prefix(perspective, 1000px);
   &.hover {
     .front {
       @include css3-prefix(transform,rotateY(180deg));
