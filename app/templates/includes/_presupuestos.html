@@ -46,10 +46,15 @@
   <div class="tab-content">
     {% for MES in CALENDARIO %}
       <div id="section{{ loop.index }}_bar" class="progress-bar-content tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %} {% if loop.last %} hidden {% endif %}">
-        {% if MES.TOTAL_PORCENTAJE < 100 %}
+        {% if MES.TOTAL_PORCENTAJE <= 100 %}
+          {% if MES.TOTAL_PORCENTAJE == 100 %}
+            <span class="triangulo_izq full"></span>
+          {% endif %}
           <div class="progress border-radius-less">
             <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ MES.TOTAL_PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ MES.TOTAL_PORCENTAJE }}%"></div>
-            <span class="triangulo_izq"></span>
+            {% if MES.TOTAL_PORCENTAJE > 0 and MES.TOTAL_PORCENTAJE != 100 %}
+              <span class="triangulo_izq"></span>
+            {% endif %}
             <div class="bar-text-container right">
               <span class="bar-spent">Gastado </span><span class="bar-money-spent">{{ MES.TOTAL_GASTADO }}€</span>
             </div>
@@ -66,7 +71,7 @@
           <div class="progress over-loaded border-radius-less">
             <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ value }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ value }}%"></div>
           </div>
-          {% if value > 10 %}
+          {% if value > 15 %}
             <div class="line-text-container">
               <div class="dotted-line" style="width: {{ width }}%"></div>
               <div class="bar-text-container dark">
@@ -130,7 +135,9 @@
                   {% if PRESUPUESTO.PORCENTAJE <= 100 %}
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="{{ PRESUPUESTO.PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ PRESUPUESTO.PORCENTAJE }}%"></div>
-                      <span class="triangulo_izq"></span>
+                      {% if PRESUPUESTO.PORCENTAJE > 0 %}
+                        <span class="triangulo_izq"></span>
+                      {% endif %}
                     </div>
                   {% else %}
                     {% if (PRESUPUESTO.PORCENTAJE - 200) >= 0 %}

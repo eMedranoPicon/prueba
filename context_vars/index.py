@@ -2,9 +2,9 @@ def get_index():
 	return {
 		"CALENDARIO": [
 			{
-				"TOTAL_GASTADO": "1.560",
+				"TOTAL_GASTADO": "480",
 				"TOTAL_PRESUPUESTADO": "1.760",
-				"TOTAL_PORCENTAJE": 90,
+				"TOTAL_PORCENTAJE": 40,
               	"LBL_MES": "SEP",
 				"MES_COMPLETO": "Septiembre",
 				"MODIFICADO": False,
@@ -12,10 +12,10 @@ def get_index():
 					{
 						"TITLE": "Vivienda",
 						"ICONO": "icon-house-white",
-						"PREVISTO": "600",
+						"PREVISTO": "500",
 						"GASTADO": "100",
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 10
+						"PORCENTAJE": 20
 
 					},
 					{
@@ -29,10 +29,10 @@ def get_index():
 					{
 						"TITLE": "Tarjeta",
 						"ICONO": "icon-card-white",
-						"PREVISTO": "0",
+						"PREVISTO": "60",
 						"GASTADO": "100",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 0
+						"DIFERENCIA": 40,
+						"PORCENTAJE": 140
 					},
 					{
 						"TITLE": "Seguros",
@@ -53,9 +53,9 @@ def get_index():
 				]
         	},
 			{
-				"TOTAL_GASTADO": "1.760",
-				"TOTAL_PRESUPUESTADO": "1.560",
-				"TOTAL_PORCENTAJE": 110,
+				"TOTAL_GASTADO": "2.115",
+				"TOTAL_PRESUPUESTADO": "1.850",
+				"TOTAL_PORCENTAJE": 114.32,
             	"LBL_MES": "OCT",
 				"MES_COMPLETO": "Octubre",
 				"MODIFICADO": False,
@@ -104,9 +104,9 @@ def get_index():
 				]
         	},
 			{
-				"TOTAL_GASTADO": "1.000",
-				"TOTAL_PRESUPUESTADO": "1.760",
-				"TOTAL_PORCENTAJE": 60,
+				"TOTAL_GASTADO": "860",
+				"TOTAL_PRESUPUESTADO": "1.830",
+				"TOTAL_PORCENTAJE": 47,
               	"LBL_MES": "NOV",
 				"MES_COMPLETO": "Noviembre",
 				"MODIFICADO": False,
@@ -123,18 +123,18 @@ def get_index():
 					{
 						"TITLE": "Colegio",
 						"ICONO": "icon-book-white",
-						"PREVISTO": "100",
+						"PREVISTO": "500",
 						"GASTADO": "10",
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 10
+						"PORCENTAJE": 2
 					},
 					{
 						"TITLE": "Tarjeta",
 						"ICONO": "icon-card-white",
-						"PREVISTO": "0",
+						"PREVISTO": "500",
 						"GASTADO": "100",
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 0
+						"PORCENTAJE": 20
 					},
 					{
 						"TITLE": "Seguros",
@@ -142,7 +142,7 @@ def get_index():
 						"PREVISTO": "50",
 						"GASTADO": "100",
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 50
+						"PORCENTAJE": 150
 					},
 					{
 						"TITLE": "Cuota préstamo",
@@ -155,7 +155,7 @@ def get_index():
 				]
           	},
 			{
-				"TOTAL_GASTADO": "3.260",
+				"TOTAL_GASTADO": "3.710",
 				"TOTAL_PRESUPUESTADO": "1.760",
 				"TOTAL_PORCENTAJE": 220,
               	"LBL_MES": "DIC",
@@ -166,49 +166,49 @@ def get_index():
 						"TITLE": "Vivienda",
 						"ICONO": "icon-house-white",
 						"PREVISTO": "600",
-						"GASTADO": "550",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 90
+						"GASTADO": "1000",
+						"DIFERENCIA": 400,
+						"PORCENTAJE": 180
 
 					},
 					{
 						"TITLE": "Colegio",
 						"ICONO": "icon-book-white",
 						"PREVISTO": "100",
-						"GASTADO": "10",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 10
+						"GASTADO": "500",
+						"DIFERENCIA": 400,
+						"PORCENTAJE": 400
 					},
 					{
 						"TITLE": "Tarjeta",
 						"ICONO": "icon-card-white",
-						"PREVISTO": "0",
-						"GASTADO": "100",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 0
+						"PREVISTO": "900",
+						"GASTADO": "1000",
+						"DIFERENCIA": 100,
+						"PORCENTAJE": 110
 					},
 					{
 						"TITLE": "Seguros",
 						"ICONO": "icon-umbrella-white",
 						"PREVISTO": "50",
-						"GASTADO": "100",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 50
+						"GASTADO": "1000",
+						"DIFERENCIA": 950,
+						"PORCENTAJE": 2000
 					},
 					{
 						"TITLE": "Cuota préstamo",
 						"ICONO": "icon-hand-white",
-						"PREVISTO": "180",
-						"GASTADO": "100",
-						"DIFERENCIA": 80,
-						"PORCENTAJE": 180
+						"PREVISTO": "110",
+						"GASTADO": "210",
+						"DIFERENCIA": 100,
+						"PORCENTAJE": 190
 					}
 				]
           	},
 			{
-				"TOTAL_GASTADO": "2.560",
-				"TOTAL_PRESUPUESTADO": "1.760",
-				"TOTAL_PORCENTAJE": 150,
+				"TOTAL_GASTADO": "930",
+				"TOTAL_PRESUPUESTADO": "930",
+				"TOTAL_PORCENTAJE": 100,
               	"LBL_MES": "ENE",
 				"MES_COMPLETO": "Enero",
 				"MODIFICADO": False,
@@ -236,7 +236,7 @@ def get_index():
 						"PREVISTO": "0",
 						"GASTADO": "100",
 						"DIFERENCIA": 100,
-						"PORCENTAJE": 100
+						"PORCENTAJE": 1000
 					},
 					{
 						"TITLE": "Seguros",
@@ -257,9 +257,9 @@ def get_index():
 				]
           	},
 			{
-				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760",
-				"TOTAL_PORCENTAJE": 10,
+				"TOTAL_GASTADO": "0",
+				"TOTAL_PRESUPUESTADO": "1.000",
+				"TOTAL_PORCENTAJE": 0,
               	"LBL_MES": "FEB",
 				"MES_COMPLETO": "Febrero",
 				"MODIFICADO": False,
@@ -268,49 +268,49 @@ def get_index():
 						"TITLE": "Vivienda",
 						"ICONO": "icon-house-white",
 						"PREVISTO": "100",
-						"GASTADO": "550",
-						"DIFERENCIA": 450,
-						"PORCENTAJE": 500
+						"GASTADO": "0",
+						"DIFERENCIA": 0,
+						"PORCENTAJE": 0
 
 					},
 					{
 						"TITLE": "Colegio",
 						"ICONO": "icon-book-white",
-						"PREVISTO": "100",
-						"GASTADO": "160",
-						"DIFERENCIA": 60,
-						"PORCENTAJE": 160
+						"PREVISTO": "200",
+						"GASTADO": "0",
+						"DIFERENCIA": 0,
+						"PORCENTAJE": 0
 					},
 					{
 						"TITLE": "Tarjeta",
 						"ICONO": "icon-card-white",
-						"PREVISTO": "0",
-						"GASTADO": "100",
+						"PREVISTO": "200",
+						"GASTADO": "0",
 						"DIFERENCIA": 0,
 						"PORCENTAJE": 0
 					},
 					{
 						"TITLE": "Seguros",
 						"ICONO": "icon-umbrella-white",
-						"PREVISTO": "50",
-						"GASTADO": "100",
+						"PREVISTO": "300",
+						"GASTADO": "0",
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 50
+						"PORCENTAJE": 0
 					},
 					{
 						"TITLE": "Cuota préstamo",
 						"ICONO": "icon-hand-white",
-						"PREVISTO": "180",
-						"GASTADO": "100",
-						"DIFERENCIA": 80,
-						"PORCENTAJE": 180
+						"PREVISTO": "200",
+						"GASTADO": "0",
+						"DIFERENCIA": 0,
+						"PORCENTAJE": 0
 					}
 				]
           	},
 			{
-				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760",
-				"TOTAL_PORCENTAJE": 0,
+				"TOTAL_GASTADO": "1.950",
+				"TOTAL_PRESUPUESTADO": "1.000",
+				"TOTAL_PORCENTAJE": 195,
               	"LBL_MES": "MAR",
 				"MES_COMPLETO": "Marzo",
 				"MODIFICADO": False,
@@ -318,19 +318,274 @@ def get_index():
 					{
 						"TITLE": "Vivienda",
 						"ICONO": "icon-house-white",
-						"PREVISTO": "600",
-						"GASTADO": "550",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 90
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
 
 					},
 					{
 						"TITLE": "Colegio",
 						"ICONO": "icon-book-white",
-						"PREVISTO": "100",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+					},
+					{
+						"TITLE": "Tarjeta",
+						"ICONO": "icon-card-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+					},
+					{
+						"TITLE": "Seguros",
+						"ICONO": "icon-umbrella-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+					},
+					{
+						"TITLE": "Cuota préstamo",
+						"ICONO": "icon-hand-white",
+						"PREVISTO": "200",
+						"GASTADO": "350",
+						"DIFERENCIA": 150,
+						"PORCENTAJE": 175
+					}
+				]
+          	},
+			{
+				"TOTAL_GASTADO": "2.000",
+				"TOTAL_PRESUPUESTADO": "1.000",
+				"TOTAL_PORCENTAJE": 200,
+              	"LBL_MES": "ABR",
+				"MES_COMPLETO": "Abril",
+				"MODIFICADO": False,
+				"PRESUPUESTOS": [
+					{
+						"TITLE": "Vivienda",
+						"ICONO": "icon-house-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+
+					},
+					{
+						"TITLE": "Colegio",
+						"ICONO": "icon-book-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+					},
+					{
+						"TITLE": "Tarjeta",
+						"ICONO": "icon-card-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+					},
+					{
+						"TITLE": "Seguros",
+						"ICONO": "icon-umbrella-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+					},
+					{
+						"TITLE": "Cuota préstamo",
+						"ICONO": "icon-hand-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+					}
+				]
+          	},
+			{
+				"TOTAL_GASTADO": "1.900",
+				"TOTAL_PRESUPUESTADO": "1.000",
+				"TOTAL_PORCENTAJE": 190,
+              	"LBL_MES": "MAY",
+				"MES_COMPLETO": "Mayo",
+				"MODIFICADO": False,
+				"PRESUPUESTOS": [
+					{
+						"TITLE": "Vivienda",
+						"ICONO": "icon-house-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+
+					},
+					{
+						"TITLE": "Colegio",
+						"ICONO": "icon-book-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+					},
+					{
+						"TITLE": "Tarjeta",
+						"ICONO": "icon-card-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+					},
+					{
+						"TITLE": "Seguros",
+						"ICONO": "icon-umbrella-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+					},
+					{
+						"TITLE": "Cuota préstamo",
+						"ICONO": "icon-hand-white",
+						"PREVISTO": "200",
+						"GASTADO": "300",
+						"DIFERENCIA": 100,
+						"PORCENTAJE": 150
+					}
+				]
+          	},
+			{
+				"TOTAL_GASTADO": "1.880",
+				"TOTAL_PRESUPUESTADO": "1.000",
+				"TOTAL_PORCENTAJE": 188,
+              	"LBL_MES": "JUN",
+				"MES_COMPLETO": "Junio",
+				"MODIFICADO": True,
+				"PRESUPUESTOS": [
+					{
+						"TITLE": "Vivienda",
+						"ICONO": "icon-house-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+
+					},
+					{
+						"TITLE": "Colegio",
+						"ICONO": "icon-book-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+					},
+					{
+						"TITLE": "Tarjeta",
+						"ICONO": "icon-card-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+					},
+					{
+						"TITLE": "Seguros",
+						"ICONO": "icon-umbrella-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+					},
+					{
+						"TITLE": "Cuota préstamo",
+						"ICONO": "icon-hand-white",
+						"PREVISTO": "200",
+						"GASTADO": "280",
+						"DIFERENCIA": 100,
+						"PORCENTAJE": 140
+					}
+				]
+          	},
+			{
+				"TOTAL_GASTADO": "1.500",
+				"TOTAL_PRESUPUESTADO": "1.000",
+				"TOTAL_PORCENTAJE": 150,
+              	"LBL_MES": "JUL",
+				"MES_COMPLETO": "Julio",
+				"MODIFICADO": False,
+				"PRESUPUESTOS": [
+					{
+						"TITLE": "Vivienda",
+						"ICONO": "icon-house-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+
+					},
+					{
+						"TITLE": "Colegio",
+						"ICONO": "icon-book-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+					},
+					{
+						"TITLE": "Tarjeta",
+						"ICONO": "icon-card-white",
+						"PREVISTO": "200",
+						"GASTADO": "400",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 200
+					},
+					{
+						"TITLE": "Seguros",
+						"ICONO": "icon-umbrella-white",
+						"PREVISTO": "200",
+						"GASTADO": "300",
+						"DIFERENCIA": 100,
+						"PORCENTAJE": 150
+					},
+					{
+						"TITLE": "Cuota préstamo",
+						"ICONO": "icon-hand-white",
+						"PREVISTO": "200",
+						"GASTADO": "0",
+						"DIFERENCIA": 0,
+						"PORCENTAJE": 0
+					}
+				]
+          	},
+			{
+				"TOTAL_GASTADO": "400",
+				"TOTAL_PRESUPUESTADO": "2.000",
+				"TOTAL_PORCENTAJE": 20,
+              	"LBL_MES": "AGO",
+				"MES_COMPLETO": "Agosto",
+				"MODIFICADO": False,
+				"PRESUPUESTOS": [
+					{
+						"TITLE": "Vivienda",
+						"ICONO": "icon-house-white",
+						"PREVISTO": "500",
 						"GASTADO": "100",
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 100
+						"PORCENTAJE": 20
+
+					},
+					{
+						"TITLE": "Colegio",
+						"ICONO": "icon-book-white",
+						"PREVISTO": "500",
+						"GASTADO": "100",
+						"DIFERENCIA": 0,
+						"PORCENTAJE": 20
 					},
 					{
 						"TITLE": "Tarjeta",
@@ -343,280 +598,25 @@ def get_index():
 					{
 						"TITLE": "Seguros",
 						"ICONO": "icon-umbrella-white",
-						"PREVISTO": "350",
+						"PREVISTO": "500",
 						"GASTADO": "100",
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 40
+						"PORCENTAJE": 20
 					},
 					{
 						"TITLE": "Cuota préstamo",
 						"ICONO": "icon-hand-white",
-						"PREVISTO": "60",
+						"PREVISTO": "500",
 						"GASTADO": "100",
-						"DIFERENCIA": 40,
-						"PORCENTAJE": 133
+						"DIFERENCIA": 0,
+						"PORCENTAJE": 20
 					}
 				]
           	},
 			{
-				"TOTAL_GASTADO": "3.360",
-				"TOTAL_PRESUPUESTADO": "1.760",
-				"TOTAL_PORCENTAJE": 195,
-              	"LBL_MES": "ABR",
-				"MES_COMPLETO": "Abril",
-				"MODIFICADO": False,
-				"PRESUPUESTOS": [
-					{
-						"TITLE": "Vivienda",
-						"ICONO": "icon-house-white",
-						"PREVISTO": "600",
-						"GASTADO": "500",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 87
-
-					},
-					{
-						"TITLE": "Colegio",
-						"ICONO": "icon-book-white",
-						"PREVISTO": "100",
-						"GASTADO": "10",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 10
-					},
-					{
-						"TITLE": "Tarjeta",
-						"ICONO": "icon-card-white",
-						"PREVISTO": "0",
-						"GASTADO": "100",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 0
-					},
-					{
-						"TITLE": "Seguros",
-						"ICONO": "icon-umbrella-white",
-						"PREVISTO": "50",
-						"GASTADO": "100",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 50
-					},
-					{
-						"TITLE": "Cuota préstamo",
-						"ICONO": "icon-hand-white",
-						"PREVISTO": "180",
-						"GASTADO": "100",
-						"DIFERENCIA": 80,
-						"PORCENTAJE": 180
-					}
-				]
-          	},
-			{
-				"TOTAL_GASTADO": "3.160",
-				"TOTAL_PRESUPUESTADO": "1.760",
-				"TOTAL_PORCENTAJE": 190,
-              	"LBL_MES": "MAY",
-				"MES_COMPLETO": "Mayo",
-				"MODIFICADO": False,
-				"PRESUPUESTOS": [
-					{
-						"TITLE": "Vivienda",
-						"ICONO": "icon-house-white",
-						"PREVISTO": "600",
-						"GASTADO": "550",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 90
-
-					},
-					{
-						"TITLE": "Colegio",
-						"ICONO": "icon-book-white",
-						"PREVISTO": "100",
-						"GASTADO": "10",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 10
-					},
-					{
-						"TITLE": "Tarjeta",
-						"ICONO": "icon-card-white",
-						"PREVISTO": "0",
-						"GASTADO": "100",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 0
-					},
-					{
-						"TITLE": "Seguros",
-						"ICONO": "icon-umbrella-white",
-						"PREVISTO": "50",
-						"GASTADO": "100",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 50
-					},
-					{
-						"TITLE": "Cuota préstamo",
-						"ICONO": "icon-hand-white",
-						"PREVISTO": "180",
-						"GASTADO": "100",
-						"DIFERENCIA": 80,
-						"PORCENTAJE": 180
-					}
-				]
-          	},
-			{
-				"TOTAL_GASTADO": "1.560",
-				"TOTAL_PRESUPUESTADO": "1.760",
-				"TOTAL_PORCENTAJE": 90,
-              	"LBL_MES": "JUN",
-				"MES_COMPLETO": "Junio",
-				"MODIFICADO": True,
-				"PRESUPUESTOS": [
-					{
-						"TITLE": "Vivienda",
-						"ICONO": "icon-house-white",
-						"PREVISTO": "600",
-						"GASTADO": "550",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 90
-
-					},
-					{
-						"TITLE": "Colegio",
-						"ICONO": "icon-book-white",
-						"PREVISTO": "10",
-						"GASTADO": "110",
-						"DIFERENCIA": 100,
-						"PORCENTAJE": 1100
-					},
-					{
-						"TITLE": "Tarjeta",
-						"ICONO": "icon-card-white",
-						"PREVISTO": "0",
-						"GASTADO": "300",
-						"DIFERENCIA": 300,
-						"PORCENTAJE": 300
-					},
-					{
-						"TITLE": "Seguros",
-						"ICONO": "icon-umbrella-white",
-						"PREVISTO": "50",
-						"GASTADO": "100",
-						"DIFERENCIA": 50,
-						"PORCENTAJE": 150
-					},
-					{
-						"TITLE": "Cuota préstamo",
-						"ICONO": "icon-hand-white",
-						"PREVISTO": "380",
-						"GASTADO": "100",
-						"DIFERENCIA": 280,
-						"PORCENTAJE": 280
-					}
-				]
-          	},
-			{
-				"TOTAL_GASTADO": "1.360",
-				"TOTAL_PRESUPUESTADO": "1.760",
-				"TOTAL_PORCENTAJE": 70,
-              	"LBL_MES": "JUL",
-				"MES_COMPLETO": "Julio",
-				"MODIFICADO": False,
-				"PRESUPUESTOS": [
-					{
-						"TITLE": "Vivienda",
-						"ICONO": "icon-house-white",
-						"PREVISTO": "600",
-						"GASTADO": "550",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 90
-
-					},
-					{
-						"TITLE": "Colegio",
-						"ICONO": "icon-book-white",
-						"PREVISTO": "100",
-						"GASTADO": "10",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 10
-					},
-					{
-						"TITLE": "Tarjeta",
-						"ICONO": "icon-card-white",
-						"PREVISTO": "0",
-						"GASTADO": "100",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 0
-					},
-					{
-						"TITLE": "Seguros",
-						"ICONO": "icon-umbrella-white",
-						"PREVISTO": "50",
-						"GASTADO": "100",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 50
-					},
-					{
-						"TITLE": "Cuota préstamo",
-						"ICONO": "icon-hand-white",
-						"PREVISTO": "180",
-						"GASTADO": "100",
-						"DIFERENCIA": 80,
-						"PORCENTAJE": 180
-					}
-				]
-          	},
-			{
-				"TOTAL_GASTADO": "460",
-				"TOTAL_PRESUPUESTADO": "1.260",
-				"TOTAL_PORCENTAJE": 30,
-              	"LBL_MES": "AGO",
-				"MES_COMPLETO": "Agosto",
-				"MODIFICADO": False,
-				"PRESUPUESTOS": [
-					{
-						"TITLE": "Vivienda",
-						"ICONO": "icon-house-white",
-						"PREVISTO": "600",
-						"GASTADO": "550",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 90
-
-					},
-					{
-						"TITLE": "Colegio",
-						"ICONO": "icon-book-white",
-						"PREVISTO": "100",
-						"GASTADO": "10",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 10
-					},
-					{
-						"TITLE": "Tarjeta",
-						"ICONO": "icon-card-white",
-						"PREVISTO": "0",
-						"GASTADO": "100",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 0
-					},
-					{
-						"TITLE": "Seguros",
-						"ICONO": "icon-umbrella-white",
-						"PREVISTO": "50",
-						"GASTADO": "100",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 50
-					},
-					{
-						"TITLE": "Cuota préstamo",
-						"ICONO": "icon-hand-white",
-						"PREVISTO": "180",
-						"GASTADO": "100",
-						"DIFERENCIA": 80,
-						"PORCENTAJE": 180
-					}
-				]
-          	},
-			{
-				"TOTAL_PRESUPUESTADO": "1.760",
-				"TOTAL_GASTADO": "1560",
-				"TOTAL_PORCENTAJE": 95,
+				"TOTAL_PRESUPUESTADO": "5.000",
+				"TOTAL_GASTADO": "2.500",
+				"TOTAL_PORCENTAJE": 50,
               	"LBL_MES": "SEP",
 				"MES_COMPLETO": "Septiembre",
 				"MODIFICADO": False,
@@ -624,43 +624,43 @@ def get_index():
 					{
 						"TITLE": "Vivienda",
 						"ICONO": "icon-house-white",
-						"PREVISTO": "600",
-						"GASTADO": "550",
+						"PREVISTO": "1.000",
+						"GASTADO": "500",
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 90
+						"PORCENTAJE": 50
 
 					},
 					{
 						"TITLE": "Colegio",
 						"ICONO": "icon-book-white",
-						"PREVISTO": "100",
-						"GASTADO": "10",
+						"PREVISTO": "1.000",
+						"GASTADO": "500",
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 10
+						"PORCENTAJE": 50
 					},
 					{
 						"TITLE": "Tarjeta",
 						"ICONO": "icon-card-white",
-						"PREVISTO": "0",
-						"GASTADO": "100",
+						"PREVISTO": "1.000",
+						"GASTADO": "500",
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 0
+						"PORCENTAJE": 50
 					},
 					{
 						"TITLE": "Seguros",
 						"ICONO": "icon-umbrella-white",
-						"PREVISTO": "50",
-						"GASTADO": "100",
+						"PREVISTO": "1.000",
+						"GASTADO": "500",
 						"DIFERENCIA": 0,
 						"PORCENTAJE": 50
 					},
 					{
 						"TITLE": "Cuota préstamo",
 						"ICONO": "icon-hand-white",
-						"PREVISTO": "180",
-						"GASTADO": "100",
-						"DIFERENCIA": 80,
-						"PORCENTAJE": 180
+						"PREVISTO": "1.000",
+						"GASTADO": "500",
+						"DIFERENCIA": 0,
+						"PORCENTAJE": 50
 					}
 				]
           	},
