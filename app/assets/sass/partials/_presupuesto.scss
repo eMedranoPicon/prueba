@@ -246,7 +246,16 @@
     .bar-text-container {
       display:inline-block;
       vertical-align: middle;
+      margin-top: 1px;
       margin-left: 10px;
+      &.right {
+        float: right;
+        margin-right: 10px;
+      }
+      &.left {
+        float: left;
+        margin-left: 10px;
+      }
       .warning {
         margin-right: 5px;
       }
