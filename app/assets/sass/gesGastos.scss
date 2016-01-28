@@ -1,3 +1,6 @@
-@import "variables/all";
 @import "modules/all";
-@import "partials/all";
+
+.content-presupuestos {
+  @import "variables/all";
+  @import "partials/all";
+}
