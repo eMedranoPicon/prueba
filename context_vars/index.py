@@ -12,8 +12,8 @@ def get_index():
 					{
 						"TITLE": "Vivienda",
 						"ICONO": "icon-house-white",
-						"PREVISTO": "500",
-						"GASTADO": "100",
+						"PREVISTO": 500,
+						"GASTADO": 100,
 						"DIFERENCIA": 0,
 						"PORCENTAJE": 20
 
@@ -724,51 +724,5 @@ def get_index():
           	},
       	],
 
-		"METAS": [
-			{
-				"TITLE": "Ordenador personal",
-				"ICONO": "icon-car-white",
-				"OBJETIVO": "1.850",
-				"PORCENTAJE": 55,
-				"CATEGORIA": "I",
-				"VISIBILIDAD": "PÚBLICA",
-				"FECHA": "OCT 2015"
-			},
-			{
-				"TITLE": "Regalo mamá",
-				"ICONO": "icon-car-white",
-				"OBJETIVO": "1.975",
-				"PORCENTAJE": 55,
-				"CATEGORIA": "I",
-				"VISIBILIDAD": "PÚBLICA",
-				"FECHA": "NOV 2015"
-			},
-			{
-				"TITLE": "Tablet para María",
-				"ICONO": "icon-car-white",
-				"OBJETIVO": "900",
-				"PORCENTAJE": 55,
-				"CATEGORIA": "I",
-				"VISIBILIDAD": "PÚBLICA",
-				"FECHA": "ENE 2016"
-			},
-			{
-				"TITLE": "Clases de Inglés",
-				"ICONO": "icon-car-white",
-				"OBJETIVO": "1.900",
-				"PORCENTAJE": 55,
-				"CATEGORIA": "J",
-				"VISIBILIDAD": "PÚBLICA",
-				"FECHA": "FEB 2016"
-			},
-			{
-				"TITLE": "Vacaciones de verano",
-				"ICONO": "icon-car-white",
-				"OBJETIVO": "2.000",
-				"PORCENTAJE": 55,
-				"CATEGORIA": "C",
-				"VISIBILIDAD": "PÚBLICA",
-				"FECHA": "MAR 2016"
-			},
-		]
+
 	}
