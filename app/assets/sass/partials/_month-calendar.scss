@@ -31,4 +31,13 @@
       }
     }
   }
+  .icon-container {
+    position: relative;
+    display: inline-block;
+  }
+  .number-inside-calendar {
+    position: absolute;
+    left: 11px;
+    top: 18px;
+  }
 }
