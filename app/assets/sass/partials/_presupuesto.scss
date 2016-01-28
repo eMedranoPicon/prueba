@@ -4,7 +4,7 @@
   background-color: $gray990;
   a:focus {
     outline-offset: 0;
-    outline: none;
+    outline: none!important;
   }
   .targets > div {
     padding-bottom: 20px;
@@ -73,7 +73,7 @@
     @include transition (border 0.2s);
     @include border-radius(3px);
     &.target-future {
-      height: 85px;
+      height: 90px;
       width: 276px;
       .info-general {
         border-bottom: none;
@@ -158,6 +158,10 @@
           border-top: none;
           border-right: none;
           display: none;
+          &:focus {
+            outline-offset: 0;
+            outline: none!important;
+          }
         }
         .euro-label {
           height: 32px;
