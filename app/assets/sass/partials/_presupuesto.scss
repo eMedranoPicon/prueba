@@ -73,7 +73,7 @@
     @include transition (border 0.2s);
     @include border-radius(3px);
     &.target-future {
-      height: 85px;
+      height: 87px;
       width: 276px;
       .info-general {
         border-bottom: none;
@@ -235,8 +235,16 @@
     .bar-text-container {
       display:inline-block;
       vertical-align: middle;
-      margin-top: 5px;
+      margin-top: 1px;
       margin-left: 10px;
+      &.right {
+        float: right;
+        margin-right: 10px;
+      }
+      &.left {
+        float: left;
+        margin-left: 10px;
+      }
       .warning {
         margin-right: 5px;
       }

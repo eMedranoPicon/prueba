@@ -50,7 +50,7 @@
           <div class="progress border-radius-less">
             <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ MES.TOTAL_PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ MES.TOTAL_PORCENTAJE }}%"></div>
             <span class="triangulo_izq"></span>
-            <div class="bar-text-container">
+            <div class="bar-text-container right">
               <span class="bar-spent">Gastado </span><span class="bar-money-spent">{{ MES.TOTAL_GASTADO }}€</span>
             </div>
           </div>
@@ -95,7 +95,7 @@
               <div class="target-presupuesto target-future flip-container">
                 <div class="flipper">
                   <div class="info-general front">
-                    <div class="container-icon"><div class="img-circle"><i class="icon-car-white"></i></div></div>
+                    <div class="container-icon"><div class="img-circle"><i class="{{ PRESUPUESTO.ICONO }}"></i></div></div>
                     <div class="info">
                       <h5>{{ PRESUPUESTO.TITLE }}</h5>
                       <div>
