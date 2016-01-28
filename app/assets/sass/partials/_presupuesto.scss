@@ -241,7 +241,7 @@
     }
   }
   .progress-bar-content {
-    height: 75px;
+    height: 60px;
     @include progress-bar(24px, $colorPresSecond, $colorPresPrimary);
     .bar-text-container {
       display:inline-block;
