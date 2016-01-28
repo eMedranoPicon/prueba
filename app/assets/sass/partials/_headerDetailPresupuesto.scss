@@ -1,6 +1,6 @@
 .detail-header {
   padding: 20px;
-//  background-color:
+  background-color: $colorDetPrimary;
 
   .info-present {
     width: 100%;
@@ -26,5 +26,10 @@
     .modify {
 
     }
+  }
+  .bar-container {
+    float: left;
+    width: 100%;
+    @include progress-bar(24px, $colorDetSecond, $colorDetTer);
   }
 }
