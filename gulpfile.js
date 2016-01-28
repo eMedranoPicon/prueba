@@ -18,7 +18,6 @@ var autoprefixer = require('gulp-autoprefixer'),
   runSequence = require('run-sequence'),
   sass = require('gulp-sass'),
   sassdoc = require('sassdoc'),
-  scsslint = require('gulp-scss-lint'),
   shell = require('gulp-shell'),
   connect = require('gulp-connect'),
   uglify = require('gulp-uglify');
@@ -98,14 +97,6 @@ gulp.task('sass-min', function() {
 }).help = 'Compiles, minifies and autoprefixes sass source files.';
 
 
-gulp.task('sass-lint', function() {
-  gulp.src(src_sass_files)
-    .pipe(scsslint({
-      config: path.join(config_dir, 'scss-lint.yml')
-    }));
-}).help = 'Analyzes css code quality with scsslint.';
-
-
 gulp.task('vendor-scripts', function() {
   gulp.src(vendor_source_maps)
     .pipe(gulp.dest(dist_js_dir));
@@ -117,14 +108,14 @@ gulp.task('vendor-scripts', function() {
 
 gulp.task('scripts', function() {
   return gulp.src(src_js_files)
-    .pipe(concat('app.js'))
+    .pipe(concat('gesGastos.js'))
     .pipe(gulp.dest(dist_js_dir));
 }).help = 'Concatenates all js files.';
 
 
 gulp.task('scripts-min', function() {
   return gulp.src(src_js_files)
-    .pipe(concat('app.js'))
+    .pipe(concat('gesGastos.js'))
     .pipe(uglify())
     .pipe(gulp.dest(dist_js_dir));
 }).help = 'Concatenates and minifies all js files.';
@@ -132,7 +123,7 @@ gulp.task('scripts-min', function() {
 
 gulp.task('watch', function() {
   gulp.watch(src_js_files, ['jshint', 'scripts']);
-  gulp.watch(src_sass_files, ['sass-lint', 'sass']);
+  gulp.watch(src_sass_files, ['sass']);
   gulp.watch(src_html_files, ['jinja']);
 }).help = 'Keeps watching for changes in sass (trigger jshint and scripts) and javascript (trigger sass).';
 
@@ -206,7 +197,7 @@ gulp.task('connect', function() {
 
 gulp.task('default', function() {
   runSequence(
-    ['old_browsers', 'fonts', 'images', 'sass-lint', 'jshint', 'sass', 'vendor-scripts', 'scripts', 'jinja'],
+    ['old_browsers', 'fonts', 'images', 'jshint', 'sass', 'vendor-scripts', 'scripts', 'jinja'],
     ['watch', 'connect'], // by default test are excluded of default task but it could be included with 'test' task
     function() {
       gulp.src('').pipe(notify({
@@ -221,7 +212,7 @@ gulp.task('default', function() {
 gulp.task('dist', function() {
   runSequence(
     'clean',
-    ['old_browsers', 'jshint-dist', 'sass-lint', 'sass-min', 'vendor-scripts', 'scripts-min', 'jinja'],
+    ['old_browsers', 'jshint-dist', 'sass-min', 'vendor-scripts', 'scripts-min', 'jinja'],
     function() {
       gulp.src('').pipe(notify({
         title: 'Dist',

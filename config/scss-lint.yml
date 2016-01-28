@@ -66,7 +66,7 @@ linters:
     filename_extension: false
 
   Indentation:
-    enabled: true
+    enabled: false
     allow_non_nested_indentation: true
     character: space # or 'tab'
     width: 4
@@ -145,17 +145,17 @@ linters:
     enabled: true
 
   SpaceAfterComma:
-    enabled: true
+    enabled: false
 
   SpaceAfterPropertyColon:
-    enabled: true
+    enabled: false
     style: at_least_one_space # 'one_space' or 'no_space', or 'at_least_one_space', or 'aligned'
 
   SpaceAfterPropertyName:
     enabled: true
 
   SpaceBeforeBrace:
-    enabled: true
+    enabled: false
     style: space
     allow_single_line_padding: true
 
@@ -200,4 +200,3 @@ linters:
 
   Compass::*:
     enabled: false
-
