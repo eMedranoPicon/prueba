@@ -31,7 +31,7 @@ $(document).ready(function () {
   );
 
   // TRAS MODIFICAR LOS DATOS DE UN PRESUPUESTO FUTURO
-  $('.icon-check-circle').on('click', function() {
+  $('.icon-check-circle').on('click', function(event) {
     $(this).closest('.flip-container').removeClass('hover').find('.icon-edit').removeClass('icon-edit').addClass('icon-return-circle');
     event.stopPropagation();
   });

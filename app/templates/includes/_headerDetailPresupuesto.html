@@ -1,1 +1,55 @@
-Hola
+<section class="container detail-header">
+  {% set MES = CALENDARIO[0] %}
+  {% set PRESUPUESTO = MES.PRESUPUESTOS[0] %}
+  <div class="info-present">
+    <i class="{{ PRESUPUESTO.ICONO }}"></i>
+    <div class="resume-text">
+      <span class="type">{{ PRESUPUESTO.TITLE }}</span>
+      <span class="month">{{ MES.MES_COMPLETO }}</span>
+    </div>
+    <span class="price">{{ PRESUPUESTO.PREVISTO }}</span>
+    <span class="coin">€</span>
+    <div class="modify"><i data-id="1" class="icon-edit"></i></div>
+  </div>
+  <div class="bar-container">
+    {% if PRESUPUESTO.PORCENTAJE <= 100 %}
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="{{ PRESUPUESTO.PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ PRESUPUESTO.PORCENTAJE }}%"></div>
+        {% if PRESUPUESTO.PORCENTAJE > 0 %}
+          <span class="triangulo_izq"></span>
+        {% endif %}
+      </div>
+    {% else %}
+      {% if (PRESUPUESTO.PORCENTAJE - 200) >= 0 %}
+        {% set value = 0 %}
+        {% set width = 100 %}
+      {% else %}
+        {% set value = (200 - PRESUPUESTO.PORCENTAJE) %}
+        {% set width = (PRESUPUESTO.PORCENTAJE - 100) %}
+      {% endif %}
+      <div class="progress over-loaded">
+        <div class="progress-bar" role="progressbar" aria-valuenow="{{ value }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ value }}%"></div>
+      </div>
+      <div class="line-container">
+        <div class="dotted-line" style="width: {{ width }}%"></div>
+      </div>
+      <div class="bar-text-container">
+        <div class="value"><strong>{{ PRESUPUESTO.DIFERENCIA }}<span class="decimal">,00</span>€</strong></div>
+      </div>
+    {% endif %}
+  </div>
+  <div class="bottom-content">
+    <div class="info-future">
+      <div class="resume-text">
+        <span class="prevision"></span>
+        <span class="month"></span>
+      </div>
+      <span class="price"></span>
+      <span class="coin"></span>
+      <div class="modify"><i data-id="2" class="icon-edit"></i></div>
+    </div>
+    <div class="plan-container">
+      <button class="button-plan">PLANIFICAR INGRESO</button>
+    </div>
+  </div>
+</section>
