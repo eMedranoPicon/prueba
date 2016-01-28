@@ -343,6 +343,9 @@
     border-bottom-color: transparent;
     border-top-color: transparent;
     border-right-color: $colorBar;
+    &.full {
+      float: left;
+    }
   }
   .triangulo_izq-overload {
     @extend .triangulo_izq;
