@@ -5,22 +5,25 @@
     padding-top: 66px;
     padding-bottom: 50px;
   }
+  .modify > i {
+    cursor: pointer;
+    height: 20px;
+  }
   .info-present {
     width: 100%;
     height: 42px;
     display: table;
     margin-bottom: 20px;
     * {
-      display: table-cell;;
+      display: table-cell;
     }
     .icon-container {
-      display: table-cell;
       width: 58px;
     }
     .resume-text {
       width: 10px;
       line-height: 21px;
-      & > * {
+      & > span {
         width: 100%;
         text-transform: uppercase;
         font-size: 18px;
@@ -56,10 +59,6 @@
       height: 10px;
       padding-left: 16px;
       padding-bottom: 3px;
-      i {
-        cursor: pointer;
-        height: 20px;
-      }
     }
   }
   .bar-container {
@@ -104,39 +103,60 @@
   .bottom-content {
     float: left;
     width: 100%;
-    * {
-      display: inline-block;
-      float: left;
-    }
+    margin-top: 50px;
     .info-future {
       display: table;
       color: $colorDetPenta;
+      float: left;
+      margin-top: 7px;
       & > div {
         display: table-cell;
       }
       .resume-text {
-        .prevision {
+        float: left;
+        line-height: 14px;
+        padding-top: 2px;
+        & > span {
           float: left;
+          clear: both;
+          text-transform: uppercase;
+          font-size: 13px;
+          margin-left: 2px;
         }
         .month {
-          text-transform: uppercase;
           color: $colorDetCuater;
-          clear: both;
+          margin-left: 3px;
         }
       }
       .money {
+        float: left;
         .price {
-          font-size: 20px;
+          font-size: 34px;
+          margin-left: 6px;
+          line-height: 35px;
         }
         .coin {
-          font-size: 18px;
+          font-size: 14px;
         }
       }
-
-
+      .modify {
+        vertical-align: bottom;
+        padding-bottom: 5px;
+        padding-left: 12px;
+      }
     }
     .plan-container {
       float: right;
+      .btn-plan-container {
+        background-color: transparent;
+        border-radius: 0;
+        color: $colorDetCuater;
+        border: 1px solid $colorDetCuater;
+        height: 42px;
+        width: 250px;
+        font-size: 14px;
+        @include border-radius(20px);
+      }
     }
   }
 
