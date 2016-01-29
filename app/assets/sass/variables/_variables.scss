@@ -7,9 +7,15 @@ $green500         : #70a41c;
 $purple500        : #8f99e3;
 
 $blueSky          : #1cb0d3;
+$blue800          : #24313C;
+$blue500          : #4e5961;
+
+$red500           : #c90d3a;
 
 $orange800		    : #924a00;
 $orange500        : #cb7a10;
+$orange450        : #d78100;
+$orange400        : #F79D25;
 $orange300        : #e5c59b;
 
 $gray990          : #f7f7f7;
@@ -20,6 +26,7 @@ $grey830          : #dfe1e3;
 $gray820          : #dadddf;
 $grey800          : #d7d7d7;
 $grey700          : #c6cace;
+$grey650          : #b7bdc2;
 $gray600          : #b5b9be;
 $grey500          : #aeb5bc;
 $grey300          : #556270;
@@ -36,3 +43,10 @@ $colorMetaPrimary : $green500;
 $colorPresPrimary : $orange500;
 $colorPresSecond  : $orange300;
 $colorPresTer	    : $orange800;
+
+//Detalles de presupuestos
+$colorDetPrimary  : $blue800;
+$colorDetSecond   : $orange400;
+$colorDetTer      : $orange450;
+$colorDetCuater   : $white;
+$colorDetPenta    : $blue500;

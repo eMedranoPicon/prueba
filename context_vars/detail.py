@@ -12,8 +12,10 @@ def get_detail():
 					{
 						"TITLE": "Vivienda",
 						"ICONO": "icon-house-white",
-						"PREVISTO": "500",
-						"GASTADO": "100",
+						"PREVISTO": 500,
+						"PREVISTO_DECIMAL": 55,
+						"GASTADO": 100,
+						"GASTADO_DECIMAL": 55,
 						"DIFERENCIA": 0,
 						"PORCENTAJE": 20
 

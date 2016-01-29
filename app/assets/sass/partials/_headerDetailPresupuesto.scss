@@ -1,30 +1,163 @@
 .detail-header {
-  padding: 20px;
-//  background-color:
-
+  background-color: $colorDetPrimary;
+  font-family: $fontBold;
+  .section-header {
+    padding-top: 66px;
+    padding-bottom: 50px;
+  }
+  .modify > i {
+    cursor: pointer;
+    height: 20px;
+  }
   .info-present {
     width: 100%;
-    float: left;
+    height: 42px;
+    display: table;
+    margin-bottom: 20px;
     * {
-      display: inline-block;
-      float: left;
+      display: table-cell;
     }
-    i {
-
+    .icon-container {
+      width: 58px;
     }
     .resume-text {
+      width: 10px;
+      line-height: 21px;
+      & > span {
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 18px;
+      }
       .type {
+        color: $colorDetSecond;
+        float: left;
       }
       .month {
+        color: $colorDetCuater;
       }
     }
-    .price {
-    }
-    .coin {
-
+    .money {
+      width: 10px;
+      padding-left: 5px;
+      .price {
+        color: #FFF;
+        font-size: 50px;
+        line-height: 37px;
+      }
+      .coin {
+        color: #FFF;
+        vertical-align: bottom;
+        height: 100%;
+        line-height: 16px;
+        padding-bottom: 2px;
+        font-size: 20px;
+      }
     }
     .modify {
-
+      vertical-align: bottom;;
+      text-align: right;
+      height: 10px;
+      padding-left: 16px;
+      padding-bottom: 3px;
     }
   }
+  .bar-container {
+    float: left;
+    width: 100%;
+    @include progress-bar(42px, $colorDetSecond, $colorDetTer);
+    .text-container {
+      margin-top: 9px;
+      font-family: $fontBold;
+      font-size: 20px;
+      padding-left: 5px;
+      padding-right: 5px;
+      .text-content {
+        float: left;
+      }
+      .spent {
+        float: right;
+        color: $colorDetSecond;
+        .secondary {
+          color: $colorDetCuater;
+        }
+      }
+      .expected {
+        float: left;
+        color: $colorDetCuater;
+        .secondary {
+          color: $colorDetSecond;
+        }
+      }
+      .number {
+        font-size: 20px;
+      }
+      .decimal {
+        font-size: 14px;
+      }
+      .coin {
+        font-size: 14px;
+        margin-left: 2px;
+      }
+    }
+  }
+  .bottom-content {
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+    .info-future {
+      display: table;
+      color: $colorDetPenta;
+      float: left;
+      margin-top: 7px;
+      & > div {
+        display: table-cell;
+      }
+      .resume-text {
+        float: left;
+        line-height: 14px;
+        padding-top: 2px;
+        & > span {
+          float: left;
+          clear: both;
+          text-transform: uppercase;
+          font-size: 13px;
+          margin-left: 2px;
+        }
+        .month {
+          color: $colorDetCuater;
+          margin-left: 3px;
+        }
+      }
+      .money {
+        float: left;
+        .price {
+          font-size: 34px;
+          margin-left: 6px;
+          line-height: 35px;
+        }
+        .coin {
+          font-size: 14px;
+        }
+      }
+      .modify {
+        vertical-align: bottom;
+        padding-bottom: 5px;
+        padding-left: 12px;
+      }
+    }
+    .plan-container {
+      float: right;
+      .btn-plan-container {
+        background-color: transparent;
+        border-radius: 0;
+        color: $colorDetCuater;
+        border: 1px solid $colorDetCuater;
+        height: 42px;
+        width: 250px;
+        font-size: 14px;
+        @include border-radius(20px);
+      }
+    }
+  }
+
 }

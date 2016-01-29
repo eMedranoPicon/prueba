@@ -35,10 +35,13 @@
   .icon-container {
     position: relative;
     display: inline-block;
+    height: 35px;
+    margin-top: 30px;
   }
   .number-inside-calendar {
     position: absolute;
     left: 11px;
-    top: 18px;
+    top: 2px;
+    font-size: 28px;
   }
 }
