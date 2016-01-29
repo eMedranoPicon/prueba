@@ -1,5 +1,6 @@
 .detail-header {
   background-color: $colorDetPrimary;
+  font-family: $fontBold;
   .section-header {
     padding-top: 66px;
     padding-bottom: 50px;
@@ -11,7 +12,6 @@
     margin-bottom: 20px;
     * {
       display: table-cell;;
-      font-family: $fontBold;
     }
     .icon-container {
       display: table-cell;
@@ -30,7 +30,7 @@
         float: left;
       }
       .month {
-        color: $white;
+        color: $colorDetCuater;
       }
     }
     .money {
@@ -69,22 +69,28 @@
     .text-container {
       margin-top: 9px;
       font-family: $fontBold;
+      font-size: 20px;
+      padding-left: 5px;
+      padding-right: 5px;
+      .text-content {
+        float: left;
+      }
       .spent {
         float: right;
         color: $colorDetSecond;
         .secondary {
-          color: $white;
+          color: $colorDetCuater;
         }
       }
       .expected {
         float: left;
-        color: $white;
+        color: $colorDetCuater;
         .secondary {
           color: $colorDetSecond;
         }
       }
       .number {
-        font-size: 19px;
+        font-size: 20px;
       }
       .decimal {
         font-size: 14px;
@@ -95,8 +101,6 @@
       }
     }
   }
-
-
   .bottom-content {
     float: left;
     width: 100%;
@@ -105,6 +109,30 @@
       float: left;
     }
     .info-future {
+      display: table;
+      color: $colorDetPenta;
+      & > div {
+        display: table-cell;
+      }
+      .resume-text {
+        .prevision {
+          float: left;
+        }
+        .month {
+          text-transform: uppercase;
+          color: $colorDetCuater;
+          clear: both;
+        }
+      }
+      .money {
+        .price {
+          font-size: 20px;
+        }
+        .coin {
+          font-size: 18px;
+        }
+      }
+
 
     }
     .plan-container {
