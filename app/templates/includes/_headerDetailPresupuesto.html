@@ -16,7 +16,26 @@
         <span class="price">{{ PRESUPUESTO.PREVISTO }}</span>
         <span class="coin">€</span>
       </div>
-      <div class="modify"><i data-id="1" class="icon-edit"></i></div>
+      <div class="modify"><i data-id="1" class="edit-present icon-edit"></i></div>
+    </div>
+    <div class="edit-present-container slideup">
+      <div class="triangle-container">
+        <div class="triangle"></div>
+      </div>
+      <div class="box-container">
+        <div class="text-container">
+          <span class="text">Ajuste manual para este mes</span>
+        </div>
+        <div class="edit-text-container">
+          <input type="text" class="edit-text" value="{{ PRESUPUESTO.PREVISTO }}"></input>
+        </div>
+        <div class="coin-container">
+          <span class="text">€</span>
+        </div>
+        <div class="icon-container">
+            <i class="icon-check-circle"></i>
+        </div>
+      </div>
     </div>
     <div class="bar-container">
       {% if PRESUPUESTO.PORCENTAJE <= 100 %}

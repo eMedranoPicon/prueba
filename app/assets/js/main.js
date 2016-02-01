@@ -32,14 +32,14 @@ $(document).ready(function () {
 
   // TRAS MODIFICAR LOS DATOS DE UN PRESUPUESTO FUTURO
   $('.icon-check-circle').on('click', function(event) {
-    $(this).closest('.flip-container').removeClass('hover').find('.icon-edit').removeClass('icon-edit').addClass('icon-return-circle');
+    $(this).closest('.flip-container').removeClass('hover').find('.icon-edit').removeClass('icon-edit').addClass('icon-return-circle').addClass('edit-return');
     event.stopPropagation();
   });
 
   // RESTAURAR EL VALOR POR DEFECTO
-  $(document).on('click', 'i.icon-return-circle', function(event) {
+  $(document).on('click', 'i.edit-return', function(event) {
     var id = $(this).data('id');
-    $(this).addClass('icon-edit').removeClass('icon-return-circle');
+    $(this).addClass('icon-edit').removeClass('icon-return-circle').removeClass('edit-return');
     var value = $('#init-value' + id).val().split(',');
     $('#label-input' + id).show();
     $('.value'+id).html(value[0]);
@@ -83,5 +83,14 @@ $(document).ready(function () {
       $('#init-value' + $(this).data('id')).val(value);
   });
 
+  // SLIDE UP/DOWN EDIT PRESENT PREVISION
+  $(".edit-present")
+    .on('click', function() {
+      if ($(".edit-present-container").hasClass("slideup")) {
+        $(".edit-present-container").removeClass("slideup").addClass("slidedown");
+      } else {
+        $(".edit-present-container").removeClass("slidedown").addClass("slideup");
+      }
+    });
 
 });

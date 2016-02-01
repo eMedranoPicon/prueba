@@ -355,3 +355,22 @@
     border-right-color: $colorOverLoaded;
   }
 }
+
+@mixin triangle($top, $bottom, $left, $right, $color) {
+  border-bottom: $bottom solid transparent;
+  border-top: $top solid transparent;
+  border-right: $right solid transparent;
+  border-left: $left solid transparent;
+  @if $top == 0px {
+    border-bottom-color: $color;
+  }
+  @elseif $bottom == 0px {
+    border-top-color: $color;
+  }
+  @elseif $left == 0px {
+    border-right-color: $color;
+  }
+  @else {
+    border-left-color: $color;
+  }
+}
