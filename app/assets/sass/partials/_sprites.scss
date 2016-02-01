@@ -30,9 +30,20 @@
 		background: transparent url("../images/sprite.png") no-repeat scroll -97px -174px;
 	}
 }
+.icon-edit-white {
+	background: transparent url("../images/sprite.png") no-repeat scroll -352px -3px;
+  padding: 2px 12px;
+	&.icon-hover {
+		background: transparent url("../images/sprite.png") no-repeat scroll -97px -174px;
+	}
+}
 .icon-house-white {
 	background: transparent url("../images/sprite.png") no-repeat scroll -132px -139px;
 	padding: 15px 17px;
+}
+.icon-house-white-big {
+	background: transparent url("../images/sprite.png") no-repeat scroll -299px -4px;
+	padding: 17px 22px;
 }
 .icon-umbrella-white {
 	background: transparent url("../images/sprite.png") no-repeat scroll -135px -75px;
@@ -58,6 +69,12 @@
 		background: transparent url("../images/sprite.png") no-repeat scroll -169px -3px;
 	}
 }
+
+.icon-check-circle-orange {
+	background: transparent url("../images/sprite.png") no-repeat scroll -236px -163px;
+  padding: 7px 16px;
+}
+
 .icon-return-circle {
 	background: transparent url("../images/sprite.png") no-repeat scroll -135px -35px;
 	padding: 8px 16px;
@@ -92,4 +109,9 @@
 .icon-calendar-gray {
 	background: transparent url("../images/sprite.png") no-repeat scroll -235px -100px;
 	padding: 21px 28px;
+}
+
+.icon-arrow-down-white {
+	background: transparent url("../images/sprite.png") no-repeat scroll -383px -5px;
+	padding: 4px 6px;
 }

@@ -22,7 +22,7 @@ $(document).ready(function () {
     );
 
   // HOVER EN LOS ICONOS DE LOS PRESUPUESTOS FUTUROS
-  $(".icon-edit, .icon-check-circle") .hover(
+  $(".icon-edit, .check-future, .icon-edit-white") .hover(
     function() {
       $(this).addClass('icon-hover');
     }, function() {
@@ -31,15 +31,15 @@ $(document).ready(function () {
   );
 
   // TRAS MODIFICAR LOS DATOS DE UN PRESUPUESTO FUTURO
-  $('.icon-check-circle').on('click', function(event) {
-    $(this).closest('.flip-container').removeClass('hover').find('.icon-edit').removeClass('icon-edit').addClass('icon-return-circle').addClass('edit-return');
+  $('.check-future').on('click', function(event) {
+    $(this).closest('.flip-container').removeClass('hover').find('.icon-edit').removeClass('icon-edit').addClass('icon-return-circle edit-return');
     event.stopPropagation();
   });
 
   // RESTAURAR EL VALOR POR DEFECTO
   $(document).on('click', 'i.edit-return', function(event) {
     var id = $(this).data('id');
-    $(this).addClass('icon-edit').removeClass('icon-return-circle').removeClass('edit-return');
+    $(this).addClass('icon-edit').removeClass('icon-return-circle edit-return');
     var value = $('#init-value' + id).val().split(',');
     $('#label-input' + id).show();
     $('.value'+id).html(value[0]);
@@ -80,7 +80,7 @@ $(document).ready(function () {
     .one('focus', function() {
       var $labelInput = $('#label-input' + $(this).data('id'));
       var value = $labelInput.find('.value').text() + ',' + $labelInput.find('.decimal').text();
-      $('#init-value' + $(this).data('id')).val(value);
+      $('#init-value' + $(this).data('id')).html(value);
   });
 
   // SLIDE UP/DOWN EDIT PRESENT PREVISION
@@ -92,5 +92,22 @@ $(document).ready(function () {
         $(".edit-present-container").removeClass("slidedown").addClass("slideup");
       }
     });
+
+  $(".check-edit")
+    .on("click", function() {
+      var value = $(".edit-present-container").find(".edit-text").val().split(',');
+      $(".info-present").find(".price").html( value[0]+"," );
+      $(".info-present").find(".decimal").html( value[1] );
+      $(".bar-text-container.expected").find(".number").html( value[0] );
+      $(".bar-text-container.expected").find(".decimal").html( value[1] );
+      $(".edit-present-container").removeClass("slidedown").addClass("slideup");
+    })
+    .hover (
+      function() {
+        $(this).removeClass('icon-check-circle').addClass('icon-check-circle-orange');
+      }, function() {
+        $(this).addClass('icon-check-circle').removeClass('icon-check-circle-orange');
+      }
+    );
 
 });

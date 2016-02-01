@@ -11,7 +11,7 @@ def get_detail():
 				"PRESUPUESTOS": [
 					{
 						"TITLE": "Vivienda",
-						"ICONO": "icon-house-white",
+						"ICONO": "icon-house-white-big",
 						"PREVISTO": 500,
 						"PREVISTO_DECIMAL": 55,
 						"GASTADO": 100,

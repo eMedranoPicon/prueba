@@ -13,10 +13,11 @@
         <span class="month">{{ MES.MES_COMPLETO }}</span>
       </div>
       <div class="money">
-        <span class="price">{{ PRESUPUESTO.PREVISTO }}</span>
+        <span class="price">{{ PRESUPUESTO.PREVISTO }},</span>
+        <span class="decimal">{{ PRESUPUESTO.PREVISTO_DECIMAL }}</span>
         <span class="coin">€</span>
       </div>
-      <div class="modify"><i data-id="1" class="edit-present icon-edit"></i></div>
+      <div class="modify"><i data-id="1" class="edit-present icon-edit-white"></i></div>
     </div>
     <div class="edit-present-container slideup">
       <div class="triangle-container">
@@ -27,13 +28,13 @@
           <span class="text">Ajuste manual para este mes</span>
         </div>
         <div class="edit-text-container">
-          <input type="text" class="edit-text" value="{{ PRESUPUESTO.PREVISTO }}"></input>
+          <input type="text" class="edit-text" value="{{ PRESUPUESTO.PREVISTO }},{{PRESUPUESTO.PREVISTO_DECIMAL}}"></input>
         </div>
         <div class="coin-container">
           <span class="text">€</span>
         </div>
         <div class="icon-container">
-            <i class="icon-check-circle"></i>
+            <i class="icon-check-circle check-edit"></i>
         </div>
       </div>
     </div>
@@ -101,10 +102,15 @@
           <span class="price">{{ PRESUPUESTO_SIG.PREVISTO }}</span>
           <span class="coin">€</span>
         </div>
-        <div class="modify"><i data-id="2" class="icon-edit"></i></div>
+        <div class="modify"><i data-id="2" class="icon-edit-white"></i></div>
       </div>
       <div class="plan-container">
-        <button class="btn btn-plan-container">PLANIFICAR INGRESO</button>
+        <button class="btn btn-plan-container">
+          <div class="icon-container">
+            <i class="icon-arrow-down-white"></i>
+          </div>
+          PLANIFICAR INGRESO
+        </button>
       </div>
     </div>
   </section>

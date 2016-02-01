@@ -361,13 +361,13 @@
   border-top: $top solid transparent;
   border-right: $right solid transparent;
   border-left: $left solid transparent;
-  @if $top == 0px {
+  @if $top == 0 {
     border-bottom-color: $color;
   }
-  @elseif $bottom == 0px {
+  @elseif $bottom == 0 {
     border-top-color: $color;
   }
-  @elseif $left == 0px {
+  @elseif $left == 0 {
     border-right-color: $color;
   }
   @else {
