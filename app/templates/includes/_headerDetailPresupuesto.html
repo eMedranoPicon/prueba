@@ -19,16 +19,17 @@
       </div>
       <div class="modify"><i data-id="1" class="edit-present icon-edit-white"></i></div>
     </div>
+
     <div class="edit-present-container slideup">
       <div class="triangle-container">
         <div class="triangle"></div>
       </div>
-      <div class="box-container">
+      <div class="box-container-edit">
         <div class="text-container">
           <span class="text">Ajuste manual para este mes</span>
         </div>
         <div class="edit-text-container">
-          <input type="text" class="edit-text" value="{{ PRESUPUESTO.PREVISTO }},{{PRESUPUESTO.PREVISTO_DECIMAL}}"></input>
+          <input type="text" class="edit-text" value="{{ PRESUPUESTO.PREVISTO }},{{PRESUPUESTO.PREVISTO_DECIMAL}}" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true"></input>
         </div>
         <div class="coin-container">
           <span class="text">€</span>
@@ -37,7 +38,22 @@
             <i class="icon-check-circle check-edit"></i>
         </div>
       </div>
+      <div class="box-container-return large hidden">
+        <div class="text-container large">
+          <span>¿Quieres volver a la previsión automática de </span>
+        </div>
+        <div class="return-text-container">
+          <span class="return-text">{{ PRESUPUESTO.PREVISTO }},{{ PRESUPUESTO.PREVISTO_DECIMAL }}</span>
+        </div>
+        <div class="coin-container">
+          <span class="coin">€</span>
+        </div>
+        <div class="icon-container">
+            <i class="icon-check-circle check-return"></i>
+        </div>
+      </div>
     </div>
+
     <div class="bar-container">
       {% if PRESUPUESTO.PORCENTAJE <= 100 %}
         {% if PRESUPUESTO.PORCENTAJE == 100 %}

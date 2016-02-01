@@ -93,14 +93,51 @@ $(document).ready(function () {
       }
     });
 
+  // SLIDE UP/DOWN RETURN PRESENT PREVISION
+  $(".edit-present.icon-return-circle")
+    .on('click', function() {
+      if ($(".return-present-container").hasClass("slideup")) {
+        $(".return-present-container").removeClass("slideup").addClass("slidedown");
+      } else {
+        $(".return-present-container").removeClass("slidedown").addClass("slideup");
+      }
+    });
+
+  //TRATAMIENTO DEL INPUT DE AJUSTE MANUAL
   $(".check-edit")
     .on("click", function() {
       var value = $(".edit-present-container").find(".edit-text").val().split(',');
-      $(".info-present").find(".price").html( value[0]+"," );
-      $(".info-present").find(".decimal").html( value[1] );
+      var infoPresent = $(".info-present");
+      infoPresent.find(".price").html( value[0]+"," );
+      infoPresent.find(".decimal").html( value[1] );
+      infoPresent.find(".edit-present").removeClass("icon-edit-white").addClass("icon-return-circle");
       $(".bar-text-container.expected").find(".number").html( value[0] );
       $(".bar-text-container.expected").find(".decimal").html( value[1] );
       $(".edit-present-container").removeClass("slidedown").addClass("slideup");
+      $(".box-container-edit").addClass("hidden");
+      $(".box-container-return").removeClass("hidden");
+    })
+    .hover (
+      function() {
+        $(this).removeClass('icon-check-circle').addClass('icon-check-circle-orange');
+      }, function() {
+        $(this).addClass('icon-check-circle').removeClass('icon-check-circle-orange');
+      }
+    );
+
+  //TRATAMIENTO DEL RETURN DE AJUSTE MANUAL
+  $(".check-return")
+    .on("click", function() {
+      var value = $(".return-text-container").find(".return-text").html().split(',');
+      var infoPresent = $(".info-present");
+      infoPresent.find(".price").html( value[0]+"," );
+      infoPresent.find(".decimal").html( value[1] );
+      infoPresent.find(".edit-present").removeClass("icon-return-circle").addClass("icon-edit-white");
+      $(".bar-text-container.expected").find(".number").html( value[0] );
+      $(".bar-text-container.expected").find(".decimal").html( value[1] );
+      $(".edit-present-container").removeClass("slidedown").addClass("slideup");
+      $(".box-container-edit").removeClass("hidden");
+      $(".box-container-return").addClass("hidden");
     })
     .hover (
       function() {
