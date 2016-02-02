@@ -4,13 +4,8 @@
     {% set MES_SIG = CALENDARIO[1] %}
     {% set PRESUPUESTO = MES.PRESUPUESTOS[pres] %}
     {% set PRESUPUESTO_SIG = MES_SIG.PRESUPUESTOS[pres] %}
-    {% set TIP = PRESUPUESTO.TIP %}
-    {% if TIP %}
-      {% set PORC = 40 %}
-    {% else %}
-      {% set PORC = 15 %}
-    {% endif %}
-    <div class="info-container {% if TIP %} short {% endif %}">
+    {% set PORC = 15 %}
+    <div class="info-container">
 
       <div class="info-present">
         <div class="icon-container">
@@ -216,7 +211,7 @@
         </div>
       </div>
     </div>
-    <div class="tip-container {% if not TIP %} hidden {% endif %}">
+    <!-- <div class="tip-container {% if not TIP %} hidden {% endif %}">
       <div class="text-container">
         <div class="title-container">
           <span class="title"><span class="title-bold">CONSEJO</span> DE AHORRO</span>
@@ -230,6 +225,6 @@
       <div class="button-container">
         <button class="btn">CONTRATAR</button>
       </div>
-    </div>
+    </div>-->
   </section>
 </div>

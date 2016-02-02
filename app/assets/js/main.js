@@ -168,6 +168,7 @@ $(document).ready(function () {
     if (!$(this).closest('.flip-container').hasClass("hover")) {
       $(this).closest('.flip-container').addClass("hover");
       var $labelInput = $(this).closest('.flip-container').find(".label-input");
+      $('.detail-header .input-future').show().focus();
       $labelInput.on('click', function() {
         $('.detail-header .input-future').show().focus();
       });
