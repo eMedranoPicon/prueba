@@ -2,7 +2,7 @@
   background-color: $colorDetPrimary;
   font-family: $fontBold;
   .section-header {
-    padding-top: 66px;
+    padding-top: 26px;
     padding-bottom: 50px;
   }
   .modify > i {
@@ -16,7 +16,7 @@
     width: 100%;
     height: 20px;
     display: table;
-    margin-bottom: 20px;
+    margin-bottom: 31px;
     & > div {
       vertical-align: bottom;
     }
@@ -78,7 +78,8 @@
   }
   .edit-present-container {
     position: absolute;
-    width: 920px;
+    width: $dimenDetLargeFull;
+    top: 129px;
     &.slideup {
       @include slideup();
     }
@@ -119,6 +120,9 @@
         font-size: 18px;
         &.large {
           width: 380px;
+          font-size: 14px;
+          text-align: right;
+          padding-right: 10px;
         }
       }
       .edit-text-container {
@@ -144,6 +148,9 @@
       }
       .return-text-container {
         width: 10px;
+        padding-bottom: 5px;
+        font-size: 30px;
+        color: $colorDetSecond;
       }
       .coin-container {
         font-size: 13px;
@@ -166,21 +173,69 @@
       font-size: 20px;
       padding-left: 5px;
       padding-right: 5px;
-      .text-content {
+    }
+    .right {
+      float: right;
+    }
+    .line-container {
+      width: $dimenDetBarLarge;
+      float: right;
+      .bar-text-container {
+        margin-top: 9px;
+        font-family: $fontBold;
+        font-size: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+        display: table;
+        & > div {
+          display: table-cell;
+          vertical-align: middle;
+        }
+        &.expected {
+          padding-left: 10px;
+        }
+        .icon-container {
+          padding-right: 10px;
+          display: inline-block;
+        }
+      }
+    }
+    .dotted-line {
+      float: left;
+      border-right-style: dotted;
+      border-right-color: $colorPresPrimary;
+      background: transparent;
+      height: 67px;
+      margin-left: 2px;
+      margin-top: -41px;
+      border-right-width: 2px;
+      &.right {
+        float: right;
+        border-left-width: 2px;
+      }
+    }
+    .bar-text-container {
+      & > div {
         float: left;
       }
-      .spent {
+      &.spent {
         float: right;
         color: $colorDetSecond;
         .secondary {
           color: $colorDetCuater;
         }
+        &.right {
+          margin-top: 5px;
+        }
       }
-      .expected {
+      &.expected {
         float: left;
         color: $colorDetCuater;
         .secondary {
           color: $colorDetSecond;
+        }
+        &.right {
+          float: right;
         }
       }
       .number {
@@ -193,12 +248,24 @@
         font-size: 14px;
         margin-left: 2px;
       }
+      .text {
+        font-size: 14px;
+        margin-left: 10px;
+        font-family: $font;
+        color: $colorDetSecond;
+      }
     }
   }
   .bottom-content {
     float: left;
     width: 100%;
     margin-top: 50px;
+    .flip-container {
+      border: 0;
+    }
+    .front, .back {
+      background-color: transparent;
+    }
     .info-future {
       display: table;
       color: $colorDetPenta;
@@ -239,6 +306,42 @@
         padding-bottom: 5px;
         padding-left: 12px;
       }
+      .modify-info {
+        font-size: 13px;
+        padding-left: 0;
+      }
+      .modify-data {
+        vertical-align: middle;
+        font-size: 13px;
+        padding-left: 6px;
+        text-align: center;
+        & > label {
+          padding: 0;
+          margin: 0;
+          font-size: 20px;
+        }
+        & > input {
+          width: 80px;
+          height: 28px;
+          text-align: center;
+          font-size: 20px;
+          border-bottom: 1px solid $gray600;
+          border-left: none;
+          border-top: none;
+          border-right: none;
+          display: none;
+          background-color: transparent;
+          color: $colorDetSecond;
+          &:focus {
+            outline-offset: 0;
+            outline: none!important;
+          }
+        }
+        .euro-label {
+          height: 32px;
+          vertical-align: bottom;
+        }
+      }
     }
     .plan-container {
       float: right;
@@ -259,6 +362,82 @@
         }
       }
     }
+  }
+
+  .info-container {
+    margin-top: 38px;
+    &.short {
+      float: left;
+      width: $dimenDetInfoWidth;
+      .edit-present-container {
+        width: $dimenDetInfoWidth;
+      }
+      .line-container {
+        width: $dimenDetBarShort;
+      }
+      .box-container-edit {
+        padding-left: 5%;
+        padding-right: 5%;
+        .icon-container {
+          text-align: right;
+          width: 50px;
+        }
+        .coin-container {
+          width: 15px;
+        }
+      }
+      .triangle-container .triangle {
+        margin-left: 60%;
+      }
+    }
+  }
+  .hidden {
+    display: none;
+  }
+  .tip-container {
+    width: $dimenDetTipWidth;
+    height: $dimenDetTipWidth;
+    padding: 52px 40px;
+    float: right;
+    font-family: $font;
+    background-color: $colorDetSecond;
+    text-align: center;
+    font-size: 20px;
+    color: $colorDetCuater;
+    & > div {
+      float: left;
+    }
+    .title {
+      width: 100%;
+    }
+    .title-bold {
+      font-family: $fontBold;
+    }
+    .subtitle-container {
+      margin-top: 36px;
+      line-height: 30px;
+      .text-big {
+        font-size: 24px;
+      }
+      .number {
+        font-size: 30px;
+        font-family: $fontBold;
+      }
+    }
+    .button-container {
+      margin-top: 32px;
+      width: 100%;
+      button {
+        height: 42px;
+        width: 180px;
+        color: $colorDetSecond;
+        padding-top: 10px;
+        @include border-radius(20px);
+      }
+    }
+  }
+  .warning {
+    display: inline-block;
   }
 
 }

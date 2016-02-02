@@ -243,6 +243,9 @@
       }
     }
   }
+  .progress {
+    margin-top: 10px;
+  }
   .progress-bar-content {
     height: 60px;
     @include progress-bar(24px, $colorPresSecond, $colorPresPrimary);
@@ -261,6 +264,8 @@
       }
       .warning {
         margin-right: 5px;
+        vertical-align: middle;
+        display: inline-block;
       }
       .bar-money-spent {
         color: $colorPresPrimary;

@@ -2,131 +2,233 @@
   <section class="section-header container">
     {% set MES = CALENDARIO[0] %}
     {% set MES_SIG = CALENDARIO[1] %}
-    {% set PRESUPUESTO = MES.PRESUPUESTOS[0] %}
-    {% set PRESUPUESTO_SIG = MES_SIG.PRESUPUESTOS[0] %}
-    <div class="info-present">
-      <div class="icon-container">
-        <i class="{{ PRESUPUESTO.ICONO }}"></i>
-      </div>
-      <div class="resume-text">
-        <span class="type">{{ PRESUPUESTO.TITLE }}</span>
-        <span class="month">{{ MES.MES_COMPLETO }}</span>
-      </div>
-      <div class="money">
-        <span class="price">{{ PRESUPUESTO.PREVISTO }},</span>
-        <span class="decimal">{{ PRESUPUESTO.PREVISTO_DECIMAL }}</span>
-        <span class="coin">€</span>
-      </div>
-      <div class="modify"><i data-id="1" class="edit-present icon-edit-white"></i></div>
-    </div>
+    {% set PRESUPUESTO = MES.PRESUPUESTOS[pres] %}
+    {% set PRESUPUESTO_SIG = MES_SIG.PRESUPUESTOS[pres] %}
+    {% set TIP = PRESUPUESTO.TIP %}
+    {% if TIP %}
+      {% set PORC = 40 %}
+    {% else %}
+      {% set PORC = 15 %}
+    {% endif %}
+    <div class="info-container {% if TIP %} short {% endif %}">
 
-    <div class="edit-present-container slideup">
-      <div class="triangle-container">
-        <div class="triangle"></div>
-      </div>
-      <div class="box-container-edit">
-        <div class="text-container">
-          <span class="text">Ajuste manual para este mes</span>
-        </div>
-        <div class="edit-text-container">
-          <input type="text" class="edit-text" value="{{ PRESUPUESTO.PREVISTO }},{{PRESUPUESTO.PREVISTO_DECIMAL}}" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true"></input>
-        </div>
-        <div class="coin-container">
-          <span class="text">€</span>
-        </div>
+      <div class="info-present">
         <div class="icon-container">
-            <i class="icon-check-circle check-edit"></i>
+          <i class="{{ PRESUPUESTO.ICONO }}"></i>
         </div>
-      </div>
-      <div class="box-container-return large hidden">
-        <div class="text-container large">
-          <span>¿Quieres volver a la previsión automática de </span>
-        </div>
-        <div class="return-text-container">
-          <span class="return-text">{{ PRESUPUESTO.PREVISTO }},{{ PRESUPUESTO.PREVISTO_DECIMAL }}</span>
-        </div>
-        <div class="coin-container">
-          <span class="coin">€</span>
-        </div>
-        <div class="icon-container">
-            <i class="icon-check-circle check-return"></i>
-        </div>
-      </div>
-    </div>
-
-    <div class="bar-container">
-      {% if PRESUPUESTO.PORCENTAJE <= 100 %}
-        {% if PRESUPUESTO.PORCENTAJE == 100 %}
-          <span class="triangulo_izq full"></span>
-        {% endif %}
-        <div class="progress border-radius-less">
-          <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ PRESUPUESTO.PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ PRESUPUESTO.PORCENTAJE }}%"></div>
-          {% if PRESUPUESTO.PORCENTAJE > 0 and PRESUPUESTO.PORCENTAJE != 100 %}
-            <span class="triangulo_izq"></span>
-          {% endif %}
-        </div>
-        <div class="text-container">
-          <div class="bar-text-container expected">
-            <div class="text-content">
-              <span class="number primary">{{ PRESUPUESTO.PREVISTO }}</span>,
-            </div>
-            <div class="text-content">
-              <span class="decimal primary">{{ PRESUPUESTO.PREVISTO_DECIMAL }}</span>
-            </div>
-            <div class="text-content">
-              <span class="coin secondary">€</span>
-            </div>
-          </div>
-          <div class="bar-text-container spent">
-            <div class="text-content">
-              <span class="number primary">{{ PRESUPUESTO.GASTADO }}</span>,
-            </div>
-            <div class="text-content">
-              <span class="decimal primary">{{ PRESUPUESTO.GASTADO_DECIMAL }}</span>
-            </div>
-            <div class="text-content">
-              <span class="coin secondary">€</span>
-            </div>
-          </div>
-        </div>
-      {% else %}
-        {% if (PRESUPUESTO.PORCENTAJE - 200) >= 0 %}
-          {% set value = 0 %}
-          {% set width = 100 %}
-        {% else %}
-          {% set value = (200 - PRESUPUESTO.PORCENTAJE) %}
-          {% set width = (PRESUPUESTO.PORCENTAJE - 100) %}
-        {% endif %}
-        <div class="progress over-loaded border-radius-less">
-          <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ value }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ value }}%"></div>
-        </div>
-        <div class="line-container">
-          <div class="dotted-line" style="width: {{ width }}%"></div>
-        </div>
-        <div class="bar-text-container">
-          <div class="value"><strong>{{ PRESUPUESTO.DIFERENCIA }}<span class="decimal">,00</span>€</strong></div>
-        </div>
-      {% endif %}
-    </div>
-    <div class="bottom-content">
-      <div class="info-future">
         <div class="resume-text">
-          <span class="prevision">PREVISIÓN</span>
-          <span class="month">{{ MES_SIG.MES_COMPLETO }}</span>
+          <span class="type">{{ PRESUPUESTO.TITLE }}</span>
+          <span class="month">{{ MES.MES_COMPLETO }}</span>
         </div>
         <div class="money">
-          <span class="price">{{ PRESUPUESTO_SIG.PREVISTO }}</span>
+          <span class="price">{{ PRESUPUESTO.PREVISTO }},</span>
+          <span class="decimal">{{ PRESUPUESTO.PREVISTO_DECIMAL }}</span>
           <span class="coin">€</span>
         </div>
-        <div class="modify"><i data-id="2" class="icon-edit-white"></i></div>
+        <div class="modify"><i data-id="1" class="edit-present icon-edit-white"></i></div>
       </div>
-      <div class="plan-container">
-        <button class="btn btn-plan-container">
-          <div class="icon-container">
-            <i class="icon-arrow-down-white"></i>
+
+      <div class="edit-present-container slideup">
+        <div class="triangle-container">
+          <div class="triangle"></div>
+        </div>
+        <div class="box-container-edit">
+          <div class="text-container">
+            <span class="text">Ajuste manual para este mes</span>
           </div>
-          PLANIFICAR INGRESO
-        </button>
+          <div class="edit-text-container">
+            <input type="text" class="edit-text" value="{{ PRESUPUESTO.PREVISTO }},{{PRESUPUESTO.PREVISTO_DECIMAL}}" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true"></input>
+          </div>
+          <div class="coin-container">
+            <span class="text">€</span>
+          </div>
+          <div class="icon-container">
+              <i class="icon-check-circle check-edit"></i>
+          </div>
+        </div>
+        <div class="box-container-return large hidden">
+          <div class="text-container large">
+            <span>¿Quieres volver a la previsión automática de </span>
+          </div>
+          <div class="return-text-container">
+            <span class="return-text">{{ PRESUPUESTO.PREVISTO }},{{ PRESUPUESTO.PREVISTO_DECIMAL }}</span>
+          </div>
+          <div class="coin-container">
+            <span class="coin">€</span>
+          </div>
+          <div class="icon-container">
+              <i class="icon-check-circle check-return"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="bar-container">
+        {% if PRESUPUESTO.PORCENTAJE <= 100 %}
+          {% if PRESUPUESTO.PORCENTAJE == 100 %}
+            <span class="triangulo_izq full"></span>
+          {% endif %}
+          <div class="progress border-radius-less">
+            <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ PRESUPUESTO.PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ PRESUPUESTO.PORCENTAJE }}%"></div>
+            {% if PRESUPUESTO.PORCENTAJE > 0 and PRESUPUESTO.PORCENTAJE != 100 %}
+              <span class="triangulo_izq"></span>
+            {% endif %}
+          </div>
+          <div class="text-container">
+            <div class="bar-text-container expected">
+              <div class="text-content">
+                <span class="number primary">{{ PRESUPUESTO.PREVISTO }}</span>,
+              </div>
+              <div class="text-content">
+                <span class="decimal primary">{{ PRESUPUESTO.PREVISTO_DECIMAL }}</span>
+              </div>
+              <div class="text-content">
+                <span class="coin secondary">€</span>
+              </div>
+            </div>
+            <div class="bar-text-container spent">
+              <div class="text-content">
+                <span class="number primary">{{ PRESUPUESTO.GASTADO }}</span>,
+              </div>
+              <div class="text-content">
+                <span class="decimal primary">{{ PRESUPUESTO.GASTADO_DECIMAL }}</span>
+              </div>
+              <div class="text-content">
+                <span class="coin secondary">€</span>
+              </div>
+            </div>
+          </div>
+        {% else %}
+          {% if (PRESUPUESTO.PORCENTAJE - 200) >= 0 %}
+            {% set value = 0 %}
+            {% set width = 100 %}
+          {% else %}
+            {% set value = (200 - PRESUPUESTO.PORCENTAJE) %}
+            {% set width = (PRESUPUESTO.PORCENTAJE - 100) %}
+          {% endif %}
+          <span class="triangulo_izq-overload"></span>
+          <div class="progress over-loaded border-radius-less">
+            <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ value }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ value }}%"></div>
+          </div>
+          <div class="line-container">
+            {% if value > PORC %}
+              <div class="dotted-line" style="width: {{ width }}%"></div>
+              <div class="bar-text-container expected">
+                <div class="icon-container">
+                  <i class="warning icon-warning"></i>
+                </div>
+                <div class="text-content">
+                  <span class="number primary">{{ PRESUPUESTO.PREVISTO }}</span>,
+                </div>
+                <div class="text-content">
+                  <span class="decimal primary">{{ PRESUPUESTO.PREVISTO_DECIMAL }}</span>
+                </div>
+                <div class="text-content">
+                  <span class="coin secondary">€</span>
+                </div>
+                <div class="text-content">
+                  <span class="text">Superando presupuesto</span>
+                </div>
+              </div>
+            {% else %}
+              <div class="dotted-line right" style="width: {{ 100 - width }}%"></div>
+              <div class="bar-text-container expected right">
+                <div class="icon-container">
+                  <i class="warning icon-warning"></i>
+                </div>
+                <div class="text-content">
+                  <span class="number primary">{{ PRESUPUESTO.PREVISTO }}</span>,
+                </div>
+                <div class="text-content">
+                  <span class="decimal primary">{{ PRESUPUESTO.PREVISTO_DECIMAL }}</span>
+                </div>
+                <div class="text-content">
+                  <span class="coin secondary">€</span>
+                </div>
+                <div class="text-content">
+                  <span class="text">Superando presupuesto</span>
+                </div>
+              </div>
+            {% endif %}
+            {% if value > PORC %}
+              <div class="bar-text-container spent">
+                <div class="text-content">
+                  <span class="number primary">{{ PRESUPUESTO.GASTADO }}</span>,
+                </div>
+                <div class="text-content">
+                  <span class="decimal primary">{{ PRESUPUESTO.GASTADO_DECIMAL }}</span>
+                </div>
+                <div class="text-content">
+                  <span class="coin secondary">€</span>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+          {% if value <= PORC %}
+            <div class="bar-text-container spent right">
+              <div class="text-content">
+                <span class="number primary">{{ PRESUPUESTO.GASTADO }}</span>,
+              </div>
+              <div class="text-content">
+                <span class="decimal primary">{{ PRESUPUESTO.GASTADO_DECIMAL }}</span>
+              </div>
+              <div class="text-content">
+                <span class="coin secondary">€</span>
+              </div>
+            </div>
+          {% endif %}
+        {% endif %}
+      </div>
+      <div class="bottom-content">
+        <div class="target-future flip-container">
+          <div class="flipper">
+            <div class="info-future front">
+              <div class="resume-text">
+                <span class="prevision">PREVISIÓN</span>
+                <span class="month">{{ MES_SIG.MES_COMPLETO }}</span>
+              </div>
+              <div class="money">
+                <span class="price">{{ PRESUPUESTO_SIG.PREVISTO }},{{PRESUPUESTO_SIG.PREVISTO_DECIMAL}}</span>
+                <span class="coin">€</span>
+              </div>
+              <div class="modify"><i class="icon-edit-white future-detail-edit"></i></div>
+            </div>
+            <div class="info-future back">
+              <div class="info modify-info">Ajuste manual<br />para {{ MES_SIG.MES_COMPLETO }}.</div>
+              <div class="info modify-data">
+                <label class="label-input">
+                  <span class="value">{{ PRESUPUESTO_SIG.PREVISTO }}</span>,<span class="decimal">{{ PRESUPUESTO_SIG.PREVISTO_DECIMAL }}</span>
+                </label>
+                <input class="init-value" type="hidden" name="name" value="{{ PRESUPUESTO_SIG.PREVISTO }}"/>
+                <input class="input-future" type="text" name="name" value="" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true" />
+                <span class="euro-label">€</span>
+              </div>
+              <div class="modify"><i class="icon-check-circle future-detail-check"></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="plan-container">
+          <button class="btn btn-plan-container">
+            <div class="icon-container">
+              <i class="icon-arrow-down-white"></i>
+            </div>
+            PLANIFICAR INGRESO
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="tip-container {% if not TIP %} hidden {% endif %}">
+      <div class="text-container">
+        <div class="title-container">
+          <span class="title"><span class="title-bold">CONSEJO</span> DE AHORRO</span>
+        </div>
+        <div class="subtitle-container">
+          <span class="text-big">Ahorra</span>
+          <span class="number">13</span>
+          <span class="text">€ en tu factura de la luz contratando<br/> con Iberdrola</span>
+        </div>
+      </div>
+      <div class="button-container">
+        <button class="btn">CONTRATAR</button>
       </div>
     </div>
   </section>

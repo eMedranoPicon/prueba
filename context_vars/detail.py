@@ -17,32 +17,41 @@ def get_detail():
 						"GASTADO": 100,
 						"GASTADO_DECIMAL": 55,
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 20
-
+						"PORCENTAJE": 20,
+						"TIP": True
 					},
 					{
 						"TITLE": "Colegio",
 						"ICONO": "icon-book-white",
 						"PREVISTO": "100",
-						"GASTADO": "10",
+						"PREVISTO_DECIMAL": "00",
+						"GASTADO": "100",
+						"GASTADO_DECIMAL": "00",
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 10
+						"PORCENTAJE": 100,
+						"TIP": False
 					},
 					{
 						"TITLE": "Tarjeta",
 						"ICONO": "icon-card-white",
 						"PREVISTO": "60",
+						"PREVISTO_DECIMAL": "05",
 						"GASTADO": "100",
+						"GASTADO_DECIMAL": "00",
 						"DIFERENCIA": 40,
-						"PORCENTAJE": 140
+						"PORCENTAJE": 140,
+						"TIP": True
 					},
 					{
 						"TITLE": "Seguros",
 						"ICONO": "icon-umbrella-white",
 						"PREVISTO": "1000",
-						"GASTADO": "200",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 20
+						"PREVISTO_DECIMAL": "00",
+						"GASTADO": "2500",
+						"GASTADO_DECIMAL": "00",
+						"DIFERENCIA": 1500,
+						"PORCENTAJE": 250,
+						"TIP": True
 					},
 					{
 						"TITLE": "Cuota préstamo",
@@ -50,7 +59,8 @@ def get_detail():
 						"PREVISTO": "100",
 						"GASTADO": "70",
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 70
+						"PORCENTAJE": 70,
+						"TIP": True
 					}
 				]
         	},
