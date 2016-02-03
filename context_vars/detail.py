@@ -166,5 +166,197 @@ def get_detail():
 					}
 				]
           	}
-		]
+		],
+
+		"TIMELINE": [
+         	{
+				"MES":	"Septiembre",
+				"MOVIMIENTOS": [
+					{
+						"TEXT":		"Tagus Agua",
+						"GASTO":	True,
+						"NUMBER":	50,
+						"DECIMAL":	15,
+						"DATE":		"30/08/2015"
+					},
+					{
+						"TEXT":		"Devolución recibo Teléfono",
+						"GASTO":	False,
+						"NUMBER":	50,
+						"DECIMAL":	37,
+						"DATE":		"29/08/2015"
+					},
+					{
+						"TEXT":		"Teléfono",
+						"GASTO":	True,
+						"NUMBER":	50,
+						"DECIMAL":	37,
+						"DATE":		"26/08/2015"
+					},
+					{
+						"TEXT":		"Recibo domiciliado",
+						"GASTO":	True,
+						"NUMBER":	35,
+						"DECIMAL":	15,
+						"DATE":		"20/08/2015"
+					},
+					{
+						"TEXT":		"IBI Impuestos",
+						"GASTO":	True,
+						"NUMBER":	24,
+						"DECIMAL":	15,
+						"DATE":		"15/08/2015"
+					},
+					{
+						"TEXT":		"Gas Natural",
+						"GASTO":	True,
+						"NUMBER":	32,
+						"DECIMAL":	90,
+						"DATE":		"05/08/2015"
+					}
+				]
+          	},
+          	{
+				"MES":	"Agosto",
+				"MOVIMIENTOS": [
+					{
+						"TEXT":		"Tagus Agua",
+						"GASTO":	True,
+						"NUMBER":	50,
+						"DECIMAL":	15,
+						"DATE":		"30/08/2015"
+					},
+					{
+						"TEXT":		"Devolución recibo Teléfono",
+						"GASTO":	False,
+						"NUMBER":	50,
+						"DECIMAL":	37,
+						"DATE":		"29/08/2015"
+					},
+					{
+						"TEXT":		"Teléfono",
+						"GASTO":	True,
+						"NUMBER":	50,
+						"DECIMAL":	37,
+						"DATE":		"26/08/2015"
+					},
+					{
+						"TEXT":		"Recibo domiciliado",
+						"GASTO":	True,
+						"NUMBER":	35,
+						"DECIMAL":	15,
+						"DATE":		"20/08/2015"
+					},
+					{
+						"TEXT":		"IBI Impuestos",
+						"GASTO":	True,
+						"NUMBER":	24,
+						"DECIMAL":	15,
+						"DATE":		"15/08/2015"
+					},
+					{
+						"TEXT":		"Gas Natural",
+						"GASTO":	True,
+						"NUMBER":	32,
+						"DECIMAL":	90,
+						"DATE":		"05/08/2015"
+					}
+				]
+          	},
+			{
+				"MES":	"Julio",
+				"MOVIMIENTOS": [
+					{
+						"TEXT":		"Tagus Agua",
+						"GASTO":	True,
+						"NUMBER":	50,
+						"DECIMAL":	15,
+						"DATE":		"30/08/2015"
+					},
+					{
+						"TEXT":		"Devolución recibo Teléfono",
+						"GASTO":	False,
+						"NUMBER":	50,
+						"DECIMAL":	37,
+						"DATE":		"29/08/2015"
+					},
+					{
+						"TEXT":		"Teléfono",
+						"GASTO":	True,
+						"NUMBER":	50,
+						"DECIMAL":	37,
+						"DATE":		"26/08/2015"
+					},
+					{
+						"TEXT":		"Recibo domiciliado",
+						"GASTO":	True,
+						"NUMBER":	35,
+						"DECIMAL":	15,
+						"DATE":		"20/08/2015"
+					},
+					{
+						"TEXT":		"IBI Impuestos",
+						"GASTO":	True,
+						"NUMBER":	24,
+						"DECIMAL":	15,
+						"DATE":		"15/08/2015"
+					},
+					{
+						"TEXT":		"Gas Natural",
+						"GASTO":	True,
+						"NUMBER":	32,
+						"DECIMAL":	90,
+						"DATE":		"05/08/2015"
+					}
+				]
+          	},
+			{
+				"MES":	"Junio",
+				"MOVIMIENTOS": [
+					{
+						"TEXT":		"Tagus Agua",
+						"GASTO":	True,
+						"NUMBER":	50,
+						"DECIMAL":	15,
+						"DATE":		"30/08/2015"
+					},
+					{
+						"TEXT":		"Devolución recibo Teléfono",
+						"GASTO":	False,
+						"NUMBER":	50,
+						"DECIMAL":	37,
+						"DATE":		"29/08/2015"
+					},
+					{
+						"TEXT":		"Teléfono",
+						"GASTO":	True,
+						"NUMBER":	50,
+						"DECIMAL":	37,
+						"DATE":		"26/08/2015"
+					},
+					{
+						"TEXT":		"Recibo domiciliado",
+						"GASTO":	True,
+						"NUMBER":	35,
+						"DECIMAL":	15,
+						"DATE":		"20/08/2015"
+					},
+					{
+						"TEXT":		"IBI Impuestos",
+						"GASTO":	True,
+						"NUMBER":	24,
+						"DECIMAL":	15,
+						"DATE":		"15/08/2015"
+					},
+					{
+						"TEXT":		"Gas Natural",
+						"GASTO":	True,
+						"NUMBER":	32,
+						"DECIMAL":	90,
+						"DATE":		"05/08/2015"
+					}
+				]
+          	},
+      	]
+
 	}

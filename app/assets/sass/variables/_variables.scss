@@ -9,6 +9,7 @@ $purple500        : #8f99e3;
 $blueSky          : #1cb0d3;
 $blue800          : #24313C;
 $blue500          : #4e5961;
+$blue300          : #556270;
 
 $red500           : #c90d3a;
 
@@ -22,13 +23,18 @@ $gray990          : #f7f7f7;
 $grey950          : #f3f3f3;
 $grey900          : #f0f0f0;
 $grey850          : #e8e7e3;
+$grey830          : #e4e4e4;
 $grey830          : #dfe1e3;
 $gray820          : #dadddf;
 $grey800          : #d7d7d7;
+$grey750          : #d5d5d5;
 $grey700          : #c6cace;
+$grey670          : #c4c9ce;
 $grey650          : #b7bdc2;
 $gray600          : #b5b9be;
+$grey550          : #b2b2b2;
 $grey500          : #aeb5bc;
+$grey400          : #949494;
 $grey300          : #556270;
 
 //Font
@@ -51,3 +57,15 @@ $colorDetTer      : $orange450;
 $colorDetCuater   : $white;
 $colorDetPenta    : $blue500;
 $colorDetBackground  : $gray990;
+
+//Timeline
+$colorFontTimeline  : $blue300;
+$colorTimePrimary   : $grey400;
+$colorTimeSecond    : $blue800;
+$colorTimeTer       : $grey830;
+$colorTimeCuater    : $white;
+$colorTimePenta     : $gray990;
+$colorTimeHexa      : $grey550;
+$colorTimeBar       : $grey750;
+$colorTimeIngress   : $green500;
+$colorTimeWarning   : $red500;

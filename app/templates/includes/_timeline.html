@@ -1,1 +1,49 @@
-Timeline
+<section class="content timeline bg-secondary">
+	{% for MONTH in TIMELINE %}
+		<div class="month ">
+			<div class="container {% if not loop.first %} slideup {% else %} slidedown {% endif %}">
+			  <div class="timelineBar"></div>
+				<div class="row fila primera">
+					<div class="header-timeline">{{ MONTH.MES }}</div>
+				</div>
+
+				{% for MOVIMIENTO in MONTH.MOVIMIENTOS %}
+			    <div class="row fila">
+			    	<div class="timelineDot {% if MOVIMIENTO.GASTO %} gasto {% endif %}"></div>
+						{% if MOVIMIENTO.GASTO %}
+			        <div class="col-xs-6  gasto textTimeline">{{ MOVIMIENTO.DATE }}</div>
+						{% endif %}
+						{% if MOVIMIENTO.GASTO %}
+							<div class="col-xs-6 movement-gasto">
+								<div class="movement-container">
+			            <div class="content-timeline gasto">
+			            </div>
+									<div class="button-details">
+										<div class="dot"></div>
+										<div class="dot second"></div>
+										<div class="dot third"></div>
+									</div>
+								</div>
+							</div>
+						{% else %}
+							<div class="col-xs-6 movement-ingreso">
+								<div class="movement-container left">
+									<div class="button-details">
+										<div class="dot"></div>
+										<div class="dot second"></div>
+										<div class="dot third"></div>
+									</div>
+									<div class="content-timeline ingreso">
+									</div>
+								</div>
+							</div>
+						{% endif %}
+						{% if not MOVIMIENTO.GASTO %}
+			        <div class="col-xs-6  textTimeline">{{ MOVIMIENTO.DATE }}</div>
+						{% endif %}
+			    </div>
+		    {% endfor %}
+			</div>
+		</div>
+	{% endfor %}
+</section>
