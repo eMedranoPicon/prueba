@@ -4,6 +4,10 @@ $(document).ready(function () {
   // MASK FOR INPUTS
   $(":input").inputmask();
 
+  // INITIALIZE ACCORDION
+
+  $('#st-accordion').accordion();
+
   // SLIDE UP/DOWN CALENDAR
   $(".calendary-interaction")
     .on('click', function() {

@@ -1,7 +1,11 @@
-<section class="content timeline bg-secondary">
+<section id="st-accordion" class="content timeline bg-secondary st-accordion">
+	<ul>
 	{% for MONTH in TIMELINE %}
-		<div class="month ">
-			<div class="container {% if not loop.first %} slideup {% else %} slidedown {% endif %}">
+		<li class="month ">
+			<div class="header-accordion">
+				<span>{{ MONTH.MES }}</span>
+			</div>
+			<div class="container {% if not loop.first %} slideup {% else %} slidedown {% endif %} st-content">
 			  <div class="timelineBar"></div>
 				<div class="row fila primera">
 					<div class="header-timeline">{{ MONTH.MES }}</div>
@@ -17,6 +21,12 @@
 							<div class="col-xs-6 movement-gasto">
 								<div class="movement-container">
 			            <div class="content-timeline gasto">
+										<div class="text-container gasto">
+											<span class="text">{{ MOVIMIENTO.TEXT }}</span>
+										</div>
+										<div class="price-container gasto">
+											-<span class="number">{{ MOVIMIENTO.NUMBER }},</span><span class="decimal">{{ MOVIMIENTO.DECIMAL }}€</span>
+										</div>
 			            </div>
 									<div class="button-details">
 										<div class="dot"></div>
@@ -34,6 +44,12 @@
 										<div class="dot third"></div>
 									</div>
 									<div class="content-timeline ingreso">
+										<div class="text-container">
+											<span class="text">{{ MOVIMIENTO.TEXT }}</span>
+										</div>
+										<div class="price-container">
+											<span class="number">{{ MOVIMIENTO.NUMBER }},</span><span class="decimal">{{ MOVIMIENTO.DECIMAL }}€</span>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -44,6 +60,7 @@
 			    </div>
 		    {% endfor %}
 			</div>
-		</div>
+		</li>
 	{% endfor %}
+	</ul>
 </section>
