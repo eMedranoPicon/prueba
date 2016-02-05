@@ -1,31 +1,58 @@
 .timeline {
     font-family: $font;
     position: relative;
-    padding-top: 35px;
     ul {
       padding-left: 0;
     }
     .month {
-        border-bottom: 1px solid $colorTimeTer;
-        padding: 25px 0;
-        font-size: 20px;
-        text-align: center;
-        color: $colorTimePrimary;
-        list-style: none;
+      border-bottom: 1px solid $colorTimeLineAccor;
+      font-size: 20px;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      color: $colorTimePrimary;
+      list-style: none;
+      .header-accordion {
+        display: table;
+        cursor: pointer;
+        width: 100%;
+        height: 80px;
+        color: $colorFontTimeline;
+        vertical-align: middle;
+        span {
+          vertical-align: middle;
+          display: table-cell;
+        }
+      }
     }
     .hidden {
       display: none;
     }
-    .header-accordion {
-      height: 80px;
+    .st-content {
       color: $colorFontTimeline;
-      border-bottom: 1px solid $colorTimeLineAccor;
-      span {
-        vertical-align: middle;
+      & > div {
+        float: left;
+        display: block;
       }
-    }
-    .container {
-      color: $colorFontTimeline;
+      .rows-container.container {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .extra-rows-container {
+        height: 50px;
+        width: 100%;
+        display: table;
+        padding-top: 20px;
+        .triangle-container {
+          display: table-cell;
+          .triangle {
+            @include triangle(8px, 0, 8px, 8px, $colorTimeBar);
+          }
+        }
+      }
     }
     .header-timeline {
         position: relative;
@@ -173,6 +200,10 @@
           border-left: none;
           position: relative;
           background: $colorTimePenta;
+          cursor: pointer;
+          &:hover {
+            background-color: $colorFontTimeline;
+          }
           .dot {
             @extend .timelineDot-general;
             background-color: $colorTimeHexa;
@@ -229,4 +260,73 @@
         left: 50%;
     }
 
+  .row-detail-container {
+    width: 426px;
+    position: absolute;
+    background-color: $colorTimeBack;
+    top: 55px;
+    z-index: 5;
+    border: 1px solid $colorTimeTer;
+    &.right {
+      right: 0;
+    }
+    &.slideup {
+      @include slideup();
+      border: 0;
+    }
+    &.slidedown {
+      @include slidedown(500px);
+    }
+    .row-detail-content {
+      text-align: left;
+      & > div {
+        border-bottom: 1px solid $colorTimeTer;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: table;
+        width: 100%;
+      }
+      .top-container {
+        height: 120px;
+        padding-top: 20px;
+        .text-container {
+          color: $colorFontTimeline;
+          .title {
+            font-size: 16px;
+            font-family: $fontBold;
+            width: 100%;
+            float: left;
+          }
+          a {
+            font-size: 13px;
+            cursor: pointer;
+            width: 100%;
+            float: left;
+            text-decoration: underline;
+            color: $colorFontTimeline;
+          }
+        }
+      }
+      .element-container {
+        height: 50px;
+        & > div {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+      .subelement-container {
+        display: block;
+        border: 0;
+        &.slideup {
+          @include slideup();
+        }
+        &.slidedown {
+          @include slidedown(500px);
+        }
+      }
+      .bottom-container {
+        padding-bottom: 20px;
+      }
+    }
+  }
 }

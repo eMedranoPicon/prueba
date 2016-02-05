@@ -115,3 +115,13 @@
 	background: transparent url("../images/sprite.png") no-repeat scroll -383px -5px;
 	padding: 4px 6px;
 }
+
+.icon-pdf {
+	background: transparent url("../images/sprite.png") no-repeat scroll 0px -102px;
+	padding: 11px 21px;
+	&.icon-black {
+
+	}
+	&.icon-grey {
+		background: transparent url("../images/sprite.png") no-repeat scroll -44px -103px;	}
+}

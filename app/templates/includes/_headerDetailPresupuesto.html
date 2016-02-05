@@ -32,7 +32,7 @@
             <span class="text">Ajuste manual para este mes</span>
           </div>
           <div class="edit-text-container">
-            <input type="text" class="edit-text" value="{{ PRESUPUESTO.PREVISTO }},{{PRESUPUESTO.PREVISTO_DECIMAL}}" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true"></input>
+            <input type="text" class="edit-text" value="{{ PRESUPUESTO.PREVISTO }},{{PRESUPUESTO.PREVISTO_DECIMAL}}" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true"/>
           </div>
           <div class="coin-container">
             <span class="text">€</span>
@@ -203,10 +203,8 @@
         </div>
         <div class="plan-container">
           <button class="btn btn-plan-container">
-            <div class="icon-container">
-              <i class="icon-arrow-down-white"></i>
-            </div>
-            PLANIFICAR INGRESO
+            <i class="icon-arrow-down-white"></i>
+            <span>PLANIFICAR INGRESO</span>
           </button>
         </div>
       </div>

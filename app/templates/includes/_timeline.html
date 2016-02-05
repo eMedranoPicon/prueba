@@ -1,64 +1,156 @@
 <section id="st-accordion" class="content timeline bg-secondary st-accordion">
 	<ul>
 	{% for MONTH in TIMELINE %}
-		<li class="month ">
+		<li class="month">
 			<div class="header-accordion">
 				<span>{{ MONTH.MES }}</span>
 			</div>
 			<div class="container {% if not loop.first %} slideup {% else %} slidedown {% endif %} st-content">
-			  <div class="timelineBar"></div>
-				<div class="row fila primera">
-					<div class="header-timeline">{{ MONTH.MES }}</div>
-				</div>
 
-				{% for MOVIMIENTO in MONTH.MOVIMIENTOS %}
-			    <div class="row fila">
-			    	<div class="timelineDot {% if MOVIMIENTO.GASTO %} gasto {% endif %}"></div>
-						{% if MOVIMIENTO.GASTO %}
-			        <div class="col-xs-6  gasto textTimeline">{{ MOVIMIENTO.DATE }}</div>
-						{% endif %}
-						{% if MOVIMIENTO.GASTO %}
-							<div class="col-xs-6 movement-gasto">
-								<div class="movement-container">
-			            <div class="content-timeline gasto">
-										<div class="text-container gasto">
-											<span class="text">{{ MOVIMIENTO.TEXT }}</span>
+				<div class="rows-container container">
+
+					<div class="timelineBar"></div>
+					<div class="row fila primera">
+						<div class="header-timeline">{{ MONTH.MES }}</div>
+					</div>
+
+					{% for MOVIMIENTO in MONTH.MOVIMIENTOS %}
+				    <div class="row fila">
+				    	<div class="timelineDot {% if MOVIMIENTO.GASTO %} gasto {% endif %}"></div>
+							{% if MOVIMIENTO.GASTO %}
+				        <div class="col-xs-6  gasto textTimeline">{{ MOVIMIENTO.DATE }}</div>
+							{% endif %}
+							{% if MOVIMIENTO.GASTO %}
+								<div class="col-xs-6 movement-gasto">
+									<div class="movement-container">
+				            <div class="content-timeline gasto">
+											<div class="text-container gasto">
+												<span class="text">{{ MOVIMIENTO.TEXT }}</span>
+											</div>
+											<div class="price-container gasto">
+												-<span class="number">{{ MOVIMIENTO.NUMBER }},</span><span class="decimal">{{ MOVIMIENTO.DECIMAL }}€</span>
+											</div>
+				            </div>
+										<div class="button-details">
+											<div class="dot"></div>
+											<div class="dot second"></div>
+											<div class="dot third"></div>
 										</div>
-										<div class="price-container gasto">
-											-<span class="number">{{ MOVIMIENTO.NUMBER }},</span><span class="decimal">{{ MOVIMIENTO.DECIMAL }}€</span>
-										</div>
-			            </div>
-									<div class="button-details">
-										<div class="dot"></div>
-										<div class="dot second"></div>
-										<div class="dot third"></div>
 									</div>
 								</div>
-							</div>
-						{% else %}
-							<div class="col-xs-6 movement-ingreso">
-								<div class="movement-container left">
-									<div class="button-details">
-										<div class="dot"></div>
-										<div class="dot second"></div>
-										<div class="dot third"></div>
+							{% else %}
+								<div class="col-xs-6 movement-ingreso">
+									<div class="movement-container left">
+										<div class="button-details">
+											<div class="dot"></div>
+											<div class="dot second"></div>
+											<div class="dot third"></div>
+										</div>
+										<div class="content-timeline ingreso">
+											<div class="text-container">
+												<span class="text">{{ MOVIMIENTO.TEXT }}</span>
+											</div>
+											<div class="price-container">
+												<span class="number">{{ MOVIMIENTO.NUMBER }},</span><span class="decimal">{{ MOVIMIENTO.DECIMAL }}€</span>
+											</div>
+										</div>
 									</div>
-									<div class="content-timeline ingreso">
+								</div>
+							{% endif %}
+							{% if not MOVIMIENTO.GASTO %}
+				        <div class="col-xs-6  textTimeline">{{ MOVIMIENTO.DATE }}</div>
+							{% endif %}
+
+							<div class="row-detail-container slideup {% if MOVIMIENTO.GASTO %} right {% endif %}">
+								<div class="triangle-container">
+									<span class="triangle"></span>
+								</div>
+								<div class="row-detail-content">
+									<div class="top-container">
 										<div class="text-container">
-											<span class="text">{{ MOVIMIENTO.TEXT }}</span>
+											<span class="title">{{ MOVIMIENTO.TEXT }}</span>
+											<a>Ver recibos de este proveedor</a>
 										</div>
-										<div class="price-container">
-											<span class="number">{{ MOVIMIENTO.NUMBER }},</span><span class="decimal">{{ MOVIMIENTO.DECIMAL }}€</span>
+										<div class="icon-container">
+											<i class="icon-pdf icon-grey"></i>
+										</div>
+									</div>
+
+									<div class="element-container">
+										<div class="icon-container">
+											<i class="icon-house"></i>
+										</div>
+										<div class="name-container">
+											<span class="name">Vivienda</span>
+										</div>
+										<div class="triangle-container">
+											<span class="triangle"></span>
+										</div>
+									</div>
+										<div class="subelement-container slideup">
+											<div class="icon-container">
+												<i class="icon-house"></i>
+											</div>
+											<div class="name-container">
+												<span class="name">Vivienda</span>
+											</div>
+											<div class="check-container">
+												<span class="check"></span>
+											</div>
+										</div>
+
+									<div class="element-container">
+										<div class="icon-container">
+											<i class="icon-calendar-new"></i>
+										</div>
+										<div class="name-container">
+											<span class="name">Mensual</span>
+										</div>
+										<div class="triangle-container">
+											<span class="triangle"></span>
+										</div>
+									</div>
+										<div class="subelement-container slideup">
+											<div class="icon-container">
+												<i class="icon-calendar-new"></i>
+											</div>
+											<div class="name-container">
+												<span class="name">Trimestral</span>
+											</div>
+											<div class="check-container">
+												<span class="check"></span>
+											</div>
+										</div>
+
+									<div class="element-container">
+										<div class="switch-container">
+										</div>
+										<div class="name-container">
+											<span class="name">Alertas</span>
+										</div>
+										<div class="icon-container right">
+											<i class="icon-calendar-new"></i>
+										</div>
+									</div>
+
+									<div class="bottom-container">
+										<div class="button-container">
+											<button class="btn button-devolver">Devolver</button>
+										</div>
+										<div class="link-container">
+											<a href="#" class="link"></a>
 										</div>
 									</div>
 								</div>
 							</div>
-						{% endif %}
-						{% if not MOVIMIENTO.GASTO %}
-			        <div class="col-xs-6  textTimeline">{{ MOVIMIENTO.DATE }}</div>
-						{% endif %}
-			    </div>
-		    {% endfor %}
+				    </div>
+					{% endfor %}
+				</div>
+				<div class="extra-rows-container">
+					<div class="triangle-container">
+						<span class="triangle"></span>
+					</div>
+				</div>
 			</div>
 		</li>
 	{% endfor %}
