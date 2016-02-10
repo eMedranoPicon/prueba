@@ -106,6 +106,10 @@
 	background: transparent url("../images/sprite.png") no-repeat scroll -205px -175px;
 	padding: 7px 8px;
 }
+.icon-warning-yellow {
+	background: transparent url("../images/sprite.png") no-repeat scroll -354px -66px;
+	padding: 7px 8px;
+}
 .icon-balloon-white {
 	background: transparent url("../images/sprite.png") no-repeat scroll -201px -142px;
 	padding: 14px 14px;
@@ -153,5 +157,12 @@
 	&.small {
 		background: transparent url("../images/sprite.png") no-repeat scroll -315px -187px;
 		padding: 4px 6px;
+	}
+}
+.icon-sms {
+	background: transparent url("../images/sprite.png") no-repeat scroll -354px -40px;
+	padding: 8px 9px;
+	&.icon-hover {
+		background: transparent url("../images/sprite.png") no-repeat scroll -382px -40px;
 	}
 }

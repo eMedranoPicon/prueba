@@ -127,13 +127,4 @@ $(document).ready(function () {
   });
 
 
-  /******* TIMELINE *********/
-
-
-  //DESPLEGAR DETALLES
-  $('.timeline .fila .button-details')
-  .on('click', function(event) {
-    slideUpDown($(this).closest('.fila').find('.row-detail-container'));  
-  });
-
 });

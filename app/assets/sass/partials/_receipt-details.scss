@@ -1,22 +1,13 @@
-.row-detail-container {
-  width: 426px;
-  position: absolute;
-  background-color: $colorModBack;
-  top: 55px;
-  z-index: 5;
-  border: 1px solid $colorModBorder;
+.receipt-detail-container {
   i {
     display: inline-block;
   }
-  &.right {
-    right: 0;
-  }
   &.slideup {
     @include slideup();
-    border: 0;
   }
   &.slidedown {
     @include slidedown(500px);
+    //overflow-y: auto;
   }
   .link-container {
     a {
@@ -27,7 +18,7 @@
       color: $colorModPrimary;
     }
   }
-  .row-detail-content {
+  .receipt-detail-content {
     text-align: left;
     & > div {
       border-bottom: 1px solid $colorModBorder;
@@ -118,16 +109,6 @@
           padding-left: 8px;
         }
       }
-      .triangle-container{
-        padding-right: 7px;
-        .triangle {
-          @include triangle(5px, 0, 5px, 5px, $colorModPrimary);
-          display: inline-block;
-          &.slidedown {
-            @include triangle(0, 5px, 5px, 5px, $colorModPrimary);
-          }
-        }
-      }
       .icon-container {
         padding: 0;
       }
@@ -165,23 +146,10 @@
         }
       }
     }
-    .alerts-container {
-      position: absolute;
-      display: inline-block;
-      top: 0;
-      background-color: $colorModBack;
-      padding: 0;
-      z-index: 6;
-      &.slideup {
-        @include slideup();
-      }
-      &.slidedown {
-        @include slidedown(500px);
-      }
-    }
     .bottom-container {
       display: table;
       height: 80px;
+      border: 0;
       & > div {
         display: table-cell;
         vertical-align: middle;
@@ -197,22 +165,6 @@
       }
     }
   }
-  .button-module {
-    background-color: transparent;
-    border: 1px solid $black;
-    height: 37px;
-    width: 173px;
-    font-size: 15px;
-    border-radius: 20px;
-    @include transition(all 0.2s);
-    &:hover {
-      border: 0;
-      background-color: $colorModButBack;
-      color: $white;
-    }
-
-  }
-
 
   input.cmn-toggle-round-flat + label:before {
     background-color: $colorModSecond;

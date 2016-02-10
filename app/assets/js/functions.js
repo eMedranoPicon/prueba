@@ -2,10 +2,10 @@
 
 // FUNCTIONS
 function slideUpDown(container) {
-  if ($(container).hasClass("slideup")) {
-    $(container).removeClass("slideup").addClass("slidedown");
+  if (container.hasClass("slideup")) {
+    container.removeClass("slideup").addClass("slidedown");
   } else {
-    $(container).removeClass("slidedown").addClass("slideup");
+    container.removeClass("slidedown").addClass("slideup");
   }
 }
 
@@ -16,4 +16,8 @@ function reverseClass(element, classA, classB) {
   } else {
     $(element).removeClass(classB).addClass(classA);
   }
+}
+
+function readjustHeight(element, height) {
+  element.height = height;
 }
