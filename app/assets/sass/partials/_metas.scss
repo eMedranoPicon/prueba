@@ -9,7 +9,7 @@
     }
   }
 
-  .targets > article {
+  .targets > div {
     &:nth-child(3n+1) {
       padding-left: 0;
     }
@@ -28,7 +28,7 @@
     font-weight: bold;
     text-decoration: none;
     height: 215px;
-    @include box-shadow (0, 1px, 0, $grey800);
+    @include box-shadow-mixin (0, 1px, 0, $grey800);
     @include transition (border 0.2s);
     @include border-radius(3px);
 

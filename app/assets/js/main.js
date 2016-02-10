@@ -4,6 +4,9 @@ $(document).ready(function () {
   // MASK FOR INPUTS
   $(":input").inputmask();
 
+  // INITIALIZE ACCORDION
+  $('#st-accordion').accordionSoft();
+
   // SLIDE UP/DOWN CALENDAR
   $(".calendary-interaction")
     .on('click', function() {
@@ -22,7 +25,7 @@ $(document).ready(function () {
     );
 
   // HOVER EN LOS ICONOS DE LOS PRESUPUESTOS FUTUROS
-  $(".icon-edit, .icon-check-circle") .hover(
+  $(".icon-edit, .check-future, .icon-edit-white") .hover(
     function() {
       $(this).addClass('icon-hover');
     }, function() {
@@ -31,15 +34,15 @@ $(document).ready(function () {
   );
 
   // TRAS MODIFICAR LOS DATOS DE UN PRESUPUESTO FUTURO
-  $('.icon-check-circle').on('click', function(event) {
-    $(this).closest('.flip-container').removeClass('hover').find('.icon-edit').removeClass('icon-edit').addClass('icon-return-circle');
+  $('.check-future').on('click', function(event) {
+    $(this).closest('.flip-container').removeClass('hover').find('.icon-edit').removeClass('icon-edit').addClass('icon-return-circle edit-return');
     event.stopPropagation();
   });
 
   // RESTAURAR EL VALOR POR DEFECTO
-  $(document).on('click', 'i.icon-return-circle', function(event) {
+  $(document).on('click', '.presupuestos i.edit-return', function(event) {
     var id = $(this).data('id');
-    $(this).addClass('icon-edit').removeClass('icon-return-circle');
+    $(this).addClass('icon-edit').removeClass('icon-return-circle edit-return');
     var value = $('#init-value' + id).val().split(',');
     $('#label-input' + id).show();
     $('.value'+id).html(value[0]);
@@ -47,7 +50,7 @@ $(document).ready(function () {
   });
 
   // ACCEDE A LA EDICIÓN DEL PRESUPUESTO FUTURO
-  $(document).on('click', '.icon-edit', function(e) {
+  $(document).on('click', '.presupuestos .icon-edit', function(e) {
     if (!$(this).closest('.flip-container').hasClass("hover")) {
       $(this).closest('.flip-container').addClass("hover");
       var $labelInput = $(this).closest('.flip-container').find(".label-input");
@@ -80,8 +83,7 @@ $(document).ready(function () {
     .one('focus', function() {
       var $labelInput = $('#label-input' + $(this).data('id'));
       var value = $labelInput.find('.value').text() + ',' + $labelInput.find('.decimal').text();
-      $('#init-value' + $(this).data('id')).val(value);
+      $('#init-value' + $(this).data('id')).html(value);
   });
-
 
 });

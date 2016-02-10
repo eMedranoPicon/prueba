@@ -25,14 +25,29 @@
 }
 .icon-edit {
 	background: transparent url("../images/sprite.png") no-repeat scroll -97px -152px;
-  	padding: 2px 12px;
+  	padding: 4px 12px;
 	&.icon-hover {
 		background: transparent url("../images/sprite.png") no-repeat scroll -97px -174px;
 	}
 }
+.icon-edit-white {
+	background: transparent url("../images/sprite.png") no-repeat scroll -352px -3px;
+	padding: 4px 12px;
+	&.icon-hover {
+		background: transparent url("../images/sprite.png") no-repeat scroll -97px -174px;
+	}
+}
+.icon-house {
+	background: transparent url("../images/sprite.png") no-repeat scroll -308px -56px;
+	padding: 11px 14px;
+}
 .icon-house-white {
 	background: transparent url("../images/sprite.png") no-repeat scroll -132px -139px;
 	padding: 15px 17px;
+}
+.icon-house-white-big {
+	background: transparent url("../images/sprite.png") no-repeat scroll -299px -4px;
+	padding: 17px 22px;
 }
 .icon-umbrella-white {
 	background: transparent url("../images/sprite.png") no-repeat scroll -135px -75px;
@@ -53,14 +68,20 @@
 
 .icon-check-circle {
   background: transparent url("../images/sprite.png") no-repeat scroll -135px -3px;
-  padding: 7px 16px;
+  padding: 16px;
 	&.icon-hover {
 		background: transparent url("../images/sprite.png") no-repeat scroll -169px -3px;
 	}
 }
+
+.icon-check-circle-orange {
+	background: transparent url("../images/sprite.png") no-repeat scroll -236px -163px;
+  padding: 16px;
+}
+
 .icon-return-circle {
 	background: transparent url("../images/sprite.png") no-repeat scroll -135px -35px;
-	padding: 8px 16px;
+	padding: 16px;
 	&.icon-hover {
 		background: transparent url("../images/sprite.png") no-repeat scroll -169px -35px;
 	}
@@ -71,6 +92,10 @@
 	&.icon-hover {
 			background: transparent url("../images/sprite.png") no-repeat scroll -138px -168px;
 	}
+	&.small {
+		background: transparent url("../images/sprite.png") no-repeat scroll -311px -92px;
+		padding: 10px 10px;
+	}
 }
 
 .icon-files-add {
@@ -78,8 +103,8 @@
   padding: 17px 30px;
 }
 .icon-warning {
-	background: transparent url("../images/sprite.png") no-repeat scroll -205px -170px;
-	padding: 4px 8px;
+	background: transparent url("../images/sprite.png") no-repeat scroll -205px -175px;
+	padding: 7px 8px;
 }
 .icon-balloon-white {
 	background: transparent url("../images/sprite.png") no-repeat scroll -201px -142px;
@@ -92,4 +117,41 @@
 .icon-calendar-gray {
 	background: transparent url("../images/sprite.png") no-repeat scroll -235px -100px;
 	padding: 21px 28px;
+	&.small {
+		background: transparent url("../images/sprite.png") no-repeat scroll -311px -156px;
+		padding: 10px 10px;
+	}
+}
+
+.icon-arrow-down-white {
+	background: transparent url("../images/sprite.png") no-repeat scroll -383px -5px;
+	padding: 4px 6px;
+}
+
+.icon-pdf {
+	background: transparent url("../images/sprite.png") no-repeat scroll 0px -102px;
+	padding: 23px 21px;
+	&.icon-black {
+		background: transparent url("../images/sprite.png") no-repeat scroll -44px -103px;
+	}
+	&.icon-grey {
+		background: transparent url("../images/sprite.png") no-repeat scroll -88px -103px;
+	}
+}
+
+.icon-gear-round {
+	background: transparent url("../images/sprite.png") no-repeat scroll -311px -123px;
+	padding: 11px 11px;
+}
+.icon-check {
+	background: transparent url("../images/sprite.png") no-repeat scroll -282px -164px;
+	padding: 6px 8px;
+}
+.icon-check-green {
+	background: transparent url("../images/sprite.png") no-repeat scroll -282px -183px;
+	padding: 6px 8px;
+	&.small {
+		background: transparent url("../images/sprite.png") no-repeat scroll -315px -187px;
+		padding: 4px 6px;
+	}
 }

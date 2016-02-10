@@ -1,0 +1,105 @@
+
+<div class="triangle-container">
+  <span class="triangle"></span>
+</div>
+<div class="row-detail-content">
+  <div class="top-container">
+    <div class="text-container">
+      <span class="title">{{ texto }}</span>
+      <div class="numero-recibo-container">
+        <span class="recibo">Nº de recibo: </span><span class="numero">000123456</span>
+      </div>
+      <div class="date-container">
+        <div class="icon-container">
+          <i class="icon-calendar-gray small"></i>
+        </div>
+        <div class="text-date-container">
+          <span class="date">ENE 2015 - FEB 2015</span>
+        </div>
+      </div>
+      <div class="link-container">
+        <a>Ver recibos de este proveedor</a>
+      </div>
+    </div>
+    <div class="icon-container">
+      <i class="icon-pdf icon-grey"></i>
+    </div>
+  </div>
+
+  <div class="element-container slideup">
+    <div class="icon-container">
+      <i class="icon-house"></i>
+    </div>
+    <div class="name-container">
+      <span class="name">Vivienda</span>
+    </div>
+    <div class="triangle-container">
+      <span class="triangle slideup"></span>
+    </div>
+  </div>
+    <div class="subelement-container slideup">
+      <div class="content">
+        <div class="icon-container">
+          <i class="icon-house"></i>
+        </div>
+        <div class="name-container">
+          <span class="name">Vivienda</span>
+        </div>
+        <div class="check-container">
+          <i class="icon-check check"></i>
+        </div>
+      </div>
+    </div>
+
+  <div class="element-container slideup">
+    <div class="icon-container">
+      <i class="icon-calendar-new small"></i>
+    </div>
+    <div class="name-container">
+      <span class="name">Mensual</span>
+    </div>
+    <div class="triangle-container">
+      <span class="triangle slideup"></span>
+    </div>
+  </div>
+    <div class="subelement-container slideup">
+      <div class="content">
+        <div class="icon-container">
+          <i class="icon-calendar-gray small"></i>
+        </div>
+        <div class="name-container">
+          <span class="name">Trimestral</span>
+        </div>
+        <div class="check-container">
+          <i class="icon-check check"></i>
+        </div>
+      </div>
+    </div>
+
+  <div class="element-container-alerts">
+    <div class="switch-container">
+      <input id="cmn-toggle-{{ count }}" class="cmn-toggle cmn-toggle-round-flat" type="checkbox"/>
+      <label for="cmn-toggle-{{ count }}"></label>
+    </div>
+    <div class="name-container">
+      <span class="name">Alertas</span>
+    </div>
+    <div class="icon-container">
+      <i class="icon-gear-round"></i>
+    </div>
+  </div>
+  <div class="alerts-container slideup">
+    {% with counter = count %}
+      {% include '/includes/modules/_alerts.html' %}
+    {% endwith %}
+  </div>
+
+  <div class="bottom-container">
+    <div class="button-container">
+      <button class="btn button-module">Devolver</button>
+    </div>
+    <div class="link-container">
+      <a href="#" class="link">Dar baja del proveedor</a>
+    </div>
+  </div>
+</div>

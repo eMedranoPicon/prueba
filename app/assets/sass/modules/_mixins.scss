@@ -158,7 +158,7 @@
 
 
 // BOX SHADOW
-@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4), $inset: "") {
+@mixin box-shadow-mixin($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4), $inset: "") {
   @if ($inset != "") {
     @include css3-prefix('box-shadow', $inset $x $y $blur $color);
   } @else {
@@ -353,5 +353,24 @@
     border-bottom-color: transparent;
     border-top-color: transparent;
     border-right-color: $colorOverLoaded;
+  }
+}
+
+@mixin triangle($top, $bottom, $left, $right, $color) {
+  border-bottom: $bottom solid transparent;
+  border-top: $top solid transparent;
+  border-right: $right solid transparent;
+  border-left: $left solid transparent;
+  @if $top == 0 {
+    border-bottom-color: $color;
+  }
+  @elseif $bottom == 0 {
+    border-top-color: $color;
+  }
+  @elseif $left == 0 {
+    border-right-color: $color;
+  }
+  @else {
+    border-left-color: $color;
   }
 }

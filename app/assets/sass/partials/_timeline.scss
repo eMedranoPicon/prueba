@@ -1,0 +1,266 @@
+.timeline {
+    font-family: $font;
+    position: relative;
+    ul {
+      padding-left: 0;
+    }
+    i {
+      display: inline-block;
+    }
+    .month {
+      border-bottom: 1px solid $colorTimeLineAccor;
+      font-size: 20px;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      color: $colorTimePrimary;
+      list-style: none;
+      .header-accordion {
+        display: table;
+        cursor: pointer;
+        width: 100%;
+        height: 80px;
+        color: $colorFontTimeline;
+        vertical-align: middle;
+        span {
+          vertical-align: middle;
+          display: table-cell;
+        }
+      }
+    }
+    .hidden {
+      display: none;
+    }
+    .st-content {
+      color: $colorFontTimeline;
+      & > div {
+        float: left;
+        display: block;
+      }
+      .rows-container.container {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .extra-rows-container {
+        height: 50px;
+        width: 100%;
+        display: table;
+        padding-top: 20px;
+        .triangle-container {
+          display: table-cell;
+          .triangle {
+            @include triangle(8px, 0, 8px, 8px, $colorTimeBar);
+          }
+        }
+      }
+    }
+    .header-timeline {
+        position: relative;
+        width: 148px;
+        height: 42px;
+        color: $white;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 12px;
+        font-size: 14px;
+        background-color: $colorTimeSecond;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        @include border-radius(2px);
+        &:before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 62px;
+            border-style: solid;
+            border-width: 12px 13px 0;
+            border-color: $colorTimeSecond transparent;
+        }
+    }
+
+    .fila {
+      position: relative;
+      text-align: center;
+      width: 100%;
+      float: left;
+      height: 65px;
+      margin-left: 0;
+      &.primera {
+        margin-bottom: 25px;
+      }
+      .textTimeline {
+        font-size: 13px;
+        font-weight: normal;
+        padding-top: 15px;
+        padding-left: 30px;
+        text-align: left;
+        &.gasto {
+          padding-left: 0;
+          padding-right: 30px;
+          text-align: right;;
+        }
+      }
+      .movement-gasto {
+        padding-right: 0;
+      }
+      .movement-ingreso {
+        padding-left: 0;
+      }
+      .movement-container {
+        height: 45px;
+        margin-left: 19px;
+        width: 426px;
+        &.left {
+          margin-left: 0px;
+          margin-right: 19px;
+          .content-timeline {
+            &::before {
+                @include triangle(10px, 10px, 10px, 0, $colorTimeTer);
+                left: auto;
+                right: 25px;
+                position: absolute;
+                display: inline-block;
+                content: " ";
+                top: 13px;
+            }
+            &:after {
+                @include triangle(9px, 9px, 9px, 0, $colorTimeCuater);
+                position: absolute;
+                top: 14px;
+                right: 26px;
+                display: inline-block;
+                content: " ";
+                left: auto;
+            }
+          }
+          .button-details {
+            height: 100%;
+            border: 1px solid $colorTimeTer;
+            border-right: none;
+            background: $colorTimePenta;
+          }
+        }
+        .content-timeline {
+          border: 1px solid $colorTimeTer;
+          height: 100%;
+          background-color: $colorTimeCuater;
+          width: 90%;
+          font-family: $fontBold;
+          float: left;
+          display: table;
+          font-size: 14px;
+          padding: 0 20px;
+          &::before {
+              @include triangle(10px, 10px, 0, 10px, $colorTimeTer);
+              left: 25px;
+              right: auto;
+              position: absolute;
+              display: inline-block;
+              content: " ";
+              top: 13px;
+          }
+          &:after {
+              @include triangle(9px, 9px, 0, 9px, $colorTimeCuater);
+              position: absolute;
+              top: 14px;
+              right: auto;
+              display: inline-block;
+              content: " ";
+              left: 26px;
+          }
+          & > div {
+            display: table-cell;
+            vertical-align: middle;
+          }
+          .text-container {
+            text-align: left;
+            font-family: $fontBold;
+            &.gasto {
+              color: $colorTimeTextWarn;
+            }
+          }
+          .price-container {
+            text-align: right;
+            color: $colorTimeIngress;
+            &.gasto {
+              color: $colorTimeWarning;
+            }
+            .number {
+              font-size: 17px;
+            }
+            .decimal {
+              font-size: 12px;
+            }
+          }
+        }
+        .button-details {
+          height: 100%;
+          float: left;
+          width: 10%;
+          border: 1px solid $colorTimeTer;
+          border-left: none;
+          position: relative;
+          background: $colorTimePenta;
+          cursor: pointer;
+          &:hover {
+            background-color: $colorFontTimeline;
+          }
+          .dot {
+            @extend .timelineDot-general;
+            background-color: $colorTimeHexa;
+            height: 3px;
+            width: 3px;
+            top: 48%;
+            left: 10px;
+            &.second {
+              margin-left: 10px;
+            }
+            &.third {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+      .icon-status {
+          float: left;
+          margin-top: 45px;
+          margin-left: 25px;
+      }
+
+      .timelineDot {
+        @extend .timelineDot-general;
+        background-color: $colorTimeIngress;
+        width: 6px;
+        height: 6px;
+        left: 49%;
+        top: 20px;
+        margin-left: 7px;
+        &.gasto {
+          background-color: $colorTimeWarning;
+        }
+      }
+
+      &:last-child {
+          margin-bottom: 20px;
+      }
+    }
+
+    .timelineDot-general {
+      opacity: 1;
+      display: inline-block;
+      position: absolute;
+      @include border-radius(10px);
+    }
+
+    .timelineBar {
+        width: 1px;
+        background-color: $colorTimeBar;
+        display: inline-block;
+        position: absolute;
+        height: 100%;
+        left: 50%;
+    }
+}
