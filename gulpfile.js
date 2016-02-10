@@ -42,10 +42,11 @@ var src_app = './app',
     './bower_components/jquery/dist/jquery.js',
     './bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js',
     './bower_components/jQuery.mmenu/dist/js/jquery.mmenu.min.all.js',
-    './bower_components/jquery-ui/jquery-ui.min.js'
+    './bower_components/jquery-ui/jquery-ui.min.js',
+    './bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js'
   ],
   vendor_css_src = [
-    './bower_components/bootstrap/dist/css/bootstrap.min.css'
+    './bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css'
   ],
   vendor_source_maps = [
     './bower_components/jquery/dist/jquery.min.map',
@@ -95,6 +96,13 @@ gulp.task('sass-min', function() {
     .pipe(minifycss())
     .pipe(gulp.dest(dist_css_dir));
 }).help = 'Compiles, minifies and autoprefixes sass source files.';
+
+
+gulp.task('vendor-css', function() {
+  return gulp.src(vendor_css_src)
+    .pipe(concat('vendor.min.css'))
+    .pipe(gulp.dest(dist_css_dir));
+}).help = 'Concatenates css vendor files.';
 
 
 gulp.task('vendor-scripts', function() {
@@ -197,7 +205,7 @@ gulp.task('connect', function() {
 
 gulp.task('default', function() {
   runSequence(
-    ['old_browsers', 'fonts', 'images', 'jshint', 'sass', 'vendor-scripts', 'scripts', 'jinja'],
+    ['old_browsers', 'fonts', 'images', 'jshint', 'sass', 'vendor-css', 'vendor-scripts', 'scripts', 'jinja'],
     ['watch', 'connect'], // by default test are excluded of default task but it could be included with 'test' task
     function() {
       gulp.src('').pipe(notify({
@@ -212,7 +220,7 @@ gulp.task('default', function() {
 gulp.task('dist', function() {
   runSequence(
     'clean',
-    ['old_browsers', 'jshint-dist', 'sass-min', 'vendor-scripts', 'scripts-min', 'jinja'],
+    ['old_browsers', 'jshint-dist', 'sass-min', 'vendor-css', 'vendor-scripts', 'scripts-min', 'jinja'],
     function() {
       gulp.src('').pipe(notify({
         title: 'Dist',

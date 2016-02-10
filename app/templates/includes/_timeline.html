@@ -1,4 +1,4 @@
-<section id="st-accordion" class="content timeline bg-secondary st-accordion">
+<div id="st-accordion" class="content timeline bg-secondary st-accordion">
 	<ul>
 	{% for MONTH in TIMELINE %}
 		<li class="month">
@@ -62,87 +62,11 @@
 							{% endif %}
 
 							<div class="row-detail-container slideup {% if MOVIMIENTO.GASTO %} right {% endif %}">
-								<div class="triangle-container">
-									<span class="triangle"></span>
-								</div>
-								<div class="row-detail-content">
-									<div class="top-container">
-										<div class="text-container">
-											<span class="title">{{ MOVIMIENTO.TEXT }}</span>
-											<a>Ver recibos de este proveedor</a>
-										</div>
-										<div class="icon-container">
-											<i class="icon-pdf icon-grey"></i>
-										</div>
-									</div>
-
-									<div class="element-container">
-										<div class="icon-container">
-											<i class="icon-house"></i>
-										</div>
-										<div class="name-container">
-											<span class="name">Vivienda</span>
-										</div>
-										<div class="triangle-container">
-											<span class="triangle"></span>
-										</div>
-									</div>
-										<div class="subelement-container slideup">
-											<div class="icon-container">
-												<i class="icon-house"></i>
-											</div>
-											<div class="name-container">
-												<span class="name">Vivienda</span>
-											</div>
-											<div class="check-container">
-												<span class="check"></span>
-											</div>
-										</div>
-
-									<div class="element-container">
-										<div class="icon-container">
-											<i class="icon-calendar-new"></i>
-										</div>
-										<div class="name-container">
-											<span class="name">Mensual</span>
-										</div>
-										<div class="triangle-container">
-											<span class="triangle"></span>
-										</div>
-									</div>
-										<div class="subelement-container slideup">
-											<div class="icon-container">
-												<i class="icon-calendar-new"></i>
-											</div>
-											<div class="name-container">
-												<span class="name">Trimestral</span>
-											</div>
-											<div class="check-container">
-												<span class="check"></span>
-											</div>
-										</div>
-
-									<div class="element-container">
-										<div class="switch-container">
-										</div>
-										<div class="name-container">
-											<span class="name">Alertas</span>
-										</div>
-										<div class="icon-container right">
-											<i class="icon-calendar-new"></i>
-										</div>
-									</div>
-
-									<div class="bottom-container">
-										<div class="button-container">
-											<button class="btn button-devolver">Devolver</button>
-										</div>
-										<div class="link-container">
-											<a href="#" class="link"></a>
-										</div>
-									</div>
-								</div>
+								{% with texto = MOVIMIENTO.TEXT, count = loop.index %}
+							  	{% include '/includes/modules/_receipt_details.html' %}
+								{% endwith %}
 							</div>
+
 				    </div>
 					{% endfor %}
 				</div>
@@ -155,4 +79,4 @@
 		</li>
 	{% endfor %}
 	</ul>
-</section>
+</div>

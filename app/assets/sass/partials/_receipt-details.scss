@@ -1,0 +1,235 @@
+.row-detail-container {
+  width: 426px;
+  position: absolute;
+  background-color: $colorModBack;
+  top: 55px;
+  z-index: 5;
+  border: 1px solid $colorModBorder;
+  i {
+    display: inline-block;
+  }
+  &.right {
+    right: 0;
+  }
+  &.slideup {
+    @include slideup();
+    border: 0;
+  }
+  &.slidedown {
+    @include slidedown(500px);
+  }
+  .link-container {
+    a {
+      font-size: 12px;
+      cursor: pointer;
+      float: left;
+      text-decoration: underline;
+      color: $colorModPrimary;
+    }
+  }
+  .row-detail-content {
+    text-align: left;
+    & > div {
+      border-bottom: 1px solid $colorModBorder;
+      padding-left: 20px;
+      padding-right: 20px;
+      display: table;
+      width: 100%;
+    }
+    .top-container {
+      height: 120px;
+      padding-top: 17px;
+      padding-left: 22px;
+      padding-bottom: 27px;
+      .text-container {
+        color: $colorModPrimary;
+        float: left;
+        width: 85%;
+        & > div, & > span {
+          position: relative;
+          width: 100%;
+          float: left;
+        }
+        .title {
+          font-size: 16px;
+          font-family: $fontBold;
+          width: 100%;
+        }
+        .numero-recibo-container {
+          font-size: 13px;
+          margin-top: 8px;
+          .recibo {
+            font-family: $fontBold;
+          }
+        }
+        .date-container {
+          font-size: 11px;
+          color: $colorModTer;
+          display: table;
+          font-family: $fontBold;
+          margin-top: 10px;
+          margin-bottom: 15px;
+          & > div {
+            display: table-cell;
+            vertical-align: middle;
+          }
+          .icon-container {
+            width: 10px;
+            float: left;
+          }
+          i {
+            display: inline-block;
+            height: 20px;
+          }
+        }
+      }
+      & > .icon-container {
+        float: right;
+        margin-top: 1px;
+      }
+    }
+    .element-container, .subelement-container, .element-container-alerts {
+      height: 52px;
+      font-size: 16px;
+      padding-left: 22px;
+      padding-right: 15px;
+      cursor: pointer;
+    }
+    .element-container, .element-container-alerts {
+      padding-top: 5px;
+      & > div {
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+      }
+      &.slideup {
+        background-color: $colorModBack;
+      }
+      &.slidedown {
+        background-color: $colorModSecond;
+      }
+      .icon-container {
+        width: 6%;
+        padding-right: 8px;
+      }
+      .name-container {
+        width: 95%;
+        .name {
+          padding-left: 8px;
+        }
+      }
+      .triangle-container{
+        padding-right: 7px;
+        .triangle {
+          @include triangle(5px, 0, 5px, 5px, $colorModPrimary);
+          display: inline-block;
+          &.slidedown {
+            @include triangle(0, 5px, 5px, 5px, $colorModPrimary);
+          }
+        }
+      }
+      .icon-container {
+        padding: 0;
+      }
+    }
+    .subelement-container {
+      display: block;
+      border: 0;
+      background-color: $colorModCuat;
+      &.slideup {
+        @include slideup();
+        border: 0;
+      }
+      &.slidedown {
+        @include slidedown(52px);
+        border-bottom: 1px solid $colorModBorder;
+      }
+      .content {
+        display: table;
+        height: 100%;
+        padding-left: 40px;
+        & > div {
+          display: table-cell;
+          vertical-align: middle;
+          height: 100%;
+        }
+      }
+      .icon-container {
+        width: 6%;
+        padding-right: 8px;
+      }
+      .name-container {
+        width: 95%;
+        .name {
+          padding-left: 8px;
+        }
+      }
+    }
+    .alerts-container {
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      background-color: $colorModBack;
+      padding: 0;
+      z-index: 6;
+      &.slideup {
+        @include slideup();
+      }
+      &.slidedown {
+        @include slidedown(500px);
+      }
+    }
+    .bottom-container {
+      display: table;
+      height: 80px;
+      & > div {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .button-container {
+        padding-top: 2px;
+        padding-left: 2px;
+      }
+      .link-container {
+        a {
+          float: right;
+        }
+      }
+    }
+  }
+  .button-module {
+    background-color: transparent;
+    border: 1px solid $black;
+    height: 37px;
+    width: 173px;
+    font-size: 15px;
+    border-radius: 20px;
+    @include transition(all 0.2s);
+    &:hover {
+      border: 0;
+      background-color: $colorModButBack;
+      color: $white;
+    }
+
+  }
+
+
+  input.cmn-toggle-round-flat + label:before {
+    background-color: $colorModSecond;
+  }
+  input.cmn-toggle-round-flat + label:after {
+    background-color: $colorModBack;
+  }
+  input.cmn-toggle-round-flat + label {
+    background-color: $colorModSecond;
+  }
+  input.cmn-toggle-round-flat:checked + label {
+    background-color: $green500;
+  }
+  input.cmn-toggle-round-flat:checked + label:before {
+    background-color: $green500;
+  }
+  input.cmn-toggle-round-flat:checked + label:after {
+    background-color: $white;
+  }
+}

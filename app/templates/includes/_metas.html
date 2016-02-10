@@ -1,10 +1,10 @@
-<section class="container metas">
+<div class="container metas">
 
   <h3>Mis <span class="hightlight">metas</span></h3>
 
   <div class="targets">
     {% for META in METAS %}
-      <article class="col-xs-4">
+      <div class="col-xs-4">
         <a href="javascript:void()" class="target-meta">
           <div class="head-target">
             <div class="container-icon"><div class="img-circle"><i class="{{ META.ICONO }}"></i></div></div>
@@ -34,8 +34,8 @@
             </div>
           </div>
         </a>
-      </article>
+      </div>
     {% endfor %}
   </div>
 
-</section>
+</div>

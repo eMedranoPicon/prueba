@@ -80,6 +80,10 @@
         padding: 15px;
       }
     }
+    .flipper {
+      height: 99.9%;
+      width: 99.9%;
+    }
     .info-general {
       border-bottom: 1px solid $grey850;
       padding: 20px 15px;
@@ -131,6 +135,11 @@
         text-align: right;
         i {
           cursor: pointer;
+          display: inline-block;
+          height: 18px;
+          &.check-future, &.edit-return {
+            height: 30px;
+          }
         }
       }
       .modify-info {
@@ -252,7 +261,7 @@
     .bar-text-container {
       display:inline-block;
       vertical-align: middle;
-      margin-top: 1px;
+      margin-top: 3px;
       margin-left: 10px;
       &.right {
         float: right;

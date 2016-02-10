@@ -1,4 +1,4 @@
-<section class="container presupuestos">
+<div class="container presupuestos">
 
   <h3>Mis <span class="hightlight">presupuestos</span></h3>
 
@@ -92,7 +92,7 @@
 
   <div class="tab-content">
     {% for MES in CALENDARIO %}
-      <article id="section{{ loop.index }}" class="targets tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %}">
+      <div id="section{{ loop.index }}" class="targets tab-pane fade {% if loop.revindex0 == 1 %} in active {% endif %}">
         {% set parentloop = loop %}
         {% for PRESUPUESTO in MES.PRESUPUESTOS %}
           <div class="col-xs-4">
@@ -173,8 +173,8 @@
             </a>
           </div>
         {% endif %}
-      </article>
+      </div>
     {% endfor %}
   </div>
 
-</section>
+</div>

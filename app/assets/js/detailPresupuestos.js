@@ -129,14 +129,11 @@ $(document).ready(function () {
 
   /******* TIMELINE *********/
 
+
   //DESPLEGAR DETALLES
-  $('.timeline .fila .button-details').on('click', function(event) {
-    var element = $(this).closest('.fila').find('.row-detail-container');
-    if (element.hasClass("slideup")) {
-      element.removeClass("slideup").addClass("slidedown");
-    } else {
-      element.removeClass("slidedown").addClass("slideup");
-    }
+  $('.timeline .fila .button-details')
+  .on('click', function(event) {
+    slideUpDown($(this).closest('.fila').find('.row-detail-container'));  
   });
 
 });
