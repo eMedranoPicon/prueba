@@ -42,7 +42,9 @@ $grey550          : #b2b2b2;
 $grey500          : #aeb5bc;
 $grey450          : #959ba2;
 $grey400          : #949494;
+$grey350          : #666f77;
 $grey300          : #556270;
+$grey200          : #4c575f;
 
 //Font
 $font             : AkkuratStd;
@@ -53,10 +55,12 @@ $fontBold         : AkkuratStd-Bold;
 //Metas
 $colorMetaPrimary : $green500;
 
+
 //Presupuestos
 $colorPresPrimary : $orange500;
 $colorPresSecond  : $orange300;
 $colorPresTer	    : $orange800;
+
 
 //Detalles de presupuestos
 $colorDetPrimary  : $blue800;
@@ -65,6 +69,7 @@ $colorDetTer      : $orange450;
 $colorDetCuater   : $white;
 $colorDetPenta    : $blue500;
 $colorDetBackground  : $gray990;
+
 
 //Timeline
 $colorFontTimeline  : $blue300;
@@ -81,6 +86,7 @@ $colorTimeWarning   : $red500;
 $colorTimeLineAccor : $grey835;
 $colorTimeBack      : $gray1000;
 
+
 //Modules
 $colorModPrimary    : $blue300;
 $colorModSecond     : $grey660;
@@ -91,3 +97,13 @@ $colorModBack       : $gray1000;
 $colorModBorder     : $grey840;
 $colorModBorderInput: $grey825;
 $colorModButBack    : $green500;
+
+
+//Concrete
+$colorConPrimary     : $blue800;
+$colorConSecond      : $orange400;
+$colorConTer         : $grey350;
+$colorConCuater      : $white;
+$colorConPenta       : $blue500;
+$colorConBackground  : $gray990;
+$colorConBorder      : $grey200;

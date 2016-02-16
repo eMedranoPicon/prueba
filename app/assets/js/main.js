@@ -7,6 +7,11 @@ $(document).ready(function () {
   // INITIALIZE ACCORDION
   $('#st-accordion').accordionSoft();
 
+  // INITIALIZE PIE CHART
+  if($('.pie-chart').length)
+    $( pieChart );
+
+
   // SLIDE UP/DOWN CALENDAR
   $(".calendary-interaction")
     .on('click', function() {

@@ -3,7 +3,7 @@
     @include slideup();
   }
   &.slidedown {
-    @include slidedown(400px);
+    @include slidedown(410px);
   }
   .devolver-baja-module-content {
     font-size: 13px;

@@ -1,0 +1,22 @@
+<div class="detail-charts">
+  <div class="charts-container container">
+    <div class="pie-chart-container">
+      <div class="pie-chart">
+        <canvas class="chart" width="192" height="192"></canvas>
+        <div class="icons-container">
+
+        </div>
+        <table class="chartData">
+          {% for PRESUPUESTO in CALENDARIO[0].PRESUPUESTOS %}
+            <tr>
+              <td><i class="{{ PRESUPUESTO.ICONO_TARTA }}"></i></td>
+              <td>{{ PRESUPUESTO.PREVISTO }}</td>
+              <td>{{ PRESUPUESTO.GASTADO }}</td>
+              <td><i class="{{ PRESUPUESTO.ICONO_TARTA_SELECCION }}"></i></td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

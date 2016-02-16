@@ -1,6 +1,7 @@
 <div id="st-accordion" class="content timeline bg-secondary st-accordion">
 	<ul>
 	{% for MONTH in TIMELINE %}
+		{% set outer_loop = loop %}
 		<li class="month">
 			<div class="header-accordion">
 				<span>{{ MONTH.MES }}</span>
@@ -62,14 +63,22 @@
 							{% endif %}
 
 							<div class="module modules-container slideup {% if MOVIMIENTO.GASTO %} right {% endif %}">
-								<div class="module-content receipt-detail-container slidedown">
-									{% with texto = MOVIMIENTO.TEXT, count = loop.index %}
-								  	{% include '/includes/modules/_receipt_details.html' %}
-									{% endwith %}
-								</div>
+								{% if not MOVIMIENTO.PRESTAMO %}
+									<div class="module-content receipt-detail-container slidedown">
+										{% with texto = MOVIMIENTO.TEXT, count = loop.index, outer_count = outer_loop.index %}
+									  	{% include '/includes/modules/_receipt_details.html' %}
+										{% endwith %}
+									</div>
+								{% else %}
+									<div class="module-content prestamo-detail-container slidedown">
+										{% with texto = MOVIMIENTO.TEXT, count = loop.index, outer_count = outer_loop.index %}
+									  	{% include '/includes/modules/_prestamo_details.html' %}
+										{% endwith %}
+									</div>
+								{% endif %}
 
-								<div class="module-content alerts-container slideup">
-									{% with count = loop.index %}
+								<div class="module-content alerts-container slideup {% if MOVIMIENTO.PRESTAMO %} prestamo {% endif %}">
+									{% with counter = loop.index, outer_counter = outer_loop.index %}
 							      {% include '/includes/modules/_alerts.html' %}
 							    {% endwith %}
 							  </div>

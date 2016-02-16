@@ -1,0 +1,49 @@
+<div class="otros-presupuestos">
+  <div class="container otros presupuestos">
+    <h3>Otros <span class="hightlight">presupuestos</span></h3>
+    <div class="tab-content">
+      {% set MES = CALENDARIO[0] %}
+      <div class="targets tab-pane fade in active">
+        {% set parentloop = loop %}
+        {% for PRESUPUESTO in MES.PRESUPUESTOS %}
+          <div class="col-xs-4">
+            <a href="javascript:void(0);" class="target-presupuesto">
+              <div class="info-general">
+                <div class="container-icon"><div class="img-circle"><i class="{{ PRESUPUESTO.ICONO_TARJETA }}"></i></div></div>
+                <div class="info"><h5>{{ PRESUPUESTO.TITLE }}</h5><div class="value">{{ PRESUPUESTO.PREVISTO }}<span class="decimal">,00</span> €</div></div>
+              </div>
+              <div class="data-progress">
+                {% if PRESUPUESTO.PORCENTAJE <= 100 %}
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{{ PRESUPUESTO.PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ PRESUPUESTO.PORCENTAJE }}%"></div>
+                    {% if PRESUPUESTO.PORCENTAJE > 0 %}
+                      <span class="triangulo_izq"></span>
+                    {% endif %}
+                  </div>
+                {% else %}
+                  {% if (PRESUPUESTO.PORCENTAJE - 200) >= 0 %}
+                    {% set value = 0 %}
+                    {% set width = 100 %}
+                  {% else %}
+                    {% set value = (200 - PRESUPUESTO.PORCENTAJE) %}
+                    {% set width = (PRESUPUESTO.PORCENTAJE - 100) %}
+                  {% endif %}
+                  <div class="progress over-loaded">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{{ value }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ value }}%"></div>
+                  </div>
+                  <div class="line-container">
+                    <div class="dotted-line" style="width: {{ width }}%"></div>
+                  </div>
+                  <div class="bar-text-container">
+                    <div class="value"><strong>{{ PRESUPUESTO.DIFERENCIA }}<span class="decimal">,00</span>€</strong></div>
+                  </div>
+                {% endif %}
+                <div class="value"><strong>{{ PRESUPUESTO.GASTADO }}<span class="decimal">,00</span>€</strong></div>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

@@ -11,11 +11,17 @@ $(document).ready(function () {
   // DESPLEGAR DETALLES
   $('.timeline .fila .button-details')
   .on('click', function(event) {
+    var elems = $(this).closest('.container.st-content').find('.modules-container');
+    var thisElem = $(this).closest('.fila').find('.modules-container');
+    for(var e=0; e < elems.length; e++){
+      if($(elems[e]).hasClass('slidedown') && !$(elems[e]).is(thisElem))
+        slideUpDown($(elems[e]));
+    }
     slideUpDown($(this).closest('.fila').find('.modules-container'));
   });
 
   // SLIDE UP/DOWN SUBELEMENT
-  $(".receipt-detail-content .element-container")
+  $(".receipt-detail-content .element-container, .modules-container .prestamo-detail-content .element-container")
     .on('click', function() {
       slideUpDown($(this));
       slideUpDown($(this).find('.triangle'));
@@ -23,7 +29,7 @@ $(document).ready(function () {
     });
 
   // CHANGE SUBELEMENT CHECK
-  $(".receipt-detail-content .subelement-container .content")
+  $(".receipt-detail-content .subelement-container .content, .modules-container .prestamo-detail-content .subelement-container .content")
     .on('click', function() {
       var element = $(this).find('.check');
       reverseClass(element, 'icon-check', 'icon-check-green');
@@ -32,18 +38,28 @@ $(document).ready(function () {
 
   // MODULE ALERTS
   // SLIDE UP/DOWN ALERTS
-  $(".receipt-detail-content .element-container-alerts")
+  $(".receipt-detail-content .element-container-alerts, .prestamo-detail-container .element-container-alerts")
     .on('click', function() {
       var elem = $(this).closest('.fila').find('.alerts-container');
       changeModuleContainerHeight($(this), elem.css('height'));
-      slideUpDown($(this).closest('.fila').find('.receipt-detail-container'));
+      if($(this).is('.receipt-detail-content .element-container-alerts'))
+        slideUpDown($(this).closest('.fila').find('.receipt-detail-container'));
+      else {
+        slideUpDown($(this).closest('.fila').find('.prestamo-detail-container'));
+      }
       slideUpDown(elem);
     });
 
   // RETURN TO PRINCIPAL
-  $(".alerts-container .button-module")
+  $(".alerts-container .button-module, .alerts-container.prestamo .button-module")
     .on('click', function() {
-      var elem = $(this).closest('.fila').find('.receipt-detail-container');
+      var elem;
+      if($(this).is('.alerts-container.prestamo .button-module')){
+        elem = $(this).closest('.fila').find('.prestamo-detail-container');
+      }
+      else {
+        elem = $(this).closest('.fila').find('.receipt-detail-container');
+      }
       changeModuleContainerHeight($(this), elem.css('height'));
       slideUpDown($(this).closest('.fila').find('.alerts-container'));
       slideUpDown(elem);
@@ -63,6 +79,8 @@ $(document).ready(function () {
       else {
         elem = $(this).closest('.fila').find('.devolver-baja-container.baja');
       }
+      if(!elem.find('.warning-container').hasClass('hidden'))
+        elem.find('.warning-container').addClass('hidden');
       slideUpDown($(this).closest('.fila').find('.receipt-detail-container'));
       slideUpDown(elem);
       changeModuleContainerHeight($(this), elem.css('height')+90);
@@ -86,12 +104,8 @@ $(document).ready(function () {
         countDevBaja++;
       }
       else {
-        countDevBaja = 0;
         var elem = $(this).closest('.fila').find('.receipt-detail-container');
         var warning = $(this).closest('.devolver-baja-module-content').find('.warning-container');
-
-        if(!warning.hasClass('hidden'))
-          warning.addClass('hidden');
 
         slideUpDown($(this).closest('.devolver-baja-container'));
         slideUpDown(elem);
@@ -102,16 +116,21 @@ $(document).ready(function () {
   // CANCEL
   $(".devolver-baja-module-content .cancel")
     .on('click', function() {
-        countDevBaja = 0;
         var elem = $(this).closest('.fila').find('.receipt-detail-container');
         var warning = $(this).closest('.devolver-baja-module-content').find('.warning-container');
-
-        if(!warning.hasClass('hidden'))
-          warning.addClass('hidden');
 
         slideUpDown($(this).closest('.devolver-baja-container'));
         slideUpDown(elem);
         changeModuleContainerHeight($(this), elem.css('height'));
+    });
+
+
+  // MODULE PRESTAMO
+  // AMORTIZAR PRESTAMO
+  $(".modules-container .prestamo-detail-content .button-module.prestamo")
+    .on('click', function() {
+        var elem = $(this).closest('.fila').find('.modules-container');
+        slideUpDown(elem);
     });
 
 });

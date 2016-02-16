@@ -5,7 +5,6 @@ def get_detail():
 				"TOTAL_GASTADO": "480",
 				"TOTAL_PRESUPUESTADO": "1.760",
 				"TOTAL_PORCENTAJE": 40,
-				"MES_SIGUIENTE": 600,
               	"LBL_MES": "SEP",
 				"MES_COMPLETO": "Septiembre",
 				"MODIFICADO": False,
@@ -13,148 +12,106 @@ def get_detail():
 					{
 						"TITLE": "Vivienda",
 						"ICONO": "icon-house-white-big",
-						"ICONO_TARTA":"icon-house-white",
-						"ICONO_TARTA_SELECCION": "icon-house-big",
-						"ICONO_TARJETA": "icon-house-white",
 						"PREVISTO": 500,
 						"PREVISTO_DECIMAL": 55,
 						"GASTADO": 100,
 						"GASTADO_DECIMAL": 55,
 						"DIFERENCIA": 0,
 						"PORCENTAJE": 20,
-						"MES_SIGUIENTE": 600,
-						"TIP": True
-					},
-					{
-						"TITLE": "Formación",
-						"ICONO": "icon-paper-white",
-						"ICONO_TARTA":"icon-paper-orange",
-						"ICONO_TARTA_SELECCION": "icon-paper-orange",
-						"ICONO_TARJETA": "icon-paper-white",
-						"PREVISTO": 195,
-						"PREVISTO_DECIMAL": "00",
-						"GASTADO": 165,
-						"GASTADO_DECIMAL": "00",
-						"DIFERENCIA": 1500,
-						"PORCENTAJE": 250,
-						"MES_SIGUIENTE": 600,
-						"TIP": True
-					},
-					{
-						"TITLE": "Tarjeta",
-						"ICONO": "icon-card-white",
-						"ICONO_TARTA":"icon-card-orange",
-						"ICONO_TARTA_SELECCION": "icon-card-white",
-						"ICONO_TARJETA": "icon-card-white",
-						"PREVISTO": 600,
-						"PREVISTO_DECIMAL": "05",
-						"GASTADO": 100,
-						"GASTADO_DECIMAL": "00",
-						"DIFERENCIA": 40,
-						"PORCENTAJE": 140,
-						"MES_SIGUIENTE": 600,
-						"TIP": True
-					},
-					{
-						"TITLE": "Seguros",
-						"ICONO": "icon-umbrella-white",
-						"ICONO_TARTA":"icon-umbrella-orange",
-						"ICONO_TARTA_SELECCION": "icon-umbrella-white",
-						"ICONO_TARJETA": "icon-umbrella-white",
-						"PREVISTO": 600,
-						"PREVISTO_DECIMAL": "00",
-						"GASTADO": 1300,
-						"GASTADO_DECIMAL": "00",
-						"DIFERENCIA": 1500,
-						"PORCENTAJE": 250,
-						"MES_SIGUIENTE": 600,
-						"TIP": True
-					},
-					{
-						"TITLE": "Otros",
-						"ICONO": "icon-balloon-small-white",
-						"ICONO_TARTA":"icon-balloon-small-orange",
-						"ICONO_TARTA_SELECCION": "icon-balloon-small-white",
-						"ICONO_TARJETA": "icon-balloon-small-white",
-						"PREVISTO": 370,
-						"PREVISTO_DECIMAL": "00",
-						"GASTADO": 170,
-						"GASTADO_DECIMAL": "00",
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 100,
-						"MES_SIGUIENTE": 600,
-						"TIP": False
-					},
-				]
-        	},
-			{
-				"TOTAL_GASTADO": "2.115",
-				"TOTAL_PRESUPUESTADO": "1.850",
-				"TOTAL_PORCENTAJE": 114.32,
-				"MES_SIGUIENTE": 600,
-            	"LBL_MES": "OCT",
-				"MES_COMPLETO": "Octubre",
-				"MODIFICADO": False,
-				"PRESUPUESTOS": [
-					{
-						"TITLE": "Vivienda",
-						"ICONO": "icon-house-white-big",
-						"PREVISTO": 500,
-						"PREVISTO_DECIMAL": 55,
-						"GASTADO": 100,
-						"GASTADO_DECIMAL": 55,
-						"DIFERENCIA": 0,
-						"PORCENTAJE": 20,
-						"MES_SIGUIENTE": 600,
 						"TIP": True
 					},
 					{
 						"TITLE": "Colegio",
 						"ICONO": "icon-book-white",
-						"PREVISTO": 100,
+						"PREVISTO": "100",
 						"PREVISTO_DECIMAL": "00",
-						"GASTADO": 100,
+						"GASTADO": "100",
 						"GASTADO_DECIMAL": "00",
 						"DIFERENCIA": 0,
 						"PORCENTAJE": 100,
-						"MES_SIGUIENTE": 600,
 						"TIP": False
 					},
 					{
 						"TITLE": "Tarjeta",
 						"ICONO": "icon-card-white",
-						"PREVISTO": 60,
+						"PREVISTO": "60",
 						"PREVISTO_DECIMAL": "05",
-						"GASTADO": 100,
+						"GASTADO": "100",
 						"GASTADO_DECIMAL": "00",
 						"DIFERENCIA": 40,
 						"PORCENTAJE": 140,
-						"MES_SIGUIENTE": 600,
 						"TIP": True
 					},
 					{
 						"TITLE": "Seguros",
 						"ICONO": "icon-umbrella-white",
-						"PREVISTO": 1000,
-						"PREVISTO_DECIMAL": "00",
-						"GASTADO": 2500,
-						"GASTADO_DECIMAL": "00",
-						"DIFERENCIA": 1500,
-						"PORCENTAJE": 250,
-						"MES_SIGUIENTE": 600,
-						"TIP": True
-					},
-					{
-						"TITLE": "Cuota préstamo",
-						"ICONO": "icon-hand-white",
 						"PREVISTO": "1000",
 						"PREVISTO_DECIMAL": "00",
 						"GASTADO": "2500",
 						"GASTADO_DECIMAL": "00",
 						"DIFERENCIA": 1500,
 						"PORCENTAJE": 250,
-						"MES_SIGUIENTE": 600,
 						"TIP": True
+					},
+					{
+						"TITLE": "Cuota préstamo",
+						"ICONO": "icon-hand-white",
+						"PREVISTO": "100",
+						"GASTADO": "70",
+						"DIFERENCIA": 0,
+						"PORCENTAJE": 70,
+						"TIP": True
+					}
+				]
+        	},
+			{
+				"TOTAL_GASTADO": "2.115",
+				"TOTAL_PRESUPUESTADO": "1.850",
+				"TOTAL_PORCENTAJE": 114.32,
+            	"LBL_MES": "OCT",
+				"MES_COMPLETO": "Octubre",
+				"MODIFICADO": False,
+				"PRESUPUESTOS": [
+					{
+						"TITLE": "Vivienda",
+						"ICONO": "icon-house-white",
+						"PREVISTO": "640",
+						"GASTADO": "610",
+						"DIFERENCIA": 30,
+						"PORCENTAJE": 110
+
+					},
+					{
+						"TITLE": "Colegio",
+						"ICONO": "icon-book-white",
+						"PREVISTO": "300",
+						"GASTADO": "150",
+						"DIFERENCIA": 50,
+						"PORCENTAJE": 50
+					},
+					{
+						"TITLE": "Tarjeta",
+						"ICONO": "icon-card-white",
+						"PREVISTO": "245",
+						"GASTADO": "490",
+						"DIFERENCIA": 245,
+						"PORCENTAJE": 200
+					},
+					{
+						"TITLE": "Seguros",
+						"ICONO": "icon-umbrella-white",
+						"PREVISTO": "395",
+						"GASTADO": "595",
+						"DIFERENCIA": 200,
+						"PORCENTAJE": 180
+					},
+					{
+						"TITLE": "Cuota préstamo",
+						"ICONO": "icon-hand-white",
+						"PREVISTO": "270",
+						"GASTADO": "270",
+						"DIFERENCIA": 0,
+						"PORCENTAJE": 100
 					}
 				]
         	},
@@ -162,7 +119,6 @@ def get_detail():
 				"TOTAL_GASTADO": "860",
 				"TOTAL_PRESUPUESTADO": "1.830",
 				"TOTAL_PORCENTAJE": 47,
-				"MES_SIGUIENTE": 600,
               	"LBL_MES": "NOV",
 				"MES_COMPLETO": "Noviembre",
 				"MODIFICADO": False,
@@ -173,8 +129,7 @@ def get_detail():
 						"PREVISTO": "600",
 						"GASTADO": "550",
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 90,
-						"MES_SIGUIENTE": 600,
+						"PORCENTAJE": 90
 
 					},
 					{
@@ -183,8 +138,7 @@ def get_detail():
 						"PREVISTO": "500",
 						"GASTADO": "10",
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 2,
-						"MES_SIGUIENTE": 600,
+						"PORCENTAJE": 2
 					},
 					{
 						"TITLE": "Tarjeta",
@@ -192,8 +146,7 @@ def get_detail():
 						"PREVISTO": "500",
 						"GASTADO": "100",
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 20,
-						"MES_SIGUIENTE": 600,
+						"PORCENTAJE": 20
 					},
 					{
 						"TITLE": "Seguros",
@@ -201,8 +154,7 @@ def get_detail():
 						"PREVISTO": "50",
 						"GASTADO": "100",
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 150,
-						"MES_SIGUIENTE": 600,
+						"PORCENTAJE": 150
 					},
 					{
 						"TITLE": "Cuota préstamo",
@@ -210,147 +162,206 @@ def get_detail():
 						"PREVISTO": "180",
 						"GASTADO": "100",
 						"DIFERENCIA": 80,
-						"PORCENTAJE": 180,
-						"MES_SIGUIENTE": 600,
+						"PORCENTAJE": 180
 					}
 				]
           	}
 		],
 
 		"TIMELINE": [
-        	{
-				"MES":	"Septiembre",
+         	{
+				"MES":	"2015",
+				"ICONO": "icon-house-white",
+				"NUMBER_ANYO": "1.290",
+				"DECIMAL_ANYO": "99",
+				"NUMBER_MES": "50",
+				"DECIMAL_MES": "15",
 				"MOVIMIENTOS": [
 					{
 						"TEXT":		"Tagus Agua",
 						"GASTO":	True,
 						"NUMBER":	50,
 						"DECIMAL":	15,
-						"DATE":		"30/08/2015",
-						"PRESTAMO": False
+						"DATE":		"30/08/2015"
 					},
 					{
 						"TEXT":		"Devolución recibo Teléfono",
 						"GASTO":	False,
 						"NUMBER":	50,
 						"DECIMAL":	37,
-						"DATE":		"29/08/2015",
-						"PRESTAMO": True
+						"DATE":		"29/08/2015"
 					},
 					{
 						"TEXT":		"Teléfono",
 						"GASTO":	True,
 						"NUMBER":	50,
 						"DECIMAL":	37,
-						"DATE":		"26/08/2015",
-						"PRESTAMO": False
+						"DATE":		"26/08/2015"
 					},
 					{
 						"TEXT":		"Recibo domiciliado",
 						"GASTO":	True,
 						"NUMBER":	35,
 						"DECIMAL":	15,
-						"DATE":		"20/08/2015",
-						"PRESTAMO": True
+						"DATE":		"20/08/2015"
 					},
 					{
 						"TEXT":		"IBI Impuestos",
 						"GASTO":	True,
 						"NUMBER":	24,
 						"DECIMAL":	15,
-						"DATE":		"15/08/2015",
-						"PRESTAMO": True
+						"DATE":		"15/08/2015"
 					},
 					{
 						"TEXT":		"Gas Natural",
 						"GASTO":	True,
 						"NUMBER":	32,
 						"DECIMAL":	90,
-						"DATE":		"05/08/2015",
-						"PRESTAMO": False
+						"DATE":		"05/08/2015"
 					}
 				]
           	},
           	{
-				"MES":	"Agosto",
+				"MES":	"2014",
 				"MOVIMIENTOS": [
 					{
 						"TEXT":		"Tagus Agua",
 						"GASTO":	True,
 						"NUMBER":	50,
 						"DECIMAL":	15,
-						"DATE":		"30/08/2015",
-						"PRESTAMO": False
-					},
-					{
-						"TEXT":		"IBI Impuestos",
-						"GASTO":	True,
-						"NUMBER":	24,
-						"DECIMAL":	15,
-						"DATE":		"15/08/2015",
-						"PRESTAMO": False
-					},
-					{
-						"TEXT":		"Gas Natural",
-						"GASTO":	True,
-						"NUMBER":	32,
-						"DECIMAL":	90,
-						"DATE":		"05/08/2015",
-						"PRESTAMO": False
-					}
-				]
-			},
-			{
-				"MES":	"Julio",
-				"MOVIMIENTOS": [
-					{
-						"TEXT":		"Tagus Agua",
-						"GASTO":	True,
-						"NUMBER":	50,
-						"DECIMAL":	15,
-						"DATE":		"30/08/2015",
-						"PRESTAMO": False
-					},
-					{
-						"TEXT":		"IBI Impuestos",
-						"GASTO":	True,
-						"NUMBER":	24,
-						"DECIMAL":	15,
-						"DATE":		"15/08/2015",
-						"PRESTAMO": False
-					},
-					{
-						"TEXT":		"Gas Natural",
-						"GASTO":	True,
-						"NUMBER":	32,
-						"DECIMAL":	90,
-						"DATE":		"05/08/2015",
-						"PRESTAMO": False
-					}
-				]
-        	},
-			{
-				"MES":	"Junio",
-				"MOVIMIENTOS": [
-					{
-						"TEXT":		"Tagus Agua",
-						"GASTO":	True,
-						"NUMBER":	50,
-						"DECIMAL":	15,
-						"DATE":		"30/08/2015",
-						"PRESTAMO": False
+						"DATE":		"30/08/2015"
 					},
 					{
 						"TEXT":		"Devolución recibo Teléfono",
 						"GASTO":	False,
 						"NUMBER":	50,
 						"DECIMAL":	37,
-						"DATE":		"29/08/2015",
-						"PRESTAMO": False
+						"DATE":		"29/08/2015"
+					},
+					{
+						"TEXT":		"Teléfono",
+						"GASTO":	True,
+						"NUMBER":	50,
+						"DECIMAL":	37,
+						"DATE":		"26/08/2015"
+					},
+					{
+						"TEXT":		"Recibo domiciliado",
+						"GASTO":	True,
+						"NUMBER":	35,
+						"DECIMAL":	15,
+						"DATE":		"20/08/2015"
+					},
+					{
+						"TEXT":		"IBI Impuestos",
+						"GASTO":	True,
+						"NUMBER":	24,
+						"DECIMAL":	15,
+						"DATE":		"15/08/2015"
+					},
+					{
+						"TEXT":		"Gas Natural",
+						"GASTO":	True,
+						"NUMBER":	32,
+						"DECIMAL":	90,
+						"DATE":		"05/08/2015"
 					}
-
 				]
-        	},
-    	]
+          	},
+			{
+				"MES":	"2013",
+				"MOVIMIENTOS": [
+					{
+						"TEXT":		"Tagus Agua",
+						"GASTO":	True,
+						"NUMBER":	50,
+						"DECIMAL":	15,
+						"DATE":		"30/08/2015"
+					},
+					{
+						"TEXT":		"Devolución recibo Teléfono",
+						"GASTO":	False,
+						"NUMBER":	50,
+						"DECIMAL":	37,
+						"DATE":		"29/08/2015"
+					},
+					{
+						"TEXT":		"Teléfono",
+						"GASTO":	True,
+						"NUMBER":	50,
+						"DECIMAL":	37,
+						"DATE":		"26/08/2015"
+					},
+					{
+						"TEXT":		"Recibo domiciliado",
+						"GASTO":	True,
+						"NUMBER":	35,
+						"DECIMAL":	15,
+						"DATE":		"20/08/2015"
+					},
+					{
+						"TEXT":		"IBI Impuestos",
+						"GASTO":	True,
+						"NUMBER":	24,
+						"DECIMAL":	15,
+						"DATE":		"15/08/2015"
+					},
+					{
+						"TEXT":		"Gas Natural",
+						"GASTO":	True,
+						"NUMBER":	32,
+						"DECIMAL":	90,
+						"DATE":		"05/08/2015"
+					}
+				]
+          	},
+			{
+				"MES":	"2012",
+				"MOVIMIENTOS": [
+					{
+						"TEXT":		"Tagus Agua",
+						"GASTO":	True,
+						"NUMBER":	50,
+						"DECIMAL":	15,
+						"DATE":		"30/08/2015"
+					},
+					{
+						"TEXT":		"Devolución recibo Teléfono",
+						"GASTO":	False,
+						"NUMBER":	50,
+						"DECIMAL":	37,
+						"DATE":		"29/08/2015"
+					},
+					{
+						"TEXT":		"Teléfono",
+						"GASTO":	True,
+						"NUMBER":	50,
+						"DECIMAL":	37,
+						"DATE":		"26/08/2015"
+					},
+					{
+						"TEXT":		"Recibo domiciliado",
+						"GASTO":	True,
+						"NUMBER":	35,
+						"DECIMAL":	15,
+						"DATE":		"20/08/2015"
+					},
+					{
+						"TEXT":		"IBI Impuestos",
+						"GASTO":	True,
+						"NUMBER":	24,
+						"DECIMAL":	15,
+						"DATE":		"15/08/2015"
+					},
+					{
+						"TEXT":		"Gas Natural",
+						"GASTO":	True,
+						"NUMBER":	32,
+						"DECIMAL":	90,
+						"DATE":		"05/08/2015"
+					}
+				]
+          	},
+      	]
 
 	}
