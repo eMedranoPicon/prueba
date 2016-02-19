@@ -4,9 +4,8 @@
       <div class="pie-chart">
         <canvas class="chart" width="192" height="192"></canvas>
         <div class="icons-container">
-
         </div>
-        <table class="chartData">
+        <table id="pieChartData" class="chartData">
           {% for PRESUPUESTO in CALENDARIO[0].PRESUPUESTOS %}
             <tr>
               <td><i class="{{ PRESUPUESTO.ICONO_TARTA }}"></i></td>
@@ -17,6 +16,42 @@
           {% endfor %}
         </table>
       </div>
+      <div class="legend-container">
+        <div class="previsto-content">
+          <span class="circulo"></span><span class="text">Gasto Previsto</span>
+        </div>
+        <div class="gastado-content">
+          <span class="circulo"></span><span class="text">Gastado</span>
+        </div>
+      </div>
+    </div>
+    <div class="point-chart-container">
+      <div id="point-chart" class="point-chart">
+
+      </div>
+      <div class="point-chart-header">
+        <div class="icon-container">
+          <i class="icon-house"></i>
+        </div>
+        <div class="expected-container">
+          <span class="circulo expected"></span><span class="text">Presupuestos Mensuales</span>
+        </div>
+        <div class="spent-container">
+          <span class="circulo spent"></span><span class="text">Gasto Real</span>
+        </div>
+        <div class="future-container">
+          <span class="circulo future"></span><span class="text">Previsión futuro</span>
+        </div>
+      </div>
+      <table id="pointChartData" class="chartData">
+        {% for MES in POINT_CHART %}
+          <tr>
+            <td>{{ MES.MES }}</td>
+            <td>{{ MES.PREVISTO }}</td>
+            <td>{{ MES.GASTADO }}</td>
+          </tr>
+        {% endfor %}
+      </table>
     </div>
   </div>
 </div>

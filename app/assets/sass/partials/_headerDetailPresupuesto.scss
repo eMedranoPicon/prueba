@@ -389,6 +389,10 @@
           vertical-align: middle;
           padding-top: 4px;
         }
+        &:hover {
+          color: darken($colorDetCuater, 10%);
+          border-color: darken($colorDetCuater, 10%);
+        }
       }
     }
   }

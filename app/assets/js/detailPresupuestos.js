@@ -135,4 +135,53 @@ $(document).ready(function () {
   });
 
 
+
+  /************************************************
+  ***************** PROVEEDORES *******************
+  *************************************************/
+
+  // SLIDE UP/DOWN CONTENIDO
+  $(".detail-proveedores .proveedores-header > .dot-container, .detail-proveedores .proveedores-content .icon-ex-container i")
+    .on('click', function() {
+      var $section = $(this).closest('.proveedores-container').find('.proveedores-content');
+      var $box = $section.find('.elements-box');
+      var height = parseInt($box.css('height').split('px')[0]) + 100;
+      var $dot = $('.detail-proveedores .proveedores-header > .dot-container');
+      if ($section.hasClass("slideup")) {
+        $section.css('max-height', height+'px');
+        $section.removeClass("slideup").addClass("slidedown");
+        $dot.addClass('ocult');
+      } else {
+        var $elems = $(this).closest('.proveedores-content').find('.module');
+        for(var e=0; e < $elems.length; e++){
+          if($($elems[e]).hasClass('slidedown')){
+            slideUpDown($($elems[e]));
+            slideUpDown($($elems[e]).find('.module-content'));
+          }
+        }
+        $section.css('max-height', 0);
+        $section.removeClass("slidedown").addClass("slideup");
+        $dot.removeClass('ocult');
+      }
+    });
+
+
+  // SLIDE UP/DOWN ALERTS
+  $(".detail-proveedores .proveedores-content i," +
+    ".detail-proveedores .proveedores-content .alerts-module-content .button-module")
+    .on('click', function() {
+      var $thisElem = $(this).closest('.element-container').find('.module');
+      var $thisElem2 = $thisElem.find('.module-content');
+      var $elems = $(this).closest('.elements-box').find('.module');
+      for(var e=0; e < $elems.length; e++){
+        if($($elems[e]).hasClass('slidedown') && !$($elems[e]).is($thisElem)){
+          slideUpDown($($elems[e]));
+          slideUpDown($($elems[e]).find('.module-content'));
+        }
+
+      }
+      slideUpDown($thisElem);
+      slideUpDown($thisElem2);
+    });
+
 });

@@ -3,6 +3,7 @@
   {% set MES_SIG = CALENDARIO[1] %}
   {% for PRESUPUESTO in MES.PRESUPUESTOS %}
     {% set PRESUPUESTO_SIG = MES_SIG.PRESUPUESTOS[loop.index-1] %}
+    {% set PORCENTAJE = (PRESUPUESTO.GASTADO / PRESUPUESTO.PREVISTO) * 100 %}
     {% set PORC = 15 %}
     <div id="section-header{{ loop.index }}" class="section-header container {% if loop.index == 1 %} actived {% endif %}">
 
@@ -58,13 +59,13 @@
         </div>
 
         <div class="bar-container">
-          {% if PRESUPUESTO.PORCENTAJE <= 100 %}
-            {% if PRESUPUESTO.PORCENTAJE == 100 %}
+          {% if PORCENTAJE <= 100 %}
+            {% if PORCENTAJE == 100 %}
               <span class="triangulo_izq full"></span>
             {% endif %}
             <div class="progress border-radius-less">
-              <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ PRESUPUESTO.PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ PRESUPUESTO.PORCENTAJE }}%"></div>
-              {% if PRESUPUESTO.PORCENTAJE > 0 and PRESUPUESTO.PORCENTAJE != 100 %}
+              <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ PORCENTAJE }}%"></div>
+              {% if PORCENTAJE > 0 and PORCENTAJE != 100 %}
                 <span class="triangulo_izq"></span>
               {% endif %}
             </div>
@@ -93,12 +94,12 @@
               </div>
             </div>
           {% else %}
-            {% if (PRESUPUESTO.PORCENTAJE - 200) >= 0 %}
+            {% if (PORCENTAJE - 200) >= 0 %}
               {% set value = 0 %}
               {% set width = 100 %}
             {% else %}
-              {% set value = (200 - PRESUPUESTO.PORCENTAJE) %}
-              {% set width = (PRESUPUESTO.PORCENTAJE - 100) %}
+              {% set value = (200 - PORCENTAJE) %}
+              {% set width = (PORCENTAJE - 100) %}
             {% endif %}
             <span class="triangulo_izq-overload"></span>
             <div class="progress over-loaded border-radius-less">
@@ -209,21 +210,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="tip-container {% if not TIP %} hidden {% endif %}">
-        <div class="text-container">
-          <div class="title-container">
-            <span class="title"><span class="title-bold">CONSEJO</span> DE AHORRO</span>
-          </div>
-          <div class="subtitle-container">
-            <span class="text-big">Ahorra</span>
-            <span class="number">13</span>
-            <span class="text">€ en tu factura de la luz contratando<br/> con Iberdrola</span>
-          </div>
-        </div>
-        <div class="button-container">
-          <button class="btn">CONTRATAR</button>
-        </div>
-      </div>-->
     </div>
   {% endfor %}
 </div>

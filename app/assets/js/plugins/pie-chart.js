@@ -7,7 +7,7 @@ function pieChart() {
 
   var chartStartAngle = Math.PI;              // Start the chart at 12 o'clock instead of 3 o'clock
   var fillColour = "#24313C";
-  var fillColourSelectedPrimary = "#FFFFFF";
+  var fillColourSelectedPrimary = "#f8f9f9";
   var fillColourSelectedSecondary = "#F79D25";
   var fillColourSelectedSecondTransp = "rgba(247, 157, 37, 0.8)";
 
@@ -27,8 +27,9 @@ function pieChart() {
   var currentPullOutSlice = -1;
 
 
-  var pullOutFrameStep = 0.1;                         // How many pixels to move a slice with each animation frame
+  var pullOutFrameStep;                         // How many pixels to move a slice with each animation frame
   var pullOutFrameInterval = 40;                    // How long (in ms) between each animation frame
+  var pullOutMaxTime = 450;                         // Max time duration of animation
   var pullOutLabelPadding = 65;                     // Padding between pulled-out slice and its label
   var pullOutLabelFont = "bold 16px 'Trebuchet MS', Verdana, sans-serif";  // Pull-out slice label font
   var pullOutValueFont = "bold 12px 'Trebuchet MS', Verdana, sans-serif";  // Pull-out slice value font
@@ -73,7 +74,7 @@ function pieChart() {
     var currentRow = -1;
     var currentCell = 0;
 
-    $('.chartData td').each( function() {
+    $('#pieChartData td').each( function() {
       currentCell++;
       if ( currentCell == 1) {
         currentRow++;
@@ -306,6 +307,7 @@ function pieChart() {
       currentPullOutSlice = slice;
       currentPullOutAngle = chartData[slice]['startAngle'];
       maxPullOutAngle = chartData[slice]['endSpentAngle'];
+      pullOutFrameStep = ((maxPullOutAngle - currentPullOutAngle) * pullOutFrameInterval) / pullOutMaxTime;
 
       $('.pie-chart .icons-container').html('');
       for(s in chartData)
@@ -370,7 +372,7 @@ function pieChart() {
     var endAngle = chartData[slice]['endAngle']  + chartStartAngle;
     var angle = (startAngle + endAngle) / 2;
 
-    var midPoint = getPoint(centreX, centreY, (chartRadius/2)+20, angle);
+    var midPoint = getPoint(centreX, centreY, (chartRadius/2)+10, angle);
 
     var icon;
     if( slice == currentPullOutSlice )

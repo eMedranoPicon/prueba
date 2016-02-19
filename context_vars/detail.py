@@ -13,7 +13,7 @@ def get_detail():
 					{
 						"TITLE": "Vivienda",
 						"ICONO": "icon-house-white-big",
-						"ICONO_TARTA":"icon-house-white",
+						"ICONO_TARTA":"icon-house-big-orange",
 						"ICONO_TARTA_SELECCION": "icon-house-big",
 						"ICONO_TARJETA": "icon-house-white",
 						"PREVISTO": 500,
@@ -29,14 +29,14 @@ def get_detail():
 						"TITLE": "Formación",
 						"ICONO": "icon-paper-white",
 						"ICONO_TARTA":"icon-paper-orange",
-						"ICONO_TARTA_SELECCION": "icon-paper-orange",
+						"ICONO_TARTA_SELECCION": "icon-paper-blue",
 						"ICONO_TARJETA": "icon-paper-white",
 						"PREVISTO": 195,
 						"PREVISTO_DECIMAL": "00",
 						"GASTADO": 165,
 						"GASTADO_DECIMAL": "00",
 						"DIFERENCIA": 1500,
-						"PORCENTAJE": 250,
+						"PORCENTAJE": 90,
 						"MES_SIGUIENTE": 600,
 						"TIP": True
 					},
@@ -44,7 +44,7 @@ def get_detail():
 						"TITLE": "Tarjeta",
 						"ICONO": "icon-card-white",
 						"ICONO_TARTA":"icon-card-orange",
-						"ICONO_TARTA_SELECCION": "icon-card-white",
+						"ICONO_TARTA_SELECCION": "icon-card-blue",
 						"ICONO_TARJETA": "icon-card-white",
 						"PREVISTO": 600,
 						"PREVISTO_DECIMAL": "05",
@@ -59,7 +59,7 @@ def get_detail():
 						"TITLE": "Seguros",
 						"ICONO": "icon-umbrella-white",
 						"ICONO_TARTA":"icon-umbrella-orange",
-						"ICONO_TARTA_SELECCION": "icon-umbrella-white",
+						"ICONO_TARTA_SELECCION": "icon-umbrella-blue",
 						"ICONO_TARJETA": "icon-umbrella-white",
 						"PREVISTO": 600,
 						"PREVISTO_DECIMAL": "00",
@@ -74,7 +74,7 @@ def get_detail():
 						"TITLE": "Otros",
 						"ICONO": "icon-balloon-small-white",
 						"ICONO_TARTA":"icon-balloon-small-orange",
-						"ICONO_TARTA_SELECCION": "icon-balloon-small-white",
+						"ICONO_TARTA_SELECCION": "icon-balloon-small-blue",
 						"ICONO_TARJETA": "icon-balloon-small-white",
 						"PREVISTO": 370,
 						"PREVISTO_DECIMAL": "00",
@@ -215,6 +215,100 @@ def get_detail():
 					}
 				]
           	}
+		],
+
+		"POINT_CHART": [
+			{
+				"MES":	"Sep",
+				"PREVISTO": 300,
+				"GASTADO": 400
+			},
+			{
+				"MES":	"Oct",
+				"PREVISTO": 400,
+				"GASTADO": 450
+			},
+			{
+				"MES":	"Nov",
+				"PREVISTO": 460,
+				"GASTADO": 420
+			},
+			{
+				"MES":	"Dic",
+				"PREVISTO": 500,
+				"GASTADO": 430
+			},
+			{
+				"MES":	"Ene",
+				"PREVISTO": 500,
+				"GASTADO": 380
+			},
+			{
+				"MES":	"Feb",
+				"PREVISTO": 500,
+				"GASTADO": 410
+			},
+			{
+				"MES":	"Mar",
+				"PREVISTO": 500,
+				"GASTADO": 430
+			},
+			{
+				"MES":	"Abr",
+				"PREVISTO": 500,
+				"GASTADO": 400
+			},
+			{
+				"MES":	"May",
+				"PREVISTO": 500,
+				"GASTADO": 400
+			},
+			{
+				"MES":	"Jun",
+				"PREVISTO": 500,
+				"GASTADO": 380
+			},
+			{
+				"MES":	"Jul",
+				"PREVISTO": 500,
+				"GASTADO": 370
+			},
+			{
+				"MES":	"Ago",
+				"PREVISTO": 500,
+				"GASTADO": 360
+			},
+			{
+				"MES":	"Sep",
+				"PREVISTO": 500,
+				"GASTADO": 300
+			},
+			{
+				"MES":	"Oct",
+				"PREVISTO": 540,
+				"GASTADO": 0
+			},
+		],
+
+		"PROVEEDORES": [
+			{
+				"TEXT": "Nombre de proveedor 1"
+			},
+			{
+				"TEXT": "Nombre de proveedor 2"
+			},
+			{
+				"TEXT": "Nombre de proveedor 3"
+			},
+			{
+				"TEXT": "Nombre de proveedor 4"
+			},
+			{
+				"TEXT": "Nombre de proveedor 5"
+			},
+			{
+				"TEXT": "Nombre de proveedor 6"
+			},
 		],
 
 		"TIMELINE": [

@@ -11,6 +11,10 @@ $(document).ready(function () {
   if($('.pie-chart').length)
     $( pieChart );
 
+  // INITIALIZE POINT CHART
+  if($('#point-chart').length)
+    $( pointChart );
+
 
   // SLIDE UP/DOWN CALENDAR
   $(".calendary-interaction")

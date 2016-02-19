@@ -36,7 +36,7 @@ $(document).ready(function () {
     });
 
 
-  // MODULE ALERTS
+  // MODULE ALERTS (TIMELINE)
   // SLIDE UP/DOWN ALERTS
   $(".receipt-detail-content .element-container-alerts, .prestamo-detail-container .element-container-alerts")
     .on('click', function() {
