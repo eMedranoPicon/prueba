@@ -43,7 +43,8 @@ var src_app = './app',
     './bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js',
     './bower_components/jQuery.mmenu/dist/js/jquery.mmenu.min.all.js',
     './bower_components/jquery-ui/jquery-ui.min.js',
-    './bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js'
+    './bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js',
+    './bower_components/highcharts/highcharts.js'
   ],
   vendor_css_src = [
     './bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css'
@@ -100,7 +101,7 @@ gulp.task('sass-min', function() {
 
 gulp.task('vendor-css', function() {
   return gulp.src(vendor_css_src)
-    .pipe(concat('vendor.min.css'))
+    .pipe(concat('vendor.css'))
     .pipe(gulp.dest(dist_css_dir));
 }).help = 'Concatenates css vendor files.';
 
@@ -110,7 +111,7 @@ gulp.task('vendor-scripts', function() {
     .pipe(gulp.dest(dist_js_dir));
 
   return gulp.src(vendor_js_src)
-    .pipe(concat('vendor.min.js'))
+    .pipe(concat('vendor.js'))
     .pipe(gulp.dest(dist_js_dir));
 }).help = 'Concatenates javascript vendor files.';
 

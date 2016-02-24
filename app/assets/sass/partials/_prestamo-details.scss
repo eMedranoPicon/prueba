@@ -1,4 +1,4 @@
-.receipt-detail-container {
+.prestamo-detail-container {
   i {
     display: inline-block;
   }
@@ -9,16 +9,7 @@
     @include slidedown(500px);
     //overflow-y: auto;
   }
-  .link-container {
-    a {
-      font-size: 12px;
-      cursor: pointer;
-      float: left;
-      text-decoration: underline;
-      color: $colorModPrimary;
-    }
-  }
-  .receipt-detail-content {
+  .prestamo-detail-content {
     text-align: left;
     & > div {
       border-bottom: 1px solid $colorModBorder;
@@ -28,55 +19,34 @@
       width: 100%;
     }
     .top-container {
-      height: 120px;
-      padding-top: 17px;
+      height: 80px;
+      padding-top: 29px;
       padding-left: 22px;
-      padding-bottom: 27px;
+      padding-bottom: 18px;
+      & > div {
+        display: table-cell;
+        vertical-align: middle;
+      }
       .text-container {
         color: $colorModPrimary;
-        float: left;
         width: 85%;
+        padding-bottom: 10px;
         & > div, & > span {
           position: relative;
           width: 100%;
-          float: left;
         }
         .title {
           font-size: 16px;
           font-family: $fontBold;
           width: 100%;
         }
-        .numero-recibo-container {
-          font-size: 13px;
-          margin-top: 8px;
-          .recibo {
-            font-family: $fontBold;
-          }
-        }
-        .date-container {
-          font-size: 11px;
-          color: $colorModTer;
-          display: table;
-          font-family: $fontBold;
-          margin-top: 10px;
-          margin-bottom: 15px;
-          & > div {
-            display: table-cell;
-            vertical-align: middle;
-          }
-          .icon-container {
-            width: 10px;
-            float: left;
-          }
-          i {
-            display: inline-block;
-            height: 20px;
-          }
-        }
       }
       & > .icon-container {
         float: right;
         margin-top: 1px;
+        a {
+          display: inline-block;
+        }
       }
     }
     .element-container, .subelement-container, .element-container-alerts {
@@ -151,34 +121,13 @@
         display: table-cell;
         vertical-align: middle;
       }
+      .prestamo {
+        float: right;
+      }
       .button-container {
         padding-top: 2px;
         padding-left: 2px;
       }
-      .link-container {
-        a {
-          float: right;
-        }
-      }
     }
-  }
-
-  input.cmn-toggle-round-flat + label:before {
-    background-color: $colorModSecond;
-  }
-  input.cmn-toggle-round-flat + label:after {
-    background-color: $colorModBack;
-  }
-  input.cmn-toggle-round-flat + label {
-    background-color: $colorModSecond;
-  }
-  input.cmn-toggle-round-flat:checked + label {
-    background-color: $green500;
-  }
-  input.cmn-toggle-round-flat:checked + label:before {
-    background-color: $green500;
-  }
-  input.cmn-toggle-round-flat:checked + label:after {
-    background-color: $white;
   }
 }

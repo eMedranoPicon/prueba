@@ -1,0 +1,42 @@
+<div class="detail-proveedores">
+  <div class="proveedores-container container">
+    <div class="proveedores-header">
+      <div class="icon-container">
+        <i class="icon-house"></i>
+      </div>
+      <div class="text-container">
+        <span class="text">VER PROVEEDORES DE VIVIENDA</span>
+      </div>
+      <div class="dot-container">
+        <div class="dot"></div>
+        <div class="dot second"></div>
+        <div class="dot third"></div>
+      </div>
+    </div>
+
+    <div class="proveedores-content slideup">
+      <div class="elements-box">
+        {% for PROV in PROVEEDORES %}
+          <div class="element-container {{ loop.cycle('', 'right') }}">
+            <div class="text-container">
+              <span class="title">{{ PROV.TEXT }}</span>
+            </div>
+            <div class="icon-container">
+              <i class="icon-gear-round"></i>
+            </div>
+            <div class="module modules-container slideup {{ loop.cycle('', 'right') }}">
+              <div class="module-content alerts-container slideup">
+                {% with counter=loop.index, outer_counter='-proveedores' %}
+                  {% include '/includes/modules/_alerts.html' %}
+                {% endwith %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="icon-ex-container">
+        <i class="icon-ex"></i>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="detail-concrete-header">
+  <div class="section-header container">
+    {% set MOVIMIENTO = TIMELINE[0] %}
+
+    <div class="content">
+      <div class="info-general">
+        <div class="icon-container">
+          <i class="{{ MOVIMIENTO.ICONO }}"></i>
+        </div>
+        <div class="resume-text">
+          <span class="title">MOVIMIENTOS DE</span>
+          <span class="name">{{ MOVIMIENTO.MOVIMIENTOS[0].TEXT }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="content border">
+      <div class="info-year">
+        <div class="text-container">
+          <span class="text">ESTE AÑO</span>
+        </div>
+        <div class="money-container">
+          <span class="price">{{ MOVIMIENTO.NUMBER_ANYO }}</span><span class="decimal">,{{ MOVIMIENTO.DECIMAL_ANYO }}</span><span class="coin">€</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="info-month">
+        <div class="text-container">
+          <span class="text">ESTE MES</span>
+        </div>
+        <div class="money-container">
+          <span class="price">{{ MOVIMIENTO.NUMBER_MES }}</span><span class="decimal">,{{ MOVIMIENTO.DECIMAL_MES }}</span><span class="coin">€</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -2,8 +2,23 @@
   background-color: $colorDetPrimary;
   font-family: $fontBold;
   .section-header {
-    padding-top: 26px;
-    padding-bottom: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+    //display: none;
+    @include transition(opacity 0.45s linear);
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+
+    &.actived {
+      opacity: 1;
+      display: block;
+      height: 390px;
+      padding-top: 26px;
+      padding-bottom: 50px;
+    }
+
   }
   .modify > i {
     cursor: pointer;
@@ -231,6 +246,11 @@
         }
         &.right {
           margin-top: 5px;
+          & > div {
+            display: table-cell;
+            vertical-align: middle;
+            float: none;
+          }
         }
       }
       &.expected {
@@ -368,6 +388,10 @@
         span {
           vertical-align: middle;
           padding-top: 4px;
+        }
+        &:hover {
+          color: darken($colorDetCuater, 10%);
+          border-color: darken($colorDetCuater, 10%);
         }
       }
     }
