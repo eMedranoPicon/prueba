@@ -2,13 +2,6 @@
   i {
     display: inline-block;
   }
-  &.slideup {
-    @include slideup();
-  }
-  &.slidedown {
-    @include slidedown(500px);
-    //overflow-y: auto;
-  }
   .link-container {
     a {
       font-size: 12px;
@@ -79,70 +72,7 @@
         margin-top: 1px;
       }
     }
-    .element-container, .subelement-container, .element-container-alerts {
-      height: 52px;
-      font-size: 16px;
-      padding-left: 22px;
-      padding-right: 15px;
-      cursor: pointer;
-    }
-    .element-container, .element-container-alerts {
-      padding-top: 5px;
-      & > div {
-        display: table-cell;
-        vertical-align: middle;
-        height: 100%;
-      }
-      &.slideup {
-        background-color: $colorModBack;
-      }
-      &.slidedown {
-        background-color: $colorModSecond;
-      }
-      .icon-container {
-        width: 6%;
-        padding-right: 8px;
-      }
-      .name-container {
-        width: 95%;
-        .name {
-          padding-left: 8px;
-        }
-      }
-    }
-    .subelement-container {
-      display: block;
-      border: 0;
-      background-color: $colorModCuat;
-      &.slideup {
-        @include slideup();
-        border: 0;
-      }
-      &.slidedown {
-        @include slidedown(52px);
-        border-bottom: 1px solid $colorModBorder;
-      }
-      .content {
-        display: table;
-        height: 100%;
-        padding-left: 40px;
-        & > div {
-          display: table-cell;
-          vertical-align: middle;
-          height: 100%;
-        }
-      }
-      .icon-container {
-        width: 6%;
-        padding-right: 8px;
-      }
-      .name-container {
-        width: 95%;
-        .name {
-          padding-left: 8px;
-        }
-      }
-    }
+
     .bottom-container {
       display: table;
       height: 80px;

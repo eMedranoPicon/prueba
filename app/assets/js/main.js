@@ -19,11 +19,8 @@ $(document).ready(function () {
   // SLIDE UP/DOWN CALENDAR
   $(".calendary-interaction")
     .on('click', function() {
-      if ($("ul.calendary").hasClass("slideup")) {
-        $("ul.calendary").removeClass("slideup").addClass("slidedown");
-      } else {
-        $("ul.calendary").removeClass("slidedown").addClass("slideup");
-      }
+
+      slideUpDown( $('ul.calendary') );
     })
     .hover (
       function() {
@@ -50,9 +47,11 @@ $(document).ready(function () {
 
   // RESTAURAR EL VALOR POR DEFECTO
   $(document).on('click', '.presupuestos i.edit-return', function(event) {
+    var value;
     var id = $(this).data('id');
+
     $(this).addClass('icon-edit').removeClass('icon-return-circle edit-return');
-    var value = $('#init-value' + id).val().split(',');
+    value = $('#init-value' + id).val().split(',');
     $('#label-input' + id).show();
     $('.value'+id).html(value[0]);
     $('.decimal'+id).html(value[1]);
@@ -60,11 +59,14 @@ $(document).ready(function () {
 
   // ACCEDE A LA EDICIÓN DEL PRESUPUESTO FUTURO
   $(document).on('click', '.presupuestos .icon-edit', function(e) {
-    if (!$(this).closest('.flip-container').hasClass("hover")) {
-      $(this).closest('.flip-container').addClass("hover");
-      var $labelInput = $(this).closest('.flip-container').find(".label-input");
+    var $labelInput, labelID;
+    var $flip = $(this).closest('.flip-container');
+
+    if (!$flip.hasClass("hover")) {
+      $flip.addClass("hover");
+      $labelInput = $flip.find(".label-input");
       if($labelInput.length){
-        var labelID = $labelInput.attr('for');
+        labelID = $labelInput.attr('for');
         $('#'+labelID).show().focus();
         $labelInput.on('click', function() {
           $('#'+labelID).show().focus();

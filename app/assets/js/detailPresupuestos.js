@@ -7,23 +7,16 @@ $(document).ready(function () {
   // SLIDE UP/DOWN EDIT PRESENT PREVISION
   $(".detail-header .edit-present")
     .on('click', function() {
-      var $section = $(this).closest('.section-header');
-      if ($section.find(".edit-present-container").hasClass("slideup")) {
-        $section.find(".edit-present-container").removeClass("slideup").addClass("slidedown");
-      } else {
-        $section.find(".edit-present-container").removeClass("slidedown").addClass("slideup");
-      }
+      var $editPresentContainer = $(this).closest('.section-header').find(".edit-present-container");
+      slideUpDown($editPresentContainer);
+
     });
 
   // SLIDE UP/DOWN RETURN PRESENT PREVISION
   $(".detail-header .edit-present.icon-return-circle")
     .on('click', function() {
-      var $section = $(this).closest('.section-header');
-      if ($section.find(".return-present-container").hasClass("slideup")) {
-        $section.find(".return-present-container").removeClass("slideup").addClass("slidedown");
-      } else {
-        $section.find(".return-present-container").removeClass("slidedown").addClass("slideup");
-      }
+      var $returnPresentContainer = $(this).closest('.section-header').find(".return-present-container");
+      slideUpDown($returnPresentContainer);
     });
 
   // VALIDAR MODIFICACIÓN DEL MES PRESENTE
@@ -44,13 +37,10 @@ $(document).ready(function () {
 
     // CAMBIO DE ICONO A NARANJA
     $(".detail-header .icon-check-circle, .detail-header .icon-check-circle-orange")
-      .hover (
-        function() {
-          $(this).removeClass('icon-check-circle').addClass('icon-check-circle-orange');
-        }, function() {
-          $(this).addClass('icon-check-circle').removeClass('icon-check-circle-orange');
-        }
-      );
+      .hover ( function() {
+        reverseClass($(this), 'icon-check-circle', 'icon-check-circle-orange');
+      }
+    );
 
 
   // TRATAMIENTO DEL RETURN DE AJUSTE MANUAL
@@ -68,11 +58,8 @@ $(document).ready(function () {
       $section.find(".box-container-edit").removeClass("hidden");
       $section.find(".box-container-return").addClass("hidden");
     })
-    .hover (
-      function() {
-        $(this).removeClass('icon-check-circle').addClass('icon-check-circle-orange');
-      }, function() {
-        $(this).addClass('icon-check-circle').removeClass('icon-check-circle-orange');
+    .hover ( function() {
+        reverseClass($(this), 'icon-check-circle', 'icon-check-circle-orange');
       }
     );
 
@@ -133,55 +120,5 @@ $(document).ready(function () {
     $flipContainer.removeClass('hover').find('.future-detail-edit').removeClass('icon-edit-white future-detail-edit').addClass('icon-return-circle edit-return');
     event.stopPropagation();
   });
-
-
-
-  /************************************************
-  ***************** PROVEEDORES *******************
-  *************************************************/
-
-  // SLIDE UP/DOWN CONTENIDO
-  $(".detail-proveedores .proveedores-header > .dot-container, .detail-proveedores .proveedores-content .icon-ex-container i")
-    .on('click', function() {
-      var $section = $(this).closest('.proveedores-container').find('.proveedores-content');
-      var $box = $section.find('.elements-box');
-      var height = parseInt($box.css('height').split('px')[0]) + 100;
-      var $dot = $('.detail-proveedores .proveedores-header > .dot-container');
-      if ($section.hasClass("slideup")) {
-        $section.css('max-height', height+'px');
-        $section.removeClass("slideup").addClass("slidedown");
-        $dot.addClass('ocult');
-      } else {
-        var $elems = $(this).closest('.proveedores-content').find('.module');
-        for(var e=0; e < $elems.length; e++){
-          if($($elems[e]).hasClass('slidedown')){
-            slideUpDown($($elems[e]));
-            slideUpDown($($elems[e]).find('.module-content'));
-          }
-        }
-        $section.css('max-height', 0);
-        $section.removeClass("slidedown").addClass("slideup");
-        $dot.removeClass('ocult');
-      }
-    });
-
-
-  // SLIDE UP/DOWN ALERTS
-  $(".detail-proveedores .proveedores-content i," +
-    ".detail-proveedores .proveedores-content .alerts-module-content .button-module")
-    .on('click', function() {
-      var $thisElem = $(this).closest('.element-container').find('.module');
-      var $thisElem2 = $thisElem.find('.module-content');
-      var $elems = $(this).closest('.elements-box').find('.module');
-      for(var e=0; e < $elems.length; e++){
-        if($($elems[e]).hasClass('slidedown') && !$($elems[e]).is($thisElem)){
-          slideUpDown($($elems[e]));
-          slideUpDown($($elems[e]).find('.module-content'));
-        }
-
-      }
-      slideUpDown($thisElem);
-      slideUpDown($thisElem2);
-    });
 
 });

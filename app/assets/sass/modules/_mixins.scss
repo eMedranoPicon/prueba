@@ -316,10 +316,22 @@
   @include transition (max-height 0.45s ease-out);
 }
 
+// SLIDE UP/DOWN 2
+@mixin slideup2() {
+  height: 0;
+  overflow-y: hidden;
+  @include transition (height 0.45s ease-in);
+}
+
+@mixin slidedown2() {
+  overflow-y: hidden;
+  @include transition (height 0.45s ease-out);
+}
+
 @mixin progress-bar($height, $colorBar, $colorOverLoaded) {
   .progress {
     height: $height;
-    margin-bottom: 0px;
+    margin: 0;
     &.closed {
       display: none;
     }

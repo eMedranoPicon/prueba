@@ -49,15 +49,6 @@ function pointChart() {
 
     chartData[chartData.length-1]['spent'] = null;
 
-    /*for(var j in chartData){
-      if(j >= chartData.length-2)
-        chartFutureData[j] = chartData[j]['expected'];
-      else
-        chartFutureData[j] = null;
-    }
-
-    chartData = chartData.slice(0, chartData.length-1);*/
-
   }
 
   function toArray(columnName) {

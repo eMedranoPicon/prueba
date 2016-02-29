@@ -345,6 +345,7 @@
           padding: 0;
           margin: 0;
           font-size: 20px;
+          color: $colorDetPenta;
         }
         & > input {
           width: 80px;
@@ -378,7 +379,7 @@
         border: 1px solid $colorDetCuater;
         height: 42px;
         width: 250px;
-        font-size: 15px;
+        font-size: 14px;
         text-align: left;
         padding-left: 32px;
         @include border-radius(20px);
@@ -388,6 +389,8 @@
         span {
           vertical-align: middle;
           padding-top: 4px;
+          padding-left: 2px;
+          letter-spacing: 1px;
         }
         &:hover {
           color: darken($colorDetCuater, 10%);

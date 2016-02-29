@@ -1,10 +1,5 @@
 .alerts-container {
-  &.slideup {
-    @include slideup();
-  }
-  &.slidedown {
-    @include slidedown(444px);
-  }
+
   .alerts-module-content {
     font-size: 13px;
     & > div {

@@ -171,7 +171,7 @@ def get_detail():
 		"TIMELINE": [
          	{
 				"MES":	"2015",
-				"ICONO": "icon-house-white",
+				"ICONO": "icon-house-white-big",
 				"NUMBER_ANYO": "1.290",
 				"DECIMAL_ANYO": "99",
 				"NUMBER_MES": "50",

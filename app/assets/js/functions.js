@@ -9,15 +9,10 @@ function slideUpDown(container) {
   }
 }
 
-
 function reverseClass(element, classA, classB) {
   if ($(element).hasClass(classA)) {
     $(element).removeClass(classA).addClass(classB);
   } else {
     $(element).removeClass(classB).addClass(classA);
   }
-}
-
-function readjustHeight(element, height) {
-  element.height = height;
 }
