@@ -248,7 +248,6 @@
           margin-top: 5px;
           & > div {
             display: table-cell;
-            vertical-align: middle;
             float: none;
           }
         }
@@ -271,7 +270,7 @@
       }
       .coin {
         font-size: 14px;
-        margin-left: 2px;
+        margin-left: 3px;
       }
       .text {
         font-size: 14px;

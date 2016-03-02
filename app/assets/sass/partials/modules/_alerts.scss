@@ -72,6 +72,10 @@
               display: inline-block;
               vertical-align: middle;
             }
+            .coin, .percent {
+                font-family: $fontBold;
+                margin-left: 3px;
+            }
           }
           input {
             height: 20px;

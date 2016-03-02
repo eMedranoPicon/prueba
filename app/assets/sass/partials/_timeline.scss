@@ -55,11 +55,11 @@
         height: 50px;
         width: 100%;
         display: table;
-        padding-top: 20px;
+        padding-top: 40px;
         .triangle-container {
           display: table-cell;
           .triangle {
-            @include triangle(8px, 0, 8px, 8px, $colorTimeBar);
+            @include triangle(6px, 0, 6px, 6px, $colorTimeBar);
           }
         }
       }
@@ -248,10 +248,6 @@
         &.gasto {
           background-color: $colorTimeWarning;
         }
-      }
-
-      &:last-child {
-          margin-bottom: 20px;
       }
     }
 
