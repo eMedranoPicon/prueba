@@ -1,0 +1,9 @@
+.modern {
+    &-hover {
+        .info-general, .info-future {
+            &.front {
+                display: none;
+            }
+        }
+    }
+}

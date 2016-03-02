@@ -1,6 +1,13 @@
 $(document).ready(function () {
   "use strict";
 
+  var flipContainerHoverClass;
+
+  if( Modernizr.csstransitions )
+    flipContainerHoverClass = 'hover';
+  else
+    flipContainerHoverClass = 'modern-hover';
+
   // MASK FOR INPUTS
   $(":input").inputmask();
 
@@ -78,8 +85,8 @@ $(document).ready(function () {
 
   // ACCEDE A LA EDICIÓN DEL PRESUPUESTO FUTURO
   $(document).on('click', '.detail-header .future-detail-edit', function(e) {
-    if (!$(this).closest('.flip-container').hasClass("hover")) {
-      $(this).closest('.flip-container').addClass("hover");
+    if (!$(this).closest('.flip-container').hasClass(flipContainerHoverClass)) {
+      $(this).closest('.flip-container').addClass(flipContainerHoverClass);
       var $labelInput = $(this).closest('.flip-container').find(".label-input");
       var $flipper = $(this).closest('.flipper');
       $flipper.find('.input-future').show().focus();
@@ -117,7 +124,7 @@ $(document).ready(function () {
     var $flipContainer = $(this).closest('.flip-container');
     var value = $labelInput.find('.value').text() + ',' + $labelInput.find('.decimal').text();
     $flipContainer.find('.front .price').html(value);
-    $flipContainer.removeClass('hover').find('.future-detail-edit').removeClass('icon-edit-white future-detail-edit').addClass('icon-return-circle edit-return');
+    $flipContainer.removeClass(flipContainerHoverClass).find('.future-detail-edit').removeClass('icon-edit-white future-detail-edit').addClass('icon-return-circle edit-return');
     event.stopPropagation();
   });
 

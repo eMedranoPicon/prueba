@@ -10,6 +10,7 @@
 	float: right;
   box-shadow: none;
   height: 100%;
+  filter: none;
 }
 .progress-bar.normal {
 	@include border-radius-separate(20px, 0, 20px, 0);

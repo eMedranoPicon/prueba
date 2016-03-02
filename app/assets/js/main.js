@@ -1,6 +1,13 @@
 $(document).ready(function () {
   "use strict";
 
+  var flipContainerHoverClass;
+
+  if( Modernizr.csstransitions )
+    flipContainerHoverClass = 'hover';
+  else
+    flipContainerHoverClass = 'modern-hover';
+
   // MASK FOR INPUTS
   $(":input").inputmask();
 
@@ -14,6 +21,7 @@ $(document).ready(function () {
   // INITIALIZE POINT CHART
   if($('#point-chart').length)
     $( pointChart );
+
 
 
   // SLIDE UP/DOWN CALENDAR
@@ -41,7 +49,7 @@ $(document).ready(function () {
 
   // TRAS MODIFICAR LOS DATOS DE UN PRESUPUESTO FUTURO
   $('.check-future').on('click', function(event) {
-    $(this).closest('.flip-container').removeClass('hover').find('.icon-edit').removeClass('icon-edit').addClass('icon-return-circle edit-return');
+    $(this).closest('.flip-container').removeClass(flipContainerHoverClass).find('.icon-edit').removeClass('icon-edit').addClass('icon-return-circle edit-return');
     event.stopPropagation();
   });
 
@@ -62,8 +70,8 @@ $(document).ready(function () {
     var $labelInput, labelID;
     var $flip = $(this).closest('.flip-container');
 
-    if (!$flip.hasClass("hover")) {
-      $flip.addClass("hover");
+    if (!$flip.hasClass(flipContainerHoverClass)) {
+      $flip.addClass(flipContainerHoverClass);
       $labelInput = $flip.find(".label-input");
       if($labelInput.length){
         labelID = $labelInput.attr('for');
