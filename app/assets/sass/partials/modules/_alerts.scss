@@ -1,10 +1,5 @@
 .alerts-container {
-  &.slideup {
-    @include slideup();
-  }
-  &.slidedown {
-    @include slidedown(444px);
-  }
+
   .alerts-module-content {
     font-size: 13px;
     & > div {
@@ -76,6 +71,10 @@
             & > div {
               display: inline-block;
               vertical-align: middle;
+            }
+            .coin, .percent {
+                font-family: $fontBold;
+                margin-left: 3px;
             }
           }
           input {

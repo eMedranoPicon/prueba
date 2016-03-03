@@ -25,7 +25,7 @@
               <i class="icon-gear-round"></i>
             </div>
             <div class="module modules-container slideup {{ loop.cycle('', 'right') }}">
-              <div class="module-content alerts-container slideup">
+              <div class="module-content alerts-container slidedown">
                 {% with counter=loop.index, outer_counter='-proveedores' %}
                   {% include '/includes/modules/_alerts.html' %}
                 {% endwith %}

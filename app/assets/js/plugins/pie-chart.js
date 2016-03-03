@@ -79,18 +79,18 @@ function pieChart() {
       if ( currentCell == 1) {
         currentRow++;
         chartData[currentRow] = [];
-        chartData[currentRow]['icon'] = $(this).find('i').attr('class');
+        chartData[currentRow].icon = $(this).find('i').attr('class');
       }
       else if (currentCell == 2) {
         var value = parseFloat($(this).text());
-        chartData[currentRow]['expected'] = value;
+        chartData[currentRow].expected = value;
         totalValue += value;
         value = value.toFixed(2);
-        chartData[currentRow]['value'] = value;
+        chartData[currentRow].value = value;
       }
       else if (currentCell == 3) {
         var spent = parseFloat($(this).text());
-        chartData[currentRow]['spent'] = spent;
+        chartData[currentRow].spent = spent;
       }
       else if (currentCell == 4) {
         chartData[currentRow]['icon-spent'] = $(this).find('i').attr('class');
@@ -109,10 +109,10 @@ function pieChart() {
     var currentPos = 0; // The current position of the slice in the pie (from 0 to 1)
 
     for ( var slice in chartData ) {
-      chartData[slice]['startAngle'] = 2 * Math.PI * currentPos;
-      chartData[slice]['endAngle'] = 2 * Math.PI * ( currentPos + ( chartData[slice]['value'] / totalValue ) );
-      chartData[slice]['endSpentAngle'] = 2 * Math.PI * ( currentPos + ( chartData[slice]['spent'] / totalValue ) );
-      currentPos += chartData[slice]['value'] / totalValue;
+      chartData[slice].startAngle = 2 * Math.PI * currentPos;
+      chartData[slice].endAngle = 2 * Math.PI * ( currentPos + ( chartData[slice].value / totalValue ) );
+      chartData[slice].endSpentAngle = 2 * Math.PI * ( currentPos + ( chartData[slice].spent / totalValue ) );
+      currentPos += chartData[slice].value / totalValue;
     }
 
     // All ready! Now draw the pie chart, and add the click handler to it
@@ -160,9 +160,9 @@ function pieChart() {
 
   function drawSlice ( context, slice ) {
 
-    // Compute the adjusted start and end angles for the slice
-    var startAngle = chartData[slice]['startAngle']  + chartStartAngle;
-    var endAngle = chartData[slice]['endAngle']  + chartStartAngle;
+    var endPoint, actualPullOutAngle;
+    var startAngle = chartData[slice].startAngle  + chartStartAngle;
+    var endAngle = chartData[slice].endAngle  + chartStartAngle;
 
     var angle = (startAngle + endAngle) / 2;
 
@@ -174,9 +174,9 @@ function pieChart() {
       // We're pulling (or have pulled) this slice out.
       // Offset it from the pie centre, draw the text label,
       // and add a drop shadow
-      var endPoint = getPoint(startX, startY, chartRadius, endAngle);
+      endPoint = getPoint(startX, startY, chartRadius, endAngle);
 
-      var actualPullOutAngle =  currentPullOutAngle + chartStartAngle;
+      actualPullOutAngle = currentPullOutAngle + chartStartAngle;
 
       context.beginPath();
         context.moveTo( startX, startY );
@@ -211,7 +211,7 @@ function pieChart() {
       startX = centreX;
       startY = centreY;
 
-      var endPoint = getPoint(startX, startY, chartRadius, endAngle);
+      endPoint = getPoint(startX, startY, chartRadius, endAngle);
 
       // Draw the slice
       context.beginPath();
@@ -261,8 +261,8 @@ function pieChart() {
       if ( clickAngle < 0 ) clickAngle = 2 * Math.PI + clickAngle;
 
       for ( var slice in chartData ) {
-        var startAngleAux = chartData[slice]['startAngle'];
-        var endAngleAux = chartData[slice]['endAngle'];
+        var startAngleAux = chartData[slice].startAngle;
+        var endAngleAux = chartData[slice].endAngle;
 
         if ( clickAngle >= startAngleAux && clickAngle <= endAngleAux ) {
 
@@ -305,12 +305,12 @@ function pieChart() {
 
       // Record the slice that we're pulling out, clear any previous animation, then start the animation
       currentPullOutSlice = slice;
-      currentPullOutAngle = chartData[slice]['startAngle'];
-      maxPullOutAngle = chartData[slice]['endSpentAngle'];
+      currentPullOutAngle = chartData[slice].startAngle;
+      maxPullOutAngle = chartData[slice].endSpentAngle;
       pullOutFrameStep = ((maxPullOutAngle - currentPullOutAngle) * pullOutFrameInterval) / pullOutMaxTime;
 
       $('.pie-chart .icons-container').html('');
-      for(s in chartData)
+      for(var s in chartData)
         drawIcon( s );
 
       clearInterval( animationId );
@@ -346,21 +346,6 @@ function pieChart() {
      drawChart();
    }
 
-   /**
-   * Easing function.
-   *
-   * A bit hacky but it seems to work! (Note to self: Re-read my school maths books sometime)
-   *
-   * @param Number The ratio of the current distance travelled to the maximum distance
-   * @param Number The power (higher numbers = more gradual easing)
-   * @return Number The new ratio
-   */
-
-  function easeOut( ratio, power ) {
-    return ( Math.pow ( 1 - ratio, power ) + 1 );
-  }
-
-
 
   function getPoint(x, y, radius, angle) {
     return [x + radius * Math.cos(angle), y + radius * Math.sin(angle)];
@@ -368,8 +353,8 @@ function pieChart() {
 
   function drawIcon( slice ) {
 
-    var startAngle = chartData[slice]['startAngle']  + chartStartAngle;
-    var endAngle = chartData[slice]['endAngle']  + chartStartAngle;
+    var startAngle = chartData[slice].startAngle  + chartStartAngle;
+    var endAngle = chartData[slice].endAngle  + chartStartAngle;
     var angle = (startAngle + endAngle) / 2;
 
     var midPoint = getPoint(centreX, centreY, (chartRadius/2)+10, angle);
@@ -378,7 +363,7 @@ function pieChart() {
     if( slice == currentPullOutSlice )
       icon = chartData[slice]['icon-spent'];
     else
-      icon = chartData[slice]['icon'];
+      icon = chartData[slice].icon;
 
     var x =  midPoint[0];
     var y = midPoint[1];
