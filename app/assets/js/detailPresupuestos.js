@@ -46,8 +46,7 @@ $(document).ready(function () {
     $(".detail-header .icon-check-circle, .detail-header .icon-check-circle-orange")
       .hover ( function() {
         reverseClass($(this), 'icon-check-circle', 'icon-check-circle-orange');
-      }
-    );
+      });
 
 
   // TRATAMIENTO DEL RETURN DE AJUSTE MANUAL
@@ -64,11 +63,7 @@ $(document).ready(function () {
       $section.find(".edit-present-container").removeClass("slidedown").addClass("slideup");
       $section.find(".box-container-edit").removeClass("hidden");
       $section.find(".box-container-return").addClass("hidden");
-    })
-    .hover ( function() {
-        reverseClass($(this), 'icon-check-circle', 'icon-check-circle-orange');
-      }
-    );
+    });
 
   // RESTAURAR EL VALOR FUTURO POR DEFECTO
   $(document).on('click', '.detail-header .info-future .edit-return', function(event) {

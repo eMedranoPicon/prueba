@@ -251,7 +251,7 @@ $(document).ready(function () {
       .on('click', function() {
         var $thisContainer = $(this).closest('.element-container').find('.modules-container');
         var $elems = $(this).closest('.elements-box').find('.modules-container');
-        
+
         for(var e=0; e < $elems.length; e++){
           if($($elems[e]).hasClass('slidedown') && !$($elems[e]).is($thisContainer)){
             slideContainer($($elems[e]));

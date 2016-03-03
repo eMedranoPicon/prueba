@@ -78,10 +78,10 @@ def get_detail():
 						"ICONO_TARJETA": "icon-balloon-small-white",
 						"PREVISTO": 370,
 						"PREVISTO_DECIMAL": "00",
-						"GASTADO": 170,
+						"GASTADO": 420,
 						"GASTADO_DECIMAL": "00",
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 100,
+						"PORCENTAJE": 120,
 						"MES_SIGUIENTE": 600,
 						"TIP": False
 					},
