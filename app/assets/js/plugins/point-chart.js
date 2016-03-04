@@ -31,15 +31,15 @@ function pointChart() {
       if ( currentCell == 1) {
         currentRow++;
         chartData[currentRow] = [];
-        chartData[currentRow]['mes'] = $(this).text();
+        chartData[currentRow].mes = $(this).text();
       }
       else if (currentCell == 2) {
         var expected = parseInt($(this).text());
-        chartData[currentRow]['expected'] = expected;
+        chartData[currentRow].expected = expected;
       }
       else if (currentCell == 3) {
         var spent = parseInt($(this).text());
-        chartData[currentRow]['spent'] = spent;
+        chartData[currentRow].spent = spent;
       }
 
       if(currentCell == 3)
@@ -47,7 +47,7 @@ function pointChart() {
 
     });
 
-    chartData[chartData.length-1]['spent'] = null;
+    chartData[chartData.length-1].spent = null;
 
   }
 
@@ -75,7 +75,7 @@ function pointChart() {
       expecteds = expecteds.slice(0, expecteds.length-1);
       expecteds.push(
         {
-          y: chartData[chartData.length-1]['expected'],
+          y: chartData[chartData.length-1].expected,
           marker: {
             radius: 5,
             lineWidth: 1,
@@ -86,7 +86,7 @@ function pointChart() {
       spents = spents.slice(0, spents.length-2);
       spents.push(
         {
-          y: chartData[chartData.length-2]['spent'],
+          y: chartData[chartData.length-2].spent,
           marker: {
             radius: 20,
             lineWidth: 10,

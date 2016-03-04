@@ -22,7 +22,6 @@ function pieChart() {
   var centreX;                      // X-coordinate of centre of the canvas/chart
   var centreY;                      // Y-coordinate of centre of the canvas/chart
   var chartRadius;                  // Radius of the pie chart, in pixels
-  var currentSelectedSlice = 0;
   var currentPullOutAngle = chartStartAngle;   // How many pixels the pulled-out slice is currently pulled out in the animation
   var currentPullOutSlice = -1;
 
@@ -30,16 +29,6 @@ function pieChart() {
   var pullOutFrameStep;                         // How many pixels to move a slice with each animation frame
   var pullOutFrameInterval = 40;                    // How long (in ms) between each animation frame
   var pullOutMaxTime = 450;                         // Max time duration of animation
-  var pullOutLabelPadding = 65;                     // Padding between pulled-out slice and its label
-  var pullOutLabelFont = "bold 16px 'Trebuchet MS', Verdana, sans-serif";  // Pull-out slice label font
-  var pullOutValueFont = "bold 12px 'Trebuchet MS', Verdana, sans-serif";  // Pull-out slice value font
-  var pullOutValuePrefix = "$";                     // Pull-out slice value prefix
-  var pullOutShadowColour = "rgba( 0, 0, 0, .5 )";  // Colour to use for the pull-out slice shadow
-  var pullOutShadowOffsetX = 5;                     // X-offset (in pixels) of the pull-out slice shadow
-  var pullOutShadowOffsetY = 5;                     // Y-offset (in pixels) of the pull-out slice shadow
-  var pullOutShadowBlur = 5;                        // How much to blur the pull-out slice shadow
-  var pullOutBorderWidth = 2;                       // Width (in pixels) of the pull-out slice border
-  var pullOutBorderStyle = "#333";                  // Colour of the pull-out slice border
   var maxPullOutAngle = 10;
 
 
@@ -51,7 +40,6 @@ function pieChart() {
    * Set up the chart data and colours, as well as the chart and table click handlers,
    * and draw the initial pie chart
    */
-
   function init() {
 
     // Get the canvas element in the page
@@ -99,12 +87,10 @@ function pieChart() {
       if(currentCell == 4)
         currentCell = 0;
 
-      // Store the slice index in this cell, and attach a click handler to it
       $(this).data( 'slice', currentRow );
 
     } );
 
-    // Now compute and store the start and end angles of each slice in the chart data
 
     var currentPos = 0; // The current position of the slice in the pie (from 0 to 1)
 
@@ -115,7 +101,6 @@ function pieChart() {
       currentPos += chartData[slice].value / totalValue;
     }
 
-    // All ready! Now draw the pie chart, and add the click handler to it
     startPullOut( 0 );
     $('.pie-chart').click ( handleChartClick );
 
@@ -284,7 +269,6 @@ function pieChart() {
      *
      * @param Number The slice index (between 0 and the number of slices - 1)
      */
-
     function toggleSlice ( slice ) {
       if ( slice != currentPullOutSlice ) {
         startPullOut ( slice );
@@ -297,7 +281,6 @@ function pieChart() {
      *
      * @param Number The slice index (between 0 and the number of slices - 1)
      */
-
     function startPullOut ( slice ) {
 
       // Exit if we're already pulling out this slice
@@ -316,12 +299,6 @@ function pieChart() {
       clearInterval( animationId );
       animationId = setInterval( function() { animatePullOut( slice ); }, pullOutFrameInterval );
 
-      // Highlight the corresponding row in the key table
-      $('#chartData td').removeClass('highlight');
-      var labelCell = $('#chartData td:eq(' + (slice*2) + ')');
-      var valueCell = $('#chartData td:eq(' + (slice*2+1) + ')');
-      labelCell.addClass('highlight');
-      valueCell.addClass('highlight');
     }
 
 
