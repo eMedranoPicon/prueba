@@ -45,7 +45,6 @@ var presupuestos = (function() {
       var value;
       var id = $(this).data('id');
 
-
       $(this).addClass('icon-edit').removeClass('icon-return-circle edit-return');
       value = $('#init-value' + id).val().split(',');
       $('#label-input' + id).show();

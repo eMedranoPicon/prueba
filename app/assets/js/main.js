@@ -16,7 +16,8 @@ $(document).ready(function () {
   $(":input").inputmask();
 
   // INITIALIZE ACCORDION
-  $('#st-accordion').accordionSoft();
+  if($('#st-accordion').length)
+    $('#st-accordion').accordionSoft();
 
   // INITIALIZE PIE CHART
   if($('.pie-chart').length)
