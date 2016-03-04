@@ -1,10 +1,12 @@
 {% extends "/base/_base.html" %}
 {% block content %}
-  {% with pres=0 %}
-    {% include '/includes/_headerDetailPresupuesto.html' %}
-  {% endwith %}
-  {% include '/includes/_charts.html' %}
-  {% include '/includes/_proveedores.html' %}
-  {% include '/includes/_timeline.html' %}
-  {% include '/includes/_otros_presupuestos.html' %}
+  <div class="detail-presupuestos">
+    {% with pres=0 %}
+      {% include '/includes/_headerDetailPresupuesto.html' %}
+    {% endwith %}
+    {% include '/includes/_charts.html' %}
+    {% include '/includes/_proveedores.html' %}
+    {% include '/includes/_timeline.html' %}
+    {% include '/includes/_otros_presupuestos.html' %}
+  </div>
 {% endblock %}
