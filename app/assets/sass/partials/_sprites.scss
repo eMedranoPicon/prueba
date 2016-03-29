@@ -8,6 +8,7 @@
 		background: transparent url("../images/sprite.png") no-repeat scroll -206px -102px;
 	}
 }
+
 .icon-bicycle {
 	background: transparent url("../images/sprite.png") no-repeat scroll -229px -21px;
 	padding: 3px 10px;
@@ -15,14 +16,12 @@
 		background: transparent url("../images/sprite.png") no-repeat scroll -229px -21px;
 	}
 }
+
 .icon-eye {
 	background: transparent url("../images/sprite.png") no-repeat scroll -204px -70px;
 	padding: 3px 8px;
 }
-.icon-calendar {
-    background: transparent url("../images/sprite.png") no-repeat scroll -116px 1px;
-    padding: 3px 7px;
-}
+
 .icon-edit {
 	background: transparent url("../images/sprite.png") no-repeat scroll -97px -152px;
   	padding: 4px 12px;
@@ -38,6 +37,15 @@
 	}
 }
 
+
+// CONITE
+.icon-Conite {
+	background: transparent url("../images/sprite.png") no-repeat scroll -132px -139px;
+	padding: 15px 17px;
+}
+
+
+// HOUSE
 .icon-house {
 	background: transparent url("../images/sprite.png") no-repeat scroll -308px -56px;
 	padding: 11px 14px;
@@ -61,15 +69,15 @@
 	padding: 17px 22px;
 }
 
-.icon-Conite {
-	background: transparent url("../images/sprite.png") no-repeat scroll -132px -139px;
-	padding: 15px 17px;
-}
 
-
+// UMBRELLA
 .icon-umbrella-white {
 	background: transparent url("../images/sprite.png") no-repeat scroll -135px -75px;
 	padding: 13px 13px;
+}
+.icon-umbrella-white-big {
+	background: transparent url("../images/sprite.png") no-repeat scroll -453px -7px;
+	padding: 18px 15px;
 }
 .icon-umbrella-orange {
 	background: transparent url("../images/sprite.png") no-repeat scroll -41px -209px;
@@ -80,14 +88,34 @@
 	padding: 13px 11px;
 }
 
+
+// BOOK
 .icon-book-white {
 	background: transparent url("../images/sprite.png") no-repeat scroll -167px -76px;
-  padding: 12px 15px;
+	padding: 12px 15px;
+}
+.icon-book-white-big {
+	background: transparent url("../images/sprite.png") no-repeat scroll -413px -60px;
+	padding: 15px 21px;
+}
+.icon-book-orange {
+	background: transparent url("../images/sprite.png") no-repeat scroll -399px -148px;
+	padding: 11px 15px;
+}
+.icon-book-blue {
+	background: transparent url("../images/sprite.png") no-repeat scroll -399px -109px;
+	padding: 11px 15px;
 }
 
+
+// CARD
 .icon-card-white {
 	background: transparent url("../images/sprite.png") no-repeat scroll -133px -112px;
 	padding: 12px 15px;
+}
+.icon-card-white-big {
+	background: transparent url("../images/sprite.png") no-repeat scroll -531px -9px;
+	padding: 13px 20px;
 }
 .icon-card-orange {
 	background: transparent url("../images/sprite.png") no-repeat scroll -77px -213px;
@@ -98,15 +126,86 @@
 	padding: 9px 14px;
 }
 
+
+// BALLOON
+.icon-balloon-white {
+	background: transparent url("../images/sprite.png") no-repeat scroll -201px -142px;
+	padding: 14px 14px;
+}
+.icon-balloon-white-big {
+	background: transparent url("../images/sprite.png") no-repeat scroll -469px -55px;
+	padding: 22px 17px;
+}
+.icon-balloon-orange {
+	background: transparent url("../images/sprite.png") no-repeat scroll -440px -146px;
+	padding: 16px 12px;
+}
+.icon-balloon-blue {
+	background: transparent url("../images/sprite.png") no-repeat scroll -440px -106px;
+	padding: 16px 12px;
+}
+
+.icon-balloon-small-white {
+	background: transparent url("../images/sprite.png") no-repeat scroll -218px -208px;
+	padding: 15px 10px;
+}
+.icon-balloon-small-white-big {
+	background: transparent url("../images/sprite.png") no-repeat scroll -413px -4px;
+	padding: 21px 14px;
+}
+.icon-balloon-small-orange {
+	background: transparent url("../images/sprite.png") no-repeat scroll -9px -209px;
+	padding: 15px 10px;
+}
+.icon-balloon-small-blue {
+	background: transparent url("../images/sprite.png") no-repeat scroll -273px -208px;
+	padding: 15px 10px;
+}
+
+
+// PAPER
+.icon-paper-white {
+	background: transparent url("../images/sprite.png") no-repeat scroll -196px -211px;
+	padding: 11px 8px;
+}
+.icon-paper-white-big {
+	background: transparent url("../images/sprite.png") no-repeat scroll -497px -9px;
+	padding: 16px 11px;
+}
+.icon-paper-orange {
+	background: transparent url("../images/sprite.png") no-repeat scroll -121px -212px;
+	padding: 11px 8px;
+}
+.icon-paper-blue {
+	background: transparent url("../images/sprite.png") no-repeat scroll -368px -209px;
+	padding: 11px 8px;
+}
+
+
+// HAND
 .icon-hand-white {
 	background: transparent url("../images/sprite.png") no-repeat scroll -168px -105px;
 	padding: 14px 15px;
+}
+.icon-hand-white-big {
+	background: transparent url("../images/sprite.png") no-repeat scroll -511px -55px;
+	padding: 20px 21px;
 }
 .icon-hand-blue {
 	background: transparent url("../images/sprite.png") no-repeat scroll -349px -90px;
 	padding: 14px 15px;
 }
+.icon-hand-dark-blue {
+	background: transparent url("../images/sprite.png") no-repeat scroll -471px -106px;
+	padding: 14px 15px;
+}
+.icon-hand-orange {
+	background: transparent url("../images/sprite.png") no-repeat scroll -473px -145px;
+	padding: 14px 15px;
+}
 
+
+// CHECK
 .icon-check-circle {
   background: transparent url("../images/sprite.png") no-repeat scroll -135px -3px;
   padding: 16px;
@@ -114,18 +213,38 @@
 		background: transparent url("../images/sprite.png") no-repeat scroll -169px -3px;
 	}
 }
-
 .icon-check-circle-orange {
 	background: transparent url("../images/sprite.png") no-repeat scroll -236px -163px;
   padding: 16px;
 }
+.icon-check {
+	background: transparent url("../images/sprite.png") no-repeat scroll -282px -164px;
+	padding: 6px 8px;
+}
+.icon-check-green {
+	background: transparent url("../images/sprite.png") no-repeat scroll -282px -183px;
+	padding: 6px 8px;
+	&.small {
+		background: transparent url("../images/sprite.png") no-repeat scroll -315px -187px;
+		padding: 4px 6px;
+	}
+}
 
+
+// RETURN
 .icon-return-circle {
 	background: transparent url("../images/sprite.png") no-repeat scroll -135px -35px;
 	padding: 16px;
 	&.icon-hover {
 		background: transparent url("../images/sprite.png") no-repeat scroll -169px -35px;
 	}
+}
+
+
+// CALENDAR
+.icon-calendar {
+    background: transparent url("../images/sprite.png") no-repeat scroll -116px 1px;
+    padding: 3px 7px;
 }
 .icon-calendar-new {
   background: transparent url("../images/sprite.png") no-repeat scroll -170px -168px;;
@@ -138,42 +257,6 @@
 		padding: 11px 10px;
 	}
 }
-
-.icon-files-add {
-  background: transparent url("../images/sprite.png") no-repeat scroll -233px -42px;
-  padding: 17px 30px;
-}
-.icon-warning {
-	background: transparent url("../images/sprite.png") no-repeat scroll -205px -175px;
-	padding: 7px 8px;
-}
-.icon-warning-yellow {
-	background: transparent url("../images/sprite.png") no-repeat scroll -354px -66px;
-	padding: 7px 8px;
-}
-
-.icon-balloon-white {
-	background: transparent url("../images/sprite.png") no-repeat scroll -201px -142px;
-	padding: 14px 14px;
-}
-
-.icon-balloon-small-white {
-	background: transparent url("../images/sprite.png") no-repeat scroll -218px -208px;
-	padding: 15px 10px;
-}
-.icon-balloon-small-orange {
-	background: transparent url("../images/sprite.png") no-repeat scroll -9px -209px;
-	padding: 15px 10px;
-}
-.icon-balloon-small-blue {
-	background: transparent url("../images/sprite.png") no-repeat scroll -273px -208px;
-	padding: 15px 10px;
-}
-
-.icon-cross-white {
-	background: transparent url("../images/sprite.png") no-repeat scroll -261px -6px;
-	padding: 11px 11px;
-}
 .icon-calendar-gray {
 	background: transparent url("../images/sprite.png") no-repeat scroll -235px -100px;
 	padding: 21px 28px;
@@ -183,11 +266,36 @@
 	}
 }
 
+.icon-files-add {
+  background: transparent url("../images/sprite.png") no-repeat scroll -233px -42px;
+  padding: 17px 30px;
+}
+
+
+// WARNING
+.icon-warning {
+	background: transparent url("../images/sprite.png") no-repeat scroll -205px -175px;
+	padding: 7px 8px;
+}
+.icon-warning-yellow {
+	background: transparent url("../images/sprite.png") no-repeat scroll -354px -66px;
+	padding: 7px 8px;
+}
+
+
+.icon-cross-white {
+	background: transparent url("../images/sprite.png") no-repeat scroll -261px -6px;
+	padding: 11px 11px;
+}
+
+
 .icon-arrow-down-white {
 	background: transparent url("../images/sprite.png") no-repeat scroll -383px -5px;
 	padding: 4px 6px;
 }
 
+
+// PDF
 .icon-pdf {
 	background: transparent url("../images/sprite.png") no-repeat scroll 0px -102px;
 	padding: 23px 21px;
@@ -206,18 +314,7 @@
 	background: transparent url("../images/sprite.png") no-repeat scroll -311px -123px;
 	padding: 11px 11px;
 }
-.icon-check {
-	background: transparent url("../images/sprite.png") no-repeat scroll -282px -164px;
-	padding: 6px 8px;
-}
-.icon-check-green {
-	background: transparent url("../images/sprite.png") no-repeat scroll -282px -183px;
-	padding: 6px 8px;
-	&.small {
-		background: transparent url("../images/sprite.png") no-repeat scroll -315px -187px;
-		padding: 4px 6px;
-	}
-}
+
 .icon-sms {
 	background: transparent url("../images/sprite.png") no-repeat scroll -354px -40px;
 	padding: 8px 9px;
@@ -226,18 +323,6 @@
 	}
 }
 
-.icon-paper-white {
-	background: transparent url("../images/sprite.png") no-repeat scroll -196px -211px;
-	padding: 11px 8px;
-}
-.icon-paper-orange {
-	background: transparent url("../images/sprite.png") no-repeat scroll -121px -212px;
-	padding: 11px 8px;
-}
-.icon-paper-blue {
-	background: transparent url("../images/sprite.png") no-repeat scroll -368px -209px;
-	padding: 11px 8px;
-}
 
 .icon-ex {
 	background: transparent url("../images/sprite.png") no-repeat scroll -248px -209px;

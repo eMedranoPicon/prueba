@@ -19,11 +19,14 @@ var timeline = (function() {
       var $elems = $(this).closest('.st-accordion').find('.modules-container');
       var $thisElem = $(this).closest('.fila').find('.modules-container');
       for(var e=0; e < $elems.length; e++){
+        $($elems[e]).closest('.fila').find('.button-details').removeClass('selected');
         if($($elems[e]).hasClass('slidedown') && !$($elems[e]).is($thisElem)){
           modules.slideContainer($($elems[e]));
           modules.rebootWarning($($elems[e]));
         }
       }
+      if($thisElem.hasClass('slideup'))
+        $(this).addClass('selected');
       modules.slideContainer($thisElem);
       modules.rebootWarning($thisElem);
     });
@@ -31,9 +34,7 @@ var timeline = (function() {
     // MODULE ALERTS (TIMELINE)
     // SLIDE DOWN ALERTS
     $root.find(
-      ".receipt-detail-content .element-container-alerts .name-container,"+
       ".receipt-detail-content .element-container-alerts .icon-container,"+
-      ".prestamo-detail-content .element-container-alerts .name-container,"+
       ".prestamo-detail-content .element-container-alerts .icon-container")
       .on('click', function() {
         var $previousElem, h;

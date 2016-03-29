@@ -41,11 +41,25 @@ var detailPresupuestos = (function() {
         slideUpDown($returnPresentContainer);
       });
 
+    // TRATAR PULSACIÓN ENTER DURANTE MODIFICACIÓN DEL MES PRESENTE
+    $header.find('.edit-present-container .edit-text')
+    .keyup(function(event){
+        if(event.keyCode == 13){
+            $header.find('.check-edit').click();
+        }
+    });
+
     // VALIDAR MODIFICACIÓN DEL MES PRESENTE
     $header.on("click", ".check-edit", function() {
-        var $section = $(this).closest('.section-header');
-        var value = $section.find(".edit-present-container .edit-text").val().split(',');
-        var infoPresent = $section.find(".info-present");
+        var $section, value, infoPresent, previsto, gastado;
+
+        $section    = $(this).closest('.section-header');
+        value       = $section.find(".edit-present-container .edit-text").val().split(',');
+        gastado     = stringToInt($section.find(".spent .number").html()) + ( $section.find(".spent .decimal").html() / 100 );
+        previsto    = stringToInt(value[0]) + (parseInt(value[1]) / 100);
+        infoPresent = $section.find(".info-present");
+
+
         infoPresent.find(".price").html( value[0]+"," );
         infoPresent.find(".decimal").html( value[1] );
         infoPresent.find(".edit-present").removeClass("icon-edit-white").addClass("icon-return-circle");
@@ -54,20 +68,28 @@ var detailPresupuestos = (function() {
         $section.find(".edit-present-container").removeClass("slidedown").addClass("slideup");
         $section.find(".box-container-edit").addClass("hidden");
         $section.find(".box-container-return").removeClass("hidden");
-      });
 
-      // CAMBIO DE ICONO A NARANJA
-      $header.find(".icon-check-circle, .icon-check-circle-orange")
-        .hover ( function() {
-          reverseClass($(this), 'icon-check-circle', 'icon-check-circle-orange');
-        });
+        progressBar.init($section.find('.bar-container'), previsto, gastado);
+        progressBar.updateProgressBar();
+    });
+
+    // CAMBIO DE ICONO A NARANJA
+    $header.find(".icon-check-circle, .icon-check-circle-orange")
+    .hover ( function() {
+        reverseClass($(this), 'icon-check-circle', 'icon-check-circle-orange');
+    });
 
 
     // TRATAMIENTO DEL RETURN DE AJUSTE MANUAL
     $header.on("click", '.check-return', function() {
-        var $section = $(this).closest('.section-header');
-        var value = $section.find(".return-text-container").find(".return-text").html().split(',');
-        var infoPresent = $section.find(".info-present");
+        var $section, value, infoPresent, previsto, gastado;
+
+        $section    = $(this).closest('.section-header');
+        value       = $section.find(".return-text-container").find(".return-text").html().split(',');
+        infoPresent = $section.find(".info-present");
+        gastado     = stringToInt($section.find(".spent .number").html()) + ( $section.find(".spent .decimal").html() / 100 );
+        previsto    = stringToInt(value[0]) + (parseInt(value[1]) / 100);
+
         infoPresent.find(".price").html( value[0]+"," );
         infoPresent.find(".decimal").html( value[1] );
         infoPresent.find(".edit-present").removeClass("icon-return-circle").addClass("icon-edit-white");
@@ -76,6 +98,9 @@ var detailPresupuestos = (function() {
         $section.find(".edit-present-container").removeClass("slidedown").addClass("slideup");
         $section.find(".box-container-edit").removeClass("hidden");
         $section.find(".box-container-return").addClass("hidden");
+
+        progressBar.init($section.find('.bar-container'), previsto, gastado);
+        progressBar.updateProgressBar();
       });
 
     // RESTAURAR EL VALOR FUTURO POR DEFECTO
@@ -104,26 +129,33 @@ var detailPresupuestos = (function() {
       }
     });
 
+
+
     // TRATAMIENTO DEL INPUT DEL MES FUTURO
     $header.find('.input-future')
-      .on('blur', function() {
+    .on('blur', function() {
         var $flipper = $(this).closest('.flipper');
         var value = $(this).val().split(',');
         $(this).hide();
         $flipper.find('.label-input').show();
         $flipper.find('.value').html(value[0]);
         $flipper.find('.decimal').html(value[1]);
-      })
-      .on('focus', function() {
+    })
+    .on('focus', function() {
         var $labelInput = $(this).closest('.flipper').find('.label-input');
         var value = $labelInput.find('.value').text() + ',' + $labelInput.find('.decimal').text();
         $labelInput.hide();
         $(this).val(value);
-      })
-      .one('focus', function() {
+    })
+    .one('focus', function() {
         var $labelInput = $(this).closest('.flipper').find('label-input');
         var value = $labelInput.find('.value').text() + ',' + $labelInput.find('.decimal').text();
         $(this).closest('.flipper').find('.info-future .init-value').html(value);
+    })
+    .keyup(function(event){
+        if(event.keyCode == 13){
+            $header.find('.future-detail-check').click();
+        }
     });
 
     // VALIDAR LOS DATOS DEL MES FUTURO

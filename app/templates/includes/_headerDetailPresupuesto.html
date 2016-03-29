@@ -4,7 +4,7 @@
   {% for PRESUPUESTO in MES.PRESUPUESTOS %}
     {% set PRESUPUESTO_SIG = MES_SIG.PRESUPUESTOS[loop.index-1] %}
     {% set PORCENTAJE = (PRESUPUESTO.GASTADO / PRESUPUESTO.PREVISTO) * 100 %}
-    {% set PORC = 15 %}
+    {% set UMBRAL = 25 %}
     <div id="section-header{{ loop.index }}" class="section-header container {% if loop.index == 1 %} actived {% endif %}">
 
       <div class="info-container">
@@ -106,7 +106,7 @@
               <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ value }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ value }}%"></div>
             </div>
             <div class="line-container">
-              {% if value > PORC %}
+              {% if value > UMBRAL %}
                 <div class="dotted-line" style="width: {{ width }}%"></div>
                 <div class="bar-text-container expected">
                   <div class="icon-container">
@@ -145,7 +145,7 @@
                   </div>
                 </div>
               {% endif %}
-              {% if value > PORC %}
+              {% if value > UMBRAL %}
                 <div class="bar-text-container spent">
                   <div class="text-content">
                     <span class="number primary">{{ PRESUPUESTO.GASTADO }}</span>,
@@ -159,7 +159,7 @@
                 </div>
               {% endif %}
             </div>
-            {% if value <= PORC %}
+            {% if value <= UMBRAL %}
               <div class="bar-text-container spent right">
                 <div class="text-content">
                   <span class="number primary">{{ PRESUPUESTO.GASTADO }}</span>,

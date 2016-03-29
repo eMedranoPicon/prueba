@@ -19,6 +19,9 @@
     &.slideup {
       @include slideup2();
     }
+    &.slidedown {
+      @include slidedown2();
+    }
     .module-inner-content {
       background-color: $colorModBack;
       border: 1px solid $colorModBorder;
@@ -48,7 +51,7 @@
         }
       }
 
-      .element-container, .subelement-container, .element-container-alerts {
+      .element-container, .subelement-container {
         font-size: 16px;
         cursor: pointer;
       }
@@ -87,6 +90,13 @@
           &.slidedown {
             @include triangle(0, 6px, 5px, 5px, $colorDetPrimary);
           }
+        }
+      }
+      .element-container-alerts {
+        font-size: 16px;
+        .icon-container {
+            cursor: pointer;
+            padding-left: 8px;
         }
       }
       .subelement-container {

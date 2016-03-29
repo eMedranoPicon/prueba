@@ -212,7 +212,7 @@
           position: relative;
           background: $colorTimePenta;
           cursor: pointer;
-          &:hover {
+          &:hover, &.selected {
             background-color: $colorFontTimeline;
           }
           .dot {
