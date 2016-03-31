@@ -218,15 +218,15 @@
   padding: 16px;
 }
 .icon-check {
-	background: transparent url("../images/sprite.png") no-repeat scroll -282px -164px;
-	padding: 6px 8px;
+	background: transparent url("../images/sprite.png") no-repeat scroll -439px -209px;
+	padding: 6px 7px;
 }
 .icon-check-green {
-	background: transparent url("../images/sprite.png") no-repeat scroll -282px -183px;
-	padding: 6px 8px;
+	background: transparent url("../images/sprite.png") no-repeat scroll -439px -224px;
+	padding: 6px 7px;
 	&.small {
-		background: transparent url("../images/sprite.png") no-repeat scroll -315px -187px;
-		padding: 4px 6px;
+		background: transparent url("../images/sprite.png") no-repeat scroll -460px -205px;
+		padding: 4px 4px;
 	}
 }
 
@@ -265,6 +265,18 @@
 		padding: 10px 10px;
 	}
 }
+.icon-calendar-gray-2 {
+	background: transparent url("../images/sprite.png") no-repeat scroll -390px -180px;
+	padding: 11px 11px;
+}
+.icon-calendar-gray-3 {
+	background: transparent url("../images/sprite.png") no-repeat scroll -423px -180px;
+	padding: 11px 11px;
+}
+.icon-calendar-gray-6 {
+	background: transparent url("../images/sprite.png") no-repeat scroll -460px -180px;
+	padding: 11px 11px;
+}
 
 .icon-files-add {
   background: transparent url("../images/sprite.png") no-repeat scroll -233px -42px;
@@ -292,6 +304,12 @@
 .icon-arrow-down-white {
 	background: transparent url("../images/sprite.png") no-repeat scroll -383px -5px;
 	padding: 4px 6px;
+}
+
+
+.icon-arrow-left-white {
+	background: transparent url("../images/sprite.png") no-repeat scroll -370px -186px;
+	padding: 6px 3px;
 }
 
 

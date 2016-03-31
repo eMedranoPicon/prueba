@@ -100,7 +100,7 @@ var progressBar = (function() {
             new_bar +=  '<span class="triangulo_izq full"></span>';
 
         new_bar +=      '<div class="progress border-radius-less">';
-        new_bar +=      '   <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>';
+        new_bar +=      '   <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="'+ porcentaje +'" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>';
         if (porcentaje > 0 && porcentaje != porcentaje_complete)
             new_bar +=  '   <span class="triangulo_izq"></span>';
 

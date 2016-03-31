@@ -142,8 +142,7 @@
       margin-bottom: 0;
     }
     input[type="checkbox"]:checked + .label-checkbox {
-      background: transparent url("../images/sprite.png") no-repeat scroll -312px -181px;
-      padding: 4px 6px;
+      @extend .icon-check-green.small;
     }
 
   }

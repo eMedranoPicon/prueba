@@ -1,36 +1,39 @@
 function pieChart() {
 
     // Config settings
-    var chartSizePercent = 100;                        // The chart radius relative to the canvas width/height (in percent)
-    var sliceBorderWidth = 1;                         // Width (in pixels) of the border around each slice
-    var sliceBorderStyle = "#F79D25";                    // Colour of the border around each slice
+    var chartSizePercent    = 100;                  // The chart radius relative to the canvas width/height (in percent)
+    var sliceBorderWidth    = 1;                    // Width (in pixels) of the border around each slice
+    var sliceBorderStyle    = "#F79D25";            // Colour of the border around each slice
+    var chartStartAngle     = Math.PI;              // Start the chart at 12 o'clock instead of 3 o'clock
 
-    var chartStartAngle = Math.PI;              // Start the chart at 12 o'clock instead of 3 o'clock
-    var fillColour = "#24313C";
-    var fillColourSelectedPrimary = "#f8f9f9";
-    var fillColourSelectedSecondary = "#F79D25";
-    var fillColourSelectedSecondTransp = "rgba(247, 157, 37, 0.8)";
+    var fillColour                      = "#24313C";
+    var fillColourSelectedPrimary       = "#f8f9f9";
+    var fillColourSelectedSecondary     = "#F79D25";
+    var fillColourSelectedSecondTransp  = "rgba(247, 157, 37, 0.8)";
 
     // Declare some variables for the chart
-    var canvas;                       // The canvas element in the page
+    var canvas;                                         // The canvas element in the page
 
-    var animationId = 0;              // Tracks the interval ID for the animation created by setInterval()
-    var chartData = [];               // Chart data (labels, values, and angles)
-    var totalValue = 0;               // Total of all the values in the chart
-    var canvasWidth;                  // Width of the canvas, in pixels
-    var canvasHeight;                 // Height of the canvas, in pixels
-    var centreX;                      // X-coordinate of centre of the canvas/chart
-    var centreY;                      // Y-coordinate of centre of the canvas/chart
-    var chartRadius;                  // Radius of the pie chart, in pixels
-    var currentPullOutAngle = chartStartAngle;   // How many pixels the pulled-out slice is currently pulled out in the animation
-    var currentPullOutSlice = -1;
+    var animationId             = 0;                    // Tracks the interval ID for the animation created by setInterval()
+    var chartData               = [];                   // Chart data (labels, values, and angles)
+    var totalValue              = 0;                    // Total of all the values in the chart
+    var canvasWidth;                                    // Width of the canvas, in pixels
+    var canvasHeight;                                   // Height of the canvas, in pixels
+    var centreX;                                        // X-coordinate of centre of the canvas/chart
+    var centreY;                                        // Y-coordinate of centre of the canvas/chart
+    var chartRadius;                                    // Radius of the pie chart, in pixels
+    var currentPullOutAngle     = chartStartAngle;      // How many pixels the pulled-out slice is currently pulled out in the animation
+    var currentPullOutSlice     = -1;
 
 
-    var pullOutFrameStep;                         // How many pixels to move a slice with each animation frame
-    var pullOutFrameInterval = 40;                    // How long (in ms) between each animation frame
-    var pullOutMaxTime = 450;                         // Max time duration of animation
-    var maxPullOutAngle = 10;
+    var pullOutFrameStep;                           // How many pixels to move a slice with each animation frame
+    var pullOutFrameInterval    = 40;               // How long (in ms) between each animation frame
+    var pullOutMaxTime          = 450;              // Max time duration of animation
+    var maxPullOutAngle         = 10;
 
+    var minAngleIcon            = Math.PI * 0.22;       // Minimum angle which the icon is drawn inside the chart
+    var insideDistanceIcon      = 10;                   // Increment Distance of icon from center inside the chart
+    var outsideDistanceIcon     = 20;                   // Increment Distance of icon from center outside the chart
 
     // Set things up and draw the chart
     init();
@@ -50,35 +53,35 @@ function pieChart() {
         if ( typeof canvas.getContext === 'undefined' ) return;
 
         // Initialise some properties of the canvas and chart
-        canvasWidth = canvas.width;
-        canvasHeight = canvas.height;
-        centreX = canvasWidth / 2;
-        centreY = canvasHeight / 2;
-        chartRadius = Math.min( canvasWidth, canvasHeight ) / 2 * ( chartSizePercent / 100 );
+        canvasWidth     = canvas.width;
+        canvasHeight    = canvas.height;
+        centreX         = canvasWidth / 2;
+        centreY         = canvasHeight / 2;
+        chartRadius     = Math.min( canvasWidth, canvasHeight ) / 2 * ( chartSizePercent / 100 );
 
 
         // Grab the data from the table,
         // and assign click handlers to the table data cells
 
-        currentRow = -1;
+        currentRow  = -1;
         currentCell = 0;
 
         $('#pieChartData td').each( function() {
             currentCell++;
             if ( currentCell == 1) {
                 currentRow++;
-                chartData[currentRow] = [];
-                chartData[currentRow].icon = $(this).find('i').attr('class');
+                chartData[currentRow]       = [];
+                chartData[currentRow].icon  = $(this).find('i').attr('class');
             }
             else if (currentCell == 2) {
-                value = parseFloat($(this).text());
-                chartData[currentRow].expected = value;
-                totalValue += value;
-                value = value.toFixed(2);
-                chartData[currentRow].value = value;
+                value                           =   parseFloat($(this).text());
+                chartData[currentRow].expected  =   value;
+                totalValue                      +=  value;
+                value                           =   value.toFixed(2);
+                chartData[currentRow].value     =   value;
             }
             else if (currentCell == 3) {
-                spent = parseFloat($(this).text());
+                spent                       = parseFloat($(this).text());
                 chartData[currentRow].spent = spent;
             }
             else if (currentCell == 4) {
@@ -144,24 +147,22 @@ function pieChart() {
     */
 
     function drawSlice ( context, slice ) {
+        var endPoint, actualPullOutAngle, startAngle, endAngle, angle;
 
-        var endPoint, actualPullOutAngle;
-        var startAngle = chartData[slice].startAngle  + chartStartAngle;
-        var endAngle = chartData[slice].endAngle  + chartStartAngle;
+        startAngle  =   chartData[slice].startAngle  + chartStartAngle;
+        endAngle    =   chartData[slice].endAngle  + chartStartAngle;
+        angle       =   (startAngle + endAngle) / 2;
 
-        var angle = (startAngle + endAngle) / 2;
-
-        startX = centreX;
-        startY = centreY;
+        startX      =   centreX;
+        startY      =   centreY;
 
         if ( slice == currentPullOutSlice ) {
 
             // We're pulling (or have pulled) this slice out.
             // Offset it from the pie centre, draw the text label,
             // and add a drop shadow
-            endPoint = getPoint(startX, startY, chartRadius, endAngle);
-
-            actualPullOutAngle = currentPullOutAngle + chartStartAngle;
+            endPoint            = getPoint(startX, startY, chartRadius, endAngle);
+            actualPullOutAngle  = currentPullOutAngle + chartStartAngle;
 
             context.beginPath();
             context.moveTo( startX, startY );
@@ -193,10 +194,9 @@ function pieChart() {
         else {
 
             // This slice isn't pulled out, so draw it from the pie centre
-            startX = centreX;
-            startY = centreY;
-
-            endPoint = getPoint(startX, startY, chartRadius, endAngle);
+            startX      = centreX;
+            startY      = centreY;
+            endPoint    = getPoint(startX, startY, chartRadius, endAngle);
 
             // Draw the slice
             context.beginPath();
@@ -205,7 +205,7 @@ function pieChart() {
             context.lineTo( startX, startY );
 
             // Draw the slice border if not selected
-            context.lineWidth = sliceBorderWidth;
+            context.lineWidth   = sliceBorderWidth;
             context.strokeStyle = sliceBorderStyle;
             context.stroke();
 
@@ -231,8 +231,8 @@ function pieChart() {
             startAngleAux, endAngleAux, index, $bar_container, $progress_bar, porcentaje, $section_header;
 
         // Get the mouse cursor position at the time of the click, relative to the canvas
-        mouseX = clickEvent.pageX - $('.chart').offset().left;
-        mouseY = clickEvent.pageY - $('.chart').offset().top;
+        mouseX              = clickEvent.pageX - $('.chart').offset().left;
+        mouseY              = clickEvent.pageY - $('.chart').offset().top;
 
         // Was the click inside the pie chart?
         xFromCentre         = mouseX - centreX;
@@ -303,10 +303,10 @@ function pieChart() {
         if ( currentPullOutSlice == slice ) return;
 
         // Record the slice that we're pulling out, clear any previous animation, then start the animation
-        currentPullOutSlice = slice;
-        currentPullOutAngle = chartData[slice].startAngle;
-        maxPullOutAngle = chartData[slice].endSpentAngle;
-        pullOutFrameStep = ((maxPullOutAngle - currentPullOutAngle) * pullOutFrameInterval) / pullOutMaxTime;
+        currentPullOutSlice     = slice;
+        currentPullOutAngle     = chartData[slice].startAngle;
+        maxPullOutAngle         = chartData[slice].endSpentAngle;
+        pullOutFrameStep        = ((maxPullOutAngle - currentPullOutAngle) * pullOutFrameInterval) / pullOutMaxTime;
 
         $('.pie-chart .icons-container').html('');
         for(var s in chartData)
@@ -346,34 +346,35 @@ function pieChart() {
 
     function drawIcon( slice ) {
 
-        var startAngle = chartData[slice].startAngle  + chartStartAngle;
-        var endAngle = chartData[slice].endAngle  + chartStartAngle;
-        var angle = (startAngle + endAngle) / 2;
+        var startAngle, endAngle, radius, angle, midPoint, icon, x, y, container, elem, sizeX, sizeY, html, x2, y2;
 
-        var midPoint = getPoint(centreX, centreY, (chartRadius/2)+10, angle);
+        startAngle  = chartData[slice].startAngle  + chartStartAngle;
+        endAngle    = chartData[slice].endAngle  + chartStartAngle;
+        angle       = (startAngle + endAngle) / 2;
 
-        var icon;
+        if((endAngle - startAngle) > minAngleIcon)
+            radius = (chartRadius/2) + insideDistanceIcon;
+        else
+            radius = chartRadius + outsideDistanceIcon;
+
+        midPoint = getPoint(centreX, centreY, radius, angle);
+
         if( slice == currentPullOutSlice )
             icon = chartData[slice]['icon-spent'];
         else
             icon = chartData[slice].icon;
 
-        var x =  midPoint[0];
-        var y = midPoint[1];
+        x           =   midPoint[0];
+        y           =   midPoint[1];
+        container   =   $('.pie-chart .icons-container');
+        elem        =   $('.'+icon);
+        sizeX       =   parseInt(elem.css('padding-left').replace("px", "")) + parseInt(elem.css('padding-right').replace("px", ""));
+        sizeY       =   parseInt(elem.css('padding-top').replace("px", "")) + parseInt(elem.css('padding-bottom').replace("px", ""));
+        html        =   container.html();
+        x2          =   canvasWidth - (x + sizeX/2);
+        y2          =   y - sizeY/2;
 
-        var container = $('.pie-chart .icons-container');
-        var elem = $('.'+icon);
-        var sizeX = parseInt(elem.css('padding-left').replace("px", "")) + parseInt(elem.css('padding-right').replace("px", ""));
-        var sizeY = parseInt(elem.css('padding-top').replace("px", "")) + parseInt(elem.css('padding-bottom').replace("px", ""));
-        var html = container.html();
-        var x2, y2;
-
-        x2 = canvasWidth - (x + sizeX/2);
-        y2 = y - sizeY/2;
-
-
-
-        html += '<i class="'+ icon +'" style="right: '+ x2 +'px; top: '+ y2 +'px;"></i>';
+        html        +=  '<i class="'+ icon +'" style="right: '+ x2 +'px; top: '+ y2 +'px;"></i>';
         container.html(html);
     }
 

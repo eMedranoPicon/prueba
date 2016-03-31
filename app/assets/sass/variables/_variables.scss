@@ -14,7 +14,7 @@ $blue300          : #556270;
 
 $red500           : #c90d3a;
 
-$orange800		    : #924a00;
+$orange800		  : #924a00;
 $orange500        : #cb7a10;
 $orange450        : #d78100;
 $orange400        : #F79D25;
@@ -27,12 +27,15 @@ $grey900          : #f0f0f0;
 $grey870          : #ededed;
 $grey850          : #e8e7e3;
 $grey840          : #e4e4e4;
+$grey837          : #e3e3e3;
 $grey835          : #ebebeb;
 $grey830          : #dfe1e3;
+$grey827          : #dde0e2;
 $grey825          : #dcdcdc;
 $gray820          : #dadddf;
 $grey800          : #d7d7d7;
 $grey750          : #d5d5d5;
+$grey730          : #c8c8c8;
 $grey700          : #c6cace;
 $grey670          : #c4c9ce;
 $grey660          : #c2c7cb;
@@ -59,7 +62,7 @@ $colorMetaPrimary : $green500;
 // Presupuestos
 $colorPresPrimary : $orange500;
 $colorPresSecond  : $orange300;
-$colorPresTer	    : $orange800;
+$colorPresTer	  : $orange800;
 
 
 // Detalles de presupuestos
@@ -94,15 +97,17 @@ $colorTimeBack      : $gray1000;
 
 
 // Modules
-$colorModPrimary    : $blue300;
-$colorModSecond     : $grey660;
-$colorModTer        : $grey500;
-$colorModCuat       : $grey870;
-$colorModPenta      : $grey450;
-$colorModBack       : $gray1000;
-$colorModBorder     : $grey840;
-$colorModBorderInput: $grey825;
-$colorModButBack    : $green500;
+$colorModPrimary        : $blue300;
+$colorModSecond         : $grey660;
+$colorModTer            : $grey500;
+$colorModCuat           : $grey870;
+$colorModPenta          : $grey450;
+$colorModBack           : $gray1000;
+$colorModBorder         : $grey837;
+$colorModBorderInput    : $grey825;
+$colorModBorderDark     : $grey730;
+$colorModButBack        : $green500;
+$colorModInputBorder    : $grey827;
 
 
 // Concrete

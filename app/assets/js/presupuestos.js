@@ -1,15 +1,19 @@
 /*
   Controladores de la pagina index
 */
-var presupuestos = (function() {
+$(document).ready(function () {
+    "use strict";
+    function presupuestos() {
 
-    var flipContainerHoverClass;
+        var flipContainerHoverClass;
+
+        if( Modernizr.csstransitions )
+            flipContainerHoverClass = 'hover';
+        else
+            flipContainerHoverClass = 'modern-hover';
 
 
-    // JQUERY CONTROLLERS
-    function initControllers(hoverClass) {
-
-        flipContainerHoverClass = hoverClass;
+        // JQUERY CONTROLLERS
 
         // SLIDE UP/DOWN CALENDAR
         $(".calendary-interaction")
@@ -103,7 +107,6 @@ var presupuestos = (function() {
         });
     }
 
-  return {
-    initControllers: initControllers
-  };
-})();
+    presupuestos();
+
+});

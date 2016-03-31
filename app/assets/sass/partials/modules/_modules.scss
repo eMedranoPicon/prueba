@@ -133,6 +133,31 @@
           .name {
             padding-left: 8px;
           }
+          .from-to {
+            width: 85px;
+            height: 35px;
+            margin: 0 8px;
+            color: $colorDetPrimary;
+            border-color: $colorModInputBorder;
+            font-size: 13px;
+            &::-webkit-input-placeholder{
+              font-style: italic;
+              color: $colorModTer;
+            }
+            &::-moz-placeholder{
+              font-style: italic;
+              color: $colorModTer;
+            }
+            &:-ms-input-placeholder{
+              font-style: italic;
+              color: $colorModTer;
+            }
+
+            &:-moz-placeholder {
+              font-style: italic;
+              color: $colorModTer;
+            }
+          }
         }
       }
 

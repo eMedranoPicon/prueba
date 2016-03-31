@@ -36,6 +36,11 @@
           text-align: center;
           height: 43px;
           padding-top: 4px;
+          cursor: pointer;
+          .return {
+            margin-bottom: 10px;
+            margin-right: 6px;
+          }
           i {
             display: inline-block;
           }

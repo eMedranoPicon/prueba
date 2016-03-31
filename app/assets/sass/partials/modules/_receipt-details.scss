@@ -3,7 +3,9 @@
     display: inline-block;
   }
   .link-container {
+    margin-top: 10px;
     a {
+      font-family: $fontBold;
       font-size: 12px;
       cursor: pointer;
       float: left;
@@ -21,10 +23,9 @@
       width: 100%;
     }
     .top-container {
-      height: 120px;
-      padding-top: 17px;
+      padding-top: 25px;
       padding-left: 22px;
-      padding-bottom: 27px;
+      padding-bottom: 16px;
       .text-container {
         color: $colorModPrimary;
         float: left;
@@ -88,6 +89,8 @@
       .link-container {
         a {
           float: right;
+          font-family: $font;
+          color: $colorModPenta;
         }
       }
     }

@@ -1,81 +1,84 @@
 /*
  * Controladores genéricos para los módulos
  */
-var modules = (function() {
+ $(document).ready(function () {
+   "use strict";
+    function modules() {
 
-    var $root,
-        $receiptModule,
-        $prestamoModule,
-        $alertsModule,
-        $devolverBajaModule;
+        var $root,
+            $proveedores,
+            $receiptModule,
+            $prestamoModule,
+            $alertsModule,
+            $devolverBajaModule;
 
-    var rootName          = '.modules-container',
-        receiptName       = '.receipt-detail-content',
-        prestamoName      = '.prestamo-detail-content',
-        alertsName        = '.alerts-module-content',
-        devolverBajaName  = '.devolver-baja-module-content';
-
-
-    var countDevBaja = 0,
-        marginTop = 10;
+        var rootName          = '.modules-container',
+            proveedoresName   = '.detail-presupuestos .detail-proveedores',
+            receiptName       = '.receipt-detail-content',
+            prestamoName      = '.prestamo-detail-content',
+            alertsName        = '.alerts-module-content',
+            devolverBajaName  = '.devolver-baja-module-content';
 
 
-    // FUNCTIONS FOR MODULES
-    function rebootWarning($context) {
-        var $elems, $warning;
-        var $container = $context.closest('.modules-container');
+        var countDevBaja = 0,
+            marginTop = 10;
 
-        $elems = $container.find('.devolver-baja-container');
-        for(var e=0; e < $elems.length; e++) {
-            $warning = $($elems[e]).find('.warning-container');
-            if(!$warning.hasClass('hidden'))
-                $warning.addClass('hidden');
+
+        // FUNCTIONS FOR MODULES
+        function rebootWarning($context) {
+            var $elems, $warning;
+            var $container = $context.closest('.modules-container');
+
+            $elems = $container.find('.devolver-baja-container');
+            for(var e=0; e < $elems.length; e++) {
+                $warning = $($elems[e]).find('.warning-container');
+                if(!$warning.hasClass('hidden'))
+                    $warning.addClass('hidden');
+            }
+            countDevBaja = 0;
         }
-        countDevBaja = 0;
-    }
 
-    function slideContainer($context) {
-        var $container = $context.closest('.modules-container');
-        var h = $container.find('.slidedown .module-inner-content').outerHeight() + marginTop;
-        $container.find('.slidedown.module-content').height(h);
-        if ($container.hasClass("slideup")) {
-            $container.removeClass("slideup").addClass("slidedown");
-            $container.css('height', h+'px');
-        } else {
-            $container.removeClass("slidedown").addClass("slideup");
-            $container.removeAttr('style');
-        }
-    }
-
-    function clearStyle($content) {
-        $content.css('height', 0);
-    }
-
-    function changeToSubModule($previousElem, $subModule, $container) {
-        var h;
-
-        slideContainer($previousElem);
-        slideUpDown($previousElem);
-        clearStyle($previousElem);
-        setTimeout(
-            function(){
-                slideUpDown($subModule);
-
-
-                h = $subModule.find('.module-inner-content').outerHeight() + marginTop;
-                $subModule.css('height', h+'px');
-                h = h + marginTop;
-                slideContainer($subModule);
+        function slideContainer($context) {
+            var $container = $context.closest('.modules-container');
+            var h = $container.find('.slidedown .module-inner-content').outerHeight() + marginTop;
+            $container.find('.slidedown.module-content').height(h);
+            if ($container.hasClass("slideup")) {
+                $container.removeClass("slideup").addClass("slidedown");
                 $container.css('height', h+'px');
-            },
-            600
-        );
-    }
+            } else {
+                $container.removeClass("slidedown").addClass("slideup");
+                $container.removeAttr('style');
+            }
+        }
 
-    // JQUERY CONTROLLERS
-    function initControllers() {
+        function clearStyle($content) {
+            $content.css('height', 0);
+        }
 
+        function changeToSubModule($previousElem, $subModule, $container) {
+            var h;
+
+            slideContainer($previousElem);
+            slideUpDown($previousElem);
+            clearStyle($previousElem);
+            setTimeout(
+                function(){
+                    slideUpDown($subModule);
+
+
+                    h = $subModule.find('.module-inner-content').outerHeight() + marginTop;
+                    $subModule.css('height', h+'px');
+                    h = h + marginTop;
+                    slideContainer($subModule);
+                    $container.css('height', h+'px');
+                },
+                600
+            );
+        }
+
+        // JQUERY CONTROLLERS
         $root               = $(rootName);
+        $proveedores        = $(proveedoresName);
         $receiptModule      = $root.find(receiptName);
         $prestamoModule     = $root.find(prestamoName);
         $alertsModule       = $root.find(alertsName);
@@ -119,6 +122,14 @@ var modules = (function() {
         .on('click', function() {
             var $element = $(this).find('.check');
             reverseClass($element, 'icon-check', 'icon-check-green');
+        });
+
+        //STOP PROPAGATION IF INPUT IS CLICKED
+        $root.find(
+            ".receipt-detail-content .subelement-container .content input,"+
+            ".prestamo-detail-content .subelement-container .content input")
+        .on('click', function(e) {
+            e.stopPropagation();
         });
 
         // AMORTIZAR PRESTAMO
@@ -197,31 +208,123 @@ var modules = (function() {
             changeToSubModule($previousElem, $elem, $container);
         });
 
+
+        /***************************
+        ******* TIMELINE ************
+        ****************************/
+        var $timeline_root = $('.timeline');
+
+        // MODULE PRINCIPAL
+        // DESPLEGAR DETALLES
+        $timeline_root.find('.fila .button-details')
+        .on('click', function(event) {
+          var $elems = $(this).closest('.st-accordion').find('.modules-container');
+          var $thisElem = $(this).closest('.fila').find('.modules-container');
+          for(var e=0; e < $elems.length; e++){
+            $($elems[e]).closest('.fila').find('.button-details').removeClass('selected');
+            if($($elems[e]).hasClass('slidedown') && !$($elems[e]).is($thisElem)){
+              slideContainer($($elems[e]));
+              rebootWarning($($elems[e]));
+            }
+          }
+          if($thisElem.hasClass('slideup'))
+            $(this).addClass('selected');
+          slideContainer($thisElem);
+          rebootWarning($thisElem);
+        });
+
+        // MODULE ALERTS (TIMELINE)
+        // SLIDE DOWN ALERTS
+        $timeline_root.find(
+          ".receipt-detail-content .element-container-alerts .icon-container,"+
+          ".prestamo-detail-content .element-container-alerts .icon-container")
+          .on('click', function() {
+            var $previousElem, h;
+            var $container = $(this).closest('.modules-container');
+            var $elem = $container.find('.alerts-container');
+
+            if($(this).closest('.element-container-alerts').is('.receipt-detail-content .element-container-alerts')){
+              $previousElem = $container.find('.receipt-detail-container');
+            }
+            else {
+              $previousElem = $container.find('.prestamo-detail-container');
+            }
+
+            changeToSubModule($previousElem, $elem, $container);
+          });
+
+        // RETURN TO PRINCIPAL / SLIDE UP ALERTS
+        $timeline_root.find(
+          ".alerts-container .button-module,"+
+          ".alerts-container.prestamo .button-module")
+          .on('click', function() {
+            var $elem, $container, $content;
+
+            $container = $(this).closest('.modules-container');
+            $content = $(this).closest('.alerts-container');
+            if($(this).is('.alerts-container.prestamo .button-module')){
+              $elem = $(this).closest('.fila').find('.prestamo-detail-container');
+            }
+            else {
+              $elem = $(this).closest('.fila').find('.receipt-detail-container');
+            }
+
+            changeToSubModule($content, $elem, $container);
+          });
+
+
+        /************************************************
+        ***************** PROVEEDORES *******************
+        *************************************************/
+
+        // SLIDE UP/DOWN CONTENIDO
+        $proveedores.find(
+          ".proveedores-header > .dot-container,"+
+          ".proveedores-content .icon-ex-container i")
+          .on('click', function() {
+              var $elems;
+              var $section = $(this).closest('.proveedores-container').find('.proveedores-content');
+              var $box = $section.find('.elements-box');
+              var height = parseInt($box.css('height').split('px')[0]) + 100;
+              var $dot = $('.detail-proveedores .proveedores-header > .dot-container');
+
+              if ($section.hasClass("slideup")) {
+                  $section.css('max-height', height+'px');
+                  slideUpDown($section);
+                  $dot.addClass('ocult');
+              } else {
+                  $elems = $(this).closest('.proveedores-content').find('.module');
+                  for(var e=0; e < $elems.length; e++){
+                      if($($elems[e]).hasClass('slidedown')){
+                          slideContainer($($elems[e]));
+                      }
+                  }
+                  $section.css('max-height', 0);
+                  slideUpDown($section);
+                  $dot.removeClass('ocult');
+              }
+          });
+
+        // SLIDE UP/DOWN ALERTS
+        $proveedores.find(
+          ".proveedores-content i," +
+          ".proveedores-content .alerts-module-content .button-module," +
+          ".alerts-container .button-module," +
+          ".alerts-container.prestamo .button-module")
+          .on('click', function() {
+              var $thisContainer = $(this).closest('.element-container').find('.modules-container');
+              var $elems = $(this).closest('.elements-box').find('.modules-container');
+
+              for(var e=0; e < $elems.length; e++){
+                  if($($elems[e]).hasClass('slidedown') && !$($elems[e]).is($thisContainer)){
+                      slideContainer($($elems[e]));
+                  }
+              }
+              slideContainer($thisContainer);
+          });
+
     }
 
+    modules();
 
-    // GETERS AND SETERS
-    function getMarginTop() {
-        return marginTop;
-    }
-
-    function getCountDevBaja() {
-        return countDevBaja;
-    }
-
-    return {
-        rebootWarning: rebootWarning,
-
-        slideContainer: slideContainer,
-
-        clearStyle: clearStyle,
-
-        changeToSubModule: changeToSubModule,
-
-        getMarginTop: getMarginTop,
-
-        getCountDevBaja: getCountDevBaja,
-
-        initControllers: initControllers
-    };
-}());
+});
