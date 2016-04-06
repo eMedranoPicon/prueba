@@ -25,8 +25,7 @@
       }
 
       .info-general {
-        width: 100%;
-        display: table;
+        display: inline-block;
         margin-top: 9px;
         & > div {
           vertical-align: bottom;
@@ -37,6 +36,11 @@
           text-align: center;
           height: 43px;
           padding-top: 4px;
+          cursor: pointer;
+          .return {
+            margin-bottom: 10px;
+            margin-right: 6px;
+          }
           i {
             display: inline-block;
           }
@@ -44,12 +48,11 @@
         .resume-text {
           line-height: 21px;
           text-align: left;
-          width: 75%;
           margin-left: 9px;
           & > span {
-            width: 100%;
             text-transform: uppercase;
             font-size: 18px;
+            display: table-row;
           }
           .title {
             color: $colorConSecond;

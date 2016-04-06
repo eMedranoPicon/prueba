@@ -27,7 +27,7 @@ def get_detail():
 					},
 					{
 						"TITLE": "Formación",
-						"ICONO": "icon-paper-white",
+						"ICONO": "icon-paper-white-big",
 						"ICONO_TARTA":"icon-paper-orange",
 						"ICONO_TARTA_SELECCION": "icon-paper-blue",
 						"ICONO_TARJETA": "icon-paper-white",
@@ -42,7 +42,7 @@ def get_detail():
 					},
 					{
 						"TITLE": "Tarjeta",
-						"ICONO": "icon-card-white",
+						"ICONO": "icon-card-white-big",
 						"ICONO_TARTA":"icon-card-orange",
 						"ICONO_TARTA_SELECCION": "icon-card-blue",
 						"ICONO_TARJETA": "icon-card-white",
@@ -57,7 +57,7 @@ def get_detail():
 					},
 					{
 						"TITLE": "Seguros",
-						"ICONO": "icon-umbrella-white",
+						"ICONO": "icon-umbrella-white-big",
 						"ICONO_TARTA":"icon-umbrella-orange",
 						"ICONO_TARTA_SELECCION": "icon-umbrella-blue",
 						"ICONO_TARJETA": "icon-umbrella-white",
@@ -72,10 +72,40 @@ def get_detail():
 					},
 					{
 						"TITLE": "Otros",
-						"ICONO": "icon-balloon-small-white",
+						"ICONO": "icon-balloon-small-white-big",
 						"ICONO_TARTA":"icon-balloon-small-orange",
 						"ICONO_TARTA_SELECCION": "icon-balloon-small-blue",
 						"ICONO_TARJETA": "icon-balloon-small-white",
+						"PREVISTO": 370,
+						"PREVISTO_DECIMAL": "00",
+						"GASTADO": 420,
+						"GASTADO_DECIMAL": "00",
+						"DIFERENCIA": 0,
+						"PORCENTAJE": 120,
+						"MES_SIGUIENTE": 600,
+						"TIP": False
+					},
+					{
+						"TITLE": "Educación",
+						"ICONO": "icon-book-white-big",
+						"ICONO_TARTA":"icon-book-orange",
+						"ICONO_TARTA_SELECCION": "icon-book-blue",
+						"ICONO_TARJETA": "icon-book-white",
+						"PREVISTO": 370,
+						"PREVISTO_DECIMAL": "00",
+						"GASTADO": 420,
+						"GASTADO_DECIMAL": "00",
+						"DIFERENCIA": 0,
+						"PORCENTAJE": 120,
+						"MES_SIGUIENTE": 600,
+						"TIP": False
+					},
+					{
+						"TITLE": "Préstamos",
+						"ICONO": "icon-hand-white-big",
+						"ICONO_TARTA":"icon-hand-orange",
+						"ICONO_TARTA_SELECCION": "icon-hand-dark-blue",
+						"ICONO_TARJETA": "icon-hand-white",
 						"PREVISTO": 370,
 						"PREVISTO_DECIMAL": "00",
 						"GASTADO": 420,
@@ -155,7 +185,37 @@ def get_detail():
 						"PORCENTAJE": 250,
 						"MES_SIGUIENTE": 600,
 						"TIP": True
-					}
+					},
+					{
+						"TITLE": "Préstamos",
+						"ICONO": "icon-hand-white-big",
+						"ICONO_TARTA":"icon-hand-orange",
+						"ICONO_TARTA_SELECCION": "icon-hand-blue",
+						"ICONO_TARJETA": "icon-hand-white",
+						"PREVISTO": 370,
+						"PREVISTO_DECIMAL": "00",
+						"GASTADO": 420,
+						"GASTADO_DECIMAL": "00",
+						"DIFERENCIA": 0,
+						"PORCENTAJE": 120,
+						"MES_SIGUIENTE": 600,
+						"TIP": False
+					},
+					{
+						"TITLE": "Préstamos",
+						"ICONO": "icon-hand-white-big",
+						"ICONO_TARTA":"icon-hand-orange",
+						"ICONO_TARTA_SELECCION": "icon-hand-blue",
+						"ICONO_TARJETA": "icon-hand-white",
+						"PREVISTO": 370,
+						"PREVISTO_DECIMAL": "00",
+						"GASTADO": 420,
+						"GASTADO_DECIMAL": "00",
+						"DIFERENCIA": 0,
+						"PORCENTAJE": 120,
+						"MES_SIGUIENTE": 600,
+						"TIP": False
+					},
 				]
         	},
 			{

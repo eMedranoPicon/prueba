@@ -19,6 +19,9 @@
     &.slideup {
       @include slideup2();
     }
+    &.slidedown {
+      @include slidedown2();
+    }
     .module-inner-content {
       background-color: $colorModBack;
       border: 1px solid $colorModBorder;
@@ -48,7 +51,7 @@
         }
       }
 
-      .element-container, .subelement-container, .element-container-alerts {
+      .element-container, .subelement-container {
         font-size: 16px;
         cursor: pointer;
       }
@@ -89,6 +92,13 @@
           }
         }
       }
+      .element-container-alerts {
+        font-size: 16px;
+        .icon-container {
+            cursor: pointer;
+            padding-left: 8px;
+        }
+      }
       .subelement-container {
         display: block;
         border: 0;
@@ -122,6 +132,31 @@
           width: 95%;
           .name {
             padding-left: 8px;
+          }
+          .from-to {
+            width: 85px;
+            height: 35px;
+            margin: 0 8px;
+            color: $colorDetPrimary;
+            border-color: $colorModInputBorder;
+            font-size: 13px;
+            &::-webkit-input-placeholder{
+              font-style: italic;
+              color: $colorModTer;
+            }
+            &::-moz-placeholder{
+              font-style: italic;
+              color: $colorModTer;
+            }
+            &:-ms-input-placeholder{
+              font-style: italic;
+              color: $colorModTer;
+            }
+
+            &:-moz-placeholder {
+              font-style: italic;
+              color: $colorModTer;
+            }
           }
         }
       }

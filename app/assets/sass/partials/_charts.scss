@@ -59,7 +59,7 @@
       }
       .circulo {
         background-color: $colorDetCuater;
-        border: 1px solid $colorDetBorder;
+        border: 1px solid $colorDetCircleBorderDark;
         margin-right: 10px;
       }
 
@@ -121,7 +121,7 @@
         }
         &.future {
           background-color: $colorDetCuater;
-          border: 1px solid $colorDetBorder;
+          border: 1px solid $colorDetCircleBorderDark;
         }
       }
       span {

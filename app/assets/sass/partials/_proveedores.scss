@@ -112,8 +112,9 @@
         }
 
         .module-inner-content{
+          border-color: $colorModBorderDark;
           &::before {
-              @include triangle(0, 10px, 10px, 10px, $colorModBorder);
+              @include triangle(0, 10px, 10px, 10px, $colorModBorderDark);
               top: 1px;
               right: 17px;
               left: auto;
