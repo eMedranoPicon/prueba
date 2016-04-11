@@ -9,14 +9,6 @@
 	}
 }
 
-.icon-bicycle {
-	background: transparent url("../images/sprite.png") no-repeat scroll -229px -21px;
-	padding: 3px 10px;
-	&.icon-purple {
-		background: transparent url("../images/sprite.png") no-repeat scroll -229px -21px;
-	}
-}
-
 .icon-eye {
 	background: transparent url("../images/sprite.png") no-repeat scroll -204px -70px;
 	padding: 3px 8px;
@@ -24,7 +16,7 @@
 
 .icon-edit {
 	background: transparent url("../images/sprite.png") no-repeat scroll -97px -152px;
-  	padding: 4px 12px;
+	padding: 4px 12px;
 	&.icon-hover {
 		background: transparent url("../images/sprite.png") no-repeat scroll -97px -174px;
 	}
@@ -35,6 +27,43 @@
 	&.icon-hover {
 		background: transparent url("../images/sprite.png") no-repeat scroll -97px -174px;
 	}
+}
+
+
+// TEMPLE
+.icon-temple-white-big {
+	background: transparent url("../images/sprite.png") no-repeat scroll -583px -4px;
+	padding: 19px 21px;
+}
+.icon-temple-orange {
+	background: transparent url("../images/sprite.png") no-repeat scroll -512px -146px;
+	padding: 13px 14px;
+}
+.icon-temple-blue {
+	background: transparent url("../images/sprite.png") no-repeat scroll -512px -110px;
+	padding: 13px 14px;
+}
+
+
+// BICYCLE
+.icon-bicycle {
+	background: transparent url("../images/sprite.png") no-repeat scroll -229px -21px;
+	padding: 3px 10px;
+	&.icon-purple {
+		background: transparent url("../images/sprite.png") no-repeat scroll -229px -21px;
+	}
+}
+.icon-bicycle-white-big {
+	background: transparent url("../images/sprite.png") no-repeat scroll -571px -58px;
+	padding: 17px 22px;
+}
+.icon-bicycle-orange {
+	background: transparent url("../images/sprite.png") no-repeat scroll -550px -149px;
+	padding: 11px 14px;
+}
+.icon-bicycle-blue {
+	background: transparent url("../images/sprite.png") no-repeat scroll -550px -111px;
+	padding: 11px 14px;
 }
 
 
