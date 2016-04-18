@@ -27,12 +27,12 @@ $(document).ready(function () {
         function animateDetailBar() {
             var bar_width, porcentaje;
 
-            bar_width = $progress_bar.attr('aria-valuenow');
+            bar_width   = parseFloat($progress_bar.attr('aria-valuenow'));
 
             if($progress_bar.parent('.progress').hasClass('over-loaded'))
-                porcentaje = (porcentaje_complete - bar_width) + porcentaje_complete;
+                porcentaje  = (porcentaje_complete - bar_width) + porcentaje_complete;
             else
-                porcentaje = bar_width;
+                porcentaje  = bar_width;
 
             progressBar.init($bar_container, porcentaje);
             progressBar.animateBar(speed);
@@ -83,7 +83,8 @@ $(document).ready(function () {
 
             $section    = $(this).closest('.section-header');
             value       = $section.find(".edit-present-container .edit-text").val().split(',');
-            gastado     = stringToInt($section.find(".spent .number").html()) + ( $section.find(".spent .decimal").html() / 100 );
+            var aux = $section.find(".spent .decimal").html();
+            gastado     = stringToInt($section.find(".spent .number").html()) + ( parseInt($section.find(".spent .decimal").html()) / 100 );
             previsto    = stringToInt(value[0]) + (parseInt(value[1]) / 100);
             infoPresent = $section.find(".info-present");
 
@@ -162,22 +163,29 @@ $(document).ready(function () {
         // TRATAMIENTO DEL INPUT DEL MES FUTURO
         $header.find('.input-future')
         .on('blur', function() {
-            var $flipper = $(this).closest('.flipper');
-            var value = $(this).val().split(',');
+            var $flipper, value;
+
+            $flipper    = $(this).closest('.flipper');
+            value       = $(this).val().split(',');
+
             $(this).hide();
             $flipper.find('.label-input').show();
             $flipper.find('.value').html(value[0]);
             $flipper.find('.decimal').html(value[1]);
         })
         .on('focus', function() {
-            var $labelInput = $(this).closest('.flipper').find('.label-input');
-            var value = $labelInput.find('.value').text() + ',' + $labelInput.find('.decimal').text();
+            var $labelInput, value;
+
+            $labelInput = $(this).closest('.flipper').find('.label-input');
+            value       = $labelInput.find('.value').text() + ',' + $labelInput.find('.decimal').text();
             $labelInput.hide();
             $(this).val(value);
         })
         .one('focus', function() {
-            var $labelInput = $(this).closest('.flipper').find('label-input');
-            var value = $labelInput.find('.value').text() + ',' + $labelInput.find('.decimal').text();
+            var $labelInput, value;
+
+            $labelInput = $(this).closest('.flipper').find('label-input');
+            value       = $labelInput.find('.value').text() + ',' + $labelInput.find('.decimal').text();
             $(this).closest('.flipper').find('.info-future .init-value').html(value);
         })
         .keyup(function(event){
@@ -188,9 +196,12 @@ $(document).ready(function () {
 
         // VALIDAR LOS DATOS DEL MES FUTURO
         $header.on('click', '.future-detail-check', function(event) {
-            var $labelInput = $(this).closest('.flipper').find('.modify-data .label-input');
-            var $flipContainer = $(this).closest('.flip-container');
-            var value = $labelInput.find('.value').text() + ',' + $labelInput.find('.decimal').text();
+            var $labelInput, $flipContainer, value;
+
+            $labelInput     = $(this).closest('.flipper').find('.modify-data .label-input');
+            $flipContainer  = $(this).closest('.flip-container');
+            value           = $labelInput.find('.value').text() + ',' + $labelInput.find('.decimal').text();
+
             $flipContainer.find('.front .price').html(value);
             $flipContainer.removeClass(flipContainerHoverClass).find('.future-detail-edit').removeClass('icon-edit-white future-detail-edit').addClass('icon-return-circle edit-return');
             event.stopPropagation();

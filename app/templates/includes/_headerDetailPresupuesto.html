@@ -61,11 +61,11 @@
         <div class="bar-container">
           {% if PORCENTAJE <= 100 %}
             {% if PORCENTAJE == 100 %}
-              <span class="triangulo_izq full"></span>
+              <span class="triangulo_izq full incomplete"></span>
             {% endif %}
             <div class="progress border-radius-less">
               <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="{{ PORCENTAJE }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ PORCENTAJE }}%"></div>
-              {% if PORCENTAJE > 0 and PORCENTAJE != 100 %}
+              {% if PORCENTAJE > 0 %}
                 <span class="triangulo_izq"></span>
               {% endif %}
             </div>

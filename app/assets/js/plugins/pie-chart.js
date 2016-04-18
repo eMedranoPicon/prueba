@@ -259,7 +259,7 @@ function pieChart() {
                     $section_header       = $('#section-header'+index);
                     $bar_container        = $section_header.find('.bar-container');
                     $progress_bar         = $bar_container.find('.progress-bar');
-                    bar_width             = $progress_bar.attr('aria-valuenow');
+                    bar_width             = parseFloat($progress_bar.attr('aria-valuenow'));
                     porcentaje_complete   = progressBar.getPorcentajeComplete();
 
                     if($progress_bar.parent('.progress').hasClass('over-loaded'))

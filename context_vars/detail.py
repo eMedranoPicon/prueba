@@ -18,10 +18,10 @@ def get_detail():
 						"ICONO_TARJETA": "icon-house-white",
 						"PREVISTO": 500,
 						"PREVISTO_DECIMAL": 55,
-						"GASTADO": 100,
+						"GASTADO": 500,
 						"GASTADO_DECIMAL": 55,
 						"DIFERENCIA": 0,
-						"PORCENTAJE": 20,
+						"PORCENTAJE": 100,
 						"MES_SIGUIENTE": 600,
 						"TIP": True
 					},
