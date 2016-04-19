@@ -68,19 +68,19 @@ function pieChart() {
 
         $('#pieChartData td').each( function() {
             currentCell++;
-            if ( currentCell == 1) {
+            if ( currentCell === 1) {
                 currentRow++;
                 chartData[currentRow]       = [];
                 chartData[currentRow].icon  = $(this).find('i').attr('class');
             }
-            else if (currentCell == 2) {
+            else if (currentCell === 2) {
                 value                           =   parseFloat($(this).text());
                 chartData[currentRow].expected  =   value;
                 totalValue                      +=  value;
                 value                           =   value.toFixed(2);
                 chartData[currentRow].value     =   value;
             }
-            else if (currentCell == 3) {
+            else if (currentCell === 3) {
                 spent                       = parseFloat($(this).text());
                 chartData[currentRow].spent = spent;
             }
@@ -88,7 +88,7 @@ function pieChart() {
                 chartData[currentRow]['icon-spent'] = $(this).find('i').attr('class');
             }
 
-            if(currentCell == 4)
+            if(currentCell === 4)
                 currentCell = 0;
 
             $(this).data( 'slice', currentRow );
@@ -147,11 +147,10 @@ function pieChart() {
     */
 
     function drawSlice ( context, slice ) {
-        var endPoint, actualPullOutAngle, startAngle, endAngle, angle;
+        var endPoint, actualPullOutAngle, startAngle, endAngle, angle, startX, startY;
 
         startAngle  =   chartData[slice].startAngle  + chartStartAngle;
         endAngle    =   chartData[slice].endAngle  + chartStartAngle;
-        angle       =   (startAngle + endAngle) / 2;
 
         startX      =   centreX;
         startY      =   centreY;
@@ -227,7 +226,7 @@ function pieChart() {
     */
 
     function handleChartClick ( clickEvent ) {
-        var mouseX, mouseY, xFromCentre, yFromCentre, clickAngle, slice, bar_width, porcentaje_complete,
+        var mouseX, mouseY, xFromCentre, yFromCentre, distanceFromCentre, clickAngle, slice, bar_width, porcentaje_complete,
             startAngleAux, endAngleAux, index, $bar_container, $progress_bar, porcentaje, $section_header;
 
         // Get the mouse cursor position at the time of the click, relative to the canvas
@@ -259,7 +258,7 @@ function pieChart() {
                     $section_header       = $('#section-header'+index);
                     $bar_container        = $section_header.find('.bar-container');
                     $progress_bar         = $bar_container.find('.progress-bar');
-                    bar_width             = $progress_bar.attr('aria-valuenow');
+                    bar_width             = parseFloat($progress_bar.attr('aria-valuenow'));
                     porcentaje_complete   = progressBar.getPorcentajeComplete();
 
                     if($progress_bar.parent('.progress').hasClass('over-loaded'))
@@ -313,7 +312,7 @@ function pieChart() {
             drawIcon( s );
 
         clearInterval( animationId );
-        animationId = setInterval( function() { animatePullOut( slice ); }, pullOutFrameInterval );
+        animationId = setInterval( function() { animatePullOut(); }, pullOutFrameInterval );
 
     }
 
@@ -324,7 +323,7 @@ function pieChart() {
     * @param Number The index of the slice being pulled out
     */
 
-    function animatePullOut ( slice ) {
+    function animatePullOut () {
 
         // Pull the slice out some more
         currentPullOutAngle += pullOutFrameStep;

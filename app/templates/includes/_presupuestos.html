@@ -56,7 +56,7 @@
                 {% if MES.TOTAL_PORCENTAJE > 0 and MES.TOTAL_PORCENTAJE != 100 %}
                   <span class="triangulo_izq"></span>
                 {% endif %}
-                <div class="bar-text-container right">
+                <div class="bar-text-container right" style="{% if MES.TOTAL_PORCENTAJE <= 100 and MES.TOTAL_PORCENTAJE > 85 %} position: absolute; margin-left: {{ 101 - MES.TOTAL_PORCENTAJE }}% {% endif %}">
                   <span class="bar-spent">Gastado </span><span class="bar-money-spent">{{ MES.TOTAL_GASTADO }}€</span>
                 </div>
               </div>

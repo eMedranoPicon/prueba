@@ -14,8 +14,7 @@ Optional extensions on the jquery.inputmask base
 		} else {
 			factory(jQuery, window.Inputmask);
 		}
-	}
-	(function($, Inputmask) {
+	}(function($, Inputmask) {
 		//number aliases
 		Inputmask.extendAliases({
 			"numeric": {

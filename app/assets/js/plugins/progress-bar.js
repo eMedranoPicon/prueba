@@ -24,10 +24,6 @@ var progressBar = (function() {
     }
 
 
-    function setMaxWidth(w) {
-        max_width = w;
-    }
-
     function animate(startWidth, endWidth, speed) {
         var $progress_bar;
 
@@ -35,14 +31,24 @@ var progressBar = (function() {
         if (speed === undefined)
             speed = speed_default;
 
+        if(porcentaje == porcentaje_complete)
+            $bar_container.find('.triangulo_izq.full').addClass('incomplete');
+
         $progress_bar.addClass('no-transitions');
         $progress_bar.width(startWidth);
         setTimeout(
             function() {
                 $progress_bar.removeClass('no-transitions');
                 $progress_bar.width(endWidth);
+                if(porcentaje == porcentaje_complete) {
+                    $progress_bar.one("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",
+                        function(){
+                            $bar_container.find('.triangulo_izq.full').removeClass('incomplete');
+                        }
+                    );
+                }
             },
-            speed
+            1
         );
     }
 
@@ -59,24 +65,18 @@ var progressBar = (function() {
     }
 
     function animateBar(speed) {
-        var aria_value, bar_width, $dotted_line;
-
-        $dotted_line = $bar_container.find('.dotted-line');
+        var aria_value, bar_width;
 
         if(porcentaje <= porcentaje_complete){
             aria_value = porcentaje;
-            bar_width = porcentaje;
-
             animate(0, porcentaje+'%', speed);
         }
         else {
             if ((porcentaje - max_porcentaje) >= 0) {
                 aria_value = 0;
-                bar_width = porcentaje_complete;
             }
             else {
                 aria_value = (max_porcentaje - porcentaje);
-                bar_width = (porcentaje - porcentaje_complete);
             }
 
             animate(porcentaje_complete+'%', aria_value+'%', speed);
@@ -97,11 +97,11 @@ var progressBar = (function() {
         new_bar             =   '';
 
         if (porcentaje == porcentaje_complete)
-            new_bar +=  '<span class="triangulo_izq full"></span>';
+            new_bar +=  '<span class="triangulo_izq full incomplete"></span>';
 
         new_bar +=      '<div class="progress border-radius-less">';
         new_bar +=      '   <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="'+ porcentaje +'" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>';
-        if (porcentaje > 0 && porcentaje != porcentaje_complete)
+        if (porcentaje > 0 )
             new_bar +=  '   <span class="triangulo_izq"></span>';
 
         new_bar +=      '</div>'+
@@ -122,7 +122,7 @@ var progressBar = (function() {
                         '           <span class="number primary">'+gastado_entero+'</span>,'+
                         '       </div>'+
                         '       <div class="text-content">'+
-                        '           <span class="decimal primary">'+previsto_decimal+'</span>'+
+                        '           <span class="decimal primary">'+gastado_decimal+'</span>'+
                         '       </div>'+
                         '       <div class="text-content">'+
                         '           <span class="coin secondary">€</span>'+
@@ -241,8 +241,6 @@ var progressBar = (function() {
     return {
         init: init,
 
-        setMaxWidth: setMaxWidth,
-
         updateProgressBar: updateProgressBar,
 
         animateBar: animateBar,
@@ -251,7 +249,7 @@ var progressBar = (function() {
 
         createOverLoadedBar: createOverLoadedBar,
 
-        getPorcentajeComplete: getPorcentajeComplete,
+        getPorcentajeComplete: getPorcentajeComplete
     };
 
 }());

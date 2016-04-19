@@ -14,8 +14,7 @@
 		} else {
 			factory(jQuery, window.Inputmask);
 		}
-	}
-	(function($, Inputmask) {
+	}(function($, Inputmask) {
 		if ($.fn.inputmask === undefined) {
 			//jquery plugin
 			$.fn.inputmask = function(fn, options) {

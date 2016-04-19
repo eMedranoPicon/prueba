@@ -187,6 +187,10 @@
     float: left;
     width: 100%;
     @include progress-bar(42px, $colorDetSecond, $colorDetTer);
+    .triangulo_izq.incomplete {
+        border-right-color: $grey900;
+        
+    }
     .text-container {
       margin-top: 9px;
       font-family: $fontBold;

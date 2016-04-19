@@ -1,16 +1,16 @@
 
 function pointChart() {
 
-    var chartData = [];
-    var chartFutureData = [];
-    var colorGridChart = '#e2e3e4';
-    var colorAxisLineChart = '#d5d5d5';
-    var colorTickChart = '#556270';
-    var colorBandChart = '#ebebeb';
-    var colorBackground = '#f8f9f9';
-    var colorPrimaryChart = '#F79D25';
+    var chartData           = [];
+    var chartFutureData     = [];
+    var colorGridChart      = '#e2e3e4';
+    var colorAxisLineChart  = '#d5d5d5';
+    var colorTickChart      = '#556270';
+    var colorBandChart      = '#ebebeb';
+    var colorBackground     = '#f8f9f9';
+    var colorPrimaryChart   = '#F79D25';
     var colorSecondaryChart = '#b7bdc2';
-    var colorFontChart = '#556270';
+    var colorFontChart      = '#556270';
 
     init();
 
@@ -33,11 +33,11 @@ function pointChart() {
                 chartData[currentRow].mes = $(this).text();
             }
             else if (currentCell == 2) {
-                expected = parseInt($(this).text());
+                expected = parseFloat($(this).text());
                 chartData[currentRow].expected = expected;
             }
             else if (currentCell == 3) {
-                spent = parseInt($(this).text());
+                spent = parseFloat($(this).text());
                 chartData[currentRow].spent = spent;
             }
 
@@ -99,7 +99,7 @@ function pointChart() {
                 enabled: false
             },
             chart: {
-                backgroundColor: colorBackground,
+                backgroundColor: colorBackground
             },
             title: {
                 text: ''
@@ -127,9 +127,9 @@ function pointChart() {
                     }
                 },
                 plotBands: [{
-                    color: colorBandChart, // Color value
-                    from: 12.5, // Start of the plot band
-                    to: 14.5 // End of the plot band
+                    color: colorBandChart,   // Color value
+                    from: 12.5,              // Start of the plot band
+                    to: 14.5                 // End of the plot band
                 }]
             },
             yAxis: {
@@ -140,6 +140,7 @@ function pointChart() {
                 tickmarkPlacement: 'on',
                 tickPosition: 'inside',
                 labels: {
+                    format: '{value:,.0f}',
                     style: {
                         fontSize: '12px',
                         fontFamily: 'AkkuratStd',
@@ -148,23 +149,24 @@ function pointChart() {
                 },
                 plotLines: [{
                     value: 0,
-                    width: 1,
+                    width: 1
                 }]
             },
             tooltip: {
-                pointFormat: '<b>{point.y}</b><br/>',
-                valueSuffix: '€',
+                valueDecimals: 2,
+                pointFormat: '{point.y:,.2f} €',
+                valueSuffix: '€'
             },
             legend:{ enabled:false },
             plotOptions: {
                 line: {
-                    lineWidth:10,
+                    lineWidth: 10,
                     marker: {
                         symbol: 'circle'
                     }
                 },
                 series: {
-                    lineWidth: 1,
+                    lineWidth: 1
                 }
             },
             series: [{
@@ -177,7 +179,7 @@ function pointChart() {
                 }, {
                     value: 13,
                     name: 'Previsión futuro',
-                    dashStyle: 'dot',
+                    dashStyle: 'dot'
                 }, {
                     value: 14,
                     color: '#ffffff',
@@ -214,6 +216,10 @@ function pointChart() {
         }, null, document.getElementsByTagName('head')[0]);
 
         Highcharts.theme = {
+            lang: {
+                decimalPoint: ',',
+                thousandsSep: '.'
+            },
             xAxis: {
                 gridLineWidth: 1,
                 gridLineColor: colorGridChart,
@@ -221,8 +227,7 @@ function pointChart() {
                 tickWidth: 1,
                 tickLength: 3,
                 tickPosition: 'inside',
-                minPadding: 0,
-
+                minPadding: 0
             },
             yAxis: {
                 gridLineWidth: 1,
@@ -232,13 +237,13 @@ function pointChart() {
                 tickColor: colorTickChart,
                 tickWidth: 1,
                 tickLength: 3,
-                tickPosition: 'inside',
+                tickPosition: 'inside'
             },
             plotOptions: {
                 candlestick: {
                     lineColor: colorGridChart
                 }
-            },
+            }
         };
         // Apply the theme
         Highcharts.setOptions(Highcharts.theme);

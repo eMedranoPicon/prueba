@@ -18,7 +18,8 @@
     "tests"
   ],
   "devDependencies": {
-    "jquery": "2.1.1",
+    "jquery": "1.9.1",
+    "jquery-migrate": "1.4.0",
     "sass-bootstrap": "3.0.2",
     "bootstrap": "~3.3.4",
     "bootstrap-sass-official": "~3.3.4",

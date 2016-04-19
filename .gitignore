@@ -4,6 +4,7 @@
 *.project
 *.sublime-project
 *.sublime-workspace
+*.sonar
 app/dist/*
 bower_components/*
 node_modules/*
