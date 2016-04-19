@@ -83,7 +83,6 @@ $(document).ready(function () {
 
             $section    = $(this).closest('.section-header');
             value       = $section.find(".edit-present-container .edit-text").val().split(',');
-            var aux = $section.find(".spent .decimal").html();
             gastado     = stringToInt($section.find(".spent .number").html()) + ( parseInt($section.find(".spent .decimal").html()) / 100 );
             previsto    = stringToInt(value[0]) + (parseInt(value[1]) / 100);
             infoPresent = $section.find(".info-present");

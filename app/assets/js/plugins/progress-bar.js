@@ -24,11 +24,6 @@ var progressBar = (function() {
     }
 
 
-    function setMaxWidth(w) {
-        max_width = w;
-    }
-
-
     function animate(startWidth, endWidth, speed) {
         var $progress_bar;
 
@@ -70,24 +65,18 @@ var progressBar = (function() {
     }
 
     function animateBar(speed) {
-        var aria_value, bar_width, $dotted_line;
-
-        $dotted_line = $bar_container.find('.dotted-line');
+        var aria_value, bar_width;
 
         if(porcentaje <= porcentaje_complete){
             aria_value = porcentaje;
-            bar_width = porcentaje;
-
             animate(0, porcentaje+'%', speed);
         }
         else {
             if ((porcentaje - max_porcentaje) >= 0) {
                 aria_value = 0;
-                bar_width = porcentaje_complete;
             }
             else {
                 aria_value = (max_porcentaje - porcentaje);
-                bar_width = (porcentaje - porcentaje_complete);
             }
 
             animate(porcentaje_complete+'%', aria_value+'%', speed);
@@ -252,8 +241,6 @@ var progressBar = (function() {
     return {
         init: init,
 
-        setMaxWidth: setMaxWidth,
-
         updateProgressBar: updateProgressBar,
 
         animateBar: animateBar,
@@ -262,7 +249,7 @@ var progressBar = (function() {
 
         createOverLoadedBar: createOverLoadedBar,
 
-        getPorcentajeComplete: getPorcentajeComplete,
+        getPorcentajeComplete: getPorcentajeComplete
     };
 
 }());

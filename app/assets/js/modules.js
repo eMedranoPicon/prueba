@@ -178,13 +178,14 @@
 
         // CONFIRM
         $devolverBajaModule.on('click', ".confirm", function() {
-            var $elem, $previousElem, h, $container, $warning;
+            var $elem, $previousElem, h, $container, $content, $warning;
 
-            $container = $(this).closest('.modules-container');
-            $warning = $(this).closest('.devolver-baja-module-content').find('.warning-container');
-            $previousElem = $(this).closest('.devolver-baja-container');
+            $container      = $(this).closest('.modules-container');
+            $content        = $(this).closest('.devolver-baja-module-content');
+            $previousElem   = $(this).closest('.devolver-baja-container');
+            $warning        = $content.find('.warning-container');
 
-            if(countDevBaja === 0){
+            if($content.hasClass('baja') && countDevBaja === 0){
                 $warning.removeClass('hidden');
                 countDevBaja++;
                 h = $previousElem.outerHeight() + $warning.outerHeight() + marginTop;

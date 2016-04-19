@@ -13,8 +13,7 @@
 		} else {
 			factory(window.dependencyLib || jQuery);
 		}
-	}
-	(function($) {
+	}(function($) {
 		function Inputmask(alias, options) {
 			//allow instanciating without new
 			if (!(this instanceof Inputmask)) {

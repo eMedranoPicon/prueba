@@ -281,7 +281,7 @@ def get_detail():
 			{
 				"MES":	"Sep",
 				"PREVISTO": 300,
-				"GASTADO": 400
+				"GASTADO": 4000.56
 			},
 			{
 				"MES":	"Oct",

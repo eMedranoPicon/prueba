@@ -39,7 +39,8 @@ var src_app = './app',
   config_dir = './config',
 
   vendor_js_src = [
-    './bower_components/jquery/jquery.js',
+    './bower_components/jquery/jquery.min.js',
+    './bower_components/jquery/jquery-migrate.min.js',
     './bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js',
     './bower_components/jQuery.mmenu/dist/js/jquery.mmenu.min.all.js',
     './bower_components/jquery-ui/jquery-ui.min.js',
