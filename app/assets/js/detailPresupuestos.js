@@ -79,18 +79,18 @@ $(document).ready(function () {
 
         // VALIDAR MODIFICACIÓN DEL MES PRESENTE
         $header.on("click", ".check-edit", function() {
-            var $section, value, infoPresent, previsto, gastado;
+            var $section, value, $infoPresent, previsto, gastado;
 
             $section    = $(this).closest('.section-header');
             value       = $section.find(".edit-present-container .edit-text").val().split(',');
             gastado     = stringToInt($section.find(".spent .number").html()) + ( parseInt($section.find(".spent .decimal").html()) / 100 );
             previsto    = stringToInt(value[0]) + (parseInt(value[1]) / 100);
-            infoPresent = $section.find(".info-present");
+            $infoPresent = $section.find(".info-present");
 
 
-            infoPresent.find(".price").html( value[0]+"," );
-            infoPresent.find(".decimal").html( value[1] );
-            infoPresent.find(".edit-present").removeClass("icon-edit-white").addClass("icon-return-circle");
+            $infoPresent.find(".price").html( value[0]+"," );
+            $infoPresent.find(".decimal").html( value[1] );
+            $infoPresent.find(".edit-present").removeClass("icon-edit-white").addClass("icon-return-circle");
             $section.find(".bar-text-container.expected .number").html( value[0] );
             $section.find(".bar-text-container.expected .decimal").html( value[1] );
             $section.find(".edit-present-container").removeClass("slidedown").addClass("slideup");
@@ -110,17 +110,17 @@ $(document).ready(function () {
 
         // TRATAMIENTO DEL RETURN DE AJUSTE MANUAL
         $header.on("click", '.check-return', function() {
-            var $section, value, infoPresent, previsto, gastado;
+            var $section, value, $infoPresent, previsto, gastado;
 
             $section    = $(this).closest('.section-header');
             value       = $section.find(".return-text-container").find(".return-text").html().split(',');
-            infoPresent = $section.find(".info-present");
+            $infoPresent = $section.find(".info-present");
             gastado     = stringToInt($section.find(".spent .number").html()) + ( $section.find(".spent .decimal").html() / 100 );
             previsto    = stringToInt(value[0]) + (parseInt(value[1]) / 100);
 
-            infoPresent.find(".price").html( value[0]+"," );
-            infoPresent.find(".decimal").html( value[1] );
-            infoPresent.find(".edit-present").removeClass("icon-return-circle").addClass("icon-edit-white");
+            $infoPresent.find(".price").html( value[0]+"," );
+            $infoPresent.find(".decimal").html( value[1] );
+            $infoPresent.find(".edit-present").removeClass("icon-return-circle").addClass("icon-edit-white");
             $section.find(".bar-text-container.expected .number").html( value[0] );
             $section.find(".bar-text-container.expected .decimal").html( value[1] );
             $section.find(".edit-present-container").removeClass("slidedown").addClass("slideup");

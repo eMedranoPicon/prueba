@@ -133,6 +133,28 @@
         color: $colorDetPrimary;
       }
     }
+
+    .label {
+     z-index: 1!important;
+    }
+    .highcharts-container {
+        position: inherit !important;
+    }
+    .highcharts-tooltip {
+        z-index: 9998;
+
+    }
+    .tooltip-box {
+        padding:3px;
+        left:51px;
+        text-align:center;
+        line-height:20px;
+        opacity:1;
+        z-index:9999!important;
+    }
+    .highcharts-tooltip span {
+        left: 51px!important;
+    }
   }
 
 }

@@ -10,6 +10,7 @@ function pointChart() {
     var colorBackground     = '#f8f9f9';
     var colorPrimaryChart   = '#F79D25';
     var colorSecondaryChart = '#b7bdc2';
+    var colorTerciaryChart  = '#ffffff';
     var colorFontChart      = '#556270';
 
     init();
@@ -136,7 +137,7 @@ function pointChart() {
                 title: '',
                 lineColor: colorAxisLineChart,
                 lineWidth: 1,
-                max: maximum * 1.3,
+                max: maximum * 1.1,
                 tickmarkPlacement: 'on',
                 tickPosition: 'inside',
                 labels: {
@@ -155,7 +156,36 @@ function pointChart() {
             tooltip: {
                 valueDecimals: 2,
                 pointFormat: '{point.y:,.2f} €',
-                valueSuffix: '€'
+                valueSuffix: '€',
+
+                //backgroundColor: "rgba(255,255,255,0)",
+                //borderWidth: 0,
+                //borderRadius: 0,
+                //shadow: false,
+                useHTML: true,
+                formatter: function () {
+                    var clase, nombre, valor, number_decimal;
+
+                    if      ( this.point.color == colorPrimaryChart )
+                        clase = 'gasto-real';
+                    else if ( this.point.color == colorSecondaryChart )
+                        clase = 'presupuestos-mensuales';
+                    else
+                        clase = 'prevision-futuro';
+
+                    if ( this.series.data.indexOf( this.point ) == expecteds.length-1 )
+                        nombre = 'Previsión futuro';
+                    else
+                        nombre = this.series.name;
+
+                    number_decimal = this.point.y.toString().split('.');
+                    if ( number_decimal.length > 1 )
+                        valor = numberWithThousandsSeparator(number_decimal[0]) + ',' + number_decimal[1];
+                    else
+                        valor = numberWithThousandsSeparator(number_decimal[0]);
+
+                    return '<div class="tooltip-box '+clase+'">'+ nombre + '<br />' + valor + ' €<br />' + '</div>';
+                }
             },
             legend:{ enabled:false },
             plotOptions: {
@@ -178,11 +208,10 @@ function pointChart() {
                     value: 12
                 }, {
                     value: 13,
-                    name: 'Previsión futuro',
                     dashStyle: 'dot'
                 }, {
                     value: 14,
-                    color: '#ffffff',
+                    color: colorTerciaryChart,
                     marker: {
                         radius: 5,
                         lineWidth: 2,

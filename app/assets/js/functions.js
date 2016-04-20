@@ -21,3 +21,7 @@ function stringToInt(string) {
     var value = string.split('.').join('');
     return parseInt(value);
 }
+
+function numberWithThousandsSeparator(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}

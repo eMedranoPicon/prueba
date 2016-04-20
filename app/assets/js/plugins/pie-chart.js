@@ -84,7 +84,7 @@ function pieChart() {
                 spent                       = parseFloat($(this).text());
                 chartData[currentRow].spent = spent;
             }
-            else if (currentCell == 4) {
+            else if (currentCell === 4) {
                 chartData[currentRow]['icon-spent'] = $(this).find('i').attr('class');
             }
 
