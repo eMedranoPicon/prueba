@@ -86,9 +86,9 @@ var progressBar = (function() {
     function createNormalBar() {
         var previsto_entero, previsto_decimal, gastado_entero, gastado_decimal, new_bar;
 
-        previsto_entero     =   previsto.toString().split('.')[0];
+        previsto_entero     =   numberWithThousandsSeparator( previsto.toString().split('.')[0] );
         previsto_decimal    =   previsto.toString().split('.')[1];
-        gastado_entero      =   gastado.toString().split('.')[0];
+        gastado_entero      =   numberWithThousandsSeparator( gastado.toString().split('.')[0] );
         gastado_decimal     =   gastado.toString().split('.')[1];
 
         if (previsto_decimal === undefined)     previsto_decimal = '00';
@@ -135,9 +135,9 @@ var progressBar = (function() {
     function createOverLoadedBar() {
         var  previsto_entero, previsto_decimal, gastado_entero, gastado_decimal, new_bar, aria_value, bar_width;
 
-        previsto_entero     =   previsto.toString().split('.')[0];
+        previsto_entero     =   numberWithThousandsSeparator( previsto.toString().split('.')[0] );
         previsto_decimal    =   previsto.toString().split('.')[1];
-        gastado_entero      =   gastado.toString().split('.')[0];
+        gastado_entero      =   numberWithThousandsSeparator( gastado.toString().split('.')[0] );
         gastado_decimal     =   gastado.toString().split('.')[1];
 
         if (previsto_decimal === undefined)     previsto_decimal = '00';

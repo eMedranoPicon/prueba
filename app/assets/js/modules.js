@@ -25,19 +25,6 @@
 
 
         // FUNCTIONS FOR MODULES
-        function rebootWarning($context) {
-            var $elems, $warning;
-            var $container = $context.closest('.modules-container');
-
-            $elems = $container.find('.devolver-baja-container');
-            for(var e=0; e < $elems.length; e++) {
-                $warning = $($elems[e]).find('.warning-container');
-                if(!$warning.hasClass('hidden'))
-                    $warning.addClass('hidden');
-            }
-            countDevBaja = 0;
-        }
-
         function slideContainer($context) {
             var $container = $context.closest('.modules-container');
             var h = $container.find('.slidedown .module-inner-content').outerHeight() + marginTop;
@@ -135,7 +122,11 @@
         // AMORTIZAR PRESTAMO
         $root.find(".prestamo-detail-content .button-module.prestamo")
         .on('click', function() {
+            var $button_row = $(this).closest('.fila').find('.button-details');
 
+            if($button_row.hasClass('selected')) {
+              $button_row.removeClass('selected');
+            }
             slideContainer($(this));
         });
 
@@ -166,7 +157,7 @@
         ******* DEVOLVER BAJA MODULES *******
         ************************************/
 
-        //HOVER ENLACE SMS
+        // HOVER ENLACE SMS
         $devolverBajaModule.find(".link-container")
         .hover(function() {
             $(this).find('i').addClass('icon-hover');
@@ -176,43 +167,22 @@
             $(this).find('a').removeClass('hover');
         });
 
-        // CONFIRM
-        $devolverBajaModule.on('click', ".confirm", function() {
-            var $elem, $previousElem, h, $container, $content, $warning;
+        // CONFIRM OR CANCEL
+        $devolverBajaModule.on('click', ".confirm, .cancel", function() {
+            var $elem, $previousElem, $container;
 
             $container      = $(this).closest('.modules-container');
-            $content        = $(this).closest('.devolver-baja-module-content');
             $previousElem   = $(this).closest('.devolver-baja-container');
-            $warning        = $content.find('.warning-container');
+            $elem           = $container.find('.receipt-detail-container');
 
-            if($content.hasClass('baja') && countDevBaja === 0){
-                $warning.removeClass('hidden');
-                countDevBaja++;
-                h = $previousElem.outerHeight() + $warning.outerHeight() + marginTop;
-                $previousElem.height(h);
-                $container.css('height', h+'px');
-            }
-            else {
-                $elem = $container.find('.receipt-detail-container');
-                rebootWarning($(this));
-                changeToSubModule($previousElem, $elem, $container);
-            }
-        });
-
-        // CANCEL
-        $devolverBajaModule.on('click', '.cancel', function() {
-            var $container = $(this).closest('.modules-container');
-            var $previousElem = $(this).closest('.devolver-baja-container');
-            var $elem = $container.find('.receipt-detail-container');
-
-            rebootWarning($(this));
             changeToSubModule($previousElem, $elem, $container);
         });
 
 
-        /***************************
-        ******* TIMELINE ************
-        ****************************/
+        /********************************************
+        ***************** TIMELINE ******************
+        ********************************************/
+
         var $timeline_root = $('.timeline');
 
         // MODULE PRINCIPAL
@@ -223,15 +193,14 @@
           var $thisElem = $(this).closest('.fila').find('.modules-container');
           for(var e=0; e < $elems.length; e++){
             $($elems[e]).closest('.fila').find('.button-details').removeClass('selected');
-            if($($elems[e]).hasClass('slidedown') && !$($elems[e]).is($thisElem)){
+            if($($elems[e]).hasClass('slidedown') && !$($elems[e]).is($thisElem)) {
               slideContainer($($elems[e]));
-              rebootWarning($($elems[e]));
             }
           }
-          if($thisElem.hasClass('slideup'))
+          if($thisElem.hasClass('slideup')) {
             $(this).addClass('selected');
+          }
           slideContainer($thisElem);
-          rebootWarning($thisElem);
         });
 
         // MODULE ALERTS (TIMELINE)

@@ -27,7 +27,9 @@ $.AccordionSoft.defaults         = {
     // easing of the scroll to action animation
     scrollEasing        : 'easeInOutExpo',
     // margin between last element of open content and the next accordion header
-    marginToNextHeader  : 20
+    marginToNextHeader  : 20,
+    // enable or disable accordion scroll
+    enableScroll        : true
 };
 
 $.AccordionSoft.prototype         = {
@@ -156,12 +158,12 @@ $.AccordionSoft.prototype         = {
             // close any opened item if oneOpenedItem is true
             if( instance.options.oneOpenedItem && instance._isOpened() && instance.current!== $item.index() ) {
 
-                instance._toggleItem( instance.$items.eq( instance.current ), true );
+                instance._toggleItem( instance.$items.eq( instance.current ), instance.options.enableScroll );
 
             }
 
             // open / close item
-            instance._toggleItem( $item, true );
+            instance._toggleItem( $item, instance.options.enableScroll );
 
             return false;
 
