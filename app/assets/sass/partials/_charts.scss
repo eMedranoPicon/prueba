@@ -142,16 +142,82 @@
     }
     .highcharts-tooltip {
         z-index: 9998;
-
+        padding: 0;
+    }
+    .highcharts-tooltip path {
+        z-index: 9998;
+        padding: 0;
     }
     .tooltip-box {
-        padding:3px;
-        left:51px;
+        padding:5px;
+        background-color: $colorDetBackground;
         text-align:center;
         line-height:20px;
-        opacity:1;
-        z-index:9999!important;
+        opacity:0.9;
+        z-index:9999;
+        border-radius: 2px;
+        @include css3-prefix(filter, drop-shadow(1px 1px 1px rgba(0,0,0,0.5)));
     }
+    .presupuestos-mensuales, .gasto-real, .prevision-futuro {
+        .triangle {
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            margin: 0;
+            @include triangle(6px, 0, 6px, 6px, $colorDetBackground);
+            padding: 0;
+            width: 0;
+            height: 0;
+        }
+        .border-triangle {
+            top: 51px;
+            border-top-color: $colorDetTer;
+        }
+
+    }
+    .presupuestos-mensuales, .prevision-futuro {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .presupuestos-mensuales {
+        border: solid 1px $colorDetHexa;
+        .triangle, .border-triangle {
+            left: 62px;
+        }
+        .border-triangle {
+            border-top-color: $colorDetHexa;
+        }
+        &.first {
+            .triangle, .border-triangle {
+                left: 50px;
+            }
+        }
+        &.last {
+            .triangle, .border-triangle {
+                left: 69px;
+            }
+        }
+    }
+    .gasto-real {
+        min-width: 100px;
+        border: solid 1px $colorDetTer;
+        .triangle, .border-triangle {
+            left: 43px;
+        }
+        .border-triangle {
+            border-top-color: $colorDetTer;
+        }
+    }
+    .prevision-futuro {
+        border: solid 1px $colorDetCuater;
+        .triangle, .border-triangle {
+            left: 78px;
+        }
+        .border-triangle {
+            border-top-color: $colorDetCuater;
+        }
+    }
+
     .highcharts-tooltip span {
         left: 51px!important;
     }

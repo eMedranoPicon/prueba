@@ -137,7 +137,7 @@ function pointChart() {
                 title: '',
                 lineColor: colorAxisLineChart,
                 lineWidth: 1,
-                max: maximum * 1.1,
+                max: maximum * 1.2,
                 tickmarkPlacement: 'on',
                 tickPosition: 'inside',
                 labels: {
@@ -158,22 +158,27 @@ function pointChart() {
                 pointFormat: '{point.y:,.2f} €',
                 valueSuffix: '€',
 
-                //backgroundColor: "rgba(255,255,255,0)",
-                //borderWidth: 0,
-                //borderRadius: 0,
-                //shadow: false,
+                backgroundColor: "rgba(255,255,255,0)",
+                borderWidth: 0,
+                borderRadius: 0,
+                shadow: false,
                 useHTML: true,
                 formatter: function () {
                     var clase, nombre, valor, number_decimal;
 
                     if      ( this.point.color == colorPrimaryChart )
                         clase = 'gasto-real';
-                    else if ( this.point.color == colorSecondaryChart )
+                    else if ( this.point.color == colorSecondaryChart ) {
                         clase = 'presupuestos-mensuales';
+                        if ( this.point.x == 0 )
+                            clase += ' first';
+                        else if ( this.point.x == expecteds.length-2 )
+                            clase += ' last';
+                    }
                     else
                         clase = 'prevision-futuro';
 
-                    if ( this.series.data.indexOf( this.point ) == expecteds.length-1 )
+                    if ( this.point.x == expecteds.length-1 )
                         nombre = 'Previsión futuro';
                     else
                         nombre = this.series.name;
@@ -184,7 +189,7 @@ function pointChart() {
                     else
                         valor = numberWithThousandsSeparator(number_decimal[0]);
 
-                    return '<div class="tooltip-box '+clase+'">'+ nombre + '<br />' + valor + ' €<br />' + '</div>';
+                    return '<div class="tooltip-box '+clase+'">'+ nombre + '<br />' + valor + ' €<br /><b class="border-triangle triangle"></b><b class="triangle"></b></div>';
                 }
             },
             legend:{ enabled:false },
