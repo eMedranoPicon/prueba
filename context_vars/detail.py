@@ -290,62 +290,62 @@ def get_detail():
 			},
 			{
 				"MES":	"Nov",
-				"PREVISTO": 460,
+				"PREVISTO": 629,
 				"GASTADO": 420
 			},
 			{
 				"MES":	"Dic",
-				"PREVISTO": 500,
+				"PREVISTO": 628,
 				"GASTADO": 430
 			},
 			{
 				"MES":	"Ene",
-				"PREVISTO": 500,
+				"PREVISTO": 626,
 				"GASTADO": 380
 			},
 			{
 				"MES":	"Feb",
 				"PREVISTO": 500,
-				"GASTADO": 410
+				"GASTADO": 627
 			},
 			{
 				"MES":	"Mar",
 				"PREVISTO": 500,
-				"GASTADO": 430
+				"GASTADO": 625
 			},
 			{
 				"MES":	"Abr",
 				"PREVISTO": 500,
-				"GASTADO": 400
+				"GASTADO": 620
 			},
 			{
 				"MES":	"May",
 				"PREVISTO": 500,
-				"GASTADO": 400
+				"GASTADO": 630
 			},
 			{
 				"MES":	"Jun",
 				"PREVISTO": 500,
-				"GASTADO": 380
+				"GASTADO": 580
 			},
 			{
 				"MES":	"Jul",
 				"PREVISTO": 500,
-				"GASTADO": 370
+				"GASTADO": 600
 			},
 			{
 				"MES":	"Ago",
 				"PREVISTO": 500,
-				"GASTADO": 360
+				"GASTADO": 650
 			},
 			{
 				"MES":	"Sep",
-				"PREVISTO": 500,
+				"PREVISTO": 650,
 				"GASTADO": 300
 			},
 			{
 				"MES":	"Oct",
-				"PREVISTO": 540,
+				"PREVISTO": 640,
 				"GASTADO": 0
 			},
 		],

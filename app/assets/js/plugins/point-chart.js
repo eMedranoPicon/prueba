@@ -163,22 +163,30 @@ function pointChart() {
                 borderRadius: 0,
                 shadow: false,
                 useHTML: true,
+                /*
+                    Function that draws the tooltip for every case
+                 */
                 formatter: function () {
-                    var clase, nombre, valor, number_decimal;
+                    var clase, nombre, valor, number_decimal,
+                        pixels_y    = this.series.yAxis.toPixels(this.point.y),
+                        threshold   = 84.5;
 
-                    if      ( this.point.color == colorPrimaryChart )
+                    if      ( this.point.color === colorPrimaryChart )
                         clase = 'gasto-real';
-                    else if ( this.point.color == colorSecondaryChart ) {
+                    else if ( this.point.color === colorSecondaryChart ) {
                         clase = 'presupuestos-mensuales';
-                        if ( this.point.x == 0 )
+                        if ( this.point.x === 0 )
                             clase += ' first';
-                        else if ( this.point.x == expecteds.length-2 )
+                        else if ( this.point.x === expecteds.length-2 )
                             clase += ' last';
                     }
                     else
                         clase = 'prevision-futuro';
 
-                    if ( this.point.x == expecteds.length-1 )
+                    if (pixels_y <= threshold)
+                        clase += ' under-point';
+
+                    if ( this.point.x === expecteds.length-1 )
                         nombre = 'Previsión futuro';
                     else
                         nombre = this.series.name;
