@@ -43,7 +43,7 @@
       display: table-cell;
     }
     .icon-container {
-        width: 0;
+        width: 1px;
         vertical-align: middle;
         text-align: center;
         padding-right: 15px;
@@ -189,7 +189,7 @@
     @include progress-bar(42px, $colorDetSecond, $colorDetTer);
     .triangulo_izq.incomplete {
         border-right-color: $grey900;
-        
+
     }
     .text-container {
       margin-top: 9px;

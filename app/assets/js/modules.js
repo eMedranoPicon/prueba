@@ -20,8 +20,7 @@
             devolverBajaName  = '.devolver-baja-module-content';
 
 
-        var countDevBaja = 0,
-            marginTop = 10;
+        var marginTop = 10;
 
 
         // FUNCTIONS FOR MODULES
@@ -140,7 +139,6 @@
 
             $container = $(this).closest('.modules-container');
             $previousElem = $container.find('.receipt-detail-container');
-            countDevBaja = 0;
 
             if($(this).is(".receipt-detail-content .button-module")) {
                 $elem = $(this).closest('.fila').find('.devolver-baja-container.devolver');

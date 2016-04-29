@@ -147,7 +147,7 @@ function pieChart() {
     */
 
     function drawSlice ( context, slice ) {
-        var endPoint, actualPullOutAngle, startAngle, endAngle, angle, startX, startY;
+        var endPoint, actualPullOutAngle, startAngle, endAngle, startX, startY;
 
         startAngle  =   chartData[slice].startAngle  + chartStartAngle;
         endAngle    =   chartData[slice].endAngle  + chartStartAngle;
