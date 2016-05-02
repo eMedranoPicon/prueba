@@ -197,7 +197,7 @@ function pointChart() {
                     else
                         valor = numberWithThousandsSeparator(number_decimal[0]);
 
-                    return '<div class="tooltip-box '+clase+'">'+ nombre + '<br />' + valor + ' €<br /><b class="border-triangle triangle"></b><b class="triangle"></b></div>';
+                    return '<div class="tooltip-box '+clase+'">'+ meses[this.point.x] + '<br />' + valor + ' €<br /><b class="border-triangle triangle"></b><b class="triangle"></b></div>';
                 }
             },
             legend:{ enabled:false },

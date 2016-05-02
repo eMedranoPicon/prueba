@@ -161,7 +161,7 @@
         .triangle {
             position: absolute;
             top: 50px;
-            left: 20px;
+            left: 33px;
             margin: 0;
             @include triangle(6px, 0, 6px, 6px, $colorDetBackground);
             padding: 0;
@@ -196,35 +196,17 @@
         }
     }
 
-    .presupuestos-mensuales, .prevision-futuro {
-        padding-left: 10px;
-        padding-right: 10px;
+    .presupuestos-mensuales, .prevision-futuro, .gasto-real {
+        min-width: 80px;
     }
     .presupuestos-mensuales {
         border: solid 1px $colorDetHexa;
-        .triangle, .border-triangle {
-            left: 62px;
-        }
         .border-triangle {
             border-top-color: $colorDetHexa;
         }
-        &.first {
-            .triangle, .border-triangle {
-                left: 50px;
-            }
-        }
-        &.last {
-            .triangle, .border-triangle {
-                left: 69px;
-            }
-        }
     }
     .gasto-real {
-        min-width: 100px;
         border: solid 1px $colorDetTer;
-        .triangle, .border-triangle {
-            left: 43px;
-        }
         .border-triangle {
             border-top-color: $colorDetTer;
         }
@@ -232,7 +214,7 @@
     .prevision-futuro {
         border: solid 1px $colorDetHexa;
         .triangle, .border-triangle {
-            left: 78px;
+            left: 52px;
         }
         .border-triangle {
             border-top-color: $colorDetHexa;
