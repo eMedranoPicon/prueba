@@ -7,7 +7,7 @@ flip-container, .front, .back {
   @include css3-prefix(perspective, 1000px);
   &.hover {
     .front {
-      @include css3-prefix(transform,rotateY(180deg));
+      @include css3-prefix(transform, rotateY(180deg));
     }
     .back {
       @include css3-prefix(transform, rotateY(0deg));

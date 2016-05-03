@@ -167,7 +167,7 @@ function pointChart() {
                     Function that draws the tooltip for every case
                  */
                 formatter: function () {
-                    var clase, nombre, valor, number_decimal,
+                    var clase, valor, number_decimal,
                         pixels_y    = this.series.yAxis.toPixels(this.point.y),
                         threshold   = 84.5;
 
@@ -185,11 +185,6 @@ function pointChart() {
 
                     if (pixels_y <= threshold)
                         clase += ' under-point';
-
-                    if ( this.point.x === expecteds.length-1 )
-                        nombre = 'Previsión futuro';
-                    else
-                        nombre = this.series.name;
 
                     number_decimal = this.point.y.toString().split('.');
                     if ( number_decimal.length > 1 )

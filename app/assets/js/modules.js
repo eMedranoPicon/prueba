@@ -20,13 +20,21 @@
             devolverBajaName  = '.devolver-baja-module-content';
 
 
-        var marginTop = 10;
+        var marginTop   = 10,
+            speed       = 450,
+            flipContainerHoverClass;
+
+        if( Modernizr.csstransitions )
+            flipContainerHoverClass = 'hover';
+        else
+            flipContainerHoverClass = 'modern-hover';
+
 
 
         // FUNCTIONS FOR MODULES
         function slideContainer($context) {
             var $container = $context.closest('.modules-container');
-            var h = $container.find('.slidedown .module-inner-content').outerHeight() + marginTop;
+            var h = $container.find('.active .module-inner-content').outerHeight() + marginTop;
             $container.find('.slidedown.module-content').height(h);
             if ($container.hasClass("slideup")) {
                 $container.removeClass("slideup").addClass("slidedown");
@@ -41,25 +49,43 @@
             $content.css('height', 0);
         }
 
+        function changeAttrNoTransition($element, attr, value) {
+            $element.addClass('no-transitions');
+            $element.css(attr, value);
+            setTimeout( function() { $element.removeClass('no-transitions'); }, 1 );
+        }
+
         function changeToSubModule($previousElem, $subModule, $container) {
             var h;
 
-            slideContainer($previousElem);
-            slideUpDown($previousElem);
-            clearStyle($previousElem);
-            setTimeout(
-                function(){
-                    slideUpDown($subModule);
+            if( !$subModule.hasClass('front') ) {
+                $subModule.addClass('back');
+            }
+            $subModule.removeClass('hidden');
 
+            h = $subModule.find('.module-inner-content').outerHeight() + marginTop;
 
-                    h = $subModule.find('.module-inner-content').outerHeight() + marginTop;
-                    $subModule.css('height', h+'px');
-                    h = h + marginTop;
-                    slideContainer($subModule);
-                    $container.css('height', h+'px');
-                },
-                600
-            );
+            changeAttrNoTransition($subModule, 'height', h+'px');
+            h = h + marginTop;
+
+            changeAttrNoTransition($container, 'height', h+'px');
+
+            setTimeout( function() {
+                if( !$subModule.hasClass('front') )
+                    $container.addClass(flipContainerHoverClass);
+                else
+                    $container.removeClass(flipContainerHoverClass);
+            }, 1 );
+
+            if( !$previousElem.hasClass('front') ) {
+                setTimeout( function() {
+                    $previousElem.addClass('hidden');
+                    $previousElem.removeClass('back');
+                }, speed );
+            }
+
+            $subModule.addClass('active');
+            $previousElem.removeClass('active');
         }
 
         // JQUERY CONTROLLERS

@@ -249,6 +249,10 @@
           background-color: $colorTimeWarning;
         }
       }
+
+      .flip-container {
+        border: 0;
+      }
     }
 
     .timelineDot-general {
@@ -276,78 +280,6 @@
       top: 45px;
       padding-top: 10px;
       z-index: 5;
-      .module-content {
-        text-align: left;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        .module-inner-content {
-          background-color: $colorModBack;
-          border: 1px solid $colorModBorder;
-          margin-top: 10px;
-          &::before, &::after {
-            bottom: auto;
-            position: absolute;
-            display: inline-block;
-            content: " ";
-          }
-          &::before {
-              @include triangle(0, 10px, 10px, 10px, $colorModBorder);
-              top: 1px;
-              left: 12px;
-          }
-          &::after {
-              @include triangle(0, 9px, 9px, 9px, $colorModBack);
-              top: 2px;
-              left: 13px;
-          }
-          .slideup & {
-            padding-top: 0;
-            border: 0;
-            @include transition(all 0.45s);
-            &::before, &::after {
-              display: none;
-            }
-          }
-        }
-        input[type="text"] {
-          text-align: center;
-          font-family: $fontBold;
-          color: $colorModPrimary;
-          padding-top: 2px;
-          border: 1px solid $colorModBorderInput;
-        }
-      }
-      &.right .module-inner-content{
-        &::before {
-            @include triangle(0, 10px, 10px, 10px, $colorModBorder);
-            top: 1px;
-            right: 12px;
-            left: auto;
-        }
-        &::after {
-            @include triangle(0, 9px, 9px, 9px, $colorModBack);
-            top: 2px;
-            right: 13px;
-            left: auto;
-        }
-      }
-    }
-    .button-module {
-      background-color: transparent;
-      border: 1px solid $black;
-      height: 37px;
-      width: 173px;
-      font-size: 14px;
-      letter-spacing: 1px;
-      border-radius: 20px;
-      outline: none;
-      @include transition(all 0.2s);
-      &:hover {
-        border: 0;
-        background-color: $colorModButBack;
-        color: $white;
-      }
     }
     .receipt-detail-container {
       z-index: 5;
