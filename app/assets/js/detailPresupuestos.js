@@ -7,12 +7,6 @@ $(document).ready(function () {
 
         var flipContainerHoverClass;
 
-        if( Modernizr.csstransitions )
-            flipContainerHoverClass = 'hover';
-        else
-            flipContainerHoverClass = 'modern-hover';
-
-
         var namespace = '.detail-presupuestos';
 
         var $root,
@@ -48,6 +42,13 @@ $(document).ready(function () {
         $progress_bar           = $bar_container.find('.progress-bar');
         porcentaje_complete     = progressBar.getPorcentajeComplete();
         speed                   = 450;
+
+        if( Modernizr.csstransitions )
+            flipContainerHoverClass = 'hover';
+        else {
+            flipContainerHoverClass = 'modern-hover';
+            $header.find('.triangulo_izq.full.incomplete').removeClass('incomplete');
+        }
 
         /************************************************
         ***************** DETAIL HEADER *****************
