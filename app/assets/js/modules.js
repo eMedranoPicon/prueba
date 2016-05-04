@@ -20,8 +20,10 @@
             devolverBajaName  = '.devolver-baja-module-content';
 
 
-        var marginTop   = 10,
-            speed       = 450,
+        var marginTop         = 10,
+            marginProveedores = 100,
+            borderWidth       = 2,
+            speed             = 450,
             flipContainerHoverClass;
 
         if( Modernizr.csstransitions )
@@ -34,8 +36,8 @@
         // FUNCTIONS FOR MODULES
         function slideContainer($context) {
             var $container = $context.closest('.modules-container');
-            var h = $container.find('.active .module-inner-content').outerHeight() + marginTop;
-            $container.find('.slidedown.module-content').height(h);
+            var h = $container.find('.active .module-inner-content').outerHeight() + marginTop + borderWidth;
+            //$container.find('.active.module-content').height(h);
             if ($container.hasClass("slideup")) {
                 $container.removeClass("slideup").addClass("slidedown");
                 $container.css('height', h+'px');
@@ -56,25 +58,27 @@
         }
 
         function changeToSubModule($previousElem, $subModule, $container) {
-            var h;
+            var $flipContainer, h;
+
+            $flipContainer = $container.find('.flip-container');
 
             if( !$subModule.hasClass('front') ) {
                 $subModule.addClass('back');
             }
             $subModule.removeClass('hidden');
 
-            h = $subModule.find('.module-inner-content').outerHeight() + marginTop;
+            h = $subModule.find('.module-inner-content').outerHeight();
 
             changeAttrNoTransition($subModule, 'height', h+'px');
-            h = h + marginTop;
+            h = h + marginTop + borderWidth;
 
             changeAttrNoTransition($container, 'height', h+'px');
 
             setTimeout( function() {
                 if( !$subModule.hasClass('front') )
-                    $container.addClass(flipContainerHoverClass);
+                    $flipContainer.addClass(flipContainerHoverClass);
                 else
-                    $container.removeClass(flipContainerHoverClass);
+                    $flipContainer.removeClass(flipContainerHoverClass);
             }, 1 );
 
             if( !$previousElem.hasClass('front') ) {
@@ -116,16 +120,23 @@
             slideUpDown($(this).find('.triangle'));
             if($subE.hasClass('slideup')){
                 $subE.css('height', h+'px');
-                h = $elem.outerHeight() + h + marginTop;
+                if ( Modernizr.csstransitions )
+                    h = $elem.outerHeight() + h + marginTop;
+                else
+                    h = $elem.outerHeight() + marginTop;
             }
             else {
                 clearStyle($subE);
-                h = $elem.outerHeight() - h + marginTop;
+                if ( Modernizr.csstransitions )
+                    h = $elem.outerHeight() - h + marginTop;
+                else
+                    h = $elem.outerHeight() + marginTop;
             }
             slideUpDown($subE);
+            h += borderWidth;
             $(this).closest('.modules-container').css('height', h+'px');
-            $(this).closest('.module-content').css('height', h+'px');
         });
+
 
         // CHANGE SUBELEMENT CHECK
         $root.find(
@@ -136,6 +147,7 @@
             reverseClass($element, 'icon-check', 'icon-check-green');
         });
 
+
         //STOP PROPAGATION IF INPUT IS CLICKED
         $root.find(
             ".receipt-detail-content .subelement-container .content input,"+
@@ -143,6 +155,7 @@
         .on('click', function(e) {
             e.stopPropagation();
         });
+
 
         // AMORTIZAR PRESTAMO
         $root.find(".prestamo-detail-content .button-module.prestamo")

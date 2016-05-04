@@ -31,8 +31,10 @@ var progressBar = (function() {
         if (speed === undefined)
             speed = speed_default;
 
-        if(porcentaje == porcentaje_complete)
-            $bar_container.find('.triangulo_izq.full').addClass('incomplete');
+        if(porcentaje == porcentaje_complete) {
+            if ( Modernizr.csstransitions )
+                $bar_container.find('.triangulo_izq.full').addClass('incomplete');
+        }
 
         $progress_bar.addClass('no-transitions');
         $progress_bar.width(startWidth);
@@ -96,8 +98,12 @@ var progressBar = (function() {
 
         new_bar             =   '';
 
-        if (porcentaje == porcentaje_complete)
-            new_bar +=  '<span class="triangulo_izq full incomplete"></span>';
+        if (porcentaje == porcentaje_complete) {
+            if ( Modernizr.csstransitions )
+                new_bar +=  '<span class="triangulo_izq full incomplete"></span>';
+            else
+                new_bar +=  '<span class="triangulo_izq full"></span>';
+        }
 
         new_bar +=      '<div class="progress border-radius-less">';
         new_bar +=      '   <div class="progress-bar border-radius-less" role="progressbar" aria-valuenow="'+ porcentaje +'" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>';

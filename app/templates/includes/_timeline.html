@@ -62,38 +62,40 @@
 			        		<div class="col-xs-6  textTimeline">{{ MOVIMIENTO.DATE }}</div>
 						{% endif %}
 
-						<div class="module modules-container slideup flip-container {% if MOVIMIENTO.GASTO %} right {% endif %}">
-							<div class="flipper">
-								{% if not MOVIMIENTO.PRESTAMO %}
-									<div class="module-content receipt-detail-container front active">
-										{% with texto = MOVIMIENTO.TEXT, count = loop.index, outer_count = outer_loop.index %}
-									  	{% include '/includes/modules/_receipt_details.html' %}
-										{% endwith %}
-									</div>
-								{% else %}
-									<div class="module-content prestamo-detail-container front active">
-										{% with texto = MOVIMIENTO.TEXT, count = loop.index, outer_count = outer_loop.index %}
-									  	{% include '/includes/modules/_prestamo_details.html' %}
-										{% endwith %}
-									</div>
-								{% endif %}
+						<div class="module modules-container slideup {% if MOVIMIENTO.GASTO %} right {% endif %}">
+							<div class="flip-container">
+								<div class="flipper">
+									{% if not MOVIMIENTO.PRESTAMO %}
+										<div class="module-content receipt-detail-container front active">
+											{% with texto = MOVIMIENTO.TEXT, count = loop.index, outer_count = outer_loop.index %}
+										  	{% include '/includes/modules/_receipt_details.html' %}
+											{% endwith %}
+										</div>
+									{% else %}
+										<div class="module-content prestamo-detail-container front active">
+											{% with texto = MOVIMIENTO.TEXT, count = loop.index, outer_count = outer_loop.index %}
+										  	{% include '/includes/modules/_prestamo_details.html' %}
+											{% endwith %}
+										</div>
+									{% endif %}
 
-								<div class="module-content alerts-container hidden {% if MOVIMIENTO.PRESTAMO %} prestamo {% endif %}">
-									{% with counter = loop.index, outer_counter = outer_loop.index %}
-							      {% include '/includes/modules/_alerts.html' %}
-							    {% endwith %}
-							  </div>
+									<div class="module-content alerts-container hidden {% if MOVIMIENTO.PRESTAMO %} prestamo {% endif %}">
+										{% with counter = loop.index, outer_counter = outer_loop.index %}
+								      {% include '/includes/modules/_alerts.html' %}
+								    {% endwith %}
+								  </div>
 
-								<div class="module-content devolver-baja-container devolver hidden">
-									{% with texto = MOVIMIENTO.TEXT, type="devolver", count = loop.index, number = MOVIMIENTO.NUMBER, decimal = MOVIMIENTO.DECIMAL %}
-							      {% include '/includes/modules/_devolver_baja.html' %}
-							    {% endwith %}
-							  </div>
-								<div class="module-content devolver-baja-container baja hidden">
-									{% with texto = MOVIMIENTO.TEXT, type="baja", count = loop.index %}
-							      {% include '/includes/modules/_devolver_baja.html' %}
-							    {% endwith %}
-							  </div>
+									<div class="module-content devolver-baja-container devolver hidden">
+										{% with texto = MOVIMIENTO.TEXT, type="devolver", count = loop.index, number = MOVIMIENTO.NUMBER, decimal = MOVIMIENTO.DECIMAL %}
+								      {% include '/includes/modules/_devolver_baja.html' %}
+								    {% endwith %}
+								  </div>
+									<div class="module-content devolver-baja-container baja hidden">
+										{% with texto = MOVIMIENTO.TEXT, type="baja", count = loop.index %}
+								      {% include '/includes/modules/_devolver_baja.html' %}
+								    {% endwith %}
+								  </div>
+								</div>
 							</div>
 						</div>
 

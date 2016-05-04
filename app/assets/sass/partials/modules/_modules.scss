@@ -12,38 +12,43 @@
     @include slidedown2();
   }
 
-  &.flip-container {
-      position: absolute;
+  .flip-container {
       z-index: 5;
-      border: 0;
+      border: 1px solid $colorModBorder;
+      padding-left: 1px\9;
+      background-color: $colorModBack;
+      height: 100%;
+      @include css3-prefix(perspective, 2000px);
+      &::before, &::after {
+        bottom: auto;
+        position: absolute;
+        display: inline-block;
+        content: " ";
+      }
+      &::before {
+          @include triangle(0, 10px, 10px, 10px, $colorModBorder);
+          top: -10px;
+          left: 12px;
+      }
+      &::after {
+          @include triangle(0, 9px, 9px, 9px, $colorModBack);
+          top: -9px;
+          left: 13px;
+      }
       .flipper {
         z-index: 5;
-        border: 1px solid $colorModBorder;
-        padding-top: 10px;
-        background-color: $colorModBack;
-        &::before, &::after {
-          bottom: auto;
-          position: absolute;
-          display: inline-block;
-          content: " ";
-        }
-        &::before {
-            @include triangle(0, 10px, 10px, 10px, $colorModBorder);
-            top: -10px;
-            left: 12px;
-        }
-        &::after {
-            @include triangle(0, 9px, 9px, 9px, $colorModBack);
-            top: -9px;
-            left: 13px;
-        }
+        position: inherit;
+        position: relative\9;
+        overflow: hidden;
       }
   }
+
   .module-content {
     text-align: left;
     position: absolute;
     top: 0;
     width: 100%;
+    z-index: 6;
     &.slideup {
       @include slideup2();
     }
@@ -52,7 +57,6 @@
     }
     .module-inner-content {
       background-color: $colorModBack;
-
       .slideup & {
         padding-top: 0;
         border: 0;
@@ -181,7 +185,7 @@
       border: 1px solid $colorModBorderInput;
     }
   }
-  &.right .flipper{
+  &.right .flip-container{
     &::before {
         @include triangle(0, 10px, 10px, 10px, $colorModBorder);
         right: 12px;
