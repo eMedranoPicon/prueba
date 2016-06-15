@@ -111,17 +111,15 @@
           right: 0;
         }
 
-        .module-inner-content{
+        .flip-container {
           border-color: $colorModBorderDark;
           &::before {
               @include triangle(0, 10px, 10px, 10px, $colorModBorderDark);
-              top: 1px;
               right: 17px;
               left: auto;
           }
           &::after {
               @include triangle(0, 9px, 9px, 9px, $colorModBack);
-              top: 2px;
               right: 18px;
               left: auto;
           }
