@@ -35,6 +35,8 @@ var src_app = './app',
   dist_js_dir = path.join(dist_base_dir, 'js'),
   dist_css_dir = path.join(dist_base_dir, 'css'),
   dist_html_dir = path.join(src_app, 'templates'),
+  dist_legacy_js_dir  = path.join(dist_js_dir, 'legacy'),
+  dist_legacy_css_dir = path.join(dist_css_dir, 'legacy'),
   src_html_files = path.join(dist_html_dir, '**', '*.html'),
   config_dir = './config',
 
@@ -53,7 +55,9 @@ var src_app = './app',
   vendor_source_maps = [
     './bower_components/jquery/dist/jquery.min.map',
     './bower_components/progressbar.js/dist/progressbar.min.js.map'
-  ];
+  ],
+  legacy_js_src  = path.join(src_base_dir, 'legacy/js', '**', '*.js'),
+  legacy_css_src = path.join(src_base_dir, 'legacy/css', '**', '*.css');
 
 gulp.task('jshint', function() {
   return gulp.src(src_js_files)
@@ -129,6 +133,18 @@ gulp.task('scripts-min', function() {
     .pipe(uglify())
     .pipe(gulp.dest(dist_js_dir));
 }).help = 'Concatenates and minifies all js files.';
+
+
+gulp.task('legacy-scripts', function () {
+    return gulp.src(legacy_js_src)
+        .pipe(gulp.dest(dist_legacy_js_dir));
+}).help = 'Copy legacy javascript files.';
+
+
+gulp.task('legacy-css', function () {
+    return gulp.src(legacy_css_src)
+        .pipe(gulp.dest(dist_legacy_css_dir));
+}).help = 'Copy legacy css files.';
 
 
 gulp.task('watch', function() {
@@ -208,6 +224,7 @@ gulp.task('connect', function() {
 gulp.task('default', function() {
   runSequence(
     ['old_browsers', 'fonts', 'images', 'jshint', 'sass', 'vendor-css', 'vendor-scripts', 'scripts', 'jinja'],
+    ['legacy-scripts', 'legacy-css'],
     ['watch', 'connect'], // by default test are excluded of default task but it could be included with 'test' task
     function() {
       gulp.src('').pipe(notify({
@@ -223,6 +240,7 @@ gulp.task('dist', function() {
   runSequence(
     'clean',
     ['old_browsers', 'jshint-dist', 'sass-min', 'vendor-css', 'vendor-scripts', 'scripts-min', 'jinja'],
+    ['legacy-scripts', 'legacy-css'],
     function() {
       gulp.src('').pipe(notify({
         title: 'Dist',
