@@ -1,13 +1,16 @@
-$colorNotifPrimary: rgb(18, 13, 14);
-
 .zonaNotificaciones {
     .confirm-container {
+        font-family: $font;
         width: 100%;
-        height: 16px;
+        height: 30px;
         margin-top: 12px;
+        color: $colorNotifConfirm;
     }
     .botonera-selector {
-        height: 50px;
+        font-family: $font;
+        height: 55px;
+        border-top: $sizeNotifBorder solid $colorNotifBorder;
+        border-bottom: $sizeNotifBorder solid $colorNotifBorder;
         & > div {
             display: table;
             float: left;
@@ -15,17 +18,81 @@ $colorNotifPrimary: rgb(18, 13, 14);
         }
     }
     .dropdown-container {
-        width: 35%;
+        width: 40%;
+        position: relative;
+        color: $colorNotifPrimary;
+        &.monthly {
+            border-right: $sizeNotifBorder solid $colorNotifBorder;
+            border-left: $sizeNotifBorder solid $colorNotifBorder;
+        }
     }
     .check-selection {
-        width: 30%;
+        width: 20%;
     }
-    .dropdown-head {
+    .dropdown-head, .icon-container {
         vertical-align: middle;
         display: table-cell;
         text-align: center;
+        cursor: pointer;
+        padding-left: 12px;
+        padding-right: 9px;
+        .text-head {
+            display: inline-block;
+            text-align: left;
+            float: left;
+        }
+        .confirm {
+            color: $colorNotifConfirm;
+        }
+        .triangle {
+            @include triangle(6px, 0, 6px, 6px, $colorTimeBar);
+            display: inline-block;
+            float: right;
+            margin-top: 6px;
+        }
     }
-    .text-head {
-        color: $colorNotifPrimary;
+    .icon-check {
+        display: inline-block;
+    }
+    .dropdown-content {
+        position: absolute;
+        left: 0;
+        top: (55px - $sizeNotifBorder);
+        background: $white;
+        width: 100%;
+        border-right: 1px solid $colorNotifBorderSec;
+        border-left: 1px solid $colorNotifBorderSec;
+        &.slideup {
+            @include slideup();
+        }
+        &.slidedown {
+            @include slidedown(500px);
+        }
+        li {
+            height: 55px;
+            border-bottom: $sizeNotifBorder solid $colorNotifBorder;
+            width: 100%;
+            display: table;
+            cursor: pointer;
+            &:hover {
+                color: $colorNotifConfirm;
+            }
+        }
+        li span {
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 16px;
+        }
+        li input {
+            width: 100%;
+            display: inline-table;
+            height: 100%;
+            border: 1px solid $colorNotifBorder;
+        }
+        li.input-month-container{
+            display: block;
+            padding: 10px;
+            cursor: default;
+        }
     }
 }

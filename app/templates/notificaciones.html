@@ -3,7 +3,7 @@
 <div class="container_general" id="dashboard">
     <DIV class="zonaNotificaciones"><BR>
         <DIV class="container">
-            <DIV class="caja_notificaciones  ok ">
+            <DIV class="caja_notificaciones  ok overflow-visible">
                 <DIV class="titular">
                     <SPAN></SPAN>
                     <A><SPAN></SPAN></A>
@@ -26,9 +26,11 @@
                     <div class="dropdown-container budget">
                         <div class="dropdown-head">
                             <span class="text-head">Vivienda</span>
+                            <span class="triangle slideup"></span>
                         </div>
-                        <div class="dropdown-content">
-                            <ul class="dropdown-list hidden">
+                        <div class="dropdown-content slideup">
+                            <ul class="dropdown-list">
+                                <li class="hidden"><span>Vivienda</span></li>
                                 <li><span>Formación</span></li>
                                 <li><span>Tarjeta</span></li>
                                 <li><span>Seguros</span></li>
@@ -41,14 +43,16 @@
                     <div class="dropdown-container monthly">
                         <div class="dropdown-head">
                             <span class="text-head">Mensual</span>
+                            <span class="triangle slideup"></span>
                         </div>
-                        <div class="dropdown-content">
-                            <ul class="dropdown-list hidden">
+                        <div class="dropdown-content slideup">
+                            <ul class="dropdown-list">
+                                <li class="hidden"><span>Mensual</span></li>
                                 <li><span>Bimensual</span></li>
                                 <li><span>Trimestral</span></li>
                                 <li><span>Semestral</span></li>
                                 <li><span>Anual</span></li>
-                                <li><input type="text" class="input-month"/></li>
+                                <li class="input-month-container"><input type="text" class="input-month"/></li>
                             </ul>
                         </div>
                     </div>
