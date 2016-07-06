@@ -2,6 +2,8 @@
 $white            : #FFFFFF;
 $black            : #000000;
 
+$black300         : rgb(18, 13, 14);
+
 $green500         : #70a41c;
 
 $purple500        : #8f99e3;
@@ -118,3 +120,7 @@ $colorConCuater      : $white;
 $colorConPenta       : $blue500;
 $colorConBackground  : $gray990;
 $colorConBorder      : $grey200;
+
+
+// Notifications
+$colorNotifPrimary   : $black300;

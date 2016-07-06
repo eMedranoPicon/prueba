@@ -23,125 +23,225 @@
   <div class="body-container">
     <div class="table-container">
       <div class="fila-alert">
-        <div class="text-container">
-          <div class="text">
-            <span>Tu recibo supera</span>
-          </div>
-          <div class="input-container">
-            <input class="input-money" type="text" value="350"/>
-          </div>
-          <div class="coin">
-            <span>€</span>
-          </div>
-        </div>
-        <div class="checkbox-container">
-          <div class="checkbox-content">
-            <input type="checkbox" id="checkbox-alert11{{ counter }}{{ outer_counter }}" />
-            <label for="checkbox-alert11{{ counter }}{{ outer_counter }}" class="label-checkbox"></label>
-          </div>
-          <div class="checkbox-content">
-            <input type="checkbox" id="checkbox-alert12{{ counter }}{{ outer_counter }}" />
-            <label for="checkbox-alert12{{ counter }}{{ outer_counter }}" class="label-checkbox"></label>
-          </div>
-          <div class="checkbox-content">
-            <input type="checkbox" id="checkbox-alert13{{ counter }}{{ outer_counter }}" />
-            <label for="checkbox-alert13{{ counter }}{{ outer_counter }}" class="label-checkbox"></label>
-          </div>
-        </div>
-      </div>
-      <div class="fila-alert">
-        <div class="text-container">
-          <div class="text">
-            <span>Tu recibo supera el</span>
-          </div>
-          <div class="input-container">
-            <input class="input-percent" type="text" value="60"/>
-          </div>
-          <div class="text">
-            <span class="percent">%</span> <span>del total anual</span>
-          </div>
-        </div>
-        <div class="checkbox-container">
-          <div class="checkbox-content">
-            <input type="checkbox" id="checkbox-alert21{{ counter }}{{ outer_counter }}" />
-            <label for="checkbox-alert21{{ counter }}{{ outer_counter }}" class="label-checkbox"></label>
-          </div>
-          <div class="checkbox-content">
-            <input type="checkbox" id="checkbox-alert22{{ counter }}{{ outer_counter }}" />
-            <label for="checkbox-alert22{{ counter }}{{ outer_counter }}" class="label-checkbox"></label>
-          </div>
-          <div class="checkbox-content">
-            <input type="checkbox" id="checkbox-alert23{{ counter }}{{ outer_counter }}" />
-            <label for="checkbox-alert23{{ counter }}{{ outer_counter }}" class="label-checkbox"></label>
-          </div>
-        </div>
-      </div>
-      <div class="fila-alert">
-        <div class="text-container">
+        <div class="text-container padded">
           <div class="text">
             <span>Se cobra un recibo</span>
           </div>
         </div>
-        <div class="checkbox-container">
-          <div class="checkbox-content">
-            <input type="checkbox" id="checkbox-alert31{{ counter }}{{ outer_counter }}" />
-            <label for="checkbox-alert31{{ counter }}{{ outer_counter }}" class="label-checkbox"></label>
-          </div>
-          <div class="checkbox-content">
-            <input type="checkbox" id="checkbox-alert32{{ counter }}{{ outer_counter }}" />
-            <label for="checkbox-alert32{{ counter }}{{ outer_counter }}" class="label-checkbox"></label>
-          </div>
-          <div class="checkbox-content">
-            <input type="checkbox" id="checkbox-alert33{{ counter }}{{ outer_counter }}" />
-            <label for="checkbox-alert33{{ counter }}{{ outer_counter }}" class="label-checkbox"></label>
-          </div>
-        </div>
+        {% with row = 1 %}
+        {% include '/components/_checkbox_list.html' %}
+        {% endwith %}
       </div>
       <div class="fila-alert">
-        <div class="text-container">
+        <div class="text-container padded">
           <div class="text">
             <span>Se devuelve un recibo</span>
           </div>
         </div>
-        <div class="checkbox-container">
-          <div class="checkbox-content">
-            <input type="checkbox" id="checkbox-alert41{{ counter }}{{ outer_counter }}" />
-            <label for="checkbox-alert41{{ counter }}{{ outer_counter }}" class="label-checkbox"></label>
-          </div>
-          <div class="checkbox-content">
-            <input type="checkbox" id="checkbox-alert42{{ counter }}{{ outer_counter }}" />
-            <label for="checkbox-alert42{{ counter }}{{ outer_counter }}" class="label-checkbox"></label>
-          </div>
-          <div class="checkbox-content">
-            <input type="checkbox" id="checkbox-alert43{{ counter }}{{ outer_counter }}" />
-            <label for="checkbox-alert43{{ counter }}{{ outer_counter }}" class="label-checkbox"></label>
-          </div>
-        </div>
+        {% with row = 2 %}
+        {% include '/components/_checkbox_list.html' %}
+        {% endwith %}
       </div>
       <div class="fila-alert">
-        <div class="text-container">
+        <div class="text-container padded">
           <div class="text">
             <span>Se duplica un recibo</span>
           </div>
         </div>
-        <div class="checkbox-container">
-          <div class="checkbox-content">
-            <input type="checkbox" id="checkbox-alert51{{ counter }}{{ outer_counter }}" />
-            <label for="checkbox-alert51{{ counter }}{{ outer_counter }}" class="label-checkbox"></label>
-          </div>
-          <div class="checkbox-content">
-            <input type="checkbox" id="checkbox-alert52{{ counter }}{{ outer_counter }}" />
-            <label for="checkbox-alert52{{ counter }}{{ outer_counter }}" class="label-checkbox"></label>
-          </div>
-          <div class="checkbox-content">
-            <input type="checkbox" id="checkbox-alert53{{ counter }}{{ outer_counter }}" />
-            <label for="checkbox-alert53{{ counter }}{{ outer_counter }}" class="label-checkbox"></label>
+        {% with row = 3 %}
+        {% include '/components/_checkbox_list.html' %}
+        {% endwith %}
+      </div>
+      <div class="fila-alert">
+        <div class="text-container padded">
+          <div class="text">
+            <span>Previsión de gastos del mes siguiente</span>
           </div>
         </div>
+        {% with row = 4 %}
+        {% include '/components/_checkbox_list.html' %}
+        {% endwith %}
+      </div>
+      <div class="fila-alert">
+        <div class="text-container padded">
+          <div class="text">
+            <span>Presupuesto mensual superado</span>
+          </div>
+        </div>
+        {% with row = 5 %}
+        {% include '/components/_checkbox_list.html' %}
+        {% endwith %}
+      </div>
+      <div class="fila-alert">
+        <div class="text-container">
+          <div class="text sized">
+            <span>Límite por categoria superado:</span>
+          </div>
+          <div class="icon-container submodule-button">
+            <i class="icon-gear-round"></i>
+          </div>
+        </div>
+        <div class="module submodule slideup">
+            <div class="flip-container">
+                <div class="flipper">
+                    <div class="module-content alerts-module-subcontent slidedown active">
+                        <div class="module-inner-content">
+                            <div class="custom-alert-row">
+                                <div class="text">
+                                    <span>Vivienda: avisarme si supera</span>
+                                </div>
+                                <div class="input-container">
+                                  <input id="over_house{{ counter }}{{ outer_counter }}" style="display:none;" class="input-money" type="text" value="350" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true"/>
+                                  <label class="label-money" for="over_house{{ counter }}{{ outer_counter }}">350</label>
+                                </div>
+                                <div class="coin">
+                                  <span>€</span>
+                                </div>
+                                <div class="icon-container">
+                                  <i class="icon-edit edit-subalert"></i>
+                                </div>
+                            </div>
+                            <div class="custom-alert-row">
+                                <div class="text">
+                                    <span>Colegios y Enseñanza: avisarme si supera</span>
+                                </div>
+                                <div class="input-container">
+                                  <input id="over_school{{ counter }}{{ outer_counter }}" style="display:none;" class="input-money" type="text" value="350" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true"/>
+                                  <label class="label-money" for="over_school{{ counter }}{{ outer_counter }}">350</label>
+                                </div>
+                                <div class="coin">
+                                  <span>€</span>
+                                </div>
+                                <div class="icon-container">
+                                  <i class="icon-edit edit-subalert"></i>
+                                </div>
+                            </div>
+                            <div class="custom-alert-row">
+                                <div class="text">
+                                    <span>Tarjeta: avisarme si supera</span>
+                                </div>
+                                <div class="input-container">
+                                  <input id="over_card{{ counter }}{{ outer_counter }}" style="display:none;" class="input-money" type="text" value="350" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true"/>
+                                  <label class="label-money" for="over_card{{ counter }}{{ outer_counter }}">350</label>
+                                </div>
+                                <div class="coin">
+                                  <span>€</span>
+                                </div>
+                                <div class="icon-container">
+                                  <i class="icon-edit edit-subalert"></i>
+                                </div>
+                            </div>
+                            <div class="custom-alert-row">
+                                <div class="text">
+                                    <span>Seguros: avisarme si supera</span>
+                                </div>
+                                <div class="input-container">
+                                  <input id="over_assurance{{ counter }}{{ outer_counter }}" style="display:none;" class="input-money" type="text" value="350" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true"/>
+                                  <label class="label-money" for="over_assurance{{ counter }}{{ outer_counter }}">350</label>
+                                </div>
+                                <div class="coin">
+                                  <span>€</span>
+                                </div>
+                                <div class="icon-container">
+                                  <i class="icon-edit edit-subalert"></i>
+                                </div>
+                            </div>
+                            <div class="custom-alert-row">
+                                <div class="text">
+                                    <span>Cuotas y Préstamos: avisarme si supera</span>
+                                </div>
+                                <div class="input-container">
+                                  <input id="over_cuote{{ counter }}{{ outer_counter }}" style="display:none;" class="input-money" type="text" value="350" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true"/>
+                                  <label class="label-money" for="over_cuote{{ counter }}{{ outer_counter }}">350</label>
+                                </div>
+                                <div class="coin">
+                                  <span>€</span>
+                                </div>
+                                <div class="icon-container">
+                                  <i class="icon-edit edit-subalert"></i>
+                                </div>
+                            </div>
+                            <div class="custom-alert-row">
+                                <div class="text">
+                                    <span>Impuestos: avisarme si supera</span>
+                                </div>
+                                <div class="input-container">
+                                  <input id="over_tax{{ counter }}{{ outer_counter }}" style="display:none;" class="input-money" type="text" value="350" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true"/>
+                                  <label class="label-money" for="over_tax{{ counter }}{{ outer_counter }}">350</label>
+                                </div>
+                                <div class="coin">
+                                  <span>€</span>
+                                </div>
+                                <div class="icon-container">
+                                  <i class="icon-edit edit-subalert"></i>
+                                </div>
+                            </div>
+                            <div class="custom-alert-row">
+                                <div class="text">
+                                    <span>Ocio y Deporte: avisarme si supera</span>
+                                </div>
+                                <div class="input-container">
+                                  <input id="over_sport{{ counter }}{{ outer_counter }}" style="display:none;" class="input-money" type="text" value="350" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true"/>
+                                  <label class="label-money" for="over_sport{{ counter }}{{ outer_counter }}">350</label>
+                                </div>
+                                <div class="coin">
+                                  <span>€</span>
+                                </div>
+                                <div class="icon-container">
+                                  <i class="icon-edit edit-subalert"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% with row = 6 %}
+        {% include '/components/_checkbox_list.html' %}
+        {% endwith %}
+      </div>
+      <div class="fila-alert">
+        <div class="text-container">
+          <div class="text padded">
+            <span>Algún recibo supera</span>
+            <div class="input-container over">
+              <input id="over_receipt{{ counter }}{{ outer_counter }}" style="display:none;" class="input-money" type="text" value="350" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true"/>
+              <label class="label-money" for="over_receipt{{ counter }}{{ outer_counter }}">350</label>
+            </div>
+            <div class="coin">
+              <span>€</span>
+            </div>
+          </div>
+          <div class="icon-container">
+            <i class="icon-edit edit-money"></i>
+          </div>
+        </div>
+        {% with row = 7 %}
+        {% include '/components/_checkbox_list.html' %}
+        {% endwith %}
+      </div>
+      <div class="fila-alert">
+        <div class="text-container">
+          <div class="text padded">
+            <span>Tus gastos del mes superan</span>
+            <div class="input-container over">
+              <input id="over_spent{{ counter }}{{ outer_counter }}" style="display:none;" class="input-money" type="text" value="1.500" data-inputmask="'alias': 'numeric', 'digits': 2, 'digitsOptional': false, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true"/>
+              <label class="label-money" for="over_spent{{ counter }}{{ outer_counter }}">1.500</label>
+            </div>
+            <div class="coin">
+              <span>€</span>
+            </div>
+          </div>
+          <div class="icon-container">
+            <i class="icon-edit edit-money"></i>
+          </div>
+        </div>
+        {% with row = 8 %}
+        {% include '/components/_checkbox_list.html' %}
+        {% endwith %}
       </div>
     </div>
   </div>
-
 
   <div class="bottom-container">
     <div class="button-container">

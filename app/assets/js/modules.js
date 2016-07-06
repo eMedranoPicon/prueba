@@ -92,6 +92,17 @@
             $previousElem.removeClass('active');
         }
 
+        function changeEditButton($context) {
+            var $label = $context.closest('.input-container').find('.label-money');
+            var $edit  = $context.closest('.text-container, .custom-alert-row').find('.edit-money, .edit-subalert');
+            //var $check = $edit.closest('.icon-container').find('.check-money');
+            $context.hide();
+            //$check.hide();
+            $label.text($context.val());
+            $label.show();
+            $edit.show();
+        }
+
         // JQUERY CONTROLLERS
         $root               = $(rootName);
         $proveedores        = $(proveedoresName);
@@ -216,6 +227,48 @@
         });
 
 
+
+        /************************************
+        ******* ALERTS MODULE ***************
+        ************************************/
+
+        // EDIT VALUE FROM ALERT AND SUBALERT
+        $alertsModule.on('click', ".text-container .edit-money, .submodule .edit-subalert", function() {
+            var $input = $(this).closest('.text-container, .custom-alert-row').find('.input-money');
+            var $label = $input.closest('.input-container').find('.label-money');
+            //var $check = $(this).closest('.icon-container').find('.check-money');
+            $(this).hide();
+            $label.hide();
+            $input.text($label.val());
+            $input.show();
+            //$check.show();
+        });
+
+        // CONFIRM EDIT
+        $alertsModule.on('click', '.check-money', function(event){
+            changeEditButton($(this));
+        });
+
+        // CONFIRM EDIT WITH ENTER KEY FROM ALERT AND SUBALERT
+        $alertsModule.find('.input-money')
+        .keyup(function(event){
+            if(event.keyCode == 13){
+                changeEditButton($(this));
+            }
+        });
+
+        // SLIDE UP/DOWN SUBMODULE
+        $alertsModule.on('click', '.fila-alert .submodule-button', function() {
+            var $submodule = $(this).closest('.fila-alert').find('.submodule');
+            if ($submodule.hasClass("slideup")) {
+                $submodule.removeClass("slideup").addClass("slidedown");
+            } else {
+                $submodule.removeClass("slidedown").addClass("slideup");
+            }
+        });
+
+
+
         /********************************************
         ***************** TIMELINE ******************
         ********************************************/
@@ -314,7 +367,7 @@
 
         // SLIDE UP/DOWN ALERTS
         $proveedores.find(
-          ".proveedores-content i," +
+          ".proveedores-content .alerts-button," +
           ".proveedores-content .alerts-module-content .button-module," +
           ".alerts-container .button-module," +
           ".alerts-container.prestamo .button-module")
