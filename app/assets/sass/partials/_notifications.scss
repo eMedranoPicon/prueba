@@ -1,0 +1,143 @@
+#dashboard .zonaNotificaciones {
+    .confirm-container {
+        font-family: $fontBold;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 19px;
+        height: 60px;
+        color: $colorNotifConfirm;
+    }
+    .botonera-selector {
+        font-family: $font;
+        height: 55px;
+        border-top: $sizeNotifBorder solid $colorNotifBorder;
+        border-bottom: $sizeNotifBorder solid $colorNotifBorder;
+        & > div {
+            display: table;
+            float: left;
+            height: 100%;
+        }
+    }
+    .dropdown-container {
+        width: 40%;
+        position: relative;
+        color: $colorNotifPrimary;
+        &.monthly {
+            border-right: $sizeNotifBorder solid $colorNotifBorder;
+            border-left: $sizeNotifBorder solid $colorNotifBorder;
+        }
+    }
+    .check-selection {
+        width: 20%;
+    }
+    .dropdown-head, .botonera-selector .icon-container {
+        vertical-align: middle;
+        display: table-cell;
+        text-align: center;
+        cursor: pointer;
+        padding-left: 12px;
+        padding-right: 9px;
+        .text-head {
+            display: inline-block;
+            text-align: left;
+            float: left;
+        }
+        .confirm {
+            color: $colorNotifConfirm;
+        }
+        .triangle {
+            @include triangle(6px, 0, 6px, 6px, $colorTimeBar);
+            display: inline-block;
+            float: right;
+            margin-top: 6px;
+        }
+    }
+    .icon-container {
+        padding: 0;
+    }
+    .icon-check, .icon-check-green {
+        display: inline-block;
+    }
+    .dropdown-content {
+        position: absolute;
+        left: 0;
+        top: (55px - $sizeNotifBorder);
+        background: $white;
+        width: 100%;
+        border-right: 1px solid $colorNotifBorderSec;
+        border-left: 1px solid $colorNotifBorderSec;
+        &.slideup {
+            @include slideup();
+        }
+        &.slidedown {
+            @include slidedown(330px);
+        }
+        li {
+            height: 55px;
+            border-bottom: $sizeNotifBorder solid $colorNotifBorder;
+            width: 100%;
+            display: table;
+            cursor: pointer;
+            &:hover {
+                color: $colorNotifConfirm;
+            }
+        }
+        li span {
+            display: table-cell;
+            vertical-align: middle;
+            padding-left: 16px;
+        }
+        li input {
+            width: 100%;
+            display: inline-table;
+            height: 100%;
+            border: 1px solid $colorNotifBorder;
+            text-align: center;
+        }
+        li.input-month-container{
+            display: block;
+            padding: 10px;
+            cursor: default;
+        }
+    }
+
+    .caja_notificaciones .botonera-link {
+        font-family: $font;
+        height: 55px;
+        display: table;
+        width: 100%;
+        a.change-category-link {
+            display: table-cell;
+            vertical-align: bottom;
+            padding-right: 20px;
+            font-size: 13px;
+            text-align: right;
+        }
+    }
+
+    .content-presupuestos {
+        min-width: auto;
+        color: inherit;
+    }
+}
+
+.zonaNotificaciones {
+    .modules-container.alert {
+        left: -65px;
+        &.slidedown {
+            height: 534px;
+        }
+        .flip-container {
+            height: 100%;
+            &::before {
+                left: auto;
+                right: 160px;
+            }
+            &::after {
+                left: auto;
+                right: 161px;
+            }
+        }
+    }
+}

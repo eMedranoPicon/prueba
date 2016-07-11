@@ -46,6 +46,24 @@
       }
     }
 
+    .icon-container {
+        margin-left: 5px;
+        &.submodule-button {
+            margin-left: 0;
+        }
+        i {
+            cursor: pointer;
+            display: inline-block;
+        }
+        i.icon-edit {
+            display: inline-block;
+            padding-top: 5px;
+            float: none;
+            padding: 10px 12px;
+        }
+    }
+
+
 
     .body-container {
       padding-top: 16px;
@@ -56,9 +74,11 @@
         display: inline-block;
         .fila-alert {
           display: table;
-          height: 26px;
+          height: 20px;
           width: 100%;
           display: inline-block;
+          position: relative;
+          margin-bottom: 6px;
           & > div {
             display: inline-block;
             float: left;
@@ -72,13 +92,34 @@
               display: inline-block;
               vertical-align: middle;
             }
-            .coin, .percent {
-                font-family: $fontBold;
-                margin-left: 3px;
-            }
+          }
+          .coin {
+              font-family: $fontBold;
+          }
+          .text.sized {
+            width: 174px;
+          }
+          .text > span, .text > div {
+            float: left;
+          }
+          .padded {
+            padding-top: 4px;
+          }
+          .input-container {
+            margin-left: 5px;
+          }
+          .input-container label {
+            cursor: default;
+            color: $colorModPrimary;
+            font-size: 12px;
+            padding: 0;
+            vertical-align: middle;
+            display: table-cell;
+            padding-top: 1px;
           }
           input {
             height: 20px;
+            width: 60px;
             text-align: center;
             font-family: $fontBold;
             color: $colorModPrimary;
@@ -86,14 +127,15 @@
             padding-top: 2px;
             border: 1px solid $colorModBorderInput;
           }
-          .input-money {
-            width: 34px;
+          .coin {
+            padding-top: 1px;
+            padding-left: 2px;
           }
-          .input-percent {
-            width: 28px;
+          .submodule-button {
+            height: 22px;
           }
           .checkbox-container {
-            width: 34.1%;
+            width: 34.3%;
             margin-left: 8px;
             .checkbox-content {
               float: left;
@@ -108,6 +150,50 @@
           }
         }
       }
+    }
+
+    .submodule.module {
+        left: 0;
+        width: 390px;
+        top: 21px;
+        left: 3px;
+        margin-top: 0;
+        padding-left: 1px;
+        .flip-container {
+            &::before {
+                left: 172px;
+                right: auto;
+            }
+            &::after {
+                left: 173px;
+                right: auto;
+            }
+        }
+        &.slidedown {
+            height: 170px;
+        }
+        .module-inner-content {
+            padding: 10px;
+            display: table;
+        }
+        .custom-alert-row {
+            display: inline-block;
+            float: left;
+            height: 19px;
+            & > div {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .input-container {
+                margin-left: 0;
+            }
+            .coin {
+              padding-left: 0;
+            }
+        }
+        .text {
+            font-size: 12px;
+        }
     }
 
     .bottom-container {

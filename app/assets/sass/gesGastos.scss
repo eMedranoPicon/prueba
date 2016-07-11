@@ -1,6 +1,12 @@
+// Vendor sass files
+@import "../../../node_modules/family.scss/source/src/_family.scss";
+
+// Src files
 @import "modules/all";
+@import "variables/all";
 
 .content-presupuestos {
-  @import "variables/all";
   @import "partials/all";
 }
+
+@import "partials/notifications";

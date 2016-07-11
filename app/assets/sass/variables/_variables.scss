@@ -2,6 +2,8 @@
 $white            : #FFFFFF;
 $black            : #000000;
 
+$black300         : rgb(18, 13, 14);
+
 $green500         : #70a41c;
 
 $purple500        : #8f99e3;
@@ -23,6 +25,7 @@ $orange300        : #e5c59b;
 $gray1000         : #f8f9f9;
 $gray990          : #f7f7f7;
 $grey950          : #f3f3f3;
+$grey930          : #F2F2EF;
 $grey900          : #f0f0f0;
 $grey870          : #ededed;
 $grey850          : #e8e7e3;
@@ -118,3 +121,11 @@ $colorConCuater      : $white;
 $colorConPenta       : $blue500;
 $colorConBackground  : $gray990;
 $colorConBorder      : $grey200;
+
+
+// Notifications
+$colorNotifPrimary   : $black300;
+$colorNotifBorder    : $grey840;
+$colorNotifBorderSec : $grey930;
+$colorNotifConfirm   : $green500;
+$sizeNotifBorder     : 2px;

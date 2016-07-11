@@ -1,7 +1,7 @@
 {
   "name": "jed",
-  "description": "Sanitas - Mi residencia",
-  "version": "0.0.1",
+  "description": "Coinc - Gestor de gastos",
+  "version": "1.0.1",
   "repository": "https://github.com/sopraux/develop.git",
   "scripts": {
     "postinstall": "bower install"
@@ -47,6 +47,7 @@
     "phantomjs": "^1.9.12",
     "run-sequence": "^1.x.x",
     "sassdoc": "^2.x.x",
-    "gulp-connect": "2.2.0"
+    "gulp-connect": "2.2.0",
+    "family.scss": "^1.0.8"
   }
 }

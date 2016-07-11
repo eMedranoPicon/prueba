@@ -73,7 +73,7 @@ $(document).ready(function () {
         // TRATAR PULSACIÓN ENTER DURANTE MODIFICACIÓN DEL MES PRESENTE
         $header.find('.edit-present-container .edit-text')
         .keyup(function(event){
-            if(event.keyCode == 13){
+            if(event.which == 13){
                 $header.find('.check-edit').click();
             }
         });
@@ -189,7 +189,7 @@ $(document).ready(function () {
             $(this).closest('.flipper').find('.info-future .init-value').html(value);
         })
         .keyup(function(event){
-            if(event.keyCode == 13){
+            if(event.which == 13){
                 $header.find('.future-detail-check').click();
             }
         });
