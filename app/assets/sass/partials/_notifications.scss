@@ -46,8 +46,14 @@
         .confirm {
             color: $colorNotifConfirm;
         }
-        .triangle {
+        .triangle.slideup {
             @include triangle(6px, 0, 6px, 6px, $colorTimeBar);
+            display: inline-block;
+            float: right;
+            margin-top: 6px;
+        }
+        .triangle.slidedown {
+            @include triangle(0, 6px, 6px, 6px, $colorTimeBar);
             display: inline-block;
             float: right;
             margin-top: 6px;

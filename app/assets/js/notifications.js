@@ -55,7 +55,10 @@
         $dropdown.find(".dropdown-head")
         .on('click', function() {
 
-            var $content = $(this).next();
+            var $content = $(this).next(),
+                $triangle = $(this).find('.triangle');
+
+            slideUpDown($triangle);
             slideUpDown($content);
 
         });
@@ -92,6 +95,7 @@
 
             $head.addClass('confirm');
 
+            slideUpDown($container.find('.triangle'));
             slideUpDown($_this.closest('.dropdown-content'));
         });
 
@@ -121,6 +125,7 @@
 
                 $head.addClass('confirm');
 
+                slideUpDown($container.find('.triangle'));
                 slideUpDown($_this.closest('.dropdown-content'));
             }
         });
