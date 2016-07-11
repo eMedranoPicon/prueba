@@ -52,7 +52,7 @@
                                 <li><span>Trimestral</span></li>
                                 <li><span>Semestral</span></li>
                                 <li><span>Anual</span></li>
-                                <li class="input-month-container"><input type="text" class="input-month"/></li>
+                                <li class="input-month-container"><input type="text" class="input-month" placeholder="1/12 meses"/></li>
                             </ul>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                     </div>
                 </DIV>
             </DIV>
-            <DIV class="caja_notificaciones  aviso ">
+            <DIV class="caja_notificaciones  aviso content-presupuestos overflow-visible">
                 <DIV class="titular">
                     <SPAN></SPAN>
                     <A>
@@ -83,12 +83,20 @@
                     retirado 3,00€ de la meta colectiva el 31/05/2016.
                 </DIV>
                 <DIV class="puntos_suspensivos no-visible">...</DIV>
-                <DIV class="botonera">
-                    <A href="https://was1.pre.bankinter.bk:8443/coinc/menu-inicio#">
-                        <SPAN class="alternar-btn mas no-visible"></SPAN>
-                    </A>
-                    <DIV class="acciones-formulario"></DIV>
+                <DIV class="botonera-link">
+                    <a href="#" class="change-category-link">Cambiar Categoría/Periodo</a>
                 </DIV>
+                <div class="module modules-container slideup alert">
+                    <div class="flip-container">
+                        <div class="flipper">
+                            <div class="module-content active alerts-container slidedown">
+                                {% with counter=1, outer_counter='-notification' %}
+                                  {% include '/includes/modules/_alerts.html' %}
+                                {% endwith %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </DIV>
         </DIV>
     </DIV>

@@ -250,9 +250,8 @@
         });
 
         // CONFIRM EDIT WITH ENTER KEY FROM ALERT AND SUBALERT
-        $alertsModule.find('.input-money')
-        .keyup(function(event){
-            if(event.keyCode == 13){
+        $alertsModule.on('keyup', '.input-money', function(event){
+            if(event.which == 13){
                 changeEditButton($(this));
             }
         });

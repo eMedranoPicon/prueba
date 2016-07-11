@@ -40,7 +40,7 @@ $(document).ready(function () {
         // TRATAR PULSACIÓN ENTER DURANTE MODIFICACIÓN DEL MES PRESENTE
         $(".presupuestos .my-input")
         .keyup(function(event){
-            if(event.keyCode == 13){
+            if(event.which == 13){
                 $(this).closest('.info-general').find('.check-future').click();
             }
         });

@@ -53,11 +53,13 @@
         }
         i {
             cursor: pointer;
+            display: inline-block;
         }
         i.icon-edit {
-            display: inline;
+            display: inline-block;
             padding-top: 5px;
             float: none;
+            padding: 10px 12px;
         }
     }
 
@@ -117,7 +119,7 @@
           }
           input {
             height: 20px;
-            width: 40px;
+            width: 60px;
             text-align: center;
             font-family: $fontBold;
             color: $colorModPrimary;
@@ -133,7 +135,7 @@
             height: 22px;
           }
           .checkbox-container {
-            width: 34.1%;
+            width: 34.3%;
             margin-left: 8px;
             .checkbox-content {
               float: left;
@@ -152,17 +154,18 @@
 
     .submodule.module {
         left: 0;
-        width: 340px;
+        width: 390px;
         top: 21px;
-        left: 50px;
+        left: 3px;
         margin-top: 0;
+        padding-left: 1px;
         .flip-container {
             &::before {
-                left: 125px;
+                left: 172px;
                 right: auto;
             }
             &::after {
-                left: 126px;
+                left: 173px;
                 right: auto;
             }
         }
