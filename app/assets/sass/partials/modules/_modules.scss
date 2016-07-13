@@ -7,6 +7,7 @@
   padding-left: 1px;
   padding-right: 1px;
 
+
   &.slideup {
     @include slideup2();
     padding-top: 0;
@@ -14,6 +15,7 @@
   }
   &.slidedown {
     @include slidedown2();
+    padding-bottom: 1px;
   }
 
   .flip-container {
@@ -52,6 +54,7 @@
     position: absolute;
     top: 0;
     width: 100%;
+    height: 100%;
     z-index: 6;
     &.slideup {
       @include slideup2();

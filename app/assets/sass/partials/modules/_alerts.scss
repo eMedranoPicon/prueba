@@ -1,5 +1,12 @@
 .alerts-container {
 
+  .check-money, .check-subalert {
+    vertical-align: middle;
+  }
+  .check-money.icon-hover, .check-subalert.icon-hover {
+    @extend .icon-check-green;
+  }
+
   .alerts-module-content {
     font-size: 13px;
     & > div {
@@ -35,10 +42,10 @@
           width: 60%;
         }
         .app {
-          margin-left: 13px;
+          margin-left: 22px;
         }
         .mail {
-          margin-left: 28px;
+          margin-left: 22px;
         }
         .sms {
           float: right;
@@ -84,7 +91,7 @@
             float: left;
           }
           .text-container {
-            width: 63%;
+            width: 65%;
             display: table;
             text-align: left;
             font-size: 12px;
@@ -119,7 +126,7 @@
           }
           input {
             height: 20px;
-            width: 60px;
+            width: 50px;
             text-align: center;
             font-family: $fontBold;
             color: $colorModPrimary;
@@ -135,7 +142,7 @@
             height: 22px;
           }
           .checkbox-container {
-            width: 34.3%;
+            width: 32.3%;
             margin-left: 8px;
             .checkbox-content {
               float: left;
@@ -145,7 +152,7 @@
               border: 1px solid $colorModBorder;
             }
             .checkbox-content:nth-child(n+2) {
-              margin-left: 27%;
+              margin-left: 25%;
             }
           }
         }
@@ -170,7 +177,10 @@
             }
         }
         &.slidedown {
-            height: 170px;
+            height: 205px;
+        }
+        .module-content {
+            height: 100%;
         }
         .module-inner-content {
             padding: 10px;
@@ -179,7 +189,7 @@
         .custom-alert-row {
             display: inline-block;
             float: left;
-            height: 19px;
+            height: 25px;
             & > div {
                 display: inline-block;
                 vertical-align: middle;

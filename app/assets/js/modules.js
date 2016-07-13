@@ -92,15 +92,27 @@
             $previousElem.removeClass('active');
         }
 
-        function changeEditButton($context) {
-            var $label = $context.closest('.input-container').find('.label-money');
-            var $edit  = $context.closest('.text-container, .custom-alert-row').find('.edit-money, .edit-subalert');
-            //var $check = $edit.closest('.icon-container').find('.check-money');
+        function changeEditButton($context, hide) {
+            var $parent = $context.closest('.text-container, .custom-alert-row');
+            var $label  = $parent.find('.label-money');
+            var $input  = $parent.find('.input-money');
+            var $edit   = $parent.find('.edit-money, .edit-subalert');
+            var $check  = $edit.closest('.icon-container').find('.check-money, .check-subalert');
+
             $context.hide();
-            //$check.hide();
-            $label.text($context.val());
-            $label.show();
-            $edit.show();
+            if (hide) {
+                $check.hide();
+                $input.hide();
+                $label.text($input.val());
+                $label.show();
+                $edit.show();
+            }
+            else {
+                $label.hide();
+                $input.text($label.val());
+                $input.show();
+                $check.show();
+            }
         }
 
         // JQUERY CONTROLLERS
@@ -234,25 +246,18 @@
 
         // EDIT VALUE FROM ALERT AND SUBALERT
         $alertsModule.on('click', ".text-container .edit-money, .submodule .edit-subalert", function() {
-            var $input = $(this).closest('.text-container, .custom-alert-row').find('.input-money');
-            var $label = $input.closest('.input-container').find('.label-money');
-            //var $check = $(this).closest('.icon-container').find('.check-money');
-            $(this).hide();
-            $label.hide();
-            $input.text($label.val());
-            $input.show();
-            //$check.show();
+            changeEditButton($(this), false);
         });
 
         // CONFIRM EDIT
-        $alertsModule.on('click', '.check-money', function(event){
-            changeEditButton($(this));
+        $alertsModule.on('click', '.check-money, .check-subalert', function(event){
+            changeEditButton($(this), true);
         });
 
         // CONFIRM EDIT WITH ENTER KEY FROM ALERT AND SUBALERT
         $alertsModule.on('keyup', '.input-money', function(event){
             if(event.which == 13){
-                changeEditButton($(this));
+                changeEditButton($(this), true);
             }
         });
 
@@ -266,6 +271,14 @@
             }
         });
 
+        // HOVER CHECK
+        $alertsModule.find('.check-money, .check-subalert').hover (
+            function() {
+                $(this).addClass('icon-hover');
+            }, function() {
+                $(this).removeClass('icon-hover');
+            }
+        );
 
 
         /********************************************
