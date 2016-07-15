@@ -1,5 +1,5 @@
 .alerts-container {
-
+  color: $colorFontTimeline;
   .check-money, .check-subalert {
     vertical-align: middle;
   }
@@ -71,7 +71,6 @@
     }
 
 
-
     .body-container {
       padding-top: 16px;
       padding-bottom: 10px;
@@ -81,11 +80,14 @@
         display: inline-block;
         .fila-alert {
           display: table;
-          height: 20px;
+          height: 25px;
           width: 100%;
           display: inline-block;
           position: relative;
-          margin-bottom: 6px;
+          margin-bottom: 1px;
+          &.height-100 .text-container > div {
+            height: 100%;
+          }
           & > div {
             display: inline-block;
             float: left;
@@ -99,9 +101,17 @@
               display: inline-block;
               vertical-align: middle;
             }
-          }
-          .coin {
-              font-family: $fontBold;
+            &.float {
+                & > div {
+                    float: left;
+                }
+                .input-container {
+                    padding-top: 2px;
+                }
+                .label-money {
+                    padding-top: 2px;
+                }
+            }
           }
           .text.sized {
             width: 174px;
@@ -135,11 +145,13 @@
             border: 1px solid $colorModBorderInput;
           }
           .coin {
-            padding-top: 1px;
+            padding-top: 5px;
             padding-left: 2px;
+            font-family: $fontBold;
           }
-          .submodule-button {
-            height: 22px;
+
+          div.submodule-button {
+            height: 25px;
           }
           .checkbox-container {
             width: 32.3%;
@@ -177,7 +189,7 @@
             }
         }
         &.slidedown {
-            height: 205px;
+            height: 215px;
         }
         .module-content {
             height: 100%;
@@ -187,18 +199,32 @@
             display: table;
         }
         .custom-alert-row {
-            display: inline-block;
+            display: table;
             float: left;
-            height: 25px;
+            height: 26px;
             & > div {
-                display: inline-block;
+                display: table-cell;;
                 vertical-align: middle;
+                height: 100%;
+                padding-top: 4px;
+                float: left;
+                @include after-first(1) {
+                    padding-left: 3px;
+                }
             }
             .input-container {
+                padding-top: 2px;
                 margin-left: 0;
+                label.label-money {
+                    padding-top: 2px;
+                }
+            }
+            div.icon-container {
+                margin-left: 0;
+                padding-left: 3px;
             }
             .coin {
-              padding-left: 0;
+                padding-top: 4px;
             }
         }
         .text {

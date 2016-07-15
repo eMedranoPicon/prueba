@@ -126,6 +126,15 @@
         min-width: auto;
         color: inherit;
     }
+
+    // Alert module
+    .modules-container.alert {
+        .submodule {
+            div.icon-container {
+                padding-left: 6px;
+            }
+        }
+    }
 }
 
 .zonaNotificaciones {
