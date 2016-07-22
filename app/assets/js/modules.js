@@ -227,16 +227,7 @@
             $(this).find('a').removeClass('hover');
         });
 
-        // CONFIRM OR CANCEL
-        $devolverBajaModule.on('click', ".confirm, .cancel", function() {
-            var $elem, $previousElem, $container;
 
-            $container      = $(this).closest('.modules-container');
-            $previousElem   = $(this).closest('.devolver-baja-container');
-            $elem           = $container.find('.receipt-detail-container');
-
-            changeToSubModule($previousElem, $elem, $container);
-        });
 
 
 
@@ -344,6 +335,20 @@
             changeToSubModule($content, $elem, $container);
           });
 
+
+          // DEVOLVER BAJA
+          // CONFIRM OR CANCEL
+          $timeline_root.find(devolverBajaName).on('click', ".confirm, .cancel", function() {
+              var $elem, $previousElem, $container;
+
+              $container      = $(this).closest('.modules-container');
+              $previousElem   = $(this).closest('.devolver-baja-container');
+              $elem           = $container.find('.receipt-detail-container');
+
+              changeToSubModule($previousElem, $elem, $container);
+          });
+
+          
 
         /************************************************
         ***************** PROVEEDORES *******************

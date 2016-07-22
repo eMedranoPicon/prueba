@@ -19,7 +19,10 @@
             budget_selected = 0,
             month_selected  = 0,
             min_input   = 1,
-            max_input   = 12;
+            max_input   = 12,
+            marginTop   = 10,
+            borderWidth = 2;
+
 
 
 
@@ -36,6 +39,8 @@
                 $container.removeAttr('style');
             }
         }
+
+
 
         /*****************************
         ****** JQUERY CONTROLLERS ****
@@ -153,15 +158,17 @@
 
         // OPEN/CLOSE LINK CATEGORY ALERT MODULE
         $notification.find(
-          ".botonera-link .change-category-link," +
-          ".alerts-container .button-module," +
-          ".alerts-container .button-module")
-          .on('click', function(e) {
-              e.preventDefault();
-              var $container = $(this).closest('.caja_notificaciones').find('.modules-container');
-              slideUpDown($container);
-          });
+            ".botonera-link .change-category-link," +
+            ".devolver-baja-container .button-module," +
+            ".devolver-baja-container .button-module"
+        )
+        .on('click', function(e) {
 
+            e.preventDefault();
+            var $container = $(this).closest('.caja_notificaciones').find('.modules-container');
+            slideContainer($container);
+
+        });
 
     }
 
