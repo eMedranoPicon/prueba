@@ -127,31 +127,32 @@
         color: inherit;
     }
 
-    // Alert module
-    .modules-container.alert {
-        .submodule {
-            div.icon-container {
-                padding-left: 6px;
-            }
+    // Devolver module
+    .flip-container {
+        &::before {
+            left: 160px;
         }
-    }
-}
-
-.zonaNotificaciones {
-    .modules-container.alert {
-        left: -65px;
-        &.slidedown {
-            height: 534px;
+        &::after {
+            left: 161px;
         }
-        .flip-container {
-            height: 100%;
-            &::before {
-                left: auto;
-                right: 160px;
+        .devolver {
+            color: $colorModPrimary;
+            .top-devolver-baja-container {
+                font-family: $fontBold;
             }
-            &::after {
-                left: auto;
-                right: 161px;
+            .icon-container .icon-sms {
+                display: inline-block;
+            }
+            .link-content {
+              padding-left: 3px;
+              .link {
+                color: $colorModTer;
+                text-decoration: none;
+                &.hover {
+                  color: $colorModPrimary;
+                  text-decoration: underline;
+                }
+              }
             }
         }
     }

@@ -89,9 +89,9 @@
                 <div class="module modules-container slideup alert">
                     <div class="flip-container">
                         <div class="flipper">
-                            <div class="module-content active alerts-container slidedown">
-                                {% with counter=1, outer_counter='-notification' %}
-                                  {% include '/includes/modules/_alerts.html' %}
+                            <div class="module-content active devolver-baja-container devolver slidedown">
+                                {% with texto = 'DKV SEGUROS Y REASEGUROS', type='devolver', count = 1, number = 50, decimal = 50 %}
+                                  {% include '/includes/modules/_devolver_baja.html' %}
                                 {% endwith %}
                             </div>
                         </div>
