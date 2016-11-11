@@ -12,10 +12,10 @@
 
 		.icon-support-team {
 			z-index: 10;
-			background: white url(../images/support-team.png) no-repeat scroll 6px 6px;
+			background: $white url(../images/support-team.png) no-repeat scroll 6px 6px;
 	    height: 37px;
 	    width: 37px;
-	    border: 1px solid black;
+	    border: 1px solid $black;
 	    border-width: 3px;
 	    display: block;
 			@include border-radius(39px);
@@ -24,21 +24,20 @@
 
 	.content{
 		z-index: 5;
-		width: 666px;
 		@include border-radius(8px);
 		background-color:$orange200;
 		margin-top:6px;
 		padding: 8px 29px 14px 50px;
 
 		.title{
-			color: black;
+			color: $black;
 			font-size: 13px;
 	    line-height: 1.1;
 	    font-weight: 600;
 			padding-top: 5px;
 		}
 		.text{
-			color: black;
+			color: $black;
 			font-weight: normal;
 			font-size: 13px;
 			padding-top: 8px;
