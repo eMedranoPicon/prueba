@@ -1,0 +1,52 @@
+.msg{
+	position: relative;
+
+	.icon-container{
+		position: absolute;
+		top: -6px;
+		margin: 0;
+		padding: 0;
+
+		.icon-support-team {
+			margin: 0;
+			padding: 0;
+			z-index: 10;
+			background: $white url(../images/support-team.png) no-repeat scroll 7px 6px;
+	    height: 37px;
+	    width: 37px;
+	    border: 1px solid $black;
+	    border-width: 3px;
+	    display: block;
+			@include border-radius(39px);
+		}
+	}
+
+	.content{
+		margin: 0;
+		z-index: 5;
+		@include border-radius(8px);
+		background-color:$orange200;
+		margin-top:6px;
+		padding: 8px 29px 14px 50px;
+
+		.title{
+			margin: 0;
+			padding: 0;
+			color: $black;
+			font-size: 13px;
+	    line-height: 1.1;
+	    font-weight: 600;
+			padding-top: 7px;
+		}
+		.text{
+			margin: 0;
+			padding: 0;
+			color: $black;
+			font-weight: normal;
+			font-size: 13px;
+			padding-top: 9px;
+			letter-spacing: -0.045px;
+			line-height: 17px;
+		}
+	}
+}
