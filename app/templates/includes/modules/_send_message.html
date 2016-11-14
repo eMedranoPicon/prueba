@@ -1,11 +1,7 @@
+{% extends "/includes/_user_prompt.html" %}
+
 <!-- Inicio modulo "send_message" -->
-<div class="send-message-module">
-
-  <div class="avatar-group">
-    <img id="send-message-avatar-image" class="avatar-image" src="images/avatar-example.png" />
-    <span class="avatar-decorator"></span>
-  </div>
-
+{% block content %}
   <form class="send-message-form">
 
     <label >Asunto</label></br>
@@ -38,5 +34,5 @@
       <label for="send-message-submit" class="sutmit-button-icon"></label>
     </div>
   </form>
-</div>
+{% endblock %}
 <!-- Fin modulo "send_message" -->

@@ -51,7 +51,7 @@
 	}
 }
 
-.send-message-module{
+.user-prompt-wrapper{
 	position: relative;
 
 	.avatar-group{
@@ -79,7 +79,7 @@
 		}
 	}
 
-	.send-message-form{
+	.user-prompt-content{
 		margin-left: 85px;
 		background-color: $colorDialog;
 		padding: 13px 20px 25px 30px;
