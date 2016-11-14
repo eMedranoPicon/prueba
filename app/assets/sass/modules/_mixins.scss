@@ -386,3 +386,39 @@
     border-left-color: $color;
   }
 }
+
+@mixin dialog-placeholder($font-size, $color, $pad-vertical, $pad-horiz){
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      color:    $color;
+      font-size: $font-size;
+      padding: $pad-vertical $pad-horiz $pad-vertical $pad-horiz;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+     color:    $color;
+     opacity:  1;
+     font-size: $font-size;
+     padding: $pad-vertical $pad-horiz $pad-vertical $pad-horiz;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+     color:    $color;
+     opacity:  1;
+     font-size: $font-size;
+     padding: $pad-vertical $pad-horiz $pad-vertical $pad-horiz;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+     color:    $color;
+     font-size: $font-size;
+     padding: $pad-vertical $pad-horiz $pad-vertical $pad-horiz;
+  }
+}
+
+// BACKGROUND GRADIENT
+@mixin background-gradient-vertical($startColor: #3C3C3C, $endColor: #999999) {
+    background: $startColor;
+    background:  -webkit-gradient($startColor, $endColor);
+    background:   -webkit-linear-gradient( $startColor, $endColor);
+    background:      -moz-linear-gradient( $startColor, $endColor);
+    background:      -ms-linear-gradient( $startColor, $endColor);
+    background:        -o-linear-gradient( $startColor, $endColor);
+    background:           linear-gradient( $startColor, $endColor);
+}
