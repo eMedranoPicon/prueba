@@ -131,20 +131,23 @@ $colorNotifBorderSec : $grey930;
 $colorNotifConfirm   : $green500;
 $sizeNotifBorder     : 2px;
 
-// $paletteDialogGreen: #6fa51b #437221 #71a51d;
-// $green-400: nth($paletteDialogGreen, 2);
+
+$paletteContactGreen: #6fa51b #71a51d #437221;
+$contact-green-400: nth($paletteContactGreen, 1);
+$contact-green-500: nth($paletteContactGreen, 2);
+$contact-green-600: nth($paletteContactGreen, 3);
+
+$paletteContactGray: #f3f2f0 rgba(255, 255, 255, .8) #e5e5e5 #b1b1b1 rgba(0, 0, 0, .3) rgba(0, 0, 0, 0.56);
+$contact-gray-100: nth($paletteContactGray, 1);
+$contact-gray-200: nth($paletteContactGray, 2);
+$contact-gray-300: nth($paletteContactGray, 3);
+$contact-gray-400: nth($paletteContactGray, 4);
+$contact-gray-500: nth($paletteContactGray, 5);
+$contact-gray-600: nth($paletteContactGray, 6);
 
 
-$colorDialog                  : #eeebda;
-$colorDialogFormShadow1       : #b1b1b1;
-$colorDialogFormShadow2       : #e5e5e5;
-$colorDialogShadow            : #f3f2f0;
-$colorDialogButtonSubmit1     : #6fa51b;
-$colorDialogButtonSubmit2     : #437221;
-$colorDialogBorder1           : #b0aa9a;
-$colorDialogText1             : #71a51d;
-$colorDialogPlaceholder       : #8b8472;
-$colorDialogRadio             : #b6b0a0;
-$colorDialogRadioCheck        : rgba(0, 0, 0, 0.56);
-$colorDialogRadioCheckShadow1 : rgba(0, 0, 0, .3);
-$colorDialogRadioCheckShadow2 : rgba(255, 255, 255, .8);
+$paletteContactBrown: #eeebda #b0aa9a #8b8472 #b6b0a0;
+$contact-brown-100: nth($paletteContactBrown, 1);
+$contact-brown-200: nth($paletteContactBrown, 2);
+$contact-brown-300: nth($paletteContactBrown, 3);
+$contact-brown-400: nth($paletteContactBrown, 4);
