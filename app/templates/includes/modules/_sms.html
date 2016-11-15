@@ -1,0 +1,21 @@
+{% extends "/includes/_user_prompt.html" %}
+
+<!-- Inicio modulo "sms" -->
+{% block content %}
+  <div class="sms">
+    <h5>Código SMS</h5>
+    <label>Acabamos de enviarlo a tu móvil</label>
+    <div class="phone-group">
+      <input type="text" id="sms-phone-number" class="inputs-border phone-input"/>
+      <a href="" id="sms-failure">
+        <i class="question-ico"></i>
+        <label class="text">No ha llegado el SMS</text>
+      </a>
+    </div>
+    <div class="submit-button-group green-button-wrapper">
+      <input type="submit" id="send-message-submit" class="submit_button green-button" value="ENVIAR" />
+      <label for="send-message-submit" class="submit-button-icon green-button-icon"></label>
+    </div>
+  </div>
+{% endblock %}
+<!-- Fin modulo "sms" -->

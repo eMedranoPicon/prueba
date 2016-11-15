@@ -247,6 +247,54 @@
 				}
 			}
 		}
+
+		.sms{
+			padding-top: 14px;
+
+			h5{
+				margin: 0;
+			}
+
+			label{
+				margin: 1px 0 0 0;
+			}
+
+			.phone-input{
+				height: 30px;
+				width: 230px;
+				margin-top: 6px;
+				padding: 10px 5px;
+				font-size: 14px;
+			}
+
+			a{
+				display: inline-block;
+		    padding: 10px 0 0 19px;
+		    font-size: 13px;
+		    vertical-align: top;
+		    color: $black;
+				text-decoration: none;
+			}
+
+			.question-ico{
+				background: transparent url(../images/question-mark.png) no-repeat scroll 0 0;
+				width: 21px;
+		    height: 21px;
+		    display: inline-block;
+		    vertical-align: top;
+
+			}
+
+			.text{
+				margin: 1px 0 0 4px;
+    		letter-spacing: -0.5px;
+				text-decoration: underline;
+			}
+
+			.submit-button-group{
+				margin-top: 1px;
+			}
+		}
 	}
 
 	.user-prompt-after-content{
