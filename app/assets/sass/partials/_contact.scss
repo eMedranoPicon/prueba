@@ -348,8 +348,85 @@
 	}
 }
 
+.interests{
+	overflow: hidden;
+
+	.title{
+		color: $contact-green-500;
+		font-size: 16px;
+		letter-spacing: 0.3px;
+		font-weight: bold;
+		margin: 15px 0 4px 0;
+		display: block;
+	}
+
+	ul{
+		margin: 0;
+
+		li{
+			display: block;
+			font-weight: bold;
+			font-size: 16px;
+			border-bottom: 1px solid $contact-gray-350;
+			padding: 15px 0 11px 0;
+			width: 100%;
 
 
+			a{
+				color: $black;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.call_us_wrapper{
+	padding: 17px 0;
+
+	a{
+		text-decoration: none;
+
+		.call_us_ico{
+			background: transparent url(../images/call_us.png) no-repeat scroll 0 0;
+			height: 15px;
+			width: 19px;
+			display: inline-block;
+			margin: 10px 0 0 20px;
+		}
+
+		.text{
+			text-decoration: underline;
+			color: $black;
+			padding: 7px 0 0 9px;
+			letter-spacing: -0.87px;
+			vertical-align: top;
+		}
+	}
+}
+
+.msg-status-wrapper{
+	.status-group{
+		float: right;
+
+		.ball{
+			@include border-radius(9px);
+			display: inline-block;
+			height: 17px;
+			width: 17px;
+			background-color: $contact-yellow-500;
+			vertical-align: top;
+			margin: 13px 3px;
+		}
+
+		label{
+			color: $black;
+			letter-spacing: -0.4px;
+			margin: 13px 3px;
+			padding: 0;
+			vertical-align: top;
+		}
+	}
+}
 
 .green-button-wrapper{
 	overflow: auto;

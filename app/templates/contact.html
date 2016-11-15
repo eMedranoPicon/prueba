@@ -2,15 +2,17 @@
 {% block content %}
 <div class="container">
   <div class="row">
-    <div class="col-xs-9">
+    <div class="col-xs-8">
       {% include '/includes/modules/_msg.html' %}
       {% include '/includes/modules/_send_message.html' %}
       {% include '/includes/modules/_ack.html' %}
       {% include '/includes/modules/_sms.html' %}
+      {% include '/includes/modules/_msg_status.html' %}
     </div>
 
-    <div class="col-xs-3">
-
+    <div class="col-xs-4">
+      {% include '/includes/modules/_interests.html' %}
+      {% include '/includes/modules/_call_us.html' %}
     </div>
   </div>
 </div>
