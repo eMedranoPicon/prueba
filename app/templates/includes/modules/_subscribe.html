@@ -1,0 +1,51 @@
+{% extends "/includes/_user_prompt.html" %}
+
+<!-- Inicio módulo "subscribe" -->
+{% block content %}
+  <form class="send-message-form">
+
+    <div class="username-group">
+      <label >Tu nombre</label></br>
+      <input type="text" class="line-input inputs-border"/>
+    </div>
+
+    <div class="email-group">
+      <label >Tu dirección de correo electrónico</label></br>
+      <input type="email" class="line-input inputs-border"/>
+    </div>
+
+    <div class="related-group">
+      <label>Asunto</label></br>
+      <select class="inputs-border">
+        <option>Otros</option>
+      </select>
+
+      <div class="name-group">
+        <input type="text" id="send_message_name"  class="line-input inputs-border" placeholder="Escribe el nombre del asunto"/>
+      </div>
+    </div>
+
+    <div class="textarea-group">
+      <label>Tu consulta</label></br>
+      <textarea id="send-message-text" rows="5" cols="50"  class="inputs-border" placeholder="Cuéntanos en que podemos ayudarte"></textarea>
+    </div>
+
+    <div class="left-radio-group">
+      <input type="radio" id="subscribe-accept">
+      <label for="subscribe-accept">Acepto la <a href="">Política de Privacidad</a></label>
+    </div>
+
+    <div class="left-radio-group">
+      <input type="radio" id="subscribe-promos">
+      <label for="subscribe-promos">No quiero aprovechar las promociones de Coinc</label>
+    </div>
+
+    <div class="submit-button-subscribe">
+      <div class="submit-button-group green-button-wrapper">
+        <input type="submit" id="send-message-submit" class="submit_button green-button" value="ENVIAR" />
+        <label for="send-message-submit" class="submit-button-icon green-button-icon"></label>
+      </div>
+    </div>
+  </form>
+{% endblock %}
+<!-- Fin módulo "subscribe" -->

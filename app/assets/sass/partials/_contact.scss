@@ -106,17 +106,53 @@
 			 width: 391px;
 		}
 
-		.name-group{
+		.line-input{
+			display: block;
+			height: 30px;
+			width: 391px;
+			padding: 10px 5px;
+			font-size: 14px;
+		}
 
+		.name-group{
 			@include dialog-placeholder(14px, $contact-brown-300, 0, 0);
 
 			.line-input{
-				display: block;
-				height: 30px;
-				width: 391px;
 				margin-top: 10px;
-				padding: 10px 5px;
-				font-size: 14px;
+			}
+		}
+
+		.username-group{
+			@include dialog-placeholder(14px, $contact-brown-300, 0, 0);
+
+			label{
+				margin-top: 12px;
+			}
+
+			.line-input{
+				margin-top: 2px;
+			}
+		}
+
+		.email-group{
+			@include dialog-placeholder(14px, $contact-brown-300, 0, 0);
+
+			label{
+				margin-top: 10px;
+			}
+
+			.line-input{
+				margin-top: 2px;
+			}
+		}
+
+		.related-group{
+			label{
+				margin-top: 8px;
+			}
+
+			select{
+				margin-top: 2px;
 			}
 		}
 
@@ -170,7 +206,14 @@
 		.radio-group{
 			float: right;
 			margin-top: 4px;
+		}
 
+		.left-radio-group{
+			margin-top: 4px;
+		}
+
+		.radio-group,
+		.left-radio-group{
 			label {
 				display: inline-block;
 				cursor: pointer;
@@ -210,6 +253,21 @@
 			a{
 				color: $black;
 				text-decoration: underline;
+			}
+		}
+
+		.submit-button-subscribe{
+			position: relative;
+			height: 24px;
+
+			.submit-button-group{
+				position: absolute;
+		    top: -24px;
+		    right: 0px;
+
+				.green-button-icon{
+					right: 27px;
+				}
 			}
 		}
 
@@ -296,6 +354,8 @@
 				margin-top: 1px;
 			}
 		}
+
+
 	}
 
 	.user-prompt-after-content{
