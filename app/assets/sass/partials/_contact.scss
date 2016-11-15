@@ -411,8 +411,8 @@
 		.ball{
 			@include border-radius(9px);
 			display: inline-block;
-	    height: 17px;
-	    width: 17px;
+			height: 17px;
+			width: 17px;
 			background-color: $contact-yellow-500;
 			vertical-align: top;
 			margin: 13px 3px;
