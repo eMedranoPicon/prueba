@@ -349,13 +349,15 @@
 }
 
 .interests{
+	overflow: hidden;
+
 	.title{
 		color: $contact-green-500;
 		font-size: 16px;
 		letter-spacing: 0.3px;
 		font-weight: bold;
 		margin: 15px 0 4px 0;
-    display: block;
+		display: block;
 	}
 
 	ul{
@@ -363,9 +365,9 @@
 
 		li{
 			display: block;
-		  font-weight: bold;
-		  font-size: 16px;
-		  border-bottom: 1px solid $contact-gray-350;
+			font-weight: bold;
+			font-size: 16px;
+			border-bottom: 1px solid $contact-gray-350;
 			padding: 15px 0 11px 0;
 			width: 100%;
 
@@ -378,6 +380,29 @@
 	}
 }
 
+.call_us_wrapper{
+	padding: 17px 0;
+
+	a{
+		text-decoration: none;
+
+		.call_us_ico{
+			background: transparent url(../images/call_us.png) no-repeat scroll 0 0;
+			height: 15px;
+			width: 19px;
+			display: inline-block;
+			margin: 10px 0 0 20px;
+		}
+
+		.text{
+			text-decoration: underline;
+			color: $black;
+			padding: 7px 0 0 9px;
+			letter-spacing: -0.87px;
+			vertical-align: top;
+		}
+	}
+}
 
 .green-button-wrapper{
 	overflow: auto;
