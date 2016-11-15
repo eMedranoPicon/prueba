@@ -404,6 +404,30 @@
 	}
 }
 
+.msg-status-wrapper{
+	.status-group{
+		float: right;
+
+		.ball{
+			@include border-radius(9px);
+			display: inline-block;
+	    height: 17px;
+	    width: 17px;
+			background-color: $contact-yellow-500;
+			vertical-align: top;
+			margin: 13px 3px;
+		}
+
+		label{
+			color: $black;
+			letter-spacing: -0.4px;
+			margin: 13px 3px;
+			padding: 0;
+			vertical-align: top;
+		}
+	}
+}
+
 .green-button-wrapper{
 	overflow: auto;
 
