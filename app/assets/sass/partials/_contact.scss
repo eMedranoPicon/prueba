@@ -108,13 +108,15 @@
 
 		.name-group{
 
-			@include dialog-placeholder(14px, $contact-brown-300, 10px, 5px);
+			@include dialog-placeholder(14px, $contact-brown-300, 0, 0);
 
 			.line-input{
 				display: block;
 				height: 30px;
 				width: 391px;
 				margin-top: 10px;
+				padding: 10px 5px;
+				font-size: 14px;
 			}
 		}
 
@@ -127,11 +129,14 @@
 			margin: 0;
 			padding: 0;
 
-			@include dialog-placeholder(14px, $contact-brown-300, 4px, 5px);
+			@include dialog-placeholder(14px, $contact-brown-300, 0, 0);
 
 			textarea{
 				width: 100%;
 				margin-top: 2px;
+				padding: 4px 5px;
+				font-size: 14px;
+				resize: none;
 			}
 		 }
 
