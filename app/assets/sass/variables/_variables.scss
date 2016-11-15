@@ -142,10 +142,13 @@ $contact-gray-100: nth($paletteContactGray, 1);
 $contact-gray-300: nth($paletteContactGray, 2);
 $contact-gray-400: nth($paletteContactGray, 3);
 
-
-
 $paletteContactBrown: #eeebda #b0aa9a #8b8472 #b6b0a0;
 $contact-brown-100: nth($paletteContactBrown, 1);
 $contact-brown-200: nth($paletteContactBrown, 2);
 $contact-brown-300: nth($paletteContactBrown, 3);
 $contact-brown-400: nth($paletteContactBrown, 4);
+
+$paletteContactBlue: #f2fafc #5fb9d1 #3a8fa3;
+$contact-blue-100: nth($paletteContactBlue, 1);
+$contact-blue-300: nth($paletteContactBlue, 2);
+$contact-blue-400: nth($paletteContactBlue, 3);
