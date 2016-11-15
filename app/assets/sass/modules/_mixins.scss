@@ -391,7 +391,7 @@
   ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
       color:    $color;
       font-size: $font-size;
-      padding: $pad-vertical $pad-horiz $pad-vertical $pad-horiz;
+      padding: $pad-vertical $pad-horiz;
   }
   :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
      color:    $color;
