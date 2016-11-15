@@ -130,3 +130,22 @@ $colorNotifBorder    : $grey840;
 $colorNotifBorderSec : $grey930;
 $colorNotifConfirm   : $green500;
 $sizeNotifBorder     : 2px;
+
+
+$paletteContactGreen: #6fa51b #71a51d #437221;
+$contact-green-400: nth($paletteContactGreen, 1);
+$contact-green-500: nth($paletteContactGreen, 2);
+$contact-green-600: nth($paletteContactGreen, 3);
+
+$paletteContactGray: #f3f2f0 #e5e5e5 #b1b1b1;
+$contact-gray-100: nth($paletteContactGray, 1);
+$contact-gray-300: nth($paletteContactGray, 2);
+$contact-gray-400: nth($paletteContactGray, 3);
+
+
+
+$paletteContactBrown: #eeebda #b0aa9a #8b8472 #b6b0a0;
+$contact-brown-100: nth($paletteContactBrown, 1);
+$contact-brown-200: nth($paletteContactBrown, 2);
+$contact-brown-300: nth($paletteContactBrown, 3);
+$contact-brown-400: nth($paletteContactBrown, 4);
