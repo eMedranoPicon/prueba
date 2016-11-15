@@ -299,7 +299,35 @@
 	}
 }
 
+.interests{
+	.title{
+		color: $contact-green-500;
+		font-size: 16px;
+		letter-spacing: 0.3px;
+		font-weight: bold;
+		margin: 15px 0 4px 0;
+    display: block;
+	}
 
+	ul{
+		margin: 0;
+
+		li{
+			display: block;
+		  font-weight: bold;
+		  font-size: 16px;
+		  border-bottom: 1px solid $contact-gray-350;
+			padding: 15px 0 11px 0;
+			width: 100%;
+
+
+			a{
+				color: $black;
+				text-decoration: none;
+			}
+		}
+	}
+}
 
 
 .green-button-wrapper{
