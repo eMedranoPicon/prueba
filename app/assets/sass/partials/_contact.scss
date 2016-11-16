@@ -81,7 +81,7 @@
 				}
 
 				.sms-request-ico{
-					background: transparent url(../images/sms.png) no-repeat scroll 0px 0px;
+					background: transparent url(../images/sms.png) no-repeat scroll 0 0;
 					display: inline-block;
 					width: 11px;
 					height: 11px;
@@ -100,7 +100,7 @@
 				margin-bottom: 4px;
 
 				.addon-ico{
-					background: transparent url(../images/addon-ico.png) no-repeat scroll 0px 0px;
+					background: transparent url(../images/addon-ico.png) no-repeat scroll 0 0;
 					display: inline-block;
 					height: 42px;
 					width: 29px;
@@ -154,7 +154,7 @@
 			.green-button-wrapper{
 				position: absolute;
 				top: -24px;
-				right: 0px;
+				right: 0;
 
 				.green-button{
 					margin-top: 0;
@@ -378,7 +378,7 @@
 			.submit-button-group{
 				position: absolute;
 				top: -24px;
-				right: 0px;
+				right: 0;
 
 				.green-button-icon{
 					right: 27px;
