@@ -1,4 +1,5 @@
-.msg{
+.msg,
+.support-msg{
 	position: relative;
 
 	.icon-container{
@@ -47,6 +48,120 @@
 			padding-top: 9px;
 			letter-spacing: -0.045px;
 			line-height: 17px;
+		}
+	}
+}
+
+.support-msg{
+	.icon-container{
+		right: 0;
+	}
+
+	.content{
+		padding: 18px 20px 14px 17px;
+
+		.sms-request-wrapper{
+			margin-top: 8px;
+
+			.gray-button{
+				padding: 0 19px 0 18px;
+				letter-spacing: -0.4px;
+				margin-left: -4px;
+			}
+
+			a{
+				text-decoration: none;
+
+				label{
+					color: $black;
+					padding-left: 6px;
+					font-size: 13px;
+					letter-spacing: -0.5px;
+					text-decoration: underline;
+				}
+
+				.sms-request-ico{
+					background: transparent url(../images/sms.png) no-repeat scroll 0px 0px;
+					display: inline-block;
+					width: 11px;
+					height: 11px;
+					margin-left: 16px;
+				}
+			}
+		}
+
+		.addons{
+			@include border-radius(8px);
+			border: 1px solid $contact-gray-300;
+			background-color: $white;
+			margin-top: 15px;
+
+			.addon-wrapper{
+				margin-bottom: 4px;
+
+				.addon-ico{
+					background: transparent url(../images/addon-ico.png) no-repeat scroll 0px 0px;
+					display: inline-block;
+					height: 42px;
+					width: 29px;
+					vertical-align: top;
+					margin: 11px 14px;
+				}
+
+				.element{
+					display: inline-block;
+					vertical-align: top;
+
+					.name{
+						display: block;
+						font-size: 15px;
+						font-weight: bold;
+						padding: 13px 0 0 1px;
+						letter-spacing: 0.4px;
+					}
+					.description{
+						display: block;
+						font-size: 14px;
+						letter-spacing: 0.2px;
+					}
+				}
+			}
+		}
+
+		.timestamp-group{
+			padding: 24px 0 0 0;
+
+			label{
+				font-size: 12px;
+				color:$contact-blue-400;
+				margin-top: 1px;
+				letter-spacing: -0.6px;
+				padding: 0;
+			}
+
+			.date-text{
+				letter-spacing: normal;
+				font-weight: bold;
+				padding-left: 6px;
+				letter-spacing: 0.6px;
+			}
+		}
+
+		.submit-button-support-msg{
+			position: relative;
+			height: 10px;
+
+			.green-button-wrapper{
+				position: absolute;
+				top: -24px;
+				right: 0px;
+
+				.green-button{
+					margin-top: 0;
+					padding: 0 35px 0 20px;
+					letter-spacing: -1.3px;
+				}
+			}
 		}
 	}
 }
@@ -262,8 +377,8 @@
 
 			.submit-button-group{
 				position: absolute;
-		    top: -24px;
-		    right: 0px;
+				top: -24px;
+				right: 0px;
 
 				.green-button-icon{
 					right: 27px;
@@ -488,6 +603,15 @@
 	}
 }
 
+.contact_button{
+	@include border-radius(15px);
+	height: 35px;
+	color: $white;
+	cursor: pointer;
+	font-size: 14px;
+	letter-spacing: 0;
+}
+
 .green-button-wrapper{
 	overflow: auto;
 
@@ -508,9 +632,15 @@
 		background: transparent url(../images/arrow-right.png) no-repeat scroll 0 0;
 		position: absolute;
 		z-index: 10;
-		margin-top: 27px !important;
+		margin-top: 27px;
 		height: 9px;
 		width: 8px;
 		right: 47px;
 	}
+}
+
+.gray-button{
+	@include background-gradient-vertical($contact-brown-400, $contact-brown-600);
+	margin-top: 14px;
+	padding: 0 49px 0 39px;
 }
