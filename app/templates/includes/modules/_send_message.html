@@ -4,7 +4,7 @@
 {% block content %}
   <form class="send-message-form">
 
-    <label >Asunto</label></br>
+    <label >Asunto</label><br />
     <select id="send-message-select-asunto" class="inputs-border">
       <option>Otros</option>
     </select>
@@ -14,7 +14,7 @@
     </div>
 
     <div class="textarea-group">
-      <label>Tu consulta</label></br>
+      <label>Tu consulta</label><br />
       <textarea id="send-message-text" rows="5" cols="50"  class="inputs-border" placeholder="Cuéntanos en que podemos ayudarte"></textarea>
     </div>
 
@@ -29,9 +29,9 @@
       <label for="send-message-accept">Acepto la <a href="">Política de Privacidad</a></label>
     </div>
 
-    <div class="submit-button-group green-button-wrapper">
-      <input type="submit" id="send-message-submit" class="submit_button green-button" value="ENVIAR" />
-      <label for="send-message-submit" class="submit-button-icon green-button-icon"></label>
+    <div class="contact-button-wrapper">
+      <input type="submit" class="contact-button" value="ENVIAR" />
+      <i class="contact-button-arrow-icon"></i>
     </div>
   </form>
 {% endblock %}

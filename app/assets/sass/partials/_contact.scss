@@ -1,6 +1,7 @@
 .msg,
 .support-msg{
 	position: relative;
+	margin-top: 15px;
 
 	.icon-container{
 		position: absolute;
@@ -62,8 +63,11 @@
 
 		.sms-request-wrapper{
 			margin-top: 8px;
+			overflow: visible;
 
-			.gray-button{
+			.contact-button{
+				@include background-gradient-vertical($contact-brown-400, $contact-brown-600);
+				margin-top: 14px;
 				padding: 0 19px 0 18px;
 				letter-spacing: -0.4px;
 				margin-left: -4px;
@@ -72,7 +76,7 @@
 			a{
 				text-decoration: none;
 
-				label{
+				span{
 					color: $black;
 					padding-left: 6px;
 					font-size: 13px;
@@ -151,12 +155,13 @@
 			position: relative;
 			height: 10px;
 
-			.green-button-wrapper{
+			.contact-button-wrapper{
 				position: absolute;
 				top: -24px;
 				right: 0;
 
-				.green-button{
+				.contact-button{
+					@include background-gradient-vertical($contact-green-400, $contact-green-600);
 					margin-top: 0;
 					padding: 0 35px 0 20px;
 					letter-spacing: -1.3px;
@@ -197,7 +202,7 @@
 	.user-prompt-content{
 		@include border-radius(8px);
 		@include box-shadow-mixin($contact-gray-100);
-		margin-left: 85px;
+		margin: 30px 0 0 85px;
 		background-color: $contact-brown-100;
 		padding: 13px 20px 25px 30px;
 		box-shadow: inset 0 -1px 1px 0 $contact-gray-400, 0 3px 0 0 $contact-gray-300;
@@ -373,14 +378,14 @@
 
 		.submit-button-subscribe{
 			position: relative;
-			height: 24px;
+			height: 11px;
 
-			.submit-button-group{
+			.contact-button-wrapper{
 				position: absolute;
 				top: -24px;
 				right: 0;
 
-				.green-button-icon{
+				.contact-button{
 					right: 27px;
 				}
 			}
@@ -461,16 +466,45 @@
 
 			.text{
 				margin: 1px 0 0 4px;
-				letter-spacing: -0.5px;
+				letter-spacing: 0px;
 				text-decoration: underline;
 			}
 
-			.submit-button-group{
-				margin-top: 1px;
+			.contact-button-wrapper{
+				position: relative;
+				margin-top: 14px;
+
+				.contact-button{
+					@include background-gradient-vertical($contact-green-400, $contact-green-600);
+					padding: 0 49px 0 39px;
+					letter-spacing: -1.3px;
+					float: right;
+				}
+
+				.contact-button-arrow-icon{
+					right: 29px;
+				}
 			}
+
 		}
 
+		.send-message-form{
+			.contact-button-wrapper{
+				position: relative;
+				margin-top: 14px;
 
+				.contact-button{
+					@include background-gradient-vertical($contact-green-400, $contact-green-600);
+					padding: 0 49px 0 39px;
+					letter-spacing: -1.3px;
+					float: right;
+				}
+
+				.contact-button-arrow-icon{
+					right: 29px;
+				}
+			}
+		}
 	}
 
 	.user-prompt-after-content{
@@ -572,14 +606,18 @@
 		.text{
 			text-decoration: underline;
 			color: $black;
-			padding: 7px 0 0 9px;
+			padding: 6px 0 0 9px;
 			letter-spacing: -0.87px;
 			vertical-align: top;
+			font-size: 15px;
+			display: inline-block;
 		}
 	}
 }
 
 .msg-status-wrapper{
+	height: 37px;
+	
 	.status-group{
 		float: right;
 
@@ -603,44 +641,26 @@
 	}
 }
 
-.contact_button{
-	@include border-radius(15px);
-	height: 35px;
-	color: $white;
-	cursor: pointer;
-	font-size: 14px;
-	letter-spacing: 0;
-}
-
-.green-button-wrapper{
+.contact-button-wrapper{
 	overflow: auto;
 
-	.green-button{
-		@include background-gradient-vertical($contact-green-400, $contact-green-600);
+	.contact-button{
 		@include border-radius(15px);
-		float: right;
-		margin-top: 14px;
 		height: 35px;
-		padding: 0 49px 0 39px;
 		color: $white;
 		cursor: pointer;
 		font-size: 14px;
 		letter-spacing: 0;
 	}
 
-	.green-button-icon{
+	.contact-button-arrow-icon{
 		background: transparent url(../images/arrow-right.png) no-repeat scroll 0 0;
 		position: absolute;
 		z-index: 10;
-		margin-top: 27px;
 		height: 9px;
 		width: 8px;
 		right: 47px;
+		top: 13px;
+		right: 17px;
 	}
-}
-
-.gray-button{
-	@include background-gradient-vertical($contact-brown-400, $contact-brown-600);
-	margin-top: 14px;
-	padding: 0 49px 0 39px;
 }
