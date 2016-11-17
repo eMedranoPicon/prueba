@@ -686,15 +686,11 @@
 		padding-left: 8px;
 	}
 
-	li:first-child a{
-		border-top: 0;
-	}
-
-	li{
+	li {
 		display: block;
 		width: 100%;
 
-		a{
+		a {
 			@include transition-easy();
 			color: $black;
 			font-weight: bold;
@@ -708,6 +704,11 @@
 			margin: 0 20px
 		}
 
+		&:first-child a {
+			border-top: 0;
+		}
+
+
 		ul li a{
 			@include transition-easy();
 			height: 0;
@@ -717,41 +718,41 @@
 			font-size: 13px;
 			font-weight: normal;
 		}
-	}
 
-	li:hover{
-		background-color: $contact-green-500;
-
-		a{
-			color: $white;
-		}
-
-		ul li{
-			background-color: $contact-brown-50;
+		&:hover {
+			background-color: $contact-green-500;
 
 			a{
-				@include transition-easy();
-				height: 30px;
-				color: $black;
-				text-decoration: underline;
-				padding: 10px 11px;
-				font-size: 13px;
-				font-weight: normal;
+				color: $white;
 			}
 
-			ul li a{
-				@include transition-easy();
-				height: 0;
-				padding: 0 22px;
-			}
-		}
+			ul li{
+				background-color: $contact-brown-50;
 
-		ul li:hover{
-			ul li a{
-				height: 29px;
-				color: $black;
-				text-decoration: underline;
-				padding: 10px 22px;
+				a{
+					@include transition-easy();
+					height: 30px;
+					color: $black;
+					text-decoration: underline;
+					padding: 10px 11px;
+					font-size: 13px;
+					font-weight: normal;
+				}
+
+				ul li a{
+					@include transition-easy();
+					height: 0;
+					padding: 0 22px;
+				}
+
+				&:hover{
+					ul li a{
+						height: 29px;
+						color: $black;
+						text-decoration: underline;
+						padding: 10px 22px;
+					}
+				}
 			}
 		}
 	}
