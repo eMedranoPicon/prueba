@@ -423,10 +423,6 @@
     background:           linear-gradient( $startColor, $endColor);
 }
 
-@mixin transition-easy() {
-  -webkit-transition: all 1s ease;
-     -moz-transition: all 1s ease;
-       -o-transition: all 1s ease;
-      -ms-transition: all 1s ease;
-          transition: all 1s ease;         
+@mixin transition-easy($all: all, $time: 1s, $animation: ease) {
+  @include css3-prefix(transition, $all $time $animation);       
 }

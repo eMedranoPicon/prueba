@@ -703,7 +703,7 @@
 			overflow: hidden;
 			text-decoration: none;
 			font-size: 11px;
-			border-top: 1px dotted #b0ac9e;
+			border-top: 1px dotted $contact-gray-250;
 			padding: 24px 0;
 			margin: 0 20px
 		}
@@ -748,7 +748,6 @@
 
 		ul li:hover{
 			ul li a{
-				@include transition-easy();
 				height: 29px;
 				color: $black;
 				text-decoration: underline;
