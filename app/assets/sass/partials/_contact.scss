@@ -472,9 +472,9 @@
 
 			.feedback{
 				font-size: 15px;
-		    margin-top: 5px;
-		    display: inline-block;
-		    color: $colorTimeWarning;
+				margin-top: 5px;
+				display: inline-block;
+				color: $colorTimeWarning;
 			}
 
 			.contact-button-wrapper{
@@ -647,6 +647,272 @@
 		}
 	}
 }
+
+.links_wrapper_l1{
+	@include border-radius(8px);
+	box-shadow: inset 0 -1px 1px 0 $contact-gray-400, 0 3px 0 0 $contact-gray-300;
+	overflow: auto;
+	border: 1px solid $contact-gray-200;
+	margin-top: 15px;
+
+	ul{
+		margin: 0;
+	}
+
+	.folder-ico{
+		background: transparent url(../images/folder-ico.png) no-repeat scroll 0 0;
+		display: inline-block;
+		width: 16px;
+		height: 11px;
+	}
+
+	.sms-ico{
+		background: transparent url(../images/sms.png) no-repeat scroll 0 0;
+		display: inline-block;
+		width: 11px;
+		height: 11px;
+
+	}
+
+	.clip-ico{
+		background: transparent url(../images/clip.png) no-repeat scroll 0 0;
+		display: inline-block;
+		width: 10px;
+		height: 13px;
+		margin-left: 4px;
+	}
+
+	.element{
+		padding-left: 8px;
+	}
+
+	li {
+		display: block;
+		width: 100%;
+
+		a {
+			@include transition-easy();
+			color: $black;
+			font-weight: bold;
+			display: block;
+			height: 60px;
+			overflow: hidden;
+			text-decoration: none;
+			font-size: 11px;
+			border-top: 1px dotted $contact-gray-250;
+			padding: 24px 0;
+			margin: 0 20px
+		}
+
+		&:first-child a {
+			border-top: 0;
+		}
+
+
+		ul li a{
+			@include transition-easy();
+			height: 0;
+			border-top: 0;
+			padding: 0 11px;
+			margin: 0;
+			font-size: 13px;
+			font-weight: normal;
+		}
+
+		&:hover {
+			background-color: $contact-green-500;
+
+			a{
+				color: $white;
+			}
+
+			ul li{
+				background-color: $contact-brown-50;
+
+				a{
+					@include transition-easy();
+					height: 30px;
+					color: $black;
+					text-decoration: underline;
+					padding: 10px 11px;
+					font-size: 13px;
+					font-weight: normal;
+				}
+
+				ul li a{
+					@include transition-easy();
+					height: 0;
+					padding: 0 22px;
+				}
+
+				&:hover{
+					ul li a{
+						height: 29px;
+						color: $black;
+						text-decoration: underline;
+						padding: 10px 22px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.popup-wrapper{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);;
+	z-index: 10000;
+	top: 0px;
+
+	.user-ico{
+		display: block;
+		width: 16px;
+		height: 19px;
+		background: transparent url(../images/user-ico.png) no-repeat scroll 0 0;
+		display: inline-block;
+	}
+
+	.popup-group{
+
+		.popup-header{
+			@include border-radius-separate($topLeftRadius: 4px, $topRightRadius: 4px, $bottomLeftRadius: 0, $bottomRightRadius: 0);
+
+			.login-header{
+				width: 550px;
+				margin: auto;
+				background-color: $black;
+				position: relative;
+				height: 138px;
+
+				.logo-coinc{
+					top: 44px;
+					position: absolute;
+					left: 194px;
+				}
+			}
+
+			.call-us-header{
+				width: 360px;
+				margin: auto;
+				background-color: $black;
+				position: relative;
+				height: 138px;
+
+				.logo-coinc{
+					top: 44px;
+					position: absolute;
+					left: 100px;
+				}
+			}
+		}
+
+		.popup-content{
+
+			.login{
+				padding: 30px 51px 0 51px;
+				width: 550px;
+				margin: auto;
+				border-top: 5px solid $contact-gray-325;
+				background-color: $white;
+
+				.title{
+					font-size: 23px;
+					font-weight: bold;
+					letter-spacing: -0.15px;
+				}
+
+				form{
+					width: 260px;
+					margin: auto;
+
+					label{
+						color: $black;
+						padding-left: 6px;
+						margin: 0;
+					}
+
+					.password{
+						padding: 11px 0 0 0;
+					}
+
+					.input-data{
+						@include border-radius(2px);
+						height: 25px;
+						border: 1px solid $black;
+						width: 100%;
+						font-size: 14px;
+						padding-left: 5px;
+					}
+
+					a{
+						display: block;
+						margin: auto;
+						font-size: 14px;
+						width: 100%;
+						text-align: center;
+						margin-top: 27px;
+						color: black;
+						text-decoration: underline;
+					}
+
+					.contact-button{
+						@include background-gradient-vertical($contact-gray-700, $contact-gray-800);
+						margin: auto;
+						width: 100px;
+						display: block;
+						margin-top: 20px;
+					}
+				}
+
+				.later{
+					overflow: visible;
+					height: 45px;
+
+					a{
+						float: right;
+						color: $black;
+						font-size: 14px;
+						margin: 8px -29px 20px 0;
+						text-decoration: underline;
+					}
+				}
+			}
+
+			.call-us-popup{
+				text-align: center;
+				padding-top: 38px;
+				width: 360px;
+				margin: auto;
+				border-top: 5px solid $contact-gray-325;
+				background-color: $white;
+
+				.text{
+					display: block;
+					font-size: 14px;
+				}
+
+				.text2{
+					display: block;
+					font-size: 23px;
+					font-weight: bold;
+					margin: 7px;
+				}
+			}
+
+			.contact-button{
+				@include background-gradient-vertical($contact-gray-700, $contact-gray-800);
+				margin: auto;
+				width: 100px;
+				display: block;
+				margin: 40px auto 57px auto;
+			}
+		}
+	}
+}
+
+
 
 .contact-button-wrapper{
 	overflow: auto;

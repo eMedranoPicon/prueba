@@ -422,3 +422,7 @@
     background:        -o-linear-gradient( $startColor, $endColor);
     background:           linear-gradient( $startColor, $endColor);
 }
+
+@mixin transition-easy($all: all, $time: 1s, $animation: ease) {
+  @include css3-prefix(transition, $all $time $animation);       
+}
