@@ -69,7 +69,6 @@
 				@include background-gradient-vertical($contact-brown-400, $contact-brown-600);
 				margin-top: 14px;
 				padding: 0 19px 0 18px;
-				letter-spacing: -0.4px;
 				margin-left: -4px;
 			}
 
@@ -164,7 +163,6 @@
 					@include background-gradient-vertical($contact-green-400, $contact-green-600);
 					margin-top: 0;
 					padding: 0 35px 0 20px;
-					letter-spacing: -1.3px;
 				}
 			}
 		}
@@ -484,7 +482,6 @@
 				.contact-button{
 					@include background-gradient-vertical($contact-green-400, $contact-green-600);
 					padding: 0 49px 0 39px;
-					letter-spacing: -1.3px;
 					float: right;
 				}
 
@@ -503,7 +500,6 @@
 				.contact-button{
 					@include background-gradient-vertical($contact-green-400, $contact-green-600);
 					padding: 0 49px 0 39px;
-					letter-spacing: -1.3px;
 					float: right;
 				}
 
@@ -747,7 +743,7 @@
 
 				&:hover{
 					ul li a{
-						height: 29px;
+						height: 35px;
 						color: $black;
 						text-decoration: underline;
 						padding: 10px 22px;
@@ -758,13 +754,9 @@
 	}
 }
 
-.popup-wrapper{
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.4);;
-	z-index: 10000;
-	top: 0px;
+.modal-content{
+	box-shadow: none;
+	border:none;
 
 	.user-ico{
 		display: block;
@@ -775,9 +767,14 @@
 	}
 
 	.popup-group{
+		z-index: 20000;
+		position: absolute;
+		left: 50%;
 
 		.popup-header{
 			@include border-radius-separate($topLeftRadius: 4px, $topRightRadius: 4px, $bottomLeftRadius: 0, $bottomRightRadius: 0);
+			position: relative;
+			right: 50%;
 
 			.login-header{
 				width: 550px;
@@ -809,6 +806,8 @@
 		}
 
 		.popup-content{
+			position: relative;
+			right: 50%;
 
 			.login{
 				padding: 30px 51px 0 51px;
@@ -923,7 +922,6 @@
 		color: $white;
 		cursor: pointer;
 		font-size: 14px;
-		letter-spacing: 0;
 	}
 
 	.contact-button-arrow-icon{
