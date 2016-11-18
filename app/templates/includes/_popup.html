@@ -1,11 +1,13 @@
 <!-- Inicio módulo "popup" -->
-<div class="popup-wrapper">
-  <div class="popup-group">
-    <div class="popup-header">      
-      {% block header %} {% endblock %}
-    </div>
-    <div class="popup-content">
-      {% block content %} {% endblock %}
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="popup-group">
+      <div class="popup-header">
+        {% block header %} {% endblock %}
+      </div>
+      <div class="popup-content">
+        {% block content %} {% endblock %}
+      </div>
     </div>
   </div>
 </div>
