@@ -35,29 +35,24 @@ var src_app = './app',
   dist_js_dir = path.join(dist_base_dir, 'js'),
   dist_css_dir = path.join(dist_base_dir, 'css'),
   dist_html_dir = path.join(src_app, 'templates'),
-  dist_legacy_js_dir  = path.join(dist_js_dir, 'legacy'),
-  dist_legacy_css_dir = path.join(dist_css_dir, 'legacy'),
+  // dist_legacy_js_dir  = path.join(dist_js_dir, 'legacy'),
+  // dist_legacy_css_dir = path.join(dist_css_dir, 'legacy'),
   src_html_files = path.join(dist_html_dir, '**', '*.html'),
   config_dir = './config',
 
   vendor_js_src = [
     './bower_components/jquery/jquery.min.js',
-    './bower_components/jquery/jquery-migrate.min.js',
     './bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js',
-    './bower_components/jQuery.mmenu/dist/js/jquery.mmenu.min.all.js',
-    './bower_components/jquery-ui/jquery-ui.min.js',
-    './bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js',
-    './bower_components/highcharts/highcharts.js'
+    './bower_components/jquery-ui/jquery-ui.min.js'
   ],
   vendor_css_src = [
-    './bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css'
   ],
+  // legacy_js_src  = path.join(src_base_dir, 'legacy/js', '**', '*.js'),
+  // legacy_css_src = path.join(src_base_dir, 'legacy/css', '**', '*.css'),
   vendor_source_maps = [
     './bower_components/jquery/dist/jquery.min.map',
     './bower_components/progressbar.js/dist/progressbar.min.js.map'
-  ],
-  legacy_js_src  = path.join(src_base_dir, 'legacy/js', '**', '*.js'),
-  legacy_css_src = path.join(src_base_dir, 'legacy/css', '**', '*.css');
+  ];
 
 gulp.task('jshint', function() {
   return gulp.src(src_js_files)
@@ -122,29 +117,29 @@ gulp.task('vendor-scripts', function() {
 
 gulp.task('scripts', function() {
   return gulp.src(src_js_files)
-    .pipe(concat('gesGastos.js'))
+    .pipe(concat('scripts-app.js'))
     .pipe(gulp.dest(dist_js_dir));
 }).help = 'Concatenates all js files.';
 
 
 gulp.task('scripts-min', function() {
   return gulp.src(src_js_files)
-    .pipe(concat('gesGastos.js'))
+    .pipe(concat('scripts-app.js'))
     .pipe(uglify())
     .pipe(gulp.dest(dist_js_dir));
 }).help = 'Concatenates and minifies all js files.';
 
 
-gulp.task('legacy-scripts', function () {
-    return gulp.src(legacy_js_src)
-        .pipe(gulp.dest(dist_legacy_js_dir));
-}).help = 'Copy legacy javascript files.';
+// gulp.task('legacy-scripts', function () {
+//     return gulp.src(legacy_js_src)
+//         .pipe(gulp.dest(dist_legacy_js_dir));
+// }).help = 'Copy legacy javascript files.';
 
 
-gulp.task('legacy-css', function () {
-    return gulp.src(legacy_css_src)
-        .pipe(gulp.dest(dist_legacy_css_dir));
-}).help = 'Copy legacy css files.';
+// gulp.task('legacy-css', function () {
+//     return gulp.src(legacy_css_src)
+//         .pipe(gulp.dest(dist_legacy_css_dir));
+// }).help = 'Copy legacy css files.';
 
 
 gulp.task('watch', function() {
@@ -209,10 +204,6 @@ gulp.task('old_browsers', function() {
   return gulp.src(['app/assets/js/old_browsers_support/**/*']).pipe(gulp.dest('app/dist/js/old_browsers_support'));
 });
 
-// gulp.task('legacy-code', function() {
-//   return gulp.src(['app/legacy/*/*']).pipe(gulp.dest('app/dist/legacy'));
-// });
-
 gulp.task('connect', function() {
   return connect.server({
     root: './app/dist',
@@ -224,7 +215,7 @@ gulp.task('connect', function() {
 gulp.task('default', function() {
   runSequence(
     ['old_browsers', 'fonts', 'images', 'jshint', 'sass', 'vendor-css', 'vendor-scripts', 'scripts', 'jinja'],
-    ['legacy-scripts', 'legacy-css'],
+    // ['legacy-scripts', 'legacy-css'],
     ['watch', 'connect'], // by default test are excluded of default task but it could be included with 'test' task
     function() {
       gulp.src('').pipe(notify({
@@ -240,7 +231,7 @@ gulp.task('dist', function() {
   runSequence(
     'clean',
     ['old_browsers', 'jshint-dist', 'sass-min', 'vendor-css', 'vendor-scripts', 'scripts-min', 'jinja'],
-    ['legacy-scripts', 'legacy-css'],
+    // ['legacy-scripts', 'legacy-css'],
     function() {
       gulp.src('').pipe(notify({
         title: 'Dist',
