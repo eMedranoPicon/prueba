@@ -15,9 +15,6 @@ body {
     margin: 0 auto;
     background: $white;
     padding-bottom: 80px;
-    @media(min-width: $screen-tablet) {
-        max-width: $containerDesktop;
-    }
     @media(max-width: $screen-xs-max) {
         min-width: $containerPhone;
     }

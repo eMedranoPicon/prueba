@@ -19,18 +19,24 @@
     <body>
         <header>
             <div class="header__logo">
-                <img src="images/logo.png" alt="coinc" />
+                <div class="container">
+                    <img src="images/logo.png" alt="coinc" />
+                </div>
             </div>
             <div class="header__title">
-                <h1>{{title}}</h1>
+                <div class="container">
+                    <h1>{{title}}</h1>
+                </div>
             </div>
         </header>
         <div class="container">
             {% block content %}{% endblock %}
         </div>
         <footer>
-            <p><span class="copyright">@ COINC. Todos los derechos reservados.</span> <a href="#">Legal</a></p>
-            <img src="images/bankinter.png" alt="bankinter">
+            <div class="container">
+                <p><span class="copyright">@ COINC. Todos los derechos reservados.</span> <a href="#">Legal</a></p>
+                <img src="images/bankinter.png" alt="bankinter">
+            </div>
         </footer>
         <script src="js/old_browsers_support/modernizr.js"></script>
     </body>

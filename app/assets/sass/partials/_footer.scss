@@ -3,8 +3,9 @@ footer {
     background: $black-900;
     bottom: 0;
     width: 100%;
-    padding-left: 24px;
-    padding-right: 28px;
+    .container {
+        padding: 0;
+    }
     p {
         float: left;
         margin: 14px 0;
