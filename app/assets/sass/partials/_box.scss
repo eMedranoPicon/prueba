@@ -7,6 +7,18 @@
     border: 1px dashed $grey600;
 }
 
+.box__desktop {
+    @media(max-width: $screen-sm-max) {
+        border: 0;
+    }
+}
+
+.box__tablet{
+    @media(max-width: $screen-xs-max), (min-width: $screen-desktop) {
+        border: 0;
+    }
+}
+
 .box__info {
     max-width: 410px;
     margin: 0 auto 23px;
@@ -31,4 +43,10 @@
     max-width: 580px;
     margin: 0 auto;
     padding: 20px 15px 13px;
+}
+
+.box__sms {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 0 5px;
 }

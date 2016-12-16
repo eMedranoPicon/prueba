@@ -1,0 +1,30 @@
+.box__sms {
+    .card-info {
+        h1, .type, .value {
+            font-family: $fontCoincLight;
+        }
+        h1 {
+            font-size: 48px;
+            text-align: center;
+            color: $green500;
+            margin-top: 7px;
+            margin-bottom: 32px;
+        }
+        .type {
+            font-size: 16px;
+            color: $black-800;
+        }
+        .value {
+            font-size: 24px;
+            color: $grey550;
+            letter-spacing: -1px;
+        }
+        p {
+            margin-bottom: 7px;
+        }
+        max-width: 647px;
+        margin: 0 auto 18px;
+        background: $gold-100;
+        padding: 10px 30px;
+    }
+}
