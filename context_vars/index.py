@@ -1,2 +1,4 @@
-def get_index():
-	return {}
+def get():
+	return {
+		"title": "Compra Segura"
+	}

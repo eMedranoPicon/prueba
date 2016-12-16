@@ -1,10 +1,16 @@
 //DETALLES DE PRESUPUESTO
-$dimenDetBarLarge       : 899px;
-$dimenDetBarShort       : 525px;
-$dimenDetLargeFull      : 920px;
-$dimenDetInfoWidth      : 546px;
-$dimenDetTipWidth       : 336px;
 
+$showDesktop: true;
+$showPhone: false;
+
+// $showDesktop: false;
+// $showPhone: true;
+
+// $sizeDesktop: 551px;
+// $sizePhone: 550px;
+
+$containerDesktop: 768px;
+$containerPhone: 360px;
 
 .overflow-visible {
     overflow: visible!important;

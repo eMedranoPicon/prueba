@@ -5,23 +5,27 @@
  */
 
 /* Account for fixed navbar */
-.content-presupuestos {
-  min-width: 980px;
-  background-color: $gray990;
-  font-family: $font;
-  color: #000;
-  font-size: 15px;
+html {
+    background: $gre300;
 }
-
+body {
+    margin: 0 auto;
+    background: $white;
+    @if $showDesktop {
+        min-width: $containerDesktop;
+        max-width: $containerDesktop;
+    }
+    @if $showPhone {
+        min-width: $containerPhone;
+        max-width: $containerPhone;
+    }
+}
 .container {
-  min-width: 950px;
-  max-width: 950px;
-  margin: 0 auto;
-  position: relative;
+    position: relative;
 }
 
-.container .navbar-header,
-.container .navbar-collapse {
-  margin-right: 0;
-  margin-left: 0;
-}
+// .container .navbar-header,
+// .container .navbar-collapse {
+//     margin-right: 0;
+//     margin-left: 0;
+// }
