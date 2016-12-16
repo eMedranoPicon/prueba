@@ -3,10 +3,20 @@
     img {
         height: 48px;
     }
+}
+
+.verisign__ctablet {
     @media(min-width: $screen-desktop) {
         margin-top: -30px;
     }
     @media(max-width: $screen-sm-max) {
+        text-align: center;
+        margin-top: 65px;
+    }
+}
+
+.verisign__cphone {
+    @media(max-width: $screen-xs-max) {
         text-align: center;
         margin-top: 65px;
     }
