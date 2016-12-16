@@ -1,1 +1,7 @@
 {% extends "/base/_base.html" %}
+{% from "/components/_verising.html" import visa as verising %}
+
+{% block content %}
+	{% include "/includes/_login.html" %}
+	{{ verising() }}
+{% endblock %}

@@ -1,0 +1,13 @@
+.verisign {
+    text-align: right;
+    img {
+        height: 48px;
+    }
+    @media(min-width: $screen-desktop) {
+        margin-top: -30px;
+    }
+    @media(max-width: $screen-sm-max) {
+        text-align: center;
+        margin-top: 65px;
+    }
+}

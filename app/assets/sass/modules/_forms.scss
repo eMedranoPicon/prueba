@@ -1,0 +1,45 @@
+.form-control {
+    height: 44px;
+    cursor: text;
+    padding: 18px 15px 0;
+    &, &:focus {
+        border-color: $green500;
+        box-shadow: none;
+    }
+}
+.form-group {
+    margin-bottom: 17px;
+
+    @keyframes active {
+        from {
+            color: $black-800;
+            line-height: 44px;
+            font-family: $fontCoinc;
+        }
+        to {
+            @include activateLabelForm();
+        }
+    }
+    @keyframes unactive {
+        from {
+            @include activateLabelForm();
+        }
+        to {
+            @include unactivateLabelForm();
+        }
+    }
+    label {
+        @include unactivateLabelForm();
+        position: absolute;
+        padding: 0 15px;
+        cursor: text;
+        margin: 0;
+        animation-name: unactive;
+        animation-duration: 0.2s;
+        &.active {
+            @include activateLabelForm();
+            animation-name: active;
+            animation-duration: 0.2s;
+        }
+    }
+}

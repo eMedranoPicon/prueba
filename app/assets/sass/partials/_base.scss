@@ -6,7 +6,7 @@
 
 /* Account for fixed navbar */
 html {
-    background: $gre300;
+    background: $grey300;
     height: 100%;
 }
 body {
@@ -14,12 +14,22 @@ body {
     min-height: 100%;
     margin: 0 auto;
     background: $white;
+    padding-bottom: 80px;
     @media(min-width: $screen-tablet) {
         max-width: $containerDesktop;
     }
     @media(max-width: $screen-xs-max) {
         min-width: $containerPhone;
         max-width: $containerPhone;
+    }
+}
+.container {
+    padding-top: 35px;
+}
+a {
+    &, &:hover, &:focus {
+        color: $green500;
+        font-size: 16px;
     }
 }
 // .container {

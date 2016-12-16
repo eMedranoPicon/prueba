@@ -424,5 +424,17 @@
 }
 
 @mixin transition-easy($all: all, $time: 1s, $animation: ease) {
-  @include css3-prefix(transition, $all $time $animation);       
+    @include css3-prefix(transition, $all $time $animation);       
+}
+
+
+@mixin activateLabelForm() {
+    color: $grey550;
+    line-height: 20px;
+    font-family: $fontCoincLight;
+}
+@mixin unactivateLabelForm() {
+    color: $black-800;
+    line-height: 44px;
+    font-family: $fontCoinc;
 }

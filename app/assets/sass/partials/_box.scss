@@ -1,0 +1,28 @@
+.box__solid-line {
+    @include border-radius(2px);
+    border: 1px solid $green500;
+}
+
+.box__dashed-line {
+    border: 1px dashed $grey600;
+}
+
+.box__info {
+    max-width: 410px;
+    margin: 0 auto 23px;
+    padding: 20px 40px;
+    font-size: 18px;
+    text-align: center;
+    color: $black-800;
+}
+
+.box__login {
+    max-width: 630px;
+    margin: 0 auto;
+    padding: 43px 0 22px;
+    @media(max-width: $screen-xs-max) {
+        padding-top: 0;
+        padding-bottom: 5px;
+        border: 0;
+    }
+}

@@ -1,32 +1,18 @@
 /*
-  INICIALIZACIÓN DE LOS SCRIPTS
- */
- $(document).ready(function () {
-   "use strict";
-
-   var flipContainerHoverClass;
-
-   if( Modernizr.csstransitions )
-     flipContainerHoverClass = 'hover';
-   else
-     flipContainerHoverClass = 'modern-hover';
-
-   // MASK FOR INPUTS
-   $(":input").inputmask();
-
-   // INITIALIZE ACCORDION
-   $('#st-accordion').accordionSoft();
-
-   // INITIALIZE PIE CHART
-   if($('.pie-chart').length)
-     $( pieChart );
-
-   // INITIALIZE POINT CHART
-   if($('#point-chart').length)
-     $( pointChart );
-
-   // INITIALIZE PROGRESS BAR
-   if($('.progress-bar').length)
-     $( progressBar );
-
+INICIALIZACIÓN DE LOS SCRIPTS
+*/
+$(document).ready(function () {
+    "use strict";
+    $('input').focus(function() {
+        var input = $(this);
+        var id = input.attr('id');
+        var label = $('label[for="'+id+'"]');
+        label.addClass('active');
+    });
+    $('input').blur(function() {
+        var input = $(this);
+        var id = input.attr('id');
+        var label = $('label[for="'+id+'"]');
+        label.removeClass('active');
+    });
 });
