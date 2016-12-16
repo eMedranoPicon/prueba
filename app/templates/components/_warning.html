@@ -1,0 +1,12 @@
+{% macro message(title, content, buttom) %}
+	<article class="warning-message">
+		<header>
+			<img src="images/warning.png" alt="warning" />
+			<h1>{{ title }}</h1>
+		</header>
+		<div class="box__dashed-line box__warning">
+			{{ content }}
+		</div>
+		<a href="#" class="btn btn__white"><span>{{ buttom }}</span></a>
+	</article>
+{% endmacro %}

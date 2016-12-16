@@ -1,0 +1,36 @@
+.warning-message {
+    text-align: center;
+    img {
+        width: 80px;
+    }
+    h1 {
+        font-family: $fontCoinc;
+        font-size: 22px;
+        color: $black-800;
+        margin: 20px 0;
+    }
+    p {
+        margin-bottom: 14px;
+        font-family: $fontCoinc;
+        font-size: 18px;
+        color: $black-800;
+        span {
+            display: block;
+        }
+    }
+    .box__warning {
+        margin-bottom: 51px;
+    }
+    .btn {
+        max-width: 266px;
+    }
+    @media(max-width: $screen-xs-max) {
+        p {
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+        .box__warning {
+            margin-bottom: 16px;
+        }
+    }
+}
