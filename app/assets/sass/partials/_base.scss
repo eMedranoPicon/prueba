@@ -7,22 +7,24 @@
 /* Account for fixed navbar */
 html {
     background: $gre300;
+    height: 100%;
 }
 body {
+    position: relative;
+    min-height: 100%;
     margin: 0 auto;
     background: $white;
-    @if $showDesktop {
-        min-width: $containerDesktop;
+    @media(min-width: $screen-tablet) {
         max-width: $containerDesktop;
     }
-    @if $showPhone {
+    @media(max-width: $screen-xs-max) {
         min-width: $containerPhone;
         max-width: $containerPhone;
     }
 }
-.container {
-    position: relative;
-}
+// .container {
+//     position: relative;
+// }
 
 // .container .navbar-header,
 // .container .navbar-collapse {

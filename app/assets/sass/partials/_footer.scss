@@ -1,0 +1,40 @@
+footer {
+    position: absolute;
+    background: $black-900;
+    bottom: 0;
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 28px;
+    p {
+        float: left;
+        margin: 14px 0;
+        color: $white;
+    }
+    .copyright {
+        &:after {
+            content: "\007c";
+            padding-left: 6px;
+            padding-right: 4px;
+        }
+    }
+    a {
+        &, &:hover, &:focus {
+            color: $white;
+        }
+    }
+    img {
+        float: right;
+        height: 30px;
+        margin: 9px 0;
+    }
+    @media(max-width: $screen-xs-max) {
+        padding: 0 16px;
+        p {
+            font-size: 9px;
+        }
+        img {
+            height: 20px;
+            margin: 9px 0;
+        }
+    }
+}

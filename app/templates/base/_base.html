@@ -17,15 +17,22 @@
         <![endif]-->
     </head>
     <body>
-        <div class="header header__logo">
-            <img src="images/logo.png" alt="coinc" />
-        </div>
-        <div class="header header__title">
-            <h1>{{title}}</h1>
-        </div>
-        <div class="content-presupuestos">
+        <header>
+            <div class="header__logo">
+                <img src="images/logo.png" alt="coinc" />
+            </div>
+            <div class="header__title">
+                <h1>{{title}}</h1>
+            </div>
+        </header>
+        <div class="container">
+            contenido
             {% block content %}{% endblock %}
         </div>
+        <footer>
+            <p><span class="copyright">@ COINC. Todos los derechos reservados.</span> <a href="#">Legal</a></p>
+            <img src="images/bankinter.png" alt="bankinter">
+        </footer>
         <script src="js/old_browsers_support/modernizr.js"></script>
     </body>
 </html>

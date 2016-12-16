@@ -1,38 +1,27 @@
-.header {
-    margin: 0 auto;
-    @if $showDesktop {
-        min-width: $containerDesktop;
-    }
-    @if $showPhone {
-        min-width: $containerPhone;
-    }
-    &.header__logo {
-        background: $black;
-        @if $showDesktop {
-            padding: 16px 23px;
-            img {
-                height: 32px;
-            }
+header {
+    .header__logo {
+        background: $black-900;
+        padding: 16px 23px;
+        img {
+            height: 32px;
         }
-        @if $showPhone {
+        @media(max-width: $screen-xs-max) {
             padding: 12px 23px;
             img {
                 height: 25px;
             }
         }
     }
-    &.header__title {
+    .header__title {
         background: $green500;
         h1 {
             color: $white;
             margin: 0;
             text-align: center;
             font-family: $fontCoincLight;
-            @if $showDesktop {
-                padding: 18px 0;
-                font-size: 25px;
-            }
-            @if $showPhone {
+            padding: 18px 0;
+            font-size: 25px;
+            @media(max-width: $screen-xs-max) {
                 padding: 16px 0;
                 font-size: 16px;
             }
