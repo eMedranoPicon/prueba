@@ -47,6 +47,13 @@
 
 .box__sms {
     max-width: 900px;
-    margin: 0 auto;
+    margin: 0 auto 34px;
     padding: 24px 0 5px;
+    @media(max-width: $screen-sm-max) {
+        margin-bottom: 52px;
+    }
+    @media(max-width: $screen-xs-max) {
+        padding-top: 0;
+        margin-bottom: 17px;
+    }
 }

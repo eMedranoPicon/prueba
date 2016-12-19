@@ -1,4 +1,4 @@
-.box__sms {
+.sms-verify {
     .card-info {
         h1, .type, .value {
             font-family: $fontCoincLight;
@@ -26,5 +26,69 @@
         margin: 0 auto 18px;
         background: $gold-100;
         padding: 10px 30px;
+    }
+    .sms-info {
+        p {
+            font-size: 16px;
+            color: $black-800;
+            margin-bottom: 20px;
+        }
+    }
+    .btn {
+        max-width: 266px;
+    }
+    @media(min-width: $screen-desktop) {
+        .btn__close {
+            float: right;
+            margin-right: 44px;
+        }
+        .btn__accept {
+            margin-left: 44px;
+        }
+        a {
+            padding: 10px 0;
+            display: inline-block;
+        }
+    }
+    @media(max-width: $screen-sm-max) {
+        .sms-info {
+            padding: 63px 0;
+            max-width: 647px;
+            margin: 0 auto;
+            p {
+                font-size: 22px;
+                margin-bottom: 34px;
+            }
+        }
+        a {
+            display: block;
+            text-align: center;
+        }
+        .btn__accept {
+            margin-top: 15px;
+            margin-bottom: 27px;
+        }
+    }
+    @media(max-width: $screen-xs-max) {
+        .card-info {
+            h1 {
+                font-size: 24px;
+            }
+            .type {
+                font-size: 14px;
+            }
+            .value {
+                font-size: 16px;
+            }
+        }
+        .sms-info {
+            max-width: 266px;
+            margin: 0 auto;
+            padding: 5px 0;
+            p {
+                font-size: 15px;
+                margin-bottom: 19px;
+            }
+        }
     }
 }
