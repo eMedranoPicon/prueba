@@ -1,33 +1,32 @@
 @font-face {
-    font-family: 'AkkuratStd';
-    src: url('../fonts/akkrgpro1.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/akkrgpro1.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/akkrgpro1.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/akkrgpro1.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/akkrgpro1.svg') format('svg'); /* Legacy iOS */
-    font-style: normal;
-    font-weight: normal;
+  font-family: 'AkkuratPro';
+  src: url('../fonts/AkkuratPro-Bold/AkkuratPro-Bold.eot') format('embedded-opentype');
+  src:  url('../fonts/AkkuratPro-Bold/AkkuratPro-Bold.otf')  format('opentype'),
+         url('../fonts/AkkuratPro-Bold/AkkuratPro-Bold.woff') format('woff'),
+         url('../fonts/AkkuratPro-Bold/AkkuratPro-Bold.ttf')  format('truetype'),
+         url('../fonts/AkkuratPro-Bold/AkkuratPro-Bold.svg#AkkuratPro-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'AkkuratStd-Bold';
-    src: url('../fonts/akkuratstdbold.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/akkuratstdbold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/akkuratstdbold.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/akkuratstdbold.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/akkuratstdbold.svg') format('svg'); /* Legacy iOS */
-    font-style: normal;
-    font-weight: normal;
+  font-family: 'AkkuratPro';
+  src: url('../fonts/AkkuratPro-Light/AkkuratPro-Light.eot') format('embedded-opentype');
+  src:  url('../fonts/AkkuratPro-Light/AkkuratPro-Light.otf')  format('opentype'),
+         url('../fonts/AkkuratPro-Light/AkkuratPro-Light.woff') format('woff'),
+         url('../fonts/AkkuratPro-Light/AkkuratPro-Light.ttf')  format('truetype'),
+         url('../fonts/AkkuratPro-Light/AkkuratPro-Light.svg#AkkuratPro-Bold') format('svg');
+  font-weight: 300;
+  font-style: normal;
 }
 
-
 @font-face {
-    font-family: 'AkkuratStd-Light';
-    src: url('../fonts/AkkuratStd-Light.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/AkkuratStd-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/AkkuratStd-Light.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/AkkuratStd-Light.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/AkkuratStd-Light.svg') format('svg'); /* Legacy iOS */
-    font-style: normal;
-    font-weight: normal;
+  font-family: 'AkkuratPro';
+  src: url('../fonts/AkkuratPro-Regular/AkkuratPro-Regular.eot') format('embedded-opentype');
+  src:  url('../fonts/AkkuratPro-Regular/AkkuratPro-Regular.otf')  format('opentype'),
+         url('../fonts/AkkuratPro-Regular/AkkuratPro-Regular.woff') format('woff'),
+         url('../fonts/AkkuratPro-Regular/AkkuratPro-Regular.ttf')  format('truetype'),
+         url('../fonts/AkkuratPro-Regular/AkkuratPro-Regular.svg#AkkuratPro-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }

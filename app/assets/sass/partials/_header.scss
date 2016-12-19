@@ -4,7 +4,7 @@ header {
     }
     .header__logo {
         background: $black-900;
-        padding: 16px 23px;
+        padding: 17px 23px;
         img {
             height: 32px;
         }
@@ -22,8 +22,7 @@ header {
             margin: 0;
             text-transform: uppercase;
             text-align: center;
-            font-family: $fontCoincLight;
-            padding: 18px 0;
+            padding: 19px 0;
             font-size: 25px;
             @media(max-width: $screen-xs-max) {
                 padding: 16px 0;

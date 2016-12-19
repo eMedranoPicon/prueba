@@ -431,10 +431,10 @@
 @mixin activateLabelForm() {
     color: $grey550;
     line-height: 20px;
-    font-family: $fontCoincLight;
+    font-weight: $fontWeightLight;
 }
 @mixin unactivateLabelForm() {
     color: $black-800;
     line-height: 44px;
-    font-family: $fontCoinc;
+    font-weight: $fontWeightNormal;
 }

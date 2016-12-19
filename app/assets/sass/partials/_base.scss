@@ -15,9 +15,13 @@ body {
     margin: 0 auto;
     background: $white;
     padding-bottom: 80px;
+    font-family: $fontCoinc;
     @media(max-width: $screen-xs-max) {
         min-width: $containerPhone;
     }
+}
+h1 {
+    font-family: $fontCoinc;
 }
 .container {
     padding-top: 35px;
@@ -28,12 +32,9 @@ a {
         font-size: 16px;
     }
 }
-// .container {
-//     position: relative;
-// }
-
-// .container .navbar-header,
-// .container .navbar-collapse {
-//     margin-right: 0;
-//     margin-left: 0;
-// }
+p {
+    font-weight: $fontWeightLight;
+    color: $black-800;
+    letter-spacing: -1px;
+    word-spacing: 2px;
+}
