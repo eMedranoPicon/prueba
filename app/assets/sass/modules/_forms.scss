@@ -12,9 +12,7 @@
 
     @keyframes active {
         from {
-            color: $black-800;
-            line-height: 44px;
-            font-family: $fontCoinc;
+            @include unactivateLabelForm();
         }
         to {
             @include activateLabelForm();
