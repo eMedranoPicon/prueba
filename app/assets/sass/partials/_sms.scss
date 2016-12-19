@@ -92,16 +92,45 @@
         }
     }
     @media(max-width: $screen-xs-max) {
+        .card-table {
+            padding: 0;
+        }
         .card-info {
+            padding-top: 8px;
+            margin-bottom: 17px;
             h1 {
                 font-size: 24px;
+                margin-top: 0;
+                margin-bottom: 5px;
             }
             .type {
                 font-size: 14px;
+                margin-bottom: 0;
             }
             .value {
                 font-size: 16px;
+                margin-bottom: 0;
             }
+        }
+        .card-number {
+            text-align: right;
+            padding-right: 30px;
+        }
+        .card-type {
+            padding-left: 40px;
+        }
+        .card-date {
+            padding-left: 30px;
+            border-top: 2px solid $white;
+            .type, .value {
+                float: left;
+            }
+            .value {
+                padding-left: 25px;
+            }
+        }
+        .card-cell {
+            padding-top: 4px;
         }
         .sms-info {
             max-width: 266px;
@@ -109,8 +138,12 @@
             padding: 5px 0;
             p {
                 font-size: 15px;
-                margin-bottom: 19px;
+                margin-bottom: 14px;
             }
+        }
+        .btn__accept {
+            margin-top: 0;
+            margin-bottom: 20px;
         }
     }
 }

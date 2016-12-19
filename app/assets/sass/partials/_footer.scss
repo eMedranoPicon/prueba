@@ -9,7 +9,6 @@ footer {
     p {
         float: left;
         margin: 14px 0;
-        font-family: $fontHelvetica;
         color: $white;
     }
     .copyright {
@@ -22,10 +21,14 @@ footer {
     a {
         &, &:hover, &:focus {
             color: $white;
-            font-family: $fontHelvetica;
             font-weight: $fontWeightLight;
             font-size: 14px;
         }
+    }
+    p, a {
+        font-family: $fontHelvetica;
+        letter-spacing: 0;
+        word-spacing: 0;
     }
     img {
         float: right;

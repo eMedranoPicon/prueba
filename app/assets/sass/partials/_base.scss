@@ -16,6 +16,9 @@ body {
     background: $white;
     padding-bottom: 80px;
     font-family: $fontCoinc;
+    @media(min-width: $screen-tablet) and (max-width: $screen-sm-max) {
+        overflow-x: hidden;
+    }
     @media(max-width: $screen-xs-max) {
         min-width: $containerPhone;
     }

@@ -29,6 +29,12 @@
     @media(max-width: $screen-sm-max) {
         margin-bottom: 35px;
     }
+    @media(max-width: $screen-xs-max) {
+        max-width: 325px;
+        font-size: 16px;
+        padding: 7px 18px;
+        margin-bottom: 20px;
+    }
 }
 
 .box__login {
@@ -63,6 +69,6 @@
     }
     @media(max-width: $screen-xs-max) {
         padding-top: 0;
-        margin-bottom: 17px;
+        margin-bottom: 11px;
     }
 }

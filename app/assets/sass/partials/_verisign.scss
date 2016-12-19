@@ -2,6 +2,9 @@
     text-align: right;
     img {
         height: 48px;
+        @media(max-width: $screen-xs-max) {
+            height: 35px;
+        }
     }
 }
 
@@ -12,6 +15,10 @@
     @media(max-width: $screen-sm-max) {
         text-align: center;
         margin-top: 65px;
+    }
+    @media(max-width: $screen-xs-max) {
+        text-align: center;
+        margin-top: 45px;
     }
 }
 
