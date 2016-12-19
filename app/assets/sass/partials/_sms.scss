@@ -1,4 +1,19 @@
 .sms-verify {
+    .card-table {
+        padding: 0 30px;
+        border-top: 2px solid $white;
+    }
+    .card-cell  {
+        padding-top: 13px;
+        border-left: 1px solid $white;
+        border-right: 1px solid $white;
+        &:first-child {
+            border-left: 0;
+        }
+        &:last-child {
+            border-right: 0;
+        }
+    }
     .card-info {
         h1 {
             font-weight: $fontWeightLight;
@@ -8,7 +23,7 @@
             letter-spacing: -1px;
             color: $green500;
             margin-top: 10px;
-            margin-bottom: 32px;
+            margin-bottom: 18px;
         }
         .type {
             font-size: 16px;
@@ -20,14 +35,15 @@
             font-size: 24px;
             color: $grey550;
             letter-spacing: -1px;
+            margin-bottom: 13px;
         }
         p {
             margin-bottom: 7px;
         }
         max-width: 647px;
-        margin: 0 auto 12px;
-        background: $gold-100;
-        padding: 10px 30px;
+        margin: 0 auto 16px;
+        background: $grey-100;
+        padding: 10px 0 0;
     }
     .sms-info {
         p {
@@ -54,13 +70,16 @@
         }
     }
     @media(max-width: $screen-sm-max) {
+        .card-info {
+            margin-bottom: 28px;
+        }
         .sms-info {
-            padding: 63px 0;
+            padding: 61px 0 68px;
             max-width: 647px;
             margin: 0 auto;
             p {
                 font-size: 22px;
-                margin-bottom: 34px;
+                margin-bottom: 31px;
             }
         }
         a {

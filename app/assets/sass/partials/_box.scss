@@ -26,12 +26,21 @@
     font-size: 18px;
     text-align: center;
     color: $black-800;
+    @media(max-width: $screen-sm-max) {
+        margin-bottom: 35px;
+    }
 }
 
 .box__login {
     max-width: 630px;
     margin: 0 auto;
-    padding: 43px 0 2px;
+    padding: 43px 0 20px;
+    @media(min-width: $screen-tablet) and (max-width: $screen-sm-max) {
+        max-width: 492px;
+        margin-top: 45px;
+        padding-top: 56px;
+        padding-bottom: 75px;
+    }
     @media(max-width: $screen-xs-max) {
         padding-top: 0;
         padding-bottom: 5px;
@@ -50,7 +59,7 @@
     margin: 0 auto 34px;
     padding: 24px 0 5px;
     @media(max-width: $screen-sm-max) {
-        margin-bottom: 52px;
+        margin-bottom: 46px;
     }
     @media(max-width: $screen-xs-max) {
         padding-top: 0;
