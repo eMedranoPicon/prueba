@@ -1,12 +1,17 @@
 .form-control {
     height: 44px;
     cursor: text;
-    padding: 18px 24px 0;
     &, &:focus {
         border-color: $green500;
         box-shadow: none;
     }
-    @media(max-width: $screen-sm-max) {
+    @if($versionDesktop) {
+        padding: 18px 24px 0;
+        @media(max-width: $screen-sm-max) {
+            padding: 18px 18px 0;
+        }
+    }
+    @if($versionPhone) {
         padding: 18px 18px 0;
     }
 }
@@ -32,18 +37,25 @@
     label {
         @include unactivateLabelForm();
         position: absolute;
-        padding: 0 24px;
         cursor: text;
         margin: 0;
         animation-name: unactive;
         animation-duration: 0.2s;
+        @if($versionDesktop) {
+            padding: 0 24px;
+            @media(max-width: $screen-sm-max) {
+                padding: 0px 18px;
+            }
+        }
+        @if($versionPhone) {
+            padding: 0px 18px;
+        }
         &.active {
             @include activateLabelForm();
             animation-name: active;
             animation-duration: 0.2s;
         }
-        @media(max-width: $screen-sm-max) {
-            padding: 0px 18px;
-        }
+
+        
     }
 }

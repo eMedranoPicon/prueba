@@ -1,0 +1,8 @@
+{% extends "/base/_base.html" %}
+{% from "/components/_verising.html" import visa_ctablet as verising %}
+
+{% block type %}desktop{% endblock %}
+{% block content %}
+	{% include "/includes/_login.html" %}
+	{{ verising() }}
+{% endblock %}

@@ -4,12 +4,16 @@ footer {
     bottom: 0;
     width: 100%;
     .container {
-        padding: 0;
+        padding-top: 0;
+        padding-bottom: 0;
     }
     p {
         float: left;
         margin: 14px 0;
         color: $white;
+        @if($versionPhone) {
+            font-size: 9px;
+        }
     }
     .copyright {
         &:after {
@@ -22,7 +26,12 @@ footer {
         &, &:hover, &:focus {
             color: $white;
             font-weight: $fontWeightLight;
-            font-size: 14px;
+            @if($versionDesktop) {
+                font-size: 14px;
+            }
+            @if($versionPhone) {
+                font-size: 9px;
+            }
         }
     }
     p, a {
@@ -32,20 +41,11 @@ footer {
     }
     img {
         float: right;
-        height: 30px;
-        margin: 9px 0;
-    }
-    @media(max-width: $screen-xs-max) {
-        padding: 0 16px;
-        p {
-            font-size: 9px;
+        @if($versionDesktop) {
+            height: 30px;
+            margin: 9px 0;
         }
-        a {
-            &, &:hover, &:focus {
-                font-size: 9px;
-            }
-        }
-        img {
+        @if($versionPhone) {
             height: 20px;
             margin: 9px 0;
         }

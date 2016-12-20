@@ -9,10 +9,10 @@ body {
     background: $white;
     padding-bottom: 80px;
     font-family: $fontCoinc;
-    @media(min-width: $screen-tablet) and (max-width: $screen-sm-max) {
-        overflow-x: hidden;
+    @if($versionDesktop) {
+        min-width: $containerDesktop
     }
-    @media(max-width: $screen-xs-max) {
+    @if($versionPhone) {
         min-width: $containerPhone;
     }
 }
@@ -21,6 +21,10 @@ h1 {
 }
 .container {
     padding-top: 35px;
+
+    @if($versionPhone) {
+        max-width: $containerPhone;
+    }
 }
 a {
     &, &:hover, &:focus {

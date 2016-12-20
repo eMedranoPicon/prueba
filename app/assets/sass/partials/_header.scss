@@ -4,11 +4,13 @@ header {
     }
     .header__logo {
         background: $black-900;
-        padding: 17px 23px;
-        img {
-            height: 32px;
+        @if($versionDesktop) {
+            padding: 17px 23px;
+            img {
+                height: 32px;
+            }
         }
-        @media(max-width: $screen-xs-max) {
+        @if($versionPhone) {
             padding: 12px 23px;
             img {
                 height: 25px;
@@ -22,9 +24,11 @@ header {
             margin: 0;
             text-transform: uppercase;
             text-align: center;
-            padding: 19px 0;
-            font-size: 25px;
-            @media(max-width: $screen-xs-max) {
+            @if($versionDesktop) {
+                padding: 19px 0;
+                font-size: 25px;
+            }
+            @if($versionPhone) {
                 padding: 16px 0;
                 font-size: 16px;
             }

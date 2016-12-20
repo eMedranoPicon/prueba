@@ -2,28 +2,30 @@
     text-align: right;
     img {
         height: 48px;
-        @media(max-width: $screen-xs-max) {
+        @if($versionPhone) {
             height: 35px;
         }
     }
 }
 
-.verisign__ctablet {
-    @media(min-width: $screen-desktop) {
-        margin-top: -30px;
+.verisign__cmiddle {
+    @if($versionDesktop) {
+        @media(min-width: $screen-desktop) {
+            margin-top: -30px;
+        }
+        @media(max-width: $screen-sm-max) {
+            text-align: center;
+            margin-top: 65px;
+        }
     }
-    @media(max-width: $screen-sm-max) {
-        text-align: center;
-        margin-top: 65px;
-    }
-    @media(max-width: $screen-xs-max) {
+    @if($versionPhone) {
         text-align: center;
         margin-top: 45px;
     }
 }
 
-.verisign__cphone {
-    @media(max-width: $screen-xs-max) {
+.verisign__csmall {
+    @if($versionPhone) {
         text-align: center;
         margin-top: 65px;
     }

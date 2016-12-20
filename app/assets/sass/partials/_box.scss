@@ -8,48 +8,60 @@
 }
 
 .box__desktop {
-    @media(max-width: $screen-sm-max) {
-        border: 0;
+    @if($versionDesktop) {
+        @media(max-width: $screen-sm-max) {
+            border: 0;
+        }
+    }
+    @if($versionPhone) {
+        ,.box__tablet {
+            border: 0;
+        }
     }
 }
 
-.box__tablet{
-    @media(max-width: $screen-xs-max), (min-width: $screen-desktop) {
-        border: 0;
+@if($versionDesktop) {
+    .box__tablet{
+        @media (min-width: $screen-desktop) {
+            border: 0;
+        }
     }
 }
 
 .box__info {
-    max-width: 410px;
-    margin: 0 auto 21px;
-    padding: 18px 40px;
-    font-size: 18px;
     text-align: center;
     color: $black-800;
-    @media(max-width: $screen-sm-max) {
-        margin-bottom: 35px;
+    @if($versionDesktop) {
+        max-width: 410px;
+        font-size: 18px;
+        padding: 18px 40px;
+        margin: 0 auto 21px;
+        @media(max-width: $screen-sm-max) {
+            margin-bottom: 35px;
+        }
     }
-    @media(max-width: $screen-xs-max) {
+    @if($versionPhone) {
         max-width: 325px;
         font-size: 16px;
         padding: 7px 18px;
-        margin-bottom: 20px;
+        margin: 0 auto 20px;
     }
 }
 
 .box__login {
     max-width: 630px;
     margin: 0 auto;
-    padding: 43px 0 20px;
-    @media(min-width: $screen-tablet) and (max-width: $screen-sm-max) {
-        max-width: 492px;
-        margin-top: 45px;
-        padding-top: 56px;
-        padding-bottom: 75px;
+    @if($versionDesktop) {
+        padding: 43px 0 20px;
+        @media(max-width: $screen-sm-max) {
+            max-width: 492px;
+            margin-top: 45px;
+            padding-top: 56px;
+            padding-bottom: 75px;
+        }
     }
-    @media(max-width: $screen-xs-max) {
-        padding-top: 0;
-        padding-bottom: 5px;
+    @if($versionPhone) {
+        padding: 0px 0 5px;
         border: 0;
     }
 }
@@ -62,13 +74,15 @@
 
 .box__sms {
     max-width: 900px;
-    margin: 0 auto 34px;
-    padding: 24px 0 5px;
-    @media(max-width: $screen-sm-max) {
-        margin-bottom: 46px;
+    @if($versionDesktop) {
+        margin: 0 auto 34px;
+        padding: 24px 0 5px;
+        @media(max-width: $screen-sm-max) {
+            margin-bottom: 46px;
+        }
     }
-    @media(max-width: $screen-xs-max) {
-        padding-top: 0;
-        margin-bottom: 11px;
+    @if($versionPhone) {
+        margin: 0 auto 11px;
+        padding: 0 0 5px;
     }
 }

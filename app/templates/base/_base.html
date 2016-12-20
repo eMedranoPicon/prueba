@@ -6,10 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href='css/styles.css' />
+        <link rel="stylesheet" href='../css/styles-{% block type %}{% endblock %}.css' />
 
-        <script src="js/vendor.js"></script>
-        <script src="js/scripts-app.js"></script>
+        <script src="../js/vendor.js"></script>
+        <script src="../js/scripts-app.js"></script>
         <!--[if lt IE 9]>
             <script src="js/old_browsers_support/es5-shim.min.js"></script>
             <script src="js/old_browsers_support/htm5shiv-printshiv.min.js"></script>
@@ -20,7 +20,7 @@
         <header>
             <div class="header__logo">
                 <div class="container">
-                    <img src="images/logo.png" alt="coinc" />
+                    <img src="../images/logo.png" alt="coinc" />
                 </div>
             </div>
             <div class="header__title">
@@ -35,9 +35,9 @@
         <footer>
             <div class="container">
                 <p><span class="copyright">@ COINC. Todos los derechos reservados.</span> <a href="#">Legal</a></p>
-                <img src="images/bankinter.png" alt="bankinter">
+                <img src="../images/bankinter.png" alt="bankinter">
             </div>
         </footer>
-        <script src="js/old_browsers_support/modernizr.js"></script>
+        <script src="../js/old_browsers_support/modernizr.js"></script>
     </body>
 </html>

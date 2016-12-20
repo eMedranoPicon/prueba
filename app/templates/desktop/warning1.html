@@ -2,6 +2,7 @@
 {% from "/components/_verising.html" import visa_cphone as verising %}
 {% from "/components/_warning.html" import message %}
 
+{% block type %}desktop{% endblock %}
 {% block content %}
 	{{ message('La autenticación de tu tarjeta no se ha podido realizar.',
 		'<p>Si continúa el error,<br /> revisa que tu tarjeta no haya caducado o no esté operativa.</p>

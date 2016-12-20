@@ -2,6 +2,7 @@
 {% from "/components/_verising.html" import visa_cphone as verising %}
 {% from "/components/_warning.html" import message %}
 
+{% block type %}phone{% endblock %}
 {% block content %}
 	{{ message('Nombre de usuario o contraseña incorrecto.',
 		'<p>Por la seguridad de tu cuenta,<br /> después de 3 intentos erróneos de acceso,<br /> hemos cancelado tus claves.</p>

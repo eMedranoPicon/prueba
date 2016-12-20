@@ -1,0 +1,13 @@
+{% extends "/base/_base.html" %}
+{% from "/components/_verising.html" import visa_cphone as verising %}
+{% from "/components/_warning.html" import message %}
+
+{% block type %}desktop{% endblock %}
+{% block content %}
+	{{ message('Nombre de usuario o contraseña incorrecto.',
+		'<p>Por la seguridad de tu cuenta,<br /> después de 3 intentos erróneos de acceso,<br /> hemos cancelado tus claves.</p>
+		<p>Para recuperarlas<br /> llama al teléfono gratuito 902 88 30 15<br /> o entra en www.coinc.es</p>',
+		'Cerrar'
+	) }}
+	{{ verising() }}
+{% endblock %}

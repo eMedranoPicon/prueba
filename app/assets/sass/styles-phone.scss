@@ -1,0 +1,11 @@
+$versionDesktop: false;
+$versionPhone: true;
+
+// Vendor sass files
+@import "../../../node_modules/family.scss/source/src/_family.scss";
+
+// Src files
+@import "variables/all";
+@import "modules/all";
+
+@import "partials/all";

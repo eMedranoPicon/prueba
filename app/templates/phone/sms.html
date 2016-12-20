@@ -1,8 +1,8 @@
 {% extends "/base/_base.html" %}
 {% from "/components/_verising.html" import visa_cphone as verising %}
 
+{% block type %}phone{% endblock %}
 {% block content %}
-	{% include "/includes/_sms.html" %}
+	{% include "/includes/_sms-phone.html" %}
 	{{ verising() }}
-	
 {% endblock %}

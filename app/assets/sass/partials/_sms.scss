@@ -1,10 +1,20 @@
 .sms-verify {
     .card-table {
-        padding: 0 30px;
         border-top: 2px solid $white;
+        @if($versionDesktop) {
+            padding: 0 30px;
+        }
+        @if($versionPhone) {
+            padding: 0;
+        }
     }
     .card-cell  {
-        padding-top: 13px;
+        @if($versionDesktop) {
+            padding-top: 13px;
+        }
+        @if($versionPhone) {
+            padding-top: 4px;
+        }
         border-left: 1px solid $white;
         border-right: 1px solid $white;
         &:first-child {
@@ -15,104 +25,123 @@
         }
     }
     .card-info {
+        max-width: 647px;
+        background: $grey-100;
+        @if($versionDesktop) {
+            margin: 0 auto 16px;
+            padding: 10px 0 0;
+        }
+        @if($versionPhone) {
+            margin: 0 auto 17px;
+            padding: 8px 0 0;
+        }
         h1 {
             font-weight: $fontWeightLight;
-            font-size: 48px;
             text-align: center;
-            word-spacing: -1px;
             letter-spacing: -1.5px;
             color: $green500;
-            margin-top: 10px;
-            margin-bottom: 18px;
-        }
-        .type {
-            font-size: 16px;
-            color: $black-800;
-            margin-bottom: 2px;
-        }
-        .value {
-            font-weight: $fontWeightNormal;
-            font-size: 24px;
-            color: $grey550;
-            letter-spacing: -1px;
-            margin-bottom: 13px;
-        }
-        p {
-            margin-bottom: 7px;
-        }
-        max-width: 647px;
-        margin: 0 auto 16px;
-        background: $grey-100;
-        padding: 10px 0 0;
-    }
-    .sms-info {
-        p {
-            font-weight: $fontWeightNormal;
-            font-size: 16px;
-            color: $black-800;
-            margin-bottom: 16px;
-        }
-    }
-    .btn {
-        max-width: 266px;
-    }
-    @media(min-width: $screen-desktop) {
-        .btn__close {
-            float: right;
-            margin-right: 44px;
-        }
-        .btn__accept {
-            margin-left: 44px;
-        }
-        a {
-            padding: 10px 0;
-            display: inline-block;
-        }
-    }
-    @media(max-width: $screen-sm-max) {
-        .card-info {
-            margin-bottom: 28px;
-        }
-        .sms-info {
-            padding: 61px 0 68px;
-            max-width: 647px;
-            margin: 0 auto;
-            p {
-                font-size: 22px;
-                margin-bottom: 31px;
+            @if($versionDesktop) {
+                font-size: 48px;
+                word-spacing: -1px;
+                margin-top: 10px;
+                margin-bottom: 18px;
             }
-        }
-        a {
-            display: block;
-            text-align: center;
-        }
-        .btn__accept {
-            margin-top: 15px;
-            margin-bottom: 27px;
-        }
-    }
-    @media(max-width: $screen-xs-max) {
-        .card-table {
-            padding: 0;
-        }
-        .card-info {
-            padding-top: 8px;
-            margin-bottom: 17px;
-            h1 {
+            @if($versionPhone) {
                 font-size: 24px;
                 word-spacing: 0;
                 margin-top: 0;
                 margin-bottom: 5px;
             }
-            .type {
+        }
+        .type {
+            color: $black-800;
+            @if($versionDesktop) {
+                font-size: 16px;
+                margin-bottom: 2px;
+            }
+            @if($versionPhone) {
                 font-size: 14px;
                 margin-bottom: 0;
             }
-            .value {
+        }
+        .value {
+            font-weight: $fontWeightNormal;
+            color: $grey550;
+            letter-spacing: -1px;
+            @if($versionDesktop) {
+                font-size: 24px;
+                margin-bottom: 13px;
+            }
+            @if($versionPhone) {
                 font-size: 16px;
                 margin-bottom: 0;
             }
         }
+        p {
+            margin-bottom: 7px;
+        }
+        
+    }
+    .sms-info {
+        p {
+            font-weight: $fontWeightNormal;
+            color: $black-800;
+            @if($versionDesktop) {
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+            @if($versionPhone) {
+                font-size: 15px;
+                margin-bottom: 14px;
+            }
+        }
+        @if($versionPhone) {
+            max-width: 266px;
+            margin: 0 auto;
+            padding: 5px 0;
+        }
+    }
+    .btn {
+        max-width: 266px;
+    }
+    @if($versionDesktop) {
+        @media(min-width: $screen-desktop) {
+            .btn__close {
+                float: right;
+                margin-right: 44px;
+            }
+            .btn__accept {
+                margin-left: 44px;
+            }
+            a {
+                padding: 10px 0;
+                display: inline-block;
+            }
+        }
+        @media(max-width: $screen-sm-max) {
+            .card-info {
+                margin-bottom: 28px;
+            }
+            .sms-info {
+                padding: 61px 0 68px;
+                max-width: 647px;
+                margin: 0 auto;
+                p {
+                    font-size: 22px;
+                    margin-bottom: 31px;
+                }
+            }
+            a {
+                display: block;
+                text-align: center;
+            }
+            .btn__accept {
+                margin-top: 15px;
+                margin-bottom: 27px;
+            }
+        }
+    }
+    @if($versionPhone) {
         .card-number {
             text-align: right;
             padding-right: 30px;
@@ -130,17 +159,9 @@
                 padding-left: 25px;
             }
         }
-        .card-cell {
-            padding-top: 4px;
-        }
-        .sms-info {
-            max-width: 266px;
-            margin: 0 auto;
-            padding: 5px 0;
-            p {
-                font-size: 15px;
-                margin-bottom: 14px;
-            }
+        a {
+            display: block;
+            text-align: center;
         }
         .btn__accept {
             margin-top: 0;

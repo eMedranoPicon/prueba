@@ -5,50 +5,56 @@
     }
     h1 {
         font-family: $fontCoinc;
-        font-size: 22px;
         color: $black-800;
-        margin: 24px 0 18px;
+        @if($versionDesktop) {
+            font-size: 22px;
+            margin: 24px 0 18px;
+        }
+        @if($versionPhone) {
+            font-size: 16px;
+            margin: 21px 0 16px;
+        }
     }
     p {
-        margin-bottom: 8px;
-        font-size: 18px;
         color: $black-800;
+        @if($versionDesktop) {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        @if($versionPhone) {
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
         span {
             display: block;
         }
     }
     .box__warning {
-        margin-bottom: 51px;
+        @if($versionDesktop) {
+            margin-bottom: 51px;
+        }
+        @if($versionPhone) {
+            margin-bottom: 16px;
+        }
     }
     .btn {
         max-width: 266px;
     }
-    @media(min-width: $screen-tablet) and (max-width: $screen-sm-max) {
-        margin-top: 43px;
-        img {
-            width: 144px;
-        }
-        h1 {
-            margin-top: 71px;
-        }
-        p {
-            margin-bottom: 5px;
-        }
-        .box__warning {
-            margin-bottom: 130px;
-        }
-    }
-    @media(max-width: $screen-xs-max) {
-        h1 {
-            font-size: 16px;
-            margin: 21px 0 16px;
-        }
-        p {
-            margin-bottom: 12px;
-            font-size: 15px;
-        }
-        .box__warning {
-            margin-bottom: 16px;
+    @if($versionDesktop) {
+        @media (max-width: $screen-sm-max) {
+            margin-top: 43px;
+            img {
+                width: 144px;
+            }
+            h1 {
+                margin-top: 71px;
+            }
+            p {
+                margin-bottom: 5px;
+            }
+            .box__warning {
+                margin-bottom: 130px;
+            }
         }
     }
 }
