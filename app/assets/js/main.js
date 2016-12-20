@@ -1,18 +1,15 @@
-/*
-INICIALIZACIÓN DE LOS SCRIPTS
-*/
 $(document).ready(function () {
     "use strict";
-    $('input').focus(function() {
+    $("input").focus(function() {
         var input = $(this);
-        var id = input.attr('id');
-        var label = $('label[for="'+id+'"]');
-        label.addClass('active');
+        var id = input.attr("id");
+        var label = $("label[for=\""+id+"\"]");
+        label.addClass("active");
     });
-    $('input').blur(function() {
+    $("input").blur(function() {
         var input = $(this);
-        var id = input.attr('id');
-        var label = $('label[for="'+id+'"]');
-        label.removeClass('active');
+        var id = input.attr("id");
+        var label = $("label[for=\""+id+"\"]");
+        label.removeClass("active");
     });
 });

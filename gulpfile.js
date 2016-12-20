@@ -1,242 +1,225 @@
-// Include gulp
+
 var gulp = require('gulp');
+var path = require('path');
+var jshint = require('gulp-jshint');
+var autoprefixer = require('gulp-autoprefixer');
+var sass = require('gulp-sass');
+var minifycss = require('gulp-minify-css');
+var runSequence = require('run-sequence');
+var concat = require('gulp-concat');
+var shell = require('gulp-shell');
+var connect = require('gulp-connect');
+var notify = require('gulp-notify');
+var del = require('del');
+var uglify = require('gulp-uglify');
 
-// Include Our Plugins
-var autoprefixer = require('gulp-autoprefixer'),
-  cache = require('gulp-cache'),
-  concat = require('gulp-concat'),
-  consolidate = require('gulp-consolidate'),
-  del = require('del'),
-  ghelp = require('gulp-showhelp'),
-  iconfont = require('gulp-iconfont'),
-  jshint = require('gulp-jshint'),
-  karma = require('gulp-karma'),
-  minifycss = require('gulp-minify-css'),
-  notify = require('gulp-notify'),
-  path = require('path'),
-  rename = require('gulp-rename'),
-  runSequence = require('run-sequence'),
-  sass = require('gulp-sass'),
-  sassdoc = require('sassdoc'),
-  shell = require('gulp-shell'),
-  connect = require('gulp-connect'),
-  uglify = require('gulp-uglify');
 
-var src_app = './app',
-  src_base_dir = './app/assets',
-  src_js_files = [
-    path.join(src_base_dir, 'js/plugins', '**', '*.js'),
-    path.join(src_base_dir, 'js', '*.js')
-  ],
-  tests_js_files = path.join(src_base_dir, 'test/specs', 'js', '*.js'),
-  src_sass_files = path.join(src_base_dir, 'sass', '**', '*.scss'),
 
-  dist_base_dir = './app/dist',
-  dist_js_dir = path.join(dist_base_dir, 'js'),
-  dist_css_dir = path.join(dist_base_dir, 'css'),
-  dist_html_dir = path.join(src_app, 'templates'),
-  // dist_legacy_js_dir  = path.join(dist_js_dir, 'legacy'),
-  // dist_legacy_css_dir = path.join(dist_css_dir, 'legacy'),
-  src_html_files = path.join(dist_html_dir, '**', '*.html'),
-  config_dir = './config',
+var config_dir = './config';
+var src_app   = './app';
+var src_assets   = path.join(src_app, 'assets');
+var src_vendor  = path.join(src_assets, 'vendor');
+var src_dist  = path.join(src_app, 'dist');
 
-  vendor_js_src = [
+
+var src_js_old_browsers = path.join(src_vendor, 'js/old_browsers_support', '**', '*');
+var src_js_files = path.join(src_assets, 'js', '**', '*.js');
+var src_sass_desktop = path.join(src_assets, 'sass', 'styles-desktop.scss');
+var src_sass_phone = path.join(src_assets, 'sass', 'styles-phone.scss');
+var src_sass = path.join(src_assets, 'sass', '**', '*.scss');
+var src_js = path.join(src_assets, 'js', '**', '*.js');
+var src_fonts = path.join(src_assets, 'fonts', '**');
+var src_images = path.join(src_assets, 'images', '**');
+var src_html_files = path.join(src_app, 'templates', '**', '*.html');
+
+var src_dist_js_old_browsers = 'js/old_browsers_support';
+var src_dist_css = 'css';
+var src_dist_js = 'js';
+var src_dist_fonts = 'fonts';
+var src_dist_images = 'images';
+var src_dist_desktop  = path.join(src_dist, 'desktop');
+var src_dist_phone  = path.join(src_dist, 'phone');
+
+var vendor_source_maps = [
+    './bower_components/jquery/dist/jquery.min.map',
+    './bower_components/progressbar.js/dist/progressbar.min.js.map'
+];
+var vendor_js_src = [
     './bower_components/jquery/jquery.min.js',
     './bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js',
     './bower_components/jquery-ui/jquery-ui.min.js'
-  ],
-  vendor_css_src = [
-  ],
-  // legacy_js_src  = path.join(src_base_dir, 'legacy/js', '**', '*.js'),
-  // legacy_css_src = path.join(src_base_dir, 'legacy/css', '**', '*.css'),
-  vendor_source_maps = [
-    './bower_components/jquery/dist/jquery.min.map',
-    './bower_components/progressbar.js/dist/progressbar.min.js.map'
-  ];
+];
 
-gulp.task('jshint', function() {
-  return gulp.src(src_js_files)
-    .pipe(jshint(path.join(config_dir, 'dev.jshintrc')))
-    .pipe(jshint.reporter('jshint-stylish', {
-      verbose: true
-    }));
-}).help = 'Analyzes js code quality with jshint according default config file.';
 
+gulp.task('clean', function(cb) {
+    del([src_dist], cb)
+}).help = 'Removes files in css and javascript destination folders.';
+
+gulp.task('old_browsers', function() {
+    return gulp
+        .src([src_js_old_browsers])
+        .pipe(gulp.dest(path.join(src_dist_desktop, src_dist_js_old_browsers)))
+        .pipe(gulp.dest(path.join(src_dist_phone, src_dist_js_old_browsers)));
+});
 
 gulp.task('jshint-dist', function() {
-  return gulp.src(src_js_files)
-    .pipe(jshint(path.join(config_dir, 'dist.jshintrc')))
-    .pipe(jshint.reporter('jshint-stylish'));
+    return gulp
+        .src(src_js_files)
+        .pipe(jshint(path.join(config_dir, 'dist.jshintrc')))
+        .pipe(jshint.reporter('jshint-stylish'));
 }).help = 'Analyzes js code quality with jshint according dist config file.';
 
-
-gulp.task('sass', function() {
-  return gulp.src(src_sass_files)
-    .pipe(sass({
-      errLogToConsole: true,
-      outputStyle: 'expanded',
-      sourceComments: true
-    }))
-    .pipe(autoprefixer({
-      browsers: ['last 3 version', 'ie >= 10']
-    }))
-    .pipe(gulp.dest(dist_css_dir));
-}).help = 'Compiles and autoprefixes sass source files.';
-
-
+gulp.task('sass-desktop-min', function() {
+    return gulp
+        .src(src_sass_desktop)
+        .pipe(sass({
+            errLogToConsole: true,
+            outputStyle: 'compressed',
+            sourceComments: false
+        }))
+        .pipe(autoprefixer({
+            browsers: ['last 3 version', 'ie >= 10']
+        }))
+        .pipe(minifycss())
+        .pipe(gulp.dest(path.join(src_dist_desktop, src_dist_css)));
+}).help = 'Compiles, minifies and autoprefixes sass desktop source files.';
+gulp.task('sass-phone-min', function() {
+    return gulp
+        .src(src_sass_phone)
+        .pipe(sass({
+            errLogToConsole: true,
+            outputStyle: 'compressed',
+            sourceComments: false
+        }))
+        .pipe(autoprefixer({
+            browsers: ['last 3 version', 'ie >= 10']
+        }))
+        .pipe(minifycss())
+        .pipe(gulp.dest(path.join(src_dist_phone, src_dist_css)));
+}).help = 'Compiles, minifies and autoprefixes sass phone source files.';
 gulp.task('sass-min', function() {
-  return gulp.src(src_sass_files)
-    .pipe(sass({
-      errLogToConsole: true,
-      outputStyle: 'compressed',
-      sourceComments: false
-    }))
-    .pipe(autoprefixer({
-      browsers: ['last 3 version', 'ie >= 10']
-    }))
-    .pipe(minifycss())
-    .pipe(gulp.dest(dist_css_dir));
+    runSequence(['sass-desktop-min', 'sass-phone-min']);
 }).help = 'Compiles, minifies and autoprefixes sass source files.';
 
-
-gulp.task('vendor-css', function() {
-  return gulp.src(vendor_css_src)
-    .pipe(concat('vendor.css'))
-    .pipe(gulp.dest(dist_css_dir));
-}).help = 'Concatenates css vendor files.';
-
+gulp.task('sass-desktop', function() {
+    return gulp
+        .src(src_sass_desktop)
+        .pipe(sass({
+            errLogToConsole: true,
+            outputStyle: 'compressed',
+            sourceComments: false
+        }))
+        .pipe(autoprefixer({
+            browsers: ['last 3 version', 'ie >= 10']
+        }))
+        .pipe(gulp.dest(path.join(src_dist_desktop, src_dist_css)));
+}).help = 'Compiles, minifies and autoprefixes sass desktop source files.';
+gulp.task('sass-phone', function() {
+    return gulp
+        .src(src_sass_phone)
+        .pipe(sass({
+            errLogToConsole: true,
+            outputStyle: 'compressed',
+            sourceComments: false
+        }))
+        .pipe(autoprefixer({
+            browsers: ['last 3 version', 'ie >= 10']
+        }))
+        .pipe(gulp.dest(path.join(src_dist_phone, src_dist_css)));
+}).help = 'Compiles, minifies and autoprefixes sass phone source files.';
+gulp.task('sass', function() {
+    runSequence(['sass-desktop-min', 'sass-phone-min']);
+}).help = 'Compiles, minifies and autoprefixes sass source files.';
 
 gulp.task('vendor-scripts', function() {
-  gulp.src(vendor_source_maps)
-    .pipe(gulp.dest(dist_js_dir));
+    gulp.src(vendor_source_maps)
+        .pipe(gulp.dest(path.join(src_dist_desktop, src_dist_js)))
+        .pipe(gulp.dest(path.join(src_dist_phone, src_dist_js)));
 
-  return gulp.src(vendor_js_src)
-    .pipe(concat('vendor.js'))
-    .pipe(gulp.dest(dist_js_dir));
+    return gulp.src(vendor_js_src)
+        .pipe(concat('vendor.js'))
+        .pipe(gulp.dest(path.join(src_dist_desktop, src_dist_js)))
+        .pipe(gulp.dest(path.join(src_dist_phone, src_dist_js)));
 }).help = 'Concatenates javascript vendor files.';
 
-gulp.task('scripts', function() {
-  return gulp.src(src_js_files)
-    .pipe(concat('scripts-app.js'))
-    .pipe(gulp.dest(dist_js_dir));
-}).help = 'Concatenates all js files.';
-
-
 gulp.task('scripts-min', function() {
-  return gulp.src(src_js_files)
-    .pipe(concat('scripts-app.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest(dist_js_dir));
+    return gulp
+        .src(src_js)
+        .pipe(concat('scripts-app.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(path.join(src_dist_desktop, src_dist_js)))
+        .pipe(gulp.dest(path.join(src_dist_phone, src_dist_js)));
 }).help = 'Concatenates and minifies all js files.';
 
+gulp.task('fonts', function() {
+    return gulp
+        .src(src_fonts)
+        .pipe(gulp.dest(path.join(src_dist_desktop, src_dist_fonts)))
+        .pipe(gulp.dest(path.join(src_dist_phone, src_dist_fonts)));
+}).help = 'Copy fonts files.';
 
-// gulp.task('legacy-scripts', function () {
-//     return gulp.src(legacy_js_src)
-//         .pipe(gulp.dest(dist_legacy_js_dir));
-// }).help = 'Copy legacy javascript files.';
+gulp.task('images', function() {
+    return gulp
+        .src(src_images)
+        .pipe(gulp.dest(path.join(src_dist_desktop, src_dist_images)))
+        .pipe(gulp.dest(path.join(src_dist_phone, src_dist_images)));
+}).help = 'Copy images files.';
 
+gulp.task('scripts', function() {
+    return gulp
+        .src(src_js)
+        .pipe(concat('scripts-app.js'))
+        .pipe(gulp.dest(path.join(src_dist_desktop, src_dist_js)))
+        .pipe(gulp.dest(path.join(src_dist_phone, src_dist_js)));
+}).help = 'Concatenates and minifies all js files.';
 
-// gulp.task('legacy-css', function () {
-//     return gulp.src(legacy_css_src)
-//         .pipe(gulp.dest(dist_legacy_css_dir));
-// }).help = 'Copy legacy css files.';
+gulp.task('jinja', function() {
+    return gulp
+        .src('', {
+            read: false
+        })
+        .pipe(shell(['python3 ./build.py']));
+});
 
 
 gulp.task('watch', function() {
-  gulp.watch(src_js_files, ['jshint', 'scripts']);
-  gulp.watch(src_sass_files, ['sass']);
-  gulp.watch(src_html_files, ['jinja']);
+    gulp.watch(src_js, ['jshint-dist', 'scripts']);
+    gulp.watch(src_sass, ['sass']);
+    gulp.watch(src_html_files, ['jinja']);
 }).help = 'Keeps watching for changes in sass (trigger jshint and scripts) and javascript (trigger sass).';
 
-gulp.task('clean', function(cb) {
-  del([dist_js_dir, dist_css_dir], cb);
-}).help = 'Removes files in css and javascript destination folders.';
-
-gulp.task('clean-sass', function(cb) {
-  del(dist_css_dir, cb);
-}).help = 'Removes files in css destination folder.';
-
-gulp.task('clean-js', function(cb) {
-  del(dist_css_dir, cb);
-}).help = 'Removes files in javascript destination folder.';
-
-gulp.task('clean-templates', function(cb) {
-  del(dist_html_dir, cb);
-}).help = 'Removes files in html destination folder.';
-
-gulp.task('help', function() {
-  ghelp.show();
-}).help = 'Shows this help message.';
-
-gulp.task('test', function() {
-  return gulp.src(tests_js_files)
-    .pipe(karma({
-      configFile: path.join(config_dir, 'karma.conf.js'),
-      action: 'watch'
-    }));
-}).help = 'Runs the test suite and watch for changes.';
-
-gulp.task('test-dist', function() {
-  return gulp.src(tests_js_files)
-    .pipe(karma({
-      configFile: path.join(config_dir, 'karma.conf.js'),
-      action: 'run',
-      browsers: ['Chrome', 'Firefox', 'Opera', 'PhantomJS']
-    }));
-}).help = 'Runs once the test suite in all browsers.';
-
-gulp.task('jinja', function() {
-  return gulp.src('', {
-      read: false
-    })
-    .pipe(shell(['python3 ./build.py']));
-});
-
-gulp.task('images', function() {
-  return gulp.src(['app/assets/images/**/*']).pipe(gulp.dest('app/dist/images'));
-});
-
-gulp.task('fonts', function() {
-  return gulp.src(['app/assets/fonts/**/*']).pipe(gulp.dest('app/dist/fonts'));
-});
-
-gulp.task('old_browsers', function() {
-  return gulp.src(['app/assets/js/old_browsers_support/**/*']).pipe(gulp.dest('app/dist/js/old_browsers_support'));
-});
-
 gulp.task('connect', function() {
-  return connect.server({
-    root: './app/dist',
-    port: 7000,
-    livereload: false
-  });
+    return connect.server({
+        root: './app/dist',
+        port: 7000,
+        livereload: false
+    });
 });
+
 
 gulp.task('default', function() {
-  runSequence(
-    ['old_browsers', 'fonts', 'images', 'jshint', 'sass', 'vendor-css', 'vendor-scripts', 'scripts', 'jinja'],
-    // ['legacy-scripts', 'legacy-css'],
-    ['watch', 'connect'], // by default test are excluded of default task but it could be included with 'test' task
-    function() {
-      gulp.src('').pipe(notify({
-        title: 'Development',
-        message: 'Built task done, now watching for changes...'
-      }));
-    }
-  );
+    runSequence(
+        ['old_browsers', 'jshint-dist', 'fonts', 'images', 'sass', 'vendor-scripts', 'scripts', 'jinja'],
+        ['watch', 'connect'],
+        function() {
+            gulp.src('').pipe(notify({
+                title: 'Development',
+                message: 'Built task done, now watching for changes...'
+            }));
+        }
+    );
 }).help = 'Build assets for development. Executes jshint, sass, vendor-scripts and scripts. Keeps watching for changes';
 
 
 gulp.task('dist', function() {
-  runSequence(
-    'clean',
-    ['old_browsers', 'jshint-dist', 'sass-min', 'vendor-css', 'vendor-scripts', 'scripts-min', 'jinja'],
-    // ['legacy-scripts', 'legacy-css'],
-    function() {
-      gulp.src('').pipe(notify({
-        title: 'Dist',
-        message: 'Build task done!'
-      }));
-    }
-  );
-}).help = 'Build assets for production. Executes clean, sass-min, jshint-dist, vendor-scripts and scripts.';
+    runSequence(
+        'clean',
+        ['old_browsers', 'jshint-dist', 'fonts', 'images', 'sass-min', 'vendor-scripts', 'scripts-min', 'jinja'],
+        function() {
+            gulp.src('').pipe(notify({
+                title: 'Dist',
+                message: 'Build task done!'
+            }));
+        }
+      );
+}).help = 'Build asset for production. Executes clean, sass-min, jshint-dist, vendor-scripts and scripts.';
