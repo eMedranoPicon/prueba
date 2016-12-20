@@ -1,10 +1,13 @@
 .form-control {
     height: 44px;
     cursor: text;
-    padding: 18px 15px 0;
+    padding: 18px 24px 0;
     &, &:focus {
         border-color: $green500;
         box-shadow: none;
+    }
+    @media(max-width: $screen-sm-max) {
+        padding: 18px 18px 0;
     }
 }
 .form-group {
@@ -38,6 +41,9 @@
             @include activateLabelForm();
             animation-name: active;
             animation-duration: 0.2s;
+        }
+        @media(max-width: $screen-sm-max) {
+            padding: 0px 18px;
         }
     }
 }
