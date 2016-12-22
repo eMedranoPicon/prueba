@@ -9,5 +9,6 @@ app/dist/*
 bower_components/*
 node_modules/*
 context_vars/__pycache__/
+release/
 __pycache__
 .DS_Store
