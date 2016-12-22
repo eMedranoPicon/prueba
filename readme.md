@@ -23,16 +23,12 @@
 
    Main tasks:
 
-   gulp sass  
-   gulp sass-lint  
-   gulp scripts  
-   gulp jshint
+   gulp default  
+   gulp dist  
+   gulp dist --release  
 
-   Default task include the following tasks 'sass-lint', 'jshint', 'sass', 'vendor-scripts', 'scripts' and 'watch'. 'test' was removed by it could be included again if it is necesary.
+   Default task include the following tasks 'sass-lint', 'jshint', 'sass', 'vendor-scripts', 'scripts' and 'watch'.
 
-
-3. Important: If I forgot something, call me, ask jewellery boys or better 
-   call Saul ;)
 
 
 # Useful links
@@ -47,28 +43,21 @@
   * [OOCSS] (http://appendto.com/2014/04/oocss) introduction
   * [Javascript patterns] (http://shichuan.github.io/javascript-patterns)
 
-2. Testing resources:
+2. Gulp plugins
 
-  * [Karma] (http://karma-runner.github.io/0.12/intro/how-it-works.html) test runner
-  * [Jasmine] (http://jasmine.github.io/2.0/introduction.html) testing framework
-  * [Jasmine-query] (https://github.com/velesin/jasmine-jquery/) extension for Jasmine
-  * [PhantomJS] (http://phantomjs.org)  headless WebKit scriptable with a JavaScript API
-  * [Jasmine Spy Cheatsheet] (http://tobyho.com/2011/12/15/jasmine-spy-cheatsheet)
-  * [Spying on JS methods with Jasmine] (http://blog.codeship.com/jasmine-spyon) how to
-  * [Basic jQuery testing with Jasmine] (http://matthewroach.me/basic-jquery-testing-with-jasmine-part-1) how to
-
-3. Gulp plugins
-
-  * [autoprefixer] (https://www.npmjs.org/package/gulp-autoprefixer/)
-  * [cache] (https://www.npmjs.org/package/gulp-cache/)
-  * [concat] (https://www.npmjs.org/package/gulp-concat/)
   * [del] (https://www.npmjs.org/package/del/)
-  * [showhelp] (https://www.npmjs.org/package/gulp-showhelp/)
-  * [jshint] (https://www.npmjs.org/package/gulp-jshint/)
-  * [karma] (https://www.npmjs.org/package/gulp-karma/)
-  * [minifycss] (https://www.npmjs.org/package/gulp-minify-css/)
-  * [notify] (https://www.npmjs.org/package/gulp-notify/)
-  * [rename] (https://www.npmjs.org/package/gulp-rename/)
-  * [runSequence] (https://www.npmjs.org/package/run-sequence/)
-  * [sass] (https://www.npmjs.org/package/gulp-sass/)
-  * [uglify] (https://www.npmjs.org/package/gulp-uglify/)
+  * [gulp-autoprefixer] (https://www.npmjs.com/package/gulp-autoprefixer/)
+  * [gulp-concat] (https://www.npmjs.com/package/gulp-concat/)
+  * [gulp-connect] (https://www.npmjs.com/package/gulp-connect/)
+  * [gulp-github-release] (https://www.npmjs.com/package/gulp-git-release/)
+  * [gulp-jshint] (https://www.npmjs.com/package/gulp-jshint/)
+  * [gulp-minify-css] (https://www.npmjs.com/package/gulp-minify-css/)
+  * [gulp-notify] (https://www.npmjs.com/package/gulp-notify/)
+  * [gulp-prompt] (https://www.npmjs.com/package/gulp-prompt/)
+  * [gulp-sass] (https://www.npmjs.com/package/gulp-sass/)
+  * [gulp-shell] (https://www.npmjs.com/package/gulp-shell/)
+  * [gulp-uglify] (https://www.npmjs.com/package/gulp-uglify/)
+  * [gulp-zip] (https://www.npmjs.com/package/gulp-zip/)
+  * [jshint-stylish] (https://www.npmjs.com/package/jshint-stylish/)
+  * [run-sequence] (https://www.npmjs.com/package/run-sequence/)
+  * [yargs] (https://www.npmjs.com/package/yargs/)
