@@ -1,0 +1,68 @@
+.header {
+    margin-bottom: 0;
+    background: black;
+    padding-bottom: 15px;
+}
+
+.degradado_gris,
+.fondo_negro_punteado{
+	display: none;
+}
+
+.boton_registro{
+	display: block;
+	padding: 10px 70px;
+	border-radius: 30px;
+	font-size: 15px;
+	border: none;
+	margin: 0 auto;
+	outline: none;
+	margin-bottom: 20px;
+}
+
+.boton_negro{
+	background-color: black;
+	color: white;
+}
+
+.cabecera_condiciones img{
+    margin: 0 auto;
+    display: block;
+}
+
+.titulo_condiciones{
+	text-align: center;
+	font-size: 20px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+.bordeado{
+	background-color: white;
+    border: 1px solid #CECECE;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+.titulo_seccion{
+	font-weight: bold;
+    padding: 10px 15px;
+}
+
+.text_bold{
+	font-weight: bold;
+}
+
+@media (min-width: 768px){
+	.topHeader {
+	    background: none;
+	}
+}
+
+@media (max-width: 767px){
+	.header {
+	    margin-bottom: 0;
+	    background: none;
+	    height: 65px;
+	}
+}

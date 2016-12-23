@@ -1,0 +1,173 @@
+.btn-commandButton {
+  text-transform: uppercase;
+  font-family: AkkuratLightPro,Arial,sans-serif;
+  color: #fff;
+  border-radius: 25px;
+  border: 1px solid #fff;
+  width: 13rem;
+  background-color: rgba(255,255,255,0);
+  margin-top: 3rem;
+}
+
+.btn-razones {
+  text-transform: uppercase;
+  font-family: AkkuratLightPro,Arial,sans-serif;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 25px;
+  border: 0 solid;
+  padding: 10px 42px;
+  background-color: #99b745;
+  display: block;
+  text-align: center;
+  margin: 4rem auto;
+}
+
+.btn-empezar {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: AkkuratLightPro,Arial,sans-serif;
+  color: #fff;
+  border-radius: 25px;
+  padding: 6px 24px;
+  background-color: #171415;
+}
+
+.btn-metas {
+  padding: 6px 20px;
+  font-size: 13px;
+  margin-left: 5px;
+  color: #fff;
+}
+
+.btn-entrar {
+  font-size: 12px;
+  background-color: #000;
+  border-color: #adadad;
+  text-decoration: none;
+  font-family: AkkuratLightPro,Arial,sans-serif;
+  color: #fff;
+  border-radius: 25px;
+  padding: 6px 38px;
+}
+
+.box_content_remember {
+  background: #f3fafc;
+  padding: 2px 2px 2px 2px;
+  width: 200px;
+  margin: -8px 0px 20px 80px;
+  height: 80px;
+  border-radius: 6px;
+}
+
+.box_content_remember_icono {
+  height: 90px;
+  width: 35px;
+  margin: 0 0px 0 0;
+  float: left;
+}
+
+.box_content_remember_texto {
+  background: #f3fafc;
+  padding: 8px 10px 0px 0px;
+  width: 156px;
+  margin-left: 38px;
+  margin-top: 0px;
+  height: 86px;
+  border-radius: 6px;
+}
+.tipo_13 {
+  font-size: 13px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.blue {
+  color: #3c8ea4;
+}
+
+.img_remember {
+  height: 86px;
+}
+
+.alternativo {
+    content: ".";
+    display: none;
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+}
+
+p.text_left {
+	text-align:left;
+}
+
+.logo{
+	margin-top: 8px;
+}
+
+.central.central-home{
+    margin-bottom: 30px;
+    margin-top: -61px;
+}
+
+.central.central-home img{
+    background: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 10px;	
+}
+
+.callToAction:after{
+	background:0;
+}
+
+@media (min-width: 768px){
+	.callToAction {
+	    margin: 500px 0 0;
+	    padding: 40px 0;
+	    background-color: rgba(103, 103, 103, 0.67);
+	}
+	
+	.abono{
+		margin-left:7rem;
+	}
+}
+
+@media (min-width: 480px){
+	.callToAction {
+	    margin: 325px 0 0;
+	}
+	.header {
+	    -webkit-background-size: 100%;
+	    -moz-background-size: 100%;
+	    -o-background-size: 100%;
+	    background-size: 100%;
+	}
+}
+
+@media (max-width: 379px){
+  .header {
+    margin-bottom: 210px;
+    background-size: contain;
+    -webkit-background-size: contain;
+    -o-background-size: contain;
+    -moz-background-size: contain;
+  }
+}
+
+.header{
+	margin-bottom:0;
+	height:auto;
+}
+
+.textMobile{
+  font-family: AkkuratLightPro, sans-serif;
+  font-size: 18px;
+  color:#ffffff;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}

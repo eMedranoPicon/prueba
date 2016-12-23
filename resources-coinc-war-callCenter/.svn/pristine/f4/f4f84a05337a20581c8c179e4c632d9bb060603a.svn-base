@@ -1,0 +1,1972 @@
+	.viaje_goal{
+	background: #eeebda;
+}
+.viaje_goal header{
+	height: 625px;
+    overflow: hidden;
+    position: relative;
+}
+.degradado_negro{
+	width: 100%;
+	height: 125px;
+	position: absolute;
+
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.44), rgba(255, 255, 255, 0)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(rgba(0, 0, 0, 0.44), rgba(255, 255, 255, 0)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(rgba(0, 0, 0, 0.44), rgba(255, 255, 255, 0)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(rgba(0, 0, 0, 0.44), rgba(255, 255, 255, 0)); /* Standard syntax */
+}
+
+.logo_coinc{
+	float: left;
+	padding: 25px 0;
+}
+.logo_bankinter{
+	float: right;
+	padding: 31px 0;
+}
+
+.img_fondo{
+	width: 100%;
+}
+
+.texto_cabecera_fondo_negro{
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	color: white;
+	width: 100%;
+	height: 145px;
+	padding: 30px 0;
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.44), rgb(0, 0, 0)); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(rgba(0, 0, 0, 0.44), rgb(0, 0, 0)); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(rgba(0, 0, 0, 0.44), rgb(0, 0, 0)); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(rgba(0, 0, 0, 0.44), rgb(0, 0, 0)); /* Standard syntax */
+	font-family: Conv_AkkuratStd-Light;
+}
+
+.texto_h1_arriba {
+    float: left;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 36px;
+}
+.texto_h1_abajo {
+    font-size: 36px;
+}
+.seo {
+    content: ".";
+    display: block;
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+	display:none;
+}
+
+.descripcion_meta{
+	padding: 20px 50px;
+}
+
+.descripcion_meta h2{
+	color: #70a41c;
+    margin: 0;
+    font-size: 30px;
+    font-family: AkkuratStd-Bold;
+}
+.texto_verde {
+	color: #70a41c;
+    margin: 0;
+    font-size: 30px;
+    font-family: AkkuratStd-Bold;
+}
+.descripcion_meta > span{
+	color: #70a41c;
+    margin: 0;
+    font-size: 30px;
+    font-family: AkkuratStd-Bold;
+    display: block;
+}
+
+.boldFont{
+	font-family: AkkuratStd-Bold;
+}
+.semiBold{
+	font-weight: 600;
+}
+
+.ui-datepicker {
+    width: 255px;
+    font-size: 15px;
+}
+
+.descripcion_meta p{
+	color: black;
+    font-size: 24px;
+    text-align: inherit;
+    font-family: Conv_AkkuratStd-Light;
+}
+
+.container .central,
+.container .content_contenidos{
+	width: 100%;
+	height: 600px;
+    margin-bottom: 20px;
+    position: relative;
+	max-width: 1030px;
+}
+
+.box_form_top_light{
+	display: none;
+}
+
+.box_form_bottom{
+	background: none;
+	width: 0;
+}
+
+.box_form_back{
+	width: 100%;
+	height: 100%;
+	background: #f5f5eb;
+	padding: 60px 70px;
+}
+
+.box_form_back > .content_form{
+	display: none;
+}
+
+.contenedor_botones_goal{
+	width: 600px;
+	margin: 425px auto 0 auto;
+	float: inherit;
+}
+
+.italic{
+	font-style: italic;
+}
+
+.box_clase {
+	height: 83px;
+	width: 83px;
+	overflow: hidden;
+	border-radius: 50% 50% 0 0;
+	margin-right: 10px;
+}
+
+.bt_cancelar,
+.boton_siguiente{
+	width: 280px;
+    height: 55px;
+}
+
+.bt_cancelar a{
+	width: 100%;
+	height: 100%;
+	background: #b6b6b6;
+	color: white;
+	border-radius: 35px;
+	font-size: 20px;
+    line-height: 57px;
+    font-family: Conv_AkkuratStd-Light;
+}
+.bt_cancelar a:before{
+	content: "CANCELAR";
+}
+.bt_cancelar a:hover {
+    height: 100%;
+	background: #A7A7A7;
+	text-decoration: none;
+}
+
+.boton_siguiente a{
+	width: 100%;
+	height: 100%;
+	background: #70a402;
+	color: white;
+	border-radius: 35px;
+	font-size: 20px;
+    line-height: 57px;
+    margin-top: 0px;
+    font-family: Conv_AkkuratStd-Light;
+}
+.boton_siguiente a:before{
+	content: "SIGUIENTE";
+}
+
+.boton_siguiente a:hover {
+    height: 100%;
+    margin-top: 0px;
+	background: #689900;
+	text-decoration: none;
+}
+
+.campo_cantidad_meta{
+	position: absolute;
+	top: 0;
+	width: 550px;
+}
+
+.mensaje_error{
+	display: none;
+}
+
+.campo_cantidad_meta input{
+	max-width: 450px;
+}
+
+.campo_nombre_meta{
+	position: absolute;
+	top: 110px;
+}
+
+.campo_nombre_meta input{
+	max-width: 450px;
+}
+
+.campo_fechaFinal_meta{
+	position: absolute;
+	top: 0;
+    right: 0;
+    width: 330px;
+}
+
+.campo_fechaFinal_meta input{
+	width: 205px;
+}
+
+.content_campos_form input{
+	font-size: 23px !important;
+	height: 50px;
+	padding-left: 10px;
+	border: 1px solid #DFDFDF;
+}
+
+span.tipo_14 {
+    display: none;
+}
+
+.tipo_14newmargin_meta {
+	margin-bottom: 0px;
+	font-size: 18px;
+	font-family: AkkuratStd-Bold;
+}
+.campo_imagen_meta .tipo_14newmargin_meta {
+	margin-bottom: 7px;
+}
+
+.campo_imagen_meta{
+	position: absolute;
+    left: -550px;
+    top: 207px;
+    width: 250px;
+}
+
+
+.icoOK_center {
+    padding-top: 17px;
+}
+
+.ui-message-error {
+	margin-top: -2px !important;
+	background-image: url(../images/iconos/ico_error_barra2.png);
+	background-repeat: no-repeat;
+	padding-left: 27px !important;
+	padding-right: 15px !important;
+	background-size: 24px 24px !important;
+	background-position: 0px 0px;
+	background-color: #f9e6e5;
+	border-radius: 15px !important;
+	border: none !important;
+	color: red;
+}
+
+.barra_error_inicio,
+.barra_error_end{
+    display: none;
+}
+
+.barra_error_back{
+	background: none;
+}
+
+/*---------------- Estilos Estudios ------------------*/
+.estudios_goal{
+	background: #efdcca;
+}
+.estudios_goal header{
+	height: 580px;
+    overflow: hidden;
+    position: relative;
+}
+
+.estudios_goal .box_form_back {
+    background: #fbe8d5;
+}
+
+.estudios_goal .texto_cabecera_fondo_negro{
+	width: 453px;
+	height: 165px;
+	position: absolute;
+	top: 130px;
+	font-size: 15px;
+	color: black;
+	background: none;
+	right: 335px;
+	text-align: left;
+}
+
+.estudios_goal h1{
+	font-size: 32px;
+	color: #383838;
+}
+
+.estudios_goal .letra_grande{
+	font-size: 35px;
+	font-family: AkkuratStd-Bold;
+	color: black;
+}
+.estudios_goal .letra_grande2{
+	font-size: 32px;
+	color: #383838;
+}
+
+.estudios_goal .container .central,
+.estudios_goal .container .content_contenidos {
+    max-width: 1040px;
+}
+
+.estudios_goal .campo_fechaFinal_meta input {
+    width: 250px;
+}
+
+.estudios_goal .campo_imagen_meta {
+    width: 270px;
+}
+
+.estudios_goal .descripcion_meta {
+    padding: 20px 70px;
+}
+
+.estudios_goal .descripcion_meta h2 {
+    color: black;
+    font-weight: bold;
+}
+
+.estudios_goal .ui-datepicker {
+    width: 295px;
+}
+
+/*---------------- Estilos Boda ------------------*/
+.boda_goal{
+	background: #f6f5f5;
+}
+.boda_goal header{
+	height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+
+.boda_goal .descripcion_meta h2 {
+    color: black;
+    font-weight: bold;
+}
+
+.boda_goal .box_form_back {
+    background: #ededed;
+}
+
+.boda_goal .texto_h1_arriba {
+    font-family: AkkuratStd-Bold;
+    font-size: 40px;
+}
+.boda_goal .texto_h1_abajo {
+    font-size: 40px;
+    color: gainsboro;
+}
+.boda_goal .descripcion_meta {
+    padding: 20px 69px;
+}
+.boda_goal .container .central,
+.boda_goal .container .content_contenidos {
+    max-width: 1065px;
+}
+.boda_goal h3{
+	margin-top: 15px;
+	font-family: AkkuratStd-Bold;
+}
+
+.boda_goal .campo_imagen_meta {
+    left: -585px;
+    width: 569px;
+}
+
+.boda_goal .tipo_14newmargin_meta span{
+    font-family: Conv_AkkuratStd-Light;
+}
+
+.boda_goal .campo_cantidad_meta input {
+    max-width: 525px;
+}
+
+.boda_goal .campo_nombre_meta input {
+    max-width: 525px;
+}
+
+/*---------------- Estilos Vivienda ------------------*/
+.vivienda_goal{
+	background: #efefd1;
+}
+.vivienda_goal header{
+	height: 815px;
+    overflow: hidden;
+    position: relative;
+}
+
+.vivienda_goal .descripcion_meta h2 {
+    color: black;
+    font-weight: bold;
+}
+
+.vivienda_goal .box_form_back {
+    background: #f7f7d7;
+}
+.vivienda_goal .img_fondo {
+    height: 100%;
+    width: auto;
+}
+.vivienda_goal .fondo_imagen {
+    height: 100%;
+}
+@media screen and (min-width: 1600px) {
+	.vivienda_goal .img_fondo {
+	    height: auto;
+	    width: 100%;
+	}
+	.vivienda_goal .fondo_imagen {
+	    height: 100%;
+	}
+}
+.vivienda_goal .texto_h1_arriba {
+    text-transform: inherit;
+    font-size: 40px;
+    font-family: AkkuratStd-Bold;
+}
+.vivienda_goal .texto_h1_abajo {
+    font-size: 40px;
+    color: gainsboro
+}
+.vivienda_goal .descripcion_meta {
+    padding: 20px 70px;
+}
+.vivienda_goal .container .central,
+.vivienda_goal .container .content_contenidos {
+    max-width: 1075px;
+}
+
+.vivienda_goal .campo_cantidad_meta input {
+    max-width: 525px;
+}
+.vivienda_goal .campo_nombre_meta input {
+    max-width: 525px;
+}
+
+.vivienda_goal .campo_fechaFinal_meta input {
+    width: 290px;
+}
+.vivienda_goal .campo_imagen_meta {
+    left: -580px;
+    width: 280px;
+}
+
+.vivienda_goal .campo_fechaFinal_meta {
+    width: 344px;
+}
+.vivienda_goal .ui-datepicker {
+    width: 330px;
+}
+@media screen and (max-width: 991px) {
+	.vivienda_goal .img_fondo {
+	    height: auto;
+	    width: 100%;
+	}
+	.vivienda_goal .fondo_imagen {
+	    height: 100%;
+	}
+}
+/*---------------- Estilos Moda ------------------*/
+.moda_goal{
+	background: #eeebda;
+}
+.moda_goal header{
+	height: 670px;
+    overflow: hidden;
+    position: relative;
+}
+
+.moda_goal .descripcion_meta h2 {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.moda_goal .descripcion_meta > span {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.moda_goal .box_form_back {
+    background: #f2f0e3;
+}
+.moda_goal .texto_h1_arriba {
+    text-transform: inherit;
+    font-size: 40px;
+    font-family: AkkuratStd-Bold;
+}
+.moda_goal .texto_h1_abajo {
+    font-size: 40px;
+    color: gainsboro
+}
+.moda_goal .campo_cantidad_meta input {
+    max-width: 525px;
+}
+.moda_goal .campo_nombre_meta input {
+    max-width: 525px;
+}
+.moda_goal .campo_fechaFinal_meta input {
+    width: 270px;
+}
+.moda_goal .campo_imagen_meta {
+    width: 290px;
+}
+
+.moda_goal .ui-datepicker {
+    width: 315px;
+}
+
+/*---------------- Estilos Regalo ------------------*/
+.regalo_goal,
+.ahorro_goal,
+.bebe_goal,
+.coche_moto_goal,
+.tecnologia_goal{
+	background: white;
+}
+.regalo_goal header,
+.ahorro_goal header,
+.bebe_goal header,
+.coche_moto_goal header,
+.tecnologia_goal header{
+	height: 680px;
+	position: relative;
+}
+.regalo_goal .fondo_imagen,
+.ahorro_goal .fondo_imagen,
+.bebe_goal .fondo_imagen,
+.coche_moto_goal .fondo_imagen,
+.tecnologia_goal .fondo_imagen{
+	height: 100%;
+	overflow: hidden;
+}
+.regalo_goal .img_fondo,
+.ahorro_goal .img_fondo,
+.bebe_goal .img_fondo,
+.coche_moto_goal .img_fondo,
+.tecnologia_goal .img_fondo{
+	margin-top: 0px;
+}
+.titulo_descripcion_meta{
+	padding: 50px;
+}
+.titulo_descripcion_meta .texto_verde{
+	color: #333333;
+}
+.regalo_goal .descripcion_meta,
+.ahorro_goal .descripcion_meta,
+.bebe_goal .descripcion_meta,
+.coche_moto_goal .descripcion_meta,
+.tecnologia_goal .descripcion_meta{
+    font-family: AkkuratLightPro;
+    padding: 0 34px;
+}
+.regalo_goal .descripcion_meta p,
+.ahorro_goal .descripcion_meta p,
+.bebe_goal .descripcion_meta p,
+.coche_moto_goal .descripcion_meta p,
+.tecnologia_goal .descripcion_meta p{
+    font-size: 20px;
+}
+.formulario_goals .box_form_back {
+	padding: 50px 30px 0 30px;
+	background: #eeebda;
+	border-radius: 8px;
+	margin-top: 10px;
+}
+.formulario_goals .content_contenidos{
+	height: auto;
+}
+.formulario_goals .content_contenidos form{
+	display: flex;
+	flex-direction: column;
+}
+.formulario_goals .campo_cantidad_meta{
+	order: 1;
+}
+.formulario_goals .campo_nombre_meta{
+	order: 2;
+}
+.formulario_goals .campo_fechaFinal_meta{
+	order: 3;
+}
+
+.formulario_goals .content_campos_form {
+    width: 100%;
+    float: left;
+    position: relative;
+    top: auto;
+    padding: 0 0 45px 0;
+}
+.formulario_goals .contenedor_botones_goal {
+	position: absolute;
+	width: 1170px;
+	margin: 475px 0 0 0;
+	float: inherit;
+	left: -620px;
+	text-align: center;
+}
+.formulario_goals .bt_cancelar,
+.formulario_goals .boton_siguiente {
+    width: 280px;
+    height: 55px;
+    display: inline-block;
+    float: none;
+}
+.formulario_goals .content_campos_form input {
+    width: 400px;
+}
+.formulario_goals .campo_imagen_meta{
+	display: none;
+}
+.texto_ayuda_descuento{
+	font-family: AkkuratLightPro;
+	font-size: 14px;
+	margin-top: 20px;
+}
+/*---------- Modal subir imagenes -----------*/
+.popupNewdos_topimg,
+.popupNewdos_botimg{
+	display: none;
+}
+.vertical_20 {
+    height: 0;
+}
+.bt_cancelar_popup_upload input {
+    margin-right: 0;
+    margin-left: 0;
+}
+.bt_cancelar_popup_upload {
+    margin: 0 auto;
+}
+.content_campos_form_popup_upload {
+    width: 100%;
+}
+.popupUploadFile_back_center_button {
+	height: 57px;
+	border-radius: 0px 0px 7px 7px;
+	position: relative;
+}
+.ico_editar_cont_withoutbackground_uploadfile {
+    margin: 8px 2px 0;
+}
+.popupUploadFile_back_center{
+	border-radius: 7px 7px 0px 0px;
+	    margin-top: -6px;
+}
+
+.content_campos_form_popup_upload:nth-of-type(2){
+	position: absolute;
+	right: 0;
+	width: 185px;
+	top: 12px;
+}
+
+/*--------- Responsive ---------*/
+.topHeader .btnToggle {
+    margin-top: 0;
+}
+@media screen and (max-width: 1199px) {
+	.campo_fechaFinal_meta {
+	    width: 220px;
+	}
+	.campo_imagen_meta {
+	    left: -570px;
+	}
+	header{
+		height: 500px !important;
+	}
+	.pc .central-footer {
+	    width: 100%;
+	}
+	.pc .submenu_pie {
+	    width: 100%;
+	}
+	.pc .content_pie_home {
+	    height: inherit;
+	}
+	.pc .container div.col-lg-3 {
+		width: 25%;
+		margin-right: 0;
+	}
+	.pc .container div.col-lg-3-link {
+	    width: 20%;
+	}
+	.tablet .container div.col-lg-3 {
+		width: 25%;
+		margin-right: 0;
+	}
+	.tablet .container div.col-lg-3-link {
+	    width: 20%;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	header{
+		height: 450px !important;
+	}
+	.pc .content_campos_form {
+	    width: 100%;
+	}
+	.campo_cantidad_meta input{
+		width: 400px;
+	}
+	.pc .campo_nombre_meta {
+	    top: 210px;
+	}
+	.pc .campo_fechaFinal_meta{
+	    top: 102px;
+		left: 0;
+	}
+	.pc .campo_imagen_meta {
+	    left: 0px;
+	}
+	.pc .contenedor_botones_goal {
+	    margin: 445px auto 0 auto;
+	}
+
+	.campo_cantidad_meta.con_error + .pc .campo_fechaFinal_meta {
+	    top: 115px;
+	}
+	.campo_cantidad_meta.con_error + .pc .contenedor_botones_goal {
+	    margin: 460px auto 0 auto;
+	}
+}
+
+@media screen and (max-width: 760px){
+	.pc .contenedor_botones_goal {
+		width: 280px;
+	}
+	.pc .container .central,
+	.pc .container .content_contenidos {
+	    height: 670px;
+	}
+	.pc .bt_cancelar{
+	    margin-bottom: 15px;
+	}
+}
+
+@media screen and (max-width: 673px){
+	.pc .campo_nombre_meta .icoOK_center{
+	    position: absolute;
+    	right: 0;
+	}
+}
+
+@media screen and (max-width: 661px){
+	.pc .campo_nombre_meta .icoOK_center{
+    	right: -20px;
+	}
+}
+
+@media screen and (max-width: 640px){
+	.pc .campo_cantidad_meta input {
+	    width: 100%;
+	}
+	.pc .campo_nombre_meta input {
+	    width: 100%;
+	    max-width: initial;
+	}
+}
+
+@media screen and (max-width: 563px){
+	.pc .campo_fechaFinal_meta {
+	    top: 132px;
+	}
+	.campo_imagen_meta {
+	    top: 184px;
+	}
+}
+
+@media screen and (max-width: 551px){
+	.pc .campo_fechaFinal_meta {
+	    top: 132px;
+	}
+	.campo_imagen_meta {
+	    top: 184px;
+	}
+
+	.campo_cantidad_meta.con_error + .pc .campo_fechaFinal_meta {
+	    top: 165px;
+	}
+
+	.campo_cantidad_meta.con_error + .pc .campo_nombre_meta {
+	    top: 255px;
+	}
+
+	.campo_cantidad_meta.con_error + .pc .contenedor_botones_goal {
+	    margin: 490px auto 0 auto;
+	}
+
+	.campo_cantidad_meta.con_error + .pc .container .central, .pc .container .content_contenidos {
+	    height: 700px;
+	}
+}
+
+@media screen and (max-width: 440px){
+	.pc .campo_nombre_meta {
+	    top: 230px;
+	}
+	.campo_imagen_meta {
+	    top: 230px;
+	}
+	.pc .contenedor_botones_goal {
+	    margin: 500px auto 0 auto;
+	}
+	.pc .contenedor_botones_goal {
+	    width: 100%;
+	}
+	.bt_cancelar, .boton_siguiente {
+	    width: 100%;
+	}
+
+	.campo_cantidad_meta.con_error + .pc .campo_nombre_meta {
+	    top: 275px;
+	}
+
+	.campo_cantidad_meta.con_error + .pc .campo_fechaFinal_meta {
+	    top: 165px;
+	}
+	.campo_cantidad_meta.con_error + .campo_imagen_meta {
+	    top: 220px;
+	}
+	.campo_cantidad_meta.con_error + .pc .contenedor_botones_goal {
+	    margin: 540px auto 0 auto;
+	}
+	.campo_cantidad_meta.con_error + .pc .container .central,
+	.campo_cantidad_meta.con_error + .pc .container .content_contenidos {
+	    height: 750px;
+	}
+}
+
+@media screen and (max-width: 405px){
+	.campo_cantidad_meta.con_error {
+	    top: -28px;
+	}
+}
+
+@media screen and (max-width: 405px){
+	.pc .campo_fechaFinal_meta {
+	    top: 135px;
+	}
+	.pc .campo_nombre_meta {
+	    top: 250px;
+	}
+	.pc .contenedor_botones_goal {
+	    margin: 530px auto 0 auto;
+	}
+	.pc .container .central,
+	.pc .container .content_contenidos {
+	    height: 745px;
+	}
+
+	.campo_cantidad_meta.con_error + .pc .campo_fechaFinal_meta {
+	    top: 190px;
+	}
+	.campo_cantidad_meta.con_error + .pc .campo_nombre_meta {
+	    top: 300px;
+	}
+	.campo_cantidad_meta.con_error + .pc .contenedor_botones_goal {
+	    margin: 570px auto 0 auto;
+	}
+	.campo_cantidad_meta.con_error + .pc .container .central,
+	.campo_cantidad_meta.con_error + .pc .container .content_contenidos {
+	    height: 780px;
+	}
+}
+
+@media screen and (max-width: 403px){
+	.pc .cambio_imagen_mod2 {
+	    padding: 10px 5px 8px 0;
+	}
+	.pc .contenedor_botones_goal {
+	    margin: 555px auto 0 auto;
+	}
+	.pc .container .central,
+	.pc .container .content_contenidos {
+	    height: 765px;
+	}
+
+	.campo_cantidad_meta.con_error + .pc .contenedor_botones_goal {
+	    margin: 595px auto 0 auto;
+	}
+	.campo_cantidad_meta.con_error + .pc .container .central,
+	.campo_cantidad_meta.con_error + .pc .container .content_contenidos {
+	    height: 805px;
+	}
+}
+
+@media screen and (max-width: 384px){
+	.pc .campo_nombre_meta {
+	    top: 270px;
+	}
+	.campo_imagen_meta {
+	    top: 245px;
+	}
+	.pc .contenedor_botones_goal {
+	    margin: 570px auto 0 auto;
+	}
+	.pc .container .central,
+	.pc .container .content_contenidos {
+	    height: 780px;
+	}
+
+	.campo_cantidad_meta.con_error + .pc .campo_nombre_meta {
+	    top: 325px;
+	}
+	.campo_cantidad_meta.con_error + .pc .contenedor_botones_goal {
+	    margin: 620px auto 0 auto;
+	}
+	.campo_cantidad_meta.con_error + .pc .container .central,
+	.campo_cantidad_meta.con_error + .pc .container .content_contenidos {
+	    height: 830px;
+	}
+}
+
+@media screen and (max-width: 352px){
+	.campo_cantidad_meta.con_error + .pc .campo_fechaFinal_meta {
+	    top: 220px;
+	}
+	.campo_cantidad_meta.con_error + .pc .campo_nombre_meta {
+	    top: 357px;
+	}
+	.campo_cantidad_meta.con_error + .pc .contenedor_botones_goal {
+	    margin: 650px auto 0 auto;
+	}
+	.campo_cantidad_meta.con_error + .pc .container .central,
+	.campo_cantidad_meta.con_error + .pc .container .content_contenidos {
+	    height: 855px;
+	}
+}
+
+@media screen and (max-width: 341px){
+	.pc .campo_nombre_meta {
+	    top: 295px;
+	}
+	.campo_imagen_meta {
+top: 260px;
+}
+}
+
+@media screen and (max-width: 339px){
+	.pc .campo_fechaFinal_meta {
+	    top: 135px;
+	}
+	.campo_fechaFinal_meta input {
+	    width: 100%;
+	}
+	.pc .campo_nombre_meta {
+	    top: 295px;
+	}
+	.pc .contenedor_botones_goal {
+	    margin: 590px auto 0 auto;
+	}
+	.pc .container .central,
+	.pc .container .content_contenidos {
+	    height: 800px;
+	}
+
+	.campo_cantidad_meta.con_error + .pc .campo_fechaFinal_meta {
+	    top: 245px;
+	}
+	.campo_cantidad_meta.con_error + .pc .campo_nombre_meta {
+	    top: 380px;
+	}
+	.campo_cantidad_meta.con_error + .pc .contenedor_botones_goal {
+	    margin: 695px auto 0 auto;
+	}
+	.campo_cantidad_meta.con_error + .pc .container .central,
+	.campo_cantidad_meta.con_error + .pc .container .content_contenidos {
+	    height: 900px;
+	}
+}
+
+@media screen and (max-width: 337px){
+	.pc .campo_cantidad_meta {
+	    top: -20px;
+	}
+}
+
+@media screen and (max-width: 325px){
+	.pc .campo_imagen_meta {
+	    top: 295px;
+	}
+	.pc .contenedor_botones_goal {
+	    margin: 610px auto 0 auto;
+	}
+	.pc .container .central,
+	.pc .container .content_contenidos {
+	    height: 815px;
+	}
+}
+
+
+/*----------- Estilos para tablet -------------------*/
+
+.tablet .boda_goal .tipo_14newmargin_meta span {
+    font-family: Conv_AkkuratStd-Light;
+    font-weight: 100;
+}
+
+.tablet .texto_h1_arriba {
+    font-size: 30px;
+}
+.tablet .mensaje_error{
+	display: block;
+}
+.tablet .texto_h1_abajo {
+    font-size: 20px;
+}
+
+.tablet .campo_fechaFinal_meta .tipo_10.red{
+	display: none;
+}
+.tablet .campo_fechaFinal_meta .mensaje_error .tipo_10.red{
+	display: block;
+	height: 100%;
+	font-size: 18px;
+	line-height: 25px;
+}
+.tablet .campo_fechaFinal_meta .mensaje_error  .barra_error_back {
+    height: 35px;
+}
+
+.tablet .texto_cabecera_fondo_negro {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 145px;
+    padding: 30px 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    background-image: url("../images/fondo_punteado.png");
+}
+
+.tablet .descripcion_meta h2{
+	width: 350px;
+    margin: 0 auto;
+    text-align: center;
+	font-size: 25px;
+    font-family: AkkuratStd-Bold;
+}
+
+.tablet.moda_goal .descripcion_meta > span {
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+	font-size: 25px;
+    font-family: AkkuratStd-Bold;
+}
+
+.tablet{
+	background: url(../images/global/back_content.png) repeat top left;
+}
+
+.tablet .content_campos_form {
+    width: 100%;
+}
+
+.tablet .descripcion_meta p .bold {
+    color: #4B4B4B;
+}
+
+.tablet .descripcion_meta p .italic {
+    color: black;
+}
+
+.tablet .box_form_back {
+	background: white;
+	border: 1px solid #e7e6e2;
+	border-radius: 4px;
+	box-shadow: 0px 3px 2px #DADADA;
+	padding: 30px 20px;
+}
+
+.tablet .tipo_14newmargin_meta {
+    font-size: 16px;
+    font-family: Conv_AkkuratStd-Light;
+    font-weight: 600;
+}
+
+.tablet .descripcion_meta {
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.tablet .descripcion_meta p {
+    padding: 20px 40px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.tablet .campo_fechaFinal_meta .fecha_pc{
+	display: none;
+}
+
+.tablet .campo_fechaFinal_meta .icoOK_center {
+	position: absolute;
+	top: 21px;
+	right: -8px;
+}
+
+.tablet .campo_fechaFinal_meta .icoOK_center .left:first-of-type{
+	display: block;
+}
+
+.tablet .fecha_movil{
+	display: block !important;
+	margin-top: 4px;
+}
+.tablet .fecha_movil select{
+	font-size: 15px !important;
+    height: 50px;
+    padding-left: 10px;
+    border: 1px solid #DFDFDF;
+    width: 28%;
+    margin-top: 0px;
+	color: gray;
+}
+
+.tablet .fecha_movil select:nth-child(3){
+	width: 34%;
+}
+
+.tablet .campo_cantidad_meta input {
+    width: 340px;
+}
+.tablet .campo_nombre_meta input {
+    width: 340px;
+}
+.tablet .campo_fechaFinal_meta {
+    width: 285px;
+    padding-left: 20px;
+}
+
+.tablet .campo_imagen_meta {
+	display: none;
+}
+
+.tablet .container .central,
+.tablet .container .content_contenidos {
+    height: 375px;
+}
+
+.tablet .contenedor_botones_goal {
+    margin: 235px auto 0 auto;
+}
+
+.tablet .tipo_14newmargin_meta{
+	clear: left;
+}
+
+.tablet .logo_bankinter{
+	padding: 22px 0;
+}
+.tablet .topHeader .btnToggle.cerrar {
+	margin-top: 0 !important
+}
+
+/*Estilos tablet estudio*/
+.tablet.estudios_goal .texto_cabecera_fondo_negro {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 92px;
+    padding: 14px 0;
+    background-color: rgba(0, 0, 0, 0.58);
+    background-image: url("../images/fondo_punteado.png");
+	top: auto;
+    left: auto;
+    right: auto;
+}
+
+.tablet.estudios_goal .letra_grande {
+	font-size: 26px;
+    font-weight: 100;
+    color: white;
+}
+.tablet.estudios_goal .letra_grande2 {
+	font-size: 20px;
+    color: #C5C5C5;
+	margin-top: 8px;
+}
+.tablet.estudios_goal h1 {
+    font-size: 20px;
+    color: #C5C5C5;
+	margin-top: 8px;
+}
+
+.tablet.estudios_goal .descripcion_meta h2 {
+    width: 100%;
+    font-size: 24px;
+    font-family: AkkuratStd-Bold;
+}
+
+.tablet.estudios_goal .descripcion_meta p {
+    color: #636363;
+    padding: 20px 40px 0 20px;
+    text-align: left;
+    font-size: 20px;
+}
+
+
+/*Estilos tablet boda*/
+.tablet.boda_goal .descripcion_meta h2 {
+    width: 100%;
+    text-align: left;
+    font-family: AkkuratStd-Bold;
+	padding: 0 40px;
+}
+
+.tablet.boda_goal h3{
+	padding: 0 40px;
+	margin: 20px 0 -20px 0;
+}
+.tablet.boda_goal .texto_h1_arriba,
+.tablet.boda_goal .texto_h1_abajo {
+    font-size: 30px;
+}
+.tablet.boda_goal .descripcion_meta p {
+    padding: 20px 48px 0px 40px;
+    font-size: 18px;
+}
+
+/*Estilos tablet vivienda*/
+.tablet.vivienda_goal .descripcion_meta h2 {
+    width: 100%;
+    text-align: left;
+    padding: 0 56px;
+	font-size: 30px;
+	font-family: AkkuratStd-Bold;
+	margin-bottom: 20px;
+}
+.tablet.vivienda_goal .texto_h1_arriba {
+    font-size: 36px;
+}
+.tablet.vivienda_goal .texto_h1_abajo {
+    font-size: 36px;
+}
+.tablet.vivienda_goal .descripcion_meta p {
+    padding: 0px 56px;
+    font-size: 20px;
+}
+
+/*Estilos tablet moda*/
+.tablet.moda_goal .descripcion_meta h2 {
+    width: 100%;
+    font-size: 30px;
+    font-family: AkkuratStd-Bold;
+}
+.tablet.moda_goal .descripcion_meta > span {
+    width: 100%;
+    font-size: 30px;
+    font-family: AkkuratStd-Bold;
+}
+.tablet.moda_goal .texto_h1_arriba {
+    font-size: 34px;
+}
+.tablet.moda_goal .texto_h1_abajo {
+    font-size: 34px;
+}
+.tablet.moda_goal .descripcion_meta p {
+    font-size: 24px;
+    padding: 20px 17px 0 17px;
+}
+.tablet.moda_goal .topHeader h1{
+	margin: 0;
+}
+
+.tablet.moda_goal .campo_cantidad_meta input,
+.tablet.moda_goal .campo_nombre_meta input {
+    width: 370px;
+}
+
+
+/* Nuevo evolutivo metas */
+.tablet .titulo_descripcion_meta{
+	padding: 20px 25px 0 25px;
+}
+
+.regalo_goal.tablet .descripcion_meta,
+.ahorro_goal.tablet .descripcion_meta,
+.bebe_goal.tablet .descripcion_meta,
+.coche_moto_goal.tablet .descripcion_meta,
+.tecnologia_goal.tablet .descripcion_meta {
+    padding: 0px;
+}
+.regalo_goal.tablet .descripcion_meta p,
+.ahorro_goal.tablet .descripcion_meta p,
+.bebe_goal.tablet .descripcion_meta p,
+.coche_moto_goal.tablet .descripcion_meta p,
+.tecnologia_goal.tablet .descripcion_meta p {
+    padding: 15px 0;
+}
+.tablet .formulario_goals{
+	padding: 0;
+}
+.tablet .formulario_goals .content_contenidos form{
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.tablet .formulario_goals .content_campos_form {
+    width: 50%;
+}
+.tablet .formulario_goals .campo_fechaFinal_meta {
+    padding-left: 0;
+    width: 50%;
+}
+.tablet .formulario_goals .campo_cantidad_meta{
+	order: 1;
+	padding-right: 10px;
+}
+.tablet .formulario_goals .campo_nombre_meta{
+	order: 3;
+	padding-right: 10px;
+}
+.tablet .formulario_goals .campo_fechaFinal_meta{
+	order: 2;
+	padding-left: 10px;
+}
+.tablet .formulario_goals .contenedor_botones_goal {
+    margin: 250px 0 0 0;
+    left: 0;
+    width: 100%;
+}
+.tablet .formulario_goals .content_contenidos{
+	margin-bottom: 60px;
+}
+.tablet .formulario_goals .box_form_back{
+	background: #eeebda;
+}
+.tablet .texto_ayuda_descuento{
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+@media (max-width: 991px){
+	.tablet .formulario_goals input{
+		width: 280px;
+	}
+}
+/*----------- Estilos para movil -------------------*/
+
+.movil .boda_goal .tipo_14newmargin_meta span {
+    font-family: Conv_AkkuratStd-Light;
+    font-weight: 100;
+}
+
+.movil .campo_fechaFinal_meta .icoOK_center {
+	position: absolute;
+	top: 21px;
+	right: -8px;
+}
+
+.movil .campo_fechaFinal_meta .icoOK_center .left:first-of-type{
+	display: block;
+}
+
+.movil .campo_fechaFinal_meta .tipo_10.red{
+	display: none;
+}
+.movil .campo_fechaFinal_meta .mensaje_error .tipo_10.red{
+	display: block;
+	height: 100%;
+	font-size: 18px;
+	line-height: 25px;
+}
+.movil .campo_fechaFinal_meta .mensaje_error  .barra_error_back {
+    height: 35px;
+}
+
+.movil header h1{
+	width: 310px;
+}
+
+.movil .texto_h1_arriba {
+	font-size: 24px;
+	text-transform: uppercase;
+	font-family: AkkuratStd-Bold;
+}
+
+.movil .texto_h1_abajo {
+    font-size: 22px;
+}
+
+.movil header {
+    height: 330px !important;
+}
+
+.movil .descripcion_meta {
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.movil .texto_cabecera_fondo_negro {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 95px;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    background-image: url("../images/fondo_punteado.png");
+}
+
+.movil .box_form_back {
+	background: white;
+	border: 1px solid #e7e6e2;
+	border-radius: 4px;
+	box-shadow: 0px 3px 2px #DADADA;
+	padding: 26px 25px;
+}
+
+.movil .descripcion_meta h2 {
+    width: 290px;
+    font-size: 22px;
+    margin: 0 auto;
+    text-align: center;
+}
+.movil.moda_goal .descripcion_meta > span {
+    width: 290px;
+    font-size: 22px;
+    margin: 0 auto;
+    text-align: center;
+}
+.movil{
+	background: url(../images/global/back_content.png) repeat top left;
+}
+
+.movil .box_form_back {
+    background: white;
+}
+
+.movil .descripcion_meta p {
+	padding: 20px 14px;
+	text-align: center;
+	font-size: 18px
+}
+
+.movil .campo_fechaFinal_meta .fecha_pc{
+	display: none;
+}
+
+.movil .fecha_movil{
+	display: block !important;
+	margin-top: 4px;
+}
+.movil .fecha_movil select{
+	font-size: 18px !important;
+    height: 50px;
+    padding-left: 10px;
+    border: 1px solid #DFDFDF;
+    width: 28%;
+    margin-top: 0px;
+    color: gray;
+}
+
+.movil .fecha_movil select:nth-child(3){
+	width: 36%;
+}
+
+.movil .campo_cantidad_meta input {
+    width: 300px;
+}
+.movil .campo_fechaFinal_meta {
+    width: 100%;
+    top: 120px;
+    left: 0;
+}
+
+.movil .campo_nombre_meta{
+	top: 240px;
+    width: 100%;
+}
+
+.movil .campo_nombre_meta input{
+    width: 100%;
+}
+
+.movil .campo_imagen_meta {
+	display: none;
+}
+
+.movil .container .central,
+.movil .container .content_contenidos {
+    height: 510px;
+}
+
+.movil .ui-message-error{
+	font-size: 17px;
+}
+
+.movil .bt_cancelar{
+	display: none;
+}
+
+.movil .contenedor_botones_goal {
+    margin: 375px auto 0 auto;
+    width: 100%;
+}
+
+.movil .boton_siguiente{
+	float: inherit;
+	margin: 0 auto;
+}
+
+.movil .campo_cantidad_meta,
+.movil .campo_cantidad_meta input{
+	width: 100%;
+}
+
+.movil .tipo_14newmargin_meta{
+	clear: left;
+	text-align: center;
+	font-family: Conv_AkkuratStd-Light;
+	font-weight: 600; 
+}
+
+.movil .logo_bankinter{
+	padding: 22px 0;
+}
+.movil .topHeader .btnToggle.cerrar {
+	margin-top: 0 !important
+}
+
+.movil .icoOK_center{
+	position: absolute;
+	right: -20px;
+}
+
+@media screen and (max-width: 456px) {
+	/*.movil .campo_fechaFinal_meta {
+	    top: 155px;
+	}*/
+	.movil .campo_fechaFinal_meta.con_error {
+	    top: 155px;
+	}
+	.movil .campo_nombre_meta {
+	    top: 245px;
+	}
+	.movil .campo_nombre_meta.con_error {
+	    top: 245px;
+	}
+	.movil .contenedor_botones_goal {
+	    margin: 375px auto 0 auto;
+	}
+	.movil .container .central, .movil .container .content_contenidos {
+	    height: 505px;
+	}
+	.movil header {
+	    height: 300px !important;
+	}
+}
+
+@media screen and (max-width: 424px) {
+	/*.movil .campo_fechaFinal_meta {
+	    top: 140px;
+	}*/
+	.movil .campo_cantidad_meta.con_error + .campo_fechaFinal_meta.con_error {
+	    top: 155px;
+	}
+	.movil .campo_nombre_meta {
+	    top: 260px;
+	}
+	.movil .campo_nombre_meta.con_error {
+	    top: 260px;
+	}
+	.movil .contenedor_botones_goal {
+	    margin: 415px auto 0 auto;
+	}
+	.movil .container .central, .movil .container .content_contenidos {
+	    height: 525px;
+	}
+	.movil header {
+	    height: 280px !important;
+	}
+	.bt_cancelar, .boton_siguiente {
+	    width: 100%;
+	}
+}
+
+@media screen and (max-width: 389px) {
+	.movil .fecha_movil select {
+		width: 27%;
+	}
+	.movil header {
+	    height: 260px !important;
+	}
+}
+
+@media screen and (max-width: 351px) {
+	.movil .campo_nombre_meta {
+	    top: 265px;
+	}
+	.movil .campo_nombre_meta.con_error {
+	    top: 265px;
+	}
+	.movil .container .central, .movil .container .content_contenidos {
+	    height: 525px;
+	}
+	.movil .contenedor_botones_goal {
+	    margin: 415px auto 0 auto;
+	}
+	.movil header {
+	    height: 240px !important;
+	}
+}
+
+@media screen and (max-width: 347px) {
+	/*.movil .campo_fechaFinal_meta {
+	    top: 155px;
+	}*/
+	.movil .campo_cantidad_meta.con_error + .campo_fechaFinal_meta {
+	    top: 180px;
+	}
+}
+
+@media screen and (max-width: 336px) {
+	.movil .fecha_movil select:nth-child(3) {
+	    width: 34%;
+	}
+	.movil .fecha_movil select {
+    	font-size: 12px !important;
+	}
+	.movil header {
+	    height: 220px !important;
+	}
+}
+
+
+@media screen and (max-width: 330px) {
+	.movil .campo_fechaFinal_meta {
+	    top: 145px;
+	}
+	.movil .campo_cantidad_meta.con_error + .campo_fechaFinal_meta {
+	    top: 210px;
+	}
+	.movil .campo_nombre_meta {
+	    top: 300px;
+	}
+	.movil .campo_nombre_meta.con_error {
+	    top: 300px;
+	}
+	.movil .contenedor_botones_goal {
+	    margin: 460px auto 0 auto;
+	}
+	.movil .container .central, .movil .container .content_contenidos {
+	    height: 570px;
+	}
+}
+
+/*Estilos movil estudio*/
+.movil.estudios_goal .texto_cabecera_fondo_negro {
+	top: auto;
+    left: auto;
+    right: auto;
+}
+.movil.estudios_goal .letra_grande {
+	font-size: 24px;
+    font-weight: 100;
+    color: white;
+    font-family: AkkuratStd-Bold;
+}
+.movil.estudios_goal .letra_grande2 {
+	width: 377px;
+    font-size: 24px;
+    color: #C5C5C5;
+}
+.movil.estudios_goal h1 {
+	width: 377px;
+    font-size: 24px;
+    color: #C5C5C5;
+}
+
+.movil.estudios_goal .descripcion_meta h2 {
+    width: 100%;
+    text-align: left;
+    color: #8f7663;
+	padding: 0 14px;
+	padding: 10px 25px 0 25px;
+}
+.movil.estudios_goal .descripcion_meta p {
+    text-align: left;
+    padding: 20px 25px 0 25px;
+}
+.movil.estudios_goal .descripcion_meta p:first-of-type:first-line {
+    line-height: 50px;
+}
+.movil.estudios_goal .texto_cabecera_fondo_negro {
+    height: 105px;
+}
+.movil.estudios_goal .tipo_14newmargin_meta {
+    text-align: center;
+}
+
+/*Estilos movil boda*/
+.movil.boda_goal .descripcion_meta h2 {
+    width: 335px;
+    font-size: 24px
+}
+
+.movil.boda_goal h3{
+	padding: 0 20px;
+}
+.movil.boda_goal header h1 {
+    width: 400px;
+    margin-top: 25px;
+}
+.movil.boda_goal .texto_h1_arriba {
+    font-size: 20px;
+}
+.movil.boda_goal .texto_h1_abajo {
+    font-size: 21px;
+}
+.movil.boda_goal .descripcion_meta p {
+    text-align: left;
+    color: #4a4a4a;
+}
+.movil.boda_goal h3{
+	padding: 0 15px;
+	margin: 20px 0 -20px 0;
+	color: #4a4a4a;
+}
+
+.movil.boda_goal .tipo_14newmargin_meta {
+    text-align: center;
+}
+@media screen and (max-width: 475px) {
+	.movil.boda_goal header h1 {
+    	width: 100%;
+	}
+}
+@media screen and (max-width: 359px) {
+	.movil.boda_goal header h1 {
+	    margin-top: 4px;
+	}
+}
+
+/*Estilos movil vivienda*/
+.movil.vivienda_goal .descripcion_meta h2 {
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+    font-size: 23px;
+	margin-bottom: 20px;
+}
+.movil.vivienda_goal header {
+    height: 310px !important;
+}
+.movil.vivienda_goal header h1 {
+    width: 100%;
+    margin-top: 25px;
+    padding: 0 5px;
+}
+.movil.vivienda_goal .texto_h1_arriba {
+    font-size: 24px;
+    text-transform: inherit;
+}
+.movil.vivienda_goal .texto_h1_abajo {
+    font-size: 24px;
+}
+.movil.vivienda_goal .descripcion_meta p {
+    padding: 0px 21px;
+    font-size: 20px;
+}
+.movil.vivienda_goal .tipo_14newmargin_meta {
+    text-align: center;
+}
+@media screen and (max-width: 459px) {
+	.movil.vivienda_goal header h1 {
+	    margin-top: 5px;
+	}
+}
+
+/*Estilos movil moda*/
+.movil.moda_goal .descripcion_meta h2 {
+    width: 100%;
+    font-size: 20px;
+}
+.movil.moda_goal .descripcion_meta > span {
+    width: 100%;
+    font-size: 20px;
+}
+.movil.moda_goal header h1 {
+    width: 100%;
+    margin-top: 25px;
+    padding: 0 10px;
+}
+.movil.moda_goal .texto_h1_arriba {
+    font-size: 20px;
+    text-transform: inherit;
+}
+.movil.moda_goal .texto_h1_abajo {
+    font-size: 20px;
+}
+.movil.moda_goal header {
+    height: 300px !important;
+}
+
+.movil.moda_goal .descripcion_meta p {
+    text-align: left;
+    padding: 20px 14px 0 14px;
+}
+.movil.moda_goal .tipo_14newmargin_meta {
+    text-align: center;
+}
+@media screen and (max-width: 427px) {
+	.movil.moda_goal header h1 {
+	    margin-top: 10px;
+	}
+}
+
+@media screen and (max-width: 406px) {
+	.movil.moda_goal .texto_cabecera_fondo_negro {
+	    height: 110px;
+	}
+}
+
+.regalo_goal.movil .degradado_negro,
+.ahorro_goal.movil .degradado_negro,
+.bebe_goal.movil .degradado_negro,
+.coche_moto_goal.movil .degradado_negro,
+.tecnologia_goal.movil .degradado_negro {
+	background: black;
+	height: 50px;
+	position: relative;
+}
+
+.regalo_goal.movil .logo_coinc,
+.ahorro_goal.movil .logo_coinc,
+.bebe_goal.movil .logo_coinc,
+.coche_moto_goal.movil .logo_coinc,
+.tecnologia_goal.movil .logo_coinc {
+    padding: 5px 0;
+}
+
+.regalo_goal.movil .logo_bankinter,
+.ahorro_goal.movil .logo_bankinter,
+.bebe_goal.movil .logo_bankinter,
+.coche_moto_goal.movil .logo_bankinter,
+.tecnologia_goal.movil .logo_bankinter{
+    padding: 3px 0;
+}
+
+.regalo_goal.movil .img_fondo,
+.ahorro_goal.movil .img_fondo,
+.bebe_goal.movil .img_fondo,
+.coche_moto_goal.movil .img_fondo,
+.tecnologia_goal.movil .img_fondo{
+    margin-top: 0;
+}
+
+.regalo_goal.movil header,
+.ahorro_goal.movil header,
+.bebe_goal.movil header,
+.coche_moto_goal.movil header,
+.tecnologia_goal.movil header{
+    height: 300px !important;
+    overflow: hidden;
+}
+
+.regalo_goal.movil .texto_cabecera_fondo_negro,
+.ahorro_goal.movil .texto_cabecera_fondo_negro,
+.bebe_goal.movil .texto_cabecera_fondo_negro,
+.coche_moto_goal.movil .texto_cabecera_fondo_negro,
+.tecnologia_goal.movil .texto_cabecera_fondo_negro{
+	padding: 25px 5px;
+}
+
+.regalo_goal.movil .texto_h1_arriba,
+.ahorro_goal.movil .texto_h1_arriba,
+.bebe_goal.movil .texto_h1_arriba,
+.coche_moto_goal.movil .texto_h1_arriba {
+    font-size: 19px;
+}
+
+.tecnologia_goal.movil .texto_h1_arriba {
+    font-size: 15px;
+}
+
+.regalo_goal.movil .texto_h1_abajo,
+.ahorro_goal.movil .texto_h1_abajo,
+.bebe_goal.movil .texto_h1_abajo{
+    font-size: 19px;
+}
+
+.tecnologia_goal.movil .texto_h1_abajo{
+    font-size: 15px;
+}
+
+.coche_moto_goal.movil .texto_h1_abajo{
+    font-size: 17px;
+}
+.regalo_goal.movil .descripcion_meta,
+.ahorro_goal.movil .descripcion_meta,
+.bebe_goal.movil .descripcion_meta,
+.coche_moto_goal.movil .descripcion_meta,
+.tecnologia_goal.movil .descripcion_meta {
+    padding: 20px 15px;
+    text-align: left;
+}
+
+.regalo_goal.movil .descripcion_meta p,
+.ahorro_goal.movil .descripcion_meta p,
+.bebe_goal.movil .descripcion_meta p,
+.coche_moto_goal.movil .descripcion_meta p,
+.tecnologia_goal.movil .descripcion_meta p{
+    padding: 15px 0px;
+    text-align: left;
+}
+
+.regalo_goal.movil .box_form_back,
+.ahorro_goal.movil .box_form_back,
+.bebe_goal.movil .box_form_back,
+.coche_moto_goal.movil .box_form_back,
+.tecnologia_goal.movil .box_form_back {
+    background: #eeebda;
+}
+
+.regalo_goal.movil .texto_verde,
+.ahorro_goal.movil .texto_verde,
+.bebe_goal.movil .texto_verde,
+.coche_moto_goal.movil .texto_verde,
+.tecnologia_goal.movil .texto_verde {
+	color: #333333;
+	font-size: 19px;
+}
+
+.movil .texto_ayuda_descuento {
+	margin-top: 5px;
+    margin-bottom: 15px;
+}

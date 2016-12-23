@@ -1,0 +1,225 @@
+.header {
+    background: url(../images/cabecera_registro_colectivo.jpg) center top no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 550px;
+    margin-bottom: 0;
+}
+body .content_campos_form_ligth h2,
+body .content_campos_form h2,
+body .content_campos_form_ligth h3{
+	margin: 0 0 10px 0;
+	font-size: 14px;
+}
+
+.cuadro_imagen_blanco{
+	width: 90px;
+	height: 90px;
+	position: relative;
+}
+
+.cuadro_imagen_blanco img{
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.cuadro_imagen_blanco .imagen_circular{
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.cuadro_imagen_blanco .imagen_circular img{
+	width: 100%;
+}
+
+.flecha_blanca{
+	background: url(../images/flecha_blanca.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 50px;
+	width: 100px;
+	margin-top: 20px;
+}
+
+.nombre_meta .icono_meta img{
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+}
+
+.fondo_negro_punteado {
+    margin-top: 0;
+    background: none;
+    height: 300px;
+    text-align: left;
+    color: white;
+}
+
+.fondo_negro_punteado .titulo_cabecera {
+    z-index: 1;
+    position: relative;
+    padding: 140px 0 0 0;
+}
+
+#formMain{
+	background: white;
+	margin-top: -128px;
+	padding: 40px 30px;
+	border-radius: 20px;
+	border: 1px solid lightgray;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 35px;
+}
+
+.degradado_gris {
+    height: 475px;
+    background: rgba(0, 0, 0, 0.52);
+}
+
+.topHeader {
+    background: rgba(0, 0, 0, 0.52);
+}
+
+.box_categoria_espacio_fotoClubAhorradores_Pasos img{
+	width: 156px;
+	float: right;
+	height: inherit;
+	margin-right: 35px;
+}
+
+.campos_form_colectivo{
+
+}
+
+.campo_form_colectivo{
+	min-height: 70px;
+}
+
+.label_campo_colectivo{
+	font-family: Arial;
+	font-size: 15px;
+	margin-bottom: 5px;
+	color: black;
+}
+
+.texto_ayuda_colectivo{
+	color: gray;
+}
+
+.input_campo_colectivo{
+
+}
+
+.input_campo_colectivo input{
+	width: 100%;
+}
+
+.info_campo_colectivo{
+	margin-top: -3px;
+	margin-bottom: 3px;
+}
+
+.info_campo_colectivo a{
+	cursor: pointer;
+}
+
+.cambiar_imagen_usuario{
+	margin-top: 20px;
+}
+
+.paddingL0{
+	padding-right: 0;
+}
+
+.protecciones_de_datos{
+	margin-top: 20px;
+}
+.caja_clausula{
+	height: 120px;
+	overflow-y: scroll;
+	border: 1px solid lightgray;
+	margin-bottom: 15px;
+}
+
+.line_4{
+	border-top: 1px solid lightgray;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.check_new_registro{
+	display: block;
+	margin-bottom: 15px;
+}
+
+
+.texto_invitacion{
+	font-size: 18px;
+}
+
+.nombre_meta .nombre{
+	height: 90px;
+	line-height: 85px;
+}
+
+
+.barra_blue_back_3line{
+	display: none;
+}
+
+.barra_blue_back_3line span{
+	background-color: rgba(194, 194, 255, 0.68);
+	display: block;
+	padding: 5px;
+	border-radius: 6px;
+}
+
+.left{
+	float: left;
+}
+
+.tipo_13_link_withicon{
+	color: black;
+	padding-left: 5px;
+	font-size: 16px;
+}
+
+.bt_finalizar a{
+	background-color: green;
+	display: block;
+	width: 125px;
+	height: 40px;
+	line-height: 40px;
+	color: white;
+	border-radius: 50px;
+	font-size: 18px;
+	margin-top: 18px;
+	text-align: center;
+}
+
+.bt_finalizar a:hover{
+	text-decoration: none;
+	background-color: #006b00;
+}
+
+.ui-message-error {
+    margin-top: 10px;
+}
+
+.mt0 .ui-message-error{
+    margin-top: 4px;
+}

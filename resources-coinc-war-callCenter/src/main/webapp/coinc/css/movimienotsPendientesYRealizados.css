@@ -1,0 +1,236 @@
+
+.cajaDetalleAmazon{
+	border-bottom:1px dotted #ccc; 
+	height: 230px;
+	height: 250px\9;
+}
+.cajaDetalleAmazonPrimerDiv{
+	margin-left: 70px;
+	float:left;
+}
+.cajaDetalleAmazonPrimerDiv img{
+	width: 115px !important;
+	height: 70px !important;
+}
+.cajaDetalleAmazonSegundoDiv{
+	width: 290px;
+	margin-left: 10px;
+	float:left;
+}
+.cajaDetalleAmazonTercerDiv{
+	margin-left: 30px;
+	float:left;
+}
+.cajaDetalleAmazonTercerDivPendiente{
+	margin-left: 55px;
+	float:left;
+}
+.textoAvisoLegalAmazon{
+	float:left; 
+	margin-left: 10px; 
+	margin-right: 10px; 
+	text-align:justify; 
+	color: #adab9f; 
+	font-size:1em; 
+	margin-top:10px;
+}
+.textoAvisoLegalAmazon a{
+	text-decoration: underline;
+	color: #adab9f; 
+}
+.cajaDetalleAmazonNoHay{
+	border-bottom:1px dotted #ccc; 
+	height: 80px;
+}
+.cajaDetalleAmazonTercerDiv_soloRealizados{
+	margin-left: 66px;
+	float:left;
+}
+.verDetalle{
+	font-size:1.3em; 
+	padding:0; 
+	font-weight:bold; 
+	text-decoration:underline;
+}
+.verDetalle:hover{
+	color: #70a41c;
+	cursor: pointer;
+}
+/* MOVIMIENTOS PENDIENTES */
+.box_movimientos_pendientes {
+    height: auto;
+    margin: 8px 0 0 20px;
+    width: 650px;
+    border-spacing: 0px 10px;
+}
+.box_movimientos_pendientes  td{
+    padding: 10px 0px;
+}
+
+.box_movimientos_pendientes td div img {
+    width: 50px;
+}
+
+.col1 {
+    width: 80px;
+	border-bottom: 1px dotted #ccc;
+    border-color: #ccc;
+}
+.col2 {
+    width: 440px;
+	border-bottom: 1px dotted #ccc;
+    border-color: #ccc;
+}
+.col3 {
+    text-align: right;
+    vertical-align: top;
+    width: 75px;
+	border-bottom: 1px dotted #ccc;
+    border-color: #ccc;
+}
+.col3 p{
+	font-size:1.5em; 
+	font-weight:bold; 
+}
+.col4 {
+    text-align: right;
+    vertical-align: top;
+    width: 50px;
+	border-bottom: 1px dotted #ccc;
+    border-color: #ccc;
+}
+.textoTituloMovimientos{
+font-size:1.5em; 
+color:#000; 
+font-weight:bold; 
+padding:0;
+}
+.boton_cargar_mas_movientos {
+	background: url(../images/botones/bt_cargar_mas_movimientos.png) no-repeat ;
+	width:250px;
+	height:45px;
+	margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.boton_cargar_mas_movientos:hover {
+	background: url(../images/botones/bt_cargar_mas_movimientos_hover.png) no-repeat ;
+}
+/* FIN MOVIMIENTOS PENDIENTES */
+/* MOVIMIENTOS PENDIENTES Y REALIZADOS */
+.box_movimientos_pendientes_y_realizados {
+    border-spacing: 0 10px;
+    height: auto;
+    margin: 8px 0 0 10px;
+    width: 610px;
+}
+.box_movimientos_pendientes_y_realizados td {
+    padding: 10px 0;
+}
+.box_movimientos_pendientes_y_realizados td div img {
+    width: 50px;
+    height: 50px;
+}/* FIN MOVIMIENTOS PENDIENTES Y REALIZADOS */
+/* MOVIMIENTOS REALIZADOS */
+.cabeceraMovimientosRealizados{
+	background: none repeat scroll 0 0 #eaeaea;
+    padding: 5px 75px;
+    text-align: right;
+    margin-right: 16px;
+}
+
+
+.box_movimientos_realizados {
+    height: auto;
+    margin: 8px 0 0 20px;
+
+    width: 820px;
+    border-spacing: 0px 10px;
+}
+
+.box_movimientos_realizados td{
+    padding: 10px 0px;
+}
+
+.box_movimientos_realizados td div img {
+    width: 50px;
+}
+
+.col1realizados {
+    width: 80px;
+	border-bottom: 1px dotted #ccc;
+    border-color: #ccc;
+}
+
+
+.col2realizados {
+    width: 420px;
+	border-bottom: 1px dotted #ccc;
+    border-color: #ccc;
+}
+
+.col3realizados {
+    text-align: right;
+    vertical-align: top;
+
+    width: 100px;
+	border-bottom: 1px dotted #ccc;
+    border-color: #ccc;
+}
+
+
+
+.col3realizados p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.col4realizados {
+    text-align: right;
+    vertical-align: top;
+    width: 170px;
+	border-bottom: 1px dotted #ccc;
+    border-color: #ccc;
+}
+
+.col4realizados p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.col5realizados {
+    text-align: right;
+    vertical-align: top;
+    width: 50px;
+	border-bottom: 1px dotted #ccc;
+    border-color: #ccc;
+}
+
+
+.iconoPdf{
+	background-image: url("../images/iconos/ico-pdf-grande.png");
+	width: 24px;
+	height: 32px;
+	margin: auto;
+    margin-top: 0px;
+    margin-right: 0px;
+}
+.iconoPdf:hover{
+	background-image: url("../images/iconos/ico_pdf-verde.png");
+}
+.iconoAmazon{
+	background-image: url("../images/amazon/ico_amazon_negro.png");
+	width: 24px;
+	height: 32px;
+	margin: auto;
+    margin-top: 0px;
+    margin-right: 0px;
+}
+.iconoAmazon:hover{
+	background-image: url("../images/amazon/ico_amazon_verde.png");
+}
+.borrarGiftCard img{
+    width: 58px !important;
+    height: 27px !important;
+}
+/* FIN MOVIMIENTOS REALIZADOS */

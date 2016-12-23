@@ -1,0 +1,738 @@
+.viaje_landing header, .viaje_landing_v2 header, .boda_landing header, .boda_landing_v2 header, .moda_landing header, .moda_landing_v2 header{
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.logos_cabecera{
+    width: 100%;
+    height: 125px;
+    position: absolute;
+    z-index: 2;
+}
+    .logos_cabecera .container a {
+        display: block;
+    }
+.logotipo_coinc{
+    padding: 56px 0 0 0;
+    margin-bottom: 25px;
+}
+.logotipo_bankinter{
+    padding: 0 0 0 0;
+}
+.img_background{
+    right: auto;
+    position: relative;
+}
+
+.col-md-8.col-md-offset-2 .texto-main {
+    text-align: center;
+}
+
+.viaje_landing, .viaje_landing_v2, .boda_landing, .boda_landing_v2, .moda_landing, .moda_landing_v2{
+    background: #efecda;
+}
+    .viaje_landing p, .viaje_landing_v2 p, .boda_landing p, .boda_landing_v2 p, .moda_landing p, .moda_landing_v2 p{
+        font-size: 30px;
+        padding-top: 25px;
+        line-height: 36px;
+    }
+    .encabezado3.claim {
+        font-size: 36px;
+        padding-top: 25px;
+        text-align: right;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 40px;
+    }
+    .encabezado3.comoFunc {
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+    .viaje_landing .col-md-12 img, .boda_landing .col-md-12 img, .moda_landing .col-md-12 img {
+        float: left;
+    } 
+    .viaje_landing .col-md-offset-1 img, .boda_landing .col-md-offset-1 img, .moda_landing .col-md-offset-1 img {
+        float: right;
+        margin-left: 12px;
+    }
+    .viaje_landing .col-md-offset-1 p, .boda_landing .col-md-offset-1 p, .moda_landing .col-md-offset-1 p {
+        text-align: left;
+    }
+    img.funciona {
+        margin: 40px auto 30px auto;
+        display: block;
+    }
+    .viaje_landing .col-sm-7.col-sm-offset-1.col-md-5, .boda_landing .col-sm-7.col-sm-offset-1.col-md-5, .moda_landing .col-sm-7.col-sm-offset-1.col-md-5 {
+        float: right;
+    }
+#bloque-funciona {
+    position: relative;
+}
+#bloque-funciona .col-md-12 .col-md-6:last-child img {
+    float: right;
+}
+#bloque-funciona .col-md-12 .col-md-6:first-child p {
+    text-align: right;
+}
+#linea-puntos-avion {
+    position: absolute;
+    top: 40px;
+    left: 280px;
+}
+#bloque-inferior {margin-top: 100px;}
+#bloque-inferior p {
+    font-size: 18px;
+}
+ul.riesgo {
+    border: 1px solid #000;
+    padding: 14px 20px;
+    display: table; 
+}
+ul.riesgo > li {
+    display: inline-block;
+    width: 48%;
+}
+ul.riesgo > li:last-child {
+    border-left: 1px solid #000;
+    padding-left: 12px;
+}
+ul.riesgo p {
+    font-size: 16px;
+}
+ul.riesgo .nivel {
+    font-size: 35px;
+    display: block;
+    margin-bottom: -8px;
+}
+ul.riesgo .nivel span {
+    color: #6c9f49;
+}
+#linea-puntos-avion-movil {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 30px;
+}
+
+/*version dos*/
+div.circular {
+    position: relative;
+    margin-bottom: 76px;
+}
+div.circular div {
+    border-radius: 50%;
+    border: 5px solid;
+    padding: 60px 32px 55px 72px;
+    width: 340px;
+    height: 340px;
+    position: absolute;
+    text-align: center;
+    z-index: -1;
+}
+div.circular img {
+    border-radius: 50%;
+    border: 18px solid;
+    padding: 12px;
+    display: block;
+    margin: 0 auto;
+    background: #efecda;
+}
+.circular.amarillo {
+    margin-top: 100px;
+}
+.circular.amarillo img{
+    border-color: #fbb800;
+}
+.circular.azul img{
+    border-color: #20a9c1;
+}
+.circular.rojo img{
+    border-color: #f16421;
+}
+.circular.verde img {
+    border-color: #46891f;
+}
+.circular.amarillo .globotxt {
+    top: -90px;
+    right: 220px;
+    border-color: #fbb800;
+}
+.circular.azul .globotxt {
+    top: -90px;
+    left: 220px;
+    border-color: #20a9c1;
+    padding-left: 30px;
+    padding-right: 70px;
+}
+.circular.rojo .globotxt {
+    top: -90px;
+    right: 220px;
+    border-color: #f16421;
+    padding-left: 70px;
+    padding-right: 25px;
+}
+.circular.verde .globotxt {
+    top: -90px;
+    left: 220px;
+    border-color: #46891f;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.circular .union, .circular .unionUp {
+    width: 18px;
+    height: 43px;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    position: absolute;
+    right: 49.3%;
+}
+.circular .union {
+    top: 160px;
+}
+.circular .unionUp {
+    bottom: 160px;
+}
+.circular.amarillo .union, .circular.amarillo .unionUp {
+    background: #fbb800;
+}
+.circular.azul .union, .circular.azul .unionUp {
+    background: #20a9c1;
+}
+.circular.rojo .union, .circular.rojo .unionUp {
+    background: #f16421;
+}
+.circular.verde .union, .circular.verde .unionUp {
+    background: #46891f;
+}
+
+/*FORMULARIO*/
+.formulario-landings {
+    text-align: center;
+    color: white;
+    padding: 20px 50px 20px 55px;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.44), rgb(0, 0, 0));
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.44), rgb(0, 0, 0));
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.44), rgb(0, 0, 0));
+    background: linear-gradient(rgba(0, 0, 0, 0.44), rgb(0, 0, 0));
+    font-weight: lighter;
+    position: absolute;
+    right: 0;
+    top: 220px;
+   }
+    .formulario-landings .encabezado {
+        font-size: 47px;
+        text-align: left;
+        font-family: AkkuratLightPro;
+    }
+        .formulario-landings .encabezado span {
+            text-transform: uppercase;
+            font-size: 67px;
+            font-family: AkkuratLightPro;
+            text-align: right;
+            display: block;
+        }
+    .moda_landing .encabezado, .moda_landing_v2 .encabezado {
+        font-size: 44px;
+    }
+    .moda_landing .encabezado span, .moda_landing_v2 .encabezado span {
+        font-size: 67px;
+    }
+    .formulario-landings .encabezado2 {
+        font-size: 36px;
+        font-family: Akkurat Pro;
+        float: left;
+        text-align: left;
+        margin-top: 20px;
+        line-height: 36px;
+    }
+.formulario-landings input {
+    width: 100%;
+    display: block;
+    font-size:24px;
+    font-family: AkkuratLightPro;
+    padding: 0 20px 0 20px;
+    height: 60px;
+    margin-bottom: 4px;
+    margin-top: 20px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+    border:0;
+    color: #999;
+}
+.formulario-landings form a {
+    width: 180px;
+    height: 60px;
+    background: #70a402;
+    color: white;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -o-border-radius: 6px;
+    font-size: 24px;
+    margin-top: 0px;
+    font-family: AkkuratLightPro;
+    float: right;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 13px;
+    margin-top: 20px;
+}
+.formulario-landings form a:hover {
+    background: #689900;
+}
+
+/*CSS QUERIES*/
+@media(min-width: 1199px){
+    .img_background{
+        width: 100%;
+    }
+}
+@media(min-width: 992px){
+    .formulario-landings {
+        padding: 20px 110px 20px 55px;
+    }
+    .formulario-landings .encabezado {
+        line-height: 75px;
+    }
+}
+@media(max-width: 1199px){
+    #linea-puntos-avion {
+        top: 60px;
+        left: 170px;
+    }
+    .img_background{
+        right: 300px;
+    }
+    .circular.amarillo .globotxt,.circular.rojo .globotxt {
+        right: 140px;
+    }
+    .circular.azul .globotxt, .circular.verde .globotxt {
+        left: 130px;
+    }
+}
+@media(max-width: 992px){
+    #linea-puntos-avion {
+        top: 40px;
+        left: 280px;
+    }
+    .formulario-landings .encabezado span {
+         font-size: 64px;
+    }
+    .formulario-landings .encabezado2 {
+        font-size: 30px;
+        line-height: normal;
+    }
+    .formulario-landings input {
+        font-size: 20px;
+    }
+    .formulario-landings form a {
+        font-size: 20px;
+    }
+    .formulario-landings input {
+        height: 50px;
+    }
+    .formulario-landings form .encabezado2 {
+        margin-bottom: 0;
+    }
+    .circular.amarillo .globotxt, .circular.rojo .globotxt {
+        right: 30px;
+    }
+    .circular.azul .globotxt, .circular.verde .globotxt {
+        left: 20px;
+    }
+}
+@media(max-width: 992px) and (min-width: 768px){ /*TABLET*/
+    .viaje_landing p, .boda_landing p, .moda_landing p {
+        font-size: 24px;
+        padding-top: 15px;
+        line-height: 28px;
+    }
+    .formulario-landings p {
+        font-size: 24px;
+    }
+    #linea-puntos-avion {
+        left: 70px;
+    }
+    .formulario-landings p {
+        line-height: 24px;
+    }
+    .formulario-landings .encabezado {
+         font-size: 40px;
+    }
+    .formulario-landings {
+        top: 300px;
+    }
+    .img_background{
+        right: 400px;
+    }
+    .encabezado3.claim{
+        padding-top: 55px;
+    }
+}
+@media(max-width: 767px){
+    .viaje_landing header, .viaje_landing_v2 header, .boda_landing header, .boda_landing_v2 header, .moda_landing header, .moda_landing_v2 header {
+        height: 665px;
+    }
+    .logotipo_coinc {
+        padding: 22px 0 0 0;
+    }
+    .viaje_landing #bloque-funciona, .boda_landing #bloque-funciona, .moda_landing #bloque-funciona {
+        padding-left: 35px;
+    }
+    .viaje_landing #bloque-funciona .col-xs-12.col-md-12 img, .boda_landing #bloque-funciona .col-xs-12.col-md-12 img, .moda_landing #bloque-funciona .col-xs-12.col-md-12 img{
+        width: 120px;
+    }
+    .viaje_landing_v2 #bloque-funciona .col-xs-12.col-md-12 img, .boda_landing_v2 #bloque-funciona .col-xs-12.col-md-12 img, .moda_landing_v2 #bloque-funciona .col-xs-12.col-md-12 img{
+        width: 105px;
+    }
+    #linea-puntos-avion {
+        display: none;
+    }
+    #linea-puntos-avion-movil {
+        display: block;
+    }
+    .viaje_landing .col-md-12 img, .boda_landing .col-md-12 img, .moda_landing .col-md-12 img  {
+        float: right;
+    }
+    #bloque-funciona .col-md-12 .col-md-6:first-child p {
+        text-align: left;
+    }
+    .viaje_landing p, .boda_landing p, .moda_landing p {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .viaje_landing_v2 p, .boda_landing_v2 p, .moda_landing_v2 p {
+        font-size: 22px;
+        padding-top: 10px;
+        line-height: 24px;
+    }
+    .viaje_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(2), .boda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(2), .moda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(2) {
+        margin-bottom: 15px;
+    }
+    .viaje_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(3), .boda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(3), .moda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(3) {
+        margin-bottom: 55px;
+    }
+    .viaje_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(2), .viaje_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(3), .boda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(2), .boda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(3),.moda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(2), .moda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(3){
+        padding-right: 50px;
+    }
+    .viaje_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(1), .viaje_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(4), .boda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(1), .boda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(4),.moda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(1), .moda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(4) {
+        padding-left: 70px;
+    }
+    .encabezado3.claim {
+        font-size: 30px;
+        text-align: right;
+        margin-top: 45px;
+        margin-left: 20%;
+    }
+    .viaje_landing #bloque-funciona .col-xs-12.col-md-12:first-child, .boda_landing #bloque-funciona .col-xs-12.col-md-12:first-child,  .moda_landing #bloque-funciona .col-xs-12.col-md-12:first-child {
+        margin-bottom: 67px;
+    }
+    #bloque-inferior {
+        margin-top: 0px;
+    }
+    .formulario-landings input {
+        font-size: 18px;
+    }
+    .formulario-landings {
+        bottom: 0;
+        top: inherit;
+    }
+    .formulario-landings .encabezado2 {
+        font-size: 24px;
+    }
+    .formulario-landings .encabezado, .formulario-landings .encabezado span {
+        font-size: 24px;
+    }
+    .formulario-landings .encabezado span {
+        display: inline;
+    }
+    .img_background{
+        right: 600px;
+    }
+    .boda_landing_v2 .img_background {
+        right: 60px;
+    }
+    div.circular img {
+        border: 10px solid;
+    }
+    div.circular div {
+        width: 210px;
+        height: 210px;
+    }
+    .circular.amarillo .globotxt, .circular.rojo .globotxt, .circular.azul .globotxt, .circular.verde .globotxt {
+        top: -55px;
+        padding-top: 30px;
+        padding-right: 20px;
+    }
+    .circular.amarillo .globotxt, .circular.rojo .globotxt {
+        padding-left: 32px;
+    }
+    .circular.azul .globotxt, .circular.verde .globotxt {
+        padding-left: 15px;
+    }
+    .circular.amarillo .globotxt, .circular.rojo .globotxt {
+        right: 45px;
+    }
+    .circular.azul .globotxt, .circular.verde .globotxt {
+        left: 30px;
+    }
+    .viaje_landing_v2 .container, .boda_landing_v2 .container, .moda_landing_v2 .container {
+        width: 545px;
+    }
+    .circular .union {
+        top: 100px;
+    }
+    .circular .unionUp {
+        bottom: 100px;
+    }
+    .circular .union, .circular .unionUp {
+        right: 48.3%;
+    }
+}
+
+@media(max-width: 520px){
+    .viaje_landing p, .boda_landing p, .moda_landing p {
+        font-size: 19px;
+    }
+    .viaje_landing header, .viaje_landing_v2 header, .boda_landing header, .boda_landing_v2 header, .moda_landing header, .moda_landing_v2 header {
+        height: 620px;
+    }
+    .formulario-landings {
+        padding: 10px 30px 10px 30px;
+    }
+}
+
+@media(max-width: 479px){
+    #linea-puntos-avion-movil {
+        display: none;
+    }
+    #bloque-funciona img {
+        float: none!important;
+    }
+    #bloque-funciona .col-xs-12 {
+        padding-left: 0!important;
+    }
+    .encabezado3.claim {
+        font-size: 26px;
+        text-align: center;
+    }
+    #bloque-funciona .col-xs-12.col-md-12 img {
+        width: 120px;
+        margin: 0 auto;
+        display: block;
+    }
+    .viaje_landing_v2 #bloque-funciona .col-xs-12.col-md-12, .boda_landing_v2 #bloque-funciona .col-xs-12.col-md-12, .moda_landing_v2 #bloque-funciona .col-xs-12.col-md-12 {
+        margin-bottom: 50px;
+    }
+    .viaje_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(2), .boda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(2), .moda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(2), .viaje_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(3), .boda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(3), .moda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(3), .viaje_landing #bloque-funciona .col-xs-12.col-md-12:first-child, .boda_landing #bloque-funciona .col-xs-12.col-md-12:first-child, .moda_landing #bloque-funciona .col-xs-12.col-md-12:first-child {
+        margin-bottom: 24px;
+    }
+    #bloque-funciona .col-xs-12.col-md-12:nth-child(2), #bloque-funciona .col-xs-12.col-md-12:nth-child(3) {
+        padding-right: 0px; 
+    }
+    #bloque-funciona p {
+        text-align: center!important;
+    }
+    #bloque-funciona .col-xs-12.col-md-12 {
+        margin-bottom: 24px;
+    }
+    .circular .union, .circular .unionUp {
+        width: 18px;
+        height: 30px;
+    }
+    .viaje_landing header, .viaje_landing_v2 header, .boda_landing header, .boda_landing_v2 header, .moda_landing header, .moda_landing_v2 header {
+        height: 650px;
+    }
+    .formulario-landings .encabezado2 {
+        font-size: 20px;
+    }
+    .formulario-landings .encabezado, .formulario-landings .encabezado span {
+        font-size: 20px;
+    }
+    .formulario-landings input {
+        font-size: 14px;
+    }
+    .formulario-landings form a {
+        font-size: 16px;
+    }
+    .formulario-landings input {
+        height: 35px;
+    }
+    .formulario-landings form a {
+        width: 100%;
+        height: 45px;
+    }
+    .viaje_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(2), .viaje_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(3), .boda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(2), .boda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(3), .moda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(2), .moda_landing #bloque-funciona .col-xs-12.col-md-12:nth-child(3) {
+        padding-right: 15px;
+    }
+    .viaje_landing_v2 .container, .boda_landing_v2 .container, .moda_landing_v2 .container {
+        width: 330px;
+    }
+    .circular .union, .circular .unionUp {
+        right: 47.3%;
+    }
+    .viaje_landing_v2 .col-xs-12, .boda_landing_v2 .col-xs-12, .moda_landing_v2 .col-xs-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .circular .union, .circular .unionUp {
+        width: 12px;
+    }
+    div.circular img {
+        border: 8px solid;
+    }
+    div.circular div {
+        width: 170px;
+        height: 170px;
+    }
+    .viaje_landing_v2 #bloque-funciona p, .boda_landing_v2 #bloque-funciona p, .moda_landing_v2 #bloque-funciona p {
+        font-size: 16px;
+        padding-top: 10px;
+        line-height: 18px;
+    }
+    .boda_landing_v2 .img_background {
+        right: 160px;
+    }
+    .circular.amarillo .globotxt, .circular.rojo .globotxt {
+        right: -30px;
+        padding-left: 32px;
+    }
+    .circular.azul .globotxt, .circular.verde .globotxt {
+        left: -30px;
+        padding-right: 38px;
+    }
+    .circular.amarillo .globotxt, .circular.rojo .globotxt, .circular.azul .globotxt, .circular.verde .globotxt {
+        top: -37px;
+        padding-top: 14px;
+    }
+    .circular.amarillo {
+        margin-top: 20px;
+    }
+    .encabezado3.claim {
+        line-height: 34px;
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 390px){
+    .viaje_landing_v2 .container, .boda_landing_v2 .container, .moda_landing_v2 .container {
+        width: 320px;
+    }
+    .viaje_landing_v2 #bloque-funciona .col-xs-12.col-md-12 img, .boda_landing_v2 #bloque-funciona .col-xs-12.col-md-12 img, .moda_landing_v2 #bloque-funciona .col-xs-12.col-md-12 img {
+        width: 75px;
+    }
+    div.circular div {
+        width: 140px;
+        height: 140px;
+    }
+    div.circular img {
+        border: 6px solid;
+        padding: 5px;
+    }
+    .circular.azul .globotxt, .circular.verde .globotxt {
+        padding-left: 12px;
+        left: 2px;
+    }
+    .circular.amarillo .globotxt, .circular.rojo .globotxt {
+        padding-left: 24px;
+        right: 2px;
+    }
+    .circular.amarillo .globotxt, .circular.rojo .globotxt, .circular.azul .globotxt, .circular.verde .globotxt {
+        top: -32px;
+        padding-top: 15px;
+    }
+    .circular.azul .globotxt, .circular.verde .globotxt {
+        padding-right: 24px;
+    }
+    .viaje_landing_v2 #bloque-funciona p, .boda_landing_v2 #bloque-funciona p, .moda_landing_v2 #bloque-funciona p {
+        font-size: 15px;
+        padding-top: 5px;
+        line-height: 14px;
+    }
+    .viaje_landing_v2 #bloque-funciona .col-xs-12.col-md-12, .boda_landing_v2 #bloque-funciona .col-xs-12.col-md-12, .moda_landing_v2 #bloque-funciona .col-xs-12.col-md-12 {
+        margin-bottom: 55px;
+    }
+    .circular .union, .circular .unionUp {
+        right: 48.3%;
+    }
+    .circular .unionUp {
+        bottom: 73px;
+    }
+    .circular .union {
+        top: 73px;
+    }
+    .encabezado3.claim {
+        padding-top: 0;
+    }
+    .logotipo_coinc {
+        margin-bottom: 12px;
+    }
+}
+
+.seo {
+    content: ".";
+    display: block;
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    display:none;
+}
+
+/* Errores */
+.caja_text_model01_error {
+    border: #c22b25 solid 2px !important;
+}
+/*.tipo_14newmargin_meta {*/
+    /*margin-bottom: 10px;*/
+    /*font-size: 1.4em;*/
+/*}*/
+/*.barra_error_inicio {*/
+    /*height: 30px;*/
+    /*width: 41px;*/
+    /*background: #000;*/
+    /*background: url(../../images/iconos/ico_error_barra.png) no-repeat top left;*/
+/*}*/
+/*.barra_error_back {*/
+    /*background: #f9e6e5;*/
+    /*height: 30px;*/
+    /*padding: 6px 2px 4px 0;*/
+/*}*/
+/*.barra_error_end {*/
+    /*padding: 8px 0 0 2px;*/
+    /*background: #000;*/
+    /*height: 30px;*/
+    /*width: 11px;*/
+    /*background: url(../../images/secciones/error_barra_3.png) no-repeat top*/
+    /*left;*/
+/*}*/
+/*.left {*/
+    /*float: left;*/
+/*}*/
+/*.ui-message-info, .ui-message-error, .ui-message-warn, .ui-message-fatal,*/
+/*.ui-message-error-detail, .ui-message-error-summary {*/
+    /*border: 0 !important;*/
+    /*margin: 0 !important;*/
+    /*padding: 0 !important;*/
+/*}*/
+
+/*.ui-messages-error, .ui-message-error, .ui-message-error-detail,*/
+/*.ui-message-error-summary {*/
+    /*border: 0px;*/
+    /*margin: 0px 0px;*/
+    /*padding: 0px 0px 0px 0px;*/
+    /*color: inherit;*/
+    /*background-color: inherit;*/
+/*}*/
+/*.red {*/
+    /*color: #F00;*/
+/*}*/
+/*.ui-corner-all {*/
+    /*-moz-border-radius: 0px;*/
+    /*-webkit-border-radius: 0px;*/
+    /*border-radius: 0px !important;*/
+/*}*/

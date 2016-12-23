@@ -1,0 +1,341 @@
+@charset "UTF-8";
+
+p {
+    padding: 6px 0 6px 0;
+    font-size: 1.4em;
+    color: #666;
+}
+
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, ol, dl, address {
+    font-weight: normal;
+}
+
+* {
+    border: none;
+}
+
+body {
+    font-style: normal;
+    text-align: left;
+/*     font-size: 100%; */
+}
+
+select {
+    font-family: Arial !important;
+/*     font-size: 1.3em !important; */
+    padding: 3px 5px;
+}
+
+.error-field {
+	font-size: 14px;
+	color:red;
+	margin-top: -12px;
+}
+
+.popup-content .login .form-group {
+	width: 260px;
+    margin: auto;
+}
+
+.breadcrumb {
+	font-size: 14px;
+}
+.content-presupuestos .user-prompt-wrapper .user-prompt-content #subscribeAcceptLogged {
+	float: inherit;
+}
+
+.content-presupuestos .modal-content .popup-group .popup-content .login .form-group label {
+	color: #000000;
+    padding-left: 6px;
+    margin: 0;
+    background: none;
+    font-size: 1.4em;
+}
+
+.content-presupuestos .modal-content .popup-group .popup-content .login .form-group .input-data {
+    border-radius: 2px;
+    height: 25px;
+    border: 1px solid #000000;
+    width: 100%;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.content-presupuestos .modal-content .popup-group .popup-content .login .form-group .password {
+    padding: 11px 0 0 0;
+}
+
+.content-presupuestos .modal-content .popup-group .popup-content .login .form-group a {
+    display: block;
+    margin: auto;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    margin-top: 27px;
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.content-presupuestos .modal-content .popup-group .popup-content .login .later a {
+    cursor: pointer;
+}
+
+.content-presupuestos .links_wrapper_l1 li a {
+    height: auto;
+}
+
+.content-presupuestos .links_wrapper_l1 li a:hover {
+/*     color: #FFFFFF !important; */
+    cursor: pointer;
+}
+
+.content-presupuestos .links_wrapper_l1 li:hover {
+/*     color: #FFFFFF !important; */
+    cursor: pointer;
+}
+
+.content-presupuestos .links_wrapper_l1 li input, .content-presupuestos .links_wrapper_l1 li label {
+    cursor: pointer;
+}
+
+.call_us_wrapper a {
+	cursor: pointer;
+}
+
+.content-presupuestos .modal-dialog .login p {
+	font-size: 14px;
+}
+
+.content-presupuestos {
+	padding-bottom: 20px;
+}
+
+.content-presupuestos .user-prompt-wrapper .user-prompt-content .ack-target .target-text {
+    font-size: 14px;
+}
+
+/* ADDONS */
+.content-presupuestos .user-prompt-content .addons {
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+  background-color: #FFFFFF;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.content-presupuestos .support-msg .content .addons {
+	cursor: pointer;
+}
+
+/* line 102, /home/egilarcas/projects/develop/app/assets/sass/partials/_contact.scss */
+.content-presupuestos .user-prompt-content .addons .addon-wrapper {
+  margin-bottom: 4px;
+}
+
+/* line 105, /home/egilarcas/projects/develop/app/assets/sass/partials/_contact.scss */
+.content-presupuestos .user-prompt-content .addons .addon-wrapper .addon-ico {
+  background: transparent url(../images/callcenter/addon-ico.png) no-repeat scroll 0 0;
+  display: inline-block;
+  height: 42px;
+  width: 29px;
+  vertical-align: top;
+  margin: 11px 14px;
+}
+
+/* line 114, /home/egilarcas/projects/develop/app/assets/sass/partials/_contact.scss */
+.content-presupuestos .user-prompt-content .addons .addon-wrapper .element {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 118, /home/egilarcas/projects/develop/app/assets/sass/partials/_contact.scss */
+.content-presupuestos .user-prompt-content .addons .addon-wrapper .element .name {
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 13px 0 0 1px;
+  letter-spacing: 0.4px;
+}
+
+/* line 125, /home/egilarcas/projects/develop/app/assets/sass/partials/_contact.scss */
+.content-presupuestos .user-prompt-content .addons .addon-wrapper .element .description {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+.blue-info {
+	margin-left: 38px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    height: 45px;
+    border-radius: 6px;
+    color: #5fb8d1;
+    font-size: 0.88em;
+}
+
+.red {
+	color: red;
+}
+
+.content-presupuestos .contact-button.extended {
+	width: 160px !important;
+}
+
+/* .content-presupuestos .links_wrapper_l1 li:hover ul li:hover ul li a { */
+/*   height: 43px; */
+/* } */
+
+.attached-name {
+	float:left;
+	width: 60%;
+}
+
+.content-presupuestos .links_wrapper_l1 li:hover ul li:hover ul li a.no-contacts {
+	height: 63px;
+}
+
+.content-presupuestos .user-prompt-wrapper .user-prompt-content .radio-group input[type=checkbox],
+.content-presupuestos .user-prompt-wrapper .user-prompt-content .left-radio-group input[type=checkbox] {
+  display: none;
+}
+
+.content-presupuestos .user-prompt-wrapper .user-prompt-content .radio-group input[type=checkbox]:checked + label:before,
+.content-presupuestos .user-prompt-wrapper .user-prompt-content .left-radio-group input[type=checkbox]:checked + label:before {
+  content: "\2022";
+  text-align: center;
+  color: #000000;
+  font-size: 35px;
+  line-height: 18px;
+  padding-top: 1px;
+  padding-left: 0.5px;
+}
+
+.content-presupuestos .user-prompt-wrapper .user-prompt-content .send-message-form .contact-button-wrapper {
+    position: relative;
+    margin-top: 10px;
+}
+
+.content-presupuestos .user-prompt-wrapper .user-prompt-content .submit-button-subscribe .contact-button-wrapper {
+    position: relative;
+    top: 0px;
+    right: 0;
+}
+
+.content-presupuestos .links_wrapper_l1 .sms-ico {
+  margin-right: 3px;
+}
+
+.content-presupuestos .links_wrapper_l1 .clip-ico {
+  margin-right: 3px;
+}
+
+.content-presupuestos .support-msg .icon-container {
+    position: relative;
+    float: right;
+    top: 0px;
+    z-index: 1;
+}
+
+/* .content-presupuestos .support-msg .content { */
+/*     margin-right: 50px; */
+/* } */
+
+.content-presupuestos #formLoggedUser .user-prompt-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.content-presupuestos .msg-status-wrapper {
+  height: 37px;
+}
+
+/* line 624, /home/egilarcas/projects/develop/app/assets/sass/partials/_contact.scss */
+.content-presupuestos .msg-status-wrapper p {
+  float: left;
+}
+
+/* line 627, /home/egilarcas/projects/develop/app/assets/sass/partials/_contact.scss */
+.content-presupuestos .msg-status-wrapper .ball {
+  border-radius: 9px;
+  display: inline-block;
+  height: 17px;
+  width: 17px;
+  background-color: #f1d327;
+  vertical-align: top;
+  margin: 13px 3px;
+}
+
+/* line 637, /home/egilarcas/projects/develop/app/assets/sass/partials/_contact.scss */
+.content-presupuestos .msg-status-wrapper label {
+  color: #000000;
+  letter-spacing: -0.4px;
+  margin: 13px 3px;
+  padding: 0;
+  vertical-align: top;
+}
+
+.content-presupuestos .send-message-form #subscribeAcceptLogged label,  .content-presupuestos .send-message-form #subscribeAcceptLogged span {
+	float: right;
+}
+
+.content-presupuestos .user-prompt-content .title {
+    margin-bottom: 8px;
+    padding: 0;
+    color: #000000;
+    font-size: 13px;
+    line-height: 1.1;
+    font-weight: 600;
+    padding-top: 7px;
+}
+
+.content-presupuestos .links_wrapper_l1 > nav > ul > li:hover > ul > li {
+	padding-bottom: 8px;
+}
+
+.content-presupuestos .msg .content .text, .content-presupuestos .support-msg .content .text p {
+	font-size: 13px;
+}
+
+/* .content-presupuestos .links_wrapper_l1 li input[type=checkbox]:checked + label + ul > li > a { */
+/* 	transition: all 1s ease; */
+/* 	height: 30px; */
+/* 	color: #000000 !important; */
+/* 	text-decoration: underline; */
+/* 	padding: 10px 11px; */
+/* 	font-size: 13px; */
+/* 	font-weight: normal; */
+/* } */
+
+/* .content-presupuestos .links_wrapper_l1 li:hover { */
+/*   background-color: #71a51d; */
+/* } */
+
+/* /* .content-presupuestos .links_wrapper_l1 li:hover a { */ */
+/* /*   color: #FFFFFF !important; */ */
+/* /* } */ */
+
+
+/* .content-presupuestos .links_wrapper_l1 li input[type=checkbox]:checked + label + ul > li { */
+/*   background-color: #f1ede4; */
+/* } */
+
+
+/* .content-presupuestos .links_wrapper_l1 li:hover ul li ul li a { */
+/*   transition: all 1s ease; */
+/*   height: 0; */
+/*   padding: 0 22px; */
+/* } */
+
+/* .content-presupuestos .links_wrapper_l1 li:hover ul li { */
+/* 	color: #000000 !important; */
+/* } */
+
+/* .content-presupuestos .links_wrapper_l1 li:hover ul li:hover ul li a { */
+/*   height: 35px; */
+/*   color: #000000 !important; */
+/*   text-decoration: underline; */
+/*   padding: 10px 22px; */
+/* } */

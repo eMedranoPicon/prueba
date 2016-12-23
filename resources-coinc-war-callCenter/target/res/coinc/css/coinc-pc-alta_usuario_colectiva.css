@@ -1,0 +1,120 @@
+.cabecera_homecerdito_v2 {
+    background: url(../images/cabecera_registro_colectivo_pc.png) center top no-repeat !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+}
+
+.cuadro_imagen_blanco{
+	width: 90px;
+	height: 90px;
+	position: relative;
+}
+
+.cuadro_imagen_blanco img{
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.cuadro_imagen_blanco .imagen_circular{
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.cuadro_imagen_blanco .imagen_circular img{
+	width: 100%;
+}
+
+.flecha_blanca{
+	background: url(../images/flecha_blanca.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 50px;
+	width: 100px;
+	margin-top: 20px;
+	float: right;
+	margin-right: 10px;
+}
+
+.nombre{
+	font-size: 30px;
+	color: white;
+}
+
+.nombre_meta{
+	float: left;
+	width: 100%;
+}
+
+.nombre_meta .icono_meta img{
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+}
+
+.nombre_meta .nombre{
+	height: 90px;
+	line-height: 85px;
+	margin-bottom: 20px;
+}
+
+.texto_invitacion{
+	font-size: 20px;
+	color: white;
+}
+
+#formMain{
+	margin-top: -270px;
+}
+
+.col-xs-8{
+	width: 66.66666%;
+	float: left;
+}
+.col-xs-4{
+	width: 33.3333%;
+	float: left;
+}
+.col-xs-6{
+	width: 50%;
+	float: left;
+}
+
+.header-form-reg{
+	margin-top: 110px;
+}
+
+.logo {
+    padding: 0 530px 0 0;
+}
+
+.boton_entrar{
+	float: left;
+	margin-top: 10px;
+}
+
+.boton_entrar a{
+	color: white;
+	border: 1px solid white;
+	padding: 10px;
+	width: 100px;
+	text-align: center;
+	display: block;
+	border-radius: 30px;
+	font-size: 13px;
+    font-weight: bold;
+    font-family: "AkkuratStd-Light", Akkurat Pro, Arial;
+    text-decoration: none;
+}

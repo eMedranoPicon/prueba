@@ -1,0 +1,21 @@
+
+.content-presupuestos .alerts-container .alerts-module-content .submodule.module .custom-alert-row {
+	padding-left: 10px;
+}
+
+.content-presupuestos .alerts-container .alerts-module-content .submodule.module.slidedown {
+	height: 265px;
+}
+
+.content-presupuestos .module .module-content {
+	top: 10px;
+}
+
+.content-presupuestos .alerts-container .alerts-module-content .submodule.module .flip-container::before {
+  left: 176px;
+}
+
+
+.content-presupuestos .alerts-container .alerts-module-content .submodule.module .flip-container::after {
+  left: 176px;
+}

@@ -1,0 +1,151 @@
+#placeholder{
+	height: 120px;
+	width: 400px;
+	font-size: 1.6em;
+	font-weight: bold;
+	z-index: 2;
+}
+.contenedorGrafica{
+	top: 20%;
+	margin-left: 50px;
+	position: absolute;
+}
+.lineas{
+	height: 120px;
+	width: 400px;
+	z-index: 1;
+    position: absolute;
+    top: 0px;
+}
+.linea1{
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	width: 391px;
+    margin-left: 5px;
+    height: 4px;
+	border-color: #8ab548;
+}
+.linea2{
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	width: 391px;
+    margin-left: 5px;
+    height: 30px;
+	border-color: #8ab548;
+}
+.linea3{
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	width: 391px;
+    margin-left: 5px;
+    height: 32px;
+	border-color: #8ab548;
+}
+.linea4{
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	width: 391px;
+    margin-left: 5px;
+    height: 30px;
+	border-color: #8ab548;
+}
+.movimientosCuentaGrafico{
+	background: none repeat scroll 0 0 #70a41c;
+	border-radius: 10px;
+	height: 200px;
+	position: relative;
+	width: 940px;
+	margin-top: 20px;
+	-webkit-box-shadow: 0px 4px 2px #e5e5e5;
+    -moz-box-shadow: 0px 4px 2px #e5e5e5;
+    box-shadow: 0px 4px 2px #e5e5e5;
+	behavior: url(/res/coinc/css/PIE.htc);
+}
+.estiloTooltip{
+	background-color: #498f59;
+	border-radius: 0 25px 25px;
+	box-shadow: -2px 2px 5px 0 rgba(0, 0, 0, 0.6);
+	display: none;
+	opacity: 0.85;
+	padding: 10px 40px 10px 40px;
+	position: absolute;
+	color: #fff;
+	-webkit-box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.6);
+	-moz-box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.6);
+	box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.6);
+	z-index: 5;
+	behavior: url(/res/coinc/css/PIE.htc);
+}
+.estiloTooltip .fecha {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+.estiloTooltip .saldo {
+	font-size: 1.8em;
+	font-weight: bold;
+}
+.texto {
+    color: #fff;
+    position: absolute;
+    right: 125px;
+    top: 27%;
+}
+.texto .textoSaldo {
+    font-size: 2.3em;
+}
+.texto .textoValor {
+    display: flex;
+}
+.texto .valorSaldo {
+    font-size: 6em;
+    font-weight: bold;
+    margin-top: 0;
+}
+.texto .valorSaldoDecimales {
+    font-size: 3em;
+    font-weight: bold;
+    margin-top: 8px;
+}
+.texto .euros {
+    font-size: 6em;
+    margin-left: 15px;
+}
+.valorSaldo{
+	float:left;
+}
+.valorSaldoDecimales{
+	float:left;
+}
+.euros{
+	float:left;
+}
+.fechaIzqParticular{
+	position:absolute;
+	background: url(../images/botones/flechaIzqParticular.png) no-repeat center;
+	background-size: 50px 50px;
+	width: 50px;
+	height: 50px;
+	left: -20px;
+    top: 70px;
+	cursor: pointer;
+}
+.fechaIzqParticular:hover{
+	background: url(../images/botones/flechaIzqParticularHover.png) no-repeat center;
+	background-size: 50px 50px;
+}
+
+.fechaDerParticular{
+	position:absolute;
+	background: url(../images/botones/flechaDerParticular.png) no-repeat center;
+	background-size: 50px 50px;
+	width: 50px;
+	height: 50px;
+	right: -20px;
+    top: 70px;
+	cursor: pointer;
+}
+
+.fechaDerParticular:hover{
+	background: url(../images/botones/flechaDerParticularHover.png) no-repeat center;
+	background-size: 50px 50px;
+}

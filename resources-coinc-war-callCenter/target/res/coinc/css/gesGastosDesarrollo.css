@@ -1,0 +1,363 @@
+@charset "UTF-8";
+
+/* -------------------------------------------------------------
+	Css's modificados para el desarrollo del gestor de gastos.
+----------------------------------------------------------------*/
+  
+.content-presupuestos .month-calendar .number-inside-calendar.single {
+  left: 20px;
+}
+
+.content-presupuestos .month-calendar .number-inside-calendar.double {
+    top: 8px;
+}
+
+.content-presupuestos .presupuestos .nav-tabs.calendary > li {
+    width: calc(100% / 15);
+    position: relative;
+    cursor: pointer;
+}
+
+.ingreso {
+    background: no-repeat top left;
+}
+
+.content-presupuestos .receipt-detail-container .receipt-detail-content .top-container {
+  height: 50px;
+  padding-top: 17px;
+  padding-left: 22px;
+  padding-bottom: 27px;
+}
+
+.content-presupuestos a {
+	text-decoration: none;
+    color: #556270;
+}
+
+.content-presupuestos a:hover {
+    text-decoration: none;
+    color: #556270;
+}
+
+.content-presupuestos .detail-header .edit-present-container .box-container-edit a, .content-presupuestos .detail-header .edit-present-container .box-container-return a {
+    display: inline-block;
+}
+
+.content-presupuestos .detail-header .modify > a {
+	display: inline-block;
+}
+
+.content-presupuestos .charts-container .point-chart-container-extend {
+  width: 90%;
+}
+
+.content-presupuestos .charts-container .pie-chart-container-extend {
+	border-right: none;
+	
+}
+
+.container.month-calendar .decimal {
+	font-size: 40px;
+}
+
+.tab-content .targets .col-xs-4 {
+	cursor: pointer;
+}
+
+.content-presupuestos .detail-header .info-present .resume-text > span {
+	white-space: pre;
+}
+
+.st-accordion {
+	background: #f8f9f9;
+}
+
+#mostrarOcultarTimelineSecundario {
+	background: #f8f9f9;
+}
+
+#mostrarOcultarTimelineSecundario {
+	cursor: pointer;
+	width: 100%;
+	text-align: center;
+}
+
+.content-presupuestos .timeline .fila .movement-container .content-timeline .text-container {
+	width: 70%;
+}
+
+.content-presupuestos .detail-header .info-present .icon-container {
+	width: 58px;
+}
+
+.content-presupuestos .detail-concrete-header .section-header .content .info-general .resume-text {
+	width: 75%;
+}
+
+.content-presupuestos .detail-concrete-header .section-header .content .info-general {
+	width: 100%;
+}
+
+#botonVerMasTimeline {
+  border-bottom: 1px solid #ebebeb;
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  float: none;
+  font-family: AkkuratStd;
+  background: #f8f9f9;
+  display: table;
+  cursor: pointer;
+  height: 62px;
+  color: #556270;
+  font-size: 16px;
+  padding-top: 1.3em;
+}
+
+#botonVerMasTimeline span {
+	vertical-align: middle;
+}
+
+.content-presupuestos .detail-header .bottom-content .plan-container .btn-plan-container {
+	padding-top: 10px;
+}
+
+#dashboard .zonaMetas {
+	margin-top: 0;
+	padding: 10px 0 13px 0;
+}
+
+.prueba {
+	position: absolute;
+}
+
+.prueba2 {
+	position: absolute; 
+	margin-left: 11%;
+}
+
+/* Sobreescritura de las clases de icono y mensaje de error */
+.barra_error_inicio {
+	height: 30px;
+	width: 30px;
+	background: #000;
+	background: url(../images/iconos/ico_error_barra.png) no-repeat top left;
+	float: left;
+}
+.barra_error_back {
+	background: #f9e6e5;
+	height: 30px;
+	padding: 6px 2px 4px 2px;
+	float: left;
+}
+.barra_error_end {
+	padding: 8px 0 0 2px;
+	background: #000;
+	height: 30px;
+	width: 11px;
+	background: url(../images/secciones/error_barra_3.png) no-repeat top
+		left;
+		float: left;
+}
+
+/* .content-presupuestos .icon-temple-white {
+  background: transparent url("../images/sprite.png") no-repeat scroll -196px -211px;
+  padding: 11px 8px;
+}
+
+.content-presupuestos .icon-bicycle-white {
+  background: transparent url("../images/sprite.png") no-repeat scroll -201px -142px;
+  padding: 14px 14px;
+} */
+
+/* 
+
+.content-presupuestos .detail-concrete-header .section-header .content .info-general .icon-container {
+  vertical-align: middle;
+  text-align: center;
+  height: 43px;
+  padding-top: 4px;
+  cursor: pointer;
+}
+
+.content-presupuestos .detail-concrete-header .section-header .content .info-general .icon-container .return {
+  margin-bottom: 10px;
+  margin-right: 6px;
+}
+
+.content-presupuestos .detail-concrete-header .section-header .content .info-general .icon-container i {
+  display: inline-block;
+} */
+	
+	
+/* line 134, /home/david/Proyectos/develop/app/assets/sass/partials/_notifications.scss */
+.caja_notificaciones .modules-container.alert.slidedown {
+  height: 320px;
+}
+						
+
+
+/* SOBREESCRITURA DE LOS ICONOS EN AZUL */
+.content-presupuestos .icon-house-blue {
+  background: transparent url("../images/sprite.png") no-repeat scroll -308px -56px;
+  padding: 11px 14px;
+}
+
+.content-presupuestos .icon-house-orange {
+  background: transparent url("../images/sprite.png") no-repeat scroll -390px -208px;
+  padding: 12px 16px;
+}
+
+
+/* line 6, /home/david/Proyectos/develop/app/assets/sass/partials/modules/_modules.scss */
+.content-presupuestos .module.slideup {
+  height: 0;
+  overflow-y: hidden;
+  transition: height 0.3s ease-in;
+  padding-top: 0;
+  transition: all 0.45s, padding-top 1s;
+}
+
+/* line 11, /home/david/Proyectos/develop/app/assets/sass/partials/modules/_modules.scss */
+.content-presupuestos .module.slidedown {
+  overflow-y: hidden;
+  transition: height 0.3s ease-out;
+}
+
+
+/*Método para pintal la ultima línea del Timeline*/
+.content-presupuestos .timeline .month:nth-last-child(1) {
+   border-bottom: 1px solid #ebebeb; 
+}
+
+#dashboard .zonaNotificaciones .botonera-selector {
+	margin-top: 55px;
+	font-family: AkkuratStd;
+    height: 55px;
+  	border-top: 2px solid #e4e4e4;
+  	border-bottom: 2px solid #e4e4e4;
+  	font-size: 1.3em;
+}
+
+
+
+#dashboard .zonaNotificaciones .confirm-container {
+	margin-bottom: -50px;
+	margin-top: 30px;
+	font-family: AkkuratStd-Bold;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 19px;
+	height: 60px;
+	color: #70a41c;
+	font-size: 1.3em;
+}
+
+#dashboard .zonaNotificaciones .error-container {
+	margin-bottom: -50px;
+	margin-top: 30px;
+	font-family: AkkuratStd-Bold;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 19px;
+	height: 60px;
+	color: #ff0000;
+	font-size: 1.3em;
+}
+
+#dashboard .zonaNotificaciones .caja_notificaciones .botonera.special10 {
+    float: right;
+    padding: 9px 2px;
+    bottom: 0;
+    right: 0;
+    width: 284px;
+    text-align: center;
+    overflow: visible;
+    position: relative;
+    height: 33px;
+}
+
+#dashboard .zonaNotificaciones .caja_notificaciones .contenido.mostrar-menos.special10 {
+    height: 44px;
+    box-sizing: content-box;
+}
+
+.content-presupuestos .module {
+  width: 426px;
+  position: absolute;
+  z-index: 5;
+  padding-top: 20px;
+  overflow: hidden;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+#dashboard .zonaNotificaciones .caja_notificaciones .contenido.mostrar-menos {
+    height: 53px;
+    box-sizing: content-box;
+}
+
+#dashboard .zonaNotificaciones .caja_notificaciones .contenido.mostrar-todo {
+	box-sizing: content-box;
+}
+
+.content-presupuestos .devolver-baja-container .devolver-baja-module-content .body-container .link-container {
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+#dashboard .zonaNotificaciones .caja_notificaciones .botonera-link {
+    font-family: AkkuratStd;
+    height: 73px;
+    display: table;
+    width: 100%;
+}
+
+.content-presupuestos .module .flip-container.flip-container-dashboard::after {
+  	left: 196px;
+}
+
+.content-presupuestos .module .flip-container.flip-container-dashboard::before {
+	left: 195px;
+}
+
+html[data-useragent*='IE'] #dashboard .zonaNotificaciones .icon-container.devolver-recibo {
+	margin-top: 13px;
+}
+
+/* line 119, /home/david/Proyectos/develop/app/assets/sass/partials/modules/_devolver-baja.scss */
+#dashboard .zonaNotificaciones .link-container .link-content .link.devolver-recibo {
+  color: #aeb5bc;
+  text-decoration: none;
+}
+
+/* line 121, /home/david/Proyectos/develop/app/assets/sass/partials/modules/_devolver-baja.scss */
+#dashboard .zonaNotificaciones .link-container .link-content .link.devolver-recibo:hover {
+  color: #556270;
+  text-decoration: underline;
+}
+
+/* FIN DE SOBREESCRITURA */
+
+/* ESTILOS EXCLUSIVOS PARA IE */
+@media screen and (min-width:0\0) {
+	.content-presupuestos .month-calendar .number-inside-calendar {
+		top: 0px !important;
+	}
+	
+	.content-presupuestos .presupuestos .nav-tabs.calendary > li {
+    	width: calc(99.9% / 15);
+	}
+}
+
+@media \0screen\,screen\9 {
+	.content-presupuestos .month-calendar .number-inside-calendar {
+		top: 0px !important;
+	}
+	
+	.content-presupuestos .presupuestos .nav-tabs.calendary > li {
+    	width: calc(99.9% / 15);
+	}
+}

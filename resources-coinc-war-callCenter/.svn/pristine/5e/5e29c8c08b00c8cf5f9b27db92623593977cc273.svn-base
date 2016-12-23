@@ -1,0 +1,65 @@
+/*__________________________________________________________________HEADER*/
+header nav div.navbar-header .navbar-brand{background: url(img/logo.png) no-repeat !important; no-repeat;padding:14px 80px;text-indent:-1000000px;}
+
+header nav div ul.nav li span.logo{background: url(img/logo-idea.png) no-repeat 0 -80px !important;height:20px; width:120px;overflow:hidden;}
+
+header nav.ie8{background:none;}
+
+
+
+/*.ico{background:url(img/sprite-icon.png) no-repeat !important;}*/
+
+.ico{background:url(img/sprite-icon.png) no-repeat !important;}
+
+.cara_coinc{background-position: 44px 10px !important;}
+.etiqueta{background-position: 46px -145px !important;}
+.ocasion{background-position: 31px -290px !important;}
+.bandera{background-position: 26px -450px !important;}
+.agenda{background-position: 25px -570px !important;}
+
+/*__________________________________________________________maria*/
+.svgHombre{background-image: url("../css/img/hombre.png")no-repeat;}
+
+/*maria*/
+
+.row-left-2 .svgHombre{background-image: url("../css/img/hombre.png")no-repeat;}
+.row-left-4 .jumbotron div{background-image: url("../css/img/reloj.png")no-repeat;}
+.row-left-4 .ventajas .svgEtiqueta{background-image: url("../css/img/etiqueta.png")no-repeat;}
+.row-left-4 .ventajas .svgRegalo{background-image: url("../css/img/regalo.png")no-repeat;}
+.row-left-6 .svgMujer{background-image: url("../css/img/mujer.png")no-repeat;}
+.row-left-5 .svgCerdito{background-image: url("../css/img/cerdo.png")no-repeat;}
+.row-left-5 .svgBanderas{background-image: url("../css/img/icono_bandera_2.png")no-repeat;}
+.row-left-5 .svgMonedas2{background-image: url("../css/img/icono_monedas2.png")no-repeat;}
+.row-left-5 .svgRegistro{background-image: url("../css/img/registro.png")no-repeat;}
+
+/*maria*/
+/*__________________________________________________________maria*/
+
+
+/* Paco */
+.sidrClassCoinc.coinc,
+.sidrClassCoinc, .sidrClassMetas, .sidrClassAhorradores{
+	margin-right: 0;
+}
+
+.arrowDownMenu{
+	margin-right: 10px;
+}
+
+#right-menu{
+	width: 36px;
+    border-radius: 18px;
+}
+
+
+.texto_que_es_coinc ul li{
+	text-align: left;
+}
+/* Paco */
+
+
+header nav .navbar-nav > .active {background:#fff;color:#81a231;border-radius:10px 10px 0 0;}
+header nav div ul{display:inline-flex;}
+header nav div ul li{padding:10px 0 0 0;margin-top:20px;}
+header nav div ul li a{padding-top:50px;}
+header nav div ul li a span{margin-top:20px;}

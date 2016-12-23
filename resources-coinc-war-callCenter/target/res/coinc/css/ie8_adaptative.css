@@ -1,0 +1,202 @@
+/*____________________________________________________________RESET*/
+ h1,h2,h3,h4{font-size:25px !important;padding-bottom:10px;}
+
+
+
+/*__________________________________________________________________HEADER*/
+div.navbar-header .navbar-brand{background: url(img/logo.png) no-repeat !important;padding:14px 80px;text-indent:-1000000px;}
+header nav.login:first-child div.navbar-header .navbar-brand{background: url(img/logo_blanco.png) no-repeat !important;padding:14px 80px;text-indent:-1000000px;}
+span.logo{background: url(img/logo-idea.png) no-repeat 0 -80px !important;height:20px; width:120px;overflow:hidden;}
+
+#sidr a.coinc{background: url(img/cara_coinc_white.png) no-repeat;}
+
+ul.navbar-nav li.active{background:#fff;}
+ul.navbar-nav li.active a,
+ul.navbar-nav li.active a:hover{color:#81a231 !important;}
+
+.nav-ie8-1 .navbar-nav li{margin-top:0px;}
+.nav-ie8-3{background:#edebda;height:140px;padding-top:20px;}
+
+
+.navbar div ul li{padding:0 0 20px 0;margin-top:20px;overflow:hidden;}
+.navbar div ul li a{padding-top:50px;}
+.navbar div ul li a span{margin-top:20px;}
+
+ul li .ico{background:url(img/sprite-icon.png) no-repeat !important;}
+ul li .cara_coinc{background-position: 44px 10px !important;}
+ul li .etiqueta{background-position: 46px -145px !important;}
+ul li .bandera{background-position: 26px -450px !important;}
+ul li .agenda{background-position: 25px -570px !important;}
+ul li.active a.cara_coinc, ul li a.cara_coinc:hover{ background-position: -65px 10px !important;color:#81a231 !important;}
+ul li.active a.etiqueta, ul li a.etiqueta:hover{ background-position:-60px -145px !important;color:#81a231 !important;}
+ul li.active a.bandera, ul li a.bandera:hover{ background-position:-83px -449px !important;color:#81a231 !important;}
+ul li.active a.agenda, ul li a.agenda:hover{ background-position:-77px -570px !important;color:#81a231 !important;}
+
+/*__________________________________________________________CONTENT LEFT*/
+
+/*_____________________________comunes*/
+
+
+.queescoinc .row-left-2 .svgHombre,
+.cuandoquierastudinero .row-left-2 .svgHombre,
+.comollegaratumeta .row-left-2 .svgHombre,
+.comofuncionacoinc .row-left-2 .svgHombre,
+.preguntasfrecuentes .row-left-2 .svgHombre,
+.metas .row-left-2 .svgHombre,
+.descuentosencomercio_login .metas .row-left-2 .svgHombre {background: url("img/hombre.png") no-repeat 50% 1px;height:170px;}
+
+.queescoinc .row-left-4 .col-right a.regalo-amazon div,
+.metas .row-left-3 .col-right a.regalo-amazon div{background: url(img/regalo.png) no-repeat 20px 20px !important;padding-left:20px;padding-top:140px;text-align:center;}
+
+.queescoinc .row-left-4 .col-right a.club-ahorradores div,
+.metas .row-left-3 .col-right a.club-ahorradores div{background: url(img/etiqueta.png) no-repeat 20px 20px !important;padding-left:20px;padding-bottom:10px;padding-top:80px;text-align:center;}
+
+.queescoinc .row-left-4 .col-right a.club-ahorradores div span,
+.queescoinc .row-left-4 .col-right a.regalo-amazon div span{margin-right:80px; font-size: 25px; padding-bottom: 10px;}
+
+
+.jumbotron{background: #edeada;padding:20px !important;}
+.jumbotron p{padding:0 0 20px 100px !important;text-align:left !important;}	
+.jumbotron-container {padding:20px 0 20px 100px;text-transform: uppercase;}
+.jumbotron-container p {padding:0 0 0 70px !important;}
+.jumbotron-center p{padding:130px 0 20px !important;text-align:center !important;}	
+
+.jumbotron-reloj{background-color: #edeada;background-image: url(img/reloj.png) !important;background-repeat:no-repeat;background-position: 25px 20px !important; border-radius:10px;padding:20px !important;}
+.jumbotron-ventajas{background: url(img/mas_ventajas.png) no-repeat 25px 20px !important;padding:20px !important;}
+.jumbotron-amazon{background: url(img/burbuja_amazon.png) no-repeat 25px 20px !important;padding:20px !important;}
+
+.jumbotron-container-reloj{background: url(img/reloj.png) no-repeat 10px center;}
+.jumbotron-container-descuento{background: url(img/icono_porciento2.png) no-repeat 10px center;}	
+
+
+/*_____________________________que es coinc*/
+.queescoinc .row-left-2 .svgHombre {background: url("img/hombre.png") no-repeat;height: 170px;background-repeat: no-repeat;background-position: 50% 1px;}
+.queescoinc .row-left-3{background: transparent;}
+/*.queescoinc .row-left-4 .col-left .panel-img{background: url(img/porque_usar_coinc.png) no-repeat center center !important;padding:180px 0 0 0 !important;}*/
+.queescoinc .row-left-4 .col-right a.club-ahorradores div{background: url(img/etiqueta.png) no-repeat 25px center;}
+.queescoinc .row-left-4 .col-right a.regalo-amazon div{background: url(img/regalo.png) no-repeat 25px center;}
+.queescoinc .row-left-5 .list-group-item{border-bottom: 0px !important;}
+.queescoinc .row-left-5 .svgCerdito{background: url(img/cerdo.png) no-repeat 10px center !important;}
+.queescoinc .row-left-5 .svgBanderas{background: url(img/icono_bandera_2.png) no-repeat 10px center !important;}
+.queescoinc .row-left-5 .svgMonedas2{background: url(img/icono_monedas2.png) no-repeat 10px center !important;}
+.queescoinc .row-left-5 .svgRegistro{background: url(img/registro.png) no-repeat 10px center !important;}
+.queescoinc .row-left-6 .svgMujer{background: url(img/mujer.png) no-repeat;}
+
+/*_____________________________cuando quieras tu dinero*/
+.cuandoquierastudinero .row-left-3 .list-group .svgAjustes{background: url(img/icono_ajustes.png) no-repeat left center !important;}
+.cuandoquierastudinero .row-left-3 .list-group .svgCartera {background: url(img/icono_cartera.png) no-repeat left center !important;}
+.cuandoquierastudinero .row-left-3 .list-group .svgMonedas {background: url(img/icono_monedas.png) no-repeat left center !important;}
+.cuandoquierastudinero .row-left-3 .list-group .svgTarjeta2 {background: url(img/tarjeta2.png) no-repeat left center !important;}
+.cuandoquierastudinero .row-left-3 .list-group .svgPorciento2 {background: url(img/icono_porciento2.png) no-repeat left center !important;}
+.cuandoquierastudinero .row-left-4b .jumbotron .reloj{background: url("img/reloj.png") no-repeat; padding:20px 0 20px 100px;}
+.cuandoquierastudinero .row-left-6 .jumbotron{padding-bottom:110px;background:#edeada;}
+.cuandoquierastudinero .row-left-6 .jumbotron button{margin-bottom:50px;margin-top:20px;}
+
+/*_____________________________como llegar a tu meta*/
+
+
+.comollegaratumeta .row-left-4 div .colour-text-min,
+.comollegaratumeta .row-left-4-b div .colour-text-min{font-family: Arial;font-size:20px;}
+
+
+/*_____________________________como funciona coinc*/
+.comofuncionacoinc .row-left-4 .col-lg-4 .panel-default .panel-body a img,
+.comofuncionacoinc .row-left-5 .col-lg-4 a img{height:150px !important;}
+.comofuncionacoinc a.plus {background:url(img/icono-plus.png) no-repeat -1px center;padding:10px 0 10px 40px;}
+.comofuncionacoinc .row-left-3 h2 {font-size:12px !important;}
+
+/*_____________________________preguntas frecuentes*/
+.preguntasfrecuentes .row-left-3 .col-right div.jumbotron h5{font-size:33px;}
+
+/*_____________________________metas*/
+
+.metas .row-left-3 .col-right a.ventajas div{background: url(img/icono_bolsa_2.png) no-repeat 25px center;padding-left:110px;padding-bottom:10px;}
+.metas .row-left-4 .noticias .icono_noticias{background: url(img/ejemplo_metas_icono_noticias.png) no-repeat center  center ;min-height:124px;}
+
+
+/*______________________________descuentos en comercios*/
+.descuentosencomercio .row-left-2 .svgHombre , .descuentosencomercio_login .row-left-2 .svgHombre , .comofuncionaelclubdeahorradores .row-left-2 .svgHombre , .comofuncionaelclubdeahorradores_login .row-left-2 .svgHombre{background: url(img/hombre.png) no-repeat 50% 1px;height:170px;}
+.descuentosencomercio .row-left-4  .col-left .list-group .svgBolsa , .descuentosencomercio_login  .row-left-4  .col-left .list-group .svgBolsa{background: url(img/icono_bolsa.png) no-repeat left center;}
+.descuentosencomercio .row-left-4  .col-left .list-group .svgPC , .descuentosencomercio_login  .row-left-4  .col-left .list-group .svgPC{background: url(img/icono_pc.png) no-repeat left center;}
+.descuentosencomercio .row-left-4  .col-left .list-group .svgTarjeta , .descuentosencomercio_login  .row-left-4  .col-left .list-group .svgTarjeta{background: url(img/tarjeta.png) no-repeat left center;}
+
+.descuentosencomercio .row-left-4 .col-right .jumbotron ,
+.descuentosencomercio_login .row-left-4 .col-right .jumbotron,
+
+
+.descuentosencomercio .row-left-5 .list-group .svgFormulario{background: url(img/formulario_icono.png) no-repeat top center;padding-top: 40px;margin-bottom: -12px;border: 0px;}
+.descuentosencomercio .row-left-5 .list-group .svgPersonal{background: url(img/datos_personales_icono.png) no-repeat top center;padding-top: 40px;margin-bottom: -12px;border: 0;}
+.descuentosencomercio .row-left-5 .list-group .svgSobre{background: url(img/sobre.png) no-repeat top center;padding-top: 40px;margin-bottom: -12px;border: 0px;}
+.descuentosencomercio .row-left-5 .list-group .svgBanderas{background: url(img/icono_bandera_2.png) no-repeat top center;padding-top: 40px;margin-bottom: -12px;border: 0px;}
+.descuentosencomercio_login .row-left-5 .jumbotron .porciento{background: url(img/icono_porciento2.png) no-repeat 10px center; padding:20px 0 20px 100px;text-transform: none;font-size: 21px;}
+
+.descuentosencomercio .row-left-4  .col-left .list-group .list-group-item,
+.descuentosencomercio_login .row-left-4  .col-left .list-group .list-group-item{padding: 80px 0 0 0;}
+
+.descuentosencomercio .row-left-4  .col-left .list-group .svgBolsa,
+.descuentosencomercio_login .row-left-4  .col-left .list-group .svgBolsa{background: url(img/icono_bolsa.png) no-repeat center 10px !important;text-align:center;}
+
+.descuentosencomercio .row-left-4  .col-left .list-group .svgPC,
+.descuentosencomercio_login .row-left-4  .col-left .list-group .svgPC{background: url(img/icono_pc.png) no-repeat center 10px !important;text-align:center;}
+
+.descuentosencomercio .row-left-4  .col-left .list-group .svgTarjeta,
+.descuentosencomercio_login .row-left-4  .col-left .list-group .svgTarjeta{background: url(img/tarjeta.png) no-repeat center 10px !important;border:0px;text-align:center;}
+
+/*___________________________________________________________________________________FOOTER*/
+footer .container .navbar-brand{ background: url(img/logo_blanco.png) no-repeat;}
+footer .container ul.social li a.blog{background: url(img/blog.png) no-repeat center center;padding:20px;}
+footer .container ul.social li a.twitter{background: url(img/twitter.png) no-repeat center center;padding:20px;}
+footer .container ul.social li a.facebook{background: url(img/facebook.png) no-repeat center center;padding:20px;}
+footer .container span.logo{background: url(img/logo-idea.png) no-repeat 0 -80px;height:20px; width:120px;overflow:hidden;margin-left:10px;}
+
+.blue{background: transparent url(img/blue.png) no-repeat center center !important;}
+.orange{background: transparent url(img/orange.png) no-repeat center center !important;}
+.green{background: transparent url(img/green.png) no-repeat center center !important;}
+.yellow{background: transparent url(img/yellow.png) no-repeat center center !important;}
+
+.comoaccederalclubdeahorradores .row-left-3a .col-left .panel-img, .comofuncionaelclubdeahorradores_login .row-left-3 .col-left .panel-img{background: url(img/ilustraciones_compuestas-03.png) no-repeat 50% 0%;padding:180px 0 0 0 !important;}
+.comofuncionaelclubdeahorradores_login .row-left-3 .col-right .jumbotron .panel-img{background: url(img/ejemplo_comofuncionaelclubdeahorradores_login_1.png) no-repeat center bottom;padding:25px 0 180px 0 !important;border-top: 1px dotted #999;margin-bottom: 30px;}
+.comofuncionaelclubdeahorradores .row-left-3 .col-left .panel-img{background: url(img/ilustraciones_compuestas-03.png) no-repeat center 0;padding:180px 0 0 0 !important;}
+.comofuncionaelclubdeahorradores .row-left-4 .col-left-apple , .comofuncionaelclubdeahorradores_login .row-left-4 .col-left-apple{background: url(img/ejemplo_comofuncionalelclub_logo_apple.png) no-repeat center center;}
+.comofuncionaelclubdeahorradores .row-left-4 .col-left-carrefour , .comofuncionaelclubdeahorradores_login .row-left-4 .col-left-carrefour{background: url(img/ejemplo_comofuncionalelclub_logo_carrefour.png) no-repeat center center;}
+.comofuncionaelclubdeahorradores .row-left-4 .col-left-box , .comofuncionaelclubdeahorradores_login .row-left-4 .col-left-box{background: url(img/ejemplo_comofuncionalelclub_logo_Box.png) no-repeat center center;}
+.comofuncionaelclubdeahorradores .row-left-4 .col-left-reyleon , .comofuncionaelclubdeahorradores_login .row-left-4 .col-left-reyleon{background: url(img/ejemplo_comofuncionalelclub_logo_elReyLeon.png) no-repeat center center;}
+.comofuncionaelclubdeahorradores .row-left-4 .col-left-bosch , .comofuncionaelclubdeahorradores_login .row-left-4 .col-left-bosch{background: url(img/ejemplo_comofuncionalelclub_logo_bosch.png) no-repeat center center;}
+.comofuncionaelclubdeahorradores .row-left-4 .col-left-ribs , .comofuncionaelclubdeahorradores_login .row-left-4 .col-left-ribs{background: url(img/ejemplo_comofuncionalelclub_logo_ribs.png) no-repeat center center;}
+.comofuncionaelclubdeahorradores .row-left-4 .col-left-sony , .comofuncionaelclubdeahorradores_login .row-left-4 .col-left-sony{background: url(img/ejemplo_comofuncionalelclub_logo_Sony.png) no-repeat center center;}
+.comofuncionaelclubdeahorradores .row-left-4 .col-left-philips , .comofuncionaelclubdeahorradores_login .row-left-4 .col-left-philips{background: url(img/ejemplo_comofuncionalelclub_logo_Philips.png) no-repeat center center;}
+.comofuncionaelclubdeahorradores .row-left-4 .col-left-vodafone , .comofuncionaelclubdeahorradores_login .row-left-4 .col-left-vodafone{background: url(img/ejemplo_comofuncionalelclub_logo_Vodafone.png) no-repeat center center;}
+.comofuncionaelclubdeahorradores .row-left-4 .col-left-telepizza , .comofuncionaelclubdeahorradores_login .row-left-4 .col-left-telepizza{background: url(img/ejemplo_comofuncionalelclub_logo_telepizza.png) no-repeat center center;}
+.comofuncionaelclubdeahorradores .row-left-4 .col-left-justeat , .comofuncionaelclubdeahorradores_login .row-left-4 .col-left-justeat{background: url(img/ejemplo_comofuncionalelclub_logo_justeat.png) no-repeat center center;}
+.comofuncionaelclubdeahorradores .row-left-4 .col-left-volkswagen , .comofuncionaelclubdeahorradores_login .row-left-4 .col-left-volkswagen{background: url(img/ejemplo_comofuncionalelclub_logo_volkswagen.png) no-repeat center center;}
+.comofuncionaelclubdeahorradores .row-left-4 .col-left-seat , .comofuncionaelclubdeahorradores_login .row-left-4 .col-left-seat{background: url(img/ejemplo_comofuncionalelclub_logo_seat.png) no-repeat center center;}
+.comofuncionaelclubdeahorradores .row-left-4 .col-left-audi , .comofuncionaelclubdeahorradores_login .row-left-4 .col-left-audi{background: url(img/ejemplo_comofuncionalelclub_logo_audi.png) no-repeat center center;}
+.comofuncionaelclubdeahorradores .row-left-4 .col-left-volvo , .comofuncionaelclubdeahorradores_login .row-left-4 .col-left-volvo{background: url(img/ejemplo_comofuncionalelclub_logo_volvo.png) no-repeat center center;}
+.comofuncionaelclubdeahorradores .row-left-4 .col-left-atrapalo , .comofuncionaelclubdeahorradores_login .row-left-4 .col-left-atrapalo{background: url(img/ejemplo_comofuncionalelclub_logo_atrapalo.png) no-repeat center center;}
+.comoaccederalclubdeahorradores .row-left-2 .svgHombre{background: url(img/hombre.png) no-repeat center 1px !important;height:170px;}
+.comoaccederalclubdeahorradores .row-left-3a  .col-left-1 .col-left-1a{background: url(img/ilustraciones_compuestas-10.png) no-repeat center 20px;min-height: 226px;padding: 190px 0 50px 0;}
+.comoaccederalclubdeahorradores .row-left-3a  .col-left-1 .col-right-1a{background: url(img/ilustraciones_compuestas-10.png) no-repeat center center !important;min-height: 226px;}
+.comoaccederalclubdeahorradores .row-left-3a  .col-left-2 .col-left-2a{background: url(img/ilustraciones_compuestas-11.png) no-repeat center 20px;min-height: 226px;padding: 370px 0 50px 0;}
+.comoaccederalclubdeahorradores .row-left-3a  .col-left-2 .col-right-2a{background: url(img/ilustraciones_compuestas-11.png) no-repeat center center !important;min-height: 226px;}
+
+.comoaccederalclubdeahorradores_login_soyclub .row-left-2 .svgHombre , .comoaccederalclubdeahorradores_login_no_soyclub .row-left-2 .svgHombre{background: url(img/hombre.png) no-repeat 50% 1px !important;height:170px;}
+.comoaccederalclubdeahorradores_login_soyclub .row-left-3b .col-left-1 .jumbotron .porciento p , .comoaccederalclubdeahorradores_login_no_soyclub .row-left-3b .col-left-1 .jumbotron .porciento p{background: url(img/icono_porciento3.png) no-repeat left center !important; padding:20px 0 20px 80px;}
+.comoaccederalclubdeahorradores_login_soyclub .row-left-3b .col-left-2 .jumbotron .bandera p , .comoaccederalclubdeahorradores_login_no_soyclub .row-left-3b .col-left-2 .jumbotron .bandera p{background: url(img/icono_bandera_3.png) no-repeat left center !important; padding:20px 0 20px 80px;}
+.comoaccederalclubdeahorradores_login_soyclub .row-left-3b .col-left-2 .jumbotron .img-panel , .comoaccederalclubdeahorradores_login_no_soyclub .row-left-3b .col-left-2 .jumbotron .img-panel{background: url(img/comoaccederalclubdeahorradores_login_soyclub_paso2.png) no-repeat left center !important; padding:170px 0 0 0;}
+
+.comoaccederalclubdeahorradores_login_soyclub .row-left-3b .col-left-3 .jumbotron .img-panel , .comoaccederalclubdeahorradores_login_no_soyclub .row-left-3b .col-left-3 .jumbotron .img-panel{background: url(img/ilustraciones_compuestas-15.png) no-repeat center center !important; padding:227px 0 20px 0;}
+.comoaccederalclubdeahorradores_login_soyclub .row-left-2 .svgHombre , .comoaccederalclubdeahorradores_login_no_soyclub .row-left-2 .svgHombre{background: url(img/hombre.png) no-repeat 50% 1px !important;height:180px;border: 0;}	
+.comoaccederalclubdeahorradores_login_soyclub .row-left-3 .col-left-1 .col-left-1a .panel-img , .comoaccederalclubdeahorradores_login_no_soyclub .row-left-3 .col-left-1 .col-left-1a .panel-img{background: url(img/comoaccederalclubdeahorradores_login_soyclub_paso1.png) no-repeat center bottom !important; padding: 150px 0 0 0;}
+.comoaccederalclubdeahorradores_login_soyclub .row-left-3 .col-left-2 .col-left-2a .panel-img , .comoaccederalclubdeahorradores_login_no_soyclub .row-left-3 .col-left-2 .col-left-2a .panel-img{background: url(img/comoaccederalclubdeahorradores_login_soyclub_paso1.png) no-repeat center bottom !important; padding: 150px 0 0 0;}
+.comoaccederalclubdeahorradores_login_soyclub .row-left-3 .col-left-3 .col-left-3a , .comoaccederalclubdeahorradores_login_no_soyclub .row-left-3 .col-left-3 .col-left-3a{background: url(img/comoaccederalclubdeahorradores_login_soyclub_paso1.png) no-repeat 10px bottom !important; padding: 150px 0 0 0;margin-bottom: 50px;}
+.comoaccederalclubdeahorradores_login_soyclub .row-left-3 .col-left-4 .col-left-4a , .comoaccederalclubdeahorradores_login_no_soyclub .row-left-3 .col-left-4 .col-left-4a{background: url(img/comoaccederalclubdeahorradores_login_soyclub_paso2.png) no-repeat 10px bottom !important; padding: 150px 0 0 0;margin-bottom: 50px;}
+
+.comoaccederalclubdeahorradores_login_soyclub .row-left-3 .col-left-1 .col-left-1b {background: url(img/comoaccederalclubdeahorradores_login_soyclub_paso1.png) no-repeat center bottom !important; padding: 200px 0 0 0;margin-top: 60px;}
+.comoaccederalclubdeahorradores_login_soyclub .row-left-3 .col-left-2 .col-left-2b {background: url(img/comoaccederalclubdeahorradores_login_soyclub_paso2.png) no-repeat center bottom !important; padding: 200px 0 0 0;margin-top: 60px;}
+
+.comoaccederalclubdeahorradores .row-left-3b .col-left-1 .col-left-1a{background: url(img/ilustraciones_compuestas-12.png) no-repeat center bottom !important;min-height: 250px; padding: 0 0 50px 0;margin-bottom: 30px;}
+.comoaccederalclubdeahorradores .row-left-3b .col-left-2 .col-left-2a{background: url(img/ilustraciones_compuestas-13.png)  no-repeat center bottom !important;min-height: 250px;padding: 0 0 50px 0;margin-bottom: 30px;}
+
+
+
+

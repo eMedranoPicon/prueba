@@ -1,0 +1,329 @@
+.header {
+    background: none;
+    height: 220px;
+    margin-bottom: 0;
+}
+
+.fondo_negro_punteado{
+	margin-top: 0;
+	background: rgba(0, 0, 0, 0.72);
+	background-image: url(../images/fondo_punteado.png);
+	height: 155px;
+	text-align: center;
+	color: white;
+}
+
+.label100{
+	width: 100%;
+}
+
+.campo_dia_nacimiento{
+	padding: 0 10px 0 0;
+}
+
+.campo_mes_nacimiento{
+	padding: 0 5px 0 5px;
+}
+
+.campo_anio_nacimiento{
+	padding: 0 0 0 10px;
+}
+
+.campo_dia_nacimiento select,
+.campo_mes_nacimiento select,
+.campo_anio_nacimiento select{
+	width: 100%;
+	height: 25px;
+	border: 1px solid #CCCCCC;
+	border-radius: 4px;
+}
+
+.fondo_negro_punteado .titulo_cabecera{
+	font-size: 27px;
+	color: white;
+	padding: 30px 0 0 0;
+}
+
+.fondo_negro_punteado .subtitulo_cabecera{
+	font-size: 20px;
+	color: white;
+	padding: 0px 0 0 0;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+.titulo_cabecera .alternativo{
+	display: block;
+	content: initial;
+	height: inherit;
+	width: 100%;
+	visibility: visible;
+	margin: 0px;
+	color: rgb(192, 216, 160);
+	font-family: 'Akkurat Pro', sans-serif;
+	font-weight: 600;
+}
+
+.cabecera_formulario_registro_movilidad .alternativo{
+	display: block;
+	content: initial;
+	height: inherit;
+	width: 100%;
+	visibility: visible;
+}
+
+.degradado_gris{
+	height: 220px;
+	background: none;
+}
+
+.text_bold{
+	font-weight: bold;
+}
+
+.cabecera_formulario_registro_movilidad{
+	width: 100%;
+	margin: 0 auto;
+	height: 100px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.cabecera_formulario_registro_movilidad:first-of-type{
+	margin-top: -20px;
+	margin-bottom: 20px;
+}
+
+.grupo_registro{
+	background-color: white;
+	border: 1px solid gainsboro;
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: 0px 2px 0px rgba(195, 195, 195, 0.75);
+    margin-bottom: 20px;
+}
+
+/*meter los tipo sde input que quiero que cubra: text, password etc*/
+.grupo_registro input[type=text],
+.grupo_registro input[type=password],
+.grupo_registro input[type=date],
+.grupo_registro input[type=email]{
+	width: 100%;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.texto_ayuda_registro{
+	font-size: 12px;
+	color: gray;
+	margin-bottom: 15px;
+}
+
+.circulo_imagen_usuario{
+	width: 60px;
+	float: left;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 3px solid gray;
+	height: 60px;
+}
+
+.circulo_imagen_usuario img{
+	width: 100%;
+	height:100%;
+}
+
+.grupo_registro input[type=file]{
+	float: left;
+	margin-top: 17px;
+    margin-left: 30px;
+}
+
+.black_text{
+	color: black;
+	font-weight: bold;
+}
+
+.grupo_registro input[type="checkbox"]{
+	display: block;
+	margin: 3px auto;
+}
+
+.boton_registro{
+	display: block;
+	padding: 10px 25px;
+	border-radius: 30px;
+	font-size: 15px;
+	border: none;
+	margin: 0 auto;
+	outline: none;
+	margin-bottom: 20px;
+}
+
+.boton_siguiente {
+    height: 36px;
+    width: 135px;
+	margin: 0 auto;
+	outline: none;
+	margin-bottom: 20px;
+}
+
+.boton_siguiente a {
+    display: block;
+    height: 36px;
+    width: 135px;
+    color: #689d1d;
+    background: url(../images/botones/bt_siguiente_2.png) no-repeat top left;
+    text-align: center;
+    margin: 0 auto;
+	outline: none;
+	margin-bottom: 20px;
+}
+
+.boton_siguiente a:hover {
+    background-position: bottom left;
+    height: 36px;
+    margin-top: 1px;
+}
+
+.boton_siguiente a span {
+    display: none;
+}
+
+
+
+.boton_gris{
+	background-color: #b6b6b6;
+	color: white;
+}
+
+.linea_hr {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #CCCCCC;
+    padding-top: 5px;
+    float: left;
+    margin-bottom: 7px;
+}
+
+.marginB_15{
+    margin-bottom: 15px;
+}
+
+.enlace_condiciones_uso{
+	color: black;
+	text-decoration: underline;
+}
+
+.enlace_condiciones_uso img{
+	margin-left: 5px;
+	margin-top: -2px;
+}
+
+.ui-message-error {
+    margin-top: -10px;
+    background-image: url(../images/iconos/ico_error_barra2.png);
+    background-repeat: no-repeat;
+    padding-left: 27px;
+    padding-right: 15px;
+    background-size: 24px 24px;
+    background-position: 0px 0px;
+    background-color: #f9e6e5;
+    border-radius: 15px;
+    border: none;
+    color: red;
+}
+
+.icoOK_center{
+	margin-top: -10px;
+}
+
+.fecha_segundo_apellido_con_ok{
+	height: 92px;
+}
+
+.sin_margin_top{
+	margin-top: 0;
+}
+
+.grupo_registro input[type=text].input_error,
+.grupo_registro input[type=password].input_error,
+.grupo_registro select.input_error{
+	border: 1px solid red;
+}
+
+.content_campos_form_cambio,
+.mensaje_error{
+	float: left;
+	width: auto;
+}
+
+.wrapper_fecha .texto_ayuda_registro{
+	padding: 0;
+}
+
+@media (max-width: 767px){
+	.wrapper_fecha{
+		margin-top: 75px;
+		margin-bottom: 5px;
+	}
+	.wrapper_email{
+		margin-top: -190px;
+	}
+	.con_imagen_ok{
+		margin-top: -188px;
+	}
+	.con_imagen_error{
+		margin-top: -188px;
+	}
+	.segundo_apellido_con_ok,
+	.segundo_apellido_sin_ok{
+		margin-bottom: 15px;
+	}
+	.input_check{
+		clear: left;
+	}
+}
+
+@media (max-width: 533px){
+	.con_imagen_error {
+	    margin-top: -212px;
+	}
+	.fecha_segundo_apellido_con_ok + .con_imagen_error {
+	    margin-top: -188px;
+	}
+	.wrapper_fecha {
+		min-height: 105px;
+	}
+}
+
+@media (max-width: 385px){
+	.header {
+			height: 240px;
+	}
+	.fondo_negro_punteado {
+			height: 180px;
+	}
+}
+
+@media (max-width: 338px){
+	.con_imagen_error {
+	    margin-top: -229px;
+	}
+	.wrapper_fecha {
+	    margin-top: 95px;
+	}
+}
+
+@media (max-width: 337px){
+	.con_imagen_error {
+	    margin-top: -252px;
+	}
+	.fecha_segundo_apellido_con_ok + .con_imagen_error {
+		margin-top: -225px;
+	}
+}

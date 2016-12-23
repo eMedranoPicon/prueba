@@ -1,0 +1,23 @@
+.content-presupuestos .alerts-container .alerts-module-content .top-alert-container .header-table-container .app {
+  margin-left: 44px;
+}
+
+.content-presupuestos .alerts-container .alerts-module-content .top-alert-container .header-table-container .mail {
+  margin-left: 56px;
+}
+
+.content-presupuestos .alerts-container .alerts-module-content .top-alert-container .header-table-container .sms {
+  margin-left: 52px;
+  float: none;
+}
+
+.content-presupuestos .alerts-container .alerts-module-content .top-alert-container {
+  padding-top: 27px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e3e3e3;
+  height: 115px;
+}
+
+.content-presupuestos .button-module {
+	color: #000000;
+}

@@ -1,0 +1,92 @@
+.header {
+    background: none;
+    height: 220px;
+}
+
+.fondo_negro_punteado{
+	margin-top: 0;
+	height: 155px;
+}
+
+.titulo_cabecera .alternativo{
+	display: block;
+	content: initial;
+	height: inherit;
+	width: 100%;
+	visibility: visible;
+	margin: 0px;
+	color: white;
+	font-family: 'Akkurat Pro', sans-serif;
+	font-size: 25px;
+}
+
+.titulo_cabecera .nombre{
+	display: block;
+	content: initial;
+	height: inherit;
+	width: 100%;
+	visibility: visible;
+	margin: 0px;
+	color: white;
+	font-family: 'Akkurat Pro', sans-serif;
+	font-weight: 600;
+	font-size: 25px;
+}
+
+.subtitulo_cabecera .texto_invitacion{
+	font-family: 'Akkurat Pro', sans-serif;
+	font-size: 18px;
+}
+
+.subtitulo_cabecera .nmobre_meta{
+	font-family: 'Akkurat Pro', sans-serif;
+	font-weight: 600;
+	font-size: 17px;
+	color: #76bf00;
+}
+
+.cabecera_formulario_registro_movilidad .alternativo{
+	display: block;
+	content: initial;
+	height: inherit;
+	width: 100%;
+	visibility: visible;
+}
+
+.cabecera_formulario_registro_movilidad:first-of-type{
+	margin-top: -20px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+.degradado_gris{
+	background: none;
+}
+
+.btsXs button.btnLogin{
+	margin-top: 15px;
+}
+
+@media (max-width: 450px){
+	.btsXs button.btnLogin {
+		left: calc(50% - 80px);
+		position: absolute;
+		top: 55px;
+	}
+	.fondo_negro_punteado {
+	    height: 200px;
+		padding-top: 15px;
+	}
+	.header {
+	    height: 260px;
+	}
+}
+
+@media (max-width: 370px){
+	.fondo_negro_punteado {
+	    height: 220px;
+		padding-top: 15px;
+	}
+	.header {
+	    height: 280px;
+	}
+}

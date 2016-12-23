@@ -1,0 +1,626 @@
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}
+.sr-only--focusable:active,.sr-only--focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}
+body{margin:0;color:#333;    font-family: 'Conv_AkkuratStd-Light',sans-serif;font-size:14px;font-weight:400;line-height:20px}
+.header{position:relative;z-index:1;height:48px;padding-left:16px;padding-right:16px;background-color:#666}
+@media (min-width: 768px){
+	.header{padding-left:24px;padding-right:24px}
+}
+.title{float:left;display:block;font-size:18px;line-height:48px;color:#fff}
+.main{height: 300px;height: 300px;border: 1px dashed; margin-bottom: 20px;}
+.main>img{display:table-cell;max-width:100%;vertical-align:middle}
+.footer{position:absolute;right:0;bottom:0;left:0;height:0}
+.menu{float: right}
+.menu__button{float:left;display:block;width:40px;height:40px;border-width:0;font-size:16px;line-height:48px;text-align:center;background-color:transparent;color:#fff;cursor:pointer;padding-top: 0;padding-left: 0;}
+.menu__button:focus{outline:none}
+.toolbar{position: absolute;
+	right: 0;
+	bottom: 16px;
+	z-index: 2015;
+	width: 32px;
+	height: 100%;
+	margin-left: -128px;
+	background-color: rgba(0,0,0,0.5);
+	color: #fff;
+	top: 0;
+}
+.toolbar button {
+	padding: 0;
+	border-bottom: 1px solid #fff;
+}
+.toolbar__button{float:left;display:block;width:32px;height:32px;border-width:0;font-size:14px;text-align:center;background-color:transparent;color:#fff;cursor:pointer}
+.toolbar__button:focus{outline:none}
+.toolbar__button:hover{background-color:#d37b08;color:#fff}
+#alta-domiciliacion div.subir{display:table;width:100%;height:100%;overflow:hidden;cursor:pointer;position:relative;}
+#alta-domiciliacion div.subir:hover {
+	background: #f1d7b4;
+}
+#alta-domiciliacion div.subir>p{
+	display: table-cell;
+	color: #999;
+	padding-top: 120px;
+}
+label.browse{
+	color: #545454;
+	cursor:pointer;
+	padding-left: 10px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.subir .browse:hover {color: #5e921e;}
+.canvas{position:relative;width:100%;height:100%}
+.editor{height:100%;overflow:hidden}
+.editor>img{display:block;max-width:100%;max-height:100%;margin:auto;vertical-align:middle}
+#primeraPantalla {
+	margin-bottom: 50px;
+}
+#alta-domiciliacion .btn{
+	display: inline-block;
+	border-radius:25px !important;
+	text-align:center !important;
+	text-transform:uppercase !important;
+	min-width:135px !important;
+	line-height:1 !important;
+	padding:10px 10px !important;
+	text-decoration:none !important;
+	font-family: Arial !important;
+	font-size: 1.3em !important;
+}
+.boton-green {
+	background: #70a41c;
+}
+.boton-transparente {
+	background: transparent;
+	border: 1px solid #fff;
+}
+.boton-blanco {
+	background: #fff;
+	color: #0a0607;
+}
+.boton-cancelar {
+	background: #fff;
+	color: #0a0607;
+	border: 1px solid #0a0607;
+}
+#alta-domiciliacion .boton-green:active,
+#alta-domiciliacion .boton-green:hover{
+	background: #fff;
+	color: #0a0607;
+	border: 1px solid #70a41c;
+}
+.boton-transparente:active,
+.boton-transparente:hover{
+	background: #fff;
+	border: 0;
+}
+.boton-blanco:active,
+.boton-blanco:hover{
+	background: #70a41c;
+	color: #fff;
+}
+.boton-cancelar:active,
+.boton-cancelar:hover{
+	background: #70a41c;
+	color: #fff;
+	border: 0;
+}
+
+body#alta-domiciliacion {
+	background: none;
+}
+#alta-domiciliacion a {
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	font-size: 11px;
+}
+#alta-domiciliacion p {
+	color: #545454;
+}
+.container {
+	padding-bottom: 35px;
+}
+.container .avisos{
+	height: 200px;
+	padding-top: 32px;
+}
+span.riesgo {
+	font-size: 14px;
+	display: block;
+	margin-bottom: 5px;
+	margin-top: 30px;
+}
+#btn-subir-recibo {
+	margin-top: 22px;
+}
+span.riesgo span.color {
+	color: #cb7a10;
+}
+.container img.reciboIcon, .container img.reciboIconWhite {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 22px;
+}
+.container img.infoIcon {
+	margin-left: 6px;
+}
+.avisos img {
+	vertical-align: top;
+	margin-right: 6px;
+}
+.caja_miniaturas,
+.caja_miniaturas_firmas,
+#avisoDoble,
+#segundaPantalla,
+#terceraPantalla,
+#confirmacion,
+#botoneraConPasos,
+#alta-domiciliacion button.continuar,
+#alta-domiciliacion button.enviar,
+#alta-domiciliacion button.boton-cancelar,
+#alta-domiciliacion button.save_recibo,
+#alta-domiciliacion button.save_firma,
+#alta-domiciliacion button.inicio,
+#alta-domiciliacion a.inicio{
+	display: none;
+}
+
+#alta-domiciliacion a.inicio{
+	color: #FFF;
+}
+
+ul.listado_miniaturas li a.mas-datos {
+	font-size: 14px;
+	text-decoration: underline!important;
+	margin-left: 6px;
+	vertical-align: top;
+	display: block;
+	height: 24px;
+	text-align: left!important;
+}
+#alta-domiciliacion h1 {
+	margin-bottom: 2px;
+	font-size: 28px;
+	font-weight: bold;
+	text-align: center;
+}
+label.nombreReciboLabel,
+label.nombreFirmaLabel,
+label.DNIFirmaLabel {
+	display: none;
+	color: #9d9d9d;
+	margin-right: 16px;
+	margin-bottom: 38px;
+}
+.nombreReciboLabel input,
+.nombreFirmaLabel input,
+.DNIFirmaLabel input{
+	border: 1px solid #9d9d9d;
+	margin-left: 20px;
+	font-size: 12px;
+	font-weight: normal;
+	padding-left: 9px;
+	height: 28px;
+	width: 320px;
+	vertical-align: baseline;
+	cursor: pointer;
+}
+.nombreReciboLabel input:hover,
+.nombreFirmaLabel input:hover,
+.DNIFirmaLabel input:hover,
+.solicitud input:hover{
+	border-color: #cb7a10;
+}
+.solicitud input {
+	cursor: pointer;
+}
+.nombreFirmaLabel input,
+.DNIFirmaLabel input{
+	font-style: italic;
+}
+.caja_miniaturas  {
+	background: #d37b08;
+	padding: 4px 20px 36px 20px;
+	margin-top: 30px;
+	clear: both;
+}
+.caja_miniaturas_firmas ul li {
+	margin-top: 30px;
+}
+span.nombreMini {
+	min-height: 20px;
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: left;
+	display: block;
+	margin-bottom: 4px;
+}
+div.datosFirma {
+	text-align: left;
+	color: #8d8d8d;
+	font-size: 15px;
+	display: block;
+	margin-top: 28%;
+}
+div.datosFirma div {
+	display: block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 170px;
+}
+div.datosFirma #nombre {
+	font-weight: bold;
+}
+i.fa-times {
+	border: 1px solid;
+	border-radius: 50% 50%;
+	padding: 3px;
+	width: 20px;
+	height: 20px;
+	font-size: 1.3rem;
+}
+i.fa-pencil-square-o {
+	font-size: 2rem;
+}
+
+.container.caja_miniaturas_firmas {
+    margin-top: 16px;
+}
+
+ul.listado_miniaturas li {
+	margin-top: 24px;
+	margin-right: 60px;
+	display: inline-block;
+	width: 370px;
+	/*position: relative;*/
+	vertical-align: text-bottom;
+}
+ul.listado_miniaturas_firmas li {
+	display: inline-block;
+}
+ul.listado_miniaturas img {
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	float: left;
+	margin-right: 20px;
+}
+
+ul.listado_miniaturas_firmas img {
+	max-width: 160px;
+	max-height: 160px;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	box-shadow: 0px 4px 2px -2px #bababa;
+    border-left: 1px solid #bababa;
+    border-right: 1px solid #ededed;
+}
+ul.listado_miniaturas_firmas .col-md-5.col-md-offset-1 {
+	margin-bottom: 42px;
+}
+div.iconosFirma {
+	float: right;
+}
+ul.listado_miniaturas i{
+	position: absolute;
+	cursor: pointer;
+	right: 0;
+}
+ul.listado_miniaturas_firmas i {
+	cursor: pointer;
+}
+ul.listado_miniaturas i {
+	color: #fff;
+}
+ul.listado_miniaturas_firmas i {
+	color: #8d8d8d;
+}
+ul.listado_miniaturas i:hover,
+ul.listado_miniaturas_firmas i:hover,
+ul.listado_miniaturas .fa-domic-edit:hover{
+	color: #000;
+}
+ul.listado_miniaturas i.fa-times{
+	right: 12px;
+}
+ul.listado_miniaturas_firmas i.fa-pencil-square-o {
+	margin-right: 12px;
+}
+
+ul.listado_miniaturas img#imagenRecibo {
+	margin-top: -12px;
+}
+ul.listado_miniaturas p,
+ul.listado_miniaturas a,
+ul.listado_miniaturas_firmas p,
+ul.listado_miniaturas_firmas a {
+	color: #fff;
+}
+#alta-domiciliacion .orange {
+	color: #cb7a10;
+}
+form#datos-adicionales {
+	display: inline-block;
+	padding-left: 40px;
+	margin-bottom: 20px;
+}
+form#datos-adicionales label {
+	padding: 0px 0px 0px 26px;
+}
+form#datos-adicionales button {
+	margin-top: 10px;
+}
+form#datos-adicionales input {
+	border: 0;
+	width: 300px;
+	height: 35px;
+	border-radius: 0;
+	font-weight: normal;
+}
+button.btn {
+	margin: 0 6px 0 6px;
+}
+#terceraPantalla p {
+	font-weight: bold;
+	line-height: 26px;
+	margin-bottom: 22px;
+	font-size: 13px;
+}
+#terceraPantalla p.textdest, #terceraPantalla .solicitud p {
+	font-size: 18px;
+}
+div.solicitud {
+	background: #fff;
+	padding: 26px 0 40px 0;
+	margin-top: 20px;
+	margin-bottom: 42px;
+}
+div.solicitud input {
+	height: 30px;
+	border: 1px solid #cbcbcb;
+	max-width: 120px;
+	padding-left: 8px;
+	font-size: 10px;
+}
+#confirmacion {
+	padding: 42px 0 50px 0;
+    margin-bottom: 58px;
+	background: #cb7a10;
+	margin-top: -30px;
+}
+#confirmacion p, #confirmacion h1 {
+	color: #fff;
+}
+#confirmacion p {
+	font-size: 18px;
+}
+
+#mas-datos.collapsing form#datos-adicionales {
+	display: inline-block;
+	margin-top: -12px;
+	padding-left: 40px;
+	margin-bottom: 20px;
+}
+
+#mas-datos.collapsing form#datos-adicionales input {
+	border: 0;
+	width: 300px;
+	height: 35px;
+	border-radius: 0;
+	font-weight: normal;
+}
+
+.fa-domic-edit{
+	font-size: 1.833em !important;
+	float: right !important;
+	padding: 5px 0px 0px 26px !important;
+	margin-right: 8px;
+    position: absolute;
+    right: 36px;
+}
+
+.fa-domic-confirm{
+	font-size: 2.19em !important;
+	float: right !important;
+	padding: 2px 0px 0px 2px !important;
+}
+
+.fa-domic-fedit{
+	font-size: 1.833em !important;
+	margin-right: 12px;
+	color: #8d8d8d;
+	padding: 5px 0px 0px 26px !important;
+}
+
+.fa-domic-fedit:hover{
+	color: #000;
+}
+
+.fiveMarginTop{
+	margin-top: 5px;
+}
+
+#alta-domiciliacion .solicitud > p,
+#alta-domiciliacion #trdContent > p{
+	width: 810px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+
+.central-footer{
+	margin: 0 auto 0 auto !important;
+}
+
+.submenu_pie .container{
+	padding-bottom: 0 !important;
+}
+
+.content_pie_home .submenu_pie .container a.navbar-brand-50{
+	height: 40px !important;
+	margin-top: 40px !important;
+}
+
+.content_pie_home .submenu_pie .container .dotted .copyright{
+	margin-top: 0px !important;
+}
+/*NUEVOS 30-11*/
+/*SEPARADOR MINIATURAS y ESPACIO ENTRE CAJAS MINIATURAS RECIBOS*/
+ul.listado_miniaturas .col-md-5:first-child {
+	margin-left: 8.33333333%;
+}
+
+ul.listado_miniaturas .col-md-5:nth-child(even) {
+	border-left: 1px solid #fff;
+}
+
+ul.listado_miniaturas_firmas .col-md-5:first-child {
+	margin-left: 8.33333333%;
+}
+
+/*ESPACIADO ENTRE H1 TITULO SUBTITULO Y CAJA CROPPER*/
+#segundaPantalla .col-md-12 p.text-center {
+	margin-bottom: 22px;
+	display: inline-block;
+}
+#segundaPantalla {
+	width: 805px;
+}
+#segundaPantalla input#nombreFirma {
+	width: 345px;
+}
+#segundaPantalla input#DNIFirma {
+	width: 85px;
+}
+div.datosFirma {
+	text-align: left;
+	color: #8d8d8d;
+	font-size: 15px;
+	display: block;
+	margin-top: 28%;
+}
+.progreso-top {
+	height: 4px;
+	width: 33%;
+	background: #d37b08;
+}
+.container.caja_miniaturas {
+	padding-bottom: 24px;
+	padding-left: 15%;
+	padding-right: 15%;
+	width: 100%;
+	margin-bottom: 34px;
+	padding-top: 32px;
+}
+#modifNombre, #modifDni {
+	font-size: 15px;
+	font-family: 'Conv_AkkuratStd-Light', sans-serif;
+}
+/*QUITAR BORDE AZUL DE CHROME AL PONER FOCO EN BOTONES*/
+button:focus {
+	outline: 0!important;
+}
+
+#segundaPantalla p.text-center strong span {
+	color: #cb7a10;
+}
+
+/*COLORES FONDO*/
+#alta-domiciliacion .avisos {
+    height: 170px;
+    background: #f7f7f7;
+    padding-top: 30px;
+    margin-bottom: -50px;
+}
+
+body {
+	background: none;
+}
+
+#avisoDoble {
+    min-height: 175px;
+    background: #f7f7f7;
+    margin-top: 190px;
+    margin-bottom: -34px;
+    padding-top: 37px;
+}
+
+#trdContent.container {
+	width: 100%;
+}
+/*BOTONES DESHABILITADOS SIN EFECTO HOVER*/
+#alta-domiciliacion button.btn.boton-green[disabled], 
+#alta-domiciliacion button.btn.boton-green[disabled]:hover, 
+#alta-domiciliacion button.btn.boton-green[disabled]:focus, 
+#alta-domiciliacion button.btn.boton-green[disabled]:active {
+	background: #70a41c!important;
+	color: #fff!important;
+	cursor: default;
+}
+#alta-domiciliacion button.btn.boton-green[enabled], 
+#alta-domiciliacion button.btn.boton-green[enabled]:hover, 
+#alta-domiciliacion button.btn.boton-green[enabled]:focus, 
+#alta-domiciliacion button.btn.boton-green[enabled]:active {
+	background: #fff!important;
+    color: #0a0607 !important;
+	cursor: pointer;
+}
+
+.infoIcon.text-center {
+	margin-bottom: 14px;
+}
+
+#primeraPantalla p.text-center {
+    margin-bottom: 16px;
+}
+
+.solicitud a.ui-commandlink {
+	color: #959ba2;
+}
+
+.solicitud a.ui-commandlink:hover {
+	color: #70a41c;
+	text-decoration: underline;
+}
+
+button.btn.boton-green.inicio,
+a.btn.boton-green.inicio{
+	margin-top: 12px;
+    margin-bottom: 74px;
+}
+
+#confirmacion h1 {
+    margin-bottom: 26px;
+    margin-top: 24px;
+}
+/*MENSAJES ERROR SUPERADO NUMERO DE RECIBOS/FIRMAS*/
+#ErrorNumSubidas, #ErrorNumSubidasFirmas {
+	color: #3c8ea4;
+	font-size: 12px;
+	padding: 0 12px 0 0;
+}
+#ErrorNumSubidas .col-md-offset-2, #ErrorNumSubidasFirmas .col-md-offset-2  {
+	background: #f3fafc;
+}
+
+.domi_barra_error_back {
+	background: #f9e6e5;
+	height: 30px;
+	padding: 6px 2px 4px 0;
+}
+
+.domi_caja_text_model01_error {
+	font-family: Arial !important;
+	font-size: 10px !important;
+	font-style: normal;
+	color: #120d0e;
+	background-color: #f8f8fa;
+	border: #c22b25 solid 2px !important;
+	padding: 2px 4px !important;
+	height: 18px;
+	margin: 3px 5px 0 0;
+}

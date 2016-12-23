@@ -1,0 +1,952 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:p="http://primefaces.org/"><head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /><link type="text/css" rel="stylesheet" href="/coinc/javax.faces.resource/theme.css.xhtml?ln=primefaces-aristo" /><link rel="stylesheet" media="screen" type="text/css" href="/coinc/javax.faces.resource/primefaces.css.xhtml?ln=primefaces&amp;v=3.2&amp;v=3.2" /><script type="text/javascript" src="/coinc/javax.faces.resource/jsf.js.xhtml?ln=javax.faces"><!--
+
+//--></script>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="title" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="language" content="es" />
+<meta name="robots" content="index, follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="apple-touch-icon" href="./resources-coinc-war-callCenter/src/main/webapp/coinc/images/iconos/app_android.png" />
+
+<link rel="shortcut icon" href="./resources-coinc-war-callCenter/src/main/webapp/coinc/images/iconos/favicon.ico" type="image/x-icon" />
+
+<link rel="stylesheet" type="text/css" href="./resources-coinc-war-callCenter/src/main/webapp/coinc/css/bootstrap.css" />
+ 
+<link rel="stylesheet" type="text/css" href="./resources-coinc-war-callCenter/src/main/webapp/coinc/css/coinc-bootstrap.css" />
+
+<link rel="stylesheet" type="text/css" href="./resources-coinc-war-callCenter/src/main/webapp/coinc/css/jquery.sidr.dark.css" />
+
+<link rel="stylesheet" type="text/css" href="./resources-coinc-war-callCenter/src/main/webapp/coinc/css/coinc-bootstrap.css" />
+
+
+<link rel="stylesheet" type="text/css" href="./resources-coinc-war-callCenter/src/main/webapp/coinc/css/coinc-nuevo.css" />
+
+<script src="./resources-coinc-war-callCenter/src/main/webapp/coinc/js/trackEvent.js" type="text/javascript"><!--
+
+//--></script>
+<script src="./resources-coinc-war-callCenter/src/main/webapp/coinc/js/gaCall.js" type="text/javascript"><!--
+
+//--></script>
+
+
+	
+	
+   
+    
+
+	<script src="./resources-coinc-war-callCenter/src/main/webapp/coinc/js/jquery-1.7.1.js" type="text/javascript"><!--
+
+//--></script>
+	<script src="./resources-coinc-war-callCenter/src/main/webapp/coinc/js/bootstrap.min.js" type="text/javascript"><!--
+
+//--></script>
+	<script src="./resources-coinc-war-callCenter/src/main/webapp/coinc/js/holder.js" type="text/javascript"><!--
+
+//--></script>
+	<script src="./resources-coinc-war-callCenter/src/main/webapp/coinc/js/jquery.sidr.min.js" type="text/javascript"><!--
+
+//--></script>
+		<script src="./resources-coinc-war-callCenter/src/main/webapp/coinc/js/jquery.coinc.js"><!--
+
+//--></script>
+		<link rel="stylesheet" href="./resources-coinc-war-callCenter/src/main/webapp/coinc/css/callcenter.css" />
+		<link rel="stylesheet" href="./resources-coinc-war-callCenter/src/main/webapp/coinc/css/callcenterDesarrollo.css" />
+		<link rel="stylesheet" href="./new-styles.css" />
+		
+		
+		<script src="./resources-coinc-war-callCenter/src/main/webapp/coinc/js/callcenter/main.js"><!--
+
+//--></script></head><body>
+		<div id="dashboard" class="container_general">
+            
+             <div class="header">
+                <div class="container"><a href="/coinc/menu-inicio" title="COINC. Ir a inicio">
+							<img src="./resources-coinc-war-callCenter/src/main/webapp/coinc/images/logo_coinc_dashboard.png" class="logotipo_dashboard" width="116px" height="35px" alt="Logotipo COINC" /></a>
+                    <div class="caja_usuario">
+                        <div class="marco_circular"><form novalidate="novalidate" id="j_id2065222827_7679caaa" name="j_id2065222827_7679caaa" method="post" action="/coinc/contacta-con-nosotros" enctype="application/x-www-form-urlencoded"><img id="j_id2065222827_7679caaa:userImage" src="/coinc/javax.faces.resource/dynamiccontent.xhtml?ln=primefaces&amp;pfdrid=pfdrid_6ad3bb5e-3183-4d99-8f3d-84935f6e9675" alt="Imagen de Pefil" width="59" height="59" /><input type="hidden" name="j_id2065222827_7679caaa_SUBMIT" value="1" /><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="rNwIpTOhZ6BvXnDi/+aSoy7eNx257ZPoUG6IWj+widnmLJ9r9f4dKcgxlWCEeuD+oOC07s9nLhPt7G2U10Rf4WJcqN/d7Z02AuM7j/nOb6QRljh3JINISDVgBSdO8v5q9kUYztbAqlr0s6d3" /></form>
+                        </div>
+                        <div class="datos_usuario">
+                            <p>FERNANDO ALONSO</p>
+                            <button type="button" id="enter_toggle" class="botondashboard p head">Administrar</button>
+							<input type="button" class="botondashboard p head margin10_l" onclick="location.href='/coinc/services/auth/logout?logout_back=/coinc';" value="Cerrar" />
+                        </div>
+
+                    </div>
+                </div>
+            </div> 
+		</div>
+		<div style="width:100%; height:30px;" class="left"></div><form novalidate="novalidate" id="j_id2065222827_7679ca3f" name="j_id2065222827_7679ca3f" method="post" action="/coinc/contacta-con-nosotros" enctype="application/x-www-form-urlencoded" class="formulario_admin">
+				<div class="contenedor_caja_administracion">
+
+<script><!--
+idtext = "Registrarse";
+//--></script>
+<script type="text/javascript"><!--
+
+function cerrar_caja_admin(){
+	$('#caja_registro').slideToggle(400);
+    $('#caja_registro').click(function(event) {
+		event.stopPropagation();
+    });
+	return false;
+}
+
+//--></script>
+<div class="caja_administracion" id="caja_registro" style="display: none;">
+			
+            <div class="fila_enlace_caja_administracion tipo_14 black" style="width:100%;">
+				<div class="cabecera_caja_administracion">ADMINISTRAR</div>
+				<a id="cerrar_toggle1" href="javascript:#.html" style="float:right; text-decoration:none;">
+					<img src="./resources-coinc-war-callCenter/src/main/webapp/coinc/images/iconos/ico_boxadministrar_cerrar.png" />
+				</a>
+			</div>
+			<div class="separacion_filas_caja_administracion"></div><a href="#" onclick="return jsf.util.chain(document.getElementById('j_id2065222827_7679ca3f:cerrar_toggle2'), event,'cerrar_caja_admin();', 'return myfaces.oam.submitForm(\'j_id2065222827_7679ca3f\',\'j_id2065222827_7679ca3f:cerrar_toggle2\');');" id="j_id2065222827_7679ca3f:cerrar_toggle2">
+				<div class="fila_entera_caja_administracion">
+					<div class="separacion_filas_caja_administracion_arriba"></div>
+					<div class="fila_enlace_caja_administracion">
+						<div style="float:left"><img src="./resources-coinc-war-callCenter/src/main/webapp/coinc/images/iconos/ico_boxadministrar_persona.png" /></div>
+						<div style="float:left; font-size:1.7em; margin-left:20px; color: #000;">Mi perfil</div>
+					</div>
+					<div class="separacion_filas_caja_administracion"></div>
+				</div></a><a href="#" onclick="return jsf.util.chain(document.getElementById('j_id2065222827_7679ca3f:cerrar_toggle3'), event,'cerrar_caja_admin();', 'return myfaces.oam.submitForm(\'j_id2065222827_7679ca3f\',\'j_id2065222827_7679ca3f:cerrar_toggle3\');');" id="j_id2065222827_7679ca3f:cerrar_toggle3">
+					<div class="fila_entera_caja_administracion">
+						<div class="separacion_filas_caja_administracion_arriba"></div>
+						<div class="fila_enlace_caja_administracion">
+							<div style="float:left"><img src="./resources-coinc-war-callCenter/src/main/webapp/coinc/images/iconos/ico_boxadministrar_coinc.png" /></div>
+							<div style="float:left; font-size:1.7em; margin-left:20px; color: #000;">Mi cuenta COINC</div>
+						</div>
+						<div class="separacion_filas_caja_administracion"></div>
+					</div></a><a href="#" onclick="return jsf.util.chain(document.getElementById('j_id2065222827_7679ca3f:cerrar_toggle4'), event,'cerrar_caja_admin();', 'return myfaces.oam.submitForm(\'j_id2065222827_7679ca3f\',\'j_id2065222827_7679ca3f:cerrar_toggle4\');');" id="j_id2065222827_7679ca3f:cerrar_toggle4">
+						<div class="fila_entera_caja_administracion">
+							<div class="separacion_filas_caja_administracion_arriba"></div>
+							<div class="fila_enlace_caja_administracion">
+								<div style="float:left"><img src="./resources-coinc-war-callCenter/src/main/webapp/coinc/images/iconos/ico_boxadministrar_flechas.png" /></div>
+								<div style="float:left; font-size:1.7em; margin-left:20px; color: #000;">Movimientos de cuenta</div>
+							</div>
+							<div class="separacion_filas_caja_administracion"></div>
+						</div></a><a href="#" onclick="return jsf.util.chain(document.getElementById('j_id2065222827_7679ca3f:cerrar_toggle5'), event,'cerrar_caja_admin();', 'return myfaces.oam.submitForm(\'j_id2065222827_7679ca3f\',\'j_id2065222827_7679ca3f:cerrar_toggle5\');');" id="j_id2065222827_7679ca3f:cerrar_toggle5">
+				<div class="fila_entera_caja_administracion">
+					<div class="separacion_filas_caja_administracion_arriba"></div>
+					<div class="fila_enlace_caja_administracion">
+						<div style="float:left"><img src="./resources-coinc-war-callCenter/src/main/webapp/coinc/images/iconos/ico_boxadministrar_ahorro.png" /></div>
+						<div style="float:left; font-size:1.7em; margin-left:20px; color: #000;">Ahorrar con mis hijos</div>
+					</div>
+					<div class="separacion_filas_caja_administracion"></div>
+				</div></a>
+			<a href="/coinc/contratos-notificaciones" id="cerrar_toggle5">
+				<div class="fila_entera_caja_administracion">
+					<div class="separacion_filas_caja_administracion_arriba"></div>
+					<div class="fila_enlace_caja_administracion">
+						<div style="float:left"><img src="./resources-coinc-war-callCenter/src/main/webapp/coinc/images/iconos/ico_boxadministrar_contrato.png" /></div>
+						<div style="float:left; font-size:1.7em; margin-left:20px; color: #000;">Contratos y notificaciones</div>
+					</div>
+					<div class="separacion_filas_caja_administracion"></div>
+				</div>
+			</a>
+			<a href="/coinc/alertas-recibos" id="cerrar_toggle5">
+				<div class="fila_entera_caja_administracion">
+					<div class="separacion_filas_caja_administracion_arriba"></div>
+					<div class="fila_enlace_caja_administracion">
+						<div style="float:left"><img src="./resources-coinc-war-callCenter/src/main/webapp/coinc/images/iconos/ico_boxadministrar_contrato.png" /></div>
+						<div style="float:left; font-size:1.7em; margin-left:20px; color: #000;">Alertas de recibos</div>
+					</div>
+					<div class="separacion_filas_caja_administracion"></div>
+				</div>
+			</a>
+			
+
+</div>
+
+
+<script type="text/javascript"><!--
+
+gaCall();
+
+//--></script>
+				</div><input type="hidden" name="j_id2065222827_7679ca3f_SUBMIT" value="1" /><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="rNwIpTOhZ6BvXnDi/+aSoy7eNx257ZPoUG6IWj+widnmLJ9r9f4dKcgxlWCEeuD+oOC07s9nLhPt7G2U10Rf4WJcqN/d7Z02AuM7j/nOb6QRljh3JINISDVgBSdO8v5q9kUYztbAqlr0s6d3" /></form>
+		
+		<link rel="stylesheet" type="text/css" href="./resources-coinc-war-callCenter/src/main/webapp/coinc/css/caja_admin.css" />
+		<div class="content-presupuestos"><form novalidate="novalidate" id="formContact" name="formContact" method="post" action="/coinc/contacta-con-nosotros" enctype="application/x-www-form-urlencoded">
+				<div class="container">
+					<div>
+						<ol class="breadcrumb">
+							<li><a href="#" onclick="return myfaces.oam.submitForm('formContact','j_id1134683934_1_797bd50a');">Inicio</a></li>
+							<li class="active">Contacto</li>
+						</ol>
+					</div>
+				
+					<div class="row">
+						<div class="col-xs-8"><div class="row row-left-2">
+								<div class="msg">
+									<div class="icon-container">
+										<i class="icon-support-team"></i>
+									</div>
+									<div class="content">
+										<h2 class="title">¡Estamos encantados de responder a tus consultas!
+										</h2>
+										<p class="text">Nuestro servicio de atención al cliente es de lunes a viernes de 9:00 a 18:00. Te responderemos en el menor tiempo posible y te avisaremos cuando lo hayamos hecho.
+										</p>
+									</div>
+								</div></div><div id="loggedUserFragmentForm"><input type="hidden" id="idTrackingHidden" name="idTrackingHidden" value="0" /><span id="panelSendSmsOtp" style="display:none;" class="user-prompt-wrapper">
+										<div class="avatar-group"><img id="j_id1134683934_1_797bd255" src="/coinc/javax.faces.resource/dynamiccontent.xhtml?ln=primefaces&amp;pfdrid=pfdrid_51aa6e0b-880a-4493-a2d9-9343e38688e2" class="avatar-image" alt="Imagen de Pefil" />
+											<span class="avatar-decorator"></span>
+										</div>
+	
+										<div class="user-prompt-content">
+	
+											<div class="sms">
+												<span class="title">Código SMS</span> 
+												<label>Acabamos de enviarlo a tu móvil</label>
+												<div class="phone-group"><input id="j_id1134683934_1_797bdda7" name="j_id1134683934_1_797bdda7" type="text" value="" onchange="jsf.ajax.request('j_id1134683934_1_797bdda7',event,{'javax.faces.behavior.event':'valueChange'})" class="inputs-border phone-input" />
+													<a> <i class="question-ico"></i> <span class="text">No ha llegado el SMS</span>
+													</a>
+												</div>
+												<div class="hidden"><div id="signMessage" class="ui-messages ui-widget"></div>
+												</div>
+												<span class="feedback hidden">El código no es correcto</span>
+												<div class="contact-button-wrapper"><input id="j_id1134683934_1_797bdde9" name="j_id1134683934_1_797bdde9" type="submit" value="ENVIAR" onclick="jsf.util.chain(document.getElementById('j_id1134683934_1_797bdde9'), event,'jsf.ajax.request(\'j_id1134683934_1_797bdde9\',event,{render:\'signMessage\',onevent:checkSmsOtp,\'javax.faces.behavior.event\':\'action\'})'); return false;" class="contact-button" />
+													<i class="contact-button-arrow-icon"></i>
+												</div>
+											</div>
+	
+										</div>
+	
+										<div class="user-prompt-after-content"></div><a href="#" onclick="jsf.util.chain(document.getElementById('commandReloadAfterSign'), event,'jsf.ajax.request(\'commandReloadAfterSign\',event,{render:\'loggedUserFragmentContacts loggedHistorialMenu formLoggedUser panelSendSmsOtp\',\'javax.faces.behavior.event\':\'action\'})'); return false;" id="commandReloadAfterSign" name="commandReloadAfterSign" class="hidden"></a></span><span id="formLoggedUser"><div class="user-prompt-wrapper">
+										<div class="avatar-group"><img id="j_id1134683934_1_797bdcb8" src="/coinc/javax.faces.resource/dynamiccontent.xhtml?ln=primefaces&amp;pfdrid=pfdrid_7633c861-62f9-4e5e-b510-0a9a3e08838b" class="avatar-image" alt="Imagen de Pefil" />
+											<span class="avatar-decorator"></span>
+										</div><div class="user-prompt-content">
+											<div class="send-message-form"><span id="panelAsuntoLogged"><label for="asuntoLogged">Asunto</label><br /><select id="asuntoLogged" name="asuntoLogged" size="1" onchange="jsf.ajax.request('asuntoLogged',event,{render:'divAsuntoOtrosLogged panelInterests panelMenuLinks divMensajeLogged subscribeAcceptLogged attachedNamePanel','javax.faces.behavior.event':'valueChange'})" class="inputs-border">	<option value="0" selected="selected">Seleccione un asunto</option>	<option value="38">Duda sobre operativa FECHA</option>	<option value="43">Consulta sobre condiciones</option>	<option value="1">Consulta sobre el producto</option>	<option value="6">Consulta sobre operativa</option></select><div id="divAsuntoOtrosLogged"></div></span><div id="divMensajeLogged" class="textarea-group"><label for="mensajeEmail">Tu consulta</label><br /><textarea placeholder="Cuéntanos en que podemos ayudarte" id="mensajeEmailLogged" name="mensajeEmailLogged" onblur="jsf.ajax.request('mensajeEmailLogged',event,{render:'divMensajeLogged','javax.faces.behavior.event':'blur'})" cols="40" rows="10" class="inputs-border"></textarea></div><div onclick="inputFile();" class="input-file-group">
+													<label for="send-message-file-input" class="input-file-icon"></label>
+													<label for="send-message-file-input" class="input-file-text">Adjuntar un archivo</label></div><span id="subscribeAcceptLogged" class="radio-group"><input id="subscribe-accept-logged" type="checkbox" name="subscribe-accept-logged" value="true" onchange="jsf.ajax.request('subscribe-accept-logged',event,{'javax.faces.behavior.event':'valueChange'})" title="Acepto la política de privacidad" /><label for="subscribe-accept-logged">Acepto la <a target="_blank" href="/coinc/politica-de-privacidad" >Política de Privacidad </a></label></span><span id="attachedNamePanel" class="attached-name "></span><div class="contact-button-wrapper"><input id="j_id1134683934_1_797bde7b" name="j_id1134683934_1_797bde7b" type="submit" value="ENVIAR" onclick="jsf.util.chain(document.getElementById('j_id1134683934_1_797bde7b'), event,'jsf.ajax.request(\'j_id1134683934_1_797bde7b\',event,{execute:\'formLoggedUser\',render:\'loggedUserFragmentForm panelMenuLinks\',\'javax.faces.behavior.event\':\'action\'})'); return false;" class="contact-button" />
+															<i class="contact-button-arrow-icon"></i></div>
+											</div></div></div></span><span id="loggedUserFragmentContacts"></span></div>
+							
+						</div>
+
+						<div class="col-xs-4"><div id="panelInterests" class="interests"><span class="title">Te puede interesar...</span>
+								<nav>
+									<ul>
+											<li><a href="https://ahorrador.coinc.es/preguntas-frecuentes/detalle/-/faq/-porque-no-puedo-anular-mi-cheque-regalo-de-amazon" target="_blank">¿Porqué no puedo anular mi cheque regalo de Amazon?</a></li>
+											<li><a href="https://ahorrador.coinc.es/preguntas-frecuentes/detalle/-/faq/mi-solicitud-de-cuenta-esta-pendiente-cuanto-tardara" target="_blank">Mi solicitud de cuenta está pendiente. ¿Cuánto tiempo tardará?</a></li>
+											<li><a href="https://ahorrador.coinc.es/preguntas-frecuentes/detalle/-/faq/-por-que-no-puedo-retirar-el-dinero-que-ingrese-hace-unos-dias" target="_blank">¿Por qué no puedo retirar el dinero que ingresé hace unos días?</a></li>
+											<li><a href="https://ahorrador.coinc.es/preguntas-frecuentes/detalle/-/faq/-cuanto-tardan-las-transferencias-y-los-adeudos-en-llegar" target="_blank">¿Cuánto tardan las transferencias y los adeudos en llegar?</a></li>
+									</ul>
+								</nav></div><div id="panelMenuLinks" class="links_wrapper_l1">
+								<nav>
+									<ul>
+										<li><a href="/coinc/contacta-con-nosotros">CONTACTO</a></li>
+												<li id="headHistoricoMenu">
+													<input id="headHistorico" type="checkbox" style="display:none;" />
+													<label for="headHistorico" id="labelHeadHistorico"><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10409">HISTORICO DE CONVERSACIONES</a>
+													</label>
+													
+													<ul>
+														<li><a class="folder-wrapper"><i class="folder-ico"></i><span class="element">Consultas Resueltas</span></a>
+															<ul>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10309">
+																			<i class="sms-ico"></i><i class=""></i>otra prueba (02/12/16)</a>
+																	</li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10308">
+																			<i class="sms-ico"></i><i class=""></i>Consulta sobre condici... (02/12/16)</a>
+																	</li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10240">
+																			<i class="sms-ico"></i><i class="clip-ico"></i>Prueba adjunto 6 (26/11/16)</a>
+																	</li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10236">
+																			<i class="sms-ico"></i><i class="clip-ico"></i>Prueba archivo de c... (26/11/16)</a>
+																	</li>
+															</ul>
+														</li>
+														<li><a class="folder-wrapper"><i class="folder-ico"></i><span class="element">Consultas Pendientes</span></a>
+															<ul>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10407">
+																			<i class="sms-ico"></i><i class=""></i>Consulta sobre condici... (15/12/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10289">
+																			<i class="sms-ico"></i><i class=""></i>otra prueba más (30/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10244">
+																			<i class="sms-ico"></i><i class=""></i>camión (26/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10243">
+																			<i class="sms-ico"></i><i class="clip-ico"></i>subo otra cosa (26/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10242">
+																			<i class="sms-ico"></i><i class="clip-ico"></i>prueba adjuntar 6 (26/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10235">
+																			<i class="sms-ico"></i><i class="clip-ico"></i>Prueba 2 de adjunta... (26/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10234">
+																			<i class="sms-ico"></i><i class="clip-ico"></i>Prueba de subir arc... (26/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10233">
+																			<i class="sms-ico"></i><i class="clip-ico"></i>Consulta sobre oper... (26/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10227">
+																			<i class="sms-ico"></i><i class=""></i>Consulta sobre operativa (25/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10226">
+																			<i class="sms-ico"></i><i class=""></i>OtrosCUSCUS (25/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10225">
+																			<i class="sms-ico"></i><i class=""></i>Consulta sobre operativa (25/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10224">
+																			<i class="sms-ico"></i><i class=""></i>Consulta sobre condici... (25/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10222">
+																			<i class="sms-ico"></i><i class=""></i>asdfasdfasf adsf (25/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10221">
+																			<i class="sms-ico"></i><i class=""></i>Consulta sobre operativa (25/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10220">
+																			<i class="sms-ico"></i><i class=""></i>OtrosCUSCUS (25/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10210">
+																			<i class="sms-ico"></i><i class=""></i>NO FUNCIONA (25/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10209">
+																			<i class="sms-ico"></i><i class=""></i>Consulta sobre operativa (25/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10208">
+																			<i class="sms-ico"></i><i class=""></i>NO FUNCIONA (25/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10192">
+																			<i class="sms-ico"></i><i class=""></i>Otro (24/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10133">
+																			<i class="sms-ico"></i><i class="clip-ico"></i>Necesito firmar algo (23/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10126">
+																			<i class="sms-ico"></i><i class=""></i>Prueba 23 (22/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10085">
+																			<i class="sms-ico"></i><i class=""></i>Consulta sobre condici... (17/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10084">
+																			<i class="sms-ico"></i><i class=""></i>Prueba 4 (17/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10083">
+																			<i class="sms-ico"></i><i class=""></i>Prueba 3 (17/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10081">
+																			<i class="sms-ico"></i><i class=""></i>Prueba 2 (17/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10080">
+																			<i class="sms-ico"></i><i class=""></i>Consulta sobre condici... (17/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10079">
+																			<i class="sms-ico"></i><i class=""></i>Consulta sobre operativa (16/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10078">
+																			<i class="sms-ico"></i><i class=""></i>Esto es una prueba (16/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10059">
+																			<i class="sms-ico"></i><i class=""></i>Consulta sobre operativa (15/11/16)</a></li>
+															</ul>
+														</li>
+														<li><a class="folder-wrapper"><i class="folder-ico"></i><span class="element">Consultas Contestadas</span> </a>
+															<ul>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10409">
+																			<i class="sms-ico"></i><i class=""></i>Consulta sobre condici... (16/12/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10241">
+																			<i class="sms-ico"></i><i class="clip-ico"></i>prueba adjuntar fic... (26/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10238">
+																			<i class="sms-ico"></i><i class="clip-ico"></i>Prueba 5 subida doc... (26/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10231">
+																			<i class="sms-ico"></i><i class=""></i>Consulta sobre condici... (26/11/16)</a></li>
+																	<li><a href="/coinc/contacta-con-nosotros?ID_TRACKING=10211">
+																			<i class="sms-ico"></i><i class="clip-ico"></i>Fallo al realizar u... (25/11/16)</a></li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+											
+											<li><a href="https://ahorrador.coinc.es/como-funciona-coinc" target="_blank">TUTORIAL</a></li>
+											<li><a href="https://ahorrador.coinc.es/preguntas-frecuentes" target="_blank">PREGUNTAS FRECUENTES</a></li>
+											
+
+
+
+
+
+
+
+											
+
+
+
+
+
+
+
+									</ul>
+								</nav></div>
+							
+							
+							<div class="call_us_wrapper">
+								<a data-toggle="modal" data-target="#myModal2"> <i class="call_us_ico"></i> <span class="text">¿Prefieres llamarnos?</span>
+								</a>
+							</div>
+							
+						</div>
+					</div>
+				</div><input type="hidden" name="formContact_SUBMIT" value="1" /><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="rNwIpTOhZ6BvXnDi/+aSoy7eNx257ZPoUG6IWj+widnmLJ9r9f4dKcgxlWCEeuD+oOC07s9nLhPt7G2U10Rf4WJcqN/d7Z02AuM7j/nOb6QRljh3JINISDVgBSdO8v5q9kUYztbAqlr0s6d3" /></form>
+
+				<button id="buttonLoginModal" type="button" style="display:none;" data-toggle="modal" data-target="#myModal1"></button>
+				<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="popup-group">
+								<div class="popup-header">
+
+									<div class="login-header">
+										<img class="logo-coinc" src="./resources-coinc-war-callCenter/src/main/webapp/coinc/images/callcenter/logo-coinc.png" alt="..." />
+									</div>
+
+								</div>
+								<div class="popup-content">
+
+									<div class="login">
+										<span class="title">Parece que ya eres cliente de COINC</span>
+										<p>Por favor, introduce tus claves para que podamos darte una respuesta más personalizada</p><form novalidate="novalidate" id="formLoginPopup" name="formLoginPopup" method="post" action="/coinc/contacta-con-nosotros" enctype="application/x-www-form-urlencoded" class="form-group"><span id="formLoginPopup:panelLogin"><div id="formLoginPopup:panelEmailUserPopup" class="username-group">
+														<i class="user-ico"></i><label>Usuario</label><br /><input placeholder="nombre@mail.com" id="formLoginPopup:login" name="formLoginPopup:login" type="text" value="" onchange="jsf.ajax.request('formLoginPopup:login',event,{render:'formLoginPopup:panelEmailUserPopup','javax.faces.behavior.event':'valueChange'})" class="input-data" /></div><div id="formLoginPopup:panelPasswordPopup" class="password-group">
+														<label class="password">Contraseña</label><br /><input type="password" id="formLoginPopup:password" name="formLoginPopup:password" onchange="jsf.ajax.request('formLoginPopup:password',event,{'javax.faces.behavior.event':'valueChange'})" class="input-data" /></div><a href="#" onclick="jsf.util.chain(document.getElementById('formLoginPopup:j_id1134683934_1_797bc7be'), event,'jsf.ajax.request(\'formLoginPopup:j_id1134683934_1_797bc7be\',event,{render:\'formLoginPopup\',\'javax.faces.behavior.event\':\'action\'})'); return false;" id="formLoginPopup:j_id1134683934_1_797bc7be" name="formLoginPopup:j_id1134683934_1_797bc7be">¿Has olvidado tu contraseña?</a>
+													
+													<div class="contact-button-wrapper"><input id="formLoginPopup:j_id1134683934_1_797bc7e5" name="formLoginPopup:j_id1134683934_1_797bc7e5" type="submit" value="Entrar" onclick="jsf.util.chain(document.getElementById('formLoginPopup:j_id1134683934_1_797bc7e5'), event,'jsf.ajax.request(\'formLoginPopup:j_id1134683934_1_797bc7e5\',event,{render:\'formLoginPopup\',\'javax.faces.behavior.event\':\'action\'})'); return false;" class="contact-button" />
+													</div>
+													<button id="actionLoginPanel" type="button" class="hidden" onclick="reloadPage();"></button></span><input type="hidden" name="formLoginPopup_SUBMIT" value="1" /><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="rNwIpTOhZ6BvXnDi/+aSoy7eNx257ZPoUG6IWj+widnmLJ9r9f4dKcgxlWCEeuD+oOC07s9nLhPt7G2U10Rf4WJcqN/d7Z02AuM7j/nOb6QRljh3JINISDVgBSdO8v5q9kUYztbAqlr0s6d3" /></form>
+										
+										<div class="later">
+											<a data-dismiss="modal" onclick="closeLoginPopup();">Quizás más tarde</a>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				
+				<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="popup-group">
+								<div class="popup-header">
+
+									<div class="call-us-header">
+										<img class="logo-coinc" src="./resources-coinc-war-callCenter/src/main/webapp/coinc/images/callcenter/logo-coinc.png" alt="..." />
+									</div>
+
+								</div>
+								<div class="popup-content">
+
+									<div class="call-us-popup">
+										<span class="text">Por favor, introduce</span> <span class="text2">902 88 30 15</span> <span class="text">Te atenderemos de lunes a viernes</span> <span class="text">de 9:00 a 18:00.</span>
+										<div class="contact-button-wrapper">
+											<input type="button" class="contact-button" value="Entendido" data-dismiss="modal" />
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			
+			
+		</div>
+		
+		<div class="hidden">                                                
+	        <form id="uploadDocument" action="/coinc/uploadDocument" method="POST" enctype="multipart/form-data">                                              
+	            <input id="archivoContact" type="file" name="archivo" onchange="postFilesData1();" /> 
+	            <input id="idTracking" type="text" name="idTracking" />
+	        </form>
+	   </div><form novalidate="novalidate" id="j_id1111472911_57fb088e" name="j_id1111472911_57fb088e" method="post" action="/coinc/contacta-con-nosotros" enctype="application/x-www-form-urlencoded">
+<footer>
+        <div class="container">
+            <div class="row hidden-xs pre-footer">
+            <div class="col-lg-3 col-md-3 col-sm-4">
+				<p>QUÉ ES COINC</p>
+				<ul>
+					<li>
+					  	<a target="_blank" href="https://ahorrador.int.bankinter.bk/web/coinc/como-ahorrar-mas-rapido">Cómo llegar a tu meta más rápido
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://ahorrador.int.bankinter.bk/web/coinc/tu-dinero-siempre-disponible">Cuando quieras tu dinero
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://ahorrador.int.bankinter.bk/web/coinc/como-funciona-coinc">Tutorial
+						</a>
+				
+					</li>
+					<li>
+						<a target="_blank" href="https://ahorrador.int.bankinter.bk/web/coinc/preguntas-frecuentes">Preguntas frecuentes
+						</a>					
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-4">
+				<p>DESCUENTOS EN COMERCIOS</p>
+				<ul>
+					<li>
+						<a target="_blank" href="https://ahorrador.int.bankinter.bk/web/coinc/como-funciona-el-club-de-ahorradores">Cómo funciona
+						</a>					
+					</li>
+					<li>
+						<a target="_blank" href="https://ahorrador.int.bankinter.bk/web/coinc/como-acceder-al-club-de-ahorradores">Cómo acceder al club
+						</a>					
+					</li>
+					<li>
+						<a target="_blank" href="https://ahorrador.int.bankinter.bk/web/coinc/cheque-regalo-amazon">Cheque regalo de Amazon.es
+						</a>			
+					</li>
+				</ul>                 
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-4">
+                <p>COMPARTE TUS METAS</p>
+				<ul>
+                	<li>
+	                	<a target="_blank" href="https://ahorrador.int.bankinter.bk/web/coinc/que-es-una-meta-coinc">Metas
+						</a>						
+					</li>
+					<li>
+						<a target="_blank" href="https://ahorrador.int.bankinter.bk/web/coinc/como-comparto-una-meta">Compartir una meta
+						</a>					
+					</li>
+					<li>
+						<a target="_blank" href="https://ahorrador.int.bankinter.bk/web/coinc/donde-puedo-compartir-una-meta">Dónde compartir una meta
+						</a>						
+					</li>
+					<li>
+						<a target="_blank" href="https://ahorrador.int.bankinter.bk/web/coinc/como-crear-un-bote-comun-o-meta-colectiva">Hacer un bote común
+						</a>					
+					</li>
+					<li>
+						<a target="_blank" href="https://ahorrador.int.bankinter.bk/web/coinc/participar-en-un-bote-comun-o-meta-colectiva">Participar en un bote común
+						</a>					
+					</li>
+					<li>
+						<a target="_blank" href="https://ahorrador.int.bankinter.bk/web/coinc/administrar-un-bote-comun-o-meta-colectiva">Administrar un bote común
+						</a>						
+					</li>
+					<li>
+					<a target="_blank" href="https://ahorrador.int.bankinter.bk/web/coinc/seguir-el-progreso-del-bote-comun-o-meta-colectiva">Seguir el progreso del bote común
+					</a>					
+					</li>
+                </ul>               
+			</div>
+			<div class="col-lg-3 col-lg-3-link">
+                <div class="pull-right">
+					<p>
+	                	<a href="/coinc/contacta-con-nosotros" class="btn-block footer-link">CONTACTO</a>
+	                </p>
+					<p>
+						<a target="_blank" href="https://ahorrador.int.bankinter.bk/web/coinc/sala-de-prensa" class="btn-block footer-link">PRENSA</a>  
+	                </p>
+					<ul class="social">
+	                    <li class="pull-left"><a class="blog" href="https://blog.coinc.es"></a></li>
+	                    <li class="pull-left"><a class="facebook" href="https://www.facebook.com/COINC.ES"></a></li>
+	                    <li class="pull-left"><a class="twitter" href="https://twitter.com/coinc_es"></a></li>
+	                </ul>
+                </div>
+            </div>             
+        </div>
+
+			<div class="row hidden-lg hidden-md visible-sm hidden-xs pre-footer">	
+                <ul class="social">
+                    <li class="pull-left"><a class="blog" href="https://blog.coinc.es"></a></li>
+                    <li class="pull-left"><a class="facebook" href="https://www.facebook.com/COINC.ES"></a></li>
+                    <li class="pull-left"><a class="twitter" href="https://twitter.com/coinc_es"></a></li>
+                </ul>
+            </div>
+
+
+            <div class="row dotted">
+            	<div class="copyright">                
+                    <ul class="pull-left">
+                        <li class="copy hidden-xs">© COINC. Todos los derechos reservados.</li>
+                        <li class="hidden-xs">I</li>
+                        <li>
+	                         <a target="_blank" href="/coinc/aviso-legal">Legal
+							</a>						
+						</li>
+                    </ul>
+                </div>
+                   
+                  
+               <div class="col-lg-5 col-md-6 col-sm-6 col-xs-6 pull-right">
+					<a target="_blank" href="#" class="navbar-brand-50 pull-right"></a>
+               </div>  
+        </div> 
+    </div>
+ </footer><input type="hidden" name="j_id1111472911_57fb088e_SUBMIT" value="1" /><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="rNwIpTOhZ6BvXnDi/+aSoy7eNx257ZPoUG6IWj+widnmLJ9r9f4dKcgxlWCEeuD+oOC07s9nLhPt7G2U10Rf4WJcqN/d7Z02AuM7j/nOb6QRljh3JINISDVgBSdO8v5q9kUYztbAqlr0s6d3" /></form>
+<script type="text/javascript"><!--
+
+var popupStatusAlta = 0;
+//loading popup with jQuery magic!
+    function loadPopupAlta(){
+        //loads popup only if it is disabled
+        if(popupStatusAlta==0){
+            $("#backgroundPopupAlta").css({
+                "opacity": "0.7"
+            });
+            $("#backgroundPopupAlta").fadeIn("slow");
+            $("#popupContactAlta").fadeIn("slow");
+            popupStatusAlta = 1;
+        }
+    }
+
+
+    //centering popup
+    function centerPopupAlta(){
+        //request data for centering
+        var windowWidth = document.documentElement.clientWidth;
+        var windowHeight = document.documentElement.clientHeight;
+        var popupHeight = $("#popupContactAlta").height();
+        var popupWidth = $("#popupContactAlta").width();
+        //centering
+        $("#popupContactAlta").css({
+                    "position": "fixed",
+                    "top": windowHeight/2-popupHeight/2,
+                    "left": windowWidth/2-popupWidth/2
+                });
+        //only need force for IE6
+
+        $("#backgroundPopupAlta").css({
+                    "height": windowHeight
+                });
+
+    }
+
+
+
+    //CONTROLLING EVENTS IN jQuery
+    $(document).ready(function(){
+
+        //Click the button event!
+        $("#confirmFullAdvanceAlta").click(function(){
+            //centering with css
+            centerPopupAlta();
+            //load popup
+            loadPopupAlta();
+            return false;
+        });
+
+        //Click the button event!
+        $("#cancelAlta").click(function(){
+            $("#backgroundPopupAlta").fadeOut("slow");
+            $("#popupContactAlta").fadeOut("slow");
+            popupStatusAlta = 0;
+            return false;
+        });
+      //Click the button event!
+$("#cancelAltaPopup").click(function() {
+var video = $("#playerID").attr("src");
+$("#playerID").attr("src","");
+$("#playerID").attr("src",video);
+
+$("#backgroundPopupAlta").fadeOut("slow");
+$("#popupContactAlta").fadeOut("slow");
+
+popupStatusAlta = 0;
+return false;
+});
+
+    });
+    var popupStatusAltaTuto = 0;
+//loading popup with jQuery magic!
+function loadPopupAltaTuto() {
+//loads popup only if it is disabled
+if (popupStatusAltaTuto == 0) {
+$("#backgroundPopupAltaTuto").css({
+"opacity" : "0.7"
+});
+$("#backgroundPopupAltaTuto").fadeIn("slow");
+$("#popupContactAltaTuto").fadeIn("slow");
+popupStatusAlta = 1;
+}
+}
+
+//centering popup
+function centerPopupAltaTuto() {
+//request data for centering
+var windowWidth = document.documentElement.clientWidth;
+var windowHeight = document.documentElement.clientHeight;
+var popupHeight = $("#popupContactAltaTuto").height();
+var popupWidth = $("#popupContactAltaTuto").width();
+//centering
+$("#popupContactAltaTuto").css({
+"position" : "fixed",
+"top" : windowHeight / 2 - popupHeight / 2,
+"left" : windowWidth / 2 - popupWidth / 2
+});
+//only need force for IE6
+
+$("#backgroundPopupAltaTuto").css({
+"height" : windowHeight
+});
+
+}
+
+//CONTROLLING EVENTS IN jQuery
+$(document).ready(function() {
+
+$("#cancelAltaPopupTuto1").click(function() {
+var video = $("#playerID").attr("src");
+$("#playerID").attr("src","");
+
+$("#backgroundPopupAlta").fadeOut("slow");
+$("#popupContactAlta").fadeOut("slow");
+
+popupStatusAlta = 0;
+return false;
+});
+$("#cancelAltaPopupTuto2").click(function() {
+var video = $("#playerID").attr("src");
+$("#playerID").attr("src","");
+
+$("#backgroundPopupAlta").fadeOut("slow");
+$("#popupContactAlta").fadeOut("slow");
+
+popupStatusAlta = 0;
+return false;
+});
+
+$("#confirmFullAdvanceAltaTuto").click(function() {
+$("#playerID").attr("src","https://www.youtube.com/embed/54V_UiN6ZSQ?autoplay=1");
+centerPopupAlta();
+loadPopupAlta();
+return false;
+});
+$("#confirmFullAdvanceAltaTuto2").click(function() {
+$("#playerID").attr("src","https://www.youtube.com/embed/GqpMGM_Ds80?autoplay=1");
+centerPopupAlta();
+loadPopupAlta();
+return false;
+});
+$("#confirmFullAdvanceAltaTuto3").click(function() {
+$("#playerID").attr("src","https://www.youtube.com/embed/Qb7LD119xb0?autoplay=1");
+centerPopupAlta();
+loadPopupAlta();
+return false;
+});
+$("#confirmFullAdvanceAltaTuto4").click(function() {
+$("#playerID").attr("src","https://www.youtube.com/embed/820VlP9ML8w?autoplay=1");
+centerPopupAlta();
+loadPopupAlta();
+return false;
+});
+$("#confirmFullAdvanceAltaTuto5").click(function() {
+$("#playerID").attr("src","https://www.youtube.com/embed/820VlP9ML8w?autoplay=1");
+centerPopupAlta();
+loadPopupAlta();
+return false;
+});
+$("#confirmFullAdvanceAltaTuto6").click(function() {
+$("#playerID").attr("src","https://www.youtube.com/embed/820VlP9ML8w?autoplay=1");
+centerPopupAlta();
+loadPopupAlta();
+return false;
+});
+$("#confirmFullAdvanceAltaQueEsCoinc").click(function() {
+$("#playerID").attr("src","https://www.youtube.com/embed/820VlP9ML8w?autoplay=1");
+centerPopupAlta();
+loadPopupAlta();
+return false;
+});
+
+$("#cancelAltaPopupCoinc").click(function() {
+var video = $("#playerID").attr("src");
+$("#playerID").attr("src","");
+
+$("#backgroundPopupAlta").fadeOut("slow");
+$("#popupContactAlta").fadeOut("slow");
+
+popupStatusAlta = 0;
+return false;
+});
+$("#confirmFullAdvanceAltaCoinc").click(function() {
+$("#playerID").attr("src","https://www.youtube.com/embed/820VlP9ML8w?autoplay=1");
+centerPopupAlta();
+loadPopupAlta();
+return false;
+});
+});
+
+//--></script>
+
+<script type="text/javascript"><!--
+
+	setTimeout(function(){
+		var a=document.createElement("script");
+		var b=document.getElementsByTagName("script")[0];
+		a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/3418.js?"+Math.floor(new Date().getTime()/3600000);
+		a.async=true;
+		a.type="text/javascript";
+		b.parentNode.insertBefore(a,b)
+	}, 1);
+
+//--></script>
+  <script type="text/javascript"><!--
+
+    $(document).ready(function() {
+    	
+    	$('#right-menu').click(function() {  	
+			if ($("#barraCabecera")[0].style.marginLeft.length){
+				$("#barraCabecera")[0].style.marginLeft=null;
+			}else{
+				$("#barraCabecera")[0].style.marginLeft="300px";
+			}
+		});
+   
+    	 $('#closed2').click(function() {  	
+    		 $('#boton_entrar').show();
+             $('#enter_toggle').show();
+   		 	
+      	      $('#caja_registro2').hide();
+   	      $('#caja_registro3').hide();
+      	      $('#caja_registro').slideToggle(400);
+      	      $('#caja_registro').click(function(event) {
+      	        event.stopPropagation();
+      	      });
+      	      
+      	      $(document).click(function(){
+   				$('#enter_toggle').show();
+      	            $('#caja_registro').hide();
+      	            $('#caja_registro2').hide();
+      	            $('#caja_registro3').hide();
+      	            $('#boton_entrar').show();
+      	            $('#enter_toggle').show();
+      	      });
+      	      return false;
+      	    });	 	
+    	
+   	 $('#closed').click(function() {  	
+            
+   		  $('#boton_entrar').show();
+          $('#enter_toggle').show();
+   	      $('#caja_registro2').hide();
+	      $('#caja_registro3').hide();
+   	      $('#caja_registro').slideToggle(400);
+   	      $('#caja_registro').click(function(event) {
+   	        event.stopPropagation();
+   	      });
+   	      
+   	      $(document).click(function(){
+   	            $('#caja_registro').hide();
+   	            $('#caja_registro2').hide();
+   	            $('#caja_registro3').hide();
+   	            $('#boton_entrar').show();
+   	            $('#enter_toggle').show();
+   	      });
+   	      return false;
+   	    });	
+    
+    if ($('#formHeader\\:messageError').length){
+        // existe error y no se quita la caja         
+        $('#caja_registro').hide();
+        $('#caja_registro3').hide();
+      } else {
+        $('#caja_registro').hide();
+        $('#caja_registro2').hide();
+        $('#caja_registro3').hide();
+      }
+
+    $('#remember_toggle').click(function() {
+          
+      $('#caja_registro').hide();
+      $('#caja_registro3').hide();
+      $('#caja_registro2').slideToggle(400);
+      $('#caja_registro2').click(function(event) {
+        event.stopPropagation();
+      });
+      
+      $(document).click(function(){ 
+
+                $('#caja_registro').hide();
+                $('#caja_registro2').hide();
+                $('#caja_registro3').hide();
+                $('#boton_entrar').show();
+                $('#enter_toggle').show();
+      });
+      return false;
+    });
+    
+//     $('#formHeader\\:recoverBtn').click(function() {
+//           $('#boton_entrar').hide();
+//       $('#caja_registro').hide();
+//       $('#caja_registro3').hide();
+//       $('#caja_registro2').slideToggle(400);
+//       $('#caja_registro3').slideToggle(400);
+//       $(document).click(function(){ 
+
+//                 $('#caja_registro').hide();
+//                 $('#caja_registro2').hide();
+//                 $('#caja_registro3').hide();
+//                 $('#boton_entrar').show();
+//                 $('#enter_toggle').show();
+//       });
+//       return true;
+//     });
+    
+    
+	// ABRIR Y CERRAR CAJA DE ADMINISTRACION 
+	
+    $('#enter_toggle').click(function() {     
+      $('#caja_registro').slideToggle(400);
+      $('#caja_registro').click(function(event) {
+        event.stopPropagation();
+      });
+      
+      return false;
+    });
+    
+    $('#enter_toggle2').click(function() {     
+      $('#caja_registro').slideToggle(400);
+      $('#caja_registro').click(function(event) {
+        event.stopPropagation();
+      });
+      
+      return false;
+    });
+
+  
+    
+	$('a[id^="cerrar_toggle"]').click(function() {
+	//$('#cerrar_toggle').click(function() {     
+      $('#caja_registro').slideToggle(400);
+      $('#caja_registro').click(function(event) {
+        event.stopPropagation();
+      });
+	  location.href = this.href;
+      
+      return false;
+    });
+	
+	// FIN
+	
+
+    
+      $('#enter_toggle_link').click(function() {       
+        $('#caja_registro2').hide();
+        $('#caja_registro3').hide();
+        $('#caja_registro').slideToggle(400);
+        $('#caja_registro').click(function(event) {
+        event.stopPropagation();
+        });
+      
+        $(document).click(function(){
+          
+    $('#caja_registro').hide();
+    $('#caja_registro2').hide();
+    $('#caja_registro3').hide();
+    $('#boton_entrar').show();
+    $('#enter_toggle').show();
+      });
+      return false;
+    });
+      
+  $(document).click(function(){
+     if ($('#formHeader\\:messageError').length){
+       
+        $('#caja_registro').hide();
+            $('#caja_registro2').hide();
+            $('#caja_registro3').hide();
+            $('#boton_entrar').show();
+            $('#enter_toggle').show();
+  }
+});
+});
+
+//--></script>
+</body>
+
+</html>

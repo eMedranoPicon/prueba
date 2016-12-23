@@ -1,0 +1,140 @@
+#placeholder{
+	height: 120px;
+	width: 460px;
+	font-size: 1.6em;
+	font-weight: bold;
+	z-index: 2;
+}
+.contenedorGrafica{
+	top: 20%;
+	margin-left: 50px;
+	position: absolute;
+}
+.lineas{
+	height: 120px;
+	width: 400px;
+	z-index: 1;
+    position: absolute;
+    top: 0px;
+}
+.linea1{
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	width: 451px;
+    margin-left: 5px;
+    height: 4px;
+	border-color: #b7dbe9;
+}
+.linea2{
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	width: 451px;
+    margin-left: 5px;
+    height: 30px;
+	border-color: #b7dbe9;
+}
+.linea3{
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	width: 451px;
+    margin-left: 5px;
+    height: 32px;
+	border-color: #b7dbe9;
+}
+.linea4{
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	width: 451px;
+    margin-left: 5px;
+    height: 30px;
+	border-color: #b7dbe9;
+}
+.movimientosCuentaGrafico{
+	background: none repeat scroll 0 0 #5fb9d1;
+	border-radius: 10px;
+	height: 200px;
+	position: relative;
+	width: 670px;
+	margin-top: 20px;
+	-webkit-box-shadow: 0px 4px 2px #d4d4d4;
+    -moz-box-shadow: 0px 4px 2px #d4d4d4;
+    box-shadow: 0px 4px 2px #d4d4d4;
+	behavior: url(/res/coinc/css/PIE.htc);
+}
+.estiloTooltip{
+	background-color: #419bb3;
+	border-radius: 0 25px 25px;
+	box-shadow: -2px 2px 5px 0 rgba(0, 0, 0, 0.6);
+	display: none;
+	opacity: 0.85;
+	padding: 10px 40px 10px 40px;
+	position: absolute;
+	color: #fff;
+	-webkit-box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.6);
+	-moz-box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.6);
+	box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.6);
+	z-index: 5;
+	behavior: url(/res/coinc/css/PIE.htc);
+}
+.estiloTooltip .fecha {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+.estiloTooltip .saldo {
+	font-size: 1.8em;
+	font-weight: bold;
+}
+.quedanDias {
+    color: #fff;
+    font-size: 1.2em;
+    position: absolute;
+    left: 545px;
+    bottom: 27%;
+}
+.objetivo {
+    color: #fff;
+    font-size: 1.2em;
+    position: absolute;
+    left: 545px;
+    top: 20%;
+}
+.objetivoDias {
+	color: #fff;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 0;
+}
+.objetivoDinero {
+	color: #fff;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 0;
+}
+.fechaIzqCompartida{
+	position:absolute;
+	background: url(../images/botones/flechaIzqCompartida.png) no-repeat center;
+	background-size: 50px 50px;
+	width: 50px;
+	height: 50px;
+	left: -20px;
+    top: 70px;
+	cursor: pointer;
+}
+.fechaIzqCompartida:hover{
+	background: url(../images/botones/flechaIzqCompartidaHover.png) no-repeat center;
+	background-size: 50px 50px;
+}
+.fechaDerCompartida{
+	position:absolute;
+	background: url(../images/botones/flechaDerCompartida.png) no-repeat center;
+	background-size: 50px 50px;
+	width: 50px;
+	height: 50px;
+	right: -20px;
+    top: 70px;
+	cursor: pointer;
+}
+.fechaDerCompartida:hover{
+	background: url(../images/botones/flechaDerCompartidaHover.png) no-repeat center;
+	background-size: 50px 50px;
+}
