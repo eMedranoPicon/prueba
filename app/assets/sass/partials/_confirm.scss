@@ -1,0 +1,41 @@
+.confirm-message {
+  text-align: center;
+  img {
+    @if($versionDesktop) {
+      width: 100px;
+    }
+    @if($versionPhone) {
+      width: 80px;
+    }
+  }
+  h1 {
+    color: $black-800;
+    margin: 37px 0 0;
+    @if($versionDesktop) {
+      font-size: 22px;
+    }
+    @if($versionPhone) {
+      font-size: 16px;
+    }
+  }
+  .btn {
+    margin-top: 177px;
+    max-width: 266px;
+  }
+  @if($versionDesktop) {
+    @media (max-width: $screen-sm-max) {
+      header {
+        margin-top: 45px;
+      }
+      img {
+        width: 150px;
+      }
+      h1 {
+        margin-top: 78px;
+      }
+      .btn {
+        margin-top: 288px;
+      }
+    }
+  }
+}
