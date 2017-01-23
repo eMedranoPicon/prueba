@@ -3,7 +3,7 @@
   "description": "Coinc - 3D Secure",
   "version": "0.1.0",
   "repository": {
-    "url": "https://github.com/sopraux/coinc-3dsecure"
+    "url": "https://github.com/sopraux/bankinter-coinc"
   },
   "scripts": {
     "postinstall": "bower install"

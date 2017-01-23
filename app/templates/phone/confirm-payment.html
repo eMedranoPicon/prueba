@@ -1,0 +1,9 @@
+{% extends "/base/_base.html" %}
+{% from "/components/_verising.html" import visa_cphone as verising %}
+{% from "/components/_warning.html" import message %}
+
+{% block type %}phone{% endblock %}
+{% block content %}
+  {% include "/includes/_confirm-payment.html" %}
+  {{ verising() }}
+{% endblock %}
