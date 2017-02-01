@@ -1,0 +1,46 @@
+.box__verifycard {
+    @if($versionDesktop) {
+        padding-bottom: 10px;
+        .box__info {
+            margin-bottom: 8px;
+        }
+        @media(max-width: $screen-sm-max) {
+            padding-bottom: 52px;
+            .box__info {
+                margin-bottom: 33px;
+            }
+        }
+    }
+    @if($versionPhone) {
+        .box__info {
+            margin-bottom: 13px;
+        }
+    }
+    form {
+        @include box-shadow(0 1px 4px 0 rgba(0,0,0,0.20));
+        @include border-radius(4px);
+        margin: 0 auto;
+        @if($versionDesktop) {
+            width: 320px;
+            padding: 25px 53px 0;
+            @media(max-width: $screen-sm-max) {
+                padding-bottom: 25px;
+            }
+        }
+        @if($versionPhone) {
+            width: 285px;
+            padding: 25px 35px 0;
+        }
+        .icon-form {
+            text-align: center;
+            margin-bottom: 20px;
+            img {
+                width: 37px;
+                margin: 0 auto;
+            }
+        }
+    }
+    .form-group {
+        margin-bottom: 13px;
+    }
+}
