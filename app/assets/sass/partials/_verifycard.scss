@@ -17,7 +17,7 @@
         }
     }
     form {
-        @include box-shadow(0 1px 4px 0 rgba(0,0,0,0.20));
+        @include box-shadow(0 1px 4px 0 rgba($black, 0.20));
         @include border-radius(4px);
         margin: 0 auto;
         @if($versionDesktop) {

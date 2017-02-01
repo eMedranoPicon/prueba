@@ -50,7 +50,7 @@
 
 .box__info-blue {
     position: relative;
-    background: #F3FAFC;
+    background: $blue-100;
     padding: 8px;
     padding-left: 38px;
     &:before {
@@ -64,6 +64,8 @@
         background-size: 28px;
     }
     p {
+        font-family: $fontHelvetica;
+        color: $grey700;
         margin-bottom: 0;
         span {
             font-weight: $fontWeightBold;
