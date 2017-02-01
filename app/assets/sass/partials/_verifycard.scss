@@ -22,9 +22,9 @@
         margin: 0 auto;
         @if($versionDesktop) {
             width: 320px;
-            padding: 25px 53px 0;
+            padding: 25px 53px 15px;
             @media(max-width: $screen-sm-max) {
-                padding-bottom: 25px;
+                padding-bottom: 35px;
             }
         }
         @if($versionPhone) {
