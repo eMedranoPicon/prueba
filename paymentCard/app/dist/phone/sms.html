@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>COINC</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href='css/styles-phone.css' />
+
+        <script src="js/vendor.js"></script>
+        <script src="js/scripts-app.js"></script>
+        <!--[if lt IE 9]>
+            <script src="js/old_browsers_support/es5-shim.min.js"></script>
+            <script src="js/old_browsers_support/htm5shiv-printshiv.min.js"></script>
+            <script src="js/old_browsers_support/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <header>
+            <div class="header__logo">
+                <div class="container">
+                    <img src="images/logo.png" alt="coinc" />
+                </div>
+            </div>
+            <div class="header__title">
+                <div class="container">
+                    <h1>Verificar tarjeta</h1>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            
+	<form class="sms-verify">
+	<div class="box__dashed-line box__desktop box__sms">
+		<article class="card-info">
+			<h1>Carolina Mendez Garcia</h1>
+			<div class="card-table">
+				<div class="row">
+					<div class="card-cell card-type col-xs-4">
+						<p class="type">Tarjeta</p>
+						<p class="value">Visa BP</p>
+					</div>
+					<div class="card-cell card-number col-xs-8">
+						<p class="type">Número de tarjeta</p>
+						<p class="value">**** ***** **** 5469</p>
+					</div>
+					<div class="card-cell card-date col-xs-12">
+						<p class="type">Fecha Caducidad</p>
+						<p class="value">02/18</p>
+					</div>
+				</div>
+			</div>
+		</article>
+		<div class="box__dashed-line box__tablet sms-info">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<p>Introduce el código de 6 dígitos enviado  por SMS a tu móvil</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="form-group">
+						<label for="code">Código de seguridad</label>
+						<input type="text" class="form-control" id="code">
+					</div>
+				</div>
+				<div class="col-xs-12 sms-buttons text-center">
+					<button type="submit" class="btn btn__green btn__accept"><span>Aceptar</span></button>
+				</div>
+				<div class="col-xs-12">
+					<a href="#">Si no ha llegado el SMS</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row sms-buttons">
+		<div class="col-xs-12 text-center">
+			<button class="btn btn__white btn__close"><span>Cerrar</span></button>
+		</div>
+	</div>
+</form>
+	
+	<div class="verisign verisign__csmall">
+		<img src="images/visa.png" alt="verified by visa" />
+	</div>
+
+
+        </div>
+        <footer>
+            <div class="container">
+                <p><span class="copyright">@ COINC. Todos los derechos reservados.</span> <a href="#">Legal</a></p>
+                <img src="images/bankinter.png" alt="bankinter">
+            </div>
+        </footer>
+        <script src="js/old_browsers_support/modernizr.js"></script>
+    </body>
+</html>
