@@ -1,0 +1,33 @@
+{% extends "/includes/_popup.html" %}
+<!-- Inicio modulo "login" -->
+{% block header %}
+  <div class="login-header">
+    <img class="logo-coinc" src="images/logo-coinc.png" alt="..." >
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="login">
+    <span class="title">Parece que ya eres cliente de COINC</span>
+    <p>Por favor, introduce tus claves para que podamos darte una respuesta más personalizada</p>
+    <form>
+      <div class="username-group">
+        <i class="user-ico"></i><label>Usuario</label><br />
+        <input type="text"  class="input-data" placeholder="nombre@mail.com" />
+      </div>
+      <div class="password-group">
+        <label class="password">Contraseña</label><br />
+        <input type="password" class="input-data"/>
+      </div>
+      <a href="">¿Has olvidado tu contraseña?</a>
+      <div class="contact-button-wrapper">
+        <input type="submit" class="contact-button" value="Entrar" />
+      </div>
+    </form>
+    <div class="later">
+      <a href="">Quizás más tarde</a>
+    </div>
+  </div>
+
+{% endblock %}
+<!-- Fin modulo "login" -->

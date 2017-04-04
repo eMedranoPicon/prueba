@@ -1,0 +1,91 @@
+.detail-concrete-header {
+  background-color: $colorConPrimary;
+  font-family: $fontBold;
+  .section-header {
+    padding-top: 59px;
+    padding-bottom: 69px;
+    display: table;
+    .content {
+      width: 34%;
+      text-align: center;
+      height: 105px;
+      display: table;
+      float: left;
+      & > div {
+        display: inline-block;
+        text-align: left;
+        padding-top: 22px;
+      }
+      .info-year, .info-month {
+      }
+      &.border {
+        border-left: 1px solid $colorConBorder;
+        border-right: 1px solid $colorConBorder;
+        width: 32%;
+      }
+
+      .info-general {
+        display: inline-block;
+        margin-top: 9px;
+        & > div {
+          vertical-align: bottom;
+          display: inline-block;
+        }
+        .icon-container {
+          vertical-align: middle;
+          text-align: center;
+          height: 43px;
+          padding-top: 4px;
+          cursor: pointer;
+          .return {
+            margin-bottom: 10px;
+            margin-right: 6px;
+          }
+          i {
+            display: inline-block;
+          }
+        }
+        .resume-text {
+          line-height: 21px;
+          text-align: left;
+          margin-left: 9px;
+          & > span {
+            text-transform: uppercase;
+            font-size: 18px;
+            display: table-row;
+          }
+          .title {
+            color: $colorConSecond;
+            float: left;
+          }
+          .name {
+            color: $colorConCuater;
+          }
+        }
+      }
+    }
+
+    .text-container {
+      text-align: left;
+      color: $colorConTer;
+      font-size: 13px;
+      padding-left: 5px;
+    }
+    .money-container {
+      float: left;
+      & > span {
+        color: #FFF;
+      }
+      .price {
+        font-size: 50px;
+      }
+      .decimal {
+        font-size: 30px;
+      }
+      .coin {
+        padding-left: 8px;
+        font-size: 20px;
+      }
+    }
+  }
+}

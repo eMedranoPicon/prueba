@@ -1,0 +1,42 @@
+{% extends "/includes/_user_prompt.html" %}
+
+<!-- Inicio modulo "send_message" -->
+{% block avatar_img %}
+  <img class="avatar-image" src="images/photo-user.png" alt="..." />
+{% endblock %}
+
+{% block content %}
+  <form class="send-message-form">
+
+    <label >Asunto</label><br />
+    <select class="inputs-border">
+      <option>Otros</option>
+    </select>
+
+    <div class="name-group">
+      <input type="text"  class="line-input inputs-border" placeholder="Escribe el nombre del asunto"/>
+    </div>
+
+    <div class="textarea-group">
+      <label>Tu consulta</label><br />
+      <textarea rows="5" cols="50"  class="inputs-border" placeholder="Cuéntanos en que podemos ayudarte"></textarea>
+    </div>
+
+    <div class="input-file-group">
+      <input type=file id="send-message-file-input" class="input-file-hidden"/>
+      <label for="send-message-file-input" class="input-file-icon"></label>
+      <label for="send-message-file-input" class="input-file-text">Adjuntar un archivo</label>
+    </div>
+
+    <div class="radio-group">
+      <input type="radio" id="send-message-accept">
+      <label for="send-message-accept">Acepto la <a href="">Política de Privacidad</a></label>
+    </div>
+
+    <div class="contact-button-wrapper">
+      <input type="submit" class="contact-button" value="ENVIAR" />
+      <i class="contact-button-arrow-icon"></i>
+    </div>
+  </form>
+{% endblock %}
+<!-- Fin modulo "send_message" -->

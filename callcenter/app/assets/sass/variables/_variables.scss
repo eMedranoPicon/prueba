@@ -1,0 +1,165 @@
+// Colors
+$white            : #FFFFFF;
+$black            : #000000;
+
+$black300         : rgb(18, 13, 14);
+
+$green500         : #70a41c;
+
+$purple500        : #8f99e3;
+
+$blueSky          : #1cb0d3;
+$blue800          : #24313C;
+$blue500          : #4e5961;
+$blue300          : #556270;
+
+
+$red500           : #c90d3a;
+
+$orange800		  : #924a00;
+$orange500        : #cb7a10;
+$orange450        : #d78100;
+$orange400        : #F79D25;
+$orange300        : #e5c59b;
+$orange200        : #f8f8f0;
+
+$gray1000         : #f8f9f9;
+$gray990          : #f7f7f7;
+$grey950          : #f3f3f3;
+$grey930          : #F2F2EF;
+$grey900          : #f0f0f0;
+$grey870          : #ededed;
+$grey850          : #e8e7e3;
+$grey840          : #e4e4e4;
+$grey837          : #e3e3e3;
+$grey835          : #ebebeb;
+$grey830          : #dfe1e3;
+$grey827          : #dde0e2;
+$grey825          : #dcdcdc;
+$gray820          : #dadddf;
+$grey800          : #d7d7d7;
+$grey750          : #d5d5d5;
+$grey730          : #c8c8c8;
+$grey700          : #c6cace;
+$grey670          : #c4c9ce;
+$grey660          : #c2c7cb;
+$grey650          : #b7bdc2;
+$gray600          : #b5b9be;
+$grey550          : #b2b2b2;
+$grey500          : #aeb5bc;
+$grey450          : #959ba2;
+$grey400          : #949494;
+$grey350          : #666f77;
+$grey300          : #556270;
+$grey200          : #4c575f;
+
+// Font
+$font             : AkkuratStd;
+$fontLight        : AkkuratStd-Light;
+$fontBold         : AkkuratStd-Bold;
+
+
+// Metas
+$colorMetaPrimary : $green500;
+
+
+// Presupuestos
+$colorPresPrimary : $orange500;
+$colorPresSecond  : $orange300;
+$colorPresTer	  : $orange800;
+
+
+// Detalles de presupuestos
+$colorDetPrimary             : $blue800;
+$colorDetSecond              : $orange400;
+$colorDetTer                 : $orange450;
+$colorDetCuater              : $white;
+$colorDetPenta               : $blue500;
+$colorDetHexa                : $grey650;
+$colorDetBackground          : $gray990;
+$colorDetBackSecond          : $gray1000;
+$colorDetBackTer             : $grey835;
+$colorDetBorder              : $grey840;
+$colorDetBorderDark          : $grey750;
+$colorDetCircleBorderDark    : $grey650;
+
+
+// Timeline
+$colorFontTimeline  : $blue300;
+$colorTimePrimary   : $grey400;
+$colorTimeSecond    : $blue800;
+$colorTimeTer       : $grey840;
+$colorTimeCuater    : $white;
+$colorTimePenta     : $gray990;
+$colorTimeHexa      : $grey550;
+$colorTimeTextWarn  : $grey500;
+$colorTimeBar       : $grey750;
+$colorTimeIngress   : $green500;
+$colorTimeWarning   : $red500;
+$colorTimeLineAccor : $grey835;
+$colorTimeBack      : $gray1000;
+
+
+// Modules
+$colorModPrimary        : $blue300;
+$colorModSecond         : $grey660;
+$colorModTer            : $grey500;
+$colorModCuat           : $grey870;
+$colorModPenta          : $grey450;
+$colorModBack           : $gray1000;
+$colorModBorder         : $grey837;
+$colorModBorderInput    : $grey825;
+$colorModBorderDark     : $grey730;
+$colorModButBack        : $green500;
+$colorModInputBorder    : $grey827;
+
+
+// Concrete
+$colorConPrimary     : $blue800;
+$colorConSecond      : $orange400;
+$colorConTer         : $grey350;
+$colorConCuater      : $white;
+$colorConPenta       : $blue500;
+$colorConBackground  : $gray990;
+$colorConBorder      : $grey200;
+
+
+// Notifications
+$colorNotifPrimary   : $black300;
+$colorNotifBorder    : $grey840;
+$colorNotifBorderSec : $grey930;
+$colorNotifConfirm   : $green500;
+$sizeNotifBorder     : 2px;
+
+
+$paletteContactGreen: #6fa51b #71a51d #437221;
+$contact-green-400: nth($paletteContactGreen, 1);
+$contact-green-500: nth($paletteContactGreen, 2);
+$contact-green-600: nth($paletteContactGreen, 3);
+
+$paletteContactGray: #f3f2f0 #e5e5e5 #b1b1b1 #dad7ce #eaeae8 #c7c7c7 #554f51 #2f292b #b0ac9e;
+$contact-gray-100: nth($paletteContactGray, 1);
+$contact-gray-200: nth($paletteContactGray, 5);
+$contact-gray-250: nth($paletteContactGray, 9);
+$contact-gray-300: nth($paletteContactGray, 2);
+$contact-gray-325: nth($paletteContactGray, 6);
+$contact-gray-350: nth($paletteContactGray, 4);
+$contact-gray-400: nth($paletteContactGray, 3);
+$contact-gray-700: nth($paletteContactGray, 7);
+$contact-gray-800: nth($paletteContactGray, 8);
+
+$paletteContactBrown: #eeebda #b0aa9a #8b8472 #b6b0a0 #69655a #f1ede4;
+$contact-brown-50: nth($paletteContactBrown, 6);
+$contact-brown-100: nth($paletteContactBrown, 1);
+$contact-brown-200: nth($paletteContactBrown, 2);
+$contact-brown-300: nth($paletteContactBrown, 3);
+$contact-brown-400: nth($paletteContactBrown, 4);
+$contact-brown-600: nth($paletteContactBrown, 5);
+
+$paletteContactBlue: #f2fafc #5fb9d1 #3a8fa3;
+$contact-blue-100: nth($paletteContactBlue, 1);
+$contact-blue-300: nth($paletteContactBlue, 2);
+$contact-blue-400: nth($paletteContactBlue, 3);
+
+$paletteContactYellow: #f1d327;
+$contact-yellow-500: nth($paletteContactYellow, 1);

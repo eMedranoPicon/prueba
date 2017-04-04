@@ -1,0 +1,63 @@
+.progress {
+    @include border-radius(20px);
+    background-color: $grey900;
+    height: 25px;
+    box-shadow: none;
+}
+
+.progress-bar {
+	@include border-radius-separate(0, 20px, 0, 20px);
+	float: right;
+  box-shadow: none;
+  height: 100%;
+  filter: none;
+}
+.progress-bar.normal {
+	@include border-radius-separate(20px, 0, 20px, 0);
+	float: left;
+}
+
+.triangulo_izq {
+    width: 0;
+    height: 0;
+    border-bottom: 14px solid transparent;  /* left arrow slant */
+    border-top: 13px solid transparent; /* right arrow slant */
+    border-right:14px solid $black; /* bottom, add background color here */
+    font-size: 0;
+    line-height: 0;
+    float: right;
+}
+
+.triangulo_der {
+    width: 0;
+    height: 0;
+    border-bottom: 14px solid transparent;  /* left arrow slant */
+    border-top: 13px solid transparent; /* right arrow slant */
+    border-left:14px solid $black; /* bottom, add background color here */
+    font-size: 0;
+    line-height: 0;
+    float: left;
+}
+
+.values-progress-bar {
+    overflow: hidden;
+    height: 40px;
+    .value {
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .pull-left {
+        text-align: left;
+        color: $black;
+    }
+    .pull-right {
+        text-align: right;
+        .value {
+            color: $black;
+        }
+    }
+}
+
+.border-radius-less {
+    @include border-radius(0px);
+}

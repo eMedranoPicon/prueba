@@ -1,0 +1,144 @@
+.devolver-baja-container {
+
+  .devolver-baja-module-content {
+    font-size: 13px;
+    & > div {
+      padding-left: 22px;
+      padding-right: 20px;
+    }
+    .top-devolver-baja-container {
+      padding-top: 26px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $colorModBorder;
+      height: 132px;
+      font-family: $fontBold;
+      &.baja {
+        height: 102px;
+        .title {
+          margin-bottom: 10px;
+        }
+      }
+      & > div, .text-container > span {
+        float: left;
+        width: 100%;
+      }
+      .title {
+        font-size: 16px;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+      }
+      .subtitle {
+        font-size: 14px;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+      }
+      .money-container {
+        .number, .coin {
+          font-size: 20px;
+        }
+        .decimal {
+          font-size: 10px;
+        }
+        .coin {
+          padding-left: 2px;
+        }
+      }
+
+    }
+
+    .warning-container {
+      border-bottom: 1px solid $colorModBorder;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      color: $colorModPenta;
+      font-size: 14px;
+      line-height: 20px;
+      @include transition(display 0.45s);
+      a {
+        color: $colorModPenta;
+        font-family: $fontBold;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      .icon-container {
+        display: inline-block;
+        float: left;
+        height: 14px;
+        padding-right: 5px;
+        margin-top: 2px;
+      }
+    }
+
+    .body-container {
+      padding-top: 20px;
+      height: 115px;
+      display: inline-block;
+      & > div {
+        float: left;
+      }
+      .text-sms-container {
+        padding-top: 3px;
+        width: 51%;
+      }
+      .input-sms-container, .link-container {
+        text-align: right;
+        width: 49%;
+      }
+      .input-sms {
+        width: 175px;
+        height: 36px;
+        font-size: 13px;
+        &::-webkit-input-placeholder{
+          font-style: italic;
+        }
+        &::-moz-placeholder{
+          font-style: italic;
+        }
+        &:-ms-input-placeholder{
+          font-style: italic;
+        }
+
+        &:-moz-placeholder {
+          font-style: italic;
+        }
+      }
+      .link-container {
+        float: right;
+        display: inline-block;
+        cursor: pointer;
+        width: auto;
+        margin-top: 15px;
+        margin-right: 8px;
+        & > div {
+          float: left;
+          display: inline-block;
+        }
+        .link-content {
+          padding-left: 3px;
+          .link {
+            color: $colorModTer;
+            &.hover {
+              color: $colorModPrimary;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .bottom-container {
+      height: 56px;
+      .button-container {
+        width: 50%;
+        float: left;
+        &:nth-child(1) {
+          text-align: left;
+        }
+        &:nth-child(2) {
+          text-align: right;
+        }
+      }
+    }
+  }
+}

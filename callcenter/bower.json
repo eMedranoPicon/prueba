@@ -1,0 +1,32 @@
+{
+  "name": "jed",
+  "version": "1.0.1",
+  "homepage": "https://github.com/sopraux/develop.git",
+  "authors": [
+    "jonastg <jonas.talavera@sopra.com>"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "1.9.1",
+    "jquery-migrate": "1.4.0",
+    "sass-bootstrap": "3.0.2",
+    "bootstrap": "~3.3.4",
+    "bootstrap-sass-official": "~3.3.4",
+    "jQuery.mmenu": "5.3.1",
+    "jquery-ui": "1.11"
+  },
+  "dependencies": {
+    "html5shiv": "~3.7.3"
+  }
+}
