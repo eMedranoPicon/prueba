@@ -1,4 +1,11 @@
 @import "variables/all";
+@import "modules/mixins";
+
+.page-title {
+  color: #120e0f;
+  font-family: AkkuratStd-Light;
+  font-size: 46px;
+}
 
 .content-presupuestos {
   @import "partials/phone/all";
