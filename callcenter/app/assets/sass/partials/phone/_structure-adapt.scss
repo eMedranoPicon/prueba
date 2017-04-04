@@ -13,6 +13,12 @@
     .radio-group {
       float: none;
     }
+    .submit-button-subscribe {
+      height: auto;
+      .contact-button-wrapper {
+        top: 0;
+      }
+    }
   }
   .user-prompt-after-content {
     margin-left: 0;
@@ -21,3 +27,39 @@
     }
   }
 }
+.support-msg {
+  .content {
+    .submit-button-support-msg {
+      height: auto;
+      text-align: right;
+      .contact-button-wrapper {
+        position: relative;
+        top: 0;
+      }
+    }
+  }
+}
+
+.modal-dialog {
+  padding: 0;
+}
+.modal-content {
+  .popup-group {
+    left: 0;
+    .popup-header,
+    .popup-content {
+      right: 0;
+    }
+    .popup-content {
+      .login {
+        width: auto;
+      }
+    }
+    .popup-header {
+      .login-header {
+        width: auto;
+      }
+    }
+  }
+}
+
