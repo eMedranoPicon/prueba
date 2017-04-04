@@ -1,0 +1,23 @@
+.user-prompt-wrapper {
+  .user-prompt-content {
+    margin-left: 0;
+    select,
+    .line-input {
+      width: 100%;
+    }
+    .sms {
+      .phone-input {
+        width: 100%;
+      }
+    }
+    .radio-group {
+      float: none;
+    }
+  }
+  .user-prompt-after-content {
+    margin-left: 0;
+    .ack-msg {
+      height: auto;
+    }
+  }
+}

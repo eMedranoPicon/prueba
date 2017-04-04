@@ -1,0 +1,14 @@
+.user-prompt-wrapper {
+  .avatar-group {
+    top: -6px;
+    .avatar-decorator {
+      display: none;
+    }
+    .avatar-image {
+      margin-left: 0;
+      border-width: 3px;
+      width: 37px;
+      height: 37px;
+    }
+  }
+}
