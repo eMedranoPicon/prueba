@@ -5,18 +5,18 @@
 
 	.icon-container{
 		position: absolute;
-	  top: -12px;
-	  margin: 0;
-	  padding: 0;
+		top: -6px;
+		margin: 0;
+		padding: 0;
 
 		.icon-support-team {
 			@include border-radius(39px);
 			margin: 0;
 			padding: 0;
 			z-index: 10;
-			background: $white url(../images/support-team-mobile.png) no-repeat scroll center bottom;
-			height: 64px;
-	    width: 64px;
+			background: $white url(../images/support-team.png) no-repeat scroll 7px 6px;
+			height: 37px;
+			width: 37px;
 			border: 1px solid $black;
 			border-width: 3px;
 			display: block;
@@ -24,30 +24,31 @@
 	}
 
 	.content{
-		@include border-radius(15px);
+		@include border-radius(8px);
 		margin: 0;
 		z-index: 5;
 		background-color:$orange200;
 		margin-top:6px;
-		padding: 22px 39px 48px 86px;
+		padding: 8px 29px 14px 50px;
 
 		.title{
 			margin: 0;
 			padding: 0;
 			color: $black;
-			font-size: 26px;
-			line-height: 1.2;
+			font-size: 13px;
+			line-height: 1.1;
 			font-weight: 600;
+			padding-top: 7px;
 		}
 		.text{
 			margin: 0;
 			padding: 0;
 			color: $black;
 			font-weight: normal;
-			font-size: 26px;
-			padding-top: 14px;
-			letter-spacing: normal;
-			line-height: 1.2;
+			font-size: 13px;
+			padding-top: 9px;
+			letter-spacing: -0.045px;
+			line-height: 17px;
 		}
 	}
 }
