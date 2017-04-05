@@ -8,28 +8,28 @@
 {% block content %}
   <form class="send-message-form">
 
-    <div class="username-group">
+    <div class="username-group form-line">
       <label >Tu nombre</label><br />
       <input type="text" class="line-input inputs-border"/>
     </div>
 
-    <div class="email-group">
+    <div class="email-group form-line">
       <label >Tu dirección de correo electrónico</label><br />
       <input type="email" class="line-input inputs-border"/>
     </div>
 
-    <div class="related-group">
+    <div class="related-group form-line">
       <label>Asunto</label><br />
       <select class="inputs-border">
         <option>Otros</option>
       </select>
 
-      <div class="name-group">
+      <div class="name-group form-line">
         <input type="text" class="line-input inputs-border" placeholder="Escribe el nombre del asunto"/>
       </div>
     </div>
 
-    <div class="textarea-group">
+    <div class="textarea-group form-line">
       <label>Tu consulta</label><br />
       <textarea rows="5" cols="50"  class="inputs-border" placeholder="Cuéntanos en que podemos ayudarte"></textarea>
     </div>
@@ -46,8 +46,9 @@
 
     <div class="submit-button-subscribe">
       <div class="contact-button-wrapper">
-        <input type="submit" class="contact-button" value="ENVIAR" />
-        <i class="contact-button-arrow-icon"></i>
+        <button type="submit" class="contact-button" value="ENVIAR" />
+          ENVIAR <i class="contact-button-arrow-icon"></i>
+        </button>
       </div>
     </div>
   </form>
