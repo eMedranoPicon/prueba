@@ -34,8 +34,9 @@
 		.title{
 			margin: 0;
 			padding: 0;
+			font-family: $font;
 			color: $black;
-			font-size: 14px;
+			font-size: 15px;
 	    line-height: 1.2;
 	    font-weight: 600;
 	    padding-top: 7px;
@@ -70,7 +71,6 @@
 				@include background-gradient-vertical($contact-brown-400, $contact-brown-600);
 				margin-top: 14px;
 				padding: 0 19px 0 18px;
-				margin-left: -4px;
 			}
 
 			a{
@@ -98,7 +98,7 @@
 			@include border-radius(8px);
 			border: 1px solid $contact-gray-300;
 			background-color: $white;
-			margin-top: 15px;
+			margin-top: 20px;
 
 			.addon-wrapper{
 				position: relative;
@@ -124,8 +124,10 @@
 
 					.name{
 						display: block;
+	    			font-family: $font;
 						font-size: 15px;
 						font-weight: bold;
+						color: $grey200;
 						padding: 13px 0 0 1px;
 						letter-spacing: 0.4px;
 				    overflow: hidden;
@@ -134,6 +136,7 @@
 					.description{
 						display: block;
 						font-size: 14px;
+						color: $gray600;
 						letter-spacing: 0.2px;
 					}
 				}
@@ -141,16 +144,21 @@
 		}
 
 		.timestamp-group{
-			padding: 24px 0 0;
+			padding: 25px 0 0 0;
+			margin-bottom: 20px;
 
 			label{
+				font-family: $font;
 				font-size: 13px;
 				color:$contact-blue-400;
+				margin-top: 1px;
 				letter-spacing: normal;
 				padding: 0;
 			}
 
 			.date-text{
+				font-family: $fontBold;
+				letter-spacing: normal;
 				font-weight: bold;
 				padding-left: 6px;
 				letter-spacing: normal;
@@ -169,6 +177,7 @@
 				.contact-button{
 					@include background-gradient-vertical($contact-green-400, $contact-green-600);
 					margin-top: 0;
+					margin-left: 0;
 					padding: 0 35px 0 20px;
 				}
 			}
