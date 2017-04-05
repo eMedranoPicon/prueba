@@ -39,28 +39,3 @@
     }
   }
 }
-
-.modal-dialog {
-  padding: 0;
-}
-.modal-content {
-  .popup-group {
-    width: 100%;
-    left: 0;
-    .popup-header,
-    .popup-content {
-      right: 0;
-    }
-    .popup-content {
-      .login {
-        width: auto;
-      }
-    }
-    .popup-header {
-      .login-header {
-        width: auto;
-      }
-    }
-  }
-}
-

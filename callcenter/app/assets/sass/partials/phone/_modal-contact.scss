@@ -1,0 +1,136 @@
+.modal-dialog {
+  padding: 80px 18px 20px 18px;
+}
+.modal-content {
+  box-shadow: none;
+  border:none;
+  .user-ico{
+    display: block;
+    width: 16px;
+    height: 19px;
+    background: transparent url("../images/support-team.png") no-repeat scroll 0 0;
+    display: inline-block;
+  }
+  .popup-group{
+    z-index: 20000;
+    .popup-header{
+      @include border-radius-separate($topLeftRadius: 4px, $topRightRadius: 4px, $bottomLeftRadius: 0, $bottomRightRadius: 0);
+      .login-header{
+        text-align: center;
+        margin: auto;
+        background-color: $black;
+        position: relative;
+        height: 145px;
+        .logo-coinc{
+          position: relative;
+          top: 5px;
+          left: 0;
+          width: 175px;
+        }
+      }
+      .call-us-header{
+        width: 360px;
+        margin: auto;
+        background-color: $black;
+        position: relative;
+        height: 138px;
+        .logo-coinc{
+          top: 44px;
+          position: absolute;
+          left: 100px;
+        }
+      }
+    }
+    .popup-content{
+      .login{
+        padding: 23px 28px 0 28px;
+        margin: auto;
+        border-top: 3px solid $contact-gray-325;
+        background-color: $white;
+        .title{
+          font-size: 23px;
+          font-weight: bold;
+          letter-spacing: -0.15px;
+        }
+        form{
+          padding-top: 4px;
+          margin: auto;
+          width: auto;
+          label{
+            color: $black;
+            padding-left: 6px;
+            margin: 0;
+            font-weight: normal;
+          }
+          .password{
+            padding: 11px 0 0 0;
+          }
+          .input-data{
+            @include border-radius(2px);
+            height: 25px;
+            border: 1px solid $grey500;
+            width: 100%;
+            font-size: 14px;
+            padding-left: 5px;
+            margin-top: 3px;
+          }
+          a{
+            display: block;
+            margin: auto;
+            font-size: 14px;
+            width: 100%;
+            text-align: center;
+            margin-top: 34px;
+            color: black;
+            text-decoration: underline;
+          }
+          .contact-button{
+            @include background-gradient-vertical($contact-gray-700, $contact-gray-800);
+            margin: auto;
+            width: 100px;
+            display: block;
+            margin-top: 17px;
+          }
+        }
+        .later{
+          text-align: right;
+          height: auto;
+          margin-top: 30px;
+          padding-bottom: 20px;
+          a{
+            float: none;
+            color: $black;
+            font-size: 14px;
+            margin: 0;
+            text-decoration: underline;
+          }
+        }
+      }
+      .call-us-popup{
+        text-align: center;
+        padding-top: 38px;
+        width: 360px;
+        margin: auto;
+        border-top: 5px solid $contact-gray-325;
+        background-color: $white;
+        .text{
+          display: block;
+          font-size: 14px;
+        }
+        .text2{
+          display: block;
+          font-size: 23px;
+          font-weight: bold;
+          margin: 7px;
+        }
+      }
+      .contact-button{
+        @include background-gradient-vertical($contact-gray-700, $contact-gray-800);
+        margin: auto;
+        width: 100px;
+        display: block;
+        margin: 40px auto 57px auto;
+      }
+    }
+  }
+}
