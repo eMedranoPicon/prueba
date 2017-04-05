@@ -2,7 +2,9 @@
 
 <!-- Inicio modulo "ack" -->
 {% block avatar_img %}
-  <img class="avatar-image" src="images/photo-user.png" alt="..." />
+<div class="avatar-image">
+    <img src="images/photo-user.png" alt="..." />
+</div>
 {% endblock %}
 
 {% block content %}
@@ -23,12 +25,8 @@
   <div class="ack-msg">
     <i class="icon-info"></i>
     <div class="texts">
-      <label class="text-part1">
-        Hemos recibido tu consulta.
-      </label>
-      <label>
-        Te responderemos lo antes posible.
-      </label>
+      <span class="text-part1">Hemos recibido tu consulta.</span>
+      <span>Te responderemos lo antes posible.</span>
     </div>
   </div>
 {% endblock %}

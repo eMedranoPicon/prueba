@@ -3,7 +3,7 @@
     padding-right: 30px;
   }
   .avatar-group {
-    top: -6px;
+    top: -13px;
     .avatar-decorator {
       display: none;
     }
@@ -13,6 +13,18 @@
       width: 37px;
       height: 37px;
       background-color: $white;
+      position: relative;
+      overflow: hidden;
+      img {
+        max-width: 100%;
+        max-height: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
     }
   }
 }
