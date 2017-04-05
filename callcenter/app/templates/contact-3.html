@@ -1,0 +1,37 @@
+{% extends "/base/_base.html" %}
+{% block phone %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="page-title">DUDA SOBRE OPERATIVA</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      {% include '/includes/modules/_sms.html' %}
+      {% include '/includes/modules/_code_msg.html' %}
+      {% include '/includes/modules/_ack_v2.html' %}
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <p>&nbsp;</p>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal1">
+        Launch demo modal
+      </button>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  {% include '/includes/modules/_login.html' %}
+</div>
+
+{% endblock %}
