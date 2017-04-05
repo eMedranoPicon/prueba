@@ -12,14 +12,18 @@
     display: inline-block;
   }
   .popup-group{
+    position: relative;
+    left: auto;
     z-index: 20000;
     .popup-header{
       @include border-radius-separate($topLeftRadius: 4px, $topRightRadius: 4px, $bottomLeftRadius: 0, $bottomRightRadius: 0);
+      right: auto;
       .login-header{
         text-align: center;
         margin: auto;
         background-color: $black;
         position: relative;
+        width: auto;
         height: 145px;
         .logo-coinc{
           position: relative;
@@ -29,7 +33,6 @@
         }
       }
       .call-us-header{
-        width: 360px;
         margin: auto;
         background-color: $black;
         position: relative;
@@ -42,7 +45,9 @@
       }
     }
     .popup-content{
+      right: auto;
       .login{
+        width: auto;
         padding: 23px 28px 0 28px;
         margin: auto;
         border-top: 3px solid $contact-gray-325;
@@ -109,7 +114,6 @@
       .call-us-popup{
         text-align: center;
         padding-top: 38px;
-        width: 360px;
         margin: auto;
         border-top: 5px solid $contact-gray-325;
         background-color: $white;
