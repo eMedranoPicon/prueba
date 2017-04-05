@@ -1,5 +1,7 @@
 {% extends "/base/_base.html" %}
-
+{% block phone %}
+  {{ super() }}
+{% endblock %}
 {% block content %}
 <div class="container">
   <div class="row">
@@ -10,12 +12,7 @@
   <div class="row">
     <div class="col-xs-12">
       {% include '/includes/modules/_msg.html' %}
-      {% include '/includes/modules/_send_message.html' %}
-      {% include '/includes/modules/_ack.html' %}
-      {% include '/includes/modules/_sms.html' %}
       {% include '/includes/modules/_subscribe.html' %}
-      {% include '/includes/modules/_msg_status.html' %}
-      {% include '/includes/modules/_support_msg.html' %}
     </div>
   </div>
 </div>
