@@ -34,8 +34,9 @@
 		.title{
 			margin: 0;
 			padding: 0;
+			font-family: $font;
 			color: $black;
-			font-size: 14px;
+			font-size: 15px;
 	    line-height: 1.2;
 	    font-weight: 600;
 	    padding-top: 7px;
@@ -124,8 +125,10 @@
 
 					.name{
 						display: block;
+	    			font-family: $font;
 						font-size: 15px;
 						font-weight: bold;
+						color: $grey200;
 						padding: 13px 0 0 1px;
 						letter-spacing: 0.4px;
 				    overflow: hidden;
@@ -134,6 +137,7 @@
 					.description{
 						display: block;
 						font-size: 14px;
+						color: $gray600;
 						letter-spacing: 0.2px;
 					}
 				}
