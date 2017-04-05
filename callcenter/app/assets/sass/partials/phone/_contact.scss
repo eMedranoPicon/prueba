@@ -1,7 +1,7 @@
 .msg,
 .support-msg{
 	position: relative;
-	margin-top: 15px;
+	margin-top: 5px;
 
 	.icon-container{
 		position: absolute;
@@ -14,11 +14,11 @@
 			margin: 0;
 			padding: 0;
 			z-index: 10;
-			background: $white url(../images/support-team.png) no-repeat scroll 7px 6px;
+			background: $white url(../images/support-team.png) no-repeat scroll center bottom;
 			height: 37px;
 			width: 37px;
 			border: 1px solid $black;
-			border-width: 3px;
+			border-width: 2px;
 			display: block;
 		}
 	}
@@ -35,20 +35,20 @@
 			margin: 0;
 			padding: 0;
 			color: $black;
-			font-size: 13px;
-			line-height: 1.1;
-			font-weight: 600;
-			padding-top: 7px;
+			font-size: 15px;
+	    line-height: 1.2;
+	    font-weight: 600;
+	    padding-top: 7px;
 		}
 		.text{
 			margin: 0;
 			padding: 0;
 			color: $black;
 			font-weight: normal;
-			font-size: 13px;
-			padding-top: 9px;
-			letter-spacing: -0.045px;
-			line-height: 17px;
+			font-size: 15px;
+	    padding-top: 9px;
+	    letter-spacing: normal;
+	    line-height: 1.2;
 		}
 	}
 }
