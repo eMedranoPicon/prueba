@@ -1,0 +1,22 @@
+{% extends "/includes/_user_prompt.html" %}
+
+<!-- Inicio modulo "send_message" -->
+{% block avatar_img %}
+  <img class="avatar-image" src="images/photo-user.png" alt="..." />
+{% endblock %}
+
+{% block content %}
+  <form class="send-message-form">
+
+    <div class="textarea-group">
+      <label>Tu respuesta</label><br />
+      <textarea rows="5" cols="50"  class="inputs-border" placeholder="Cuéntanos en que podemos ayudarte"></textarea>
+    </div>
+
+    <div class="contact-button-wrapper">
+      <input type="submit" class="contact-button" value="ENVIAR" />
+      <i class="contact-button-arrow-icon"></i>
+    </div>
+  </form>
+{% endblock %}
+<!-- Fin modulo "send_message" -->
