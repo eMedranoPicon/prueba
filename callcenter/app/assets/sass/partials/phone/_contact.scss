@@ -646,10 +646,11 @@
 
 .msg-status-wrapper{
 	height: 37px;
-
-	.status-group{
+	.status-group {
 		float: right;
-
+	}
+	.status-group,
+	.status-group-v2 {
 		.ball{
 			@include border-radius(9px);
 			display: inline-block;
