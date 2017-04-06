@@ -91,10 +91,11 @@
           }
           .contact-button{
             @include background-gradient-vertical($contact-gray-700, $contact-gray-800);
-            margin: auto;
             width: 100px;
             display: block;
+            margin: auto;
             margin-top: 17px;
+            padding: 0;
           }
         }
         .later{

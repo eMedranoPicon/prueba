@@ -69,6 +69,7 @@
 
 			.contact-button{
 				@include background-gradient-vertical($contact-brown-400, $contact-brown-600);
+				@include box-shadow-mixin(0px, -3px, 2px, rgba(0, 0, 0, 0.4), inset);
 				margin-top: 14px;
 				padding: 0 19px 0 18px;
 			}
@@ -176,6 +177,7 @@
 
 				.contact-button{
 					@include background-gradient-vertical($contact-green-400, $contact-green-600);
+					@include box-shadow-mixin(0px, -3px, 2px, rgba(0, 0, 0, 0.4), inset);
 					margin-top: 0;
 					margin-left: 0;
 					padding: 0 35px 0 20px;
@@ -503,6 +505,7 @@
 
 				.contact-button{
 					@include background-gradient-vertical($contact-green-400, $contact-green-600);
+					@include box-shadow-mixin(0px, -3px, 2px, rgba(0, 0, 0, 0.4), inset);
 					padding: 0 49px 0 39px;
 					float: right;
 				}
