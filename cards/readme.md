@@ -18,6 +18,12 @@
 
    globally with `npm install -g gulp` 
 
+   Also, you need to have installed python3 and pip3, and to have installed the packages of jinja2, setuptools and staticjinja
+   To install it:
+   `sudo pip3 install jinja2``
+   `sudo pip3 install setuptools`
+   `sudo pip3 install staticjinja`
+
 
 2. Gulp tasks, try `gulp help` and it will display all availabe tasks with a description.
 
@@ -31,8 +37,7 @@
    Default task include the following tasks 'sass-lint', 'jshint', 'sass', 'vendor-scripts', 'scripts' and 'watch'. 'test' was removed by it could be included again if it is necesary.
 
 
-3. Important: If I forgot something, call me, ask jewellery boys or better 
-   call Saul ;)
+3. Important: If I forgot something, call me, ask coinc boys
 
 
 # Useful links
