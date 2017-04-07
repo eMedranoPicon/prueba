@@ -255,6 +255,10 @@
 			margin-bottom: 15px;
 		}
 
+		select.inputs-border + .form-line {
+			margin-bottom: 10px;
+		}
+
 		.name-group{
 			@include dialog-placeholder(14px, $contact-brown-300, 0, 0);
 
