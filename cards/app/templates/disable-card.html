@@ -1,5 +1,6 @@
+{% import "/components/_text-green-block.html" as textBlock %}
 {% extends "/base/_base.html" %}
 
 {% block content %}
-  <h1>BLOQUEAR TARJETA</h1>
+  {{ textBlock.text('pdt-30 pdb-30', 'Por favor, indica por qué quieres bloquear tu tarjeta.') }}
 {% endblock %}
