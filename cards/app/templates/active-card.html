@@ -1,5 +1,8 @@
+{% import "/components/_text-green-block.html" as textBlock %}
+
 {% extends "/base/_base.html" %}
 
 {% block content %}
-<h1>ACTIVE CARD</h1>
+  <h1>ACTIVE CARD</h1>
+  {{ textBlock.text('pdt-70 pdb-70', 'Introduce el código que te hemos enviado al móvil para completar la activación de tu tarjeta.') }}
 {% endblock %}
