@@ -1,18 +1,20 @@
-.card-info {
-  font-weight: 600;
-  &-img {
+.credit-card {
+  &__icon {
     margin-right: 10px;
   }
-  .name-card {
-    color: $color-brand;
-  }
-  .number-card {
-    font-size: 16px;
+  &__details {
+    font-weight: $font-bold;
+    .account-holder {
+      color: $color-brand;
+    }
+    .number-account {
+      font-size: 16px;
+    }
   }
 }
 
 .activate-card{
   color: $color-brand;
-  font-weight: 600;
+  font-weight: $font-bold;
   margin: 0;
 }

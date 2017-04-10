@@ -1,3 +1,5 @@
 $colorGreen: #70a41c;
 
-$color-brand: nth($colorGreen, 1);
+$colorGreen-500: nth($colorGreen, 1);
+
+$color-brand: $colorGreen-500;
