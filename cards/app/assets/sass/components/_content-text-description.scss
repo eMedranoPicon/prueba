@@ -1,10 +1,13 @@
-.content-text-description {
+.content-text-description, .content-success-message {
   background-color: $colorGreen-500;
   color: $colorWhite;
+  text-align: center;
+  h1 {
+    font-size: 33px;
+    font-weight: $font-bold;
+  }
   p {
-    max-width: 835px;
     margin: 0 auto;
-    font-size: 27px;
-    text-align: center;
+    font-size: 15px;
   }
 }

@@ -1,0 +1,9 @@
+{% import "/components/_success-message.html" as textMessage %}
+
+{% extends "/base/_base.html" %}
+
+{% block content %}
+  <h1>ACTIVE CARD</h1>
+  {{ textMessage.text('pdt-70 pdb-70', 'Ya has activado tu tarjeta. <br />Empieza a disfrutarla hoy tu mismo.', '¡Enhorabuena!') }}
+  <button type="button" class="btn btn-success" name="button"></button>
+{% endblock %}
