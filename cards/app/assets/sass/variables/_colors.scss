@@ -1,7 +1,12 @@
 $colorWhite: #fff;
+$colorBlack: #000;
 
-$colorGreen: #70a41c;
+$colorGreen: #70a41c #417100;
 
 $colorGreen-500: nth($colorGreen, 1);
+$colorGreen-700: nth($colorGreen, 2);
 
 $color-brand: $colorGreen-500;
+
+$colorGray: #f7f7f7;
+$colorGray-200: nth($colorGray, 1);
