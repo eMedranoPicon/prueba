@@ -1,20 +1,23 @@
-.credit-card {
-  &__icon {
-    margin-right: 10px;
-  }
-  &__details {
-    font-weight: $font-bold;
-    .account-holder {
-      color: $color-brand;
+.container-card {
+  .credit-card {
+    &__icon {
+      margin-right: 18px;
     }
-    .number-account {
-      font-size: 16px;
+    &__details {
+      font-weight: $font-bold;
+      .account-holder {
+        color: $color-brand;
+        font-size: 18px;
+      }
+      .number-account {
+        font-size: 18px;
+      }
     }
   }
-}
 
-.activate-card{
-  color: $color-brand;
-  font-weight: $font-bold;
-  margin: 0;
+  h3 {
+    color: $color-brand;
+    font-weight: $font-bold;
+    margin: 0;
+  }
 }
