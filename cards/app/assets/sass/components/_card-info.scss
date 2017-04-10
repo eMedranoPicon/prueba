@@ -1,0 +1,18 @@
+.card-info {
+  font-weight: 600;
+  &-img {
+    margin-right: 10px;
+  }
+  .name-card {
+    color: $color-brand;
+  }
+  .number-card {
+    font-size: 16px;
+  }
+}
+
+.activate-card{
+  color: $color-brand;
+  font-weight: 600;
+  margin: 0;
+}
