@@ -388,27 +388,31 @@
 }
 
 @mixin dialog-placeholder($font-size, $color, $pad-vertical, $pad-horiz){
-  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
       color:    $color;
       font-size: $font-size;
       padding: $pad-vertical $pad-horiz;
+      font-style: italic;
   }
-  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
      color:    $color;
      opacity:  1;
      font-size: $font-size;
      padding: $pad-vertical $pad-horiz $pad-vertical $pad-horiz;
+     font-style: italic;
   }
-  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
      color:    $color;
      opacity:  1;
      font-size: $font-size;
      padding: $pad-vertical $pad-horiz $pad-vertical $pad-horiz;
+     font-style: italic;
   }
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
      color:    $color;
      font-size: $font-size;
      padding: $pad-vertical $pad-horiz $pad-vertical $pad-horiz;
+     font-style: italic;
   }
 }
 
@@ -424,5 +428,5 @@
 }
 
 @mixin transition-easy($all: all, $time: 1s, $animation: ease) {
-  @include css3-prefix(transition, $all $time $animation);       
+  @include css3-prefix(transition, $all $time $animation);
 }
