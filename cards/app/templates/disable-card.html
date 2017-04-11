@@ -1,10 +1,22 @@
 {% import "/components/_text-green-block.html" as textBlock %}
 {% import "/components/_card-info.html" as cardInfo %}
-
+{% import "/components/_address-to-send.html" as sendTo %}
+{% import "components/_paginator.html" as paginator %}
 {% extends "/base/_base.html" %}
 
 {% block content %}
   {{ cardInfo.content('pdt-45 pdb-45', 'YOLANDA ALONSO', '4966,43**.***.4006', 'BLOQUEAR MI TARJETA') }}
   {{ textBlock.text('pdt-30 pdb-30', 'Por favor, indica por qué quieres bloquear tu tarjeta.') }}
-  {% include 'components/_select-reason.html' %}
+
+  <section class="address-section">
+    <h3 class="text-center">Aquí recibiras tu nueva targeta</h3>
+    {{ sendTo.address('Calle Orense 18, 8ºA', '28020 Madrid', 'MADRID - España') }}
+
+    {{ paginator.set('1','2')}}
+
+    <div class="container-fluid text-center">
+      <button class="btn btn-default" type="reset" name="button">Atrás</button>
+      <button class="btn btn-primary" type="submit" name="button">Continuar</button>
+    </div>
+  </section>
 {% endblock %}

@@ -1,0 +1,37 @@
+.address-section {
+    h3 {
+      font-size: 18px;
+      color: $colorGray-500;
+    }
+    button {
+      margin: 10px;
+    }
+}
+
+.address {
+  background-color: #dedede;
+  text-align: center;
+  padding: 30px;
+
+  &__image {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3px;
+    padding-right: 14px;
+  }
+  &__details {
+    display: inline-block;
+    text-align: left;
+    > p {
+      margin-bottom: 4px;
+      color: gray;
+    }
+    > a {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+      text-decoration: underline;
+      color: $colorGray-500;
+    }
+  }
+}
