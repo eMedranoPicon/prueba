@@ -1,0 +1,23 @@
+.container-card {
+  .credit-card {
+    &__icon {
+      margin-right: 18px;
+    }
+    &__details {
+      font-weight: $font-bold;
+      .account-holder {
+        color: $color-brand;
+        font-size: 18px;
+      }
+      .number-account {
+        font-size: 18px;
+      }
+    }
+  }
+
+  h3 {
+    color: $color-brand;
+    font-weight: $font-bold;
+    margin: 0;
+  }
+}
