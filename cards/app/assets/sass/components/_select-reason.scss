@@ -1,4 +1,5 @@
 .select-reason {
+  @include clearfix;
   &__option {
     padding: 40px 0 40px 0;
     padding-left: 0;
