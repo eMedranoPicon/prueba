@@ -1,0 +1,40 @@
+.form-radio-square {
+  input {
+    display: none;
+    + label {
+      font-size: 18px;
+      font-weight: $font-bold;
+      padding: 30px 70px;
+      &:before {
+        padding: 8px;
+        margin-right: 10px;
+        border-radius: 2px;
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 15px 15px;
+        border: 1px solid $colorGrey-500;
+      }
+    }
+    &:checked {
+      + label {
+        &,
+        &:hover {
+          &:before {
+            background-image: url("../images/icons/check-green.png");
+          }
+        }
+      }
+    }
+    &:hover {
+      + label {
+        &:before {
+          background-image: url("../images/icons/check.png");
+        }
+      }
+    }
+  }
+}

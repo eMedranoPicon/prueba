@@ -1,47 +1,7 @@
 .block-reason {
-  background-color: #fff;
+  background-color: $colorWhite;
   &__center {
-    *margin: 0 auto;
-
-    input[type=radio] {
-      display: none;
-      + label {
-        font-size: 18px;
-        font-weight: $font-bold;
-        padding: 30px 70px;
-        &:before {
-          padding: 8px;
-          margin-right: 10px;
-          border-radius: 2px;
-          content: "";
-          display: inline-block;
-          width: 15px;
-          height: 15px;
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-size: 15px 15px;
-          border: 1px solid $colorGrey;
-        }
-      }
-      &:checked {
-        + label {
-          &,
-          &:hover {
-            &:before {
-              background-image :url("../images/icons/check-green.png");
-            }
-          }
-        }
-      }
-      &:hover {
-        + label {
-          &:before {
-            background-image :url("../images/icons/check.png");
-          }
-        }
-      }
-    }
-    > div {
+    &-element {
       padding: 40px 0 40px 0;
       padding-left: 0;
       background-color: $colorWhite;
@@ -49,7 +9,7 @@
       float: left;
       &:before {
         content: '';
-        background-color: $colorGrey;
+        background-color: $colorGrey-500;
         width: 1px;
         height: 90px;
         position: absolute;
