@@ -1,0 +1,26 @@
+.input-code-form {
+  input {
+    width: 150px;
+  }
+  .icon-group {
+    display: inline-block;
+    margin-left: 5px;
+    .icon-sms {
+      padding: 5px;
+    }
+    a {
+      font-size: 12px;
+      text-decoration: underline;
+      color: $gray;
+    }
+  }
+  button {
+    margin: 60px 10px;
+  }
+
+}
+
+.gray-bg {
+  background-color: $colorGray-200;
+  padding: 50px;
+}
