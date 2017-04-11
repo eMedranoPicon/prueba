@@ -1,0 +1,66 @@
+.block-reason {
+  background-color: #fff;
+  &__center {
+    *margin: 0 auto;
+
+    input[type=radio] {
+      display: none;
+      + label {
+        font-size: 18px;
+        font-weight: $font-bold;
+        padding: 30px 70px;
+        &:before {
+          padding: 8px;
+          margin-right: 10px;
+          border-radius: 2px;
+          content: "";
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: 15px 15px;
+          border: 1px solid $colorGrey;
+        }
+      }
+      &:checked {
+        + label {
+          &,
+          &:hover {
+            &:before {
+              background-image :url("../images/icons/check-green.png");
+            }
+          }
+        }
+      }
+      &:hover {
+        + label {
+          &:before {
+            background-image :url("../images/icons/check.png");
+          }
+        }
+      }
+    }
+    > div {
+      padding: 40px 0 40px 0;
+      padding-left: 0;
+      background-color: $colorWhite;
+      position: relative;
+      float: left;
+      &:before {
+        content: '';
+        background-color: $colorGrey;
+        width: 1px;
+        height: 90px;
+        position: absolute;
+        top: 40px;
+        right: 0;
+      }
+      &:last-child {
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
+}
