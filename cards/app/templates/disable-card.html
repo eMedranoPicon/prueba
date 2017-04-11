@@ -2,6 +2,7 @@
 {% extends "/base/_base.html" %}
 
 {% block content %}
+  {% include 'components/_select-reason.html' %}
   {{ textBlock.text('pdt-30 pdb-30', 'Por favor, indica por qué quieres bloquear tu tarjeta.') }}
   <div class="container">
     {% include "/includes/_form-address.html" %}
