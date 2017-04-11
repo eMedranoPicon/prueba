@@ -3,4 +3,7 @@
 
 {% block content %}
   {{ textBlock.text('pdt-30 pdb-30', 'Por favor, indica por qué quieres bloquear tu tarjeta.') }}
+  <div class="container">
+    {% include "/includes/_form-address.html" %}
+  </div>
 {% endblock %}

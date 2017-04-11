@@ -1,0 +1,29 @@
+.address-form {
+  margin: 0 auto;
+  max-width: 765px;
+  $gutter: 20px;
+  &__row {
+    @include make-row($gutter);
+    margin-bottom: 45px;
+  }
+  &__col-10 {
+    @include make-xs-column(0, $gutter);
+    width: 10%;
+  }
+  &__col-20 {
+    @include make-xs-column(0, $gutter);
+    width: 20%;
+  }
+  &__col-30 {
+    @include make-xs-column(0, $gutter);
+    width: 30%;
+  }
+  &__col-40 {
+    @include make-xs-column(0, $gutter);
+    width: 40%;
+  }
+  p {
+    font-size: 16px;
+    font-weight: $font-light;
+  }
+}
