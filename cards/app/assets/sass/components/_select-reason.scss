@@ -1,25 +1,22 @@
-.block-reason {
-  background-color: $colorWhite;
-  &__center {
-    &-element {
-      padding: 40px 0 40px 0;
-      padding-left: 0;
-      background-color: $colorWhite;
-      position: relative;
-      float: left;
+.select-reason {
+  &__option {
+    padding: 40px 0 40px 0;
+    padding-left: 0;
+    background-color: $colorWhite;
+    position: relative;
+    float: left;
+    &:before {
+      content: '';
+      background-color: $colorGrey-500;
+      width: 1px;
+      height: 90px;
+      position: absolute;
+      top: 40px;
+      right: 0;
+    }
+    &:last-child {
       &:before {
-        content: '';
-        background-color: $colorGrey-500;
-        width: 1px;
-        height: 90px;
-        position: absolute;
-        top: 40px;
-        right: 0;
-      }
-      &:last-child {
-        &:before {
-          content: none;
-        }
+        content: none;
       }
     }
   }
