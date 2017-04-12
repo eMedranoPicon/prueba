@@ -1,0 +1,25 @@
+.underline-select {
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid $colorBlueGray-800;
+  select {
+    appearance: none;
+    color: $colorGray-550;
+    font-weight: $font-light;
+    display: block;
+    width: 100%;
+    height: 24px;
+    outline: none;
+    font-size: 16px;
+    vertical-align: middle;
+    border: 0;
+    background: url("../images/icons/caret.png") no-repeat center right;
+    background-color: #fff;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      background-image: none;
+    }
+  }
+  option[value=""][disabled] {
+    display: none;
+  }
+}
