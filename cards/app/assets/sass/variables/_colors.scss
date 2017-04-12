@@ -1,19 +1,21 @@
 $colorWhite: #fff;
 $colorBlack: #000;
 
-$colorGray: #f7f7f7 #e8e8e8 #545454 #555558 #556270 #646467;
+$colorGray: #f7f7f7 #e8e8e8 #646467 #545454 #555558 #3a3a3a #0c0c0c;
 $colorGray-200: nth($colorGray, 1);
 $colorGray-300: nth($colorGray, 2);
-$colorGray-450: nth($colorGray, 3);
-$colorGray-500: nth($colorGray, 4);
-$colorGray-550: nth($colorGray, 5);
-$colorGray-600: nth($colorGray, 6);
+$colorGray-400: nth($colorGray, 3);
+$colorGray-450: nth($colorGray, 4);
+$colorGray-500: nth($colorGray, 5);
+$colorGray-700: nth($colorGray, 6);
+$colorGray-800: nth($colorGray, 7);
 
 $colorGreen: #70a41c #417100;
 $colorGreen-500: nth($colorGreen, 1);
 $colorGreen-700: nth($colorGreen, 2);
 
-$colorBlueGray: #24313c;
-$colorBlueGray-800: nth($colorBlueGray, 1);
+$colorBlueGray: #556270 #24313c;
+$colorBlueGray-300: nth($colorBlueGray,1);
+$colorBlueGray-800: nth($colorBlueGray, 2);
 
 $color-brand: $colorGreen-500;
