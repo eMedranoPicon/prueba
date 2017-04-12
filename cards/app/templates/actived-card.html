@@ -1,0 +1,10 @@
+{% import "/components/_success-message.html" as textMessage %}
+
+{% extends "/base/_base.html" %}
+
+{% block content %}
+  {{ textMessage.text('pdt-55 pdb-55', 'Ya has activado tu tarjeta. <br />Empieza a disfrutarla hoy tu mismo.', '¡Enhorabuena!') }}
+  <div class="container-fluid text-center">
+    <button class="btn btn-default btn-lg mt-70 mb-70" type="reset" name="button">Ir a inicio</button>
+  </div>
+{% endblock %}

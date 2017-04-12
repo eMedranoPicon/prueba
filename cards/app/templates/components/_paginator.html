@@ -1,0 +1,7 @@
+{% macro set(current, total) %}
+<div class="paginator text-center">
+  <span class="paginator__current">{{ current }}</span>
+  <span class="paginator__divider">/</span>
+  <span class="paginator__last">{{ total }}</span>
+</div>
+{% endmacro %}

@@ -1,0 +1,11 @@
+{% macro address(street, zipcode, city) %}
+<div class="address">
+  <img class="address__image" src="/images/icons/postal-icon.png" alt="Postal">
+  <div class="address__details">
+    <p>{{street}}</p>
+    <p>{{zipcode}}</p>
+    <p>{{city}}</p>
+    <a href="">Cambiar la dirección</a>
+  </div>
+</div>
+{% endmacro %}
