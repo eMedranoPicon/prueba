@@ -1,0 +1,12 @@
+.title-multicolor {
+  text-align: center;
+  padding: 42px 0 55px;
+  h2 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: $font-bold;
+  }
+  span {
+    color: $colorGreen-500;
+  }
+}
