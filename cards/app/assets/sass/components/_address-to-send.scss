@@ -1,17 +1,20 @@
 .address-section {
     h3 {
-      font-size: 18px;
-      color: $colorGray-500;
+      font-size: 22px;
+      font-weight: $font-bold;
+      margin-bottom: 34px;
+      color: $colorGray-600;
     }
     button {
-      margin: 10px;
+      margin: 26px 10px;
     }
 }
 
 .address {
-  background-color: #dedede;
+  background-color: $colorGray-300;
   text-align: center;
-  padding: 30px;
+  padding: 58px;
+  margin-bottom: 52px;
 
   &__image {
     display: inline-block;
@@ -24,14 +27,14 @@
     text-align: left;
     > p {
       margin-bottom: 4px;
-      color: gray;
+      color: $colorGray-550;
     }
     > a {
       display: block;
       margin-top: 10px;
       font-size: 14px;
       text-decoration: underline;
-      color: $colorGray-500;
+      color: $colorBlack;
     }
   }
 }
