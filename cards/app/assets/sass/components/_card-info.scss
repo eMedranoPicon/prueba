@@ -5,8 +5,10 @@
     }
     &__details {
       font-weight: $font-bold;
+      line-height: 18px;
+      padding-top: 3px;
       .account-holder {
-        color: $color-brand;
+        color: $colorGreen-500;
         font-size: 18px;
       }
       .number-account {
