@@ -8,4 +8,7 @@ input {
     font-size: 16px;
     font-weight: $font-light;
   }
+  &.error {
+    border-bottom: 1px solid $colorDanger;
+  }
 }
