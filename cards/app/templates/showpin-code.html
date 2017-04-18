@@ -1,8 +1,9 @@
 {% import "/components/_card-info.html" as cardInfo %}
+{% import "/components/_change-pin-code.html" as pinCode %}
 
 {% extends "/base/_base.html" %}
 
 {% block content %}
   {{ cardInfo.content('pdt-45 pdb-45', 'YOLANDA ALONSO', '4966,43**.***.4006', 'CONSULTAR PIN') }}
-
+  {{ pinCode.content('mb-70 mt-70 pd-25', 'ir al detalle de tarjeta') }}
 {% endblock %}
