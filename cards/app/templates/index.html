@@ -1,19 +1,25 @@
+{% import "/components/_text-green-block.html" as textBlock %}
+{% import "/components/_title-multicolor.html" as titleMulticolor %}
 {% extends "/base/_base.html" %}
 
 {% block content %}
-<h2>Listado de Paginas</h2>
-<ul>
-  <li>
-    <a href="/active-card.html">Activación de Tarjetas</a>
-  </li>
-  <li>
-    <a href="/actived-card.html">Tarjeta Activada</a>
-  </li>
-  <li>
-    <a href="disable-card.html">Bloquear Tarjeta</a>
-  </li>
-  <li>
-    <a href="disabled-card.html">Tarjeta bloqueada</a>
-  </li>
-</ul>
+{{ titleMulticolor.title('Listado de', 'páginas') }}
+<section class="pdb-30">
+  {{ textBlock.text('', 'Activar mi tarjeta') }}
+  <div class="container pdt-30 pdb-30">
+    <div class="list-group">
+      <a class="list-group-item" href="active-card.html"><span class="badge">Paso 1</span> Activación de tarjeta</a>
+      <a class="list-group-item" href="actived-card.html"><span class="badge">Paso 2</span> Tarjeta activada</a>
+    </div>
+  </div>
+</section>
+<section class="pdb-30">
+  {{ textBlock.text('', 'Bloquear mi tarjeta') }}
+  <div class="container pdt-30 pdb-30">
+    <div class="list-group">
+      <a class="list-group-item" href="disable-card.html"><span class="badge">Paso 1</span> Bloquear Tarjeta</a>
+      <a class="list-group-item" href="disabled-card.html"><span class="badge">Paso 2</span> Tarjeta bloqueada</a>
+    </div>
+  </div>
+</section>
 {% endblock %}

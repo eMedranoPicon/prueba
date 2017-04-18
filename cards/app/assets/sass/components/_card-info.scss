@@ -1,12 +1,15 @@
 .container-card {
+  background-color: $colorGray-200;
   .credit-card {
     &__icon {
       margin-right: 18px;
     }
     &__details {
       font-weight: $font-bold;
+      line-height: 18px;
+      padding-top: 3px;
       .account-holder {
-        color: $color-brand;
+        color: $colorGreen-500;
         font-size: 18px;
       }
       .number-account {
@@ -15,7 +18,8 @@
     }
   }
 
-  h3 {
+  h1 {
+    font-size: 24px;
     color: $color-brand;
     font-weight: $font-bold;
     margin: 0;

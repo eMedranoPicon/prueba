@@ -4,7 +4,7 @@
 {% extends "/base/_base.html" %}
 
 {% block content %}
-  {{ textBlock.text('pdt-70 pdb-70', 'Introduce el código que te hemos enviado al móvil para completar la activación de tu tarjeta.') }}
   {{ cardInfo.content('pdt-45 pdb-45', 'YOLANDA ALONSO', '4966,43**.***.4006', 'ACTIVAR MI TARJETA') }}
-  {% include 'components/input-pin-code.html' %}
+  {{ textBlock.text('pdt-70 pdb-70', 'Introduce el código que te hemos enviado al móvil para completar la activación de tu tarjeta.') }}
+  {% include 'components/_input-pin-code.html' %}
 {% endblock %}
