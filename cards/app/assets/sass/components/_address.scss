@@ -33,4 +33,20 @@
       margin: 0 10px;
     }
   }
+  .messages {
+    text-align: center;
+    margin-bottom: 20px;
+    > p {
+      font-size: 14px;
+      color: $colorDanger;
+    }
+    .alert {
+      width: 18px;
+      height: 14px;
+      display: inline-block;
+      margin-right: 5px;
+      background-image: url('../images/icons/alert-icon.png');
+      background-repeat: no-repeat;
+    }
+  }
 }

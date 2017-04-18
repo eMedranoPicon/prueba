@@ -2,11 +2,16 @@
     h3 {
       font-size: 22px;
       font-weight: $font-bold;
-      margin-bottom: 34px;
+      margin: 34px 0;
       color: $colorGray-400;
     }
     button {
       margin: 26px 10px;
+    }
+    .form-container {
+      background-color: $colorGray-300;
+      padding: 50px;
+      margin-bottom: 50px;
     }
 }
 
@@ -29,12 +34,17 @@
       margin-bottom: 4px;
       color: $colorBlueGray-300;
     }
-    > a {
+    > button {
       display: block;
-      margin-top: 10px;
+      padding: 0;
+      margin: 10px 0;
       font-size: 14px;
       text-decoration: underline;
       color: $colorBlack;
+
+      &:hover {
+        color: $colorBlack;
+      }
     }
   }
 }
