@@ -10,13 +10,18 @@
   {{ titleMulticolor.title('Indica el', 'motivo') }}
   {{ textBlock.text('pdt-30 pdb-30', 'Por favor, indica por qué quieres bloquear tu tarjeta.') }}
 
-  <div class="container">
-    {% include "/includes/_form-address.html" %}
-  </div>
-
   <section class="address-section">
-    <h3 class="text-center">Aquí recibirás tu nueva tarjeta</h3>
-    {{ sendTo.address('Calle Orense 18, 8ºA', '28020 Madrid', 'MADRID - España') }}
+    <div class="address-to-send">
+      <h3 class="text-center">Aquí recibirás tu nueva tarjeta</h3>
+      {{ sendTo.address('Calle Orense 18, 8ºA', '28020 Madrid', 'MADRID - España') }}
+    </div>
+
+    <div class="change-address-form hidden">
+      <h3 class="text-center">Introduce tus datos para que te enviemos aquí tu nueva tarjeta</h3>
+      <div class="form-container">
+        {% include "/includes/_form-address.html" %}
+      </div>
+    </div>
 
     {{ paginator.set('1','2','') }}
 
