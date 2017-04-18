@@ -1,5 +1,6 @@
+{% macro content(class, pagination, text) %}
 <form class="input-code-form form-inline">
-  <div class="gray-bg text-center">
+  <div class="gray-bg text-center {{class}}">
     <div class="form-group container-fluid">
       <input class="form-control" type="text" placeholder="Introduce el código">
       <div class="icon-group">
@@ -8,7 +9,12 @@
     </div>
   </div>
   <div class="container-fluid text-center">
+    {% if pagination %}
+    {% import "components/_paginator.html" as paginator %}
+    {{ paginator.set('2','2','ml--50 mt-57 mb--35') }}
+    {% endif %}
     <button class="btn btn-default" type="reset" name="button">Atrás</button>
-    <button class="btn btn-primary" type="submit" name="button">Activar</button>
+    <button class="btn btn-primary" type="submit" name="button">{{text}}</button>
   </div>
 </form>
+{% endmacro %}
