@@ -1,0 +1,65 @@
+{% extends "/includes/_user_prompt.html" %}
+
+<!-- Inicio módulo "subscribe" -->
+{% block avatar_img %}
+  <div class="avatar-image">
+      <img src="images/support-team2.png" alt="..." />
+  </div>
+{% endblock %}
+
+{% block content %}
+  <form class="send-message-form">
+
+    <div class="username-group form-line">
+      <label >Tu nombre</label><br />
+      <input type="text" class="line-input inputs-border"/>
+    </div>
+
+    <div class="email-group form-line">
+      <label >Tu dirección de correo electrónico</label><br />
+      <input type="email" class="line-input inputs-border"/>
+    </div>
+
+    <div class="related-group form-line">
+      <label>Asunto</label><br />
+      <select class="inputs-border">
+        <option>Otros</option>
+      </select>
+
+      <div class="name-group form-line">
+        <input type="text" class="line-input inputs-border" placeholder="Escribe el nombre del asunto"/>
+      </div>
+      <select class="inputs-border visible-xs">
+        <option>Te puede interesar...</option>
+        <option>¿Porqué no puedo anular mi cheque regalo de Amazon?</option>
+        <option>Mi solicitud de cuenta está pendiente. ¿Cuánto tiempo tardará?</option>
+        <option>¿Por qué no puedo retirar el dinero que ingresé hace unos días?</option>
+        <option>¿Cuánto tardan las transferencias y los adeudos en llegar?</option>
+      </select>
+    </div>
+
+    <div class="textarea-group form-line">
+      <label>Tu consulta</label><br />
+      <textarea rows="5" cols="50"  class="inputs-border" placeholder="Cuéntanos en que podemos ayudarte"></textarea>
+    </div>
+
+    <div class="left-radio-group">
+      <input type="radio" id="subscribe-accept">
+      <label for="subscribe-accept">Acepto la <a href="">Política de Privacidad</a></label>
+    </div>
+
+    <div class="left-radio-group">
+      <input type="radio" id="subscribe-promos">
+      <label for="subscribe-promos">No quiero aprovechar las promociones de Coinc</label>
+    </div>
+
+    <div class="submit-button-subscribe">
+      <div class="contact-button-wrapper">
+        <button type="submit" class="contact-button" value="ENVIAR" />
+          ENVIAR <i class="contact-button-arrow-icon"></i>
+        </button>
+      </div>
+    </div>
+  </form>
+{% endblock %}
+<!-- Fin módulo "subscribe" -->
