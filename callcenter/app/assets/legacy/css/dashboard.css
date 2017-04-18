@@ -2,44 +2,44 @@
 
 @font-face {
     font-family: "AkkuratStd";
-    src: url('../fonts/akkrgpro1.eot');
-    src: url("../fonts/akkrgpro1.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/akkrgpro1.woff") format("woff"), 
-    url("../fonts/akkrgpro1.ttf") format("truetype"), 
-    url("../fonts/akkrgpro1.svg#AkkuratStd") format("svg");
+    src: url('fonts/akkrgpro1.eot');
+    src: url("fonts/akkrgpro1.eot?#iefix") format("embedded-opentype"),
+    url("fonts/akkrgpro1.woff") format("woff"),
+    url("fonts/akkrgpro1.ttf") format("truetype"),
+    url("fonts/akkrgpro1.svg#AkkuratStd") format("svg");
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'Conv_AkkuratStd-Light';
-    src: url('../fonts/AkkuratStd-Light.eot');
-    src: url('../fonts/AkkuratStd-Light.eot?#iefix') format('embedded-opentype'), 
-    url('../fonts/AkkuratStd-Light.woff') format('woff'), 
-    url('../fonts/AkkuratStd-Light.ttf') format('truetype'),
-    url('../fonts/AkkuratStd-Light.svg#AkkuratStd') format('svg');
+    src: url('fonts/AkkuratStd-Light.eot');
+    src: url('fonts/AkkuratStd-Light.eot?#iefix') format('embedded-opentype'),
+    url('fonts/AkkuratStd-Light.woff') format('woff'), 
+    url('fonts/AkkuratStd-Light.ttf') format('truetype'),
+    url('fonts/AkkuratStd-Light.svg#AkkuratStd') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'AkkuratStd-Bold';
-    src: url('../fonts/akkuratstdbold.eot');
-    src: url('../fonts/akkuratstdbold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/akkuratstdbold.woff') format('woff'),
-    url('../fonts/akkuratstdbold.ttf') format('truetype'),
-    url('../fonts/akkuratstdbold.svg#AkkuratStd') format('svg');
+    src: url('fonts/akkuratstdbold.eot');
+    src: url('fonts/akkuratstdbold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/akkuratstdbold.woff') format('woff'),
+    url('fonts/akkuratstdbold.ttf') format('truetype'),
+    url('fonts/akkuratstdbold.svg#AkkuratStd') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
   font-family: 'fontello';
-  src: url('../fonts/fontello.eot');
-  src: url('../fonts/fontello.eot#iefix') format('embedded-opentype'),
-       url('../fonts/fontello.woff') format('woff'),
-       url('../fonts/fontello.ttf') format('truetype'),
-       url('../fonts/fontello.svg#fontello') format('svg');
+  src: url('fonts/fontello.eot');
+  src: url('fonts/fontello.eot#iefix') format('embedded-opentype'),
+       url('fonts/fontello.woff') format('woff'),
+       url('fonts/fontello.ttf') format('truetype'),
+       url('fonts/fontello.svg#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -48,7 +48,7 @@
   font-family: "fontello";
   margin-left: .6em;
 }
- 
+
 .icon-up-open-big:before { content: '\e800'; } /* '' */
 .icon-down-open-big:after { content: '\e801'; } /* '' */
 .icon-down-open-big {
@@ -56,7 +56,7 @@
   font-size: 11px;
   position: relative;
   left: 4px;
-    
+
 }
 
 
@@ -159,7 +159,7 @@ a.botondashboard {
 
 /*___________boton transparente */
 .botondashboard.transparente {border: solid 1px #FFF; color: #FFF; background-color: transparent;}
-.botondashboard.transparente:hover, 
+.botondashboard.transparente:hover,
 .botondashboard.transparente.active,
 .botondashboard.transparente:active {border: solid 1px #FFF; background-color: #FFF; color: #030303;}
 
@@ -460,7 +460,7 @@ a.botondashboard {
 }
 
 .ico-mas-blanco:after {
-  background-image: url(../images/ico_mas_blanco.png); 
+  background-image: url(../images/ico_mas_blanco.png);
   background-size: 100% 100%;
   z-index: 999999;
   content: " " ;
@@ -478,24 +478,24 @@ a.botondashboard {
 
 /*___________contenedor (960px) */
 #dashboard .container {width: 920px; margin: 0 auto; padding: 0 20px;}
-#dashboard .header, 
-#dashboard .footer, 
-#dashboard .zonaComercial, 
-#dashboard .zonaSaldos, 
-#dashboard .eligeMeta, 
-#dashboard .zonaNotificaciones, 
-#dashboard .zonaMetas, 
-#dashboard .zonaBanner, 
+#dashboard .header,
+#dashboard .footer,
+#dashboard .zonaComercial,
+#dashboard .zonaSaldos,
+#dashboard .eligeMeta,
+#dashboard .zonaNotificaciones,
+#dashboard .zonaMetas,
+#dashboard .zonaBanner,
 #dashboard .zonaCajacoinc,
 #dashboard .contenido-detalles {width: 100%; float: left; display: block;}
 
-#dashboard .header, 
+#dashboard .header,
 #dashboard .footer {background-color: #000;}
 #dashboard .header {height: 80px;}
 #dashboard .eligeMeta {
-  position: relative; 
-  background-color: #E1E1E1; 
-  padding:24px 0 25px 0; 
+  position: relative;
+  background-color: #E1E1E1;
+  padding:24px 0 25px 0;
   border-top: 1px solid #f6f6f3;}
 #dashboard .zonaComercial {background-color: #F6F6F3; padding: 20px 0 20px 0;}
 #dashboard .zonaNotificaciones {background-color: #F6F6F3; padding: 10px 0 13px 0;}
@@ -513,7 +513,7 @@ a.botondashboard {
 #dashboard .header .caja_usuario {float: left; width: 804px;}
 
 #dashboard .header .caja_usuario .datos_usuario {
-  float:right; 
+  float:right;
   width: auto;
   text-align: right;
   margin-top: 16px;
@@ -521,7 +521,7 @@ a.botondashboard {
 }
 
 #dashboard .header .caja_usuario .datos_usuario p {
-  font-family: AkkuratStd; 
+  font-family: AkkuratStd;
   font-size: 12px;
   color:white;
   text-transform: uppercase;
@@ -560,7 +560,7 @@ a.botondashboard {
   -webkit-box-shadow: 0px 4px 0px 0px #e9e9e7;
   -moz-box-shadow: 0px 4px 0px 0px #e9e9e7;
   box-shadow: 0px 4px 0px 0px #e9e9e7;
-  border: 1px solid #dedede; 
+  border: 1px solid #dedede;
 }
 
 #dashboard .zonaComercial .caja_comercial.club {background: url(../images/img_clubcoinc.png) left 22px no-repeat #FFF;}
@@ -603,19 +603,19 @@ a.botondashboard {
 }
 
 #dashboard .zonaSaldos .caja_saldo {
-  padding: 20px 0 10px 0; 
+  padding: 20px 0 10px 0;
   overflow: hidden;
 }
 
 #dashboard .zonaSaldos .caja_saldo .misaldo {
-  font-family: AkkuratStd; 
-  font-size: 18px; 
+  font-family: AkkuratStd;
+  font-size: 18px;
   color: #FFF;
 }
 
 #dashboard .zonaSaldos .caja_saldo .precio {
-  font-family: AkkuratStd; ; 
-  font-size: 60px; 
+  font-family: AkkuratStd; ;
+  font-size: 60px;
   font-weight: bold;
   color: #FFFFFF;
 }
@@ -635,15 +635,15 @@ a.botondashboard {
 #dashboard .zonaSaldos .vermovimiento {float: left; width: 170px; padding-top: 35px;}
 
 #dashboard .zonaSaldos .vermovimiento .ico_vermov a {
-  background: url(../images/ico_vermov.png ) 
-  top left no-repeat transparent; 
+  background: url(../images/ico_vermov.png )
+  top left no-repeat transparent;
   height: 24px;
   display: inline-block;
-  font-family: AkkuratStd; 
-  font-size: 14px; 
+  font-family: AkkuratStd;
+  font-size: 14px;
   color: #FFF;
   padding: 5px 0 0 32px;
-  text-decoration: underline;  
+  text-decoration: underline;
 }
 
 
@@ -683,7 +683,7 @@ a.botondashboard {
   font-size: 28px;
 }
 
-    
+
 #dashboard .zonaSaldos .contratar-coinc h2 {
   color: #FFFFFF;
   font-size: 20px;
@@ -720,7 +720,7 @@ a.botondashboard {
 
 /*___________elige meta general */
 #dashboard .eligeMeta .flecha {
-  background: url(../images/eligeMeta_flecha.png) top center repeat-y transparent; 
+  background: url(../images/eligeMeta_flecha.png) top center repeat-y transparent;
   width: 24px;
   height: 12px;
   position: absolute;
@@ -783,8 +783,8 @@ a.botondashboard {
 }
 
 #dashboard .eligeMeta .formulario select.selectMeta {
-  font-family: AkkuratStd!important; 
-  font-size: 14px!important; 
+  font-family: AkkuratStd!important;
+  font-size: 14px!important;
   color:#555;
   padding: 11px 10px 7px 10px;
   border: 1px solid #d1d1d1;
@@ -792,7 +792,7 @@ a.botondashboard {
 
 #dashboard .eligeMeta .icono_cerrar {
   float: right;
-  background: url(../images/ico_cerrar.png) 0 0 no-repeat transparent; 
+  background: url(../images/ico_cerrar.png) 0 0 no-repeat transparent;
   width: 27px;
   height: 26px;
   margin-top: 8px;
@@ -846,8 +846,8 @@ a.botondashboard {
 
 #dashboard .zonaNotificaciones .caja_notificaciones.nueva .titular span {
   float: right;
-  font-family: AkkuratStd; 
-  font-size: 11px; 
+  font-family: AkkuratStd;
+  font-size: 11px;
   color:#FFF;
   text-transform: uppercase;
   padding: 12px 20px 0 0;
@@ -855,14 +855,14 @@ a.botondashboard {
 }
 
 #dashboard .zonaNotificaciones .caja_notificaciones.ok .titular {
-  background: url(../images/ico_aceptado_v.png) 18px 6px no-repeat transparent; 
+  background: url(../images/ico_aceptado_v.png) 18px 6px no-repeat transparent;
   width: 100%;
   height: 30px;
   border-top:4px solid #70a41c;
 }
 
 #dashboard .zonaNotificaciones .caja_notificaciones.nueva.ok .titular {
-  background: url(../images/ico_aceptado_b.png) 18px 10px no-repeat #70a41c; 
+  background: url(../images/ico_aceptado_b.png) 18px 10px no-repeat #70a41c;
   display:inline-block;
   width: 100%;
   height: 35px;
@@ -889,27 +889,27 @@ a.botondashboard {
 }
 
 #dashboard .zonaNotificaciones .caja_notificaciones.error .titular {
-  background: url(../images/ico_alerta.png) 18px 6px no-repeat transparent; 
+  background: url(../images/ico_alerta.png) 18px 6px no-repeat transparent;
   width: 100%;
   height: 30px;
   border-top:4px solid #E09126;
 }
 
 #dashboard .zonaNotificaciones .caja_notificaciones.nueva.error .titular {
-  background: url(../images/ico_alerta_nueva.png) 18px 5px no-repeat #E09126; 
+  background: url(../images/ico_alerta_nueva.png) 18px 5px no-repeat #E09126;
   width: 100%;
   padding-top:0;
 }
 
 #dashboard .zonaNotificaciones .caja_notificaciones.aviso .titular {
-  background: url(../images/ico_info.png) 18px 6px no-repeat transparent; 
+  background: url(../images/ico_info.png) 18px 6px no-repeat transparent;
   width: 100%;
   height: 30px;
   border-top: 4px solid #c1bdb1;
 }
 
 #dashboard .zonaNotificaciones .caja_notificaciones.nueva.aviso .titular {
-  background: url(../images/ico_info_b.png) 18px 5px no-repeat #c1bdb1; 
+  background: url(../images/ico_info_b.png) 18px 5px no-repeat #c1bdb1;
   width: 100%;
 }
 
@@ -949,8 +949,8 @@ a.botondashboard {
 }
 
 #dashboard .zonaNotificaciones .caja_notificaciones a {
-  font-family: AkkuratStd; 
-  font-size: 12px; 
+  font-family: AkkuratStd;
+  font-size: 12px;
   color:#616161;
   text-decoration: underline;
   display: inherit;
@@ -987,7 +987,7 @@ a.botondashboard {
 #dashboard .zonaNotificaciones .caja_notificaciones a:hover {color:#1A1A1A;}
 
 #dashboard .zonaNotificaciones .mas {
-  background: url(../images/ico_mas.png) 0 0 no-repeat transparent; 
+  background: url(../images/ico_mas.png) 0 0 no-repeat transparent;
   width: 15px;
   height: 15px;
   float: left;
@@ -999,7 +999,7 @@ a.botondashboard {
 }
 
 #dashboard .zonaNotificaciones .menos {
-  background: url(../images/ico_menos.png) 0 0 no-repeat transparent; 
+  background: url(../images/ico_menos.png) 0 0 no-repeat transparent;
   width: 15px;
   height: 15px;
   float: left;
@@ -1027,15 +1027,15 @@ a.botondashboard {
 }
 
 #dashboard .zonaNotificaciones .mas:hover {
-  background: url(../images/ico_mas_hover.png) 0 0 no-repeat transparent; 
+  background: url(../images/ico_mas_hover.png) 0 0 no-repeat transparent;
 }
 
 #dashboard .zonaNotificaciones .menos:hover {
-  background: url(../images/ico_menos_hover.png) 0 0 no-repeat transparent; 
+  background: url(../images/ico_menos_hover.png) 0 0 no-repeat transparent;
 }
 
 #dashboard .zonaNotificaciones .cerrar-notificacion:hover{
-  background: url(../images/ico-cerrar-notificacion-hover.png) 0 0 no-repeat transparent; 
+  background: url(../images/ico-cerrar-notificacion-hover.png) 0 0 no-repeat transparent;
 }
 
 #dashboard .zonaNotificaciones .vertodas {float:right; padding: 15px 8px 0px 8px; width: 100%;}
@@ -1051,27 +1051,27 @@ a.botondashboard {
 }
 
 #dashboard .zonaNotificaciones .vertodas a.vermas:hover {
-  background: url(../images/ico_mas_hover.png) right 0px no-repeat transparent; 
+  background: url(../images/ico_mas_hover.png) right 0px no-repeat transparent;
 }
 
 #dashboard .zonaNotificaciones .vertodas a.vermenos {
-  background: url(../images/ico_menos.png) right 0px no-repeat transparent; 
+  background: url(../images/ico_menos.png) right 0px no-repeat transparent;
   float: right;
-  height: 15px;  
+  height: 15px;
 }
 
 #dashboard .zonaNotificaciones .vertodas a.vermenos:hover {
-  background: url(../images/ico_menos_hover.png) right 0px no-repeat transparent;   
+  background: url(../images/ico_menos_hover.png) right 0px no-repeat transparent;
 }
 
 #dashboard .zonaNotificaciones .vertodas a span {
   padding-right:25px;
   font-size: 12px;
-  color:#8a8574; 
+  color:#8a8574;
 }
 
 #dashboard .zonaNotificaciones .vertodas a {
-  color:#8a8574; 
+  color:#8a8574;
 }
 
 #dashboard .zonaNotificaciones .vertodas a span:active,
@@ -1094,7 +1094,7 @@ a.botondashboard {
 }
 
 #toggle + label {
-  background: url(../images/ico_mas.png) 0 0 no-repeat transparent; 
+  background: url(../images/ico_mas.png) 0 0 no-repeat transparent;
   width: 15px;
   height: 15px;
   float: left;
@@ -1112,8 +1112,8 @@ a.botondashboard {
 #dashboard .container .caja_head h2 {
   width: 45%;
   float: left;
-  font-family: Conv_AkkuratStd-Light; 
-  font-size: 25px; 
+  font-family: Conv_AkkuratStd-Light;
+  font-size: 25px;
   color:#181516;
   margin-top: 5px;
 }
@@ -1163,21 +1163,21 @@ a.botondashboard {
 #dashboard .zonaMetas .caja_meta .titular .marco img {z-index: 1; width: 53px; height: 53px;}
 
 #dashboard .zonaMetas .caja_meta .titular .txt {
-  float: left; 
+  float: left;
   width: 186px;
   margin-left: 12px;
   padding-top: 4px;
 }
 
 #dashboard .zonaMetas .caja_meta .titular .txt h3 {
-  font-family: AkkuratStd-Bold; 
-  font-size: 16px; 
+  font-family: AkkuratStd-Bold;
+  font-size: 16px;
   line-height: 24px;
   color:#393939;
 }
 
 #dashboard .zonaMetas .caja_meta .central {
-  float: left; width: 88%; 
+  float: left; width: 88%;
   padding: 16px 19px 19px 19px;
   border-top: 1px solid #E8E7E3;
   border-bottom: 1px solid #E8E7E3;
@@ -1196,15 +1196,15 @@ a.botondashboard {
 #dashboard .zonaMetas .caja_meta .central .precio .euro {float: left; font-size: 30px;}
 #dashboard .zonaMetas .caja_meta .central .precio .decimales {
   float: left;
-  font-family: AkkuratStd-Bold; 
+  font-family: AkkuratStd-Bold;
   font-size: 15px;
-  padding-top: 13px; 
+  padding-top: 13px;
 }
 
 #dashboard .zonaMetas .caja_meta .central .precio .euro {padding-left:4px;}
 #dashboard .zonaMetas .caja_meta .central .iconos {float: left; width: 100%; margin-top: 15px;}
 #dashboard .zonaMetas .caja_meta .central .iconos li {
-  background: url(../images/bolito_ico_meta.png) 0 7px no-repeat transparent; 
+  background: url(../images/bolito_ico_meta.png) 0 7px no-repeat transparent;
   display:inline-block;
   width: auto;
   float:left;
@@ -1217,62 +1217,62 @@ a.botondashboard {
 
 #dashboard .zonaMetas .caja_meta .central .iconos li span.txt {
   margin-left: 15px;
-  font-family: AkkuratStd-Bold; 
+  font-family: AkkuratStd-Bold;
   font-size: 11px;
   color:#545454;
-  margin-left:5px; 
+  margin-left:5px;
   text-transform: uppercase;
-  padding-top: 3px; 
+  padding-top: 3px;
 }
 
 #dashboard .zonaMetas .caja_meta .central .iconos li span.individual {
-  background: url(../images/ico_individual.png) 0 3px no-repeat transparent; 
+  background: url(../images/ico_individual.png) 0 3px no-repeat transparent;
   width: 9px;
   height: 14px;
   margin-left:14px;
 }
 
 #dashboard .zonaMetas .caja_meta .central .iconos li span.colectiva {
-  background: url(../images/ico_colectiva.png) 0 3px no-repeat transparent; 
+  background: url(../images/ico_colectiva.png) 0 3px no-repeat transparent;
   width: 19px;
   height: 14px;
   margin-left:14px;
 }
 
 #dashboard .zonaMetas .caja_meta .central .iconos li span.publica {
-  background: url(../images/ico_publica.png) 0 4px no-repeat transparent; 
+  background: url(../images/ico_publica.png) 0 4px no-repeat transparent;
   width: 15px;
   height: 14px;
-  margin-left:14px; 
+  margin-left:14px;
 }
 
 #dashboard .zonaMetas .caja_meta .central .iconos li span.junior {
-  background: url(../images/ico_junior.png) 0 0 no-repeat transparent; 
+  background: url(../images/ico_junior.png) 0 0 no-repeat transparent;
   width: 25px;
   height: 16px;
   margin-left:14px;
 }
 
 #dashboard .zonaMetas .caja_meta .central .iconos li span.mes {
-  background: url(../images/ico_calendario.png) 0 3px no-repeat transparent; 
+  background: url(../images/ico_calendario.png) 0 3px no-repeat transparent;
   width: 11px;
   height: 14px;
-  margin-left:14px; 
+  margin-left:14px;
 }
 
 #dashboard .zonaMetas .caja_meta .enlaces {
-  float: left; 
-  width: 100%; 
+  float: left;
+  width: 100%;
   background-color:#e8e7e3;
 }
 
 #dashboard .zonaMetas .caja_meta .enlaces .ver {
   float: left;
-  font-family: AkkuratStd; 
+  font-family: AkkuratStd;
   font-size: 11px;
   color:#545454;
   text-transform: uppercase;
-  text-align: center; 
+  text-align: center;
   padding: 15px 0px;
 }
 
@@ -1290,13 +1290,13 @@ a.botondashboard {
 }
 
 #dashboard .zonaMetas .caja_meta.nuevameta:hover {border: 1px dashed #70a41c;}
-#dashboard .zonaMetas .caja_meta.nuevameta a {text-decoration: none;} 
-#dashboard .zonaMetas .caja_meta.nuevameta img {margin: 0 auto;} 
+#dashboard .zonaMetas .caja_meta.nuevameta a {text-decoration: none;}
+#dashboard .zonaMetas .caja_meta.nuevameta img {margin: 0 auto;}
 #dashboard .zonaMetas .caja_meta.nuevameta h4 {
-  font-family: AkkuratStd; 
+  font-family: AkkuratStd;
   font-size: 14px;
   color:#70a41c;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   margin-top: 25px;
 }
 
@@ -1327,11 +1327,11 @@ a.botondashboard {
 }
 
 #dashboard .zonaMetas .caja_meta.meta_coinc .subtitle strong{
-  font-family: AkkuratStd-Bold; 
+  font-family: AkkuratStd-Bold;
   font-size: 22px;
 }
 
-#dashboard .zonaMetas .caja_meta.meta_coinc .subtitle .symbol{ 
+#dashboard .zonaMetas .caja_meta.meta_coinc .subtitle .symbol{
   font-size: 15px;
 }
 
@@ -1369,10 +1369,10 @@ a.botondashboard {
   height: 40px;
 }
 #dashboard .zonaMetas .caja_meta.nuevactivada h4 {
-  font-family: AkkuratStd; 
+  font-family: AkkuratStd;
   font-size: 14px;
   color:#393939;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   margin: 30px 0 27px 0;
   text-align: center;
 }
@@ -1419,21 +1419,21 @@ a.botondashboard {
 #dashboard .zonaPrestamos .caja_meta .titular .marco img {z-index: 1; width: 53px; height: 53px;}
 
 #dashboard .zonaPrestamos .caja_meta .titular .txt {
-  float: left; 
+  float: left;
   width: 186px;
   margin-left: 12px;
   padding-top: 4px;
 }
 
 #dashboard .zonaPrestamos .caja_meta .titular .txt h3 {
-  font-family: AkkuratStd-Bold; 
-  font-size: 16px; 
+  font-family: AkkuratStd-Bold;
+  font-size: 16px;
   line-height: 24px;
   color:#393939;
 }
 
 #dashboard .zonaPrestamos .caja_meta .central {
-  float: left; width: 88%; 
+  float: left; width: 88%;
   padding: 16px 19px 19px 19px;
   border-top: 1px solid #E8E7E3;
   border-bottom: 1px solid #E8E7E3;
@@ -1452,15 +1452,15 @@ a.botondashboard {
 #dashboard .zonaPrestamos .caja_meta .central .precio .euro {float: left; font-size: 30px;}
 #dashboard .zonaPrestamos .caja_meta .central .precio .decimales {
   float: left;
-  font-family: AkkuratStd-Bold; 
+  font-family: AkkuratStd-Bold;
   font-size: 15px;
-  padding-top: 13px; 
+  padding-top: 13px;
 }
 
 #dashboard .zonaPrestamos .caja_meta .central .precio .euro {padding-left:4px;}
 #dashboard .zonaPrestamos .caja_meta .central .iconos {float: left; width: 100%; margin-top: 15px;}
 #dashboard .zonaPrestamos .caja_meta .central .iconos li {
-  background: url(../images/bolito_ico_meta.png) 0 7px no-repeat transparent; 
+  background: url(../images/bolito_ico_meta.png) 0 7px no-repeat transparent;
   display:inline-block;
   width: auto;
   float:left;
@@ -1473,62 +1473,62 @@ a.botondashboard {
 
 #dashboard .zonaPrestamos .caja_meta .central .iconos li span.txt {
   margin-left: 15px;
-  font-family: AkkuratStd-Bold; 
+  font-family: AkkuratStd-Bold;
   font-size: 11px;
   color:#545454;
-  margin-left:5px; 
+  margin-left:5px;
   text-transform: uppercase;
-  padding-top: 3px; 
+  padding-top: 3px;
 }
 
 #dashboard .zonaPrestamos .caja_meta .central .iconos li span.individual {
-  background: url(../images/ico_individual.png) 0 3px no-repeat transparent; 
+  background: url(../images/ico_individual.png) 0 3px no-repeat transparent;
   width: 9px;
   height: 14px;
   margin-left:14px;
 }
 
 #dashboard .zonaPrestamos .caja_meta .central .iconos li span.colectiva {
-  background: url(../images/ico_colectiva.png) 0 3px no-repeat transparent; 
+  background: url(../images/ico_colectiva.png) 0 3px no-repeat transparent;
   width: 19px;
   height: 14px;
   margin-left:14px;
 }
 
 #dashboard .zonaPrestamos .caja_meta .central .iconos li span.publica {
-  background: url(../images/ico_publica.png) 0 4px no-repeat transparent; 
+  background: url(../images/ico_publica.png) 0 4px no-repeat transparent;
   width: 15px;
   height: 14px;
-  margin-left:14px; 
+  margin-left:14px;
 }
 
 #dashboard .zonaPrestamos .caja_meta .central .iconos li span.junior {
-  background: url(../images/ico_junior.png) 0 0 no-repeat transparent; 
+  background: url(../images/ico_junior.png) 0 0 no-repeat transparent;
   width: 25px;
   height: 16px;
   margin-left:14px;
 }
 
 #dashboard .zonaPrestamos .caja_meta .central .iconos li span.mes {
-  background: url(../images/ico_calendario.png) 0 3px no-repeat transparent; 
+  background: url(../images/ico_calendario.png) 0 3px no-repeat transparent;
   width: 11px;
   height: 14px;
-  margin-left:14px; 
+  margin-left:14px;
 }
 
 #dashboard .zonaPrestamos .caja_meta .enlaces {
-  float: left; 
-  width: 100%; 
+  float: left;
+  width: 100%;
   background-color:#e8e7e3;
 }
 
 #dashboard .zonaPrestamos .caja_meta .enlaces .ver {
   float: left;
-  font-family: AkkuratStd; 
+  font-family: AkkuratStd;
   font-size: 11px;
   color:#545454;
   text-transform: uppercase;
-  text-align: center; 
+  text-align: center;
   padding: 15px 0px;
 }
 
@@ -1546,13 +1546,13 @@ a.botondashboard {
 }
 
 #dashboard .zonaPrestamos .caja_meta.nuevameta:hover {border: 1px dashed #c90d3a;}
-#dashboard .zonaPrestamos .caja_meta.nuevameta a {text-decoration: none;} 
-#dashboard .zonaPrestamos .caja_meta.nuevameta img {margin: 0 auto;} 
+#dashboard .zonaPrestamos .caja_meta.nuevameta a {text-decoration: none;}
+#dashboard .zonaPrestamos .caja_meta.nuevameta img {margin: 0 auto;}
 #dashboard .zonaPrestamos .caja_meta.nuevameta h4 {
-  font-family: AkkuratStd; 
+  font-family: AkkuratStd;
   font-size: 14px;
   color:#c90d3a;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   margin-top: 25px;
 }
 
@@ -1596,10 +1596,10 @@ a.botondashboard {
   height: 40px;
 }
 #dashboard .zonaPrestamos .caja_meta.nuevactivada h4 {
-  font-family: AkkuratStd; 
+  font-family: AkkuratStd;
   font-size: 14px;
   color:#393939;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   margin: 30px 0 27px 0;
   text-align: center;
 }
@@ -1613,7 +1613,7 @@ a.botondashboard {
 #dashboard .container.metas .caja_footer {float: left; width: 100%; padding: 28px 0 36px 0;}
 #dashboard .container.metas .caja_footer .cajacoinc {
   float: left;
-  width: 918px; 
+  width: 918px;
   border-left: 1px solid #F2F2EF;
   border-right: 1px solid #F2F2EF;
   border-bottom: 1px solid #D6D6D4;
@@ -1628,7 +1628,7 @@ a.botondashboard {
 }
 
 #dashboard .container.metas .caja_footer .cajacoinc .contenido {
-  float:left; 
+  float:left;
   width: 45%;
   margin-left: 20px;
   margin-bottom: 25px;
@@ -1636,7 +1636,7 @@ a.botondashboard {
 
 #dashboard .container.metas .caja_footer .cajacoinc .contenido .txt {float:left; margin-top: 10px;}
 #dashboard .container.metas .caja_footer .cajacoinc .contenido .txt h2 {
-  font-family: Conv_AkkuratStd-Light; 
+  font-family: Conv_AkkuratStd-Light;
   font-size: 25px;
   color:#181516;
   text-transform: uppercase;
@@ -1644,7 +1644,7 @@ a.botondashboard {
 }
 
 #dashboard .container.metas .caja_footer .cajacoinc .contenido .txt h2 span {
-  background: url(../images/flechas_cajacoinc.png) 5px 0 no-repeat transparent; 
+  background: url(../images/flechas_cajacoinc.png) 5px 0 no-repeat transparent;
   width: 20px;
   height: 15px;
   display: inline-block;
@@ -1652,7 +1652,7 @@ a.botondashboard {
 
 #dashboard .container.metas .caja_footer .cajacoinc .contenido .txt .precio {
   margin-left:15px;
-  font-family: AkkuratStd-Bold; 
+  font-family: AkkuratStd-Bold;
   color:#70a41c;
 }
 
@@ -1675,9 +1675,9 @@ a.botondashboard {
 }
 
 #dashboard .container.metas .caja_footer .cajacoinc .botonera {
-  float: right; 
+  float: right;
   width: 38%;
-  margin-top: 41px; 
+  margin-top: 41px;
 }
 
 .aviso .botonera{
@@ -1687,21 +1687,21 @@ a.botondashboard {
 
 #dashboard .container.metas .caja_footer .cajacoinc .informacion {
   float:left;
-  clear: both; 
-  width: 95.2%; 
+  clear: both;
+  width: 95.2%;
   border-top: 1px solid #e8e7e3;
   padding: 23px 23px 0 23px;
 }
 
 #dashboard .container.metas .caja_footer .cajacoinc .informacion a.icoinfo {
-  background: url(../images/ico_infocoinc.png) 0 0 no-repeat transparent; 
+  background: url(../images/ico_infocoinc.png) 0 0 no-repeat transparent;
   width: 19px;
   height: 19px;
   display: inline-block;
 }
 
 #dashboard .container.metas .caja_footer .cajacoinc .informacion a.icoinfo:hover {
-  background: url(../images/ico_infocoinc_hover2.png) 0 0px no-repeat transparent; 
+  background: url(../images/ico_infocoinc_hover2.png) 0 0px no-repeat transparent;
   width: 19px;
   height: 19px;
 }
@@ -1709,7 +1709,7 @@ a.botondashboard {
 #dashboard .container.metas .caja_footer .cajacoinc .informacion .icoinfo span {
   display: inline-block;
   width: 500px;
-  font-family: AkkuratStd; 
+  font-family: AkkuratStd;
   font-size: 11px;
   color:#878474;
   text-transform: uppercase;
@@ -1746,15 +1746,15 @@ a.botondashboard {
 }
 
 #dashboard .container.metas .caja_footer .caja_detalleinfo .txt p  {
-  font-family: AkkuratStd; 
+  font-family: AkkuratStd;
   font-size: 13px;
   line-height: 20px;
   color:#555555;
 }
 
 #dashboard .container.metas .caja_footer .caja_detalleinfo img {
-  float: right; 
-  width: 27px; 
+  float: right;
+  width: 27px;
   margin-right: 4px;
 }
 
@@ -1780,7 +1780,7 @@ a.botondashboard {
 
 #dashboard .zonaCajacoinc .cajacoinc .texto h2 {
   float: left;
-  font-family: AkkuratStd-Bold; 
+  font-family: AkkuratStd-Bold;
   color:#FFF;
   font-size: 42px;
   text-transform: uppercase;
@@ -1789,22 +1789,22 @@ a.botondashboard {
 
 #dashboard .zonaCajacoinc .cajacoinc .texto .precio {
   float: left;
-  font-family: AkkuratStd; 
+  font-family: AkkuratStd;
   color:#FFF;
 }
 
 #dashboard .zonaCajacoinc .cajacoinc .texto .precio .unidades {float:left; font-size: 40px;}
 
 #dashboard .zonaCajacoinc .cajacoinc .texto .precio .decimales {
-  float:left; 
-  font-size: 30px; 
+  float:left;
+  font-size: 30px;
   margin-top: 9px;
 }
 
 #dashboard .zonaCajacoinc .cajacoinc .texto .precio .euro {
   float:left;
-  font-size: 30px; 
-  margin-left: 11px; 
+  font-size: 30px;
+  margin-left: 11px;
   padding-top: 9px;
 }
 
@@ -1817,7 +1817,7 @@ a.botondashboard {
 /*___________ULTIMOS MOVIMIENTOS */
 #dashboard .ultimosMovi {float: left; width: 670px}
 #dashboard .ultimosMovi h2 {
-  font-family: Conv_AkkuratStd-Light; 
+  font-family: Conv_AkkuratStd-Light;
   color:#000;
   font-size: 26px;
   text-transform: uppercase;
@@ -1836,9 +1836,9 @@ a.botondashboard {
     -moz-box-shadow: 0px 4px 0px 0px #e5e5e5;
     box-shadow: 0px 4px 0px 0px #e5e5e5;
   border: 1px solid #eaeae8;
-  border-bottom:1px solid #b1b1b0; 
+  border-bottom:1px solid #b1b1b0;
   padding: 30px;
-  background-color: #fff; 
+  background-color: #fff;
 }
 
 #dashboard .ultimosMovi .caja_ultimosMovi .movimiento {
@@ -1869,13 +1869,13 @@ a.botondashboard {
 }
 
 #dashboard .ultimosMovi .caja_ultimosMovi .movimiento .contenido .meta{
-  font-size: 14px; 
+  font-size: 14px;
   color:#878474;
   padding-top: 8px;
 }
 
 #dashboard .ultimosMovi .caja_ultimosMovi .movimiento .contenido .meta a {
-  font-size: 12px; 
+  font-size: 12px;
   color:#181516;
   padding-top: 8px;
   text-decoration: underline;
@@ -1886,7 +1886,7 @@ a.botondashboard {
 #dashboard .ultimosMovi .caja_ultimosMovi .movimiento .detalle {
   float: left;
   width: 155px;
-  text-align: right; 
+  text-align: right;
   margin-right: 35px;
 }
 
@@ -1916,7 +1916,7 @@ a.botondashboard {
 
 /* Breadcrumb */
 .breadcrumb {
-  font-family: AkkuratStd; 
+  font-family: AkkuratStd;
   font-size: 14px;
   color: #878474;
 }
@@ -1939,13 +1939,13 @@ a.botondashboard {
 /* Sidebar Detalles */
 .sidebar-detalles {
     width: 230px;
-    float: left;  
+    float: left;
     margin-right: 20px;
 }
 
 /* Botones Detalles Caja Coinc */
 button.boton-detalles {
-  font-family: AkkuratStd!important; 
+  font-family: AkkuratStd!important;
   border-radius: 30px;
   width: 230px;
   display: block;
@@ -1973,7 +1973,7 @@ button.btn-ahorrar:before {
   width: 23px;
   height: 23px;
   margin: 2px;
-  float: left;    
+  float: left;
 }
 
 button.boton-detalles span {
@@ -2157,7 +2157,7 @@ button {cursor: pointer; text-decoration: none;}
 }
 .ok{
 text-align: left;
-} 
+}
 
 #dashboard .zonaMetas .caja_meta .central .iconos li {
     margin-left: 7px;
@@ -2270,7 +2270,7 @@ a.botondashboard{
   line-height: 20px;
   color: #fff;
   text-align: center;
-  background-color: linear-gradient(to right, #c90d3a, #c90d3a 0%, #9b031c 80%, #9b031c); 
+  background-color: linear-gradient(to right, #c90d3a, #c90d3a 0%, #9b031c 80%, #9b031c);
   background: linear-gradient(to right, #c90d3a, #c90d3a 0%, #9b031c 80%, #9b031c);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#c90d3a', endColorStr='#9b031c');
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
@@ -2351,7 +2351,7 @@ a.botondashboard{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;}
-  
+
   #dashboard .caja_meta .titular .marco .prestamo div{
   background-position: 0px 0px!important;
   }

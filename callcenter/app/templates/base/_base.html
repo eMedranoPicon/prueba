@@ -8,17 +8,28 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" href='css/legacy/global.css' />
+
+  <!-- <link rel="stylesheet" href='css/legacy/global.css' />
   <link rel="stylesheet" href='css/legacy/coinc.css' />
   <link rel="stylesheet" href='css/legacy/coinc-nuevo.css' />
   <link rel="stylesheet" href='css/legacy/dashboard.css' />
   <link rel="stylesheet" href='css/legacy/coincgoals.css' />
   <link rel="stylesheet" href='css/legacy/jquery.cluetip.css' />
   <link rel="stylesheet" href='css/legacy/layout.css' />
-  <link rel="stylesheet" href='css/legacy/caja_admin.css' />
+  <link rel="stylesheet" href='css/legacy/caja_admin.css' /> -->
+
+  <link rel="stylesheet" type="text/css" href="css/legacy/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/legacy/coinc-bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/legacy/jquery.sidr.dark.css" />
+  <link rel="stylesheet" type="text/css" href="css/legacy/coinc-bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/legacy/coinc-nuevo.css" />
 
   <link rel="stylesheet" href='css/app-phone.css' />
+
+  <link rel="stylesheet" type="text/css" href="css/legacy/callcenter.css" />
+  <link rel="stylesheet" type="text/css" href="css/legacy/callcenterDesarrollo.css" />
+  <link rel="stylesheet" type="text/css" href="css/legacy/new_header_responsive_private.css" />
+  <link rel="stylesheet" type="text/css" href="css/legacy/caja_admin.css" />
 
   <script src="js/legacy/jquery-1.7.1.js"></script>
   <script src="js/legacy/coinc.js"></script>
@@ -42,7 +53,9 @@
   <![endif]-->
 </head>
 <body>
+  {% include '/base/_header.html' %}
   {% block content %} {% endblock %}
+  {% include '/base/_footer.html' %}
   <script src="js/old_browsers_support/modernizr.js"></script>
 </body>
 </html>

@@ -101,6 +101,6 @@
     top: 36px;
     width: 240px;
     z-index: 9;
-    behavior: url(/coinc/envs/coinc/css/PIE.htc);
+    behavior: url(/res/coinc/css/PIE.htc);
 }
 

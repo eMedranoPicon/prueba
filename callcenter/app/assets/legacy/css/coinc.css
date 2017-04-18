@@ -960,7 +960,7 @@ bt .caja_registro_2 {
 .registro_bottom {
     height: 20px;
     width: 262px;
-    background: url(../images/secciones/regis_bottom.png) no-repeat top left;
+    background: url(images/secciones/regis_bottom.png) no-repeat top left;
     margin-left: -2px;
     margin-top: 0;
 }
@@ -4345,10 +4345,10 @@ bt .caja_registro_2 {
     margin: 20px 0 20px 0;
 }
 
-.line_3{    
-    width: 100%;    
+.line_3{
+    width: 100%;
 	color: #b5b0a0;
-	border-bottom:4px dotted ;	
+	border-bottom:4px dotted ;
 }
 
 .line_4 {
@@ -4764,7 +4764,7 @@ bt .caja_registro_2 {
 	height: 67px;
 	width: 90px;
 	background: url("../images/global/50_aniversario_negro.svg") no-repeat scroll left top transparent;
-	background-size: 100%; 	
+	background-size: 100%;
 	float: left;
 	display: block;
 	cursor: default;
@@ -15331,7 +15331,7 @@ a.capa_6_clubAhorranew:hover {
     margin-top: 20px;
     float: left;
 }
-.mancha_wh2_v2_2 {   
+.mancha_wh2_v2_2 {
     height: 74px;
     width: 950px;
     margin-top: 20px;
@@ -18032,17 +18032,17 @@ a.capa_3_amazonloading:hover {
 }
 
 /*.New_Dashboard_Content_Info span {
-display: block; 
- text-align: center; 
- margin-left: 22px; 
- margin-right: 17px; 
- background: #FFFFFF; 
- margin-top: 95px; 
- font-family: arial; 
- color: #555558; 
- font-size: 14px; 
+display: block;
+ text-align: center;
+ margin-left: 22px;
+ margin-right: 17px;
+ background: #FFFFFF;
+ margin-top: 95px;
+ font-family: arial;
+ color: #555558;
+ font-size: 14px;
  overflow: hidden;
- height: 46px; 
+ height: 46px;
  text-shadow: 0px 0px 1px #555558;
  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=90, Color='#102530')"
 }*/
@@ -21784,7 +21784,7 @@ a.tipo_13_link_withiconPerfil_hover {
     border-radius: 25px;
     border: 0;
     padding: 7px 20px;
-    font-size: 1.5rem;	
+    font-size: 1.5rem;
 }
 .btn-popUp-green-anular{
     background-color: #81a431;
@@ -21803,7 +21803,7 @@ a.tipo_13_link_withiconPerfil_hover {
     border-radius: 25px;
     border: 0;
     padding: 7px 20px;
-    font-size: 1.5rem;	
+    font-size: 1.5rem;
 	width: 205px;
 }
 .content_campos_form_popup_1buttoncenter input.btn-basic,
@@ -22027,17 +22027,17 @@ a.tipo_13_link_withiconPerfil_hover {
 	font-size:1.8rem;
 	-ms-padding-top:15px !important;
 }
-	
+
     @media all and (-ms-high-contrast:none){
 				padding-top:15px !important;
 				padding-left:30px;
-				padding-right:30px;	
+				padding-right:30px;
      }
-			
 
-			
-			
-			
+
+
+
+
 
 
 .header-wrap .btn-gray-dark:hover, .container-position .btn-gray-dark:hover,
@@ -23212,7 +23212,7 @@ ul li.circle-avatar {
     overflow: hidden;
     width: 62px;
     z-index: 100;
-} 
+}
 ul li.circle-avatar-photo {
     border: none;
     border-radius: 100%;
@@ -23221,7 +23221,7 @@ ul li.circle-avatar-photo {
     overflow: hidden;
     width: 43px;
     z-index: 100;
-}               
+}
 
 ul li.border-line-avatar {
     background: rgba(0, 0, 0, 0) url("../../../envs/coinc/css/img/bg-shadow-logo-photo.png") no-repeat scroll center top;
@@ -23230,8 +23230,8 @@ ul li.border-line-avatar {
     width: 74px;
 }
 .dashboardAuthorizedNameText{
-       width: 50px; 
-       height: 40px; 
+       width: 50px;
+       height: 40px;
        padding-left: 5px;
        padding-right: 5px;
 }
@@ -23285,7 +23285,7 @@ ul li.border-line-avatar {
 	font-size: 1.6em;
 	width:94%;
     font-family: 'AkkuratStd', Sans-Serif;
-	color:#fff;	
+	color:#fff;
 	margin-top:12px;
 	padding-left:20px;
 	padding-right:20px;
@@ -23345,5 +23345,5 @@ ul li.border-line-avatar {
 .decimal-xsmall{
 	font-size: 11px;
 }
-	
+
 }

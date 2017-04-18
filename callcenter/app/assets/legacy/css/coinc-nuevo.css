@@ -111,7 +111,7 @@ bt .caja_registro_2 {
 .registro_bottom {
 	height: 20px;
     width: 262px;
-	background: url(../images/secciones/regis_bottom.png) no-repeat top left;
+	background: url(images/secciones/regis_bottom.png) no-repeat top left;
 	margin-left: -2px;
     margin-top: 0;
 }
@@ -274,10 +274,10 @@ a.tipo_13:hover {
 	background: #f9e6e5;
 	height: 20px;
 	padding: 6px 2px 4px 0;
-	
-	
-	
-	
+
+
+
+
 }
 .barra_error_end {
 	padding: 8px 0 0 2px;
@@ -311,11 +311,11 @@ input.rounded {
 	border-radius: 2px;
 	outline: 0;
 	-webkit-appearance: none;
-	
+
 }
 
 input.rounded:focus {
 	border-color: #120d0e;
-	
+
 }
 /*------------------------------------------------------------------------------------*/
