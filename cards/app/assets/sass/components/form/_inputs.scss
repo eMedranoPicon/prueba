@@ -12,6 +12,7 @@ input {
     @include dialog-placeholder(13px, $colorGray-700, 5px, 5px);
     border: 0;
     box-shadow: 0px 1px 2px 0px rgba($colorBlack, 0.3);
+    height: 39px;
 
     &:focus {
       box-shadow: 0px 1px 2px 0px rgba($colorBlack, 0.3);
