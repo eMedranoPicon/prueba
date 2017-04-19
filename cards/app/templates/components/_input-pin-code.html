@@ -1,7 +1,7 @@
 {% macro content(class, pagination, text) %}
 <form class="input-code-form form-inline">
   <div class="secundary-bg text-center {{class}}">
-    <div class="form-group container">
+    <div class="form-group container container_custom">
       <div class="clearfix">
         <div class="halfcol">
           <input class="form-control pull-right" type="text" placeholder="Introduce el código">
@@ -14,7 +14,7 @@
       </div>
     </div>
   </div>
-  <div class="container text-center">
+  <div class="container container_custom text-center">
     {% if pagination %}
     {% import "components/_paginator.html" as paginator %}
     {{ paginator.set('2','2','mt-57 mb--35') }}
