@@ -9,15 +9,23 @@
   {{ cardInfo.content('pdt-45 pdb-45', 'YOLANDA ALONSO', '4966,43**.***.4006', 'BLOQUEAR MI TARJETA') }}
   {{ titleMulticolor.title('Indica el', 'motivo') }}
   {{ textBlock.text('pdt-30 pdb-30', 'Por favor, indica por qué quieres bloquear tu tarjeta.') }}
-
+  <div class="secundary-bg">
+    <div class="container container_custom">
+      {% include "/includes/_select-reason.html" %}
+    </div>
+  </div>
   <section class="address-section">
     <div class="address-to-send">
-      <h3 class="text-center">Aquí recibirás tu nueva tarjeta</h3>
+      <div class="secundary-bg">
+        <h3 class="text-center">Aquí recibirás tu nueva tarjeta</h3>
+      </div>
       {{ sendTo.address('Calle Orense 18, 8ºA', '28020 Madrid', 'MADRID - España') }}
     </div>
 
     <div class="change-address-form hidden">
-      <h3 class="text-center">Introduce tus datos para que te enviemos aquí tu nueva tarjeta</h3>
+      <div class="secundary-bg">
+        <h3 class="text-center">Introduce tus datos para que te enviemos aquí tu nueva tarjeta</h3>
+      </div>
       <div class="form-container">
         {% include "/includes/_form-address.html" %}
       </div>
@@ -25,9 +33,15 @@
 
     {{ paginator.set('1','2','') }}
 
-    <div class="container-fluid text-center">
-      <button class="btn btn-default" type="reset" name="button">Atrás</button>
-      <button class="btn btn-primary" type="submit" name="button">Continuar</button>
+    <div class="container container_custom text-center">
+      <div class="clearfix">
+        <div class="halfcol">
+          <button class="btn btn-default pull-right" type="reset" name="button">Atrás</button>
+        </div>
+        <div class="halfcol">
+          <button class="btn btn-primary pull-left" type="submit" name="button">Continuar</button>
+        </div>
+      </div>
     </div>
   </section>
 {% endblock %}

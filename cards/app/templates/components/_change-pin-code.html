@@ -1,0 +1,11 @@
+{% macro content(class, text) %}
+  <div class="secundary-bg text-center {{class}}">
+    <div class="container container_custom text-change-pin">
+      <h4>¿Quieres cambiar tu PIN?</h4>
+      <p>Puedes hacerlo en cualquier cajero de <a href="#" class="text-change-pin__link">nuestra red</a></p>
+    </div>
+  </div>
+  <div class="container container_custom text-center">
+    <button class="btn btn-default" type="submit" name="button">{{text}}</button>
+  </div>
+{% endmacro %}
