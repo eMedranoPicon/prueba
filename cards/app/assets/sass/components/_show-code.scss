@@ -1,0 +1,55 @@
+.show-code {
+  @include border-radius(50px);
+  @include clearfix;
+  position: relative;
+  border: 1px solid $colorWhite;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  span {
+    @include transform(translateY(-50%));
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    right: 75px;
+    text-align: center;
+  }
+  .code {
+    display: none;
+    color: $colorWhite;
+    font-size: 16px;
+    letter-spacing: 10px;
+    padding-left: 10px;
+  }
+  button {
+    float: right;
+    margin: -1px;
+    background-color: $colorWhite;
+    min-width: auto;
+    width: 75px;
+    padding-left: 15px;
+    padding-right: 15px;
+    &:active {
+      + .encrypt-dot {
+        display: none;
+        + .code {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+.content-show-code {
+  background-color: $colorGreen-500;
+  padding: 90px 0 70px;
+  text-align: center;
+  p {
+    font-size: 28px;
+    color: $colorWhite;
+    margin-bottom: 30px;
+  }
+  .show-code {
+    max-width: 200px;
+  }
+}
