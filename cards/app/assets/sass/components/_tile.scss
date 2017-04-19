@@ -1,0 +1,33 @@
+.tile {
+  text-align: center;
+  padding: 0 30px;
+  &--separator {
+    &:after {
+      content: '';
+      background-color: $colorGray-300;
+      width: 1px;
+      height: 162px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  &__icon {
+    height: 80px;
+    position: relative;
+    > img {
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__title {
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: $font-light;
+    line-height: 1.2;
+  }
+}

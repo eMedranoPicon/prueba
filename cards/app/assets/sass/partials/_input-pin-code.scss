@@ -1,10 +1,11 @@
 .input-code-form {
   input {
     width: 150px;
+    margin-right: 10px;
   }
   .icon-group {
     display: inline-block;
-    margin-left: 5px;
+    padding: 5px 0;
     .icon-sms {
       padding: 5px;
     }
@@ -20,9 +21,4 @@
   .btn-primary {
     min-width: 228px;
   }
-}
-
-.gray-bg {
-  background-color: $colorGray-200;
-  padding: 40px;
 }
