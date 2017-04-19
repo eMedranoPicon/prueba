@@ -1,32 +1,43 @@
 .pdt-30 {
   padding-top: 30px;
 }
-
+.pdt-40 {
+  padding-top: 40px;
+}
+.pdt-45 {
+  padding-top: 45px;
+}
+.pdt-55 {
+  padding-top: 55px;
+}
 .pdt-70 {
   padding-top: 70px;
+}
+.pdt-75 {
+  padding-top: 75px;
 }
 
 .pdb-30 {
   padding-bottom: 30px;
 }
-
-.pdb-70 {
-  padding-bottom: 70px;
+.pdb-35 {
+  padding-bottom: 35px;
 }
-.pdt-55 {
-  padding-top: 55px;
+.pdb-45 {
+  padding-bottom: 45px;
 }
 .pdb-55 {
   padding-bottom: 55px;
 }
-.pdt-45 {
-  padding-top: 45px;
+.pdb-60 {
+  padding-bottom: 60px;
 }
+.pdb-70 {
+  padding-bottom: 70px;
+}
+
 .pd-25 {
   padding: 25px !important;
-}
-.pdb-45 {
-  padding-bottom: 45px;
 }
 
 .mt-70 {
@@ -47,6 +58,11 @@
 }
 .mb--35 {
   margin-bottom: -35px !important;
+}
+
+.halfcol {
+  float: left;
+  width: 50%;
 }
 
 .secundary-bg {

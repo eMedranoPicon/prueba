@@ -1,20 +1,32 @@
 {% macro content(class, pagination, text) %}
 <form class="input-code-form form-inline">
-  <div class="gray-bg text-center {{class}}">
+  <div class="secundary-bg text-center {{class}}">
     <div class="form-group container-fluid">
-      <input class="form-control" type="text" placeholder="Introduce el código">
-      <div class="icon-group">
-        <img class="icon-sms" src="images/icons/comment-alert.png" alt="SMS"><a href="" >Si no ha llegado el SMS</a>
+      <div class="clearfix">
+        <div class="halfcol">
+          <input class="form-control" type="text" placeholder="Introduce el código">
+        </div>
+        <div class="halfcol">
+          <div class="icon-group">
+            <img class="icon-sms" src="images/icons/comment-alert.png" alt="SMS"><a href="" >Si no ha llegado el SMS</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="container-fluid text-center">
+  <div class="container text-center">
     {% if pagination %}
     {% import "components/_paginator.html" as paginator %}
     {{ paginator.set('2','2','ml--50 mt-57 mb--35') }}
     {% endif %}
-    <button class="btn btn-default" type="reset" name="button">Atrás</button>
-    <button class="btn btn-primary" type="submit" name="button">{{text}}</button>
+    <div class="clearfix">
+      <div class="halfcol">
+        <button class="btn btn-default pull-right" type="reset" name="button">Atrás</button>
+      </div>
+      <div class="halfcol">
+        <button class="btn btn-primary pull-left" type="submit" name="button">{{text}}</button>
+      </div>
+    </div>
   </div>
 </form>
 {% endmacro %}

@@ -33,9 +33,15 @@
 
     {{ paginator.set('1','2','') }}
 
-    <div class="container-fluid text-center">
-      <button class="btn btn-default" type="reset" name="button">Atrás</button>
-      <button class="btn btn-primary" type="submit" name="button">Continuar</button>
+    <div class="container text-center">
+      <div class="clearfix">
+        <div class="halfcol">
+          <button class="btn btn-default pull-right" type="reset" name="button">Atrás</button>
+        </div>
+        <div class="halfcol">
+          <button class="btn btn-primary pull-left" type="submit" name="button">Continuar</button>
+        </div>
+      </div>
     </div>
   </section>
 {% endblock %}
