@@ -1,27 +1,37 @@
 .address-section {
-    h3 {
-      font-size: 22px;
-      font-weight: $font-bold;
-      margin: 34px 0;
-      color: $colorGray-400;
-    }
-    button {
-      margin: 26px 10px;
-    }
-    .form-container {
-      background-color: $colorGray-300;
-      padding: 50px;
-      margin-bottom: 50px;
-    }
+  h3 {
+    font-size: 22px;
+    font-weight: $font-bold;
+    padding: 34px 0;
+    margin: 0;
+    color: $colorGray-400;
+  }
+  button {
+    margin: 20px 10px 50px;
+  }
+  .form-container {
+    background-color: $colorGray-300;
+    padding: 70px 0;
+    margin-bottom: 50px;
+  }
 }
 
 .address {
   background-color: $colorGray-300;
   text-align: center;
-  padding: 58px;
+  padding-top: 58px;
+  padding-bottom: 50px;
   margin-bottom: 52px;
-
+  &__container {
+    position: relative;
+    padding-left: 65px;
+    padding-right: 70px;
+    display: inline-block;
+  }
   &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: inline-block;
     vertical-align: top;
     padding-top: 3px;
@@ -31,14 +41,15 @@
     display: inline-block;
     text-align: left;
     > p {
+      font-size: 16px;
       margin-bottom: 4px;
       color: $colorBlueGray-300;
     }
     > button {
       display: block;
       padding: 0;
-      margin: 10px 0;
-      font-size: 14px;
+      margin: 5px 0;
+      font-size: 16px;
       text-decoration: underline;
       color: $colorBlack;
 
