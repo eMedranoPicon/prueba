@@ -1,0 +1,25 @@
+{% import "/components/_title-text-multicolor.html" as textBlock %}
+
+{% extends "/base/_base.html" %}
+
+{% block content %}
+  {{ textBlock.text('Pide ya tu ', 'tarjeta COINC', 'Tenla siempre a mano para tus', 'gastos del día a día.') }}
+
+  <section class="advantages">
+    <h2 class="advantages__title">Conoce todas las ventajas</h2>
+    {% include "/includes/_tiles-grid.html" %}
+    <p class="advantages__clarification">
+      * Devolución anual. TAE del 25,34% aplicado sobre todas las compras
+      aplazadas. Tipo de interés nominal 22,80%. Para una compra por importe de
+      500€ realizada con pago aplazado a través de 11 cuotas de 46,99€, importe
+      total adeudado 565,02€.
+    </p>
+    <p class="advantages__legal">
+      Financiación ofrecida por Bankinter Conumer Finance EFC., SA., Establecimiento
+      Financiero de Crédito inscrito en el Banco de España bajo el nº8832 con
+      domicilio social en Avda. de Bruselas 12 28108 Alcobendas Madrid e inscrita
+      en el Registro Mercantil de Madrid al Tomo 22.729, Folio 181, Hoja número
+      M-259543 y con CIF número A82650672.
+    </p>
+  </section>
+{% endblock %}
