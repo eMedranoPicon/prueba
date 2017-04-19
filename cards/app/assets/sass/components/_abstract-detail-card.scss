@@ -1,0 +1,45 @@
+.abstract-detail-card {
+  $main: &;
+  &:focus:hover,
+  &:hover {
+    text-decoration: none;
+  }
+  &__info {
+    border-bottom: 1px solid $colorGray-250;
+    min-height: 55px;
+    padding-top: 18px;
+    padding-left: 60px;
+    h2 {
+      font-size: 15px;
+      margin: 0;
+    }
+    &_circle_card {
+      background: url("../images/icons/circle-card.png") no-repeat top left;
+    }
+    #{$main}__number {
+      font-size: 20px;
+    }
+    #{$main}__decimal {
+      font-size: 11px;
+    }
+    #{$main}__symbol {
+      font-size: 20px;
+    }
+    #{$main}__value {
+      color: $colorGray-250;
+      margin-bottom: 7px;
+    }
+  }
+  &__value {
+    font-weight: $font-bold;
+  }
+  &__number {
+    font-size: 30px;
+  }
+  &__decimal {
+    font-size: 15px;
+  }
+  &__symbol {
+    font-size: 30px;
+  }
+}

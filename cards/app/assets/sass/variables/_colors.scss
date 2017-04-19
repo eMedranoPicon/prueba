@@ -1,14 +1,17 @@
 $colorWhite: #fff;
 $colorBlack: #000;
 
-$colorGray: #f7f7f7 #e8e8e8 #646467 #545454 #555558 #3a3a3a #0c0c0c;
+$colorGray: #f7f7f7 #e8e7e3 #e8e8e8 #aeb5bc #646467 #545454 #555558 #3a3a3a #0c0c0c;
+
 $colorGray-200: nth($colorGray, 1);
-$colorGray-300: nth($colorGray, 2);
-$colorGray-400: nth($colorGray, 3);
-$colorGray-450: nth($colorGray, 4);
-$colorGray-500: nth($colorGray, 5);
-$colorGray-700: nth($colorGray, 6);
-$colorGray-800: nth($colorGray, 7);
+$colorGray-250: nth($colorGray, 2);
+$colorGray-300: nth($colorGray, 3);
+$colorGray-250: nth($colorGray, 4);
+$colorGray-400: nth($colorGray, 5);
+$colorGray-450: nth($colorGray, 6);
+$colorGray-500: nth($colorGray, 7);
+$colorGray-700: nth($colorGray, 8);
+$colorGray-800: nth($colorGray, 9);
 
 $colorGreen: #70a41c #417100;
 $colorGreen-500: nth($colorGreen, 1);
