@@ -1,0 +1,25 @@
+.select-payment {
+  background-color: $colorWhite;
+  text-align: center;
+
+  &__container {
+    display: inline-block;
+    padding: 59px 0;
+  }
+  &__option {
+    text-align: left;
+    display: inline-block;
+    position: relative;
+
+    &_percentage {
+      padding: 30px 140px;
+    }
+    &_quantity {
+      padding: 30px 120px;
+    }
+  }
+  &__explanation {
+    font-size: 17px;
+    padding-left: 26px;
+  }
+}
