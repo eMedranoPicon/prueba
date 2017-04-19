@@ -1,6 +1,11 @@
+$page-min-width: 950px;
+body {
+  min-width: $page-min-width;
+}
+
 .container_custom {
-  min-width: 950px;
-  max-width: 950px;
+  min-width: $page-min-width;
+  max-width: $page-min-width;
   margin: 0 auto;
   position: relative;
 }
