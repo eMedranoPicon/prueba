@@ -30,3 +30,12 @@
   max-width: 290px;
   width: 100%;
 }
+
+
+.buttons-group {
+  text-align: center;
+  @include clearfix;
+  button {
+    margin: 0 10px;
+  }
+}
