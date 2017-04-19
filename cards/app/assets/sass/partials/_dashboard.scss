@@ -1,0 +1,11 @@
+.dashboard {
+  $gutter: 20px;
+  @include make-row($gutter);
+  &__item {
+    @include make-xs-column(4, $gutter);
+    &_card_coinc {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+  }
+}
