@@ -1,0 +1,9 @@
+.text-change-pin {
+  > p {
+    font-weight: $font-light;
+  }
+  &__link {
+    color: $colorGray-400;
+    text-decoration: underline;
+  }
+}
