@@ -88,6 +88,18 @@ gulp.task('sass', function() {
     .pipe(gulp.dest(dist_css_dir));
 }).help = 'Compiles and autoprefixes sass source files.';
 
+gulp.task('sass-dist', function() {
+  return gulp.src(src_sass_files)
+    .pipe(sass({
+      errLogToConsole: true,
+      outputStyle: 'expanded',
+      sourceComments: false
+    }))
+    .pipe(autoprefixer({
+      browsers: ['last 3 version', 'ie >= 10']
+    }))
+    .pipe(gulp.dest(dist_css_dir));
+}).help = 'Compiles, minifies and autoprefixes sass source files.';
 
 gulp.task('sass-min', function() {
   return gulp.src(src_sass_files)
