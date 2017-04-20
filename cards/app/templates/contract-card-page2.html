@@ -1,4 +1,6 @@
 {% import "/components/_title-text-multicolor.html" as textBlock %}
+{% import "/components/_title-multicolor.html" as titleMulticolor %}
+{% import "/components/_address-to-send.html" as sendTo %}
 
 {% extends "/base/_base.html" %}
 
@@ -6,5 +8,16 @@
 <section class="secundary-bg">
   {{ textBlock.text('Estás a punto de contratar tu ', 'tarjeta COINC', 'Aquí tienes un resumen de las condiciones de tu tarjeta:', '') }}
 </section>
+{{ titleMulticolor.title('Recibirás tu ', 'nueva tarjeta', ' en esta dirección') }}
+<section class="address-section mt--13">
+  <div class="address-to-send">
+    {{ sendTo.address('Calle Orense 18, 8ºA', '28020 Madrid', 'MADRID - España') }}
+  </div>
 
+  <div class="change-address-form hidden">
+    <div class="form-container">
+      {% include "/includes/_form-address.html" %}
+    </div>
+  </div>
+</section>
 {% endblock %}
