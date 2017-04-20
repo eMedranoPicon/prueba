@@ -1,7 +1,20 @@
 .card-addons {
+  position: relative;
   background-color: $colorWhite;
+  padding-top: 105px;
+  padding-bottom: 30px;
+  overflow: hidden;
+  // border: 1px solid $colorGray-150;
+  // border-bottom: 1px solid $colorGray-325;
+  &__icon {
+    position: absolute;
+    top: -13px;
+    left: calc(50% - 50px);
+  }
   p {
     text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
   } 
   button {
     width: 110px;
