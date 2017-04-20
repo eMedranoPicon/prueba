@@ -2,10 +2,10 @@
   position: relative;
   background-color: $colorWhite;
   padding-top: 105px;
-  padding-bottom: 30px;
+  padding-bottom: 32px;
   overflow: hidden;
-  // border: 1px solid $colorGray-150;
-  // border-bottom: 1px solid $colorGray-325;
+  border: 1px solid $colorGray-150;
+  border-bottom: 1px solid $colorGray-325;
   &__icon {
     position: absolute;
     top: -13px;
