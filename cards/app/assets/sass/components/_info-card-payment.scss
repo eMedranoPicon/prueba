@@ -10,12 +10,14 @@
   dd {
     line-height: 27px;
     text-align: left;
+    width: 50%;
+    float: left;
   }
   dt {
     float: left;
     text-align: right;
     line-height: 25px;
-    width: 48%;
-    margin-right: 17px;
+    width: 50%;
+    padding-right: 17px;
   }
 }
