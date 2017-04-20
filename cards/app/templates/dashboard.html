@@ -27,12 +27,20 @@
         </div>
       </div>
     </div>
+    <div class="dashboard pdb-20">
+      <div class="dashboard__item dashboard__item_col_1 dashboard__item_card_coinc">
+        <img src="images/card.png" alt="coinccard" class="img-responsive" />
+      </div>
+      <div class="dashboard__item dashboard__item_col_2">
+        {{ adviseCard.advise('card-advise_icon_-12', 'icons/circle-cards-transparent.png', 'Has solicitado la tarjeta', 'En unos días te llegará a tu domicilio') }}
+      </div>
+    </div>
     <div class="dashboard">
       <div class="dashboard__item dashboard__item_col_1 dashboard__item_card_coinc">
         <img src="images/card.png" alt="coinccard" class="img-responsive" />
       </div>
       <div class="dashboard__item dashboard__item_col_2">
-        {{ adviseCard.advise('icons/circle-cards-transparent.png', 'Has solicitado la tarjeta', 'En unos días te llegará a tu domicilio') }}
+        {{ adviseCard.advise('', 'icons/cardlocked-circle.png', 'Tu tarjeta está bloqueada', False, '¿Solicitamos una nueva?') }}
       </div>
     </div>
   </div>
