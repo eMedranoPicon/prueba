@@ -82,4 +82,54 @@
   </div>
 </section>
 
+<section class="container container_custom">
+  {{ titleMulticolor.title('Introduce el código que te hemos enviado al móvil para confirmar la contratación de tu ', 'Tarjeta COINC', '', 'pdt-0 pdb-10') }}
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="pd-25">
+        <input id="percentage" type="checkbox" name="optradio" class="radio-square radio-square_extrasmall">
+        <label for="percentage">Declaro que he leído la información Normalizada Europea (INE),
+        el seguro de accidentes, el seguro de asistencia en viajes y el contrato de la tarjeta COINC</label>
+      </div>
+
+      <form class="input-code-form input-code-form_vertical form-inline">
+        <div class="secundary-bg text-center pdt-50 pdb-25">
+          <div class="form-group">
+              <div class="pdb-35">
+                <input class="form-control" type="text" placeholder="Introduce el código">
+              </div>
+                <div class="icon-group">
+                  <img class="icon-sms" src="images/icons/comment-alert.png" alt="SMS"><a href="" >Si no ha llegado el SMS</a>
+                </div>
+          </div>
+        </div>
+        <div class="text-center mb-50">
+          {% import "components/_paginator.html" as paginator %}
+          {{ paginator.set('2','2','mt-80 mb-25') }}
+
+          <div class="buttons-group">
+            <div class="halfcol">
+              <button class="btn btn-default pull-right" type="reset" name="button">Atrás</button>
+            </div>
+            <div class="halfcol">
+              <button class="btn btn-primary pull-left" type="submit" name="button">Enviar y contratar</button>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="advantages pdb-50">
+  <p class="advantages__legal">
+    Financiación ofrecida por Bankinter Conumer Finance EFC., SA., Establecimiento
+    Financiero de Crédito inscrito en el Banco de España bajo el nº8832 con
+    domicilio social en Avda. de Bruselas 12 28108 Alcobendas Madrid e inscrita
+    en el Registro Mercantil de Madrid al Tomo 22.729, Folio 181, Hoja número
+    M-259543 y con CIF número A82650672.
+  </p>
+</section>
+
 {% endblock %}
