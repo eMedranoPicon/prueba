@@ -1,8 +1,7 @@
 .card-addons {
   position: relative;
   background-color: $colorWhite;
-  padding-top: 105px;
-  padding-bottom: 32px;
+  padding: 105px 20px 31px;
   overflow: hidden;
   border: 1px solid $colorGray-150;
   border-bottom: 1px solid $colorGray-325;
@@ -15,7 +14,8 @@
     color: $colorGray-400;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    height: 40px;
+    margin-bottom: 0;
   } 
   button {
     width: 110px;
