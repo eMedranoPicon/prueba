@@ -1,10 +1,12 @@
 {% import "/components/_title-text-multicolor.html" as textBlock %}
+{% import "/components/_info-card-payment.html" as infoCard %}
 
 {% extends "/base/_base.html" %}
 
 {% block content %}
-<section class="secundary-bg">
+<section class="secundary-bg pdb-185">
   {{ textBlock.text('Estás a punto de contratar tu ', 'tarjeta COINC', 'Aquí tienes un resumen de las condiciones de tu tarjeta:', '') }}
+  {% include "/components/_info-card-payment.html" %}
 </section>
 
 {% endblock %}

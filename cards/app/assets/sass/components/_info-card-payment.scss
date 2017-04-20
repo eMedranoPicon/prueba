@@ -1,0 +1,19 @@
+.block-info-card-payment {
+  min-width: 64%;
+  position: absolute;
+  left: 20%;
+  background-color: $colorGreen-500;
+  color: $colorWhite;
+  padding: 25px 40px 20px 40px;
+  font-size: 15px;
+  border-radius: 2px;
+  dd {
+    line-height: 1.8;
+    text-align: left;
+  }
+  dt {
+    line-height: 1.7;
+    width: 48%;
+    margin-right: 17px;
+  }
+}
