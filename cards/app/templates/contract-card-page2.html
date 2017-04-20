@@ -1,4 +1,6 @@
 {% import "/components/_title-text-multicolor.html" as textBlock %}
+{% import "/components/_title-multicolor.html" as titleMulticolor %}
+{% import "/components/_address-to-send.html" as sendTo %}
 {% import "/components/_info-card-payment.html" as infoCard %}
 
 {% extends "/base/_base.html" %}
@@ -62,6 +64,21 @@
 
     </div>
     <p class="text-center">Los documentos relacionados con tu tarjeta se guardarán en tu zona Administrar</p>
+  </div>
+</section>
+
+<section>
+  {{ titleMulticolor.title('Recibirás tu ', 'nueva tarjeta', ' en esta dirección', 'pdt-50 pdb-40') }}
+  <div class="address-section">
+    <div class="address-to-send">
+      {{ sendTo.address('Calle Orense 18, 8ºA', '28020 Madrid', 'MADRID - España') }}
+    </div>
+
+    <div class="change-address-form hidden">
+      <div class="form-container">
+        {% include "/includes/_form-address.html" %}
+      </div>
+    </div>
   </div>
 </section>
 
