@@ -1,23 +1,85 @@
 {% import "/components/_title-text-multicolor.html" as textBlock %}
 {% import "/components/_title-multicolor.html" as titleMulticolor %}
 {% import "/components/_address-to-send.html" as sendTo %}
+{% import "/components/_info-card-payment.html" as infoCard %}
 
 {% extends "/base/_base.html" %}
 
 {% block content %}
 <section class="secundary-bg">
   {{ textBlock.text('Estás a punto de contratar tu ', 'tarjeta COINC', 'Aquí tienes un resumen de las condiciones de tu tarjeta:', '') }}
+  {% include "/components/_info-card-payment.html" %}
 </section>
-{{ titleMulticolor.title('Recibirás tu ', 'nueva tarjeta', ' en esta dirección') }}
-<section class="address-section">
-  <div class="address-to-send">
-    {{ sendTo.address('Calle Orense 18, 8ºA', '28020 Madrid', 'MADRID - España') }}
-  </div>
 
-  <div class="change-address-form hidden">
-    <div class="form-container">
-      {% include "/includes/_form-address.html" %}
+<section class="pdt-85">
+  {{ textBlock.text('Para que todo quede', 'muy claro', 'Por favor, lee los siguientes documentos relacionadoscon tu <strong>Tarjeta COINC.</strong>', '', 'pdb-20') }}
+  <div class="container container_custom">
+    <div class="row">
+
+      <div class="col-xs-6">
+        <div class="doc-item mb-30">
+          <div class="doc-item__content">
+            <span>Contrato de la Tarjeta COINC</span>
+          </div>
+          <div class="doc-item__img">
+            <img src="images/carpeta-fondo-gris.png" />
+          </div>
+        </div>
+        <div class="doc-item mb-30">
+          <div class="doc-item__content">
+            <span>Seguro de asistencia en viajes</span>
+          </div>
+          <div class="doc-item__img">
+            <img src="images/carpeta-fondo-gris.png" />
+          </div>
+        </div>
+        <div class="doc-item mb-30">
+          <div class="doc-item__content">
+            <span>Folleto de tarjetas</span>
+          </div>
+          <div class="doc-item__img">
+            <img src="images/carpeta-fondo-gris.png" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-6">
+        <div class="doc-item mb-30">
+          <div class="doc-item__content">
+            <span>Información Normalizada Europea (INE)</span>
+          </div>
+          <div class="doc-item__img">
+            <img src="images/carpeta-fondo-gris.png" />
+          </div>
+        </div>
+        <div class="doc-item mb-30">
+          <div class="doc-item__content">
+            <span>Seguro de accidentes</span>
+          </div>
+          <div class="doc-item__img">
+            <img src="images/carpeta-fondo-gris.png" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="text-center">Los documentos relacionados con tu tarjeta se guardarán en tu zona Administrar</p>
+  </div>
+</section>
+
+<section>
+  {{ titleMulticolor.title('Recibirás tu ', 'nueva tarjeta', ' en esta dirección', 'pdt-50 pdb-40') }}
+  <div class="address-section">
+    <div class="address-to-send">
+      {{ sendTo.address('Calle Orense 18, 8ºA', '28020 Madrid', 'MADRID - España') }}
+    </div>
+
+    <div class="change-address-form hidden">
+      <div class="form-container">
+        {% include "/includes/_form-address.html" %}
+      </div>
     </div>
   </div>
 </section>
+
 {% endblock %}
