@@ -1,0 +1,14 @@
+.card-addons {
+  background-color: $colorWhite;
+  p {
+    text-align: center;
+  } 
+  button {
+    width: 110px;
+    min-width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+    margin: 0 5px;
+  }
+}
