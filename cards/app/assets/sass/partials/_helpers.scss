@@ -262,6 +262,14 @@
   width: 50%;
 }
 
+.primary-bg {
+  background-color: $colorGreen-500;
+}
+
 .secundary-bg {
   background-color: $colorGray-200;
+}
+
+.alternate-bg {
+  background-color: $colorWhite;
 }
