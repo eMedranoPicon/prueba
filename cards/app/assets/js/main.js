@@ -5,8 +5,12 @@
     _addressForm : function ( ) {
       $(".address").addressForm();
     },
+    _closeButtons : function ( ) {
+      $("[data-close]").close();
+    },
     init : function ( ) {
       this._addressForm();
+      this._closeButtons();
     }
   };
 
