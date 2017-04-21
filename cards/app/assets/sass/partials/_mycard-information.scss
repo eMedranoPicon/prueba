@@ -1,7 +1,5 @@
 .mycard-information {
   min-height: 200px;
-  border: 1px solid $colorGray-150;
-  border-bottom: 1px solid $colorGray-325;
   > header {
     margin-bottom: 23px;
     h2,
@@ -11,6 +9,7 @@
       font-weight: $font-regular;
       span {
         font-weight: $font-bold;
+        text-transform: capitalize;
       }
     }
     h2 {
@@ -24,6 +23,8 @@
     position: relative;
     padding-left: 310px;
     text-align: center;
+    border: 1px solid $colorGray-150;
+    border-bottom: 0;
   }
   &__card,
   &__data {
@@ -40,7 +41,7 @@
     }
   }
   &__data {
-    padding: 20px 30px 35px 0;
+    padding: 22px 30px 35px 0;
     .halfcol {
       padding: 0 10px;
     }
@@ -61,7 +62,25 @@
     button {
       font-size: 14px;
       margin-top: 20px;
-      padding: 9px 30px;
+      padding: 10px 30px;
     }
+  }
+  &__conditions {
+    border: 1px solid $colorGray-250;
+    background: $colorGray-50 url("../images/icons/info-gray.png") no-repeat 25px center;
+    margin: 0;
+    padding: 22px 60px 18px;
+  }
+  &__conditions-description {
+    position: relative;
+    background-color: $colorGray-225;
+    color: $colorGray-600;
+    margin: 0;
+    padding: 20px 80px 20px 30px;
+  }
+  &__conditions-description-close {
+    position: absolute;
+    top: 13px;
+    right: 15px;
   }
 }
