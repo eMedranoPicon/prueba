@@ -57,7 +57,7 @@ var src_app = './app',
     './bower_components/progressbar.js/dist/progressbar.min.js.map'
   ],
   legacy_js_src  = path.join(src_base_dir, 'legacy/js', '**', '*.js'),
-  legacy_css_src = path.join(src_base_dir, 'legacy/css', '**', '*.css');
+  legacy_css_src = path.join(src_base_dir, 'legacy/css', '**', '*');
 
 gulp.task('jshint', function() {
   return gulp.src(src_js_files)
@@ -122,14 +122,14 @@ gulp.task('vendor-scripts', function() {
 
 gulp.task('scripts', function() {
   return gulp.src(src_js_files)
-    .pipe(concat('app.js'))
+    .pipe(concat('cards.js'))
     .pipe(gulp.dest(dist_js_dir));
 }).help = 'Concatenates all js files.';
 
 
 gulp.task('scripts-min', function() {
   return gulp.src(src_js_files)
-    .pipe(concat('app.js'))
+    .pipe(concat('cards.js'))
     .pipe(uglify())
     .pipe(gulp.dest(dist_js_dir));
 }).help = 'Concatenates and minifies all js files.';
