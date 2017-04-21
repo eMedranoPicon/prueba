@@ -4,6 +4,9 @@
     font-size: 18px;
     font-weight: $font-bold;
     padding: 0;
+    padding-left: 26px;
+    text-indent: -26px;
+    color: $colorDarkGray;
     &:before {
       content: "";
       position: relative;
@@ -25,6 +28,16 @@
     + label {
       &:before {
         background-image: url("../images/icons/checkform/square-check-green.png") !important;
+      }
+    }
+  }
+  &_extrasmall {
+    + label {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.8;
+      &:before {
+        margin-bottom: -3px;
       }
     }
   }

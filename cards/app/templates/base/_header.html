@@ -1,0 +1,111 @@
+<div id="divCookie" class="cookielegal">
+  <div class="negrita">Uso de cookies</div>
+  <div>Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación. Si continúa navegando, consideramos que acepta su uso. Puede obtener
+    más información, o bien conocer cómo cambiar la configuración, en nuestra <a href="javascript:abreVentana();" style="text-decoration:underline;color:#000000;" title="Política de cookies. Abre ventana nueva">Política de cookies.</a><img alt="Abre ventana nueva"
+      src="https://www.bankinter.com/www/cacheables/img/linkext.v1.cache.gif" style="margin-left:0.4em;margin-right:1em;vertical-align: middle !important;" /></div>
+</div>
+
+<div id="dashboard" class="container_general">
+
+  <div class="header">
+    <div class="container">
+      <a href="/coinc/menu-inicio" title="COINC. Ir a inicio">
+        <img src="images/logo_coinc_dashboard.png" class="logotipo_dashboard" width="116px" height="35px" alt="Logotipo COINC"></a>
+      <div class="caja_usuario">
+        <div class="marco_circular">
+          <form novalidate="novalidate" id="j_id2759455_7262ee61" name="j_id2759455_7262ee61" method="post" action="/coinc-card/activar-tarjeta" enctype="application/x-www-form-urlencoded">
+            <img id="j_id2759455_7262ee61:userImage" src="images/user_profile.png" alt="Imagen de Pefil" width="59" height="59">
+            <input type="hidden" name="j_id2759455_7262ee61_SUBMIT"
+              value="1">
+            <input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="P2vCnjYxWImtmT0cVNZu1mn8fpM4E2wJxD6hjpkFreVBwJ0DR41PbFpjV48Re7Th46rXn1Uxu/WnR/+loEn26xZHE7fm1lx2e3cz3bjUGcGX3ye6lUTFxniDtVEEcb7eOeuvqr7fvIQPzWCJ"></form>
+        </div>
+        <div class="datos_usuario">
+          <p>MANOLITOS</p>
+          <button type="button" id="enter_toggle" class="botondashboard p head">Administrar</button>
+          <input type="button" class="botondashboard p head margin10_l" onclick="location.href='/coinc/services/auth/logout?logout_back=/coinc';" value="Cerrar">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div style="width:100%; height:30px;" class="left"></div>
+<form novalidate="novalidate" id="j_id2759455_7262eef6" name="j_id2759455_7262eef6" method="post" action="/coinc-card/activar-tarjeta" enctype="application/x-www-form-urlencoded" class="formulario_admin">
+  <div class="contenedor_caja_administracion">
+
+    <script>
+      idtext = "Registrarse";
+    </script>
+    <script type="text/javascript">
+      function cerrar_caja_admin() {
+        $('#caja_registro').slideToggle(400);
+        $('#caja_registro').click(function(event) {
+          event.stopPropagation();
+        });
+        return false;
+      }
+    </script>
+    <div class="caja_administracion" id="caja_registro" style="display: none;">
+
+      <div class="fila_enlace_caja_administracion tipo_14 black" style="width:100%;">
+        <div class="cabecera_caja_administracion">ADMINISTRAR</div>
+        <a id="cerrar_toggle1" href="javascript:#.html" style="float:right; text-decoration:none;">
+          <img src="images/iconos/ico_boxadministrar_cerrar.png">
+        </a>
+      </div>
+      <div class="separacion_filas_caja_administracion"></div>
+      <a href="/coinc/mi-perfil" id="j_id2759455_7262eef6:cerrar_toggle2" name="j_id2759455_7262eef6:cerrar_toggle2" onclick="cerrar_caja_admin();">
+        <div class="fila_entera_caja_administracion">
+          <div class="separacion_filas_caja_administracion_arriba"></div>
+          <div class="fila_enlace_caja_administracion">
+            <div style="float:left"><img src="images/iconos/ico_boxadministrar_persona.png"></div>
+            <div style="float:left; font-size:1.7em; margin-left:20px; color: #000;">Mi perfil</div>
+          </div>
+          <div class="separacion_filas_caja_administracion"></div>
+        </div>
+      </a>
+      <a href="/coinc/mi-cuenta" id="j_id2759455_7262eef6:cerrar_toggle3" name="j_id2759455_7262eef6:cerrar_toggle3" onclick="cerrar_caja_admin();">
+        <div class="fila_entera_caja_administracion">
+          <div class="separacion_filas_caja_administracion_arriba"></div>
+          <div class="fila_enlace_caja_administracion">
+            <div style="float:left"><img src="images/iconos/ico_boxadministrar_coinc.png"></div>
+            <div style="float:left; font-size:1.7em; margin-left:20px; color: #000;">Mi cuenta COINC</div>
+          </div>
+          <div class="separacion_filas_caja_administracion"></div>
+        </div>
+      </a>
+      <a href="/coinc/movimientos-de-la-cuenta" id="j_id2759455_7262eef6:cerrar_toggle4" name="j_id2759455_7262eef6:cerrar_toggle4" onclick="cerrar_caja_admin();">
+        <div class="fila_entera_caja_administracion">
+          <div class="separacion_filas_caja_administracion_arriba"></div>
+          <div class="fila_enlace_caja_administracion">
+            <div style="float:left"><img src="images/iconos/ico_boxadministrar_flechas.png"></div>
+            <div style="float:left; font-size:1.7em; margin-left:20px; color: #000;">Movimientos de cuenta</div>
+          </div>
+          <div class="separacion_filas_caja_administracion"></div>
+        </div>
+      </a>
+      <a href="/coinc/contratos-notificaciones" id="cerrar_toggle5">
+        <div class="fila_entera_caja_administracion">
+          <div class="separacion_filas_caja_administracion_arriba"></div>
+          <div class="fila_enlace_caja_administracion">
+            <div style="float:left"><img src="images/iconos/ico_boxadministrar_contrato.png"></div>
+            <div style="float:left; font-size:1.7em; margin-left:20px; color: #000;">Contratos y notificaciones</div>
+          </div>
+          <div class="separacion_filas_caja_administracion"></div>
+        </div>
+      </a>
+      <a href="/coinc/alertas-recibos" id="cerrar_toggle5">
+        <div class="fila_entera_caja_administracion">
+          <div class="separacion_filas_caja_administracion_arriba"></div>
+          <div class="fila_enlace_caja_administracion">
+            <div style="float:left"><img src="images/iconos/ico_boxadministrar_contrato.png"></div>
+            <div style="float:left; font-size:1.7em; margin-left:20px; color: #000;">Alertas de recibos</div>
+          </div>
+          <div class="separacion_filas_caja_administracion"></div>
+        </div>
+      </a>
+
+    </div>
+
+
+  </div><input type="hidden" name="j_id2759455_7262eef6_SUBMIT" value="1"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="P2vCnjYxWImtmT0cVNZu1mn8fpM4E2wJxD6hjpkFreVBwJ0DR41PbFpjV48Re7Th46rXn1Uxu/WnR/+loEn26xZHE7fm1lx2e3cz3bjUGcGX3ye6lUTFxniDtVEEcb7eOeuvqr7fvIQPzWCJ"></form>

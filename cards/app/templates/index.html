@@ -1,9 +1,9 @@
 {% import "/components/_text-green-block.html" as textBlock %}
 {% import "/components/_title-multicolor.html" as titleMulticolor %}
-{% extends "/base/_base.html" %}
+{% extends "/base/_page.html" %}
 
 {% block content %}
-{{ titleMulticolor.title('Listado de', 'páginas') }}
+{{ titleMulticolor.title('Listado de', 'páginas','') }}
 <section class="pdb-30">
   {{ textBlock.text('', 'Activar mi tarjeta') }}
   <div class="container container_custom pdt-30 pdb-30">
@@ -62,11 +62,11 @@
         <span class="badge">Paso 0</span>
       </a>
       <a class="list-group-item" href="contract-card-page1.html">
-        <span>Contratar Tarjeta <span class="label label-danger">No ok</span></span>
+        <span>Contratar Tarjeta - Forma de pago <span class="label label-danger">No ok</span></span>
         <span class="badge">Paso 1</span>
       </a>
       <a class="list-group-item" href="contract-card-page2.html">
-        <span>Contratar Tarjeta <span class="label label-danger">No ok</span></span>
+        <span>Contratar Tarjeta - Introducir código<span class="label label-primary">Ok</span></span>
         <span class="badge">Paso 2</span>
       </a>
     </div>

@@ -1,6 +1,7 @@
 input {
   &.form-control-line {
     width: 100%;
+    padding: 1px 0;
     border: 0;
     border-bottom: 1px solid $colorBlueGray-800;
     outline: none;
