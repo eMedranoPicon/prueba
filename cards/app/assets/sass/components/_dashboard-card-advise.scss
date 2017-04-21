@@ -53,6 +53,16 @@
         bottom: -20px;
       }
     }
+    &_t11 {
+      #{$main}__icon {
+        top: 11px;
+      }
+    }
+    &_r23 {
+      #{$main}__icon {
+        right: 23px;
+      }
+    }
   }
   &_text_small {
     h2 {
@@ -60,6 +70,21 @@
     }
     p {
       font-size: 14px;
+    }
+  }
+  &_space_small {
+    #{$main}__data {
+      padding-top: 55px;
+    }
+    h2 {
+      margin-bottom: 7px;
+    }
+  }
+  &_btn_small {
+    button {
+      min-width: 140px;
+      padding-top: 6px;
+      padding-bottom: 6px;
     }
   }
 }
