@@ -1,24 +1,26 @@
-<div class="input-slider">
+{% macro slider(minValue=0, maxValue=100, initialValue=50, step=1, symbol='%', classMod='', id='', show='true') %}
+<div {% if id %}id="{{ id }}" {% endif %}class="input-slider {{ classMod }}" {% if show == 'no' %}style="display:none"{% endif %}>
   <div class="number-slider">
     <input type="text"
-           value="2.5"
+           value="{{ initialValue }}"
            class="value-percentage"
            data-inputmask="'alias': 'integer', 'groupSeparator': ',', 'autoGroup': true">
-           <span class="symbol-medium">%</span>
+           <span class="symbol-medium">{{ symbol }}</span>
   </div>
-  <span class="top-value">2,5%</span>
+  <span class="top-value">{{ minValue }} {{ symbol }}</span>
   <input type="text"
          class="slider-percentage"
          value=""
-         data-slider-value="2.5"
-         data-slider-step="0.1"
+         data-slider-value="{{ initialValue }}"
+         data-slider-step="{{ step }}"
          data-slider-tooltip="hide"
-         data-slider-min="2.5"
-         data-slider-max="99">
-  <span class="top-value">99%</span>
+         data-slider-min="{{ minValue }}"
+         data-slider-max="{{ maxValue }}">
+  <span class="top-value">{{ maxValue }} {{ symbol }}</span>
   <div class="alert-percentage">
     <div class="messages">
       <p><i class="alert"></i>La cantidad debe estar comprendida entre <strong>2,5% y 99%</strong>.</p>
     </div>
   </div>
 </div>
+{% endmacro %}

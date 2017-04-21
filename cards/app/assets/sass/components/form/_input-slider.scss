@@ -62,8 +62,6 @@
   display: none;
   text-align: center;
   margin-top: 20px;
-  font-size: 12px;
-  color: $colorDanger;
 
   .alert {
     width: 18px;
@@ -72,6 +70,11 @@
     margin-right: 5px;
     background-image: url('../images/icons/alert-icon.png');
     background-repeat: no-repeat;
+  }
+  p {
+    margin: 0;
+    font-size: 12px;
+    color: $colorDanger;
   }
 }
 

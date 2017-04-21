@@ -5,33 +5,56 @@
     _addressForm : function ( ) {
       $(".address").addressForm();
     },
-    _numberSlider : function ( ) {
-      $(".slider-percentage").bootstrapSlider({});
-      $(".alert-percentage").hide();
+    _initSliders : function ( ) {
+      $(".input-slider").each( function() {
+        var el = $(this),
+            slider = $(".slider-percentage", el).bootstrapSlider({}),
+            value = $(".value-percentage", el),
+            alert = $(".alert-percentage");
 
-      $(".slider-percentage").on("slide", function(slideEvt) {
-        $(".value-percentage").val(slideEvt.value);
-      });
-      $(".slider-percentage").on("slideStop", function() {
-        $(".alert-percentage").hide();
-      });
+        slider
+          .on("slide", function ( slideEvt ) {
+            value.val(slideEvt.value);
+          })
+          .on("slideStop", function ( ) {
+            alert.hide();
+          });
 
-      $(".value-percentage").on("blur", function(){
-        var minValue = parseFloat($(".slider-percentage").data("slider-min"));
-        var maxValue = parseFloat($(".slider-percentage").data("slider-max"));
-        var currentValue = parseFloat(this.value);
-        if(currentValue >= minValue && currentValue <= maxValue) {
-          $(".alert-percentage").hide();
-          $(".slider-percentage")
-            .bootstrapSlider("setValue", currentValue, true);
-        } else {
-          $(".alert-percentage").show();
-        }
+          value.on("blur", function ( ) {
+            var minValue = parseFloat(slider.data("slider-min")),
+                maxValue = parseFloat(slider.data("slider-max")),
+                currentValue = parseFloat(this.value);
+
+            if ( currentValue >= minValue && currentValue <= maxValue ) {
+              alert.hide();
+              slider.bootstrapSlider("setValue", currentValue, true);
+            } else {
+              alert.show();
+            }
+          });
+      });
+    },
+    _contractCardSelectPaymentMethod: function ( ) {
+      $('input[type=radio][name=paymode]').change(function() {
+        console.log("Value: " + this.value);
+          if (this.value === 'percentage') {
+            $("#quantitySlider").fadeOut(500, function ( ) {
+              console.log("complete!");
+              $("#percentageSlider").fadeIn(500);
+            });
+
+          } else {
+            $("#percentageSlider").fadeOut(500, function ( ) {
+              console.log("complete2!");
+              $("#quantitySlider").fadeIn(500);
+            });
+          }
       });
     },
     init : function ( ) {
       this._addressForm();
-      this._numberSlider();
+      this._initSliders();
+      this._contractCardSelectPaymentMethod();
     }
   };
 
