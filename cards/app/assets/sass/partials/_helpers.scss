@@ -1,4 +1,11 @@
 // PADDING TOP
+
+.pdt-0 {
+  padding-top: 0 !important;
+}
+.pdt-5 {
+  padding-top: 5px !important;
+}
 .pdt-10 {
   padding-top: 10px !important;
 }
@@ -60,6 +67,12 @@
 
 // PADDING BOTTOM
 
+.pdb-0 {
+  padding-bottom: 0 !important;
+}
+.pdb-5 {
+  padding-bottom: 5px !important;
+}
 .pdb-10 {
   padding-bottom: 10px !important;
 }
@@ -121,6 +134,12 @@
 
 // MARGIN TOP
 
+.mt-0 {
+  margin-top: 0 !important;
+}
+.mt-5 {
+  margin-top: 5px !important;
+}
 .mt-10 {
   margin-top: 10px !important;
 }
@@ -182,6 +201,12 @@
 
 // MARGIN BOTTOM
 
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.mb-5 {
+  margin-bottom: 5px !important;
+}
 .mb-10 {
   margin-bottom: 10px !important;
 }
@@ -249,7 +274,6 @@
 .pd-75 {
   padding: 75px !important;
 }
-
 .ml--50 {
   margin-left: -50px !important;
 }
@@ -257,11 +281,27 @@
   margin-bottom: -35px !important;
 }
 
+.pd-reset {
+  padding: 0 !important;
+}
+
+.m-reset {
+  margin: 0 !important;
+}
+
 .halfcol {
   float: left;
   width: 50%;
 }
 
+.primary-bg {
+  background-color: $colorGreen-500;
+}
+
 .secundary-bg {
   background-color: $colorGray-200;
+}
+
+.alternate-bg {
+  background-color: $colorWhite;
 }

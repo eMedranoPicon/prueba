@@ -12,6 +12,8 @@
     margin-bottom: 18px;
     padding-left: 17px;
     line-height: 1.6;
+    font-size: 14px;
+    color: $colorDarkGray;
   }
   &__legal {
     max-width: 900px;
@@ -20,9 +22,6 @@
     padding-left: 17px;
     line-height: 1.6;
   }
-}
-.container {
-  width: 935px;
 }
 .space-between-rows {
   margin-bottom: 56px;

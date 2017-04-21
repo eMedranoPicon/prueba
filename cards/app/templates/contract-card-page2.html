@@ -1,10 +1,135 @@
 {% import "/components/_title-text-multicolor.html" as textBlock %}
+{% import "/components/_title-multicolor.html" as titleMulticolor %}
+{% import "/components/_address-to-send.html" as sendTo %}
+{% import "/components/_info-card-payment.html" as infoCard %}
 
 {% extends "/base/_base.html" %}
 
 {% block content %}
 <section class="secundary-bg">
   {{ textBlock.text('Estás a punto de contratar tu ', 'tarjeta COINC', 'Aquí tienes un resumen de las condiciones de tu tarjeta:', '') }}
+  {% include "/components/_info-card-payment.html" %}
+</section>
+
+<section class="pdt-85">
+  {{ textBlock.text('Para que todo quede', 'muy claro', 'Por favor, lee los siguientes documentos relacionadoscon tu <strong>Tarjeta COINC.</strong>', '', 'pdb-20') }}
+  <div class="container container_custom">
+    <div class="row">
+
+      <div class="col-xs-6">
+        <div class="doc-item mb-30">
+          <div class="doc-item__content">
+            <span>Contrato de la Tarjeta COINC</span>
+          </div>
+          <div class="doc-item__img">
+            <img src="images/carpeta-fondo-gris.png" />
+          </div>
+        </div>
+        <div class="doc-item mb-30">
+          <div class="doc-item__content">
+            <span>Seguro de asistencia en viajes</span>
+          </div>
+          <div class="doc-item__img">
+            <img src="images/carpeta-fondo-gris.png" />
+          </div>
+        </div>
+        <div class="doc-item mb-30">
+          <div class="doc-item__content">
+            <span>Folleto de tarjetas</span>
+          </div>
+          <div class="doc-item__img">
+            <img src="images/carpeta-fondo-gris.png" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-6">
+        <div class="doc-item mb-30">
+          <div class="doc-item__content">
+            <span>Información Normalizada Europea (INE)</span>
+          </div>
+          <div class="doc-item__img">
+            <img src="images/carpeta-fondo-gris.png" />
+          </div>
+        </div>
+        <div class="doc-item mb-30">
+          <div class="doc-item__content">
+            <span>Seguro de accidentes</span>
+          </div>
+          <div class="doc-item__img">
+            <img src="images/carpeta-fondo-gris.png" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="text-center font-small color-gray">Los documentos relacionados con tu tarjeta se guardarán en tu zona Administrar</p>
+  </div>
+</section>
+
+<section>
+  {{ titleMulticolor.title('Recibirás tu ', 'nueva tarjeta', ' en esta dirección', 'pdt-50 pdb-40') }}
+  <div class="address-section">
+    <div class="address-to-send">
+      {{ sendTo.address('Calle Orense 18, 8ºA', '28020 Madrid', 'MADRID - España') }}
+    </div>
+
+    <div class="change-address-form hidden">
+      <div class="form-container">
+        {% include "/includes/_form-address.html" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container container_custom">
+  {{ titleMulticolor.title('Introduce el código que te hemos enviado al móvil para confirmar la contratación de tu ', 'Tarjeta COINC', '', 'pdt-0 pdb-10') }}
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="pd-25">
+        <input id="percentage" type="checkbox" name="optradio" class="radio-square radio-square_extrasmall">
+        <label for="percentage">Declaro que he leído la información Normalizada Europea (INE),
+        el seguro de accidentes, el seguro de asistencia en viajes y el contrato de la tarjeta COINC</label>
+      </div>
+
+      <form class="input-code-form input-code-form_vertical form-inline">
+        <div class="secundary-bg text-center pdt-50 pdb-25">
+          <div class="form-group">
+              <div class="pdb-35">
+                <input class="form-control" type="text" placeholder="Introduce el código">
+              </div>
+                <div class="icon-group">
+                  <img class="icon-sms" src="images/icons/comment-alert.png" alt="SMS"><a href="" >Si no ha llegado el SMS</a>
+                </div>
+          </div>
+        </div>
+        <div class="text-center mb-50">
+          {% import "components/_paginator.html" as paginator %}
+          {{ paginator.set('2','2','mt-80 mb-25') }}
+
+          <div class="buttons-group">
+            <div class="halfcol">
+              <button class="btn btn-default pull-right" type="reset" name="button">Atrás</button>
+            </div>
+            <div class="halfcol">
+              <button class="btn btn-primary pull-left" type="submit" name="button">Enviar y contratar</button>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="advantages pdb-50">
+  <p class="advantages__legal">
+    Financiación ofrecida por Bankinter Conumer Finance EFC., SA., Establecimiento
+    Financiero de Crédito inscrito en el Banco de España bajo el nº8832 con
+    domicilio social en Avda. de Bruselas 12 28108 Alcobendas Madrid e inscrita
+    en el Registro Mercantil de Madrid al Tomo 22.729, Folio 181, Hoja número
+    M-259543 y con CIF número A82650672.
+  </p>
 </section>
 
 {% endblock %}
