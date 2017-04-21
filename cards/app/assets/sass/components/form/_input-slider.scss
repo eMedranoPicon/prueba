@@ -17,25 +17,21 @@
       cursor: pointer;
       background-color: $colorGray-300;
       background-image: none;
-      -webkit-box-shadow: inset 0 1px 2px rgba($colorBlack, 0.1);
-      -moz-box-shadow: inset 0 1px 2px rgba($colorBlack, 0.1);
-      box-shadow: inset 0 1px 2px rgba($colorBlack, 0.1);
+      @include box-shadow-mixin(0, 1px, 2px, rgba($colorBlack, 0.1), "inset");
       @include border-radius(4px);
     }
+
     .slider-selection {
       height: 8px;
       top: 0;
       bottom: 0;
       position: absolute;
       background: $colorGreen-500;
-      -webkit-box-shadow: inset 0 -1px 0 rgba($colorBlack, 0.15);
-      -moz-box-shadow: inset 0 -1px 0 rgba($colorBlack, 0.15);
-      box-shadow: inset 0 -1px 0 rgba($colorBlack, 0.15);
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
+      @include box-shadow-mixin(0, -1px, 0, rgba($colorBlack, 0.15), "inset");
+      @include box-sizing(border-box);
       @include border-radius(4px);
     }
+
     .slider-handle {
       margin-left: -10px;
       margin-top: -5px;
@@ -44,19 +40,19 @@
       width: 15px;
       height: 15px;
       background: $colorWhite;
-      -webkit-box-shadow: 0px 0px 0px $colorWhite inset, 0px 4px 3px $colorGray-400;
-      -moz-box-shadow: 0px 0px 0px $colorWhite inset, 0px 4px 3px $colorGray-400;
-      box-shadow: 0px 0px 0px $colorWhite inset, 0px 4px 3px $colorGray-400;
-      border: 0px solid transparent;
+      @include box-shadow-mixin(0, 4px, 3px, $colorGray-400);
+      border: 0 solid transparent;
 
       .round {
         @include border-radius(20px);
       }
     }
   }
+
   input {
     display: none;
   }
+
   .tooltip-inner {
     white-space: nowrap;
   }
@@ -83,9 +79,9 @@
   text-align: center;
   font-family: $font-akkurat;
 
-	.number-slider {
-		position: relative;
-		color: $colorGray-450;
+  .number-slider {
+    position: relative;
+    color: $colorGray-450;
     width: 60px;
     margin: 0 auto 14px;
 
@@ -94,40 +90,43 @@
       width: 60px;
       height: 36px;
       padding: 0;
-      margin: 1px;;
+      margin: 1px;
       font-weight: bold;
       background-color: transparent;
       font-size: 25px;
       text-align: center;
       border: 1px solid $colorGray-400;
     }
-		.symbol-medium {
+
+    .symbol-medium {
       position: absolute;
       top: 8px;
       right: -22px;
       font-size: 18px;
-		}
-	}
-	.top-value {
-		padding: 0 10px;
-		font-size: 14px;
+    }
+  }
+
+  .top-value {
+    padding: 0 10px;
+    font-size: 14px;
     color: $colorGray-450;
-	}
+  }
 }
 
 .slider-percentage {
-	height: 50px;
-	width: 385px;
-	text-align: center;
-	border: 2px solid $colorGreen-500;
-	color: $colorGray-400;
-	background-color: $colorGray-200;
-	margin: 30px 0 35px;
+  height: 50px;
+  width: 385px;
+  text-align: center;
+  border: 2px solid $colorGreen-500;
+  color: $colorGray-400;
+  background-color: $colorGray-200;
+  margin: 30px 0 35px;
 }
 
 .final-prestamo {
-	display: none;
-	i {
-		padding-top: 15px;
-	}
+  display: none;
+
+  i {
+    padding-top: 15px;
+  }
 }
