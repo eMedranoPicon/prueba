@@ -1,0 +1,31 @@
+.doc-item {
+  position: relative;
+  height: 94px;
+}
+
+.doc-item__content {
+  height: 100%;
+  padding-right: 132px;
+  padding-left: 35px;
+  background-color: $colorGray-200;
+  &:before {
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+    content: "";
+  }
+  span {
+    display: inline-block;
+    max-width: 278px;
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+  }
+}
+
+.doc-item__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
