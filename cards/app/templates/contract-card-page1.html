@@ -1,4 +1,5 @@
 {% import "/components/_title-text-multicolor.html" as textBlock %}
+{% import "/components/_paginator.html" as paginator %}
 
 {% extends "/base/_base.html" %}
 
@@ -8,5 +9,20 @@
 </section>
 
 {% include "/includes/_select-payment.html" %}
+
+<div class="secundary-bg text-center pdt-70 pdb-100">
+  {% include "/components/_input-slider.html" %}
+  {{ paginator.set('1','2','mt-50 mb-20') }}
+  <button class="btn btn-primary" type="submit" name="button">Continuar</button>
+  <p class="clarification mt-70">
+    Las cantidades aplazadas reducen el límite de su tarjeta en los siguientes
+    meses hasta su pago total.
+  </p>
+  <p class="clarification">
+    El tipo de interés nominal que se aplica en
+    el pago aplazado, es el marcado en el contrato de tu tarjeta de crédito que
+    puedes consultar en <a href="#">Contratos y notificaciones de la web.</a>
+  </p>
+</div>
 
 {% endblock %}
