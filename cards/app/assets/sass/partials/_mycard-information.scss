@@ -75,8 +75,10 @@
     position: relative;
     background-color: $colorGray-225;
     color: $colorGray-600;
-    margin: 0;
     padding: 20px 80px 20px 30px;
+    p {
+      margin: 0;
+    }
   }
   &__conditions-description-close {
     position: absolute;
