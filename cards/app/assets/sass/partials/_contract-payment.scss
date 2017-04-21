@@ -1,0 +1,11 @@
+.clarification {
+  max-width: 673px;
+  margin: 0 auto 4px;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.3;
+  color: $colorGray-400;
+  > a {
+    text-decoration: underline;
+  }
+}
