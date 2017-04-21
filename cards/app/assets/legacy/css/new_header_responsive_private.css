@@ -1,0 +1,90 @@
+#dashboard .header {
+    background-color: #000;
+}
+#dashboard .header img.logotipo_dashboard {
+    float: left;
+    padding: 23px 0 22px 0;
+    height: auto;
+}
+
+
+#dashboard .header .caja_usuario {
+    float: right;
+}
+
+#dashboard .header .marco_circular {
+    float: right;
+    width: 55px;
+    height: 55px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 9999;
+    border: 2px solid #FFF;
+    margin-top: 11px;
+}
+#dashboard .header .marco_circular img {
+    z-index: 1;
+    width: 55px;
+    height: 55px;
+}
+
+#dashboard .header .caja_usuario .datos_usuario {
+    float: right;
+    width: auto;
+    text-align: right;
+    margin-top: 12px;
+    margin-right: 13px;
+    margin-bottom: 10px;
+}
+#dashboard .header .caja_usuario .datos_usuario p {
+    font-family: AkkuratStd;
+    font-size: 12px;
+    color: white;
+    text-transform: uppercase;
+    text-align: right;
+    margin-bottom: 0;
+}
+
+#dashboard .botondashboard {
+    font-weight: normal;
+    font-family: AkkuratStd;
+    color: #fff;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: solid 1px #fff;
+    cursor: pointer;
+    width: auto;
+    background-color: transparent;
+}
+#dashboard .botondashboard.p {
+    font-size: 12px;
+    padding: 5px 10px 5px 10px;
+    line-height: normal;
+}
+#dashboard .botondashboard.head {
+    border: 1px solid #c3c2b3;
+    color: #FFF;
+    text-transform: inherit;
+}
+#dashboard .botondashboard.head:hover {
+    color: #313131;
+    border: 1px solid #FFF;
+    background-color: #FFF;
+}
+#dashboard .botondashboard.head:focus {
+    outline: 0;
+}
+
+.margin10_l {
+    margin-left: 10px;
+}

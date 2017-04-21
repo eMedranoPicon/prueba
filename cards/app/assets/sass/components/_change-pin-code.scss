@@ -1,5 +1,7 @@
 .text-change-pin {
-  > p {
+  p {
+    color: $colorDarkGray;
+    font-size: 14px;
     font-weight: $font-light;
   }
   &__link {
