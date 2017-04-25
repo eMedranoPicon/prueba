@@ -1,10 +1,11 @@
 {% import "/components/_title-text-multicolor.html" as textBlock %}
 {% import "/components/_input-slider.html" as slider %}
 {% import "/components/_paginator.html" as paginator %}
-
+{% import "components/_progress-step-bar.html" as progressStepBar %}
 {% extends "/base/_base.html" %}
 
 {% block content %}
+{{ progressStepBar.bar(2, 1) }}
 <section class="secundary-bg">
   {{ textBlock.text('Paga como quieras ', 'sin comisión', 'Elige la forma de pago que prefieras', '') }}
 </section>
