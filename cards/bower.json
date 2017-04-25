@@ -25,7 +25,8 @@
     "bootstrap-sass-official": "~3.3.4",
     "jQuery.mmenu": "5.3.1",
     "jquery-ui": "1.11",
-    "seiyria-bootstrap-slider": "^9.7.3"
+    "seiyria-bootstrap-slider": "^9.7.3",
+    "highcharts": "^5.0.10"
   },
   "dependencies": {
     "html5shiv": "~3.7.3"
