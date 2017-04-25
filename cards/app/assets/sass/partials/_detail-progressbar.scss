@@ -79,20 +79,28 @@
   footer {
     margin-top: 80px;
     #{$main}__btn {
+      margin-left: 10px;
+      margin-right: 10px;
       &_change {
-        min-width: 260px;
+        min-width: 235px;
       }
       &_pin {
-        min-width: 135px;
+        min-width: 130px;
       }
       &_card {
-        min-width: 200px;
+        min-width: 180px;
       }
       &_wallet {
-        min-width: 135px;
+        min-width: 120px;
       }
       &_shops {
-        min-width: 165px;
+        min-width: 160px;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
       }
     }
   }
