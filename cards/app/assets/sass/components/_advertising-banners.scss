@@ -21,28 +21,26 @@
     display: inline-block;
     vertical-align: middle;
   }
-  &--right {
-    float: right;
-    position: relative;
-    top: 14%;
-  }
-  &--left {
-    float: left;
-    position: relative;
-    top: 14%;
-    margin-left: 20px;
-  }
-  &__image--right {
+  &__image_right {
     background-image: url(../images/icons/discount-card.png);
     background-repeat: no-repeat;
     background-position: left;
   }
-  &__image--left {
+  &__image_left {
     background-image: url(../images/icons/card-amazon.png);
     background-repeat: no-repeat;
     background-position: 113% 50%;
   }
   &__content {
+    &_right {
+      float: right;
+      margin-top: 14px;
+    }
+    &_left {
+      float: left;
+      margin-top: 14px;
+      margin-left: 20px;
+    }
     display: inline-block;
     width: 70%;
     text-align: left;
