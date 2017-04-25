@@ -45,6 +45,9 @@
     margin: 18px 0;
     font-size: 12px;
     background: url("../images/icons/lock-open-white.png") no-repeat 28px center;
+    &:hover {
+      background-image: url("../images/icons/lock-open-green.png");
+    }
   }
   &__data {
     font-weight: $font-bold;
