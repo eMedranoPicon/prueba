@@ -1,0 +1,12 @@
+<div class="chart-container">
+  <div id="point-chart" class="chart"></div>
+  <table class="chart__data">
+    {% for MES in POINT_CHART %}
+      <tr>
+        <td>{{ MES.MES }}</td>
+        <td>{{ MES.PREVISTO }}</td>
+        <td>{{ MES.GASTADO }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</div>
