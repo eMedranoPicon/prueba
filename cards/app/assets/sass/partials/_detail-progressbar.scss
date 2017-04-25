@@ -1,8 +1,9 @@
 .detail-progressbar {
-  display: inline-block;
-  max-width: 545px;
-  width: 100%;
+  $main: ".detail-progressbar";
+  position: relative;
   header {
+    max-width: 545px;
+    width: 100%;
     display: inline-block;
     h2 {
       display: inline-block;
@@ -18,11 +19,32 @@
         color: $colorGreen-500;
       }
     }
+    #{$main}__btn {
+      float: right;
+      padding-left: 30px;
+      padding-right: 10px;
+      background: url("../images/icons/lock-open-white.png") no-repeat 28px center;
+      margin: 18px 0;
+      &:hover {
+        background-color: $colorWhite;
+        background-image: url("../images/icons/lock-open-green.png");
+      }
+    }
   }
   .progress {
     background-color: $colorWhite;
     margin-top: 30px;
     margin-bottom: 8px;
+  }
+  &__content {
+    display: inline-block;
+    max-width: 545px;
+    width: 100%;
+  }
+  &__card {
+    position: absolute;
+    top: 15px;
+    right: 0;
   }
   &__amount {
     display: inline-block;
@@ -38,16 +60,10 @@
     }
   }
   &__btn {
-    float: right;
     min-width: 158px;
-    padding-left: 30px;
-    padding-right: 10px;
-    margin: 18px 0;
     font-size: 12px;
-    background: url("../images/icons/lock-open-white.png") no-repeat 28px center;
-    &:hover {
-      background-image: url("../images/icons/lock-open-green.png");
-    }
+    padding-left: 15px;
+    padding-right: 15px;
   }
   &__data {
     font-weight: $font-bold;
@@ -58,6 +74,26 @@
     &-used {
       font-weight: 20px;
       color: $colorGreen-500;
+    }
+  }
+  footer {
+    margin-top: 80px;
+    #{$main}__btn {
+      &_change {
+        min-width: 260px;
+      }
+      &_pin {
+        min-width: 135px;
+      }
+      &_card {
+        min-width: 200px;
+      }
+      &_wallet {
+        min-width: 135px;
+      }
+      &_shops {
+        min-width: 165px;
+      }
     }
   }
 }
