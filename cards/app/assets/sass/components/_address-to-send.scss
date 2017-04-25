@@ -9,12 +9,17 @@
   button {
     margin: 20px 10px 50px;
   }
+  .change-address-form button {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   .form-container {
     background-color: $colorGray-300;
     padding: 70px 0;
     margin-bottom: 50px;
   }
 }
+
 
 .address {
   background-color: $colorGray-300;

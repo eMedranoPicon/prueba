@@ -2,10 +2,11 @@
 {% import "/components/_title-multicolor.html" as titleMulticolor %}
 {% import "/components/_address-to-send.html" as sendTo %}
 {% import "/components/_info-card-payment.html" as infoCard %}
-
+{% import "components/_progress-step-bar.html" as progressStepBar %}
 {% extends "/base/_base.html" %}
 
 {% block content %}
+{{ progressStepBar.bar(2, 2) }}
 <section class="secundary-bg">
   {{ textBlock.text('Estás a punto de contratar tu ', 'tarjeta COINC', 'Aquí tienes un resumen de las condiciones de tu tarjeta:', '') }}
   {% include "/components/_info-card-payment.html" %}
@@ -96,7 +97,7 @@
         <div class="secundary-bg text-center pdt-50 pdb-25">
           <div class="form-group">
               <div class="pdb-35">
-                <input class="form-control" type="text" placeholder="Introduce el código">
+                <input class="form-control m-reset" type="text" placeholder="Introduce el código">
               </div>
                 <div class="icon-group">
                   <img class="icon-sms" src="images/icons/comment-alert.png" alt="SMS"><a href="" >Si no ha llegado el SMS</a>

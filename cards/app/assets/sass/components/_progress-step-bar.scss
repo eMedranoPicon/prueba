@@ -1,0 +1,23 @@
+.progress-step-bar {
+  @include clearfix;
+  width: 100%;
+  height: 3px;
+  background-color: $colorGray-200;
+}
+
+.progress-step-block {
+  height: 3px;
+  float: left;
+  &_active {
+    background-color: $colorGreen-500;
+  }
+}
+.progress-step-bar_2 .progress-step-block {
+  width: 50%;
+}
+.progress-step-bar_3 .progress-step-block {
+  width: 33.33333%;
+}
+.progress-step-bar_4 .progress-step-block {
+  width: 25%;
+}
