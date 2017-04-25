@@ -1,12 +1,40 @@
 .progress {
+  background-color: $colorGray-100;
+  box-shadow: none;
+  > .progress-bar {
+    background: $colorGreen-500;
+  }
+  .progress__caret {
+    display: inline-block;
+    &_type_triangle {
+      @include rotate(45deg);
+      background: $colorGreen-500;
+    }
+  }
   &_weight_small {
     box-shadow: none;
-    background-color: $colorGray-100;
     height: 8px;
   }
   &_start_right {
     > .progress-bar {
       float: right;
+      text-align: left;
     }
   }
+  &_radius_none {
+    &,
+    .progress-bar {
+      border-radius: 0;
+    }
+  }
+  &_size_45 {
+    height: 45px;
+    .progress__caret {
+      width: 45px;
+      height: 45px;
+      margin-left: -13px;
+      margin-right: -13px;
+    }
+  }
+  
 }
