@@ -1,0 +1,7 @@
+{% macro bar(steps, active) %}
+<div class="progress-step-bar progress-step-bar_{{ steps }}">
+  {% for number in range(steps) %}
+    <div class="progress-step-block {% if number < active %}progress-step-block_active{% endif %}"></div>
+  {% endfor %}
+</div>
+{% endmacro %}

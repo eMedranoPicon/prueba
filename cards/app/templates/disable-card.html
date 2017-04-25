@@ -3,9 +3,11 @@
 {% import "/components/_address-to-send.html" as sendTo %}
 {% import "components/_paginator.html" as paginator %}
 {% import "components/_title-multicolor.html" as titleMulticolor %}
+{% import "components/_progress-step-bar.html" as progressStepBar %}
 {% extends "/base/_base.html" %}
 
 {% block content %}
+  {{ progressStepBar.bar(2, 1) }}
   {{ cardInfo.content('pdt-45 pdb-45', 'YOLANDA ALONSO', '4966,43**.***.4006', 'BLOQUEAR MI TARJETA') }}
   {{ titleMulticolor.title('Indica el', 'motivo','') }}
   {{ textBlock.text('pdt-30 pdb-30', 'Por favor, indica por qué quieres bloquear tu tarjeta.') }}
