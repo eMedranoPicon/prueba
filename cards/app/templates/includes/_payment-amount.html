@@ -1,0 +1,15 @@
+{% import "/components/_input-slider.html" as slider %}
+
+<div class="payment-amount pdt-40 pdb-40">
+  <h3 class="payment-amount__title">Elige cuánto y cómo quieres pagar:</h2>
+  <div class="payment-amount__content-left">
+    <h4>Límite de la tarjeta</h4>
+    <p>
+      Tu límite actual es 1000 €.<br>
+      Indica la cantidad que te gustaría tener
+    </p>
+  </div>
+  <div class="payment-amount__content-right">
+    {{ slider.slider(0, 1000, 700, 1, '€', '', 'amountSlider', 'yes') }}
+  </div>
+</div>
