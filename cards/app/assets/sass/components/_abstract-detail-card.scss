@@ -1,9 +1,9 @@
 .abstract-detail-card {
-  $main: &;
+  $main: ".abstract-detail-card";
   display: inline-block;
   width: 100%;
   background-color: $colorWhite;
-  padding: 20px 0 7px;
+  padding: 15px 0 7px;
   border: 1px solid $colorGray-150;
   border-bottom: 1px solid $colorGray-325;
   &:focus,
@@ -44,6 +44,7 @@
     }
   }
   &__value {
+    font-size: 14px;
     font-weight: $font-bold;
     color: $colorBlueGray-300;
     text-align: right;
@@ -63,6 +64,9 @@
   }
   .progress {
     margin-bottom: 10px;
+    .progress-bar {
+      background: $colorGreen-500;
+    }
   }
   footer {
     background: url("../images/icons/calendar-gray.png") no-repeat 20px top;

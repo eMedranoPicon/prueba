@@ -1,0 +1,38 @@
+{% import "/components/_text-green-block.html" as textBlock %}
+{% import "/components/_card-info.html" as cardInfo %}
+{% import "/components/_address-to-send.html" as sendTo %}
+{% import "components/_paginator.html" as paginator %}
+{% import "components/_title-multicolor.html" as titleMulticolor %}
+{% import "components/_progress-step-bar.html" as progressStepBar %}
+{% extends "/base/_base.html" %}
+
+{% block content %}
+  {{ progressStepBar.bar(2, 1) }}
+  {{ cardInfo.content('pdt-45 pdb-45', 'YOLANDA ALONSO', '4966,43**.***.4006', 'MI TARJETA NO FUNCIONA') }}
+  {{ titleMulticolor.title('Dirección de', 'envío','') }}
+  {{ textBlock.text('pdt-30 pdb-30', 'En un plazo de 00 días recibirás tu nueva tarjeta <br/>en esta dirección') }}
+  <section class="address-section">
+    <div class="address-to-send">
+      {{ sendTo.address('Calle Orense 18, 8ºA', '28020 Madrid', 'MADRID - España') }}
+    </div>
+
+    <div class="change-address-form hidden">
+      <div class="form-container">
+        {% include "/includes/_form-address.html" %}
+      </div>
+    </div>
+
+    {{ paginator.set('1','2','') }}
+
+    <div class="container container_custom text-center">
+      <div class="clearfix">
+        <div class="halfcol">
+          <button class="btn btn-default pull-right" type="reset" name="button">Cancelar</button>
+        </div>
+        <div class="halfcol">
+          <button class="btn btn-primary pull-left" type="submit" name="button">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
