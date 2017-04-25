@@ -19,6 +19,12 @@
     background-color: $brand-primary;
     border-color: $brand-primary;
   }
+  &_color_white {
+    &, &:not(:hover):focus {
+      color: $colorWhite;
+      border-color: $colorWhite;
+    }
+  }
 }
 
 .btn-primary {
