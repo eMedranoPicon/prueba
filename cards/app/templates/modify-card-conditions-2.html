@@ -1,4 +1,9 @@
+{% import "components/_progress-step-bar.html" as progressStepBar %}
+{% import "/components/_card-info.html" as cardInfo %}
+
 {% extends "/base/_base.html" %}
 
 {% block content %}
+  {{ progressStepBar.bar(2, 2) }}
+  {{ cardInfo.content('pdt-45 pdb-45', 'YOLANDA ALONSO', '4966,43**.***.4006', 'CAMBIAR LÍMITES Y FORMA DE PAGO DE TU TARJETA') }}
 {% endblock %}
