@@ -29,6 +29,7 @@
               alert.hide();
               slider.bootstrapSlider("setValue", currentValue, true);
             } else {
+              value.css({'border-color': 'red'});
               alert.show();
             }
           });
@@ -51,6 +52,33 @@
           }
       });
     },
+    _selectPaidForm: function ( ) {
+      $('input[type=radio][name=payform]').change(function() {
+        switch (this.value) {
+          case 'percentage':
+            $('.slider-content').addClass('other-bg');
+            $('.slider-content').find('.clarification').removeClass('hidden');
+            $("#quantitySlider").fadeOut(500, function ( ) {
+              $("#percentageSlider").fadeIn(500);
+            });
+            break;
+          case 'cash':
+            $('.slider-content').removeClass('other-bg');
+            $('.slider-content').addClass('alternate-bg');
+            $('.slider-content').find('.clarification').addClass('hidden');
+            $("#percentageSlider").fadeOut(500);
+            $("#quantitySlider").fadeOut(500);
+            break;
+          case 'quantity':
+            $('.slider-content').addClass('other-bg');
+            $('.slider-content').find('.clarification').removeClass('hidden');
+            $("#percentageSlider").fadeOut(500, function ( ) {
+              $("#quantitySlider").fadeIn(500);
+            });
+            break;
+        }
+      });
+    },
     _closeButtons : function ( ) {
       $("[data-close]").close();
     },
@@ -59,6 +87,7 @@
       this._initSliders();
       this._contractCardSelectPaymentMethod();
       this._closeButtons();
+      this._selectPaidForm();
     }
   };
 
