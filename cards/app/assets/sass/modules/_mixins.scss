@@ -430,3 +430,8 @@
 @mixin transition-easy($all: all, $time: 1s, $animation: ease) {
   @include css3-prefix(transition, $all $time $animation);
 }
+
+@mixin aspect-ratio($x, $y) {
+  width: 100%;
+  padding-bottom : $y/($x/100%);
+}
