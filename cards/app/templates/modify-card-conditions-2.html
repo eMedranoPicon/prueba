@@ -1,9 +1,11 @@
 {% import "components/_progress-step-bar.html" as progressStepBar %}
 {% import "/components/_card-info.html" as cardInfo %}
+{% import "components/_input-pin-code.html" as inputCode %}
 
 {% extends "/base/_base.html" %}
 
 {% block content %}
   {{ progressStepBar.bar(2, 2) }}
   {{ cardInfo.content('pdt-45 pdb-45', 'YOLANDA ALONSO', '4966,43**.***.4006', 'CAMBIAR LÍMITES Y FORMA DE PAGO DE TU TARJETA') }}
+  {{ inputCode.content('pdt-40 pdb-60', 'true', 'enviar y cambiar', 'Para continuar introduce el código que hemos enviado a tu móvil') }}
 {% endblock %}

@@ -1,4 +1,10 @@
 .input-code-form {
+  .title {
+    font-size: 28px;
+    padding-left: 13px;
+    font-weight: $font-bold-400;
+    color: $colorGray-750;
+  }
   input {
     width: 150px;
     margin-right: 10px;
