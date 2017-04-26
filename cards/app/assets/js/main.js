@@ -10,7 +10,7 @@
         var el = $(this),
             slider = $(".slider-percentage", el).bootstrapSlider({}),
             value = $(".value-percentage", el),
-            alert = $(".alert-percentage");
+            alert = $(".alert-percentage", el);
 
         slider
           .on("slide", function ( slideEvt ) {
@@ -18,6 +18,7 @@
           })
           .on("slideStop", function ( ) {
             alert.hide();
+            value.removeClass('error-value-percentage');
           });
 
           value.on("blur", function ( ) {
@@ -27,9 +28,10 @@
 
             if ( currentValue >= minValue && currentValue <= maxValue ) {
               alert.hide();
+              value.removeClass('error-value-percentage');
               slider.bootstrapSlider("setValue", currentValue, true);
             } else {
-              value.css({'border-color': 'red'});
+              value.addClass('error-value-percentage');
               alert.show();
             }
           });
@@ -53,30 +55,39 @@
       });
     },
     _selectPaidForm: function ( ) {
+      var contentSlider = $('.slider-content'),
+          quantitySlider = $("#quantitySlider"),
+          percentageSlider = $("#percentageSlider"),
+          informativeBlock = $(".clarification"),
+          fadeDuration = 500;
+
       $('input[type=radio][name=payform]').change(function() {
-        switch (this.value) {
-          case 'percentage':
-            $('.slider-content').addClass('other-bg');
-            $('.slider-content').find('.clarification').removeClass('hidden');
-            $("#quantitySlider").fadeOut(500, function ( ) {
-              $("#percentageSlider").fadeIn(500);
-            });
-            break;
-          case 'cash':
-            $('.slider-content').removeClass('other-bg');
-            $('.slider-content').addClass('alternate-bg');
-            $('.slider-content').find('.clarification').addClass('hidden');
-            $("#percentageSlider").fadeOut(500);
-            $("#quantitySlider").fadeOut(500);
-            break;
-          case 'quantity':
-            $('.slider-content').addClass('other-bg');
-            $('.slider-content').find('.clarification').removeClass('hidden');
-            $("#percentageSlider").fadeOut(500, function ( ) {
-              $("#quantitySlider").fadeIn(500);
-            });
-            break;
+
+        if (this.value === 'percentage') {
+          contentSlider.find('.clarification').fadeIn(fadeDuration);
+          quantitySlider.fadeOut(fadeDuration, function ( ) {
+            contentSlider.addClass('terciary-bg', fadeDuration);
+            percentageSlider.fadeIn(fadeDuration);
+            informativeBlock.fadeIn(fadeDuration);
+          });
+          return;
         }
+
+        if (this.value === 'quantity') {
+          contentSlider.find('.clarification').fadeIn(fadeDuration);
+          percentageSlider.fadeOut(fadeDuration, function ( ) {
+            contentSlider.addClass('terciary-bg', fadeDuration);
+            quantitySlider.fadeIn(fadeDuration);
+            informativeBlock.fadeIn(fadeDuration);
+          });
+          return;
+        }
+
+        contentSlider.find('.clarification').fadeOut(fadeDuration);
+        contentSlider.removeClass('terciary-bg', fadeDuration);
+        percentageSlider.fadeOut(fadeDuration);
+        quantitySlider.fadeOut(fadeDuration);
+
       });
     },
     _closeButtons : function ( ) {

@@ -1,18 +1,10 @@
 .paid-form {
   background-color: $colorWhite;
   text-align: center;
-  .container {
-    width: 60%;
-  }
-  &__container {
-    display: inline-block;
-    padding: 59px 0;
-    position: relative;
-    .title {
-      font-size: 21px;
-      color: $colorBlueGray-300;
-      font-weight: $font-bold;
-    }
+  .title {
+    font-size: 21px;
+    color: $colorBlueGray-300;
+    font-weight: $font-bold;
   }
   &__option {
     text-align: left;
@@ -34,5 +26,11 @@
   &__explanation {
     font-size: 18px;
     padding-left: 26px;
+  }
+}
+.slider-content {
+  background-color: $colorWhite;
+  .clarification {
+    display: none;
   }
 }

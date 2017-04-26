@@ -78,6 +78,7 @@
   }
 }
 
+
 .input-slider {
   text-align: center;
   font-family: $font-akkurat;
@@ -87,6 +88,9 @@
     color: $colorGray-450;
     width: 60px;
     margin: 0 auto 14px;
+    .error-value-percentage {
+      border-color: $colorDanger;
+    }
 
     > input {
       color: $colorGray-450;

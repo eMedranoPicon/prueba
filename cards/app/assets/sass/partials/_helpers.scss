@@ -268,6 +268,9 @@
 
 // OTHERS
 
+.pdl-110 {
+  padding-left: 110px !important;
+}
 .pd-25 {
   padding: 25px !important;
 }
@@ -302,10 +305,10 @@
   background-color: $colorGray-200;
 }
 
-.alternate-bg {
-  background-color: $colorWhite;
+.terciary-bg {
+  background-color: $colorGray-300 !important;
 }
 
-.other-bg {
-  background-color: $colorGray-300;
+.alternate-bg {
+  background-color: $colorWhite;
 }
