@@ -1,2 +1,5 @@
+import context_vars.detailcard as detail
 def get_context_list():
-    return []
+    return [
+      ('card-detail.html', detail.get)
+    ]
