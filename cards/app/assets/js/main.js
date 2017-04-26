@@ -60,12 +60,16 @@
         pointChart(chart);
       }
     },
+    _timeline: function ( ) {
+      $('.timeline').accordionSoft();
+    },
     init : function ( ) {
       this._addressForm();
       this._initSliders();
       this._contractCardSelectPaymentMethod();
       this._closeButtons();
       this._initChart();
+      this._timeline();
     }
   };
 

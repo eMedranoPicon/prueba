@@ -1,0 +1,114 @@
+<div id="st-accordion" class="content timeline bg-secondary st-accordion">
+	<ul>
+	{% for MONTH in TIMELINE %}
+		{% set outer_loop = loop %}
+		<li class="month">
+			<div class="header-accordion">
+				<span>{{ MONTH.MES }}</span>
+			</div>
+			<div class="container {% if not loop.first %} slideup {% else %} slidedown {% endif %} st-content">
+
+				<div class="rows-container container">
+
+					<div class="timelineBar"></div>
+					<div class="row fila primera">
+						<div class="header-timeline">{{ MONTH.MES }}</div>
+					</div>
+
+					{% for MOVIMIENTO in MONTH.MOVIMIENTOS %}
+				    <div class="row fila">
+				    	<div class="timelineDot {% if MOVIMIENTO.GASTO %} gasto {% endif %}"></div>
+						{% if MOVIMIENTO.GASTO %}
+				        	<div class="col-xs-6  gasto textTimeline">{{ MOVIMIENTO.DATE }}</div>
+						{% endif %}
+						{% if MOVIMIENTO.GASTO %}
+							<div class="col-xs-6 movement-gasto">
+								<div class="movement-container">
+						            <div class="content-timeline gasto">
+										<div class="text-container gasto">
+											<span class="text">{{ MOVIMIENTO.TEXT }}</span>
+										</div>
+										<div class="price-container gasto">
+											-<span class="number">{{ MOVIMIENTO.NUMBER }},</span><span class="decimal">{{ MOVIMIENTO.DECIMAL }}€</span>
+										</div>
+						            </div>
+									<div class="button-details">
+										<div class="dot"></div>
+										<div class="dot second"></div>
+										<div class="dot third"></div>
+									</div>
+								</div>
+							</div>
+						{% else %}
+							<div class="col-xs-6 movement-ingreso">
+								<div class="movement-container left">
+									<div class="button-details">
+										<div class="dot"></div>
+										<div class="dot second"></div>
+										<div class="dot third"></div>
+									</div>
+									<div class="content-timeline ingreso">
+										<div class="text-container">
+											<span class="text">{{ MOVIMIENTO.TEXT }}</span>
+										</div>
+										<div class="price-container">
+											<span class="number">{{ MOVIMIENTO.NUMBER }},</span><span class="decimal">{{ MOVIMIENTO.DECIMAL }}€</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						{% endif %}
+						{% if not MOVIMIENTO.GASTO %}
+			        		<div class="col-xs-6  textTimeline">{{ MOVIMIENTO.DATE }}</div>
+						{% endif %}
+
+						<div class="module modules-container slideup {% if MOVIMIENTO.GASTO %} right {% endif %}">
+							<div class="flip-container">
+								<div class="flipper">
+									{% if not MOVIMIENTO.PRESTAMO %}
+										<div class="module-content receipt-detail-container front active">
+											{% with texto = MOVIMIENTO.TEXT, count = loop.index, outer_count = outer_loop.index %}
+											{% include '/includes/modules/_receipt_details.html' %}
+											{% endwith %}
+										</div>
+									{% else %}
+										<div class="module-content prestamo-detail-container front active">
+											{% with texto = MOVIMIENTO.TEXT, count = loop.index, outer_count = outer_loop.index %}
+											{% include '/includes/modules/_prestamo_details.html' %}
+											{% endwith %}
+										</div>
+									{% endif %}
+
+									<div class="module-content alerts-container hidden {% if MOVIMIENTO.PRESTAMO %} prestamo {% endif %}">
+										{% with counter = loop.index, outer_counter = outer_loop.index %}
+								    	{% include '/includes/modules/_alerts.html' %}
+								    	{% endwith %}
+									</div>
+
+									<div class="module-content devolver-baja-container devolver hidden">
+										{% with texto = MOVIMIENTO.TEXT, type="devolver", count = loop.index, number = MOVIMIENTO.NUMBER, decimal = MOVIMIENTO.DECIMAL %}
+								    	{% include '/includes/modules/_devolver_baja.html' %}
+								    	{% endwith %}
+									</div>
+									<div class="module-content devolver-baja-container baja hidden">
+										{% with texto = MOVIMIENTO.TEXT, type="baja", count = loop.index %}
+										{% include '/includes/modules/_devolver_baja.html' %}
+								    	{% endwith %}
+									</div>
+								</div>
+							</div>
+						</div>
+
+				    </div>
+					{% endfor %}
+				</div>
+				<div class="extra-rows-container">
+					<div class="triangle-container">
+						<span class="triangle"></span>
+					</div>
+				</div>
+			</div>
+		</li>
+	{% endfor %}
+	</ul>
+</div>

@@ -1,0 +1,72 @@
+<div class="timeline">
+	<ul>
+	{% for MONTH in TIMELINE %}
+		{% set outer_loop = loop %}
+
+		<li class="timeline__month-view">
+
+			<div class="month-view__heading">
+				<span>{{ MONTH.MES }}</span>
+			</div>
+
+			<div class="month-view__content" {% if not loop.first %}style="display:none;"{% endif %}>
+
+				<div class="month-view__timeline-bar"></div>
+				<div class="month-view__timeline-bar-beacon">{{ MONTH.MES }}</div>
+
+				{% for MOVIMIENTO in MONTH.MOVIMIENTOS %}
+
+					<div class="bank-note">
+
+						<div class="bank-note__timeline-dot{% if MOVIMIENTO.GASTO %} bank-note__timeline-dot_expense{% endif %}{% if MOVIMIENTO.SUBTEXT %} bank-note__timeline-dot_extended{% endif %}"></div>
+
+						<div class="bank-note__date-block{% if MOVIMIENTO.GASTO %} bank-note__date-block_expense{% endif %}{% if MOVIMIENTO.SUBTEXT %} bank-note__date-block_extended{% endif %}">
+							<span>{{ MOVIMIENTO.DATE }}</span>
+						</div>
+
+						<div class="bank-note__info-block{% if MOVIMIENTO.GASTO %} bank-note__info-block_expense{% endif %}">
+
+							<div class="bank-note__info-block-box{% if MOVIMIENTO.GASTO %} bank-note__info-block-box_expense{% endif %}{% if MOVIMIENTO.SUBTEXT %} bank-note__info-block-box_extended{% endif %}">
+								<div class="bank-note__actions{% if MOVIMIENTO.GASTO %} bank-note__actions_expense{% endif %}">
+									<div class="dot"></div>
+									<div class="dot"></div>
+									<div class="dot"></div>
+								</div>
+								<div class="bank-note__description{% if MOVIMIENTO.GASTO %} bank-note__description_expense{% endif %}">
+
+									{% if MOVIMIENTO.IMAGE %}
+									<span class="img">
+										<img src="{{ MOVIMIENTO.IMAGE }}" />
+									</span>
+									{% endif %}
+									<span class="title">
+										{{ MOVIMIENTO.TEXT }}
+										{% if MOVIMIENTO.SUBTEXT %}
+											<span class="subtitle">
+												{{ MOVIMIENTO.SUBTEXT }}
+											</span>
+										{% endif %}
+									</span>
+									<div class="amount">
+										<span class="">{{ MOVIMIENTO.NUMBER }},</span><span class="decimal">{{ MOVIMIENTO.DECIMAL }}€</span>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				{% endfor %}
+
+				<div class="month-view__timeline-bar-next">
+					<div class="bar-next">
+						<span class="triangle"></span>
+					</div>
+				</div>
+
+			</div>
+
+		</li>
+	{% endfor %}
+	</ul>
+</div>
