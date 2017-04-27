@@ -1,6 +1,19 @@
 (function( $ ) {
   "use strict";
 
+  function slideContainer ( $context ) {
+      var $container = $context.closest('.module');
+      var h = $container.find('.active .module-inner-content').outerHeight() + 12;
+      //$container.find('.active.module-content').height(h);
+      if ($container.hasClass("slideup")) {
+          $container.removeClass("slideup").addClass("slidedown");
+          $container.css('height', h+'px');
+      } else {
+          $container.removeClass("slidedown").addClass("slideup");
+          $container.removeAttr('style');
+      }
+  }
+
   var APP = {
     _addressForm : function ( ) {
       $(".address").addressForm();
@@ -39,16 +52,13 @@
     },
     _contractCardSelectPaymentMethod: function ( ) {
       $('input[type=radio][name=paymode]').change(function() {
-        console.log("Value: " + this.value);
           if (this.value === 'percentage') {
             $("#quantitySlider").fadeOut(500, function ( ) {
-              console.log("complete!");
               $("#percentageSlider").fadeIn(500);
             });
 
           } else {
             $("#percentageSlider").fadeOut(500, function ( ) {
-              console.log("complete2!");
               $("#quantitySlider").fadeIn(500);
             });
           }
@@ -100,7 +110,30 @@
       }
     },
     _timeline: function ( ) {
-      $('.timeline').accordionSoft();
+      var timeline = $('.timeline');
+      timeline.accordionSoft();
+
+      // MODULE PRINCIPAL
+      // DESPLEGAR DETALLES
+      timeline.find('.bank-note__actions')
+        .on('click', function ( e ) {
+          var self = $(this),
+              menuContainer = self.closest('.month-view__content').find('.module'),
+              selfMenu = self.parents('.bank-note').find('.module');
+
+          for (var i=0; i < menuContainer.length; i++){
+            var mc = menuContainer.eq(i);
+            mc.parents('.bank-note').find('.bank-note__actions').removeClass('selected');
+            if(mc.hasClass('slidedown') && !mc.is(selfMenu)) {
+              slideContainer(mc);
+            }
+          }
+          if(selfMenu.hasClass('slideup')) {
+            self.addClass('selected');
+          }
+          slideContainer(selfMenu);
+        });
+
     },
     init : function ( ) {
       this._addressForm();
