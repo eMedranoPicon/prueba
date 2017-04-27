@@ -54,11 +54,18 @@
     _closeButtons : function ( ) {
       $("[data-close]").close();
     },
+    _initChart: function() {
+      var chart = $('.chart-container');
+      if (chart.length) {
+        pointChart(chart);
+      }
+    },
     init : function ( ) {
       this._addressForm();
       this._initSliders();
       this._contractCardSelectPaymentMethod();
       this._closeButtons();
+      this._initChart();
     }
   };
 

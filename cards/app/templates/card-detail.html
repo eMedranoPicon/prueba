@@ -1,4 +1,36 @@
 {% extends "/base/_base.html" %}
 
 {% block content %}
+
+<div class="dark-bg pdt-45 pdb-35">
+  <div class="container container_custom">
+    {% include "/includes/_detailcard-progressbar.html" %}
+  </div>
+</div>
+
+<div class="secundary-bg pdt-65 pdb-65">
+  <div class="container container_custom">
+    {% include "/includes/_detailcard-chart.html" %}
+  </div>
+</div>
+
+<section class="light-bg pdt-35 pdb-35">
+  <div class="container container_custom">
+    <div class="banner banner__image_right">
+      <div class="banner__content banner__content_right">
+        <span class="title">CLUB COINC</span>
+        <span class="subtitle">Encuentra los mejores descuentos para
+          tus compras.</span>
+      </div>
+    </div>
+    <div class="banner banner__image_left">
+      <div class="banner__content banner__content_left">
+        <span class="title">CHEQUE AMAZON</span>
+        <span class="subtitle">Para cualquier compra que realices en la tienda
+            de amazon.es, llévate un 4% de regalo.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}
