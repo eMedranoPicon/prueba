@@ -6,4 +6,25 @@
 {% block content %}
   {{ progressStepBar.bar(2, 2) }}
   {{ cardInfo.content('pdt-45 pdb-45', 'YOLANDA ALONSO', '4966,43**.***.4006', 'CAMBIAR LÍMITES Y FORMA DE PAGO DE TU TARJETA') }}
+  <div class="container container_custom">
+    <div class="summary">
+      <h3>Vas a realizar los siguientes cambios en tu tarjeta de crédito</h3>
+      <div class="limit halfcol">
+        <div class="limit__title">
+          <h4>Límite de la tarjeta</h4>
+        </div>
+        <div class="limit__amount">
+          <span>700 €</span>
+        </div>
+      </div>
+      <div class="method halfcol">
+        <div class="method__title">
+          <h4>Forma de pago</h4>
+        </div>
+        <div class="method__amount">
+          <p><span class="text">Cantidad fija</span><span class="number">135 €</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

@@ -1,0 +1,48 @@
+.summary {
+  text-align: center;
+  h3 {
+    font-size: 34px;
+    margin: 71px 0 75px;
+  }
+  .limit {
+    height: 200px;
+    &__title {
+      > h4 {
+        font-size: 28px;
+        margin-top: 16px;
+      }
+    }
+    &__amount {
+      margin: 33px 0 0 10px;
+      > span {
+        font-size: 34px;
+        color: $colorGreen-500;
+      }
+    }
+  }
+  .method {
+    height: 200px;
+    &__title {
+      margin-left: 8px;
+      > h4 {
+        font-size: 28px;
+        margin-top: 16px;
+      }
+    }
+    &__amount {
+      margin: 33px 12px 0 0;
+      .text {
+        margin: 0 34px 0 0;
+        font-size: 28px;
+        color: $colorBlack;
+        font-weight: $font-light;
+      }
+      .number {
+        vertical-align: top;
+        font-size: 34px;
+        color: $colorGreen-500;
+        font-weight: $font-regular;
+      }
+    }
+  }
+}
