@@ -10,7 +10,7 @@
         var el = $(this),
             slider = $(".slider-percentage", el).bootstrapSlider({}),
             value = $(".value-percentage", el),
-            alert = $(".alert-percentage");
+            alert = $(".alert-percentage", el);
 
         slider
           .on("slide", function ( slideEvt ) {
@@ -18,6 +18,7 @@
           })
           .on("slideStop", function ( ) {
             alert.hide();
+            value.removeClass('error-value-percentage');
           });
 
           value.on("blur", function ( ) {
@@ -27,8 +28,10 @@
 
             if ( currentValue >= minValue && currentValue <= maxValue ) {
               alert.hide();
+              value.removeClass('error-value-percentage');
               slider.bootstrapSlider("setValue", currentValue, true);
             } else {
+              value.addClass('error-value-percentage');
               alert.show();
             }
           });
@@ -51,6 +54,42 @@
           }
       });
     },
+    _selectPaidForm: function ( ) {
+      var contentSlider = $('.slider-content'),
+          quantitySlider = $("#quantitySlider"),
+          percentageSlider = $("#percentageSlider"),
+          informativeBlock = $(".clarification"),
+          fadeDuration = 500;
+
+      $('input[type=radio][name=payform]').change(function() {
+
+        if (this.value === 'percentage') {
+          contentSlider.find('.clarification').fadeIn(fadeDuration);
+          quantitySlider.fadeOut(fadeDuration, function ( ) {
+            contentSlider.addClass('terciary-bg', fadeDuration);
+            percentageSlider.fadeIn(fadeDuration);
+            informativeBlock.fadeIn(fadeDuration);
+          });
+          return;
+        }
+
+        if (this.value === 'quantity') {
+          contentSlider.find('.clarification').fadeIn(fadeDuration);
+          percentageSlider.fadeOut(fadeDuration, function ( ) {
+            contentSlider.addClass('terciary-bg', fadeDuration);
+            quantitySlider.fadeIn(fadeDuration);
+            informativeBlock.fadeIn(fadeDuration);
+          });
+          return;
+        }
+
+        contentSlider.find('.clarification').fadeOut(fadeDuration);
+        contentSlider.removeClass('terciary-bg', fadeDuration);
+        percentageSlider.fadeOut(fadeDuration);
+        quantitySlider.fadeOut(fadeDuration);
+
+      });
+    },
     _closeButtons : function ( ) {
       $("[data-close]").close();
     },
@@ -70,6 +109,7 @@
       this._closeButtons();
       this._initChart();
       this._timeline();
+      this._selectPaidForm();
     }
   };
 
