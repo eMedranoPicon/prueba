@@ -1,6 +1,9 @@
-{% macro content(class, pagination, text) %}
+{% macro content(class, pagination, textButton, title) %}
 <form class="input-code-form form-inline">
   <div class="secundary-bg text-center {{class}}">
+    {% if title %}
+    <h3 class="title pdb-40">{{title}}</h3>
+    {% endif %}
     <div class="form-group container container_custom">
       <div class="clearfix">
         <div class="halfcol">
@@ -24,7 +27,7 @@
         <button class="btn btn-default pull-right" type="reset" name="button">Atrás</button>
       </div>
       <div class="halfcol">
-        <button class="btn btn-primary pull-left" type="submit" name="button">{{text}}</button>
+        <button class="btn btn-primary pull-left" type="submit" name="button">{{textButton}}</button>
       </div>
     </div>
   </div>
