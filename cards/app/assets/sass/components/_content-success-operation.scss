@@ -3,6 +3,7 @@
   color: $colorWhite;
   text-align: center;
   &__width {
+    @include clearfix;
     width: 740px;
     margin: 0 auto;
   }
