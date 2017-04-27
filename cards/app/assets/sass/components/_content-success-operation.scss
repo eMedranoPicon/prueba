@@ -3,8 +3,8 @@
   color: $colorWhite;
   text-align: center;
   &__width {
-    min-width: 740px;
-    max-width: 740px;
+    width: 740px;
+    margin: 0 auto;
   }
   h1 {
     font-size: 28px;
