@@ -12,6 +12,8 @@
             value = $(".value-percentage", el),
             alert = $(".alert-percentage", el);
 
+        $(".value-percentage[data-inputmask]").inputmask();
+
         slider
           .on("slide", function ( slideEvt ) {
             value.val(slideEvt.value);
@@ -24,7 +26,7 @@
           value.on("blur", function ( ) {
             var minValue = parseFloat(slider.data("slider-min")),
                 maxValue = parseFloat(slider.data("slider-max")),
-                currentValue = parseFloat(this.value);
+                currentValue = parseFloat(this.value.replace(/[\.]/g, '').replace(/[,]/g, '.'));
 
             if ( currentValue >= minValue && currentValue <= maxValue ) {
               alert.hide();
