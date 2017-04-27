@@ -1,0 +1,33 @@
+.payment-amount {
+  max-width: 820px;
+  margin: auto;
+  .payment-amount__title {
+    font-size: 20px;
+    text-align: center;
+    font-weight: $font-bold;
+    margin-top: 25px;
+    margin-bottom: 54px;
+  }
+  .payment-amount__content-left {
+    display: inline-block;
+    width: 413px;
+    height: 140px;
+    padding: 0 50px;
+    h4 {
+      font-size: 20px;
+      font-weight: $font-bold;
+      color: $colorGray-450;
+      margin-bottom: 27px;
+    }
+    p {
+      font-size: 17px;
+      line-height: 1.2;
+      font-weight: $font-light;
+    }
+  }
+  .payment-amount__content-right {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 20px;
+  }
+}
