@@ -137,6 +137,19 @@
         });
 
     },
+    _hackIeBtnActive: function() {
+      var buttons = $('button');
+      var activeClass = 'active';
+      function addActive() {
+        $(this).addClass(activeClass);
+      }
+      function removeActive() {
+        $(this).removeClass(activeClass);
+      }
+
+      buttons.mousedown(addActive);
+      buttons.mouseup(removeActive);
+    },
     init : function ( ) {
       this._addressForm();
       this._initSliders();
@@ -145,6 +158,7 @@
       this._initChart();
       this._timeline();
       this._selectPaidForm();
+      this._hackIeBtnActive();
     }
   };
 

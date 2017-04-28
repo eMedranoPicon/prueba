@@ -29,7 +29,7 @@
     width: 75px;
     padding-left: 15px;
     padding-right: 15px;
-    &:active {
+    &.active {
       + .encrypt-dot {
         display: none;
         + .code {
