@@ -1,6 +1,7 @@
 .progress {
   background-color: $colorGray-100;
   box-shadow: none;
+  filter: none;
   > .progress-bar {
     background: $colorGreen-500;
   }
@@ -36,5 +37,5 @@
       margin-right: -13px;
     }
   }
-  
+
 }
