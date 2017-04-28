@@ -1,5 +1,7 @@
-@import "base";
-@import "contact";
-@import "structure-adapt";
-@import "box-message";
-@import "modal-contact";
+.content-presupuestos.ccm {
+  @import "base";
+  @import "contact";
+  @import "structure-adapt";
+  @import "box-message";
+  @import "modal-contact";
+}
