@@ -90,6 +90,18 @@ gulp.task('sass', function() {
     .pipe(gulp.dest(dist_css_dir));
 }).help = 'Compiles and autoprefixes sass source files.';
 
+gulp.task('sass-dist', function() {
+  return gulp.src(src_sass_files)
+    .pipe(sass({
+      errLogToConsole: true,
+      outputStyle: 'expanded',
+      sourceComments: false
+    }))
+    .pipe(autoprefixer({
+      browsers: ['last 3 version', 'ie >= 10']
+    }))
+    .pipe(gulp.dest(dist_css_dir));
+}).help = 'Compiles autoprefixes sass source files.';
 
 gulp.task('sass-min', function() {
   return gulp.src(src_sass_files)
@@ -237,6 +249,18 @@ gulp.task('default', function() {
   );
 }).help = 'Build assets for development. Executes jshint, sass, vendor-scripts and scripts. Keeps watching for changes';
 
+gulp.task('dist-dev', function() {
+  runSequence(
+    ['old_browsers', 'fonts', 'images', 'jshint', 'sass-dist', 'vendor-css', 'vendor-scripts', 'scripts', 'jinja'],
+    ['legacy-scripts', 'legacy-css'],
+    function() {
+      gulp.src('').pipe(notify({
+        title: 'Development',
+        message: 'Built task done, now watching for changes...'
+      }));
+    }
+  );
+}).help = 'Build assets for development. Executes jshint, sass, vendor-scripts and scripts. Keeps watching for changes';
 
 gulp.task('dist', function() {
   runSequence(
