@@ -6,8 +6,8 @@
 *.sublime-workspace
 *.sonar
 .DS_Store
-app/dist/
-bower_components/
-node_modules/
+/*/app/dist/
+/*/bower_components/
+/*/node_modules/
 context_vars/__pycache__/
 __pycache__
