@@ -17,6 +17,7 @@
       cursor: pointer;
       background-color: $colorGray-300;
       background-image: none;
+      filter: none;
       @include box-shadow-mixin(0, 1px, 2px, rgba($colorBlack, 0.1), "inset");
       @include border-radius(4px);
     }
@@ -27,6 +28,7 @@
       bottom: 0;
       position: absolute;
       background: $colorGreen-500;
+      filter: none;
       @include box-shadow-mixin(0, -1px, 0, rgba($colorBlack, 0.15), "inset");
       @include box-sizing(border-box);
       @include border-radius(4px);
@@ -36,10 +38,10 @@
       margin-left: -10px;
       margin-top: -5px;
       position: absolute;
-      top: 5px;
       width: 15px;
       height: 15px;
       background: $colorWhite;
+      filter: none;
       @include box-shadow-mixin(0, 4px, 3px, $colorGray-400);
       border: 0 solid transparent;
 

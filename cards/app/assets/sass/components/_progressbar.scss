@@ -3,6 +3,7 @@
   box-shadow: none;
   > .progress-bar {
     background: $colorGreen-500;
+    filter: none;
   }
   .progress__caret {
     display: inline-block;
@@ -36,5 +37,5 @@
       margin-right: -13px;
     }
   }
-  
+
 }
