@@ -40,6 +40,11 @@
     margin-right: 13px;
     margin-bottom: 10px;
 }
+@media (max-width: 420px) {
+  #dashboard .header .caja_usuario .datos_usuario {
+    margin-right: 7px;
+  }
+}
 #dashboard .header .caja_usuario .datos_usuario p {
     font-family: AkkuratStd;
     font-size: 12px;
@@ -84,6 +89,15 @@
 #dashboard .botondashboard.head:focus {
     outline: 0;
 }
+@media (max-width: 420px) {
+  #dashboard .botondashboard.p.head {
+    letter-spacing: -.6px;
+  }
+  #dashboard .botondashboard.p.head.margin10_l {
+    margin-left: 5px !important;
+  }
+}
+
 
 .margin10_l {
     margin-left: 10px;
