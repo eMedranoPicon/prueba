@@ -6,7 +6,8 @@
     margin: 0;
     color: $colorGray-400;
   }
-  button {
+  button,
+  input.btn {
     margin: 20px 10px 50px;
   }
   .change-address-form button {
