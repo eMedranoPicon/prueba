@@ -25,31 +25,33 @@
             value = $(".value-percentage", el),
             alert = $(".alert-percentage", el);
 
-        $(".value-percentage[data-inputmask]").inputmask();
+        if ( value.is("[data-inputmask]") ) {
+          value.inputmask();
+        }
 
-        slider
-          .on("slide", function ( slideEvt ) {
-            value.val(slideEvt.value);
-          })
-          .on("slideStop", function ( ) {
+        slider.on("slide slideStop", function ( slideEvt ) {
+          value.val(slideEvt.value);
+          if ( value.hasClass('error-value-percentage') ) {
+            value.removeClass('error-value-percentage');
+            alert.hide();
+          }
+        })
+
+        value.on("blur", function ( ) {
+          var minValue = parseFloat(slider.data("slider-min")),
+              maxValue = parseFloat(slider.data("slider-max")),
+              currentValue = parseFloat(this.value.replace(/[\.]/g, '').replace(/[,]/g, '.'));
+
+          if ( currentValue >= minValue && currentValue <= maxValue ) {
             alert.hide();
             value.removeClass('error-value-percentage');
-          });
+            slider.bootstrapSlider("setValue", currentValue, true);
+          } else {
+            value.addClass('error-value-percentage');
+            alert.show();
+          }
+        });
 
-          value.on("blur", function ( ) {
-            var minValue = parseFloat(slider.data("slider-min")),
-                maxValue = parseFloat(slider.data("slider-max")),
-                currentValue = parseFloat(this.value.replace(/[\.]/g, '').replace(/[,]/g, '.'));
-
-            if ( currentValue >= minValue && currentValue <= maxValue ) {
-              alert.hide();
-              value.removeClass('error-value-percentage');
-              slider.bootstrapSlider("setValue", currentValue, true);
-            } else {
-              value.addClass('error-value-percentage');
-              alert.show();
-            }
-          });
       });
     },
     _contractCardSelectPaymentMethod: function ( ) {
