@@ -34,8 +34,13 @@
   }
   &.selectable {
     cursor: pointer;
+    &:hover {
+      outline: 1px solid $colorGreen-700;
+      outline-offset: -1px;
+    }
   }
-  &.selected {
+  &.selected,
+  &.selected:hover {
       outline: 3px solid $colorGreen-500;
       outline-offset: -3px;
   }
