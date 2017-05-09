@@ -32,6 +32,13 @@
     display: inline-block;
     vertical-align: middle;
   }
+  &.selectable {
+    cursor: pointer;
+  }
+  &.selected {
+      outline: 3px solid $colorGreen-500;
+      outline-offset: -3px;
+  }
 }
 
 .tbanner_ribbon {

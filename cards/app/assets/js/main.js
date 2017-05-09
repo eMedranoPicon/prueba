@@ -54,6 +54,32 @@
 
       });
     },
+    _contractCardChooseType: function ( ) {
+      var cashPayment = $("#cash-payment"),
+          instalmentPayment = $("#instalment-payment"),
+          btnSubmit = $("#btn-contract-card");
+
+      cashPayment.on("click", function ( ) {
+        if ( !cashPayment.hasClass("selected") ) {
+          instalmentPayment.removeClass("selected");
+          cashPayment.toggleClass("selected");
+          if ( btnSubmit.is(":disabled") ) {
+            btnSubmit.prop('disabled', false);
+          }
+        }
+      });
+
+      instalmentPayment.on("click", function ( ) {
+        if ( !instalmentPayment.hasClass("selected") ) {
+          cashPayment.removeClass("selected");
+          instalmentPayment.toggleClass("selected");
+          if ( btnSubmit.is(":disabled") ) {
+            btnSubmit.prop('disabled', false);
+          }
+        }
+      });
+
+    },
     _contractCardSelectPaymentMethod: function ( ) {
       $('input[type=radio][name=paymode]').change(function() {
           if (this.value === 'percentage') {
@@ -155,6 +181,7 @@
     init : function ( ) {
       this._addressForm();
       this._initSliders();
+      this._contractCardChooseType();
       this._contractCardSelectPaymentMethod();
       this._closeButtons();
       this._initChart();

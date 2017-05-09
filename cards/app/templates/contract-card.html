@@ -10,13 +10,13 @@
     <div class="container container_custom">
       <p class="tiles-banner__title pdb-40">Decide cómo quieres pagar</p>
       <div class="tiles-banner">
-        <div class="tbanner tbanner_ribbon">
+        <div id="cash-payment" class="tbanner tbanner_ribbon selectable">
           <div class="tbanner__content">
             <span class="title">Al contado</span>
             <span class="subtitle">Con una comisión anual de 30€</span>
           </div>
         </div>
-        <div class="tbanner">
+        <div id="instalment-payment" class="tbanner selectable">
           <div class="tbanner__content">
             <span class="title">En cómodos plazos</span>
             <span class="subtitle">Paga como quieras. Sin comisión</span>
@@ -31,7 +31,7 @@
           <button class="btn btn-default pull-right" type="reset" name="button">Cancelar</button>
         </div>
         <div class="halfcol">
-          <button class="btn btn-primary pull-left" type="submit" name="button">Solicitar</button>
+          <button id="btn-contract-card" class="btn btn-primary pull-left" type="submit" disabled name="button">Solicitar</button>
         </div>
       </div>
     </div>
