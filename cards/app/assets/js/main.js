@@ -169,10 +169,10 @@
       var buttons = $('button');
       var activeClass = 'active';
       function addActive() {
-        $(this).addClass(activeClass);
+        $(this).addClass(activeClass).parent().addClass(activeClass);
       }
       function removeActive() {
-        $(this).removeClass(activeClass);
+        $(this).removeClass(activeClass).parent().removeClass(activeClass);
       }
 
       buttons.mousedown(addActive);

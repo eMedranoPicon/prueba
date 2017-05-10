@@ -6,6 +6,9 @@
   text-align: center;
   display: inline-block;
   width: 100%;
+  &.active {
+    border-color: $colorGreen-700;
+  }
   span {
     @include transform(translateY(-50%));
     position: absolute;
@@ -21,7 +24,7 @@
     letter-spacing: 10px;
     padding-left: 10px;
   }
-  button {
+  .btn {
     float: right;
     margin: -1px;
     background-color: $colorWhite;
@@ -30,12 +33,26 @@
     padding-left: 15px;
     padding-right: 15px;
     &.active {
+      background-color: $colorGreen-700;
+      box-shadow: none;
+      > .default {
+        display: none;
+      }
+      > .active {
+        display: inline-block;
+      }
       + .encrypt-dot {
         display: none;
         + .code {
           display: inline-block;
         }
       }
+    }
+    > .default {
+      display: inline-block;
+    }
+    > .active {
+      display: none;
     }
   }
 }
