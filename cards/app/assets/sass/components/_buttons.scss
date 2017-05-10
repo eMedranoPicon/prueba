@@ -39,6 +39,17 @@
   }
 }
 
+.btn-secondary {
+  color: $brand-primary;
+  background-color: $colorWhite;
+  border-color: $brand-primary;
+  &:hover {
+    color: $colorWhite;
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+  }
+}
+
 .btn-lg {
   max-width: 290px;
   width: 100%;
