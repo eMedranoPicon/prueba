@@ -35,14 +35,17 @@
   &.selectable {
     cursor: pointer;
     &:hover {
-      outline: 1px solid $colorGreen-700;
+      outline: 1px solid $colorGreen-500;
       outline-offset: -1px;
     }
   }
   &.selected,
   &.selected:hover {
-      outline: 3px solid $colorGreen-500;
-      outline-offset: -3px;
+      background-color: $colorGreen-500;
+      .title,
+      .subtitle {
+        color: $colorWhite;
+      }
   }
 }
 
@@ -57,7 +60,7 @@
   .title,
   .subtitle {
     display: block;
-    color: $colorBlack;
+    color: $colorGray-725;
   }
   .title {
     font-size: 30px;
