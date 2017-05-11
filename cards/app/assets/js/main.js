@@ -43,8 +43,10 @@
               currentValue = parseFloat(this.value.replace(/[\.]/g, '').replace(/[,]/g, '.'));
 
           if ( currentValue >= minValue && currentValue <= maxValue ) {
-            alert.hide();
-            value.removeClass('error-value-percentage');
+            if ( value.hasClass('error-value-percentage') ) {
+              value.removeClass('error-value-percentage');
+              alert.hide();
+            }
             slider.bootstrapSlider("setValue", currentValue, true);
           } else {
             value.addClass('error-value-percentage');
@@ -166,7 +168,7 @@
 
     },
     _hackIeBtnActive: function() {
-      var buttons = $('button');
+      var buttons = $('button', '.show-code');
       var activeClass = 'active';
       function addActive() {
         $(this).addClass(activeClass).parent().addClass(activeClass);
