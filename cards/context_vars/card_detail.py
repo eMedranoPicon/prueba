@@ -67,7 +67,10 @@ def get_context():
 						"GASTO":	True,
 						"NUMBER":	50,
 						"DECIMAL":	00,
-						"DATE":		"30/08/2015"
+						"DATE":		"30/08/2015",
+						"DETALLE1": "Alonso Hipercas",
+						"DETALLE2": "Av. San Martin de Valdeiglesias",
+						"DETALLE3": "0002    28922",
 					},
 					{
 						"TEXT":		"Anulación de pago",
@@ -83,7 +86,10 @@ def get_context():
 						"GASTO":	True,
 						"NUMBER":	50,
 						"DECIMAL":	37,
-						"DATE":		"26/08/2015"
+						"DATE":		"26/08/2015",
+						"DETALLE1": "Mercadona, calle Butrón",
+						"DETALLE2": "Calle Butrón, Madrid",
+						"DETALLE3": "0031    28022",
 					},
 					{
 						"TEXT":		"Recibo mes anterior",
@@ -99,7 +105,10 @@ def get_context():
 						"GASTO":	True,
 						"NUMBER":	429,
 						"DECIMAL":	90,
-						"DATE":		"15/08/2015"
+						"DATE":		"15/08/2015",
+						"DETALLE1": "Mercadona, calle Butrón",
+						"DETALLE2": "Calle Butrón, Madrid",
+						"DETALLE3": "0031    28022",
 					},
 				]
           	},
@@ -119,7 +128,10 @@ def get_context():
 						"GASTO":	True,
 						"NUMBER":	429,
 						"DECIMAL":	90,
-						"DATE":		"15/08/2015"
+						"DATE":		"15/08/2015",
+						"DETALLE1": "Mercadona, calle Butrón",
+						"DETALLE2": "Calle Butrón, Madrid",
+						"DETALLE3": "0031    28022",
 					},
 				]
 			},
@@ -131,7 +143,10 @@ def get_context():
 						"GASTO":	True,
 						"NUMBER":	50,
 						"DECIMAL":	00,
-						"DATE":		"30/08/2015"
+						"DATE":		"30/08/2015",
+						"DETALLE1": "Alonso Hipercas",
+						"DETALLE2": "Av. San Martin de Valdeiglesias",
+						"DETALLE3": "0002    28922",
 					},
 					{
 						"TEXT":		"Recibo mes anterior",
@@ -146,7 +161,10 @@ def get_context():
 						"GASTO":	True,
 						"NUMBER":	429,
 						"DECIMAL":	90,
-						"DATE":		"15/08/2015"
+						"DATE":		"15/08/2015",
+						"DETALLE1": "Mercadona, calle Butrón",
+						"DETALLE2": "Calle Butrón, Madrid",
+						"DETALLE3": "0031    28022",
 					},
 				]
         	},
@@ -158,7 +176,10 @@ def get_context():
 						"GASTO":	True,
 						"NUMBER":	50,
 						"DECIMAL":	00,
-						"DATE":		"30/08/2015"
+						"DATE":		"30/08/2015",
+						"DETALLE1": "Alonso Hipercas",
+						"DETALLE2": "Av. San Martin de Valdeiglesias",
+						"DETALLE3": "0002    28922",
 					},
 					{
 						"TEXT":		"Anulación de pago",
@@ -173,7 +194,10 @@ def get_context():
 						"GASTO":	True,
 						"NUMBER":	50,
 						"DECIMAL":	37,
-						"DATE":		"26/08/2015"
+						"DATE":		"26/08/2015",
+						"DETALLE1": "Mercadona, calle Butrón",
+						"DETALLE2": "Calle Butrón, Madrid",
+						"DETALLE3": "0031    28022",
 					},
 				]
         	},

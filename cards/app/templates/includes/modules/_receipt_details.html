@@ -1,124 +1,45 @@
 <div class="module-inner-content receipt-detail-content">
+
   <div class="top-container">
+
     <div class="text-container">
-      <span class="title">{{ texto }}</span>
-      <div class="link-container">
-        <a href="#">Ver recibos de este proveedor</a>
-      </div>
+      {% if MOVIMIENTO.IMAGE %}
+      <span class="img">
+        <img src="{{ MOVIMIENTO.IMAGE }}" />
+      </span>
+      {% endif %}
+      <span class="title">
+        {{ MOVIMIENTO.TEXT }}
+        {% if MOVIMIENTO.SUBTEXT %}
+          <span class="subtitle">
+            {{ MOVIMIENTO.SUBTEXT }}
+          </span>
+        {% endif %}
+      </span>
     </div>
-    <div class="icon-container">
-      <a href="#"><i class="icon-pdf icon-blue"></i></a>
+
+  </div>
+
+  <div class="info-container">
+    <div class="info-heading-detail">
+      <span class="date">{{ MOVIMIENTO.DATE }}</span>
+      <span class="amount{% if MOVIMIENTO.GASTO %} expense{% endif %}">
+        <span class="">{{ MOVIMIENTO.NUMBER }},</span><span class="decimal">{{ MOVIMIENTO.DECIMAL }}€</span>
+      </span>
+    </div>
+    <div class="info-detail">
+      <span>{{ MOVIMIENTO.DETALLE1 }}</span>
+      <span>{{ MOVIMIENTO.DETALLE2 }}</span>
+      <span>{{ MOVIMIENTO.DETALLE3 }}</span>
     </div>
   </div>
 
-  <div class="element-container slideup">
-    <div class="icon-container">
-      <i class="icon-house"></i>
-    </div>
-    <div class="name-container">
-      <span class="name">Vivienda</span>
-    </div>
-    <div class="triangle-container">
-      <span class="triangle slideup"></span>
-    </div>
-  </div>
-    <div class="subelement-container slideup">
-      <div class="content">
-        <div class="icon-container">
-          <i class="icon-house"></i>
-        </div>
-        <div class="name-container">
-          <span class="name">Vivienda</span>
-        </div>
-        <div class="check-container">
-          <i class="icon-check check"></i>
-        </div>
-      </div>
-      <div class="content">
-        <div class="icon-container">
-          <i class="icon-house"></i>
-        </div>
-        <div class="name-container">
-          <span class="name">Vivienda</span>
-        </div>
-        <div class="check-container">
-          <i class="icon-check check"></i>
-        </div>
-      </div>
-      <div class="content">
-        <div class="icon-container">
-          <i class="icon-house"></i>
-        </div>
-        <div class="name-container">
-          <span class="name">Vivienda</span>
-        </div>
-        <div class="check-container">
-          <i class="icon-check check"></i>
-        </div>
-      </div>
-    </div>
-
-  <div class="element-container slideup">
-    <div class="icon-container">
-      <i class="icon-calendar-gray small"></i>
-    </div>
-    <div class="name-container">
-      <span class="name">Mensual</span>
-    </div>
-    <div class="triangle-container">
-      <span class="triangle slideup"></span>
-    </div>
-  </div>
-    <div class="subelement-container slideup">
-      {% set ICONS = ['icon-calendar-gray-2', 'icon-calendar-gray-3', 'icon-calendar-gray-6', 'icon-calendar-new small'] %}
-      {% set NAME = ['Bimensual', 'Trimestral', 'Semestral', 'Anual'] %}
-      {% for ICON in ICONS %}
-          <div class="content">
-            <div class="icon-container">
-              <i class="{{ ICON }}"></i>
-            </div>
-            <div class="name-container">
-              <span class="name">{{ NAME[loop.index-1] }}</span>
-            </div>
-            <div class="check-container">
-              <i class="icon-check check"></i>
-            </div>
-          </div>
-      {% endfor %}
-      <div class="content">
-        <div class="icon-container">
-          <i class="icon-calendar-gray small"></i>
-        </div>
-        <div class="name-container">
-          <span class="name pre-input">Cada</span>
-          <input type="text" class="from-to" placeholder="de 1 a 12" />
-          <span class="after-input">meses</span>
-        </div>
-        <div class="check-container">
-          <i class="icon-check check"></i>
-        </div>
-      </div>
-    </div>
-
-  <div class="element-container-alerts">
-    <div class="switch-container">
-      <input id="cmn-toggle-{{ count }}{{ outer_count }}" class="cmn-toggle cmn-toggle-round-flat" type="checkbox"/>
-      <label for="cmn-toggle-{{ count }}{{ outer_count }}"></label>
-    </div>
-    <div class="name-container">
-      <span class="name">Alertas</span>
-    </div>
-    <div class="icon-container">
-      <i class="icon-gear-round"></i>
-    </div>
-  </div>
-
+  {% if MOVIMIENTO.GASTO %}
   <div class="bottom-container">
-    <div class="button-container">
-      <button class="btn button-module">Devolver</button>
-    </div>
-    <div class="link-container">
-      <a class="link">Dar baja del proveedor</a>
+    <div class="buttons-group">
+      <button class="btn btn-default pull-right">Financiar</button>
     </div>
   </div>
+  {% endif %}
+
 </div>
