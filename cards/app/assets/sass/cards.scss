@@ -32,6 +32,13 @@
     position: relative;
   }
 
+  .container_custom-dashboard {
+    min-width: $page-min-width + 10px;
+    max-width: $page-min-width + 10px;
+    margin: 0 auto;
+    position: relative;
+  }
+
   // Vendor sass files
   @import "../../../node_modules/family.scss/source/src/_family.scss";
   @import "custom_bootstrap";
