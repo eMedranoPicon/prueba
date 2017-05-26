@@ -4,18 +4,19 @@
     font-size: 18px;
     font-weight: $font-bold;
     padding: 0;
-    padding-left: 26px;
-    text-indent: -26px;
+    padding-left: 32px;
+    text-indent: -32px;
     color: $colorDarkGray;
     &:before {
       content: "";
       position: relative;
+      top: 4px;
       display: inline-block;
       background-image: url("../images/icons/checkform/square.png");
       background-repeat: no-repeat;
       background-size: 100%;
-      width: 16px;
-      height: 16px;
+      width: 22px;
+      height: 22px;
       margin-right: 10px;
     }
     &:hover {
