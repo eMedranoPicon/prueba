@@ -35,11 +35,11 @@
             value.removeClass('error-value-percentage');
             alert.hide();
           }
-        })
+        });
 
         value.on("blur", function ( ) {
-          var minValue = parseFloat(slider.data("slider-min")),
-              maxValue = parseFloat(slider.data("slider-max")),
+          var minValue = parseFloat(slider.bootstrapSlider("getAttribute", "min")),
+              maxValue = parseFloat(slider.bootstrapSlider("getAttribute", "max")),
               currentValue = parseFloat(this.value.replace(/[\.]/g, '').replace(/[,]/g, '.'));
 
           if ( currentValue >= minValue && currentValue <= maxValue ) {
@@ -101,7 +101,34 @@
           quantitySlider = $("#quantitySlider"),
           percentageSlider = $("#percentageSlider"),
           informativeBlock = $(".clarification"),
+          cardAmountLimitSlider = $("#amountSlider"),
           fadeDuration = 500;
+
+      cardAmountLimitSlider.on("slide slideStop", function ( slideEvt ) {
+        var newValue = slideEvt.value,
+            quantitySliderInput = $(".slider-percentage", quantitySlider),
+            quantitySliderMinLabel = $(".top-value_min", quantitySlider),
+            quantitySliderMaxLabel = $(".top-value_max", quantitySlider),
+            quantitySliderInputVal = $(".value-percentage", quantitySlider),
+            quantityValue =  quantitySliderInput.bootstrapSlider("getValue"),
+            errors = $(".messages > p", quantitySlider),
+            symbol = $(".symbol-medium", quantitySlider).html(),
+            errorMsg = '<i class="alert"></i>La cantidad debe estar comprendida entre <strong>{minValue} y {maxValue}</strong>.';
+
+        quantitySliderMaxLabel.html(newValue + " " + symbol);
+        quantitySliderInput.bootstrapSlider("setAttribute", "max", newValue);
+        if ( quantityValue >= newValue ) {
+          quantitySliderInput.bootstrapSlider("setValue", newValue);
+          quantitySliderInputVal.val(newValue);
+        } else {
+          quantitySliderInput.bootstrapSlider("setValue", quantityValue);
+        }
+        errors.html(errorMsg.
+          replace('{minValue}', quantitySliderMinLabel.html()).
+          replace('{maxValue}', quantitySliderMaxLabel.html())
+        );
+
+      });
 
       $('input[type=radio][name=payform]').change(function() {
 

@@ -1,5 +1,7 @@
 <div class="chart-container">
   <div id="point-chart" class="chart"></div>
+  <input type="hidden" name="min-value" value="-1000" />
+  <input type="hidden" name="max-value" value="1000" />
   <table class="chart__data">
     {% for MES in POINT_CHART %}
       <tr>

@@ -3,19 +3,19 @@ def get_context():
 	    "POINT_CHART": [
 			{
 				"MES":  "Sep",
-				"GASTADO": 390
+				"GASTADO": -390
 			},
 			{
 				"MES":  "Oct",
-				"GASTADO": 450
+				"GASTADO": -450
 			},
 			{
 				"MES":  "Nov",
-				"GASTADO": 420
+				"GASTADO": -420
 			},
 			{
 				"MES":  "Dic",
-				"GASTADO": 425
+				"GASTADO": -425
 			},
 			{
 				"MES":  "Ene",
@@ -51,7 +51,7 @@ def get_context():
 			},
 			{
 				"MES":  "Sep",
-				"GASTADO": 290
+				"GASTADO": 600
 			},
 			{
 				"MES":  "Oct"
@@ -77,7 +77,10 @@ def get_context():
 						"GASTO":	False,
 						"NUMBER":	120,
 						"DECIMAL":	00,
-						"DATE":		"26/08/2015"
+						"DATE":		"26/08/2015",
+						"DETALLE1": "Mercadona, calle Butrón",
+						"DETALLE2": "Calle Butrón, Madrid",
+						"DETALLE3": "0031    28022",
 					},
 					{
 						"TEXT":		"Mercadona, calle Butrón",
@@ -96,7 +99,10 @@ def get_context():
 						"GASTO":	False,
 						"NUMBER":	550,
 						"DECIMAL":	00,
-						"DATE":		"16/08/2015"
+						"DATE":		"16/08/2015",
+						"DETALLE1": "Mercadona, calle Butrón",
+						"DETALLE2": "Calle Butrón, Madrid",
+						"DETALLE3": "0031    28022",
 					},
 					{
 						"TEXT":		"Mercadona, calle Butrón",
@@ -120,7 +126,10 @@ def get_context():
 						"GASTO":	False,
 						"NUMBER":	550,
 						"DECIMAL":	00,
-						"DATE":		"16/08/2015"
+						"DATE":		"16/08/2015",
+						"DETALLE1": "Mercadona, calle Butrón",
+						"DETALLE2": "Calle Butrón, Madrid",
+						"DETALLE3": "0031    28022",
 					},
 					{
 						"TEXT":		"Mercadona, calle Butrón",
@@ -153,7 +162,10 @@ def get_context():
 						"GASTO":	False,
 						"NUMBER":	550,
 						"DECIMAL":	00,
-						"DATE":		"16/08/2015"
+						"DATE":		"16/08/2015",
+						"DETALLE1": "Mercadona, calle Butrón",
+						"DETALLE2": "Calle Butrón, Madrid",
+						"DETALLE3": "0031    28022",
 					},
 					{
 						"TEXT":		"Mercadona, calle Butrón",
@@ -186,7 +198,10 @@ def get_context():
 						"GASTO":	False,
 						"NUMBER":	120,
 						"DECIMAL":	00,
-						"DATE":		"26/08/2015"
+						"DATE":		"26/08/2015",
+						"DETALLE1": "Mercadona, calle Butrón",
+						"DETALLE2": "Calle Butrón, Madrid",
+						"DETALLE3": "0031    28022",
 					},
 					{
 						"TEXT":		"Mercadona, calle Butrón",

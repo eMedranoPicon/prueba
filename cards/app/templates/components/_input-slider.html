@@ -7,7 +7,7 @@
            data-inputmask="'alias': 'decimal', 'digits': 2, 'groupSeparator': '.', 'radixPoint': ',', 'autoGroup': true">
            <span class="symbol-medium">{{ symbol }}</span>
   </div>
-  <span class="top-value">{{ minValue }} {{ symbol }}</span>
+  <span class="top-value top-value_min">{{ minValue }} {{ symbol }}</span>
   <input type="text"
          class="slider-percentage"
          value=""
@@ -16,7 +16,7 @@
          data-slider-tooltip="hide"
          data-slider-min="{{ minValue }}"
          data-slider-max="{{ maxValue }}">
-  <span class="top-value">{{ maxValue }} {{ symbol }}</span>
+  <span class="top-value top-value_max">{{ maxValue }} {{ symbol }}</span>
   <div class="alert-percentage">
     <div class="messages">
       <p><i class="alert"></i>La cantidad debe estar comprendida entre <strong>{{ minValue }}{{ symbol }} y {{ maxValue }}{{ symbol }}</strong>.</p>

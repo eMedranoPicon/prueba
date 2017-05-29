@@ -56,6 +56,15 @@ function pointChart(chartContainer) {
     return aux;
   }
 
+  function getMinValue(array) {
+    var minValue = 0;
+    for (var i in array) {
+      if ( array[i] < minValue )
+        minValue = array[i];
+    }
+    return minValue;
+  }
+
   function getMaxValue(array) {
     var maxValue = 0;
     for(var i in array){
@@ -68,7 +77,8 @@ function pointChart(chartContainer) {
   function drawPointChart() {
     var meses = toArray('mes');
     var expecteds = toArray('expected');
-    var maximum = getMaxValue(expecteds);
+    var mimValue = chartContainer.find("input[name='min-value']").val();
+    var maxValue = chartContainer.find("input[name='max-value']").val();
     var maxDesign = 800;
     expecteds = expecteds.slice(0, expecteds.length-2);
     expecteds.push(
@@ -91,14 +101,6 @@ function pointChart(chartContainer) {
         symbol: 'url(images/icon-point-ellipse.png)'
       }
     });
-    if (getMaxValue(spents) > maximum)
-      maximum = getMaxValue(spents);
-
-    maximum = maximum * 1.2;
-
-    if (maximum < maxDesign-100) {
-      maximum = maxDesign;
-    }
 
     chartContainer.find('.chart').highcharts({
       credits: {
@@ -137,7 +139,8 @@ function pointChart(chartContainer) {
         title: '',
         lineColor: colorAxisLineChart,
         lineWidth: 1,
-        max: maximum,
+        min: mimValue,
+        max: maxValue,
         tickmarkPlacement: 'on',
         tickPosition: 'inside',
         labels: {
@@ -252,8 +255,7 @@ function pointChart(chartContainer) {
         tickColor: colorTickChart,
         tickWidth: 1,
         tickLength: 3,
-        tickPosition: 'inside',
-        min: 100
+        tickPosition: 'inside'
       },
       plotOptions: {
         candlestick: {
