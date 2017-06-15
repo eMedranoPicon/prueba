@@ -1,0 +1,29 @@
+.card-addons {
+  position: relative;
+  background-color: $colorWhite;
+  padding: 105px 20px 31px;
+  overflow: hidden;
+  border: 1px solid $colorGray-150;
+  border-bottom: 1px solid $colorGray-325;
+  &__icon {
+    position: absolute;
+    top: -13px;
+    left: calc(50% - 50px);
+  }
+  p {
+    color: $colorGray-400;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    height: 40px;
+    margin-bottom: 0;
+  }
+  button {
+    width: 110px;
+    min-width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+    margin: 0 5px;
+  }
+}

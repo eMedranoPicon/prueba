@@ -1,0 +1,45 @@
+.radio-square {
+  display: none;
+  + label {
+    font-size: 18px;
+    font-weight: $font-bold;
+    padding: 0;
+    padding-left: 32px;
+    text-indent: -32px;
+    color: $colorDarkGray;
+    &:before {
+      content: "";
+      position: relative;
+      top: 4px;
+      display: inline-block;
+      background-image: url("../images/icons/checkform/square.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+    &:hover {
+      &:before {
+        background-image: url("../images/icons/checkform/square-check.png") !important;
+      }
+    }
+  }
+  &:checked {
+    + label {
+      &:before {
+        background-image: url("../images/icons/checkform/square-check-green.png") !important;
+      }
+    }
+  }
+  &_extrasmall {
+    + label {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.8;
+      &:before {
+        margin-bottom: -3px;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+// Vars and modules
+@import "variables/all";
+@import "modules/all";
+
+#dashboard + div.left {
+  display: none;
+}
+
+.coinc-cards {
+  $page-min-width: 950px;
+  min-width: $page-min-width;
+  background-color: $colorWhite;
+  font-family: "AkkuratStd";
+  font-size: 14px;
+  line-height: 1.42857;
+
+  p {
+    padding: 0;
+  }
+
+  .font-small {
+    font-size: 14px;
+  }
+  .color-gray {
+    color: $colorDarkGray;
+  }
+
+  .container_custom {
+    min-width: $page-min-width;
+    max-width: $page-min-width;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .container_custom-dashboard {
+    min-width: $page-min-width + 10px;
+    max-width: $page-min-width + 10px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  // Vendor sass files
+  @import "../../../node_modules/family.scss/source/src/_family.scss";
+  @import "custom_bootstrap";
+  @import "../../../bower_components/seiyria-bootstrap-slider/src/sass/bootstrap-slider";
+
+  // Src files
+  @import "components/all";
+  @import "partials/all";
+}

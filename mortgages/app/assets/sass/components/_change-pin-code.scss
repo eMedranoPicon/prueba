@@ -1,0 +1,11 @@
+.text-change-pin {
+  p {
+    color: $colorDarkGray;
+    font-size: 14px;
+    font-weight: $font-light;
+  }
+  &__link {
+    color: $colorGray-400;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,79 @@
+.abstract-detail-card {
+  $main: ".abstract-detail-card";
+  display: inline-block;
+  width: 100%;
+  background-color: $colorWhite;
+  padding: 15px 0 7px;
+  border: 1px solid $colorGray-150;
+  border-bottom: 1px solid $colorGray-325;
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    outline: none;
+    outline-offset: none;
+  }
+  &__data,
+  footer {
+    padding: 0 20px;
+  }
+  &__info {
+    border-bottom: 1px solid $colorGray-250;
+    min-height: 55px;
+    padding-top: 18px;
+    padding-left: 80px;
+    h2 {
+      font-size: 15px;
+      margin: 0;
+    }
+    &_circle_card {
+      background: url("../images/icons/circle-card.png") no-repeat 20px top;
+    }
+    #{$main}__number {
+      font-size: 20px;
+    }
+    #{$main}__decimal {
+      font-size: 11px;
+    }
+    #{$main}__symbol {
+      font-size: 20px;
+    }
+    #{$main}__value {
+      color: $colorGray-350;
+      margin-bottom: 7px;
+      text-align: left;
+    }
+  }
+  &__value {
+    font-size: 14px;
+    font-weight: $font-bold;
+    color: $colorBlueGray-300;
+    text-align: right;
+    margin-bottom: 22px;
+  }
+  &__number {
+    font-size: 30px;
+  }
+  &__decimal {
+    font-size: 15px;
+  }
+  &__symbol {
+    font-size: 30px;
+  }
+  &__data {
+    margin-top: 20px;
+  }
+  .progress {
+    margin-bottom: 10px;
+    .progress-bar {
+      background: $colorGreen-500;
+    }
+  }
+  footer {
+    background: url("../images/icons/calendar-gray.png") no-repeat 20px top;
+    font-size: 11px;
+    color: $colorGray-350;
+    text-transform: uppercase;
+    padding-top: 2px;
+    padding-left: 40px;
+  }
+}

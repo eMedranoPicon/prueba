@@ -1,0 +1,320 @@
+.timeline {
+  position: relative;
+  font-family: $font-akkurat;
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  .module {
+    position: absolute;
+    top: 110%;
+    top: calc(100% + 7px);
+    width: 426px;
+    height: 500px;
+    z-index: 40;
+    &_right {
+      right: 0;
+    }
+  }
+}
+
+.timeline__month-view {
+  border-bottom: 1px solid $colorTimeLineAccor;
+  font-size: 20px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: $colorTimePrimary;
+  list-style: none;
+  float: none;
+  &:nth-last-child(1) {
+    border-bottom: 0;
+  }
+}
+
+.month-view__heading {
+  display: table;
+  cursor: pointer;
+  width: 100%;
+  height: 62px;
+  color: $colorFontTimeline;
+  font-size: 16px;
+  vertical-align: middle;
+  span {
+    vertical-align: middle;
+    display: table-cell;
+  }
+}
+
+.month-view__content {
+  position: relative;
+  color: $colorFontTimeline;
+}
+
+.month-view__timeline-bar {
+  position: absolute;
+  left: 50%;
+  left: calc(50% - .5px);
+  width: 1px;
+  height: 100%;
+  background-color: $colorTimeBar;
+}
+
+.month-view__timeline-bar-beacon {
+  @include border-radius(2px);
+  position: relative;
+  width: 149px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 12px 0 10px;
+  color: $colorWhite;
+  background-color: $colorTimeSecond;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 20;
+  &:before {
+    position: absolute;
+    top: 100%;
+    left: 61.5px;
+    left: calc(50% - 13px);
+    border-color: $colorTimeSecond transparent;
+    border-style: solid;
+    border-width: 12px 13px 0;
+    content: "";
+  }
+}
+
+.month-view__timeline-bar-next {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 65px;
+  padding-top: 20px;
+  background-color: $colorTimeCuater;
+  z-index: 20;
+  .bar-next {
+    display: table-cell;
+    .triangle {
+      @include triangle(5px, 0, 5px, 5px, $colorTimeHexa);
+    }
+  }
+}
+
+.bank-note {
+  @include clearfix;
+  position: relative;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.bank-note__timeline-dot {
+  @include border-radius(10px);
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  left: 50%;
+  left: calc(50% - 3px);
+  top: 20px;
+  background-color: $colorTimeIngress;
+  z-index: 10;
+  &_expense {
+    background-color: $colorTimeWarning;
+  }
+  &_extended {
+    top: 30px;
+  }
+}
+
+.bank-note__date-block {
+  width: 50%;
+  text-align: left;
+  float: right;
+  &_expense {
+    text-align: right;
+    float: left;
+  }
+  span {
+    display: inline-block;
+    padding: 15px 30px 12px;
+    font-size: 13px;
+    font-weight: normal;
+  }
+  &_extended {
+    span {
+      padding: 25px 30px 22px;
+    }
+  }
+}
+
+.bank-note__info-block {
+  position: relative;
+  width: 50%;
+  float: right;
+  &_expense {
+    float: left;
+  }
+}
+
+.bank-note__info-block-box {
+  position: relative;
+  width: 430px;
+  height: 45px;
+  margin-right: 30px;
+  border: 1px solid $colorTimeTer;
+  font-weight: $font-bold;
+  background-color: $colorTimeCuater;
+  &::before {
+    @include triangle(10px, 10px, 10px, 0, $colorTimeTer);
+    position: absolute;
+    top: 12px;
+    right: -10px;
+    display: block;
+    content: " ";
+  }
+  &:after {
+    @include triangle(9px, 9px, 9px, 0, $colorTimeCuater);
+    position: absolute;
+    top: 13px;
+    right: -9px;
+    display: block;
+    content: " ";
+  }
+  &_expense {
+    margin-right: auto;
+    margin-left: 30px;
+    &::before {
+      @include triangle(10px, 10px, 0, 10px, $colorTimeTer);
+      right: auto;
+      left: -10px;
+    }
+    &:after {
+      @include triangle(9px, 9px, 0, 9px, $colorTimeCuater);
+      right: auto;
+      left: -9px;
+    }
+  }
+  &_extended {
+    height: 65px;
+    &::before {
+      top: 22px;
+    }
+    &:after {
+      top: 23px;
+    }
+  }
+}
+
+.bank-note__actions {
+  position: relative;
+  width: 10%;
+  height: 100%;
+  border-right: 1px solid $colorTimeTer;
+  background-color: $colorTimePenta;
+  float: left;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &.selected {
+    background-color: $colorFontTimeline;
+  }
+  &_expense {
+    border: none;
+    background-color: $colorFontTimeline;
+    float: right;
+    &:hover,
+    &:focus,
+    &.selected {
+      border-left: 1px solid $colorTimeTer;
+      background-color: $colorTimePenta;
+    }
+  }
+  .dot {
+    @include border-radius(4px);
+    display: block;
+    position: relative;
+    top: 48%;
+    height: 4px;
+    width: 4px;
+    margin: 0 2px;
+    background-color: $colorTimeHexa;
+    float: left;
+    &:first-child {
+      margin-left: 11px;
+    }
+  }
+}
+
+.bank-note__description {
+  display: inline-table;
+  width: 90%;
+  height: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  .img {
+    display: table-cell;
+    padding-left: 20px;
+    vertical-align: middle;
+    width: 45px;
+    > img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-right: 0;
+      margin-left: auto;
+    }
+    & + .title {
+      padding-left: 10px;
+    }
+  }
+  .title {
+    display: table-cell;
+    padding-right: 7px;
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: $font-bold;
+    vertical-align: middle;
+  }
+  .amount {
+    display: table-cell;
+    padding-right: 12px;
+    padding-left: 8px;
+    color: $colorTimeIngress;
+    font-size: 18px;
+    vertical-align: middle;
+    text-align: right;
+  }
+  .decimal {
+    color: $colorTimeIngress;
+    font-size: 13px;
+  }
+  &_expense {
+    .img {
+      display: table-cell;
+      padding-left: 12px;
+      & + .title {
+        padding-left: 10px;
+      }
+    }
+    .title {
+      padding-left: 12px;
+      color: $colorTimeTitleWarning;
+      font-size: 15px;
+      font-weight: normal;
+    }
+    .subtitle {
+      color: $colorFontTimeline;
+      font-size: 12px;
+      display: block;
+    }
+    .amount {
+      padding-right: 20px;
+      // padding-left: 8px;
+      color: $colorTimeWarning;
+    }
+    .decimal {
+      color: $colorTimeWarning;
+    }
+  }
+}

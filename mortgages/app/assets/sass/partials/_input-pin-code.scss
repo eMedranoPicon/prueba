@@ -1,0 +1,36 @@
+.input-code-form {
+  .title {
+    font-size: 28px;
+    padding-left: 13px;
+    font-weight: $font-regular;
+    color: $colorGray-750;
+  }
+  .sms-code {
+    width: 150px;
+    margin-right: 10px;
+  }
+  .icon-group {
+    display: inline-block;
+    padding: 5px 0;
+    .icon-sms {
+      padding: 5px;
+    }
+    a {
+      font-size: 11px;
+      text-decoration: underline;
+      color: $colorGray-800;
+    }
+  }
+  button {
+    margin: 60px 10px;
+  }
+  .btn-primary {
+    min-width: 228px;
+  }
+}
+
+.input-code-form_vertical {
+  button {
+    margin: 0 10px;
+  }
+}

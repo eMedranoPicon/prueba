@@ -1,0 +1,24 @@
+// Vars and modules
+@import "variables/all";
+@import "modules/all";
+
+$page-min-width: 950px;
+body {
+  min-width: $page-min-width;
+}
+
+.container_custom {
+  min-width: $page-min-width;
+  max-width: $page-min-width;
+  margin: 0 auto;
+  position: relative;
+}
+
+// Vendor sass files
+@import "../../../node_modules/family.scss/source/src/_family.scss";
+@import "custom_bootstrap";
+@import "../../../bower_components/seiyria-bootstrap-slider/src/sass/bootstrap-slider";
+
+// Src files
+@import "components/all";
+@import "partials/all";

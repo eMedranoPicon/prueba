@@ -1,0 +1,7 @@
+{% macro code(code) %}
+  <div class="show-code">
+    <button role="button" class="btn"><img src="images/icons/eye.png" class="default" alt="show-code" /><img src="images/icons/eye_white.png" class="active" alt="show-code" /></button>
+    <span class="encrypt-dot"><img src="images/icons/encrypt-dot.png" alt="show-code" /></span>
+    <span class="code">{{code}}</span>
+  </div>
+{% endmacro %}

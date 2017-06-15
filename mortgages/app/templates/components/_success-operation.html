@@ -1,0 +1,18 @@
+{% macro text(class, title, content_paragraph, text_quantity_form_paid, symbol) %}
+<div class="content-success-operation {{class}}">
+  <div class="container container_custom text-center">
+    <h1>{{title}}</h1>
+    <p class="pdt-25">{{content_paragraph}}</p>
+    <div class="pdt-55 content-success-operation__width">
+      <div class="halfcol">
+        <p>El límite de tu tarjeta a</p>
+        <span>0000 €</span>
+      </div>
+      <div class="halfcol">
+        <p>{{text_quantity_form_paid}}</p>
+        <span>0000 {{symbol}} / mes</span>
+      </div>
+    </div>
+  </div>
+</div>
+{% endmacro %}

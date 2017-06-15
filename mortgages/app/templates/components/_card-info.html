@@ -1,0 +1,14 @@
+{% macro content(class, accountHolder, numberAccount, text)%}
+<header class="container-card {{class}}">
+  <div class="container container_custom">
+    <div class="pull-left credit-card">
+      <img src="images/icons/visa-icon.png" alt="" class="pull-left credit-card__icon">
+      <div class="credit-card__details">
+        <span class="account-holder">{{accountHolder}}</span>
+        <span class="number-account">{{numberAccount}}</span>
+      </div>
+    </div>
+    <h1 class="pull-right">{{text}}</h1>
+  </div>
+</header>
+{% endmacro %}

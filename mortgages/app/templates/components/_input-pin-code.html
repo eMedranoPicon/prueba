@@ -1,0 +1,35 @@
+{% macro content(class, pagination, textButton, title) %}
+<form class="input-code-form form-inline">
+  <div class="secundary-bg text-center {{class}}">
+    {% if title %}
+    <h3 class="title pdb-40">{{title}}</h3>
+    {% endif %}
+    <div class="form-group container container_custom">
+      <div class="clearfix">
+        <div class="halfcol">
+          <input class="form-control sms-code pull-right" type="text" placeholder="Introduce el código">
+        </div>
+        <div class="halfcol">
+          <div class="icon-group pull-left">
+            <img class="icon-sms" src="images/icons/comment-alert.png" alt="SMS"><a href="" >Si no ha llegado el SMS</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container container_custom text-center">
+    {% if pagination %}
+    {% import "components/_paginator.html" as paginator %}
+    {{ paginator.set('2','2','mt-55 mb--35') }}
+    {% endif %}
+    <div class="clearfix">
+      <div class="halfcol">
+        <button class="btn btn-default pull-right" type="reset" name="button">Atrás</button>
+      </div>
+      <div class="halfcol">
+        <button class="btn btn-primary pull-left" type="submit" name="button">{{textButton}}</button>
+      </div>
+    </div>
+  </div>
+</form>
+{% endmacro %}

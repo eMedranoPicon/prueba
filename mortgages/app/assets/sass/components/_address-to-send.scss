@@ -1,0 +1,70 @@
+.address-section {
+  h3 {
+    font-size: 22px;
+    font-weight: $font-bold;
+    padding: 34px 0;
+    margin: 0;
+    color: $colorGray-400;
+  }
+  button,
+  input.btn {
+    margin: 20px 10px 50px;
+  }
+  .change-address-form button {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .form-container {
+    background-color: $colorGray-300;
+    padding: 70px 0;
+    margin-bottom: 50px;
+  }
+}
+
+
+.address {
+  background-color: $colorGray-300;
+  text-align: center;
+  padding-top: 58px;
+  padding-bottom: 50px;
+  margin-bottom: 52px;
+  &__container {
+    position: relative;
+    padding-left: 65px;
+    padding-right: 70px;
+    display: inline-block;
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3px;
+    padding-right: 14px;
+  }
+  &__details {
+    display: inline-block;
+    text-align: left;
+    > p {
+      font-size: 16px;
+      margin-bottom: 4px;
+      color: $colorBlueGray-300;
+    }
+    > button {
+      display: block;
+      padding: 0;
+      margin: 5px 0;
+      font-size: 16px;
+      text-decoration: underline;
+      color: $colorBlack;
+
+      &:hover {
+        color: $colorBlack;
+      }
+      &.btn-link {
+        border: 0;
+      }
+    }
+  }
+}

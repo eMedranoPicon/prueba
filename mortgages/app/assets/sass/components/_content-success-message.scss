@@ -1,0 +1,15 @@
+.content-success-message {
+  background-color: $colorGreen-500;
+  color: $colorWhite;
+  text-align: center;
+  h1 {
+    font-size: 33px;
+    font-weight: $font-bold;
+    margin-bottom: 8px;
+  }
+  p {
+    margin: 0 auto;
+    color: $colorWhite;
+    font-size: 15px;
+  }
+}

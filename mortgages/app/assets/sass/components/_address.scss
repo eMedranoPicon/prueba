@@ -1,0 +1,52 @@
+.address-form {
+  margin: 0 auto;
+  max-width: 765px;
+  $gutter: 20px;
+  &__row {
+    @include make-row($gutter);
+    margin-bottom: 45px;
+  }
+  &__col-10 {
+    @include make-xs-column(0, $gutter);
+    width: 10%;
+  }
+  &__col-20 {
+    @include make-xs-column(0, $gutter);
+    width: 20%;
+  }
+  &__col-30 {
+    @include make-xs-column(0, $gutter);
+    width: 30%;
+  }
+  &__col-40 {
+    @include make-xs-column(0, $gutter);
+    width: 40%;
+  }
+  p {
+    font-size: 16px;
+    font-weight: $font-light;
+  }
+  .btn-group {
+    text-align: center;
+    margin-top: 55px;
+    > button {
+      margin: 0 10px;
+    }
+  }
+  .messages {
+    text-align: center;
+    margin-bottom: 20px;
+    > p {
+      font-size: 14px;
+      color: $colorDanger;
+    }
+    .alert {
+      width: 18px;
+      height: 14px;
+      display: inline-block;
+      margin-right: 5px;
+      background-image: url('../images/icons/alert-icon.png');
+      background-repeat: no-repeat;
+    }
+  }
+}

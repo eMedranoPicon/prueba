@@ -1,0 +1,11 @@
+{% macro text(class, title, text, img_src, img_alt) %}
+<div class="content-success-message {{class}}">
+  <div class="container container_custom">
+  {% if img_src %}
+    <img src="{{ img_src }}" alt="{{ img_alt }}">
+  {% endif %}
+    <h1>{{title}}</h1>
+    <p>{{text}}</p>
+  </div>
+</div>
+{% endmacro %}

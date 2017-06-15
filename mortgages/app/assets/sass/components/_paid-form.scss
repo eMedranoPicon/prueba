@@ -1,0 +1,36 @@
+.paid-form {
+  background-color: $colorWhite;
+  text-align: center;
+  .title {
+    font-size: 21px;
+    color: $colorBlueGray-300;
+    font-weight: $font-bold;
+  }
+  &__option {
+    text-align: left;
+    display: inline-block;
+    position: relative;
+
+    &_cash {
+      float: left;
+      margin-right: 33px;
+    }
+    &_percentage {
+      float: left;
+      margin-right: 27px;
+    }
+    &_quantity {
+      float: left;
+    }
+  }
+  &__explanation {
+    font-size: 18px;
+    padding-left: 32px;
+  }
+}
+.slider-content {
+  background-color: $colorWhite;
+  .clarification {
+    display: none;
+  }
+}

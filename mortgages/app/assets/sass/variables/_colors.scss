@@ -1,0 +1,71 @@
+$colorWhite: #fff;
+$colorBlack: #000;
+$colorDarkGray: #333;
+
+$colorGray: #fcfcfc #f0f0f0 #f3f3f3 #f7f7f7 #ececec #e2e0e0 #e8e7e3 #e8e8e8 #d7d7d7 #aeb5bc #646467 #545454 #555558 #747474 #3a3a3a #383838 #2f2f2f #0c0c0c;
+
+$colorGray-50:  nth($colorGray,  1);
+$colorGray-100: nth($colorGray,  2);
+$colorGray-150: nth($colorGray,  3);
+$colorGray-200: nth($colorGray,  4);
+$colorGray-220: nth($colorGray,  5);
+$colorGray-225: nth($colorGray,  6);
+$colorGray-250: nth($colorGray,  7);
+$colorGray-300: nth($colorGray,  8);
+$colorGray-325: nth($colorGray,  9);
+$colorGray-350: nth($colorGray, 10);
+$colorGray-400: nth($colorGray, 11);
+$colorGray-450: nth($colorGray, 12);
+$colorGray-500: nth($colorGray, 13);
+$colorGray-600: nth($colorGray, 14);
+$colorGray-700: nth($colorGray, 15);
+$colorGray-725: nth($colorGray, 16);
+$colorGray-750: nth($colorGray, 17);
+$colorGray-800: nth($colorGray, 18);
+
+$colorGreen: #70a41c #417100;
+$colorGreen-500: nth($colorGreen, 1);
+$colorGreen-700: nth($colorGreen, 2);
+
+$colorBlueGray: #556270 #24313c;
+$colorBlueGray-300: nth($colorBlueGray,1);
+$colorBlueGray-800: nth($colorBlueGray, 2);
+
+$color-brand: $colorGreen-500;
+
+$colorDanger: #fc2020;
+
+// Timeline
+$colorFontTimeline     : $colorBlueGray-300;
+$colorTimePrimary      : #949494;
+$colorTimeSecond       : $colorBlueGray-800;
+$colorTimeTer          : #e4e4e4;
+$colorTimeCuater       : $colorWhite;
+$colorTimePenta        : $colorGray-200;
+$colorTimeHexa         : #b2b2b2;
+$colorTimeTextWarn     : $colorGray-350;
+$colorTimeBar          : #d5d5d5;
+$colorTimeIngress      : $colorGreen-500;
+$colorTimeTitleWarning : $colorGray-350;
+$colorTimeWarning      : #c90d3a;
+$colorTimeLineAccor    : #ebebeb;
+$colorTimeBack         : #f8f9f9;
+
+// Modules
+$colorModPrimary        : $colorBlueGray-300;
+$colorModSecond         : #c2c7cb;
+$colorModTer            : $colorGray-350;
+$colorModCuat           : $colorGray-220;
+$colorModPenta          : #959ba2;
+$colorModBack           : #f8f9f9;
+$colorModBorder         : #e3e3e3;
+$colorModBorderInput    : #dcdcdc;
+$colorModBorderDark     : #c8c8c8;
+$colorModButBack        : $colorGreen-500;
+$colorModInputBorder    : #dde0e2;
+
+$colorDetPrimary        : $colorBlueGray-800;
+
+// Others
+
+$colorBgDashboard: #f6f6f3;

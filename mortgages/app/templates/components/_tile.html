@@ -1,0 +1,9 @@
+{% macro content(has_separator, title, subtitle, img_src, img_alt) %}
+<div class="tile {% if has_separator %} tile_separator {% endif %}">
+  <div class="tile__icon">
+    <img src="{{ img_src }}" alt="{{ img_alt }}">
+  </div>
+  <h4 class="tile__title">{{ title }}</h4>
+  <p>{{ subtitle }}</p>
+</div>
+{% endmacro %}

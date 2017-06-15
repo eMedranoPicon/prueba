@@ -1,0 +1,10 @@
+{% macro advise(mod, img, title, text, btnText) %}
+<article class="card-advise {{mod}}">
+  <img src="images/{{ img }}" alt="image" class="card-advise__icon" />
+  <div class="card-advise__data">
+    <h2>{{ title }}</h2>
+    {% if text %}<p>{{ text }}</p>{% endif %}
+    {% if btnText %}<button class="btn btn-default">{{ btnText }}</button>{% endif %}
+  </div>
+</article>
+{% endmacro %}
