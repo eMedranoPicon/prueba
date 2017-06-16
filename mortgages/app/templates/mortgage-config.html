@@ -1,7 +1,8 @@
-{% import "/components/_text-green-block.html" as textBlock %}
-{% import "/components/_title-multicolor.html" as titleMulticolor %}
+{% import "/components/_section-title.html" as title %}
+{% import "/components/_progress-step-bar.html" as progress %}
 {% extends "/base/_base.html" %}
 
 {% block content %}
-
+   {{ progress.bar(3, 1)}}
+   {{ title.content('Configura tu', 'Hipoteca COINC', 'COINC te ayuda a conseguir tu vivienda') }}
 {% endblock %}
