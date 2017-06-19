@@ -1,0 +1,7 @@
+{% macro content(options) %}
+<select class="dropdown__options">
+  {%- for option in options %}
+    <option>{{option}}</option>
+  {%- endfor %}
+</select>
+{% endmacro %}
