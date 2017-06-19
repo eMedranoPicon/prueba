@@ -1,0 +1,30 @@
+.radio-toggle {
+  padding-bottom: 30px;
+  &__title {
+    font-size: 16px;
+    color: $colorGray-450;
+    margin-bottom: 26px;
+    font-weight: $font-bold;
+    display: block;
+  }
+  &__boxes {
+    border: 1px solid $colorGray-325;
+    width: 162px;
+    height: 40px;
+    display: inline-block;
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"]:checked+label {
+    background-color: $colorGreen-500;
+    color: $colorWhite;
+  }
+  label {
+    font-size: 16px;
+    color: $colorGray-725;
+    padding: 8px 0;
+    margin: 0;
+    width: 80px;
+  }
+}

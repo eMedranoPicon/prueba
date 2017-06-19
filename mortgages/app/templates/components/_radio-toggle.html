@@ -1,0 +1,8 @@
+{% macro toggle(text, option1, option2) %}
+<div class="radio-toggle text-center">
+  <h3 class="radio-toggle__title">{{ text }}</h3>
+  <div class="radio-toggle__boxes">
+    <input type="radio" name="radioToggle" id="r1" checked><label for="r1">{{ option1 }}</label><input type="radio" name="radioToggle" id="r2"><label  for="r2">{{ option2 }}</label>
+  </div>
+</div>
+{% endmacro %}
