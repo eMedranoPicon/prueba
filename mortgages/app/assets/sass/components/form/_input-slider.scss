@@ -88,15 +88,15 @@
   .number-slider {
     position: relative;
     color: $colorGray-450;
-    width: 80px;
+    width: 130px;
     margin: 0 auto 14px;
     .error-value-percentage {
       border-color: $colorDanger;
     }
 
     > input {
-      color: $colorGray-450;
-      width: 80px;
+      color: $colorGray-725;
+      width: 130px;
       height: 36px;
       padding: 0;
       margin: 1px;
@@ -104,21 +104,28 @@
       background-color: transparent;
       font-size: 25px;
       text-align: center;
-      border: 1px solid $colorGray-400;
+      border: 1px solid $colorGray-325;
     }
 
     .symbol-medium {
       position: absolute;
-      top: 8px;
-      right: -22px;
-      font-size: 18px;
+      top: 11px;
+      left: 140px;
+      font-size: 14px;
+      color: $colorGreen-500;
     }
   }
 
   .top-value {
-    padding: 0 10px;
-    font-size: 14px;
+    padding: 3px 5px;
+    font-size: 12px;
     color: $colorGray-450;
+  }
+  .top-value_min {
+    float: left;
+  }
+  .top-value_max {
+    float: right;
   }
 }
 
