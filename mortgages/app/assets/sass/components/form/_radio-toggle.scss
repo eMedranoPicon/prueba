@@ -1,12 +1,5 @@
 .radio-toggle {
   padding-bottom: 30px;
-  &__title {
-    font-size: 16px;
-    color: $colorGray-450;
-    margin-bottom: 26px;
-    font-weight: $font-bold;
-    display: block;
-  }
   &__boxes {
     border: 1px solid $colorGray-325;
     width: 162px;

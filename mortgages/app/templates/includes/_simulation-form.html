@@ -1,6 +1,42 @@
 {% import "components/_radio-toggle.html" as radio %}
 {% import "/components/_dropdown.html" as dropdown %}
+{% import "/components/_input-slider.html" as slider %}
 
-{{ radio.toggle('¿Es una casa nueva?', 'Sí', 'No') }}
-
-{{ dropdown.content(['Madrid', 'Valencia']) }}
+<form class="container container_custom simulation-form">
+  <div class="row">
+    <div class="col-xs-6">
+      {{ radio.toggle('¿Es una casa nueva?', 'new') }}
+    </div>
+    <div class="col-xs-6">
+      {{ radio.toggle('¿Sera tu residencia habitual?', 'habitual') }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 text-center">
+      <h3>¿En qué provincia está?</h3>
+      {{ dropdown.content(['Barcelona', 'Madrid', 'Valencia']) }}
+    </div>
+    <div class="col-xs-6 text-center">
+      <h3>¿Cuando la vas a comprar?</h3>
+      {{ dropdown.content(['Noviembre', 'Diciembre, Enero']) }}
+      {{ dropdown.content(['2017', '2016', '2015']) }}
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-xs-4">
+      <h3>¿Cuánto cuesta la vivienda?</h3>
+      {{ slider.slider(37500, 1000000, 200000, 1, '€', '', 'homeValue') }}
+    </div>
+    <div class="col-xs-4">
+      <h3>¿Cuánto dinero quieres?</h3>
+      {{ slider.slider(30000, 160000, 160000, 1, '€', '', 'moneyNeed') }}
+    </div>
+    <div class="col-xs-4">
+      <h3>¿Cuántos años para devolverlo?</h3>
+      {{ slider.slider(3, 30, 20, 1, 'Años', '', 'yearsReturn') }}
+    </div>
+  </div>
+  <div class="text-center mt-80 mb-20">
+    <button class="btn btn-primary" type="submit" name="button">Simular</button>
+  </div>
+</form>

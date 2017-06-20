@@ -4,6 +4,9 @@
     height: 36px;
     background-color: $colorGray-200;
     padding-left: 10px;
-    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-border-radius: 0px;
+    border-color: $colorGray-325;
   }
 }
