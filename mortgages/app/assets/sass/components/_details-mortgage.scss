@@ -1,0 +1,107 @@
+.details-mortgage {
+  width: 405px;
+  height: 535px;
+  background-color: #70a41c;
+  color: $colorWhite;
+  padding: 0 26px;
+
+  &__header {
+    text-align: center;
+    padding-bottom: 12px;
+    & h3 {
+      padding-top: 56px;
+      font-size: 22px;
+      margin-bottom: 3px;
+    }
+    & p {
+      color: $colorWhite;
+      font-size: 13px;
+    }
+  }
+
+  &__body {
+    &__prices {
+      height: 120px;
+      &_price {
+        color: $colorWhite;
+        font-weight: $font-bold;
+        font-size: 40px;
+        margin-bottom: 0;
+        & span {
+          font-size: 20px;
+          padding-left: 5px;
+        }
+      }
+      &_text {
+        color: $colorWhite;
+        font-size: 11px;
+      }
+      & div:first-child {
+        width: 50%;
+        float: left;
+        & h4 {
+          font-size: 12px;
+          color: #000;
+          margin-bottom: 0px;
+        }
+      }
+      & div:last-child {
+        width: 50%;
+        float: right;
+        text-align: right;
+        & h4 {
+          font-size: 12px;
+          color: #000;
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    &__list {
+      & li {
+        float: none;
+        text-align: left;
+        padding: 15px 0 7px 0;
+        border-bottom: 1px solid #fff;
+        font-size: 12px;
+        font-weight: $font-bold;
+        & span {
+          float: right;
+          font-weight: $font-bold;
+          font-size: 18px;
+          margin-top: -3px;
+        }
+        &:last-child {
+          border-bottom: 0;
+          & p {
+            font-size: 11px;
+            text-decoration: underline;
+            color: $colorWhite;
+            text-align: right;
+            cursor: pointer;
+          }
+        }
+      }
+      &__icon {
+        margin-left: 5px;
+        float: right;
+        cursor: pointer;
+        & img {
+          width: 17px;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    padding-top: 25px;
+    & p {
+      text-decoration: underline;
+      color: $colorWhite;
+      cursor: pointer;
+      width: 31%;
+      margin: 0 auto;
+      font-size: 11px;
+    }
+  }
+}
