@@ -8,6 +8,14 @@
    {{ progress.bar(3, 1)}}
    {{ title.content('Configura tu', 'Hipoteca COINC', 'COINC te ayuda a conseguir tu vivienda') }}
    {% include 'includes/_simulation-form.html' %}
-   {% include "includes/_details-mortgage.html" %}
-   {{ dropdown.content(['Madrid', 'Valencia']) }}
+   <div class="container container_custom pdt-30 pdb-70">
+     <div class="row">
+       <div class="col-xs-6">
+         {% include "includes/_details-mortgage-variable.html" %}
+       </div>
+       <div class="col-xs-6">
+         {% include "includes/_details-mortgage-fixed.html" %}
+       </div>
+     </div>
+   </div>
 {% endblock %}
