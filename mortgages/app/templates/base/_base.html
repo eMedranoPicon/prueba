@@ -25,6 +25,10 @@
   <script src="js/legacy/jquery-1.7.1.js"></script>
   <script src="js/legacy/coinc.js"></script>
   <script src="js/legacy/jquery-ui.min.js"></script>
+  <script>
+    /*** Handle jQuery plugin naming conflict between jQuery UI and Bootstrap ***/
+    $.widget.bridge('uitooltip', $.ui.tooltip);
+  </script>
   <script src="js/legacy/jquery.ui.datepicker.js"></script>
   <script src="js/legacy/jquery.ui.datepicker-es.js"></script>
   <script src="js/legacy/jquery.cluetip.js"></script>

@@ -1,0 +1,26 @@
+.tooltip-action {
+  cursor: pointer;
+  width: 27px;
+  height: 27px;
+  background-image: url('/images/iconos/ico_duda2.png');
+  vertical-align: middle;
+  display: inline-block;
+}
+.tooltip.top {
+  left: 70px !important;
+  box-shadow: -0.1px 2px 4px 0 rgba(0, 0, 0, 0.32);
+  border-radius: 16px;
+  border-bottom-right-radius: 0;
+  background-color: #fefefe;
+
+  .tooltip-arrow {
+    display: none;
+  }
+  .tooltip-inner {
+    font-size: 12px;
+    color: #555558;
+    background-color: #fefefe;
+    padding: 16px;
+    border-radius: 16px;
+  }
+}

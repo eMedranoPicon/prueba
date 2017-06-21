@@ -43,13 +43,11 @@ var src_app = './app',
   vendor_js_src = [
     './bower_components/jquery/jquery.min.js',
     './bower_components/jquery/jquery-migrate.min.js',
-    './bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js',
-    './bower_components/jQuery.mmenu/dist/js/jquery.mmenu.min.all.js',
     './bower_components/jquery-ui/jquery-ui.min.js',
+    './bower_components/jQuery.mmenu/dist/js/jquery.mmenu.min.all.js',
+    './bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.min.js',
     './bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js',
-    './bower_components/highcharts/highcharts.js',
-    './bower_components/seiyria-bootstrap-slider/src/js/bootstrap-slider.js',
-    './bower_components/highcharts/highcharts.js'
+    './bower_components/seiyria-bootstrap-slider/src/js/bootstrap-slider.js'
   ],
   vendor_css_src = [
     './bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css'
