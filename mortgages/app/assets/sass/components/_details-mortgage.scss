@@ -204,4 +204,44 @@
       }
     }
   }
+
+  &_alert {
+    width: 405px;
+    height: 535px;
+    background-color: $colorWhite;
+    margin: 0 auto;
+    margin-left: 0;
+
+    &__header {
+      text-align: center;
+      padding-bottom: 32px;
+      & h3 {
+        padding-top: 56px;
+        font-size: 22px;
+        margin-bottom: 3px;
+      }
+      & p {
+        font-size: 14px;
+        max-width: 275px;
+        margin: auto;
+        font-weight: $font-bold;
+      }
+    }
+
+    &__body {
+      height: 100px;
+      background-color: #ff9121;
+      & p {
+        text-align: center;
+        color: $colorWhite;
+        font-size: 48px;
+        font-weight: $font-bold;
+        padding-top: 17px;
+        padding-left: 43px;
+        & span {
+          font-size: 24px;
+        }
+      }
+    }
+  }
 }
