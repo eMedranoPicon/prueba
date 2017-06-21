@@ -1,0 +1,47 @@
+.section-documentation {
+  width: 100%;
+  font-size: 11px;
+  &__download {
+    background-color: $colorWhite;
+    border-right: 1px solid $colorGray-300;
+    height: 70px;
+    display: table;
+    text-align: right;
+    & p {
+      display: table-cell;
+      vertical-align: middle;
+      background: transparent url(../images/download.png) no-repeat 585px center;
+      padding-right: 85px;
+    }
+  }
+
+  &__see {
+    background-color: $colorWhite;
+    border-left: 1px solid $colorGray-300;
+    height: 70px;
+    display: table;
+    text-align: left;
+    & p {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 40px;
+      background: transparent url(../images/book.png) no-repeat 385px center;
+    }
+  }
+  &__print {
+    background-color: $colorBlueGray-350;
+    width: 100%;
+    height: 70px;
+    display: table;
+    text-align: center;
+    & p {
+      display: table-cell;
+      vertical-align: middle;
+      color: $colorWhite;
+      & a {
+        color: $colorWhite;
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -27,9 +27,10 @@ $colorGreen: #70a41c #417100;
 $colorGreen-500: nth($colorGreen, 1);
 $colorGreen-700: nth($colorGreen, 2);
 
-$colorBlueGray: #556270 #24313c;
+$colorBlueGray: #556270 #556271 #24313c;
 $colorBlueGray-300: nth($colorBlueGray,1);
-$colorBlueGray-800: nth($colorBlueGray, 2);
+$colorBlueGray-350: nth($colorBlueGray, 2);
+$colorBlueGray-800: nth($colorBlueGray, 3);
 
 $color-brand: $colorGreen-500;
 
