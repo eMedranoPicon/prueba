@@ -1,6 +1,7 @@
 {% import "/components/_section-title.html" as title %}
 {% import "/components/_progress-step-bar.html" as progress %}
 {% import "/components/_dropdown.html" as dropdown %}
+{% import "/components/_paginator.html" as paginator %}
 
 {% extends "/base/_base.html" %}
 
@@ -18,4 +19,18 @@
        </div>
      </div>
    </div>
+
+   <div class="mt-50">
+     {{ paginator.set(1, 3) }}
+   </div>
+   <div class="container container_custom text-center">
+      <div class="clearfix">
+        <div class="halfcol">
+          <button class="btn btn-default pull-right" type="reset" name="button">Cancelar</button>
+        </div>
+        <div class="halfcol">
+          <button class="btn btn-primary pull-left" type="submit" name="button">Solicitar hipoteca variable</button>
+        </div>
+      </div>
+    </div>
 {% endblock %}
