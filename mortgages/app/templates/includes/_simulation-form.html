@@ -1,6 +1,7 @@
 {% import "components/_radio-toggle.html" as radio %}
 {% import "/components/_dropdown.html" as dropdown %}
 {% import "/components/_input-slider.html" as slider %}
+{% import "/components/_tooltip-info.html" as tooltip %}
 
 <form class="container container_custom simulation-form">
   <div class="row">
@@ -24,15 +25,15 @@
   </div>
   <div class="row text-center">
     <div class="col-xs-4">
-      <h3>¿Cuánto cuesta la vivienda?</h3>
+      <h3>¿Cuánto cuesta la vivienda?{{ tooltip.content('Puedes solicitar hasta el 80 % del valor de la vivienda, y no menos de 30.000€')}}</h3>
       {{ slider.slider(37500, 1000000, 200000, 1, '€', '', 'homeValue') }}
     </div>
     <div class="col-xs-4">
-      <h3>¿Cuánto dinero quieres?</h3>
+      <h3>¿Cuánto dinero quieres?{{ tooltip.content('Puedes solicitar hasta el 80 % del valor de la vivienda, y no menos de 30.000€')}}</h3>
       {{ slider.slider(30000, 160000, 160000, 1, '€', '', 'moneyNeed') }}
     </div>
     <div class="col-xs-4">
-      <h3>¿Cuántos años para devolverlo?</h3>
+      <h3>¿Cuántos años para devolverlo?{{ tooltip.content('Puedes solicitar hasta el 80 % del valor de la vivienda, y no menos de 30.000€')}}</h3>
       {{ slider.slider(3, 30, 20, 1, 'Años', '', 'yearsReturn') }}
     </div>
   </div>

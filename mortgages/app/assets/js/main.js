@@ -53,6 +53,9 @@
 
       });
     },
+    _initTooltips : function ( ) {
+      $('[data-toggle="tooltip"]').tooltip();
+    },
     _closeButtons : function ( ) {
       $("[data-close]").close();
     },
@@ -71,6 +74,7 @@
     },
     init : function ( ) {
       this._initSliders();
+      this._initTooltips();
       this._closeButtons();
       this._hackIeBtnActive();
     }
