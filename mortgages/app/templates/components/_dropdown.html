@@ -1,7 +1,9 @@
 {% macro content(options) %}
-<select class="dropdown__options">
-  {%- for option in options %}
+<div class="underline-select">
+  <select class="dropdown__options">
+    {%- for option in options %}
     <option>{{option}}</option>
-  {%- endfor %}
-</select>
+    {%- endfor %}
+  </select>
+</div>
 {% endmacro %}

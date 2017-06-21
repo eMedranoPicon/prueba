@@ -1,7 +1,8 @@
 .underline-select {
   display: inline-block;
-  width: 100%;
-  border-bottom: 1px solid $colorBlueGray-800;
+  width: 45%;
+  border: 1px solid $colorGray-325;
+  margin-right: 10px;
   select {
     appearance: none;
     color: $colorBlueGray-300;
@@ -17,6 +18,7 @@
     border: 0;
     background: url("../images/icons/caret.png") no-repeat center right;
     background-color: transparent;
+    background-position-x: 95%;
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
       background-image: none;
     }
