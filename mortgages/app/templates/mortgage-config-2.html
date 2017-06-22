@@ -10,7 +10,7 @@
    {{ progress.bar(3, 1)}}
    {{ title.content('Configura tu', 'Hipoteca COINC', 'COINC te ayuda a conseguir tu vivienda') }}
    {% include 'includes/_simulation-form.html' %}
-   <div class="container container_custom pdt-30 pdb-70">
+   <div class="container container_custom pdt-40 pdb-70">
      <div class="row">
        <div class="col-xs-6">
          {% include "includes/_details-mortgage-variable.html" %}
@@ -20,7 +20,7 @@
        </div>
      </div>
    </div>
-
+   {% include "includes/_section-documentation.html" %}
    <div class="mt-50">
      {{ paginator.set(1, 3) }}
    </div>

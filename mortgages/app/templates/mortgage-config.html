@@ -10,7 +10,7 @@
    {{ progress.bar(3, 1)}}
    {{ title.content('Configura tu', 'Hipoteca COINC', 'COINC te ayuda a conseguir tu vivienda') }}
    {% include 'includes/_simulation-form.html' %}
-   <div class="container container_custom pdt-30 pdb-70">
+   <div class="container container_custom pdt-40 pdb-70">
      <div class="row">
        <div class="col-xs-6">
          {% include "includes/_details-mortgage-variable.html" %}
@@ -20,7 +20,7 @@
        </div>
      </div>
    </div>
-
+   {% include "includes/_section-documentation.html" %}
    <div class="mt-50">
      {{ paginator.set(1, 3) }}
    </div>
@@ -37,5 +37,4 @@
     <div class="clarification">
       <p>Los cálculos ofrecidos tienen carácter orientativo y, en cualquier caso, la operación está sujeta a la aprobación posterior, por lo que no constituye una oferta de contratación que vincule al Banco.</p>
     </div>
-   {% include "includes/_section-documentation.html" %}
 {% endblock %}
