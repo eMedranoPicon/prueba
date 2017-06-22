@@ -44,3 +44,22 @@
   @import "components/all";
   @import "partials/all";
 }
+.modal-open {
+  overflow: hidden;
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+  // Fade for backdrop
+  &.fade { @include opacity(0); }
+  &.in { @include opacity(.5); }
+}
