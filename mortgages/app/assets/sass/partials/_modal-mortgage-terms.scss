@@ -1,0 +1,57 @@
+.modal-terms {
+  & .modal-body {
+    padding: 0 30px;
+  }
+  &_width{
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 18px;
+  }
+  &__header {
+    border-bottom: 0;
+    padding: 3px;
+    & button {
+      font-size: 28px;
+    }
+  }
+  &__title {
+    text-align: center;
+    & h4 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+    & p {
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+  &__lista {
+    & li {
+      float: none;
+      padding: 10px 0;
+      border-bottom: 1px solid $colorGray-325;
+      & span {
+        float: right;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      & p {
+        text-decoration: none;
+        cursor:default;
+        width: 100%;
+        font-size: 12px;
+      }
+    }
+    &_right {
+      text-align: right;
+      padding-top: 2px;
+    }
+  }
+  &__footer {
+    font-size: 11px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+}
