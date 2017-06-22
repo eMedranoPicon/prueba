@@ -21,10 +21,11 @@
       <li>T.A.E. <span>1,95 %</span></li>
       <li>Euribor <span>1,20 %</span></li>
       <li>Comisión apertura <span>500 €<div class="details-mortgage_variable__body__list__icon"><img src="images/iconos/ico_duda2.png" alt=""></div></span></li>
-      <li>Gastos asociados <span>22.000 € <p>Ver desglose</p></span></li>
+      <li>Gastos asociados <span>22.000 € <p data-toggle="modal" data-target="#modal-mortgage-expenses">Ver desglose</p></span></li>
     </ul>
   </div>
   <div class="details-mortgage_variable__footer">
-    <p>VER CONDICIONES</p>
+    <p data-toggle="modal" data-target="#modal-mortgage-terms">VER CONDICIONES</p>
   </div>
 </div>
+{% include "includes/_modal-mortgage-expenses.html" %}

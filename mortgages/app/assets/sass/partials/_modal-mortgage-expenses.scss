@@ -1,0 +1,70 @@
+.modal-expenses {
+  & .modal-body {
+    padding: 0 30px;
+  }
+  &_width{
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 18px;
+  }
+  &__header {
+    border-bottom: 0;
+    padding: 3px;
+    & button {
+      font-size: 28px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &__title {
+    text-align: center;
+    & h4 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+    & p {
+      font-size: 14px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  }
+}
+.model-expenses__table {
+  & .table {
+    & th {
+      color: #70a41c;
+      border-top: 0;
+      text-align: right;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    & tr {
+      text-align: right;
+      font-size: 16px;
+      font-weight: 600;
+      & td {
+        padding: 15px 0;
+      }
+      & td:first-child {
+        text-align: left;
+        font-size: 12px;
+        font-weight: 100;
+      }
+      & td:last-child {
+        text-align: right;
+        width: 40%;
+      }
+      &:last-child {
+        color: #70a41c;
+        font-size: 24px;
+        & td:first-child {
+          font-size: 12px;
+          font-weight: 100;
+          color: #000;
+        }
+      }
+    }
+  }
+}
