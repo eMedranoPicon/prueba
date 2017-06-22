@@ -12,6 +12,9 @@
     padding: 3px;
     & button {
       font-size: 28px;
+      &:focus {
+        outline: none;
+      }
     }
   }
   &__title {
