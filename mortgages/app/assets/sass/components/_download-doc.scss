@@ -1,0 +1,44 @@
+.doc-card {
+  height: 95px;
+  width: 100%;
+  background-color: $colorWhite;
+  position: relative;
+  .doc-name {
+    font-size: 14px;
+    display: inline-block;
+    max-width: 60%;
+    max-height: 62px;
+    word-wrap: break-word;
+    overflow: hidden;
+    padding: 0 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    p {
+      color: #545454;
+      font-size: 14px;
+      font-weight: $font-bold;
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
+  }
+  .doc-icon {
+    float: right;
+    width: 112px;
+    height: 100%;
+    background-color: $colorGreen-500;
+    text-align: center;
+    padding: 20px 0;
+    img {
+      width: 70px;
+    }
+    &:hover,
+    &:active {
+      background-color: $colorGreen-700;
+    }
+  }
+}
+.document-download-clarification {
+  font-size: 13px;
+  color: #383838;
+}
