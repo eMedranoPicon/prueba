@@ -1,6 +1,8 @@
 {% macro content(title, contentInput, simbol) %}
-  <div class="container container_custom input-disabled">
-    <label>{{title}}</label>
-    <input class="input-disabled__input" type="text" placeholder={{contentInput}} disabled><span>{{simbol}}</span>
+  <div class="input-disabled">
+    <label class="form-control-title">{{title}}</label>
+    <div class="input-disabled__input">
+      <input class="input-disabled__input" type="text" placeholder={{contentInput}} disabled><span>{{simbol}}</span>
+    </div>
   </div>
 {% endmacro %}
