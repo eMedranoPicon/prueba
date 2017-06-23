@@ -1,0 +1,26 @@
+.contract-data {
+  &__title {
+    text-align: center;
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #70a41c;
+    }
+  }
+  &__text {
+    font-size: 12px;
+    padding-top: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    display: block;
+  }
+  &_margin {
+    margin-top: 10px;
+  }
+  &__dropdown {
+    & .underline-select {
+      width: 100%;
+    }
+  }
+}

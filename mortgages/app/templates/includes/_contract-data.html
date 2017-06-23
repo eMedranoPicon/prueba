@@ -1,0 +1,41 @@
+{% import "/components/_input-disabled.html" as input %}
+{% import "/components/_dropdown.html" as dropdown %}
+
+<div class="container container_custom mt-20 mb-80 contract-data">
+  <div class="row">
+    <div class="col-xs-12 contract-data__title mt-25 mb-10">
+      <h2>DATOS DE TU HIPOTECA VARIABLE</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      {{ input.content('Importe solicitado', '180.000', '€') }}
+    </div>
+    <div class="col-xs-3">
+      {{ input.content('Plazo', '30', 'Años') }}
+    </div>
+    <div class="col-xs-3">
+      {{ input.content('Cuota primer año', '511,85', '€') }}
+    </div>
+    <div class="col-xs-3">
+      {{ input.content('Cuota resto de años', '488,85', '€') }}
+      <p class="contract-data__text">Sujeto a cambios de euribor</p>
+    </div>
+  </div>
+
+  <div class="row scontract-data_margin">
+    <div class="col-xs-3">
+      {{ input.content('T.I.N primer año', '1,50', '%') }}
+    </div>
+    <div class="col-xs-3">
+      {{ input.content('Resto años', 'Euribor + 1,20', '%') }}
+    </div>
+    <div class="col-xs-3">
+      {{ input.content('T.A.E variable', '2,05', '%') }}
+    </div>
+    <div class="col-xs-3 contract-data__dropdown">
+      <label class="form-control-title">Provincia donde se firma</label>
+      {{ dropdown.content(['Madrid', 'Valencia', 'Barcelona']) }}
+    </div>
+  </div>
+</div>
