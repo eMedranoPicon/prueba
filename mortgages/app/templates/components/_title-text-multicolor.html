@@ -1,6 +1,8 @@
-{% macro text(titleWhite, titleGreen, text, textBlack, classMod) %}
-<header class="title-multicolor {{classMod}}">
-  <h2>{{titleWhite}} <span>{{titleGreen}}</span></h2>
-  <p>{{text}} <span>{{textBlack}}</span></p>
+{% macro text(title, titleGreen, textGreen, text, textGreen2, text2) %}
+<header class="title-multicolor">
+  <h2>{{title}} <span>{{titleGreen}}</span></h2>
+  <p>
+    <span>{{textGreen}}</span> {{text}}<span>{{textGreen2}}</span> {{text2}}
+  </p>
 </header>
 {% endmacro %}
