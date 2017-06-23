@@ -1,0 +1,23 @@
+.input-disabled {
+  & label {
+    color: #545454;
+    font-weight: normal;
+    display: block;
+    padding-left: 0;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  &__input {
+    border: 1px solid $colorGray-325;
+    width: 23%;
+    height: 35px;
+    padding: 10px 14px;
+    font-size: 16px;
+    background-color: #f7f7f7;
+  }
+  & span {
+    margin-left: -20px;
+    color: #70a41c;
+    opacity: .8;
+  }
+}
