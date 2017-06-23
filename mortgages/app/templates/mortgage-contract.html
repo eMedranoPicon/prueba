@@ -1,0 +1,10 @@
+{% import "/components/_title-text-multicolor.html" as title %}
+{% import "/components/_progress-step-bar.html" as progress %}
+
+
+{% extends "/base/_base.html" %}
+
+{% block content %}
+   {{ progress.bar(3, 1)}}
+   {{ title.text('Datos necesarios para el estudio', '', 'Lee', 'y ', 'completa', 'los siguientes datos') }}
+{% endblock %}
