@@ -1,11 +1,11 @@
-.radio-square {
+.checkbox {
   display: none;
   + label {
     font-size: 18px;
     font-weight: $font-bold;
     padding: 0;
     padding-left: 32px;
-    text-indent: -32px;
+    text-indent: -27px;
     color: $colorDarkGray;
     &:before {
       content: "";
@@ -15,8 +15,8 @@
       background-image: url("../images/icons/checkform/square.png");
       background-repeat: no-repeat;
       background-size: 100%;
-      width: 22px;
-      height: 22px;
+      width: 16px;
+      height: 16px;
       margin-right: 10px;
     }
     &:hover {
