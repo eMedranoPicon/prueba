@@ -1,4 +1,5 @@
 .select-dropdown {
+  border: 1px solid #d7d7d7;
   margin-bottom: 5px;
   &:hover {
     border: 1px solid $colorGreen-500;
@@ -29,12 +30,12 @@
   }
   &_error {
     background-color: #efc9d2;
+    border: 1px solid #a10b2f;
     &:hover {
-      border: none;
+      border: 1px solid #a10b2f;
     }
     select {
       color: $colorBlack;
-      border: 1px solid #a10b2f;
     }
   }
 }
