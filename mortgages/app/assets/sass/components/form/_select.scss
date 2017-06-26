@@ -1,8 +1,8 @@
-.underline-select {
-  display: inline-block;
-  width: 45%;
+.select-dropdown {
   border: 1px solid $colorGray-325;
-  margin-right: 10px;
+  &:hover {
+    border: 1px solid $colorGreen-500;
+  }
   select {
     appearance: none;
     color: $colorBlueGray-300;
