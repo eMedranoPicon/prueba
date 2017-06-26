@@ -1,0 +1,11 @@
+{% macro content(placeholderInput, title, messageError, classModInput, classModTitle) %}
+  {% if title %}
+  <label class="form-control-title {{classModTitle}}">{{title}}</label>
+  {% endif %}
+  <div class="input-group {{classModInput}} form-group">
+    <input class="form-control" type="text" placeholder='{{placeholderInput}}'>
+    {% if messageError %}
+    <span class="message-error">{{messageError}}</span>
+    {% endif %}
+  </div>
+{% endmacro %}

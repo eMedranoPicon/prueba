@@ -3,6 +3,8 @@
 {% import "/components/_effort-alert.html" as alert %}
 {% import "/components/_input-disabled.html" as input %}
 {% import "/components/_download-doc.html" as download %}
+{% import "/components/_input.html" as input %}
+{% import "/components/_dropdown.html" as dropdown %}
 
 
 {% extends "/base/_base.html" %}
@@ -13,7 +15,9 @@
 
    {% include 'includes/_contract-data.html' %}
 
-   {{ input.content('Importe solicitado', '180.000', '€') }}
+   {{ input.content('Introduce el Código Postal', 'Código Postal','Debes introducir el Código Postal', 'input-group_error', 'form-control-title_error') }}
+
+   {{ dropdown.content(['Barcelona', 'Madrid', 'Valencia'], 'Localidad', 'Debes seleccionar la localidad', 'select-dropdown_error') }}
 
    {{ alert.data('Bajo') }}
    <div class="container container_custom pdt-30">
