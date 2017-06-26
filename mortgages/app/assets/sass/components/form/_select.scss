@@ -1,5 +1,5 @@
 .select-dropdown {
-  border: 1px solid $colorGray-325;
+  margin-bottom: 5px;
   &:hover {
     border: 1px solid $colorGreen-500;
   }
@@ -26,5 +26,15 @@
   }
   option[value=""][disabled] {
     display: none;
+  }
+  &_error {
+    background-color: #efc9d2;
+    &:hover {
+      border: none;
+    }
+    select {
+      color: $colorBlack;
+      border: 1px solid #a10b2f;
+    }
   }
 }
