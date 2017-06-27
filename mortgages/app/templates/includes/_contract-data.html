@@ -1,5 +1,7 @@
-{% import "/components/_input-disabled.html" as input %}
+{% import "/components/_input-disabled.html" as inputDisabled %}
 {% import "/components/_dropdown.html" as dropdown %}
+{% import "/components/_input.html" as input %}
+{% import "components/_radio-toggle.html" as radio %}
 
 <div class="container container_custom mt-20 mb-80 contract-data">
   <div class="row">
@@ -9,33 +11,76 @@
   </div>
   <div class="row">
     <div class="col-xs-3">
-      {{ input.content('Importe solicitado', '180.000', '€') }}
+      {{ inputDisabled.content('Importe solicitado', '180.000', '€') }}
     </div>
     <div class="col-xs-3">
-      {{ input.content('Plazo', '30', 'Años') }}
+      {{ inputDisabled.content('Plazo', '30', 'Años') }}
     </div>
     <div class="col-xs-3">
-      {{ input.content('Cuota primer año', '511,85', '€') }}
+      {{ inputDisabled.content('Cuota primer año', '511,85', '€') }}
     </div>
     <div class="col-xs-3">
-      {{ input.content('Cuota resto de años', '488,85', '€') }}
+      {{ inputDisabled.content('Cuota resto de años', '488,85', '€') }}
       <p class="contract-data__text">Sujeto a cambios de euribor</p>
     </div>
   </div>
 
-  <div class="row scontract-data_margin">
+  <div class="row contract-data_margin">
     <div class="col-xs-3">
-      {{ input.content('T.I.N primer año', '1,50', '%') }}
+      {{ inputDisabled.content('T.I.N primer año', '1,50', '%') }}
     </div>
     <div class="col-xs-3">
-      {{ input.content('Resto años', 'Euribor + 1,20', '%') }}
+      {{ inputDisabled.content('Resto años', 'Euribor + 1,20', '%') }}
     </div>
     <div class="col-xs-3">
-      {{ input.content('T.A.E variable', '2,05', '%') }}
+      {{ inputDisabled.content('T.A.E variable', '2,05', '%') }}
     </div>
     <div class="col-xs-3 contract-data__dropdown">
       <label class="form-control-title">Provincia donde se firma</label>
       {{ dropdown.content(['Madrid', 'Valencia', 'Barcelona'], 'Selecciona localidad') }}
+    </div>
+  </div>
+</div>
+
+<div class="container container_custom mb-80 contract-data">
+  <div class="row">
+    <div class="col-xs-12 contract-data__title mt-25 mb-10">
+      <h2>DATOS DE LA VIVIENDA</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      {{ inputDisabled.content('Valor estimado', '200.000', '€') }}
+    </div>
+    <div class="col-xs-3">
+      <label class="form-control-title">Vivienda nueva</label>
+      <div class="pull-left">
+        {{ radio.toggle('', 'new', 'radio-toggle__boxes_opacity') }}
+      </div>
+    </div>
+    <div class="col-xs-3">
+      <label class="form-control-title">Residencia habitual</label>
+      <div class="pull-left">
+        {{ radio.toggle('', 'habitual', 'radio-toggle__boxes_opacity') }}
+      </div>
+    </div>
+    <div class="col-xs-3">
+      {{ inputDisabled.content('Valor de compra', '200.000', '€') }}
+    </div>
+  </div>
+
+  <div class="row contract-data_margin">
+    <div class="col-xs-3">
+      {{ inputDisabled.content('Provincia', 'Madrid') }}
+    </div>
+    <div class="col-xs-3">
+      {{ input.content('Introduce el Código Postal', 'Código Postal','Debes introducir el Código Postal', 'input-group_error', 'form-control-title_error') }}
+    </div>
+    <div class="col-xs-3">
+      {{ dropdown.content(['Barcelona', 'Madrid', 'Valencia'], 'Selecciona localidad', 'Localidad', 'Debes seleccionar la localidad', 'select-dropdown_error') }}
+    </div>
+    <div class="col-xs-3 contract-data__dropdown">
+      {{ input.content('Introduce la dirección', 'Dirección') }}
     </div>
   </div>
 </div>
