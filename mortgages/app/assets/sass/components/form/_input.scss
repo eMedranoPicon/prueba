@@ -7,6 +7,10 @@
     &:hover {
       border: 1px solid #70a41c;
     }
+    &:focus {
+      box-shadow: none;
+      border-color: #70a41c;
+    }
   }
   &_error {
     input {

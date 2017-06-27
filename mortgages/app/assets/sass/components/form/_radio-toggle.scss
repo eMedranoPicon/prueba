@@ -5,6 +5,9 @@
     width: 162px;
     height: 40px;
     display: inline-block;
+    &_opacity {
+      opacity: .6;
+    }
   }
   input[type="radio"] {
     display: none;
