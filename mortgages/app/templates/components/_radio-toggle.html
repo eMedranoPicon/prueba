@@ -1,14 +1,14 @@
-{% macro toggle(text, name, modBoxes) %}
+{% macro toggle(title, option1, option2, name, modBoxes, disabled) %}
 <div class="radio-toggle text-center">
-  {% if text %}
-  <h3 class="radio-toggle__title">{{ text }}</h3>
+  {% if title %}
+  <h3 class="radio-toggle__title">{{ title }}</h3>
   {% endif %}
   <div class="radio-toggle__boxes {{modBoxes}}">
 
-    {% if modBoxes %}
-    <input type="radio" name="{{ name }}" id="{{ name }}Opt1" checked disabled><label for="{{ name }}Opt1">Sí</label><input type="radio" name="{{ name }}" id="{{ name }}Opt2" disabled><label  for="{{ name }}Opt2">No</label>
+    {% if disabled %}
+    <input type="radio" name="{{ name }}" id="{{ name }}Opt1" checked disabled><label for="{{ name }}Opt1">{{option1}}</label><input type="radio" name="{{ name }}" id="{{ name }}Opt2" disabled><label  for="{{ name }}Opt2">{{option2}}</label>
     {% else %}
-    <input type="radio" name="{{ name }}" id="{{ name }}Opt1" checked><label for="{{ name }}Opt1">Sí</label><input type="radio" name="{{ name }}" id="{{ name }}Opt2"><label  for="{{ name }}Opt2">No</label>
+    <input type="radio" name="{{ name }}" id="{{ name }}Opt1" checked><label for="{{ name }}Opt1">{{option1}}</label><input type="radio" name="{{ name }}" id="{{ name }}Opt2"><label  for="{{ name }}Opt2">{{option2}}</label>
     {% endif %}
 
   </div>

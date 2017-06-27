@@ -1,8 +1,21 @@
-{% macro content(title, contentInput, simbol) %}
-  <div class="input-disabled">
+{% macro content(title, contentInput, simbol, disabled, classMod, textSmall) %}
+  <div class="input-simbol">
+    {% if textSmall %}
+    <div class="input-simbol__header">
+      <label class="form-control-title">{{title}}</label>
+      <span>{{textSmall}}</span>
+    </div>
+    {% else %}
     <label class="form-control-title">{{title}}</label>
-    <div class="input-disabled__input">
-      <input class="input-disabled__input" type="text" placeholder={{contentInput}} disabled><span>{{simbol}}</span>
+    {% endif %}
+    <div class="input-simbol__input {{classMod}}">
+
+      {% if disabled %}
+      <input type="text" placeholder='{{contentInput}}' disabled><span>{{simbol}}</span>
+      {% else %}
+      <input type="text" placeholder='{{contentInput}}'><span>{{simbol}}</span>
+      {% endif %}
+
     </div>
   </div>
 {% endmacro %}
