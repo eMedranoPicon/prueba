@@ -1,36 +1,41 @@
 .input-code-form {
   .title {
-    font-size: 28px;
-    padding-left: 13px;
+    font-size: 15px;
     font-weight: $font-regular;
-    color: $colorGray-750;
-  }
-  .sms-code {
-    width: 150px;
-    margin-right: 10px;
-  }
-  .icon-group {
-    display: inline-block;
-    padding: 5px 0;
-    .icon-sms {
-      padding: 5px;
-    }
-    a {
-      font-size: 11px;
-      text-decoration: underline;
-      color: $colorGray-800;
+    color: #383838;
+    text-align: center;
+    margin-bottom: 37px;
+    span {
+      font-weight: $font-bold;
     }
   }
-  button {
-    margin: 60px 10px;
-  }
-  .btn-primary {
-    min-width: 228px;
-  }
-}
+  .input-sms-group {
+    position: relative;
+    .sms-code {
+      width: 150px;
+      height: 40px;
+      margin: auto;
+      border: 0;
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
 
-.input-code-form_vertical {
-  button {
-    margin: 0 10px;
+      &::placeholder {
+        font-style: italic;
+        font-size: 13px;
+      }
+    }
+    .icon-group {
+      position: absolute;
+      top: 0;
+      right: 230px;
+      padding: 5px 0;
+      .icon-sms {
+        padding: 5px;
+      }
+      a {
+        font-size: 11px;
+        text-decoration: underline;
+        color: $colorGray-800;
+      }
+    }
   }
 }

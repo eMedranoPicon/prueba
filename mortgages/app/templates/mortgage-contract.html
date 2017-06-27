@@ -2,7 +2,11 @@
 {% import "/components/_progress-step-bar.html" as progress %}
 {% import "/components/_effort-alert.html" as alert %}
 {% import "/components/_download-doc.html" as download %}
+<<<<<<< HEAD
 {% import "/components/_dropdown.html" as dropdown %}
+=======
+{% import "/components/_paginator.html" as paginator %}
+>>>>>>> Add pagination input pin and buttons on bottom contract page
 
 
 {% extends "/base/_base.html" %}
@@ -36,5 +40,27 @@
        <label for="legal-contract">Declaro haber leído y acepto la política de privacidad. Además declaro haber leído el Índice de documentación de entrega preceptiva, el documento de Información precontractual y el Documento de información precontractual complementaria. Así mismo, doy mi consentimiento para que Bankinter S.A. solicite al Banco de España mis datos sobre endeudamiento (CRIBE).</label>
      </div>
    </div>
+   <div class="container container_custom input-code-form mt-50">
+     <p class="title">Declaro que he leído la información normalizada europea y el contrato del préstamo y confirmo su contratacion mediante la <span>introdución del código SMS</span> recibido en el móvil.</p>
+     <div class="input-sms-group">
+       <input class="form-control sms-code" type="text" placeholder="Introduce el código">
+       <div class="icon-group">
+         <img class="icon-sms" src="images/icons/comment-alert.png" alt="SMS"><a href="" >Si no ha llegado el SMS</a>
+       </div>
+     </div>
+   </div>
+   <div class="mt-50">
+     {{ paginator.set(2, 3) }}
+   </div>
+   <div class="container container_custom text-center">
+      <div class="clearfix">
+        <div class="halfcol">
+          <button class="btn btn-default pull-right" type="reset" name="button">Volver</button>
+        </div>
+        <div class="halfcol">
+          <button class="btn btn-primary pull-left" type="submit" name="button">Continuar</button>
+        </div>
+      </div>
+    </div>
 
 {% endblock %}
