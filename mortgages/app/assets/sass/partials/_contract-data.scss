@@ -15,12 +15,10 @@
     overflow-x: hidden;
     display: block;
   }
-  &_margin {
-    margin-top: 10px;
-  }
-  &__dropdown {
-    & .underline-select {
-      width: 100%;
+  &__section-element {
+    margin-bottom: 10px;
+    span {
+      font-size: 12px;
     }
   }
 }

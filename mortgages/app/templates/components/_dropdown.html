@@ -1,10 +1,10 @@
-{% macro content(options, selectOption, title, messageError, classMod) %}
+{% macro content(options, selectOption, title, messageError, classModDropdown, classModTitle) %}
 
 {% if title %}
-  <label class="form-control-title form-control-title_error">{{title}}</label>
+  <label class="form-control-title {{classModTitle}}">{{title}}</label>
 {% endif %}
 
-<div class="select-dropdown {{classMod}}">
+<div class="select-dropdown {{classModDropdown}}">
   <select class="dropdown__options">
     {%- for option in options %}
     <option value="" disabled selected hidden>{{selectOption}}</option>

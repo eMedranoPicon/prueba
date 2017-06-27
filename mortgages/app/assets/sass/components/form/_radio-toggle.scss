@@ -8,6 +8,12 @@
     &_opacity {
       opacity: .6;
     }
+    &_size {
+      width: 100%;
+      & label {
+        width: 50% !important;
+      }
+    }
   }
   input[type="radio"] {
     display: none;
