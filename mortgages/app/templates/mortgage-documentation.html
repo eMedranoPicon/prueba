@@ -3,6 +3,7 @@
 {% import "/components/_attach-documentation.html" as documentation %}
 {% import "/components/_download-doc.html" as download %}
 {% import "/components/_paginator.html" as paginator %}
+{% import "/components/_attached-doc-panel.html" as attached %}
 
 {% extends "/base/_base.html" %}
 
@@ -11,7 +12,7 @@
    {{ title.text('Documentación', '', '', 'Recuerda adjuntar toda la ', 'documentación necesaria ', 'para la solicitud de la hipoteca') }}
 
    {{ documentation.attach('', 'NÓMINAS', 'subir otra nómina', 'Adjunta una copia de tus ', '3 últimas nóminas') }}
-
+   {{ attached.data('Nónima NOV') }}
    {{ documentation.attach('alternate-bg', 'CONTRATO LABORAL', 'subir contrato', 'Adjunta una copia de tu ', 'Contrato laboral', ' completo en vigor') }}
 
    {{ documentation.attach('', 'VIDA LABORAL', 'subir vida laboral', 'Adjunta una copia de tu informe de ', 'Vida laboral', ' actualizado') }}
@@ -19,7 +20,7 @@
    {{ documentation.attach('alternate-bg', 'DECLARACIÓN DE LA RENTA', 'subir renta', 'Adjunta una copia de tu última ', 'Declaración de la renta', ' completa del último ejercicio,<br> sellada o con validación mecánica') }}
 
    {{ documentation.attach('', 'PRÉSTAMOS', 'subir recibo', 'Adjunta una copia de los 3 últimos recibos de cada ', 'Préstamo', ' donde figure el ', 'capital pendiente') }}
-
+   {{ attached.data('Nónima NOV', 5) }}
    {{ documentation.attach('alternate-bg', 'CAPITULACIONES MATRIMONIALES', 'subir capitulación', 'Adjunta una copia de las ', 'Capitulaciones matrimoniales', ' inscritas en el registro Civil') }}
 
    {{ documentation.attach('', 'CONTRATO DE ARRENDAMIENTO', 'subir contrato', 'Adjunta una copia de todos los ', 'Contratos de arrendamiento', ' de los inmuebles que tengas en propiedad*', '', true, true) }}
