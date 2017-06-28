@@ -1,0 +1,10 @@
+{% import "/components/_title-text-multicolor.html" as title %}
+{% import "/components/_progress-step-bar.html" as progress %}
+
+{% extends "/base/_base.html" %}
+
+{% block content %}
+   {{ progress.bar(3, 3)}}
+   {{ title.text('Documentación', '', '', 'Recuerda adjuntar toda la ', 'documentación necesaria ', 'para la solicitud de la hipoteca') }}
+
+{% endblock %}
