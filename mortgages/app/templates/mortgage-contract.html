@@ -54,9 +54,9 @@
           <button class="btn btn-default pull-right" type="reset" name="button">Volver</button>
         </div>
         <div class="halfcol">
-          <button class="btn btn-primary pull-left" type="submit" name="button">Continuar</button>
+          <button data-toggle="modal" data-target="#modal-contract" class="btn btn-primary pull-left" type="submit" name="button">Continuar</button>
         </div>
       </div>
     </div>
-
+  {% include 'includes/_modal-contract-confirmation.html'%}
 {% endblock %}

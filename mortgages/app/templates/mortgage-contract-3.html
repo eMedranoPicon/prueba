@@ -37,7 +37,7 @@
      </div>
    </div>
    <div class="container container_custom input-code-form mt-50">
-     <p class="title">Declaro que he leído la información normalizada europea y el contrato del préstamo y confirmo su contratacion mediante la <span>introducción del código SMS</span> recibido en el móvil.</p>
+     <p class="title">Declaro que he leído la información normalizada europea y el contrato del préstamo y confirmo su contratacion mediante la <span>introdución del código SMS</span> recibido en el móvil.</p>
      <div class="input-sms-group">
        <input class="form-control sms-code" type="text" placeholder="Introduce el código">
        <div class="icon-group">
@@ -54,9 +54,9 @@
           <button class="btn btn-default pull-right" type="reset" name="button">Volver</button>
         </div>
         <div class="halfcol">
-          <button class="btn btn-primary pull-left" type="submit" name="button">Continuar</button>
+          <button data-toggle="modal" data-target="#modal-contract" class="btn btn-primary pull-left" type="submit" name="button">Continuar</button>
         </div>
       </div>
     </div>
-
+  {% include 'includes/_modal-contract-confirmation.html'%}
 {% endblock %}
