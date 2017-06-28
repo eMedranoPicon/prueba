@@ -8,10 +8,6 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow-x: hidden;
-  &_error {
-    color: $colorDanger;
-    font-weight: 600;
-  }
   &_margin {
     margin-bottom: 0;
   }

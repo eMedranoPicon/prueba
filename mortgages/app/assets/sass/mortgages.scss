@@ -35,6 +35,7 @@
     position: relative;
   }
 
+<<<<<<< HEAD
   .mortgage-documentation {
     &__save-later {
       padding-bottom: 85px;
@@ -52,6 +53,8 @@
     color: $colorDanger;
   }
 
+=======
+>>>>>>> Update form-group errors
   // Vendor sass files
   @import "../../../node_modules/family.scss/source/src/_family.scss";
   @import "custom_bootstrap";

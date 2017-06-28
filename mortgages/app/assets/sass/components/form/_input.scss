@@ -13,30 +13,4 @@
       border-color: #70a41c;
     }
   }
-  &_error {
-    input {
-      border: 1px solid #a10b2f;
-      width: 100%;
-      height: 40px;
-      padding: 10px 14px;
-      background-color: #efc9d2;
-      margin-bottom: 5px;
-      &:hover {
-        border: 1px solid #a10b2f;
-      }
-      &:focus {
-        border: 1px solid #a10b2f;
-        box-shadow: none;
-      }
-      &::-webkit-input-placeholder {
-        color: $colorBlack;
-      }
-      &::-moz-placeholder {
-        color: $colorBlack;
-      }
-      &:-ms-input-placeholder {
-        color: $colorBlack;
-      }
-    }
-  }
 }
