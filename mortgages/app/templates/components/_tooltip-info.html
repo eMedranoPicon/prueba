@@ -1,3 +1,7 @@
-{% macro content(hidden_text) %}
-<span class="tooltip-action" data-toggle="tooltip" data-placement="top" title="{{ hidden_text }}"><img src="images/iconos/ico_duda2.png" alt="(?)"></span>
+{% macro content(hidden_text, color_white=false) %}
+{% if color_white %}
+  <span class="tooltip-action" data-toggle="tooltip" data-placement="top" title="{{ hidden_text }}"><img src="images/icons/question_mark-white.png" alt="(?)"></span>
+{% else %}
+  <span class="tooltip-action" data-toggle="tooltip" data-placement="top" title="{{ hidden_text }}"><img src="images/icons/question_mark-grey.png" alt="(?)"></span>
+{% endif %}
 {% endmacro %}
