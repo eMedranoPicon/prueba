@@ -1,0 +1,54 @@
+.panel-attachements {
+  background-color: $colorGreen-500;
+  padding: 10px 0;
+
+  .uploaded-doc {
+    margin: 40px 0;
+    &__thumbnail {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      overflow: hidden;
+      float: left;
+      margin-right: 16px;
+      img {
+        width: 55px;
+        height: 55px;
+      }
+    }
+    &__actions {
+      color: $colorWhite;
+      padding-top: 10px;
+      h3 {
+        margin-top: 0;
+        font-size: 15px;
+      }
+      .action-edit {
+        color: $colorWhite;
+        &:hover {
+          color: $colorBlack;
+        }
+      }
+      .action-delete {
+        position: absolute;
+        top: 44px;
+        right: 23px;
+        &:hover {
+          color: $colorBlack;
+        }
+      }
+    }
+    .divider {
+      position: absolute;
+      top: 23%;
+      right: 4px;
+      bottom: 22%;
+      border-left: 1px solid $colorWhite;
+    }
+  }
+  .col-xs-4:nth-child(3n) {
+    .divider {
+      display: none;
+    }
+  }
+}
