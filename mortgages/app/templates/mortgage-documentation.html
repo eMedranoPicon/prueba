@@ -1,10 +1,31 @@
 {% import "/components/_title-text-multicolor.html" as title %}
 {% import "/components/_progress-step-bar.html" as progress %}
+{% import "/components/_attach-documentation.html" as documentation %}
 
 {% extends "/base/_base.html" %}
 
 {% block content %}
    {{ progress.bar(3, 3)}}
    {{ title.text('Documentación', '', '', 'Recuerda adjuntar toda la ', 'documentación necesaria ', 'para la solicitud de la hipoteca') }}
+
+   {{ documentation.attach('', 'NÓMINAS', 'subir otra nómina', 'Adjunta una copia de tus ', '3 últimas nóminas') }}
+
+   {{ documentation.attach('alternate-bg', 'CONTRATO LABORAL', 'subir contrato', 'Adjunta una copia de tu ', 'Contrato laboral', ' completo en vigor') }}
+
+   {{ documentation.attach('', 'VIDA LABORAL', 'subir vida laboral', 'Adjunta una copia de tu informe de ', 'Vida laboral', ' actualizado') }}
+
+   {{ documentation.attach('alternate-bg', 'DECLARACIÓN DE LA RENTA', 'subir renta', 'Adjunta una copia de tu última ', 'Declaración de la renta', ' completa del último ejercicio,<br> sellada o con validación mecánica') }}
+
+   {{ documentation.attach('', 'PRÉSTAMOS', 'subir recibo', 'Adjunta una copia de los 3 últimos recibos de cada ', 'Préstamo', ' donde figure el ', 'capital pendiente') }}
+
+   {{ documentation.attach('alternate-bg', 'CAPITULACIONES MATRIMONIALES', 'subir capitulación', 'Adjunta una copia de las ', 'Capitulaciones matrimoniales', ' inscritas en el registro Civil') }}
+
+   {{ documentation.attach('', 'CONTRATO DE ARRENDAMIENTO', 'subir contrato', 'Adjunta una copia de todos los ', 'Contratos de arrendamiento', ' de los inmuebles que tengas en propiedad*', '', true, true) }}
+
+   {{ documentation.attach('alternate-bg', 'IBI', 'subir ibi', 'Adjunta una copia del último recibo ', 'IBI', ' de los inmuebles que tengas en propiedad', '', true) }}
+
+   {{ documentation.attach('', 'CONTRATO DE ARRAS', 'subir contrato de arras', 'Adjunta una copia del contrato de arras en el caso de que dispongas de este documento', '', '', '', true) }}
+
+   {{ documentation.attach('alternate-bg', 'OTROS DOCUMENTOS', 'subir documentos', 'Adjunta una copia de cualquier documento que pueda facilitar el estudio de tu solicitud de hipoteca ', '', '', '', true) }}
 
 {% endblock %}
