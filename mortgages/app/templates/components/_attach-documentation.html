@@ -1,0 +1,29 @@
+{% macro attach(classBackground, title, textButton, text, textBlack, text2, textBlack2, recommendations, info) %}
+<div class="{{classBackground}}">
+  <div class="container container_custom attach-documentation pdt-50">
+    <div class="row">
+      <div class="attach-documentation__header">
+        <h2>{{title}}</h2>
+        <p>{{text}}<span>{{textBlack}}</span>{{text2}}<span>{{textBlack2}}</span></p>
+        <img src="images/icons/info.png">
+      </div>
+    </div>
+    {% if recommendations %}
+    <div class="row attach-documentation__info">
+      <p>Es recomendable adjuntar esta documentación, ya que ayuda a la sanción favorable de la hipoteca</p>
+    </div>
+    {% endif %}
+    <div class="row text-center">
+      <div class="clearfix">
+        <div class="halfcol attach-documentation__button">
+          <button class="btn btn-primary" type="submit" name="button">{{textButton}}</button>
+          {% if info %}
+          <p>* Por cada Contrato de arrendamiento, también es necesario subir los 3 últimos recibos cobrados.</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endmacro %}

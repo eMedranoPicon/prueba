@@ -1,0 +1,48 @@
+.attach-documentation {
+  &__header {
+    text-align: center;
+    position: relative;
+    h2 {
+      color: $colorGreen-500;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    p {
+      color: $colorBlack;
+      font-size: 18px;
+      span {
+        font-weight: bold;
+      }
+    }
+    img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  &__info {
+    background-color: $colorGray-300;
+    height: 45px;
+    text-align: center;
+    font-size: 9px;
+    margin-top: 20px;
+    position: relative;
+    p {
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      width: 100%;
+      height: 35%;
+      margin: auto;
+    }
+  }
+  &__button {
+    width: 100% !important;
+    float: none !important;
+    p {
+      font-size: 12px;
+      margin-bottom: 60px;
+      margin-top: -40px;
+    }
+  }
+}
