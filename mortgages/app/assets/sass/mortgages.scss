@@ -35,6 +35,20 @@
     position: relative;
   }
 
+  .mortgage-documentation {
+    &__save-later {
+      margin-top: -20px;
+      padding-bottom: 85px;
+      a {
+        color: $colorGray-450;
+        text-decoration: underline;
+        &:hover {
+          color: $colorGray-450;
+        }
+      }
+    }
+  }
+
   .message-error {
     color: $colorDanger;
   }
