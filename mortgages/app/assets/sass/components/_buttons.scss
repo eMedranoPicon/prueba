@@ -68,5 +68,8 @@
   .btn {
     min-width: 280px;
     margin: 20px 10px 60px;
+    &_size {
+      margin-bottom: 30px;
+    }
   }
 }

@@ -2,6 +2,7 @@
 {% import "/components/_progress-step-bar.html" as progress %}
 {% import "/components/_attach-documentation.html" as documentation %}
 {% import "/components/_download-doc.html" as download %}
+{% import "/components/_paginator.html" as paginator %}
 
 {% extends "/base/_base.html" %}
 
@@ -42,4 +43,29 @@
        <p class="document-download-clarification">Los documentos se guardaran en tu zona de Administrar</p>
      </div>
    </div>
+   <div class="container container_custom input-code-form mt-50">
+     <p class="title">Confirmo la veracidad de los datos incluidos en la Solicitud de financiación de personas físicas, y que he leído la declaración <span>mediante la introducción del código SMS</span> recibido en el móvil.</p>
+     <div class="input-sms-group">
+       <input class="form-control sms-code" type="text" placeholder="Introduce el código">
+       <div class="icon-group">
+         <img class="icon-sms" src="images/icons/comment-alert.png" alt="SMS"><a href="" >Si no ha llegado el SMS</a>
+       </div>
+     </div>
+   </div>
+   <div class="mt-50">
+     {{ paginator.set(3, 3) }}
+   </div>
+   <div class="container container_custom text-center">
+      <div class="clearfix">
+        <div class="halfcol">
+          <button class="btn btn-default pull-right btn_size" type="reset" name="button">Volver a datos</button>
+        </div>
+        <div class="halfcol">
+          <button class="btn btn-primary pull-left btn_size" type="submit" name="button">Enviar solicitud</button>
+        </div>
+      </div>
+      <div class="mortgage-documentation__save-later">
+        <a href="#">GUARDAR Y CONTINUAR DESPUÉS</a>
+      </div>
+    </div>
 {% endblock %}
