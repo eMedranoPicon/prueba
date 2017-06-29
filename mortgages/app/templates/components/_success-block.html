@@ -1,0 +1,12 @@
+{% macro text(title, subtitle) %}
+<div class="green-block-text {{class}}">
+  <div class="container container_custom">
+    <h2>{{ title }}</h2>
+    <p>{{ subtitle }}</p>
+  </div>
+</div>
+<div class="text-and-button">
+  <p class="mb-30">Necesitamos un tiempo para revisar la información.<br /><span>Te iremos informando de cada paso,</span> así como de las posibles incidencias que puedan surgir.</p>
+  <button type="button" class="btn btn-primary" name="button">Ver estado de la solicitud</button>
+</div>
+{% endmacro %}
