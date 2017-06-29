@@ -1,6 +1,6 @@
-{% macro doc(name) %}
+{% macro doc(name, modSize) %}
 <div class="doc-card">
-  <div class="doc-name">
+  <div class="doc-name {{modSize}}">
     <p>{{ name }}</p>
   </div>
   <a href="#" class="doc-icon">

@@ -1,6 +1,7 @@
 {% import "/components/_title-text-multicolor.html" as title %}
 {% import "/components/_progress-step-bar.html" as progress %}
 {% import "/components/_attach-documentation.html" as documentation %}
+{% import "/components/_download-doc.html" as download %}
 
 {% extends "/base/_base.html" %}
 
@@ -28,4 +29,17 @@
 
    {{ documentation.attach('alternate-bg', 'OTROS DOCUMENTOS', 'subir documentos', 'Adjunta una copia de cualquier documento que pueda facilitar el estudio de tu solicitud de hipoteca ', '', '', '', true) }}
 
+   <div class="container container_custom pdt-30">
+     <div class="row">
+       <div class="col-xs-6">
+         {{ download.doc('Documento Solicitud de financiación de personas físicas', 'doc-name_size')}}
+       </div>
+       <div class="col-xs-6">
+         {{ download.doc('Declaración')}}
+       </div>
+     </div>
+     <div class="row mt-40 mb-40 text-center">
+       <p class="document-download-clarification">Los documentos se guardaran en tu zona de Administrar</p>
+     </div>
+   </div>
 {% endblock %}

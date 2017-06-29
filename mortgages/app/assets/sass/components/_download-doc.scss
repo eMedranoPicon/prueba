@@ -12,6 +12,9 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    &_size {
+      max-width: 65%;
+    }
     p {
       color: #545454;
       font-size: 14px;
