@@ -1,0 +1,9 @@
+{% import "/components/_progress-step-bar.html" as progress %}
+{% import "/components/_success-block.html" as title %}
+
+{% extends "/base/_base.html" %}
+
+{% block content %}
+  {{ progress.bar(3, 3)}}
+  {{ title.text('Hemos recibido tu solicitud', 'Hemos recibido los documentos necesarios para poder iniciar el estudio de tu solicitud de préstamo hipotecario.' ) }}
+{% endblock %}

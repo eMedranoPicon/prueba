@@ -9,3 +9,35 @@
     text-align: center;
   }
 }
+
+.green-block-text {
+  background-color: $colorGreen-500;
+  padding: 80px 0;
+  h2 {
+    font-size: 40px;
+    font-weight: $font-bold;
+    color: $colorWhite;
+    text-align: center;
+  }
+  p {
+    color: $colorWhite;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 24px;
+    text-align: center;
+    font-weight: $font-bold;
+  }
+}
+
+.text-and-button {
+  text-align: center;
+  padding: 60px 0 190px;
+  p {
+    font-size: 18px;
+    color: #383838;
+    font-weight: $font-light;
+    span {
+      font-weight: $font-bold;
+    }
+  }
+}
