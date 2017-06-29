@@ -1,0 +1,30 @@
+{% import "/components/_title-text-multicolor.html" as title %}
+{% import "/components/_progress-step-bar.html" as progress %}
+
+{% extends "/base/_base.html" %}
+
+{% block content %}
+<div class="container container_custom pdt-105 upload-receipt">
+  <div class="row">
+    <div class="upload-receipt__header mb-30">
+      <h2>Sube la foto de cada recibo</h2>
+      <p>O cualquier otro archivo si ya lo tienes en formato digital <img src="images/icons/info.png" ></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="upload-receipt__body">
+      <p>Arrastra aquí tu archivo <a href="#">o busca en tu PC...</a></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="upload-receipt__footer mt-75">
+      <div class="clearfix">
+        <div class="halfcol halfcol_unique">
+          <button class="btn btn-default" type="reset" name="button">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

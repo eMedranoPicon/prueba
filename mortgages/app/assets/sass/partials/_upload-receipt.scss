@@ -1,0 +1,46 @@
+.upload-receipt {
+  &__header {
+    text-align: center;
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  &__body {
+    width: 85%;
+    height: 320px;
+    margin: 0 auto;
+    border: 1px dashed;
+    overflow: hidden;
+    p {
+      font-size: 14px;
+      text-align: center;
+      position: relative;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      a {
+        color: $colorGreen-500;
+        font-weight: 600;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    &:hover {
+      background-color: #DEEACA;
+      cursor: pointer;
+    }
+  }
+  &__footer {
+    .halfcol_unique {
+      float: none;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
