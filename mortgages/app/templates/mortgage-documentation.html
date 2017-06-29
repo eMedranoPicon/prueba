@@ -30,19 +30,21 @@
 
    {{ documentation.attach('alternate-bg', 'OTROS DOCUMENTOS', 'subir documentos', 'Adjunta una copia de cualquier documento que pueda facilitar el estudio de tu solicitud de hipoteca ', '', '', '', true) }}
 
-   <div class="container container_custom pdt-30">
-     <div class="row">
-       <div class="col-xs-6">
-         {{ download.doc('Documento Solicitud de financiación de personas físicas', 'doc-name_size')}}
-       </div>
-       <div class="col-xs-6">
-         {{ download.doc('Declaración')}}
-       </div>
-     </div>
-     <div class="row mt-40 mb-40 text-center">
-       <p class="document-download-clarification">Los documentos se guardaran en tu zona de Administrar</p>
-     </div>
-   </div>
+  <div class="terciary-bg">
+    <div class="container container_custom pdt-30">
+      <div class="row">
+        <div class="col-xs-6">
+          {{ download.doc('Documento Solicitud de financiación de personas físicas', 'doc-name_size')}}
+        </div>
+        <div class="col-xs-6">
+          {{ download.doc('Declaración')}}
+        </div>
+      </div>
+      <div class="row mt-40 mb-40 text-center">
+        <p class="document-download-clarification">Los documentos se guardaran en tu zona de Administrar</p>
+      </div>
+    </div>
+  </div>
    <div class="container container_custom input-code-form mt-50">
      <p class="title">Confirmo la veracidad de los datos incluidos en la Solicitud de financiación de personas físicas, y que he leído la declaración <span>mediante la introducción del código SMS</span> recibido en el móvil.</p>
      <div class="input-sms-group">
@@ -58,10 +60,10 @@
    <div class="container container_custom text-center">
       <div class="clearfix">
         <div class="halfcol">
-          <button class="btn btn-default pull-right btn_size" type="reset" name="button">Volver a datos</button>
+          <button class="btn btn-default pull-right mb-30" type="reset" name="button">Volver a datos</button>
         </div>
         <div class="halfcol">
-          <button class="btn btn-primary pull-left btn_size" type="submit" name="button">Enviar solicitud</button>
+          <button class="btn btn-primary pull-left mb-30" type="submit" name="button">Enviar solicitud</button>
         </div>
       </div>
       <div class="mortgage-documentation__save-later">
