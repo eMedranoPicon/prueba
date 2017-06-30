@@ -1,0 +1,69 @@
+.my-mortgage-panel {
+  &__header {
+    margin-bottom: 35px;
+    h2 {
+      font-size: 29px;
+      font-weight: 600;
+      span {
+        color: $colorGreen-500;
+      }
+    }
+    p {
+      font-size: 26px;
+    }
+  }
+  &__body {
+    height: 380px;
+    position: relative;
+    overflow: hidden;
+    &__icon {
+      position: absolute;
+      top: -20px;
+      left: -35px;
+    }
+    &__header {
+      text-align: center;
+      padding-top: 20px;
+      h2 {
+        font-size: 16px;
+      }
+      span {
+        color: $colorGreen-500;
+        font-size: 43px;
+        font-weight: 600;
+      }
+    }
+  }
+  &__footer {
+    background-color: $colorGray-50;
+    border-top: 1px solid $colorGray-300;
+    border-bottom: 1px solid $colorGray-300;
+    height: 60px;
+    position: relative;
+    p {
+      font-size: 14px;
+      margin-left: 32px;
+      position: relative;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    &__date {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 60px;
+      background-color: $colorGray-300;
+      width: 140px;
+      display: table;
+      p {
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+  }
+}
