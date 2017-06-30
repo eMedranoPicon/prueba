@@ -1,4 +1,4 @@
-.my-mortgage-panel {
+.my-dashboard-section {
   &__header {
     margin-bottom: 35px;
     h2 {
@@ -13,24 +13,26 @@
     }
   }
   &__body {
-    height: 380px;
     position: relative;
     overflow: hidden;
-    &__icon {
-      position: absolute;
-      top: -20px;
-      left: -35px;
-    }
-    &__header {
-      text-align: center;
-      padding-top: 20px;
-      h2 {
-        font-size: 16px;
+    background-color: $colorWhite;
+    .body {
+      &__icon {
+        position: absolute;
+        top: 0;
+        left: 0;
       }
-      span {
-        color: $colorGreen-500;
-        font-size: 43px;
-        font-weight: 600;
+      &__title {
+        text-align: center;
+        padding-top: 20px;
+        h2 {
+          font-size: 16px;
+        }
+        span {
+          color: $colorGreen-500;
+          font-size: 43px;
+          font-weight: 600;
+        }
       }
     }
   }
@@ -45,24 +47,23 @@
       margin-left: 32px;
       position: relative;
       top: 50%;
-      -ms-transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
     }
-    &__date {
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 60px;
-      background-color: $colorGray-300;
-      width: 140px;
-      display: table;
-      p {
-        text-align: center;
-        display: table-cell;
-        vertical-align: middle;
-        font-size: 15px;
-        font-weight: 600;
+    .footer {
+      &__date {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 60px;
+        background-color: $colorGray-300;
+        width: 140px;
+        p {
+          color: $colorBlueGray-300;
+          text-align: center;
+          font-size: 15px;
+          font-weight: 600;
+          margin-left: 0;
+        }
       }
     }
   }
