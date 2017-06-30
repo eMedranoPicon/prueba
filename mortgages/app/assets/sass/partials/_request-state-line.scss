@@ -1,0 +1,123 @@
+.request-state {
+  background-color: $colorWhite;
+  padding: 40px;
+  width: 850px;
+  margin: auto;
+  text-align: center;
+
+  .state-progress {
+    background-color: $colorGreen-500;
+    height: 8px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    width: 0;
+  }
+
+  &_step-1 {
+    .state-progress {
+      width: calc(100% / 6 * 0.5);
+    }
+  }
+  &_step-2 {
+    .state-progress {
+      width: calc(100% / 6 * 1.5);
+    }
+  }
+  &_step-3 {
+    .state-progress {
+      width: calc(100% / 6 * 2.5);
+    }
+  }
+  &_step-4 {
+    .state-progress {
+      width: calc(100% / 6 * 3.5);
+    }
+  }
+  &_step-5 {
+    .state-progress {
+      width: calc(100% / 6 * 4.5);
+    }
+  }
+  &_step-6 {
+    .state-progress {
+      width: 100%;
+      border-radius: 16px;
+    }
+  }
+}
+
+  .request-state__list {
+    display: inline-block;
+
+    .state-item {
+      width: 100px;
+      margin: auto;
+      padding: 0 5px;
+      &__icon {
+        width: 30px;
+        height: 30px;
+        margin: auto;
+        margin-bottom: 10px;
+        background: url('/images/icon_circle_empty.png') no-repeat;
+        background-size: 30px;
+      }
+      span {
+        font-size: 12px;
+        font-weight: $font-regular;
+        color: #556270;
+        cursor: pointer;
+      }
+
+      &_previous {
+        .state-item__icon {
+          background: url('/images/icon_green_check.png') no-repeat;
+          background-size: 30px;
+        }
+      }
+
+      &_current {
+        .state-item__icon {
+          background: url('/images/icon_green_line_check.png') no-repeat;
+          background-size: 30px;
+        }
+      }
+
+      &_previous,
+      &_current {
+        span {
+          font-weight: $font-bold;
+          color: black;
+        }
+      }
+    }
+  }
+
+  .request-state__line {
+    margin-top: 15px;
+    width: 630px;
+    margin: auto;
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 16px;
+  }
+
+  .request-state_alert {
+    .state-progress {
+      background-color: #ff8f00;
+    }
+    .state-item {
+      &_current {
+        .state-item__icon {
+          background: url('/images/icon_alert_pro.png') no-repeat;
+          background-size: 30px;
+          &:hover {
+            background: url('/images/icon_alert_hover.png') no-repeat;
+            background-size: 30px;
+          }
+        }
+        span {
+          color: #ff8f00;
+        }
+      }
+    }
+  }
