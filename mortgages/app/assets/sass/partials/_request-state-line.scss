@@ -64,20 +64,20 @@
       span {
         font-size: 12px;
         font-weight: $font-regular;
-        color: #556270;
+        color: $colorBlueGray-300;
         cursor: pointer;
       }
 
       &_previous {
         .state-item__icon {
-          background: url('/images/icon_green_check.png') no-repeat;
+          background: url('/images/icons/icon_tic_02.png') no-repeat;
           background-size: 30px;
         }
       }
 
       &_current {
         .state-item__icon {
-          background: url('/images/icon_green_line_check.png') no-repeat;
+          background: url('/images/icons/icon_tic_01.png') no-repeat;
           background-size: 30px;
         }
       }
@@ -86,7 +86,7 @@
       &_current {
         span {
           font-weight: $font-bold;
-          color: black;
+          color: $colorBlueGray-300;
         }
       }
     }
@@ -97,7 +97,7 @@
     width: 630px;
     margin: auto;
     height: 8px;
-    background: #f0f0f0;
+    background: $colorGray-100;
     border-radius: 16px;
   }
 
@@ -108,10 +108,10 @@
     .state-item {
       &_current {
         .state-item__icon {
-          background: url('/images/icon_alert_pro.png') no-repeat;
+          background: url('/images/icons/icon_alert_02.png') no-repeat;
           background-size: 30px;
           &:hover {
-            background: url('/images/icon_alert_hover.png') no-repeat;
+            background: url('/images/icons/icon_alert_01.png') no-repeat;
             background-size: 30px;
           }
         }
