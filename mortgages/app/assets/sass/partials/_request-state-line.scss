@@ -58,7 +58,7 @@
         height: 30px;
         margin: auto;
         margin-bottom: 10px;
-        background: url('/images/icon_circle_empty.png') no-repeat;
+        background: url('../images/icon_circle_empty.png') no-repeat;
         background-size: 30px;
       }
       span {
@@ -70,14 +70,14 @@
 
       &_previous {
         .state-item__icon {
-          background: url('/images/icons/icon_tic_02.png') no-repeat;
+          background: url('../images/icons/icon_tic_02.png') no-repeat;
           background-size: 30px;
         }
       }
 
       &_current {
         .state-item__icon {
-          background: url('/images/icons/icon_tic_01.png') no-repeat;
+          background: url('../images/icons/icon_tic_01.png') no-repeat;
           background-size: 30px;
         }
       }
@@ -108,10 +108,10 @@
     .state-item {
       &_current {
         .state-item__icon {
-          background: url('/images/icons/icon_alert_02.png') no-repeat;
+          background: url('../images/icons/icon_alert_02.png') no-repeat;
           background-size: 30px;
           &:hover {
-            background: url('/images/icons/icon_alert_01.png') no-repeat;
+            background: url('../images/icons/icon_alert_01.png') no-repeat;
             background-size: 30px;
           }
         }
