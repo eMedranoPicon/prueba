@@ -160,3 +160,26 @@
     }
   }
 }
+
+.modal-alert {
+  text-align: center;
+  line-height: 1.5;
+  color: #383838;
+  .modal-content {
+    width: 450px;
+    margin: auto;
+    top: 180px;
+    border-radius: 16px;
+  }
+  .modal-body {
+    padding-top: 0;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: $font-bold;
+  }
+  &__description {
+    font-size: 16px;
+    padding: 0 30px;
+  }
+}
