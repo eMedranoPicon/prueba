@@ -83,8 +83,9 @@
         var container = $(".pop-up-info"),
             icon = $('.edit-info');
 
-        if(!container.is(e.target) && container.has(e.target).length === 0 && !container.hasClass('hidden') && !icon.is(e.target)) {
-          container.toggleClass('hidden');
+        if(!container.is(e.target) && container.has(e.target).length === 0 &&
+           !container.hasClass('hidden') && !icon.is(e.target)) {
+             container.toggleClass('hidden');
         }
       });
       $(".edit-info").on('click', function() {
