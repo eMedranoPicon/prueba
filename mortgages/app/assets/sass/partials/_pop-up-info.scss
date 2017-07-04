@@ -14,6 +14,11 @@
   	content: " ";
   	position: absolute;
   }
+  &_left {
+    &:after, &:before {
+      left: 52%;
+    }
+  }
 
   &:after {
   	border-color: transparent;

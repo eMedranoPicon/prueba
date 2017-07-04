@@ -1,3 +1,5 @@
+{% import "components/_pop-up-info.html" as form %}
+
 <div class="container container_custom pdt-40">
   <div class="my-dashboard-section__header">
     <h2>Mi <span>vivienda</span></h2>
@@ -6,7 +8,8 @@
   <div class="my-dashboard-section__body">
     <img src="images/casa.png" class="body__icon">
     <div class="body__title">
-      <h2>VIVIENDA EN <span>Calle Serrano, 100, Madrid <img src="images/icons/volver_gris.png"><img src="images/icons/editar_gris.png"></span></h2>
+      <h2>VIVIENDA EN <span>Calle Serrano, 100, Madrid <img src="images/icons/volver_gris.png"><img src="images/icons/editar_gris.png" class="edit-info"></span></h2>
+      {{ form.pop('pop-up-info_left') }}
       <span>550.400 €</span>
     </div>
     <div class="body__details mb-15">
