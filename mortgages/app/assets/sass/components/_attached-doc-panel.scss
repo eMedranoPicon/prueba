@@ -24,17 +24,28 @@
         font-size: 15px;
       }
       .action-edit {
+        font-size: 11px;
+        text-transform: uppercase;
         color: $colorWhite;
+        background: url('../images/icons/editar_gris.png') top left no-repeat;
         &:hover {
           color: $colorBlack;
+          background: url('../images/icons/editar_gris-2.png') top left no-repeat;
+        }
+        .icon {
+          padding-left: 30px;
         }
       }
       .action-delete {
         position: absolute;
         top: 44px;
         right: 23px;
+        text-decoration: none;
+        width: 20px;
+        height: 20px;
+        background: url('../images/icons/ico_cerrar_green_fino.png') top left no-repeat;
         &:hover {
-          color: $colorBlack;
+          background: url('../images/icons/eye.png') top left no-repeat;
         }
       }
     }
