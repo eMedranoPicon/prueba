@@ -1,0 +1,33 @@
+{% import "/components/_input.html" as input %}
+{% import "/components/_dropdown.html" as dropdown %}
+
+<div class="pop-up-info hidden">
+  <form>
+    {{ input.content('Selecciona provincia', 'Provincia') }}
+    {{ input.content('Selecciona municipio', 'Municipio') }}
+    {{ input.content('Indica el nombre de la vía', 'Nombre de la vía') }}
+    <div class="pop-up-info__dropdown">
+      <label class="form-control-title control-label">Número</label>
+      {{ dropdown.content(['1', '2', '3'], '1') }}
+    </div>
+    <div class="pop-up-info__dropdown">
+      <label class="form-control-title control-label">Portal</label>
+      {{ dropdown.content(['1', '2', '3'], '1') }}
+    </div>
+    <div class="pop-up-info__dropdown">
+      <label class="form-control-title control-label">Escalera</label>
+      {{ dropdown.content(['1', '2', '3'], '-') }}
+    </div>
+    <div class="pop-up-info__dropdown">
+      <label class="form-control-title control-label">Planta</label>
+      {{ dropdown.content(['1', '2', '3'], '1') }}
+    </div>
+    <div class="pop-up-info__dropdown pop-up-info__dropdown_last">
+      <label class="form-control-title control-label">Puerta</label>
+      {{ dropdown.content(['1', '2', '3'], '-') }}
+    </div>
+    <div class="text-center mt-90 mb-20">
+      <button data-toggle="modal" data-target="#modal-edit" class="btn btn-primary" type="button" name="button">Valorar</button>
+    </div>
+  </form>
+</div>

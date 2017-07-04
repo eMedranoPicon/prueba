@@ -72,11 +72,31 @@
       buttons.mousedown(addActive);
       buttons.mouseup(removeActive);
     },
+    _initPopUp : function () {
+      $(".edit-info").on('mouseover', function() {
+        $(this).attr('src', 'images/icons/editar_verde.png');
+      });
+      $(".edit-info").on('mouseout', function() {
+        $(this).attr('src', 'images/icons/editar_gris.png');
+      });
+      $(document).on('click', function(e) {
+        var container = $(".pop-up-info"),
+            icon = $('.edit-info');
+
+        if(!container.is(e.target) && container.has(e.target).length === 0 && !container.hasClass('hidden') && !icon.is(e.target)) {
+          container.toggleClass('hidden');
+        }
+      });
+      $(".edit-info").on('click', function() {
+        $('.pop-up-info').toggleClass('hidden');
+      });
+    },
     init : function ( ) {
       this._initSliders();
       this._initTooltips();
       this._closeButtons();
       this._hackIeBtnActive();
+      this._initPopUp();
     }
   };
 
