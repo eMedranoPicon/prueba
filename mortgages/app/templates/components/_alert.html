@@ -1,0 +1,18 @@
+{% macro content(status, close, text, textBlack, text2, textBlack2, text3, link) %}
+<div class="alert alert_{{status}} alternate-bg">
+  <span class="alert__image-{{status}}"></span>
+  {% if close %}
+  <a href="#" class="alert__close">
+    <img src="images/icons/close-gray-circle.png">
+  </a>
+  {% endif %}
+  <div class="alert__details">
+    <p>{{text}}<strong>{{textBlack}}</strong>{{text2}}<strong>{{textBlack2}}</strong>{{text3}}</p>
+  </div>
+  {% if link %}
+  <div class="alert__link">
+    <a href="#">{{link}}</a>
+  </div>
+  {% endif %}
+</div>
+{% endmacro %}

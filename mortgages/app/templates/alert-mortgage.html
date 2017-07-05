@@ -1,0 +1,6 @@
+{% import "components/_alert.html" as alert %}
+{% extends "/base/_base.html" %}
+
+{% block content %}
+  {{ alert.content('check', true, 'Ya hemos recibido los documentos necesarios para poder iniciar el estudio de tu solicitud de préstamo hipotecario.<br>Ahora necesitamos ', 'un tiempo para revisar la información.<br>', 'Te iremos ', 'informando de cada paso ', 'por el que vaya pasando tu solicitud así como las posibles incidencias que puedan surgir.', 'Ir al seguimiento') }}
+{% endblock %}
