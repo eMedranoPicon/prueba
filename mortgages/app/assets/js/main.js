@@ -92,12 +92,23 @@
         $('.pop-up-info').toggleClass('hidden');
       });
     },
+    _closeAlert : function () {
+      $('.alert__close').on('click', function () {
+        var alert = this.parentElement;
+
+        $(alert).animate({
+          opacity: '0.2',
+          height: 'toggle'
+        }, "slow");
+      });
+    },
     init : function ( ) {
       this._initSliders();
       this._initTooltips();
       this._closeButtons();
       this._hackIeBtnActive();
       this._initPopUp();
+      this._closeAlert();
     }
   };
 
