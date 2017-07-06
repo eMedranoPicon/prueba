@@ -3,8 +3,14 @@
   margin: 0 auto;
   padding: 16px;
   position: relative;
-  border-top: 4px solid $colorGreen-500;
   border-bottom: 2px solid $colorGray-300;
+  &_check {
+    border-top: 4px solid $colorGreen-500;
+  }
+  &_warning {
+    border-top: 4px solid #E8AA3B;
+
+  }
   &__image {
     &-check {
       width: 20px;
@@ -13,12 +19,21 @@
       position: absolute;
       background: transparent url(../images/icons/check-green-strong.png) center center no-repeat;
     }
+    &-warning {
+      width: 20px;
+      height: 20px;
+      display: block;
+      position: absolute;
+      background: transparent url(../images/icons/warning.png) center center no-repeat;
+    }
   }
-  img {
-    width: 22px;
-    right: 28px;
-    top: 15px;
-    position: absolute;
+  &__close {
+    img {
+      width: 22px;
+      right: 28px;
+      top: 15px;
+      position: absolute;
+    }
   }
   &__details {
     padding-top: 25px;
@@ -34,5 +49,61 @@
       text-decoration: underline;
       font-weight: bold;
     }
+  }
+
+  &-down {
+    width: 325px;
+    margin: 0 auto;
+    padding: 16px;
+    position: relative;
+    border-bottom: 2px solid $colorGray-300;
+    a {
+      font-size: 13px;
+      font-weight: 600;
+      &:hover {
+        text-decoration: none;
+      }
+      &:focus {
+        text-decoration: none;
+      }
+      img {
+        margin-left: 10px;
+        margin-top: -2px;
+      }
+    }
+    &_warning {
+      a {
+        color: $colorGreen-700;
+      }
+    }
+    &__body {
+      a {
+        color: $colorGray-450;
+        text-decoration: underline;
+        img {
+          margin-left: 15px;
+        }
+      }
+    }
+    &__content {
+      background-color: $colorGray-200;
+      p {
+        padding: 10px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #49829F;
+      }
+    }
+    &__button {
+      text-align: right;
+      button {
+        min-width: 105px;
+        font-size: 13px;
+        padding: 7px 20px 5px;
+      }
+    }
+  }
+  &-caret__icon {
+    transform: scaleY(-1);
   }
 }

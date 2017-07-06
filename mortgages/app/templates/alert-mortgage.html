@@ -2,5 +2,44 @@
 {% extends "/base/_base.html" %}
 
 {% block content %}
-  {{ alert.content('check', true, 'Ya hemos recibido los documentos necesarios para poder iniciar el estudio de tu solicitud de préstamo hipotecario.<br>Ahora necesitamos ', 'un tiempo para revisar la información.<br>', 'Te iremos ', 'informando de cada paso ', 'por el que vaya pasando tu solicitud así como las posibles incidencias que puedan surgir.', 'Ir al seguimiento') }}
+<div class="container container_custom">
+  <div class="pdb-40">
+    {{ alert.content('check', true, 'Ya hemos recibido los documentos necesarios para poder iniciar el estudio de tu solicitud de préstamo hipotecario.<br>Ahora necesitamos ', 'un tiempo para revisar la información.<br>', 'Te iremos ', 'informando de cada paso ', 'por el que vaya pasando tu solicitud así como las posibles incidencias que puedan surgir.', 'Ir al seguimiento') }}
+  </div>
+  <div class="row">
+    <div class="col-xs-4 col-xs-offset-2 mr-30">
+      {{ alert.content('warning', false, 'Para poder seguir con el estudio de tu solicitud de hipoteca en COINC<br>', 'necesitamos los 3 últimos ejercicios de retenciones a cuenta, sellados o con validación mecánica.') }}
+      <div class="alert alert-down alert-down_warning alternate-bg">
+        <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="alert-caret">
+          Subir documento
+          <img src="images/icons/caret.png">
+        </a>
+        <div class="collapse pdt-10" id="collapseExample">
+          <div class="alert-down__body">
+            <a href="#">Adjuntar
+              <img src="images/icons/editar_gris.png">
+            </a>
+            <div class="alert-down__content mt-10">
+              <p>Sube una o varias imagenes de los documentos requeridos.<br>No pulses en enviar hasta que no hayas añadido todos</p>
+            </div>
+            <div class="alert-down__button">
+              <button type="button" name="button" class="btn btn-primary">enviar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      {{ alert.content('warning', false, 'Para poder seguir con el estudio de tu solicitud de hipoteca en COINC<br>', 'necesitamos los 3 últimos ejercicios de retenciones a cuenta, sellados o con validación mecánica.') }}
+      <div class="alert alert-down alert-down_warning alternate-bg">
+        <a href="#">
+          Documento enviado correctamente
+        </a>
+        <div class="alert-down__button mt-10">
+          <button type="button" name="button" class="btn btn-primary alert__close">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

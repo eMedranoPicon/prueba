@@ -94,12 +94,26 @@
     },
     _closeAlert : function () {
       $('.alert__close').on('click', function () {
-        var alert = this.parentElement;
+        var alert = $(this).closest('.alt-close');
+        if (this.type == "button") {
+          var alertdown = $(this).closest('.alert');
+          alert = alertdown.prev();
 
-        $(alert).animate({
+          alertdown.animate({
+            opacity: '0.2',
+            height: 'toggle'
+          }, "slow");
+        }
+
+        alert.animate({
           opacity: '0.2',
           height: 'toggle'
         }, "slow");
+      });
+    },
+    _changeCaret : function () {
+      $('.alert-caret').on('click', function() {
+        $('.alert-caret').find('img').toggleClass('alert-caret__icon');
       });
     },
     init : function ( ) {
@@ -109,6 +123,7 @@
       this._hackIeBtnActive();
       this._initPopUp();
       this._closeAlert();
+      this._changeCaret();
     }
   };
 
