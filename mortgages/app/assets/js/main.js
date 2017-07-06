@@ -99,6 +99,14 @@
           var alertdown = $(this).closest('.alert-down');
           alert = alertdown.prev();
 
+          if(alertdown.next().hasClass('alert-down__message')) {
+            var message = alertdown.next();
+            message.animate({
+              opacity: '0.2',
+              height: 'toggle'
+            }, "slow");
+          }
+
           alertdown.animate({
             opacity: '0.2',
             height: 'toggle'

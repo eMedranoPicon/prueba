@@ -37,6 +37,7 @@
     }
   }
   &__close {
+    cursor: pointer;
     img {
       width: 22px;
       right: 28px;
@@ -130,8 +131,31 @@
       font-size: 13px;
       font-weight: 600;
     }
+    &__form {
+      .form-control-title {
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+      .form-control {
+        height: 30px;
+        background-color: $colorWhite;
+      }
+    }
+    &__message {
+      padding-top: 40px;
+      font-size: 13px;
+      font-weight: 600;
+    }
   }
   &-caret__icon {
     transform: scaleY(-1);
+  }
+  &-link {
+    text-decoration: underline;
+    color: $colorBlack;
+    &:hover {
+      color: $colorBlack;
+      cursor: pointer;
+    }
   }
 }

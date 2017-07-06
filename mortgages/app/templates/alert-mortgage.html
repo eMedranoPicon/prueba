@@ -1,4 +1,6 @@
 {% import "components/_alert.html" as alert %}
+{% import "/components/_input.html" as input %}
+
 {% extends "/base/_base.html" %}
 
 {% block content %}
@@ -107,6 +109,43 @@
       <div class="alert-down alert-down_warning alternate-bg">
         <p class="alert-down_error">No tienes saldo suficiente para que podamos la Nota Simple. Cuando tengas el saldo vuelve a solicitarlo desde esta alerta.</p>
       </div>
+    </div>
+  </div>
+  <div class="row pdt-40">
+    <div class="col-xs-4 col-xs-offset-2 mr-30">
+      {{ alert.content('warning', false, 'Necesitamos que autorices y nos informes los datos de la persona indicada para que podamos ', 'realizar la tasación ','de la vivienda a hipotecar.<br>También te informamos que puedes ver la Nota simple desde la opción de ','<a href="#" class="alert-link">contratos y notificaciones</a> ','de la zona administrar.') }}
+      <div class="alert-down alert-down_warning alternate-bg">
+        <a data-toggle="collapse" href="#datos" aria-expanded="false" aria-controls="datos" class="alert-caret">
+          Completar datos
+          <img src="images/icons/caret.png">
+        </a>
+        <div class="collapse pdt-10" id="datos">
+          <div class="alert-down__body">
+            <form class="alert-down__form">
+              {{ input.content('', 'Nombre de la persona de contacto') }}
+              {{ input.content('', 'Teléfono de contacto') }}
+              <div class="alert-down__content alert-down__content_color">
+                <p>Te informamos que para iniciar la tasación vamos a realizar una retención en tu cuenta por importe de **** €</p>
+              </div>
+            </form>
+            <div class="alert-down__button">
+              <button type="button" name="button" class="btn btn-primary">Autorizar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      {{ alert.content('warning', false, 'Necesitamos que autorices y nos informes los datos de la persona indicada para que podamos ', 'realizar la tasación ','de la vivienda a hipotecar.<br>También te informamos que puedes ver la Nota simple desde la opción de ','<a href="#" class="alert-link">contratos y notificaciones</a> ','de la zona administrar.') }}
+      <div class="alert-down alert-down_warning alternate-bg">
+        <a href="#">
+          Dato enviado correctamente
+        </a>
+        <div class="alert-down__button mt-10">
+          <button type="button" name="button" class="btn btn-primary alert__close">Cerrar</button>
+        </div>
+      </div>
+      <p class="alert-down__message">Al pulsar el botón, se envía el dato y se muestra confirmación al cliente en la misma pantalla.</p>
     </div>
   </div>
 </div>
