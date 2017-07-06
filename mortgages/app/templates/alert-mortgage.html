@@ -93,5 +93,21 @@
       </div>
     </div>
   </div>
+  <div class="row pdt-40">
+    <div class="col-xs-4 col-xs-offset-2 mr-30">
+      {{ alert.content('info', true, 'Tu solicitud de hipoteca ha sido ', 'autorizada a expensas de la tasación ','de la vivienda a hipotecar. Necesitamos verificar la ','Nota simple ','de la vivienda. Elije de qué forma la podemos obtener:') }}
+      <div class="alert-down alert-down_warning alternate-bg">
+        <a href="#">
+          Documento subido correctamente
+        </a>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      {{ alert.content('info', true, 'Tu solicitud de hipoteca ha sido ', 'autorizada a expensas de la tasación ','de la vivienda a hipotecar. Necesitamos verificar la ','Nota simple ','de la vivienda. Elije de qué forma la podemos obtener:') }}
+      <div class="alert-down alert-down_warning alternate-bg">
+        <p class="alert-down_error">No tienes saldo suficiente para que podamos la Nota Simple. Cuando tengas el saldo vuelve a solicitarlo desde esta alerta.</p>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
