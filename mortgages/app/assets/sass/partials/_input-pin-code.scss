@@ -38,4 +38,33 @@
       }
     }
   }
+  &_alert {
+    .input-sms-group {
+      p {
+        color: $colorBlack;
+        font-size: 10px;
+        margin: 0;
+        margin-bottom: -4px;
+        font-weight: 600;
+      }
+      span {
+        color: $colorGray-400;
+        font-size: 9px;
+      }
+      .sms-code {
+        width: 135px;
+        height: 16px;
+        margin: 0;
+        margin-top: 8px;
+        border: 2px solid $colorGray-350;
+        box-shadow: none;
+        border-radius: 2px;
+      }
+      .icon-group {
+        right: 9px;
+        padding: 0;
+        top: 30px;
+      }
+    }
+  }
 }

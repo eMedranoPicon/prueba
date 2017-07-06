@@ -96,10 +96,25 @@
       $('.alert__close').on('click', function () {
         var alert = $(this).closest('.alt-close');
         if (this.type == "button") {
-          var alertdown = $(this).closest('.alert');
+          var alertdown = $(this).closest('.alert-down');
           alert = alertdown.prev();
 
           alertdown.animate({
+            opacity: '0.2',
+            height: 'toggle'
+          }, "slow");
+        }
+        if (alert.next().hasClass('alert-down') && this.type != "button") {
+          var down = alert.next();
+          if (down.next().hasClass('alert-down')) {
+            var down2 = down.next();
+            down2.animate({
+              opacity: '0.2',
+              height: 'toggle'
+            }, "slow");
+          }
+
+          down.animate({
             opacity: '0.2',
             height: 'toggle'
           }, "slow");
@@ -113,7 +128,7 @@
     },
     _changeCaret : function () {
       $('.alert-caret').on('click', function() {
-        $('.alert-caret').find('img').toggleClass('alert-caret__icon');
+        $(this).find('img').toggleClass('alert-caret__icon');
       });
     },
     init : function ( ) {

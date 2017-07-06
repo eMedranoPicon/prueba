@@ -9,7 +9,9 @@
   }
   &_warning {
     border-top: 4px solid #E8AA3B;
-
+  }
+  &_info {
+    border-top: 4px solid #5AA1C4;
   }
   &__image {
     &-check {
@@ -25,6 +27,13 @@
       display: block;
       position: absolute;
       background: transparent url(../images/icons/warning.png) center center no-repeat;
+    }
+    &-info {
+      width: 20px;
+      height: 20px;
+      display: block;
+      position: absolute;
+      background: transparent url(../images/icons/info-blue.jpg) center center no-repeat;
     }
   }
   &__close {
@@ -76,6 +85,11 @@
         color: $colorGreen-700;
       }
     }
+    &_info {
+      a {
+        color: #49829F;
+      }
+    }
     &__body {
       a {
         color: $colorGray-450;
@@ -84,14 +98,23 @@
           margin-left: 15px;
         }
       }
+      .body__price {
+        color: $colorGreen-700;
+        font-size: 12px;
+      }
     }
     &__content {
       background-color: $colorGray-200;
-      p {
+      & p {
         padding: 10px;
         font-size: 12px;
         font-weight: 600;
         color: #49829F;
+      }
+      &_color {
+        p {
+          color: $colorGray-600;
+        }
       }
     }
     &__button {

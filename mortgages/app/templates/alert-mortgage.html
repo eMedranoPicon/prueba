@@ -9,12 +9,12 @@
   <div class="row">
     <div class="col-xs-4 col-xs-offset-2 mr-30">
       {{ alert.content('warning', false, 'Para poder seguir con el estudio de tu solicitud de hipoteca en COINC<br>', 'necesitamos los 3 últimos ejercicios de retenciones a cuenta, sellados o con validación mecánica.') }}
-      <div class="alert alert-down alert-down_warning alternate-bg">
-        <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample" class="alert-caret">
+      <div class="alert-down alert-down_warning alternate-bg">
+        <a data-toggle="collapse" href="#adjuntar1" aria-expanded="false" aria-controls="adjuntar1" class="alert-caret">
           Subir documento
           <img src="images/icons/caret.png">
         </a>
-        <div class="collapse pdt-10" id="collapseExample">
+        <div class="collapse pdt-10" id="adjuntar1">
           <div class="alert-down__body">
             <a href="#">Adjuntar
               <img src="images/icons/editar_gris.png">
@@ -31,12 +31,64 @@
     </div>
     <div class="col-xs-4">
       {{ alert.content('warning', false, 'Para poder seguir con el estudio de tu solicitud de hipoteca en COINC<br>', 'necesitamos los 3 últimos ejercicios de retenciones a cuenta, sellados o con validación mecánica.') }}
-      <div class="alert alert-down alert-down_warning alternate-bg">
+      <div class="alert-down alert-down_warning alternate-bg">
         <a href="#">
           Documento enviado correctamente
         </a>
         <div class="alert-down__button mt-10">
           <button type="button" name="button" class="btn btn-primary alert__close">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="pdt-40">
+      {{ alert.content('info', true, 'Tu solicitud de hipoteca ha sido ', 'autorizada a expensas de la tasación ', 'de la vivienda a hipotecar. Necesitamos verificar la ', 'Nota simple ', 'de la vivienda. Elije de qué forma podemos obtener:') }}
+      <div class="alert-down alert-down_info alternate-bg">
+        <a data-toggle="collapse" href="#adjuntar2" aria-expanded="false" aria-controls="adjuntar2" class="alert-caret">
+          Ya tengo la nota simple
+          <img src="images/icons/caret.png">
+        </a>
+        <div class="collapse pdt-10" id="adjuntar2">
+          <div class="alert-down__body">
+            <a href="#">Adjuntar
+              <img src="images/icons/editar_gris.png">
+            </a>
+            <div class="alert-down__content mt-10">
+              <p>Sube una o varias imagenes de los documentos requeridos.</p>
+            </div>
+            <div class="alert-down__button">
+              <button type="button" name="button" class="btn btn-primary">enviar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="alert-down alert-down_info alternate-bg">
+        <a data-toggle="collapse" href="#codeSMS" aria-expanded="false" aria-controls="codeSMS" class="alert-caret">
+          Prefiero que la solicitéis vosotros
+          <img src="images/icons/caret.png">
+        </a>
+        <div class="collapse pdt-10" id="codeSMS">
+          <div class="alert-down__body">
+            <p class="body__price">Precio del servicio 18 € + IVA</p>
+            <div class="alert-down__content alert-down__content_color mt-10">
+              <p>Para que podamos cargarte el recibo con el coste de la solicitud de la Nota simple de la vivienda a hipotecar, es necesario que autorices la orden de domiciliación bancaria mediante la firma con el código que acabamos de enviar a tu móvil.</p>
+              <p class="pdb-50">Mediante la firma de esta órden de domiciliación, el titular autoriza a INDRA a enviar instrucciones...</p>
+            </div>
+            <div class="input-code-form input-code-form_alert">
+              <div class="input-sms-group">
+                <p>Código SMS</p>
+                <span>Acabamos de enviarlo a tu móvil</span>
+                <input class="form-control sms-code" type="text">
+                <div class="icon-group">
+                  <img class="icon-sms" src="images/icons/question_mark-grey.png" alt="SMS"><a href="" >Si no ha llegado el SMS</a>
+                </div>
+              </div>
+            </div>
+            <div class="alert-down__button pdt-35">
+              <button type="button" name="button" class="btn btn-primary">enviar</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
