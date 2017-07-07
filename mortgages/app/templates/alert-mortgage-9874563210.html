@@ -148,5 +148,14 @@
       <p class="alert-down__message">Al pulsar el botón, se envía el dato y se muestra confirmación al cliente en la misma pantalla.</p>
     </div>
   </div>
+  <div class="row pdt-40">
+    {{ alert.content('warning', false, 'Necesitamos que autorices y nos informes los datos de la persona indicada para que podamos ', 'realizar la tasación ','de la vivienda a hipotecar.<br>También te informamos que puedes ver la Nota simple desde la opción de ','<a href="#" class="alert-link">contratos y notificaciones</a> ','de la zona administrar.') }}
+    <div class="alert-down alert-down_warning alternate-bg">
+      <p class="alert-down_error">No tienes saldo suficiente para que podamos la Nota Simple. Cuando tengas el saldo vuelve a solicitarlo desde esta alerta.</p>
+      <div class="alert-down__button mt-10">
+        <button type="button" name="button" class="btn btn-primary alert__close">Cerrar</button>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
