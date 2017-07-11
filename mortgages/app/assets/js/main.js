@@ -139,6 +139,18 @@
         $(this).find('img').toggleClass('alert-caret__icon');
       });
     },
+    _toggleText : function () {
+      $('.details-more img').on('click', function() {
+        if ($(this).attr('aria-expanded') === 'false') {
+          $(this).attr('src','images/icons/ico_menos.png');
+          $(this).prev().hide();
+        } else {
+          $(this).attr('src','images/icons/ico_mas.png');
+          $(this).prev().show();
+
+        }
+      });
+    },
     init : function ( ) {
       this._initSliders();
       this._initTooltips();
@@ -147,6 +159,7 @@
       this._initPopUp();
       this._closeAlert();
       this._changeCaret();
+      this._toggleText();
     }
   };
 

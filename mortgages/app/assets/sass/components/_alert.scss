@@ -8,7 +8,7 @@
     border-top: 4px solid $colorGreen-500;
   }
   &_warning {
-    border-top: 4px solid #E8AA3B;
+    border-top: 4px solid #ffaf03;
   }
   &_info {
     border-top: 4px solid #5AA1C4;
@@ -19,21 +19,21 @@
       height: 20px;
       display: block;
       position: absolute;
-      background: transparent url(../images/icons/check-green-strong.png) center center no-repeat;
+      background: transparent url(../images/icons/ico_aceptado_v.png) center center no-repeat;
     }
     &-warning {
       width: 20px;
       height: 20px;
       display: block;
       position: absolute;
-      background: transparent url(../images/icons/warning.png) center center no-repeat;
+      background: transparent url(../images/icons/Ico_alerta_a.png) center center no-repeat;
     }
     &-info {
       width: 20px;
       height: 20px;
       display: block;
       position: absolute;
-      background: transparent url(../images/icons/info-blue.jpg) center center no-repeat;
+      background: transparent url(../images/icons/Ico_info_a.png) center center no-repeat;
     }
   }
   &__close {
@@ -46,14 +46,26 @@
     }
   }
   &__details {
-    padding-top: 25px;
+    padding-top: 30px;
     p {
-      font-size: 12px;
-      color: $colorBlack;
+      font-size: 13px;
+      line-height: 20px;
+      color: #120d0e;
+    }
+    .details-more {
+      width: 100%;
+      height: 17px;
+      background-color: $colorWhite;
+      &__dots {
+        float: right;
+      }
+      img {
+        cursor: pointer;
+      }
     }
   }
   &__link {
-    padding: 20px 0px;
+    padding: 15px 0px;
     a {
       color: $colorBlack;
       text-decoration: underline;
@@ -83,7 +95,7 @@
     }
     &_warning {
       a {
-        color: $colorGreen-700;
+        color: $colorGreen-500;
       }
     }
     &_info {
@@ -100,7 +112,7 @@
         }
       }
       .body__price {
-        color: $colorGreen-700;
+        color: $colorGreen-500;
         font-size: 12px;
       }
     }
@@ -109,8 +121,8 @@
       & p {
         padding: 10px;
         font-size: 12px;
-        font-weight: 600;
-        color: #49829F;
+        color: #23bcdf;
+        line-height: 16px;
       }
       &_color {
         p {
